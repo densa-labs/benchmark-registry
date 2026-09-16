@@ -1,1 +1,53 @@
-# benchmark-registry
+# Benchmark Registry
+
+Benchmark Registry is an ever-updating registry of AI models and their benchmark results.
+
+## Registry numbers
+
+Models receive stable Registry numbers based on their provider namespace and chronological release order.
+
+Examples:
+
+```text
+10006   OpenAI GPT-6 Astra
+20004   Anthropic Claude Opus 4.6
+110001  DeepSeek Coder
+```
+
+### Namespace allocation
+
+```text
+00  = Stealth models
+10  = OpenAI
+15  = OpenAI OSS
+20  = Anthropic
+30  = Google
+35  = Google Gemma
+40  = SpaceXAI
+50  = Cursor
+60  = NVIDIA
+70  = Microsoft
+80  = Meta
+90  = Mistral
+100 = intentionally unused
+110 = DeepSeek
+120 = Moonshot AI
+130 = Alibaba
+140 = MiniMax
+150 = Z.ai
+160 = Thinking Machines
+170 = SSI
+```
+
+## Status
+
+Benchmark Registry v2 is currently in development.
+
+## License
+
+Benchmark Registry code is licensed under [Apache License 2.0](LICENSE)<br>
+Benchmark Registry's database licensed under [ODC-By 1.0](DATA_LICENSE)
+
+---
+
+Densa Labs
