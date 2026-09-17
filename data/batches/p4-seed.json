@@ -1,0 +1,701 @@
+{
+  "records": [
+    {
+      "operation": "company",
+      "record": {
+        "name": "OpenAI",
+        "slug": "openai",
+        "established_at": "2015-12-11",
+        "established_precision": "date",
+        "established_source_url": "https://openai.com/index/introducing-openai/",
+        "source_url": "https://openai.com/our-structure/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "10",
+            "source_url": "https://openai.com/index/gpt-4-1/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          },
+          {
+            "namespace_prefix": "15",
+            "source_url": "https://openai.com/index/introducing-gpt-oss/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "company",
+      "record": {
+        "name": "Anthropic",
+        "slug": "anthropic",
+        "established_at": "2021",
+        "established_precision": "year",
+        "established_source_url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+        "source_url": "https://www.anthropic.com/company",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "20",
+            "source_url": "https://www.anthropic.com/news/claude-4",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "company",
+      "record": {
+        "name": "Google",
+        "slug": "google",
+        "established_at": "1998",
+        "established_precision": "year",
+        "established_source_url": "https://about.google/intl/ALL_en/our-story/",
+        "source_url": "https://about.google/intl/ALL_en/our-story/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "30",
+            "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-4.5 Preview",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 1,
+        "registry_no": "10001",
+        "release_at": "2025-02-27",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-4-5/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "deprecated",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gpt-4.5-preview",
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-4.5-preview",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          },
+          {
+            "name": "gpt-4.5-preview-2025-02-27",
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-4.5-preview",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-4.1",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 2,
+        "registry_no": "10002",
+        "release_at": "2025-04-14",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gpt-4.1-2025-04-14",
+            "source_url": "https://platform.openai.com/docs/models/default-usage-policies-by-endpoint",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "OpenAI o3",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 3,
+        "registry_no": "10003",
+        "release_at": "2025-04-16",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "o3-2025-04-16",
+            "source_url": "https://platform.openai.com/docs/models/default-usage-policies-by-endpoint",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "OpenAI o4-mini",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 4,
+        "registry_no": "10004",
+        "release_at": "2025-04-16",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "o4-mini-2025-04-16",
+            "source_url": "https://platform.openai.com/docs/models/default-usage-policies-by-endpoint",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "gpt-oss-120b",
+        "company_slug": "openai",
+        "namespace_prefix": "15",
+        "sequence": 1,
+        "registry_no": "15001",
+        "release_at": "2025-08-05",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-oss/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "openai/gpt-oss-120b",
+            "source_url": "https://huggingface.co/openai/gpt-oss-120b",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Claude 3.7 Sonnet",
+        "company_slug": "anthropic",
+        "namespace_prefix": "20",
+        "sequence": 1,
+        "registry_no": "20001",
+        "release_at": "2025-02-24",
+        "release_precision": "date",
+        "release_source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "deprecated",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "claude-3-7-sonnet-20250219",
+            "source_url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Claude Opus 4",
+        "company_slug": "anthropic",
+        "namespace_prefix": "20",
+        "sequence": 2,
+        "registry_no": "20002",
+        "release_at": "2025-05-22",
+        "release_precision": "date",
+        "release_source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "deprecated",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "claude-opus-4-20250514",
+            "source_url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Claude Sonnet 4",
+        "company_slug": "anthropic",
+        "namespace_prefix": "20",
+        "sequence": 3,
+        "registry_no": "20003",
+        "release_at": "2025-05-22",
+        "release_precision": "date",
+        "release_source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "deprecated",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "claude-sonnet-4-20250514",
+            "source_url": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 2.0 Flash",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 1,
+        "registry_no": "30001",
+        "release_at": "2025-02-05",
+        "release_precision": "date",
+        "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-updates-february-2025/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "deprecated",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gemini-2.0-flash",
+            "source_url": "https://ai.google.dev/gemini-api/docs/models",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 2.5 Pro",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 2,
+        "registry_no": "30002",
+        "release_at": "2025-03-25",
+        "release_precision": "date",
+        "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gemini-2.5-pro",
+            "source_url": "https://ai.google.dev/gemini-api/docs/models",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 2.5 Flash",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 3,
+        "registry_no": "30003",
+        "release_at": "2025-04-17",
+        "release_precision": "date",
+        "release_source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "published_at": "2026-09-17T00:00:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gemini-2.5-flash",
+            "source_url": "https://ai.google.dev/gemini-api/docs/models",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Graduate-Level Google-Proof Q&A",
+        "slug": "gpqa",
+        "source_url": "https://arxiv.org/abs/2311.12022",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [
+          {
+            "name": "GPQA",
+            "source_url": "https://arxiv.org/abs/2311.12022",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "GPQA Authors",
+            "key": "gpqa-authors",
+            "source_url": "https://arxiv.org/abs/2311.12022",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          },
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          },
+          {
+            "name": "Anthropic",
+            "key": "anthropic",
+            "source_url": "https://www.anthropic.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          },
+          {
+            "name": "Google DeepMind",
+            "key": "google-deepmind",
+            "source_url": "https://deepmind.google/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "GPQA Diamond Accuracy",
+            "key": "gpqa-diamond-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2311.12022",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Diamond",
+            "version_slug": "diamond",
+            "release_at": "2023-11-20",
+            "release_precision": "date",
+            "metric_key": "gpqa-diamond-accuracy",
+            "source_url": "https://arxiv.org/abs/2311.12022",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["gpqa-authors"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Massive Multitask Language Understanding",
+        "slug": "mmlu",
+        "source_url": "https://arxiv.org/abs/2009.03300",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [
+          {
+            "name": "MMLU",
+            "source_url": "https://arxiv.org/abs/2009.03300",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "University of California, Berkeley",
+            "key": "uc-berkeley",
+            "source_url": "https://arxiv.org/abs/2009.03300",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "MMLU Accuracy",
+            "key": "mmlu-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2009.03300",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "MMLU",
+            "version_slug": "mmlu",
+            "release_at": "2020-09-07",
+            "release_precision": "date",
+            "metric_key": "mmlu-accuracy",
+            "source_url": "https://arxiv.org/abs/2009.03300",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["uc-berkeley"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SWE-bench",
+        "slug": "swe-bench",
+        "source_url": "https://www.swebench.com/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Princeton University",
+            "key": "princeton-university",
+            "source_url": "https://nlp.cs.princeton.edu/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Resolved Tasks",
+            "key": "swe-bench-resolved",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://openai.com/index/introducing-swe-bench-verified/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Verified",
+            "version_slug": "verified",
+            "release_at": "2024-08-13",
+            "release_precision": "date",
+            "metric_key": "swe-bench-resolved",
+            "source_url": "https://openai.com/index/introducing-swe-bench-verified/",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["openai", "princeton-university"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Massive Multi-discipline Multimodal Understanding",
+        "slug": "mmmu",
+        "source_url": "https://mmmu-benchmark.github.io/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [
+          {
+            "name": "MMMU",
+            "source_url": "https://mmmu-benchmark.github.io/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "MMMU Team",
+            "key": "mmmu-team",
+            "source_url": "https://mmmu-benchmark.github.io/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "MMMU Accuracy",
+            "key": "mmmu-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://mmmu-benchmark.github.io/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "MMMU",
+            "version_slug": "mmmu",
+            "release_at": "2023-11-27",
+            "release_precision": "date",
+            "metric_key": "mmmu-accuracy",
+            "source_url": "https://arxiv.org/abs/2311.16502",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["mmmu-team"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "HealthBench",
+        "slug": "healthbench",
+        "source_url": "https://openai.com/index/healthbench/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "HealthBench Score",
+            "key": "healthbench-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://openai.com/index/healthbench/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "HealthBench",
+            "version_slug": "healthbench",
+            "release_at": "2025-05-12",
+            "release_precision": "date",
+            "metric_key": "healthbench-score",
+            "source_url": "https://openai.com/index/healthbench/",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["openai"]
+          },
+          {
+            "version": "HealthBench Hard",
+            "version_slug": "hard",
+            "release_at": "2025-05-12",
+            "release_precision": "date",
+            "metric_key": "healthbench-score",
+            "source_url": "https://openai.com/index/healthbench/",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["openai"]
+          },
+          {
+            "version": "HealthBench Consensus",
+            "version_slug": "consensus",
+            "release_at": "2025-05-12",
+            "release_precision": "date",
+            "metric_key": "healthbench-score",
+            "source_url": "https://openai.com/index/healthbench/",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["openai"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Codeforces",
+        "slug": "codeforces",
+        "source_url": "https://codeforces.com/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Codeforces Elo",
+            "key": "codeforces-elo",
+            "storage_kind": "integer",
+            "unit": "elo",
+            "display_precision": 0,
+            "minimum_value": null,
+            "maximum_value": null,
+            "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "No tools",
+            "version_slug": "no-tools",
+            "release_at": "2025-08-05",
+            "release_precision": "date",
+            "metric_key": "codeforces-elo",
+            "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["openai"]
+          },
+          {
+            "version": "With tools",
+            "version_slug": "with-tools",
+            "release_at": "2025-08-05",
+            "release_precision": "date",
+            "metric_key": "codeforces-elo",
+            "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "evaluator_keys": ["openai"]
+          }
+        ]
+      }
+    },
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low (no tools)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"67.1","score_raw":"67.1%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium (no tools)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"73.1","score_raw":"73.1%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high (no tools)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"80.1","score_raw":"80.1%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low (with tools)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"68.1","score_raw":"68.1%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium (with tools)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"73.5","score_raw":"73.5%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high (with tools)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"80.9","score_raw":"80.9%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"mmlu","benchmark_version":"MMLU","metric_key":"mmlu-accuracy","score_value":"85.9","score_raw":"85.9%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"mmlu","benchmark_version":"MMLU","metric_key":"mmlu-accuracy","score_value":"88.0","score_raw":"88.0%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"mmlu","benchmark_version":"MMLU","metric_key":"mmlu-accuracy","score_value":"90.0","score_raw":"90.0%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"47.9","score_raw":"47.9%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"52.6","score_raw":"52.6%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"62.4","score_raw":"62.4%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"healthbench","benchmark_version":"HealthBench","metric_key":"healthbench-score","score_value":"53.0","score_raw":"53.0%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"healthbench","benchmark_version":"HealthBench","metric_key":"healthbench-score","score_value":"55.9","score_raw":"55.9%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench","metric_key":"healthbench-score","score_value":"57.6","score_raw":"57.6%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"healthbench","benchmark_version":"HealthBench Hard","metric_key":"healthbench-score","score_value":"22.8","score_raw":"22.8%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"healthbench","benchmark_version":"HealthBench Hard","metric_key":"healthbench-score","score_value":"26.9","score_raw":"26.9%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench Hard","metric_key":"healthbench-score","score_value":"30.0","score_raw":"30.0%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"healthbench","benchmark_version":"HealthBench Consensus","metric_key":"healthbench-score","score_value":"90.6","score_raw":"90.6%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"healthbench","benchmark_version":"HealthBench Consensus","metric_key":"healthbench-score","score_value":"90.8","score_raw":"90.8%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench Consensus","metric_key":"healthbench-score","score_value":"89.9","score_raw":"89.9%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"codeforces","benchmark_version":"No tools","metric_key":"codeforces-elo","score_value":"1595","score_raw":"1595","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"codeforces","benchmark_version":"No tools","metric_key":"codeforces-elo","score_value":"2205","score_raw":"2205","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"codeforces","benchmark_version":"No tools","metric_key":"codeforces-elo","score_value":"2463","score_raw":"2463","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"low","benchmark_slug":"codeforces","benchmark_version":"With tools","metric_key":"codeforces-elo","score_value":"1653","score_raw":"1653","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"medium","benchmark_slug":"codeforces","benchmark_version":"With tools","metric_key":"codeforces-elo","score_value":"2365","score_raw":"2365","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"15001","reasoning_level":"high","benchmark_slug":"codeforces","benchmark_version":"With tools","metric_key":"codeforces-elo","score_value":"2622","score_raw":"2622","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10001","reasoning_level":"","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"69.5","score_raw":"69.5%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10001","reasoning_level":"","benchmark_slug":"mmlu","benchmark_version":"MMLU","metric_key":"mmlu-accuracy","score_value":"90.8","score_raw":"90.8%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10001","reasoning_level":"","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"38.0","score_raw":"38.0%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10001","reasoning_level":"","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"75.2","score_raw":"75.2%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10002","reasoning_level":"","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"66.3","score_raw":"66.3%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10002","reasoning_level":"","benchmark_slug":"mmlu","benchmark_version":"MMLU","metric_key":"mmlu-accuracy","score_value":"90.2","score_raw":"90.2%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10002","reasoning_level":"","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"54.6","score_raw":"54.6%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10002","reasoning_level":"","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"74.8","score_raw":"74.8%","reported_at":"2025-04-14","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-4-1/","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10003","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench","metric_key":"healthbench-score","score_value":"59.8","score_raw":"59.8%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10003","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench Hard","metric_key":"healthbench-score","score_value":"31.6","score_raw":"31.6%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10003","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench Consensus","metric_key":"healthbench-score","score_value":"92.8","score_raw":"92.8%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10004","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench","metric_key":"healthbench-score","score_value":"50.1","score_raw":"50.1%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10004","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench Hard","metric_key":"healthbench-score","score_value":"17.5","score_raw":"17.5%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10004","reasoning_level":"high","benchmark_slug":"healthbench","benchmark_version":"HealthBench Consensus","metric_key":"healthbench-score","score_value":"91.8","score_raw":"91.8%","reported_at":"2025-08-05","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://deploymentsafety.openai.com/gpt-oss/a2","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30001","reasoning_level":"","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"65.2","score_raw":"65.2%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30001","reasoning_level":"","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"21.4","score_raw":"21.4%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30001","reasoning_level":"","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"69.3","score_raw":"69.3%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30002","reasoning_level":"","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"86.4","score_raw":"86.4%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30002","reasoning_level":"","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"59.6","score_raw":"59.6%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30002","reasoning_level":"","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"82.0","score_raw":"82.0%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30003","reasoning_level":"","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"82.8","score_raw":"82.8%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30003","reasoning_level":"","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"48.9","score_raw":"48.9%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30003","reasoning_level":"","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"79.7","score_raw":"79.7%","reported_at":"2025-07-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20002","reasoning_level":"standard (no extended thinking)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"74.9","score_raw":"74.9%","reported_at":"2025-05-22","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/news/claude-4","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20002","reasoning_level":"standard (no extended thinking)","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"72.5","score_raw":"72.5%","reported_at":"2025-05-22","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/news/claude-4","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20002","reasoning_level":"standard (no extended thinking)","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"73.7","score_raw":"73.7%","reported_at":"2025-05-22","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/news/claude-4","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20003","reasoning_level":"standard (no extended thinking)","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"70.0","score_raw":"70.0%","reported_at":"2025-05-22","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/news/claude-4","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20003","reasoning_level":"standard (no extended thinking)","benchmark_slug":"swe-bench","benchmark_version":"Verified","metric_key":"swe-bench-resolved","score_value":"72.7","score_raw":"72.7%","reported_at":"2025-05-22","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/news/claude-4","checked_at":"2026-09-17T00:00:00Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20003","reasoning_level":"standard (no extended thinking)","benchmark_slug":"mmmu","benchmark_version":"MMMU","metric_key":"mmmu-accuracy","score_value":"72.6","score_raw":"72.6%","reported_at":"2025-05-22","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/news/claude-4","checked_at":"2026-09-17T00:00:00Z","primary":true}]}}
+  ]
+}
