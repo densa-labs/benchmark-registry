@@ -454,6 +454,15 @@ export function EmptyState({ title, description, action }: EmptyStateProps) {
   );
 }
 
+export function ErrorState({ title, description }: Omit<EmptyStateProps, "action">) {
+  return (
+    <section className="state-message state-message--error" role="alert">
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </section>
+  );
+}
+
 export function NotFoundState() {
   return (
     <section className="state-message state-message--not-found">

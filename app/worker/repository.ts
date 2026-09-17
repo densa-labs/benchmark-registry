@@ -317,6 +317,18 @@ function latestModelFromCompany(row: CompanyListRow): ModelSummary | null {
 export class RegistryRepository {
   constructor(private readonly db: D1Database) {}
 
+  async modelRedirectTarget(registryNo: string): Promise<string | null> {
+    const row = await this.first<{ registry_no: string }>(
+      `/* model-page:redirect */ SELECT target.registry_no
+       FROM registry_redirects rr
+       JOIN models source ON source.id = rr.source_model_id
+       JOIN models target ON target.id = rr.target_model_id
+       WHERE source.registry_no = ?`,
+      [registryNo],
+    );
+    return row?.registry_no ?? null;
+  }
+
   private async all<T>(sql: string, bindings: BindValue[] = []): Promise<T[]> {
     const result = await this.db.prepare(sql).bind(...bindings).all<T>();
     return result.results;

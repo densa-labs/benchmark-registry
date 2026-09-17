@@ -80,6 +80,7 @@ const companyRow = {
 function defaultResponder(tag: string): unknown[] {
   if (tag.endsWith(":count")) return [{ total: 1 }];
   const responses: Record<string, unknown[]> = {
+    "model-page:redirect": [],
     "models:list": [modelRow],
     "model:requested": [{ id: 2 }],
     "model:redirect": [],
@@ -337,6 +338,24 @@ describe("redirects, missing records, and failure isolation", () => {
     expect(response.status).toBe(200);
     expect(body).toMatchObject({ data: { model: { registry_no: "10002" }, redirected_from: "00001" } });
     expect(calls.find((call) => tagFor(call.sql) === "model:detail")?.bindings).toEqual([2]);
+  });
+
+  it("permanently redirects a stealth model page and preserves query state", async () => {
+    const responder: QueryResponder = (tag) => {
+      if (tag === "model-page:redirect") return [{ registry_no: "10002" }];
+      return defaultResponder(tag);
+    };
+    const { env, assetFetch } = createEnv(responder);
+    const response = await worker.fetch(
+      new Request("https://registry.example/models/00001?view=history"),
+      env,
+    );
+
+    expect(response.status).toBe(308);
+    expect(response.headers.get("location")).toBe(
+      "https://registry.example/models/10002?view=history",
+    );
+    expect(assetFetch).not.toHaveBeenCalled();
   });
 
   it.each([

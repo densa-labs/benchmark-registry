@@ -2,9 +2,12 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
 import { App } from "./App";
+import { ModelDetailPage, ModelsPage } from "./model-pages";
+import type { ModelDetailResponse, ModelListResponse } from "./registry";
 import {
   DataTable,
   EmptyState,
+  ErrorState,
   Header,
   LoadingState,
   MetadataRows,
@@ -135,6 +138,7 @@ describe("Registry foundation view", () => {
       <>
         <LoadingState rows={2} />
         <EmptyState title="No matching results" description="Clear the filter." />
+        <ErrorState title="Unable to load" description="Try again." />
         <NotFoundState />
       </>,
     );
@@ -142,22 +146,134 @@ describe("Registry foundation view", () => {
     expect(markup).toContain('aria-busy="true"');
     expect(markup).toContain("Loading registry results");
     expect(markup).toContain("No matching results");
+    expect(markup).toContain('role="alert"');
     expect(markup).toContain("Registry entry not found");
     expect(markup).toContain('href="/models"');
   });
 
-  it("renders the fixture as a compact model data view without demo framing", () => {
+  it("renders a route loading state without the old fixture framing", () => {
     const markup = renderToStaticMarkup(<App />);
 
-    expect(markup).toContain("Gemini 2.5 Pro");
-    expect(markup).toContain('aria-label="Model metadata"');
-    expect(markup).toContain("Benchmarks");
-    expect(markup).toContain("3 results");
-    expect(markup).toContain("Latest");
-    expect(markup).toContain("History");
-    expect(markup).toContain("Rows per page");
+    expect(markup).toContain("Loading registry results");
+    expect(markup).not.toContain("Gemini 2.5 Pro");
     expect(markup).not.toContain("UI foundation");
     expect(markup).not.toContain("Registry interface primitives");
     expect(markup).not.toContain("System states");
+  });
+});
+
+const model = {
+  registry_no: "10002",
+  name: "GPT-4.1",
+  company: { name: "OpenAI", slug: "openai" },
+  released_at: "2025-04-14",
+  release_precision: "date" as const,
+  published_at: "2026-09-17T00:00:00Z",
+  status: "active" as const,
+};
+
+const modelListResponse: ModelListResponse = {
+  data: [model],
+  page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
+};
+
+const modelDetailResponse: ModelDetailResponse = {
+  data: {
+    model: {
+      ...model,
+      source_url: "https://openai.com/index/gpt-4-1/",
+      aliases: ["gpt-4.1-2025-04-14"],
+    },
+    redirected_from: null,
+    results: [{
+      result_key: "a".repeat(64),
+      model,
+      benchmark: { name: "SWE-bench", slug: "swe-bench" },
+      benchmark_version: "Verified",
+      reasoning_level: "high",
+      metric: {
+        name: "Resolved",
+        key: "resolved",
+        unit: "percent",
+        storage_kind: "decimal",
+        display_precision: 1,
+      },
+      score: { raw: "54.6%", value: "54.6", display: "54.6%" },
+      evaluator_names: ["OpenAI", "SWE-bench"],
+      primary_source_url: "https://openai.com/index/gpt-4-1/",
+      reported_at: "2025-04-14",
+      reported_precision: "date",
+    }],
+    result_page: { number: 1, limit: 100, total_items: 1, total_pages: 1 },
+  },
+};
+
+describe("P7.1 model pages", () => {
+  it("renders the model index with local search, allowed sorting, and pagination controls", () => {
+    const markup = renderToStaticMarkup(
+      <ModelsPage response={modelListResponse} currentSearch="?limit=50" />,
+    );
+
+    expect(markup).toContain("Registry models");
+    expect(markup).toContain("1 model");
+    expect(markup).toContain('action="/models"');
+    expect(markup).toContain("Search model names, aliases, or Registry Nos.");
+    expect(markup).toContain('href="/models/10002"');
+    expect(markup).toContain('href="/companies/openai"');
+    expect(markup).toContain("April 14, 2025");
+    expect(markup).toContain("Sort by Released ascending");
+    expect(markup).not.toContain("Sort by Status");
+  });
+
+  it("shows the API's implicit ascending order as active sort state", () => {
+    const markup = renderToStaticMarkup(
+      <ModelsPage response={modelListResponse} currentSearch="?sort=name" />,
+    );
+
+    expect(markup).toContain('aria-sort="ascending"');
+    expect(markup).toContain("Sort by Model descending");
+    expect(markup).toContain("?sort=name&amp;order=desc");
+  });
+
+  it("renders model metadata and the frozen benchmark result controls", () => {
+    const markup = renderToStaticMarkup(
+      <ModelDetailPage
+        response={modelDetailResponse}
+        currentSearch="?view=history&q=swe&limit=100"
+      />,
+    );
+
+    expect(markup).toContain("GPT-4.1");
+    expect(markup).toContain('aria-label="Model metadata"');
+    expect(markup).toContain("Released");
+    expect(markup).toContain("Company");
+    expect(markup).toContain("Source");
+    expect(markup).toContain("Registry No.");
+    expect(markup).toContain("Search benchmarks");
+    expect(markup).toContain('aria-label="Result view"');
+    expect(markup).toContain('aria-current="page">History</a>');
+    expect(markup).toContain("GPT-4.1 (high)");
+    expect(markup).toContain('href="/benchmarks/swe-bench"');
+    expect(markup).toContain("54.6%");
+    expect(markup).toContain('target="_blank"');
+    expect(markup).toContain('<option value="100" selected="">100</option>');
+    expect(markup).not.toContain("Sort by Score");
+  });
+
+  it("renders a scoped empty state for a model benchmark search", () => {
+    const response = {
+      data: {
+        ...modelDetailResponse.data,
+        results: [],
+        result_page: { number: 1, limit: 50 as const, total_items: 0, total_pages: 0 },
+      },
+    };
+    const markup = renderToStaticMarkup(
+      <ModelDetailPage response={response} currentSearch="?q=missing" />,
+    );
+
+    expect(markup).toContain("No matching benchmarks");
+    expect(markup).toContain("Clear search");
+    expect(markup).not.toContain('aria-label="Pagination"');
   });
 });

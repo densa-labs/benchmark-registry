@@ -1,15 +1,19 @@
+import { useEffect, useMemo, useState } from "react";
+
+import { ModelDetailPage, ModelsPage } from "./model-pages";
+import {
+  loadRegistryRoute,
+  RegistryClientError,
+  resolveRegistryRoute,
+  type LoadedRegistryRoute,
+} from "./registry";
 import {
   AppShell,
-  DataTable,
-  MetadataRows,
+  ErrorState,
+  LoadingState,
+  NotFoundState,
   PageContainer,
-  PageHeader,
-  PageSizeSelector,
-  Pagination,
-  SourceLink,
-  Tabs,
 } from "./ui/components";
-import { resultColumns, resultFixtures } from "./ui/fixtures";
 
 const navigation = [
   { href: "/models", label: "Models" },
@@ -17,61 +21,78 @@ const navigation = [
   { href: "/companies", label: "Companies" },
 ];
 
+type LoadState =
+  | { status: "loading" }
+  | { status: "loaded"; route: LoadedRegistryRoute }
+  | { status: "error"; message: string };
+
+function currentLocation() {
+  if (typeof window === "undefined") return { pathname: "/models", search: "" };
+  return { pathname: window.location.pathname, search: window.location.search };
+}
+
 export function App() {
+  const location = currentLocation();
+  const route = useMemo(
+    () => resolveRegistryRoute(location.pathname),
+    [location.pathname],
+  );
+  const [state, setState] = useState<LoadState>({ status: "loading" });
+
+  useEffect(() => {
+    if (route.kind === "not-found") return;
+
+    const controller = new AbortController();
+    void loadRegistryRoute(route, location.search, fetch, controller.signal)
+      .then((loadedRoute) => setState({ status: "loaded", route: loadedRoute }))
+      .catch((error: unknown) => {
+        if (controller.signal.aborted) return;
+        const message = error instanceof RegistryClientError
+          ? error.message
+          : "The registry data could not be loaded.";
+        setState({ status: "error", message });
+      });
+    return () => controller.abort();
+  }, [route, location.search]);
+
+  let content;
+  if (route.kind === "not-found") {
+    content = (
+      <PageContainer className="registry-page">
+        <NotFoundState />
+      </PageContainer>
+    );
+  } else if (state.status === "loading") {
+    content = (
+      <PageContainer className="registry-page">
+        <LoadingState columns={5} rows={6} />
+      </PageContainer>
+    );
+  } else if (state.status === "error") {
+    content = (
+      <PageContainer className="registry-page">
+        <ErrorState title="Unable to load registry data" description={state.message} />
+      </PageContainer>
+    );
+  } else if (state.route.kind === "models") {
+    content = <ModelsPage response={state.route.payload} currentSearch={location.search} />;
+  } else if (state.route.kind === "model") {
+    content = <ModelDetailPage response={state.route.payload} currentSearch={location.search} />;
+  } else {
+    content = (
+      <PageContainer className="registry-page">
+        <NotFoundState />
+      </PageContainer>
+    );
+  }
+
   return (
     <AppShell
       navigation={navigation}
+      activeHref="/models"
       onSearchSubmit={(event) => event.preventDefault()}
     >
-      <PageContainer className="registry-page">
-        <PageHeader title="Gemini 2.5 Pro" />
-
-        <section className="entity-metadata" aria-label="Model metadata">
-          <MetadataRows
-            items={[
-              { label: "Released", value: "March 25, 2025" },
-              { label: "Company", value: <a href="/companies/google">Google</a> },
-              {
-                label: "Source",
-                value: (
-                  <SourceLink href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/">
-                    Release announcement
-                  </SourceLink>
-                ),
-              },
-              { label: "Registry No.", value: <span className="registry-number">30002</span> },
-            ]}
-          />
-        </section>
-
-        <section className="results-section" aria-labelledby="table-heading">
-          <div className="results-section__header">
-            <div>
-              <h2 id="table-heading">Benchmarks</h2>
-              <p>3 results</p>
-            </div>
-            <PageSizeSelector value={50} id="results-page-size" />
-          </div>
-          <Tabs
-            label="Result view"
-            items={[
-              { href: "?view=latest", label: "Latest", active: true },
-              { href: "?view=history", label: "History" },
-            ]}
-          />
-          <DataTable
-            caption="Benchmark results for Gemini 2.5 Pro"
-            columns={resultColumns}
-            rows={resultFixtures}
-            getRowKey={(row) => row.resultKey}
-          />
-          <Pagination
-            page={2}
-            totalPages={8}
-            getHref={(page) => `?page=${page}&limit=50&view=latest`}
-          />
-        </section>
-      </PageContainer>
+      {content}
     </AppShell>
   );
 }

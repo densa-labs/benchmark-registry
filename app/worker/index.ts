@@ -19,6 +19,12 @@ const RESULT_SORTS = [
   "reported_at",
 ];
 
+function modelPageRegistryNo(pathname: string): string | null {
+  const match = /^\/models\/([^/]+)\/?$/u.exec(pathname);
+  if (!match) return null;
+  return decodeSegment(match[1]);
+}
+
 function decodeSegment(value: string): string {
   try {
     return decodeURIComponent(value);
@@ -91,7 +97,8 @@ async function handleApi(request: Request, env: Env): Promise<Response> {
 
 const worker = {
   async fetch(request: Request, env: Env): Promise<Response> {
-    const { pathname } = new URL(request.url);
+    const url = new URL(request.url);
+    const { pathname } = url;
 
     if (pathname === "/api" || pathname.startsWith("/api/")) {
       try {
@@ -102,6 +109,25 @@ const worker = {
         }
         console.error("Read API request failed.", error);
         return jsonError(500, "internal_error", "The request could not be completed.");
+      }
+    }
+
+    if (request.method === "GET" || request.method === "HEAD") {
+      try {
+        const registryNo = modelPageRegistryNo(pathname);
+        if (registryNo !== null) {
+          const target = await new RegistryRepository(env.DB).modelRedirectTarget(registryNo);
+          if (target !== null) {
+            url.pathname = `/models/${target}`;
+            return Response.redirect(url.toString(), 308);
+          }
+        }
+      } catch (error) {
+        if (error instanceof ApiError) {
+          return new Response("Invalid model route.", { status: error.status });
+        }
+        console.error("Model route redirect lookup failed.", error);
+        return new Response("The request could not be completed.", { status: 500 });
       }
     }
 
