@@ -1,25 +1,108 @@
+import { ApiError, jsonError } from "./api";
+import { parseParameters } from "./params";
+import { RegistryRepository } from "./repository";
+
 export interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
 }
 
-const apiNotFound = () =>
-  Response.json(
-    {
-      error: {
-        code: "not_found",
-        message: "API route not found.",
-      },
-    },
-    { status: 404 },
-  );
+const MODEL_SORTS = ["name", "released", "company", "registry_no"];
+const BENCHMARK_SORTS = ["name", "released", "version"];
+const COMPANY_SORTS = ["name", "established", "latest_model"];
+const RESULT_SORTS = [
+  "benchmark",
+  "model",
+  "company",
+  "source",
+  "registry_no",
+  "reported_at",
+];
+
+function decodeSegment(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    throw new ApiError(400, "invalid_query", "Route contains invalid encoding.");
+  }
+}
+
+async function handleApi(request: Request, env: Env): Promise<Response> {
+  if (request.method !== "GET") return jsonError(404, "not_found", "API route not found.");
+  const url = new URL(request.url);
+  const path = url.pathname.split("/").filter(Boolean).map(decodeSegment);
+  const repository = new RegistryRepository(env.DB);
+
+  if (path.length === 2 && path[1] === "models") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q", "company", "sort", "order"],
+      sorts: MODEL_SORTS,
+    });
+    return Response.json(await repository.models(params));
+  }
+  if (path.length === 3 && path[1] === "models") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q", "sort", "order", "view"],
+      sorts: RESULT_SORTS,
+    });
+    return Response.json(await repository.model(path[2], params));
+  }
+  if (path.length === 2 && path[1] === "benchmarks") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q", "sort", "order"],
+      sorts: BENCHMARK_SORTS,
+    });
+    return Response.json(await repository.benchmarks(params));
+  }
+  if (path.length === 3 && path[1] === "benchmarks") {
+    parseParameters(url.searchParams, { allowed: [] });
+    return Response.json(await repository.benchmark(path[2]));
+  }
+  if (path.length === 4 && path[1] === "benchmarks") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q", "company", "sort", "order", "view"],
+      sorts: RESULT_SORTS,
+    });
+    return Response.json(await repository.benchmarkVersion(path[2], path[3], params));
+  }
+  if (path.length === 2 && path[1] === "companies") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q", "sort", "order"],
+      sorts: COMPANY_SORTS,
+    });
+    return Response.json(await repository.companies(params));
+  }
+  if (path.length === 3 && path[1] === "companies") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q", "sort", "order", "view"],
+      sorts: RESULT_SORTS,
+    });
+    return Response.json(await repository.company(path[2], params));
+  }
+  if (path.length === 2 && path[1] === "search") {
+    const params = parseParameters(url.searchParams, {
+      allowed: ["page", "limit", "q"],
+      requireQuery: true,
+    });
+    return Response.json(await repository.search(params));
+  }
+  return jsonError(404, "not_found", "API route not found.");
+}
 
 const worker = {
-  fetch(request: Request, env: Env): Promise<Response> | Response {
+  async fetch(request: Request, env: Env): Promise<Response> {
     const { pathname } = new URL(request.url);
 
     if (pathname === "/api" || pathname.startsWith("/api/")) {
-      return apiNotFound();
+      try {
+        return await handleApi(request, env);
+      } catch (error) {
+        if (error instanceof ApiError) {
+          return jsonError(error.status, error.code, error.message);
+        }
+        console.error("Read API request failed.", error);
+        return jsonError(500, "internal_error", "The request could not be completed.");
+      }
     }
 
     return env.ASSETS.fetch(request);
