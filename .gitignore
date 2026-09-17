@@ -5,3 +5,11 @@ data-contract.md
 development-roadmap.md
 product-contract.md
 registry-numbering.md
+
+# JavaScript and Cloudflare build state
+app/node_modules/
+app/dist/
+app/coverage/
+app/.vite/
+app/.wrangler/
+app/.dev.vars*
