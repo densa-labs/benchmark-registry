@@ -8,15 +8,26 @@ import {
   resolveRegistryRoute,
 } from "./registry";
 
-describe("model route data loading", () => {
-  it("recognizes only the P7.1 model routes", () => {
+describe("registry route data loading", () => {
+  it("recognizes the implemented model and benchmark routes", () => {
     expect(resolveRegistryRoute("/models")).toEqual({ kind: "models" });
     expect(resolveRegistryRoute("/models/10002")).toEqual({
       kind: "model",
       registryNo: "10002",
     });
-    expect(resolveRegistryRoute("/benchmarks")).toEqual({ kind: "not-found" });
+    expect(resolveRegistryRoute("/benchmarks")).toEqual({ kind: "benchmarks" });
+    expect(resolveRegistryRoute("/benchmarks/gpqa")).toEqual({
+      kind: "benchmark",
+      slug: "gpqa",
+    });
+    expect(resolveRegistryRoute("/benchmarks/gpqa/diamond")).toEqual({
+      kind: "benchmark-version",
+      slug: "gpqa",
+      version: "diamond",
+    });
     expect(resolveRegistryRoute("/models/10002/results")).toEqual({ kind: "not-found" });
+    expect(resolveRegistryRoute("/benchmarks/gpqa/diamond/results"))
+      .toEqual({ kind: "not-found" });
   });
 
   it("forwards shareable query state to the matching read API", async () => {
@@ -33,6 +44,54 @@ describe("model route data loading", () => {
       expect.objectContaining({ headers: { Accept: "application/json" } }),
     );
     expect(loaded.kind).toBe("models");
+  });
+
+  it("loads benchmark family and version routes through canonical API paths", async () => {
+    const fetcher = vi.fn().mockImplementation((path: string) => {
+      if (path === "/api/benchmarks/swe-bench") {
+        return Promise.resolve(Response.json({ data: {} }));
+      }
+      return Promise.resolve(Response.json({
+        data: {
+          results: [{ model: { company: { name: "OpenAI", slug: "openai" } } }],
+          result_page: { total_pages: 1 },
+        },
+      }));
+    });
+
+    const family = await loadRegistryRoute(
+      { kind: "benchmark", slug: "swe-bench" },
+      "",
+      fetcher,
+    );
+    const version = await loadRegistryRoute(
+      { kind: "benchmark-version", slug: "gpqa", version: "diamond" },
+      "?view=history&company=openai",
+      fetcher,
+    );
+
+    expect(fetcher).toHaveBeenNthCalledWith(
+      1,
+      "/api/benchmarks/swe-bench",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      2,
+      "/api/benchmarks/gpqa/diamond?view=history&company=openai",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      3,
+      "/api/benchmarks/gpqa/diamond?view=history&limit=500&page=1",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(family.kind).toBe("benchmark");
+    expect(version.kind).toBe("benchmark-version");
+    if (version.kind === "benchmark-version") {
+      expect(version.payload.available_companies).toEqual([
+        { name: "OpenAI", slug: "openai" },
+      ]);
+    }
   });
 
   it("maps missing records and stable API errors to UI states", async () => {

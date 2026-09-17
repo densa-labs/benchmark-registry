@@ -1,4 +1,10 @@
-import type { ModelSummary, Page, ResultRow } from "../worker/api";
+import type {
+  BenchmarkVersionSummary,
+  CompanySummary,
+  ModelSummary,
+  Page,
+  ResultRow,
+} from "../worker/api";
 
 export interface ModelListResponse {
   data: ModelSummary[];
@@ -17,14 +23,53 @@ export interface ModelDetailResponse {
   };
 }
 
+export interface BenchmarkListResponse {
+  data: Array<{
+    benchmark: { name: string; slug: string };
+    latest_version: string;
+    latest_released_at: string;
+    latest_release_precision: "date" | "timestamp";
+  }>;
+  page: Page;
+}
+
+export interface BenchmarkFamilyResponse {
+  data: {
+    benchmark: { name: string; slug: string; aliases: string[] };
+    versions: BenchmarkVersionSummary[];
+  };
+}
+
+export interface BenchmarkVersionResponse {
+  data: {
+    version: BenchmarkVersionSummary;
+    evaluator_names: string[];
+    source_url: string;
+    view: "latest" | "history";
+    company: string | null;
+    results: ResultRow[];
+    result_page: Page;
+  };
+}
+
+export interface BenchmarkVersionPageResponse extends BenchmarkVersionResponse {
+  available_companies: CompanySummary[];
+}
+
 export type RegistryRoute =
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
+  | { kind: "benchmarks" }
+  | { kind: "benchmark"; slug: string }
+  | { kind: "benchmark-version"; slug: string; version: string }
   | { kind: "not-found" };
 
 export type LoadedRegistryRoute =
   | { kind: "models"; payload: ModelListResponse }
   | { kind: "model"; payload: ModelDetailResponse }
+  | { kind: "benchmarks"; payload: BenchmarkListResponse }
+  | { kind: "benchmark"; payload: BenchmarkFamilyResponse }
+  | { kind: "benchmark-version"; payload: BenchmarkVersionPageResponse }
   | { kind: "not-found" };
 
 export class RegistryClientError extends Error {}
@@ -34,20 +79,49 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
     return { kind: "models" };
   }
 
-  const match = /^\/models\/([^/]+)\/?$/u.exec(pathname);
-  if (!match) return { kind: "not-found" };
+  if (pathname === "/benchmarks" || pathname === "/benchmarks/") {
+    return { kind: "benchmarks" };
+  }
 
   try {
-    return { kind: "model", registryNo: decodeURIComponent(match[1]) };
+    const modelMatch = /^\/models\/([^/]+)\/?$/u.exec(pathname);
+    if (modelMatch) {
+      return { kind: "model", registryNo: decodeURIComponent(modelMatch[1]) };
+    }
+
+    const benchmarkVersionMatch = /^\/benchmarks\/([^/]+)\/([^/]+)\/?$/u.exec(pathname);
+    if (benchmarkVersionMatch) {
+      return {
+        kind: "benchmark-version",
+        slug: decodeURIComponent(benchmarkVersionMatch[1]),
+        version: decodeURIComponent(benchmarkVersionMatch[2]),
+      };
+    }
+
+    const benchmarkMatch = /^\/benchmarks\/([^/]+)\/?$/u.exec(pathname);
+    if (benchmarkMatch) {
+      return { kind: "benchmark", slug: decodeURIComponent(benchmarkMatch[1]) };
+    }
+
+    return { kind: "not-found" };
   } catch {
     return { kind: "not-found" };
   }
 }
 
 function apiPath(route: Exclude<RegistryRoute, { kind: "not-found" }>): string {
-  return route.kind === "models"
-    ? "/api/models"
-    : `/api/models/${encodeURIComponent(route.registryNo)}`;
+  switch (route.kind) {
+    case "models":
+      return "/api/models";
+    case "model":
+      return `/api/models/${encodeURIComponent(route.registryNo)}`;
+    case "benchmarks":
+      return "/api/benchmarks";
+    case "benchmark":
+      return `/api/benchmarks/${encodeURIComponent(route.slug)}`;
+    case "benchmark-version":
+      return `/api/benchmarks/${encodeURIComponent(route.slug)}/${encodeURIComponent(route.version)}`;
+  }
 }
 
 function errorMessage(body: unknown): string {
@@ -63,6 +137,42 @@ function errorMessage(body: unknown): string {
     return body.error.message;
   }
   return "The registry data could not be loaded.";
+}
+
+async function loadBenchmarkCompanies(
+  route: Extract<RegistryRoute, { kind: "benchmark-version" }>,
+  search: string,
+  fetcher: typeof fetch,
+  signal?: AbortSignal,
+): Promise<CompanySummary[]> {
+  const params = new URLSearchParams(search);
+  for (const key of ["company", "page", "limit", "sort", "order"]) {
+    params.delete(key);
+  }
+  params.set("limit", "500");
+
+  const companies = new Map<string, CompanySummary>();
+  let page = 1;
+  while (true) {
+    params.set("page", String(page));
+    const response = await fetcher(`${apiPath(route)}?${params.toString()}`, {
+      headers: { Accept: "application/json" },
+      signal,
+    });
+    const body: unknown = await response.json();
+    if (!response.ok) throw new RegistryClientError(errorMessage(body));
+
+    const payload = body as BenchmarkVersionResponse;
+    for (const result of payload.data.results) {
+      companies.set(result.model.company.slug, result.model.company);
+    }
+    if (page >= payload.data.result_page.total_pages) break;
+    page += 1;
+  }
+
+  return Array.from(companies.values()).sort((left, right) =>
+    left.name.localeCompare(right.name, "en"),
+  );
 }
 
 export async function loadRegistryRoute(
@@ -82,9 +192,31 @@ export async function loadRegistryRoute(
   if (response.status === 404) return { kind: "not-found" };
   if (!response.ok) throw new RegistryClientError(errorMessage(body));
 
-  return route.kind === "models"
-    ? { kind: "models", payload: body as ModelListResponse }
-    : { kind: "model", payload: body as ModelDetailResponse };
+  switch (route.kind) {
+    case "models":
+      return { kind: "models", payload: body as ModelListResponse };
+    case "model":
+      return { kind: "model", payload: body as ModelDetailResponse };
+    case "benchmarks":
+      return { kind: "benchmarks", payload: body as BenchmarkListResponse };
+    case "benchmark":
+      return { kind: "benchmark", payload: body as BenchmarkFamilyResponse };
+    case "benchmark-version": {
+      const availableCompanies = await loadBenchmarkCompanies(
+        route,
+        search,
+        fetcher,
+        signal,
+      );
+      return {
+        kind: "benchmark-version",
+        payload: {
+          ...(body as BenchmarkVersionResponse),
+          available_companies: availableCompanies,
+        },
+      };
+    }
+  }
 }
 
 export type QueryChange = string | number | null | undefined;

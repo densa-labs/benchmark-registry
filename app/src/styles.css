@@ -459,6 +459,26 @@ h3 {
   color: var(--text);
 }
 
+.result-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.result-tabs .tabs {
+  flex: 0 0 auto;
+  margin-bottom: -1px;
+  border-bottom: 0;
+}
+
+.latest-indicator {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .page-size {
   display: inline-flex;
   align-items: center;
@@ -922,6 +942,18 @@ h3 {
 
   .page-size-form {
     flex-wrap: wrap;
+  }
+
+  .result-tabs {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    overflow-x: visible;
+  }
+
+  .result-tabs .tabs {
+    max-width: 100%;
+    overflow-x: auto;
   }
 
   .metadata-row {

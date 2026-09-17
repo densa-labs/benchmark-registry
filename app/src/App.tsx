@@ -1,5 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 
+import {
+  BenchmarkFamilyPage,
+  BenchmarksPage,
+  BenchmarkVersionPage,
+} from "./benchmark-pages";
 import { ModelDetailPage, ModelsPage } from "./model-pages";
 import {
   loadRegistryRoute,
@@ -78,6 +83,17 @@ export function App() {
     content = <ModelsPage response={state.route.payload} currentSearch={location.search} />;
   } else if (state.route.kind === "model") {
     content = <ModelDetailPage response={state.route.payload} currentSearch={location.search} />;
+  } else if (state.route.kind === "benchmarks") {
+    content = <BenchmarksPage response={state.route.payload} currentSearch={location.search} />;
+  } else if (state.route.kind === "benchmark") {
+    content = <BenchmarkFamilyPage response={state.route.payload} />;
+  } else if (state.route.kind === "benchmark-version") {
+    content = (
+      <BenchmarkVersionPage
+        response={state.route.payload}
+        currentSearch={location.search}
+      />
+    );
   } else {
     content = (
       <PageContainer className="registry-page">
@@ -89,7 +105,7 @@ export function App() {
   return (
     <AppShell
       navigation={navigation}
-      activeHref="/models"
+      activeHref={route.kind.startsWith("benchmark") ? "/benchmarks" : "/models"}
       onSearchSubmit={(event) => event.preventDefault()}
     >
       {content}
