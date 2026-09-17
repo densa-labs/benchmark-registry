@@ -1,6 +1,6 @@
 # Benchmark Registry
 
-Benchmark Registry is an ever-updating registry of AI models and their benchmark results.
+[Benchmark Registry](https://benchmarkregistry.org) is an ever-updating registry of AI models and their benchmark results.
 
 ## Registry numbers
 
