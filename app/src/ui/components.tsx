@@ -168,7 +168,12 @@ export function SortableHeader({ href, label, direction }: SortableHeaderProps) 
 
   return (
     <a
-      className="sortable-header"
+      className={[
+        "sortable-header",
+        direction ? "sortable-header--active" : undefined,
+      ]
+        .filter(Boolean)
+        .join(" ")}
       href={href}
       aria-label={`Sort by ${label} ${nextDirection}`}
     >

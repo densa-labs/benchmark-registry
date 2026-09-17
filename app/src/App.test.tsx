@@ -61,6 +61,7 @@ describe("Registry foundation view", () => {
 
     expect(markup).toContain('class="table-scroll"');
     expect(markup).toContain('aria-sort="ascending"');
+    expect(markup).toContain('class="sortable-header sortable-header--active"');
     expect(markup).toContain("Sort by Model descending");
     expect(markup).toContain('?sort=model&amp;order=desc');
     expect(markup).toContain("Gemini 2.5 Pro");
