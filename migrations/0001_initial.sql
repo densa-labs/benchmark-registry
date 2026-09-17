@@ -224,6 +224,15 @@ CREATE TABLE registry_redirects (
     CHECK (source_model_id <> target_model_id)
 );
 
+CREATE INDEX idx_models_release_at ON models(release_at);
+CREATE INDEX idx_models_published_at ON models(published_at);
+CREATE INDEX idx_models_normalized_name ON models(normalized_name);
+CREATE INDEX idx_results_benchmark_version_id
+    ON results(benchmark_version_id);
+CREATE INDEX idx_results_reported_at ON results(reported_at);
+CREATE INDEX idx_results_model_benchmark_version
+    ON results(model_id, benchmark_version_id);
+
 -- SQLite CHECK constraints cannot refer to other tables. These triggers enforce
 -- the stable cross-table invariants from the frozen data and numbering contracts.
 
