@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  app:
+    name: App and migrations
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install app dependencies
+        run: npm ci
+
+      - name: Typecheck app
+        run: npm run typecheck
+
+      - name: Lint app
+        run: npm run lint
+
+      - name: Run frontend and API tests
+        run: npm test
+
+      - name: Validate migrations
+        run: npm run db:migrate:local
+
+  python:
+    name: Python tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ingestor
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version-file: ingestor/.python-version
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+          cache-dependency-glob: ingestor/uv.lock
+
+      - name: Install Python dependencies
+        run: uv sync --locked --all-groups
+
+      - name: Run Python tests
+        run: uv run pytest
