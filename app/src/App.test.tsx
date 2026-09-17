@@ -5,6 +5,7 @@ import { App } from "./App";
 import {
   DataTable,
   EmptyState,
+  Header,
   LoadingState,
   MetadataRows,
   NotFoundState,
@@ -12,6 +13,7 @@ import {
   Pagination,
   SourceLink,
   Tabs,
+  ThemeToggle,
 } from "./ui/components";
 import { resultColumns, resultFixtures } from "./ui/fixtures";
 
@@ -27,6 +29,35 @@ describe("Registry foundation view", () => {
     expect(markup).toContain("Benchmarks");
     expect(markup).toContain("Companies");
     expect(markup).toContain('id="main-content"');
+    expect(markup).toContain("Benchmark-Registry-B-Logo-Dark.png");
+    expect(markup).toContain("Benchmark Registry ©");
+    expect(markup).toContain('name="color-theme"');
+    expect(markup).toContain('value="light"');
+    expect(markup).toContain('value="dark"');
+  });
+
+  it("uses the contrast-appropriate official header logo", () => {
+    const lightMarkup = renderToStaticMarkup(<Header navigation={[]} theme="light" />);
+    const darkMarkup = renderToStaticMarkup(<Header navigation={[]} theme="dark" />);
+
+    expect(lightMarkup).toContain("Benchmark-Registry-B-Logo-Dark.png");
+    expect(lightMarkup).not.toContain("Benchmark-Registry-B-Logo-White.png");
+    expect(darkMarkup).toContain("Benchmark-Registry-B-Logo-White.png");
+    expect(darkMarkup).not.toContain("Benchmark-Registry-B-Logo-Dark.png");
+  });
+
+  it("renders the theme choice as text labels backed by native radio controls", () => {
+    const markup = renderToStaticMarkup(
+      <ThemeToggle theme="dark" onSelectTheme={() => undefined} />,
+    );
+
+    expect(markup).toContain("<fieldset");
+    expect(markup).toContain("Color theme");
+    expect(markup).toContain('type="radio"');
+    expect(markup).toMatch(/id="theme-dark"[^>]*checked=""[^>]*value="dark"/);
+    expect(markup).toContain('for="theme-light">Light</label>');
+    expect(markup).toContain('for="theme-dark">Dark</label>');
+    expect(markup).not.toContain("<button");
   });
 
   it("renders metadata and source links with external-link treatment", () => {

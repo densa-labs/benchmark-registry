@@ -5,6 +5,9 @@ import "@fontsource-variable/geist-mono";
 
 import { App } from "./App";
 import "./styles.css";
+import { applyStoredTheme } from "./theme";
+
+applyStoredTheme(document.documentElement, window.localStorage);
 
 const rootElement = document.getElementById("root");
 

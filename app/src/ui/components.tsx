@@ -1,4 +1,14 @@
-import type { FormEvent, ReactNode } from "react";
+import { useEffect, useState, type FormEvent, type ReactNode } from "react";
+
+import darkLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-Dark.png";
+import whiteLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-White.png";
+import {
+  readStoredTheme,
+  resolveTheme,
+  storeTheme,
+  SYSTEM_DARK_THEME_QUERY,
+  type Theme,
+} from "../theme";
 
 export type SortDirection = "asc" | "desc";
 
@@ -20,6 +30,8 @@ export function AppShell({
   activeHref,
   onSearchSubmit,
 }: AppShellProps) {
+  const { theme, selectTheme } = useThemePreference();
+
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main-content">
@@ -29,11 +41,13 @@ export function AppShell({
         navigation={navigation}
         activeHref={activeHref}
         onSearchSubmit={onSearchSubmit}
+        theme={theme}
       />
       <main id="main-content">{children}</main>
       <footer className="site-footer">
-        <PageContainer>
-          <p>Benchmark Registry</p>
+        <PageContainer className="site-footer__inner">
+          <p>Benchmark Registry ©</p>
+          <ThemeToggle theme={theme} onSelectTheme={selectTheme} />
         </PageContainer>
       </footer>
     </div>
@@ -44,13 +58,25 @@ interface HeaderProps {
   navigation: NavigationItem[];
   activeHref?: string;
   onSearchSubmit?: (event: FormEvent<HTMLFormElement>) => void;
+  theme?: Theme;
 }
 
-export function Header({ navigation, activeHref, onSearchSubmit }: HeaderProps) {
+export function Header({
+  navigation,
+  activeHref,
+  onSearchSubmit,
+  theme = "light",
+}: HeaderProps) {
   return (
     <header className="site-header">
       <PageContainer className="site-header__inner">
         <a className="wordmark" href="/" aria-label="Benchmark Registry home">
+          <img
+            className="wordmark__logo"
+            src={theme === "dark" ? whiteLogoUrl : darkLogoUrl}
+            alt=""
+            aria-hidden="true"
+          />
           <span>Benchmark Registry</span>
         </a>
         <nav className="primary-nav" aria-label="Primary navigation">
@@ -67,6 +93,75 @@ export function Header({ navigation, activeHref, onSearchSubmit }: HeaderProps) 
         <GlobalSearch onSubmit={onSearchSubmit} />
       </PageContainer>
     </header>
+  );
+}
+
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  return resolveTheme(
+    readStoredTheme(window.localStorage),
+    window.matchMedia(SYSTEM_DARK_THEME_QUERY).matches,
+  );
+}
+
+function useThemePreference() {
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+
+  useEffect(() => {
+    const systemTheme = window.matchMedia(SYSTEM_DARK_THEME_QUERY);
+    const handleSystemThemeChange = (event: MediaQueryListEvent) => {
+      if (readStoredTheme(window.localStorage) === null) {
+        setTheme(event.matches ? "dark" : "light");
+      }
+    };
+
+    systemTheme.addEventListener("change", handleSystemThemeChange);
+    return () => systemTheme.removeEventListener("change", handleSystemThemeChange);
+  }, []);
+
+  const selectTheme = (nextTheme: Theme) => {
+    setTheme(nextTheme);
+    storeTheme(nextTheme, document.documentElement, window.localStorage);
+  };
+
+  return { theme, selectTheme };
+}
+
+interface ThemeToggleProps {
+  theme: Theme;
+  onSelectTheme: (theme: Theme) => void;
+}
+
+export function ThemeToggle({ theme, onSelectTheme }: ThemeToggleProps) {
+  return (
+    <fieldset className="theme-toggle">
+      <legend className="visually-hidden">Color theme</legend>
+      <div className="theme-toggle__options">
+        <input
+          className="theme-toggle__input visually-hidden"
+          id="theme-light"
+          name="color-theme"
+          type="radio"
+          value="light"
+          checked={theme === "light"}
+          onChange={() => onSelectTheme("light")}
+        />
+        <label htmlFor="theme-light">Light</label>
+        <input
+          className="theme-toggle__input visually-hidden"
+          id="theme-dark"
+          name="color-theme"
+          type="radio"
+          value="dark"
+          checked={theme === "dark"}
+          onChange={() => onSelectTheme("dark")}
+        />
+        <label htmlFor="theme-dark">Dark</label>
+      </div>
+    </fieldset>
   );
 }
 
