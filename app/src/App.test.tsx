@@ -15,7 +15,7 @@ import {
 } from "./ui/components";
 import { resultColumns, resultFixtures } from "./ui/fixtures";
 
-describe("UI foundation fixture gallery", () => {
+describe("Registry foundation view", () => {
   it("renders the application shell, navigation, search, and container", () => {
     const markup = renderToStaticMarkup(<App />);
 
@@ -114,15 +114,18 @@ describe("UI foundation fixture gallery", () => {
     expect(markup).toContain('href="/models"');
   });
 
-  it("renders every P6 primitive in the fixture gallery", () => {
+  it("renders the fixture as a compact model data view without demo framing", () => {
     const markup = renderToStaticMarkup(<App />);
 
-    expect(markup).toContain("Registry interface primitives");
-    expect(markup).toContain("Model metadata");
-    expect(markup).toContain("3 fixture results");
+    expect(markup).toContain("Gemini 2.5 Pro");
+    expect(markup).toContain('aria-label="Model metadata"');
+    expect(markup).toContain("Benchmarks");
+    expect(markup).toContain("3 results");
     expect(markup).toContain("Latest");
     expect(markup).toContain("History");
     expect(markup).toContain("Rows per page");
-    expect(markup).toContain("System states");
+    expect(markup).not.toContain("UI foundation");
+    expect(markup).not.toContain("Registry interface primitives");
+    expect(markup).not.toContain("System states");
   });
 });

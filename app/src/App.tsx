@@ -1,10 +1,7 @@
 import {
   AppShell,
   DataTable,
-  EmptyState,
-  LoadingState,
   MetadataRows,
-  NotFoundState,
   PageContainer,
   PageHeader,
   PageSizeSelector,
@@ -26,20 +23,10 @@ export function App() {
       navigation={navigation}
       onSearchSubmit={(event) => event.preventDefault()}
     >
-      <PageContainer className="foundation-page">
-        <PageHeader
-          kicker="UI foundation"
-          title="Registry interface primitives"
-          description="Reusable, accessible controls for source-backed model and benchmark data."
-        />
+      <PageContainer className="registry-page">
+        <PageHeader title="Gemini 2.5 Pro" />
 
-        <section className="specimen" aria-labelledby="metadata-heading">
-          <div className="specimen__header">
-            <div>
-              <h2 id="metadata-heading">Model metadata</h2>
-              <p>Compact definition rows keep provenance next to each fact.</p>
-            </div>
-          </div>
+        <section className="entity-metadata" aria-label="Model metadata">
           <MetadataRows
             items={[
               { label: "Released", value: "March 25, 2025" },
@@ -57,11 +44,11 @@ export function App() {
           />
         </section>
 
-        <section className="specimen" aria-labelledby="table-heading">
-          <div className="specimen__header specimen__header--split">
+        <section className="results-section" aria-labelledby="table-heading">
+          <div className="results-section__header">
             <div>
-              <h2 id="table-heading">Results</h2>
-              <p>3 fixture results</p>
+              <h2 id="table-heading">Benchmarks</h2>
+              <p>3 results</p>
             </div>
             <PageSizeSelector value={50} id="results-page-size" />
           </div>
@@ -73,7 +60,7 @@ export function App() {
             ]}
           />
           <DataTable
-            caption="Benchmark result fixtures"
+            caption="Benchmark results for Gemini 2.5 Pro"
             columns={resultColumns}
             rows={resultFixtures}
             getRowKey={(row) => row.resultKey}
@@ -83,33 +70,6 @@ export function App() {
             totalPages={8}
             getHref={(page) => `?page=${page}&limit=50&view=latest`}
           />
-        </section>
-
-        <section className="specimen" aria-labelledby="states-heading">
-          <div className="specimen__header">
-            <div>
-              <h2 id="states-heading">System states</h2>
-              <p>Predictable feedback for every data-loading outcome.</p>
-            </div>
-          </div>
-          <div className="state-grid">
-            <div>
-              <h3>Loading</h3>
-              <LoadingState />
-            </div>
-            <div>
-              <h3>Empty</h3>
-              <EmptyState
-                title="No matching results"
-                description="Try a different search term or remove the active company filter."
-                action={<a href="?">Clear filters</a>}
-              />
-            </div>
-            <div>
-              <h3>Not found</h3>
-              <NotFoundState />
-            </div>
-          </div>
         </section>
       </PageContainer>
     </AppShell>

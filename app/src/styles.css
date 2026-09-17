@@ -1,23 +1,23 @@
 :root {
-  color: #20211f;
-  background: #f5f5f2;
+  color: #18181b;
+  background: #ffffff;
   font-family:
     "Avenir Next", Avenir, "Segoe UI", ui-sans-serif, system-ui, -apple-system,
     sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --background: #f5f5f2;
-  --surface: #fbfbf8;
-  --surface-strong: #eeeeea;
-  --text: #20211f;
-  --text-muted: #656760;
-  --border: #d7d8d1;
-  --border-strong: #aaaca3;
-  --accent: #1e5f49;
-  --accent-strong: #164737;
-  --accent-soft: #e2eee8;
-  --focus: #b35227;
-  --header-height: 4.5rem;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-strong: #f4f4f5;
+  --text: #18181b;
+  --text-muted: #65666d;
+  --border: #e4e4e7;
+  --border-strong: #c9cbd1;
+  --accent: #1e3a5f;
+  --accent-strong: #122b4a;
+  --accent-soft: #edf2f7;
+  --focus: #245f9b;
+  --header-height: 3.75rem;
 }
 
 * {
@@ -35,6 +35,7 @@ body {
   min-height: 100dvh;
   background: var(--background);
   color: var(--text);
+  line-height: 1.5;
 }
 
 button,
@@ -116,8 +117,7 @@ a:hover {
   top: 0;
   z-index: 1;
   border-bottom: 1px solid var(--border);
-  background: color-mix(in srgb, var(--background) 94%, transparent);
-  backdrop-filter: blur(0.75rem);
+  background: var(--background);
 }
 
 .site-header__inner {
@@ -125,17 +125,16 @@ a:hover {
   display: grid;
   grid-template-columns: auto auto minmax(15rem, 1fr);
   align-items: center;
-  gap: clamp(1rem, 3vw, 2.5rem);
+  gap: clamp(1rem, 2.5vw, 2rem);
 }
 
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
   color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
+  font-size: 0.875rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -144,27 +143,15 @@ a:hover {
   color: var(--text);
 }
 
-.wordmark__mark {
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border: 1px solid var(--text);
-  color: var(--text);
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
-}
-
 .primary-nav {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.1rem;
   white-space: nowrap;
 }
 
 .primary-nav a {
-  padding-block: 0.35rem;
+  padding-block: 0.25rem;
   color: var(--text-muted);
   font-size: 0.84rem;
   font-weight: 600;
@@ -182,10 +169,10 @@ a:hover {
 
 .global-search {
   justify-self: end;
-  width: min(100%, 25rem);
+  width: min(100%, 23rem);
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border);
   background: var(--surface);
 }
 
@@ -197,7 +184,7 @@ a:hover {
 .global-search input {
   min-width: 0;
   border: 0;
-  padding: 0.65rem 0.75rem;
+  padding: 0.5rem 0.65rem;
   background: transparent;
   font-size: 0.82rem;
   outline: 0;
@@ -211,7 +198,7 @@ a:hover {
 .global-search button {
   border: 0;
   border-left: 1px solid var(--border);
-  padding: 0.65rem 0.85rem;
+  padding: 0.5rem 0.75rem;
   background: var(--surface-strong);
   color: var(--text);
   cursor: pointer;
@@ -228,13 +215,13 @@ a:hover {
   transform: translateY(1px);
 }
 
-.foundation-page {
-  padding-block: clamp(3rem, 7vw, 6rem);
+.registry-page {
+  padding-block: clamp(2rem, 4vw, 3.25rem);
 }
 
 .page-header {
-  max-width: 45rem;
-  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+  max-width: 48rem;
+  margin-bottom: 1.25rem;
 }
 
 .kicker {
@@ -254,19 +241,19 @@ p {
 }
 
 h1 {
-  margin-bottom: 1rem;
-  font-size: clamp(2.25rem, 6vw, 4.4rem);
-  font-weight: 620;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
-}
-
-h2 {
-  margin-bottom: 0.35rem;
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 650;
   letter-spacing: -0.035em;
   line-height: 1.15;
+}
+
+h2 {
+  margin-bottom: 0.2rem;
+  font-size: 1.125rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 h3 {
@@ -278,7 +265,7 @@ h3 {
 }
 
 .page-header__description,
-.specimen__header p {
+.results-section__header p {
   max-width: 42rem;
   color: var(--text-muted);
   line-height: 1.65;
@@ -289,30 +276,28 @@ h3 {
   font-size: 1.05rem;
 }
 
-.specimen {
+.entity-metadata {
   min-width: 0;
-  padding-block: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.results-section {
+  min-width: 0;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--border-strong);
 }
 
-.specimen + .specimen {
-  margin-top: 2.75rem;
-}
-
-.specimen__header {
-  margin-bottom: 1.5rem;
-}
-
-.specimen__header p {
+.results-section__header p {
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
-.specimen__header--split {
+.results-section__header {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .metadata-rows {
@@ -605,7 +590,7 @@ h3 {
 }
 
 .site-footer {
-  margin-top: 3rem;
+  margin-top: 2rem;
   border-top: 1px solid var(--border);
 }
 
@@ -673,19 +658,19 @@ h3 {
     grid-row: 3;
   }
 
-  .foundation-page {
-    padding-block: 2.75rem;
+  .registry-page {
+    padding-block: 1.5rem 2rem;
   }
 
   h1 {
-    font-size: clamp(2.25rem, 13vw, 3.3rem);
+    font-size: 1.75rem;
   }
 
   .page-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
   }
 
-  .specimen__header--split {
+  .results-section__header {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -728,22 +713,22 @@ h3 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #191b19;
-    --surface: #202320;
-    --surface-strong: #2b2f2b;
-    --text: #edf0eb;
-    --text-muted: #adb3aa;
-    --border: #3a3f3a;
-    --border-strong: #656b64;
-    --accent: #8fc7ad;
-    --accent-strong: #b2dcc8;
-    --accent-soft: #263c32;
-    --focus: #e08b62;
+    --background: #111214;
+    --surface: #17181b;
+    --surface-strong: #22242a;
+    --text: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --border: #2d2f35;
+    --border-strong: #484b54;
+    --accent: #8db4df;
+    --accent-strong: #b4cfea;
+    --accent-soft: #18283a;
+    --focus: #78b7f0;
   }
 
   .button-link,
   .button-link:hover {
-    color: #16221c;
+    color: #111827;
   }
 }
 

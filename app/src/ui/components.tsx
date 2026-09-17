@@ -33,7 +33,7 @@ export function AppShell({
       <main id="main-content">{children}</main>
       <footer className="site-footer">
         <PageContainer>
-          <p>Source-backed. Curated. Read-only.</p>
+          <p>Benchmark Registry</p>
         </PageContainer>
       </footer>
     </div>
@@ -51,9 +51,6 @@ export function Header({ navigation, activeHref, onSearchSubmit }: HeaderProps) 
     <header className="site-header">
       <PageContainer className="site-header__inner">
         <a className="wordmark" href="/" aria-label="Benchmark Registry home">
-          <span aria-hidden="true" className="wordmark__mark">
-            BR
-          </span>
           <span>Benchmark Registry</span>
         </a>
         <nav className="primary-nav" aria-label="Primary navigation">
