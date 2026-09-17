@@ -6,6 +6,7 @@
 
 # Benchmark Registry
 
+**A project of [Densa Labs](https://densa-labs.github.io).**<br>
 [Benchmark Registry](https://benchmarkregistry.org) is an ever-updating registry of AI models and their benchmark results.
 
 ## Registry numbers
@@ -53,7 +54,3 @@ Benchmark Registry v2 is currently in development.
 
 Benchmark Registry code is licensed under [Apache License 2.0](LICENSE).<br>
 Benchmark Registry's database licensed under [ODC-By 1.0](DATA_LICENSE).
-
----
-
-Densa Labs
