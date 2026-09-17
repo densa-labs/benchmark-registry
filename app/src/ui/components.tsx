@@ -46,7 +46,7 @@ export function AppShell({
       <main id="main-content">{children}</main>
       <footer className="site-footer">
         <PageContainer className="site-footer__inner">
-          <p>Benchmark Registry ©</p>
+          <p>© 2026 Densa Labs</p>
           <ThemeToggle theme={theme} onSelectTheme={selectTheme} />
         </PageContainer>
       </footer>
