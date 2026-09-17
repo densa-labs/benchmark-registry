@@ -1,4 +1,5 @@
 # Development files
+.env
 **/AGENTS.md
 CODEX_AUDIT.md
 data-contract.md

@@ -24,6 +24,9 @@ packages = ["src/benchmark_registry_ingestor"]
 [tool.pytest.ini_options]
 addopts = ["--strict-config", "--strict-markers", "-ra"]
 testpaths = ["tests"]
+markers = [
+  "remote: requires a migrated disposable Cloudflare D1 database",
+]
 
 [tool.ruff]
 line-length = 88
