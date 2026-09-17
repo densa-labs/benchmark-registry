@@ -2,8 +2,9 @@
   color: #18181b;
   background: #ffffff;
   font-family:
-    "Avenir Next", Avenir, "Segoe UI", ui-sans-serif, system-ui, -apple-system,
+    "Geist Variable", "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --background: #ffffff;
@@ -135,7 +136,7 @@ a:hover {
   align-items: center;
   color: var(--text);
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.01em;
   text-decoration: none;
   white-space: nowrap;
@@ -156,7 +157,7 @@ a:hover {
   padding-block: 0.35rem;
   color: var(--text-muted);
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 575;
   text-decoration: none;
 }
 
@@ -208,7 +209,7 @@ a:hover {
   color: var(--accent-contrast);
   cursor: pointer;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -234,7 +235,7 @@ a:hover {
   margin: 0 0 0.75rem;
   color: var(--accent);
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -249,7 +250,7 @@ p {
 h1 {
   margin-bottom: 0;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.15;
 }
@@ -257,7 +258,7 @@ h1 {
 h2 {
   margin-bottom: 0.2rem;
   font-size: 1.125rem;
-  font-weight: 650;
+  font-weight: 675;
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
@@ -265,7 +266,7 @@ h2 {
 h3 {
   margin-bottom: 0.75rem;
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: 650;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -324,7 +325,7 @@ h3 {
 .metadata-row dt {
   color: var(--text-muted);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 575;
 }
 
 .metadata-row dd {
@@ -336,7 +337,7 @@ h3 {
   display: inline-flex;
   align-items: baseline;
   gap: 0.25rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration-color: color-mix(in srgb, var(--accent) 50%, transparent);
   white-space: nowrap;
 }
@@ -363,7 +364,7 @@ h3 {
   border-bottom: 2px solid transparent;
   color: var(--text-muted);
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -379,7 +380,7 @@ h3 {
   gap: 0.65rem;
   color: var(--text-muted);
   font-size: 0.78rem;
-  font-weight: 650;
+  font-weight: 550;
   white-space: nowrap;
 }
 
@@ -412,6 +413,7 @@ h3 {
   min-width: 58rem;
   border-collapse: collapse;
   font-size: 0.8rem;
+  font-weight: 400;
   font-variant-numeric: tabular-nums;
 }
 
@@ -437,7 +439,7 @@ h3 {
   background: var(--surface-strong);
   color: var(--text-muted);
   font-size: 0.68rem;
-  font-weight: 750;
+  font-weight: 550;
   letter-spacing: 0.045em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -460,13 +462,16 @@ h3 {
 }
 
 .data-table .numeric {
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-weight: 500;
   text-align: right;
   white-space: nowrap;
 }
 
 .registry-number {
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-family:
+    "Geist Mono Variable", "Geist Mono", ui-monospace, "SFMono-Regular",
+    Consolas, monospace;
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.025em;
 }
@@ -540,7 +545,7 @@ h3 {
 
 .pagination__status strong {
   color: var(--text);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .state-grid {
@@ -626,7 +631,7 @@ h3 {
 .state-message__action {
   margin-top: 0.75rem;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .state-message--not-found {
@@ -636,9 +641,8 @@ h3 {
 .state-code {
   margin-bottom: 0.5rem !important;
   color: var(--accent) !important;
-  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 0.75rem !important;
-  font-weight: 750;
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
