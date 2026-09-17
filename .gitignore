@@ -13,3 +13,12 @@ app/coverage/
 app/.vite/
 app/.wrangler/
 app/.dev.vars*
+
+# Python ingestor build and tool state
+ingestor/.venv/
+ingestor/.pytest_cache/
+ingestor/.ruff_cache/
+ingestor/**/__pycache__/
+ingestor/*.egg-info/
+ingestor/build/
+ingestor/dist/
