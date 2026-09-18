@@ -278,6 +278,22 @@ describe("query validation and pagination", () => {
       expect(body).toMatchObject({ error: { code: "invalid_query" } });
     }
   });
+
+  it.each([
+    "/api/models?limit=51",
+    "/api/models/10002?limit=51",
+    "/api/benchmarks?limit=51",
+    "/api/benchmarks/swe-bench-verified/2025-02-01?limit=51",
+    "/api/companies?limit=51",
+    "/api/companies/openai?limit=51",
+    "/api/search?q=gpt&limit=51",
+  ])("rejects an invalid page size before querying %s", async (path) => {
+    const { response, body, calls } = await api(path);
+
+    expect(response.status).toBe(400);
+    expect(body).toMatchObject({ error: { code: "invalid_query" } });
+    expect(calls).toHaveLength(0);
+  });
 });
 
 describe("filtering, sorting, latest/history, and search", () => {

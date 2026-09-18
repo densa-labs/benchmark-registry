@@ -527,6 +527,52 @@ def test_missing_source_bad_date_and_unknown_version(ingestor: Ingestor) -> None
     )
 
 
+def test_p9_unknown_fields_are_rejected_without_writes(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    record = company_record()
+    record["curator_notes"] = "This field is not part of the ingestion contract."
+
+    assert_failure(ingestor, "company", record, match="unsupported field")
+    assert database.query("SELECT * FROM companies") == []
+
+    nested = company_record()
+    nested["namespace_authorizations"][0]["namespace"] = "10"
+
+    assert_failure(ingestor, "company", nested, match="unsupported field")
+    assert database.query("SELECT * FROM companies") == []
+
+
+def test_p9_registry_number_attacks_leave_only_the_valid_model(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    ingestor.run("model", model_record(), commit=True)
+
+    duplicate = model_record(name="Different model using the same number")
+    assert_failure(ingestor, "model", duplicate, status="CONFLICT")
+
+    wrong_namespace = model_record(
+        sequence=2,
+        registry_no="15002",
+        name="Wrong namespace",
+    )
+    wrong_namespace["namespace_prefix"] = "15"
+    assert_failure(ingestor, "model", wrong_namespace, match="not authorized")
+
+    wrong_sequence = model_record(
+        sequence=3,
+        registry_no="10003",
+        name="Skipped sequence",
+        release_at="2026-02-01",
+    )
+    assert_failure(ingestor, "model", wrong_sequence, match="next available")
+
+    assert database.query("SELECT registry_no FROM models ORDER BY registry_no") == [
+        {"registry_no": "10001"}
+    ]
+
+
 def test_failed_local_batch_rolls_back_every_statement(database: LocalDatabase) -> None:
     statements = [
         Statement(

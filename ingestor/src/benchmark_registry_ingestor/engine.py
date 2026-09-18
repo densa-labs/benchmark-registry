@@ -67,6 +67,61 @@ TABLES = (
     "registry_redirects",
 )
 
+RECORD_FIELDS = {
+    "company": {
+        "name",
+        "slug",
+        "established_at",
+        "established_precision",
+        "established_source_url",
+        "establishment_gap_documented",
+        "source_url",
+        "source_checked_at",
+        "namespace_authorizations",
+    },
+    "model": {
+        "canonical_name",
+        "company_slug",
+        "namespace_prefix",
+        "sequence",
+        "registry_no",
+        "release_at",
+        "release_precision",
+        "release_source_url",
+        "source_checked_at",
+        "published_at",
+        "status",
+        "sequence_exception_reason",
+        "aliases",
+        "redirect",
+    },
+    "benchmark": {
+        "canonical_name",
+        "slug",
+        "source_url",
+        "source_checked_at",
+        "aliases",
+        "evaluators",
+        "metrics",
+        "versions",
+    },
+    "result": {
+        "model_registry_no",
+        "reasoning_level",
+        "benchmark_slug",
+        "benchmark_version",
+        "metric_key",
+        "run_ref",
+        "source_has_single_run",
+        "score_value",
+        "score_raw",
+        "reported_at",
+        "reported_precision",
+        "evaluator_keys",
+        "sources",
+    },
+}
+
 
 @dataclass
 class Catalog:
@@ -139,6 +194,16 @@ def _mapping(value: object, field_name: str) -> Record:
     if not isinstance(value, dict):
         raise ValueErrorDetail(f"{field_name} must be an object")
     return value
+
+
+def _reject_unknown_fields(
+    record: Record, allowed_fields: set[str], field_name: str
+) -> None:
+    unknown = sorted(str(field) for field in record if field not in allowed_fields)
+    if unknown:
+        raise ValueErrorDetail(
+            f"{field_name} contains unsupported field(s): {', '.join(unknown)}"
+        )
 
 
 def _list(value: object, field_name: str, *, required: bool = False) -> list[object]:
@@ -219,10 +284,14 @@ class Ingestor:
     def _records(self, operation: str, payload: object) -> list[tuple[str, Record]]:
         if operation == "batch":
             root = _mapping(payload, "batch")
+            _reject_unknown_fields(root, {"records"}, "batch")
             items = _list(root.get("records"), "records", required=True)
             records: list[tuple[str, Record]] = []
             for index, raw_item in enumerate(items):
                 item = _mapping(raw_item, f"records[{index}]")
+                _reject_unknown_fields(
+                    item, {"operation", "record"}, f"records[{index}]"
+                )
                 item_operation = require_string(
                     item.get("operation"), f"records[{index}].operation"
                 )
@@ -245,6 +314,7 @@ class Ingestor:
         plan = Plan(Catalog.load(self.database))
         for operation, record in records:
             try:
+                _reject_unknown_fields(record, RECORD_FIELDS[operation], operation)
                 getattr(self, f"_plan_{operation}")(plan, record)
             except IngestionFailure:
                 raise
@@ -352,6 +422,11 @@ class Ingestor:
         for index, raw_authorization in enumerate(authorizations):
             authorization = _mapping(
                 raw_authorization, f"namespace_authorizations[{index}]"
+            )
+            _reject_unknown_fields(
+                authorization,
+                {"namespace_prefix", "source_url", "source_checked_at"},
+                f"namespace_authorizations[{index}]",
             )
             prefix = require_string(
                 authorization.get("namespace_prefix"), "namespace_prefix"
@@ -519,6 +594,11 @@ class Ingestor:
         seen_aliases: set[str] = set()
         for index, raw_alias in enumerate(aliases):
             alias = _mapping(raw_alias, f"aliases[{index}]")
+            _reject_unknown_fields(
+                alias,
+                {"name", "source_url", "source_checked_at"},
+                f"aliases[{index}]",
+            )
             alias_name, normalized_alias = normalize_name(
                 alias.get("name"), "alias.name"
             )
@@ -571,6 +651,11 @@ class Ingestor:
         redirect = record.get("redirect")
         if redirect is not None:
             redirect_data = _mapping(redirect, "redirect")
+            _reject_unknown_fields(
+                redirect_data,
+                {"target_registry_no", "source_url", "source_checked_at"},
+                "redirect",
+            )
             target_registry_no = require_string(
                 redirect_data.get("target_registry_no"), "redirect.target_registry_no"
             )
@@ -763,6 +848,9 @@ class Ingestor:
         seen: set[str] = set()
         for raw_alias in _list(record.get("aliases"), "aliases"):
             alias = _mapping(raw_alias, "alias")
+            _reject_unknown_fields(
+                alias, {"name", "source_url", "source_checked_at"}, "alias"
+            )
             name, normalized_name = normalize_name(alias.get("name"), "alias.name")
             if normalized_name in seen:
                 raise ValueErrorDetail("aliases contains a duplicate normalized name")
@@ -812,6 +900,11 @@ class Ingestor:
         seen: set[str] = set()
         for raw_evaluator in _list(record.get("evaluators"), "evaluators"):
             evaluator = _mapping(raw_evaluator, "evaluator")
+            _reject_unknown_fields(
+                evaluator,
+                {"name", "key", "source_url", "source_checked_at"},
+                "evaluator",
+            )
             name, normalized_name = normalize_name(
                 evaluator.get("name"), "evaluator.name"
             )
@@ -866,6 +959,21 @@ class Ingestor:
         seen: set[str] = set()
         for raw_metric in _list(record.get("metrics"), "metrics"):
             metric = _mapping(raw_metric, "metric")
+            _reject_unknown_fields(
+                metric,
+                {
+                    "name",
+                    "key",
+                    "storage_kind",
+                    "unit",
+                    "display_precision",
+                    "minimum_value",
+                    "maximum_value",
+                    "source_url",
+                    "source_checked_at",
+                },
+                "metric",
+            )
             name = require_string(metric.get("name"), "metric.name")
             key = require_key(metric.get("key"), "metric.key")
             if key in seen:
@@ -951,6 +1059,20 @@ class Ingestor:
         seen: set[tuple[str, str]] = set()
         for raw_version in versions:
             version_record = _mapping(raw_version, "version")
+            _reject_unknown_fields(
+                version_record,
+                {
+                    "version",
+                    "version_slug",
+                    "release_at",
+                    "release_precision",
+                    "metric_key",
+                    "source_url",
+                    "source_checked_at",
+                    "evaluator_keys",
+                },
+                "version",
+            )
             version = require_string(version_record.get("version"), "version")
             version_slug = require_version_slug(version_record.get("version_slug"))
             if (version, version_slug) in seen:
@@ -1272,6 +1394,11 @@ class Ingestor:
         primary_count = 0
         for raw_source in raw_sources:
             source = _mapping(raw_source, "source")
+            _reject_unknown_fields(
+                source,
+                {"url", "checked_at", "primary", "same_run"},
+                "source",
+            )
             url, normalized_url = normalize_url(source.get("url"), "source.url")
             checked_at = normalize_checked_at(
                 source.get("checked_at"), "source.checked_at"
