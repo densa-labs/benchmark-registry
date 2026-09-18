@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 import {
   formatRegistryDate,
+  formatRegistryMonthYear,
   loadRegistryRoute,
   queryHref,
   RegistryClientError,
@@ -9,7 +10,7 @@ import {
 } from "./registry";
 
 describe("registry route data loading", () => {
-  it("recognizes the implemented model and benchmark routes", () => {
+  it("recognizes the implemented model, benchmark, and company routes", () => {
     expect(resolveRegistryRoute("/models")).toEqual({ kind: "models" });
     expect(resolveRegistryRoute("/models/10002")).toEqual({
       kind: "model",
@@ -25,9 +26,44 @@ describe("registry route data loading", () => {
       slug: "gpqa",
       version: "diamond",
     });
+    expect(resolveRegistryRoute("/companies")).toEqual({ kind: "companies" });
+    expect(resolveRegistryRoute("/companies/openai")).toEqual({
+      kind: "company",
+      slug: "openai",
+    });
     expect(resolveRegistryRoute("/models/10002/results")).toEqual({ kind: "not-found" });
     expect(resolveRegistryRoute("/benchmarks/gpqa/diamond/results"))
       .toEqual({ kind: "not-found" });
+  });
+
+  it("loads company list and detail routes through canonical API paths", async () => {
+    const fetcher = vi.fn().mockImplementation(() =>
+      Promise.resolve(Response.json({ data: [], page: {} })),
+    );
+
+    const companies = await loadRegistryRoute(
+      { kind: "companies" },
+      "?sort=name",
+      fetcher,
+    );
+    const company = await loadRegistryRoute(
+      { kind: "company", slug: "openai" },
+      "?view=history",
+      fetcher,
+    );
+
+    expect(fetcher).toHaveBeenNthCalledWith(
+      1,
+      "/api/companies?sort=name",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      2,
+      "/api/companies/openai?view=history",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(companies.kind).toBe("companies");
+    expect(company.kind).toBe("company");
   });
 
   it("forwards shareable query state to the matching read API", async () => {
@@ -125,5 +161,7 @@ describe("model URL state and date presentation", () => {
     expect(formatRegistryDate("2025-04-14T16:30:00Z", "timestamp"))
       .toContain("April 14, 2025");
     expect(formatRegistryDate("2025-04-14T16:30:00Z", "timestamp")).toContain("UTC");
+    expect(formatRegistryDate("2015", "year")).toBe("2015");
+    expect(formatRegistryMonthYear("2025-04-14")).toBe("April 2025");
   });
 });

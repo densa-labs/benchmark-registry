@@ -5,6 +5,7 @@ import {
   BenchmarksPage,
   BenchmarkVersionPage,
 } from "./benchmark-pages";
+import { CompaniesPage, CompanyDetailPage } from "./company-pages";
 import { ModelDetailPage, ModelsPage } from "./model-pages";
 import {
   loadRegistryRoute,
@@ -94,6 +95,12 @@ export function App() {
         currentSearch={location.search}
       />
     );
+  } else if (state.route.kind === "companies") {
+    content = <CompaniesPage response={state.route.payload} currentSearch={location.search} />;
+  } else if (state.route.kind === "company") {
+    content = (
+      <CompanyDetailPage response={state.route.payload} currentSearch={location.search} />
+    );
   } else {
     content = (
       <PageContainer className="registry-page">
@@ -105,7 +112,11 @@ export function App() {
   return (
     <AppShell
       navigation={navigation}
-      activeHref={route.kind.startsWith("benchmark") ? "/benchmarks" : "/models"}
+      activeHref={route.kind.startsWith("benchmark")
+        ? "/benchmarks"
+        : route.kind === "companies" || route.kind === "company"
+          ? "/companies"
+          : "/models"}
       onSearchSubmit={(event) => event.preventDefault()}
     >
       {content}

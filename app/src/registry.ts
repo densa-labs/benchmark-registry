@@ -56,12 +56,35 @@ export interface BenchmarkVersionPageResponse extends BenchmarkVersionResponse {
   available_companies: CompanySummary[];
 }
 
+export interface CompanyListResponse {
+  data: Array<CompanySummary & {
+    established_at: string | null;
+    established_precision: "year" | "date" | "timestamp" | null;
+    latest_model: ModelSummary | null;
+  }>;
+  page: Page;
+}
+
+export interface CompanyDetailResponse {
+  data: {
+    company: CompanySummary & {
+      established_at: string | null;
+      established_precision: "year" | "date" | "timestamp" | null;
+    };
+    latest_model: ModelSummary | null;
+    results: ResultRow[];
+    result_page: Page;
+  };
+}
+
 export type RegistryRoute =
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
   | { kind: "benchmarks" }
   | { kind: "benchmark"; slug: string }
   | { kind: "benchmark-version"; slug: string; version: string }
+  | { kind: "companies" }
+  | { kind: "company"; slug: string }
   | { kind: "not-found" };
 
 export type LoadedRegistryRoute =
@@ -70,6 +93,8 @@ export type LoadedRegistryRoute =
   | { kind: "benchmarks"; payload: BenchmarkListResponse }
   | { kind: "benchmark"; payload: BenchmarkFamilyResponse }
   | { kind: "benchmark-version"; payload: BenchmarkVersionPageResponse }
+  | { kind: "companies"; payload: CompanyListResponse }
+  | { kind: "company"; payload: CompanyDetailResponse }
   | { kind: "not-found" };
 
 export class RegistryClientError extends Error {}
@@ -81,6 +106,10 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
 
   if (pathname === "/benchmarks" || pathname === "/benchmarks/") {
     return { kind: "benchmarks" };
+  }
+
+  if (pathname === "/companies" || pathname === "/companies/") {
+    return { kind: "companies" };
   }
 
   try {
@@ -103,6 +132,11 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
       return { kind: "benchmark", slug: decodeURIComponent(benchmarkMatch[1]) };
     }
 
+    const companyMatch = /^\/companies\/([^/]+)\/?$/u.exec(pathname);
+    if (companyMatch) {
+      return { kind: "company", slug: decodeURIComponent(companyMatch[1]) };
+    }
+
     return { kind: "not-found" };
   } catch {
     return { kind: "not-found" };
@@ -121,6 +155,10 @@ function apiPath(route: Exclude<RegistryRoute, { kind: "not-found" }>): string {
       return `/api/benchmarks/${encodeURIComponent(route.slug)}`;
     case "benchmark-version":
       return `/api/benchmarks/${encodeURIComponent(route.slug)}/${encodeURIComponent(route.version)}`;
+    case "companies":
+      return "/api/companies";
+    case "company":
+      return `/api/companies/${encodeURIComponent(route.slug)}`;
   }
 }
 
@@ -216,6 +254,10 @@ export async function loadRegistryRoute(
         },
       };
     }
+    case "companies":
+      return { kind: "companies", payload: body as CompanyListResponse };
+    case "company":
+      return { kind: "company", payload: body as CompanyDetailResponse };
   }
 }
 
@@ -240,8 +282,10 @@ export function queryHref(
 
 export function formatRegistryDate(
   value: string,
-  precision: "date" | "timestamp",
+  precision: "year" | "date" | "timestamp",
 ): string {
+  if (precision === "year") return value.slice(0, 4);
+
   if (precision === "date") {
     const [year, month, day] = value.slice(0, 10).split("-").map(Number);
     return new Intl.DateTimeFormat("en-US", {
@@ -260,4 +304,13 @@ export function formatRegistryDate(
     minute: "2-digit",
     timeZone: "UTC",
   }).format(new Date(value))} UTC`;
+}
+
+export function formatRegistryMonthYear(value: string): string {
+  const [year, month] = value.slice(0, 10).split("-").map(Number);
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(year, month - 1, 1)));
 }
