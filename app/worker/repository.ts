@@ -690,112 +690,159 @@ export class RegistryRepository {
   async search(params: ParsedListParams) {
     const query = params.q!;
     const pattern = likePattern(query);
-    const candidateSql = `
-      SELECT 'model' AS entity_type, m.canonical_name,
-        CASE
-          WHEN m.normalized_name = input.exact THEN m.canonical_name
-          WHEN m.registry_no = input.exact THEN m.registry_no
-          WHEN EXISTS (
+    const candidateCtes = `
+      exact_candidates AS (
+        SELECT 'model' AS entity_type, m.canonical_name,
+          CASE
+            WHEN m.normalized_name = input.exact THEN m.canonical_name
+            WHEN m.registry_no = input.exact THEN m.registry_no
+            ELSE (
+              SELECT alias.name FROM model_aliases alias
+              WHERE alias.model_id = m.id
+                AND alias.normalized_name = input.exact
+              LIMIT 1
+            )
+          END AS matched_text,
+          '/models/' || m.registry_no AS href,
+          m.normalized_name AS canonical_normalized,
+          input.exact AS matched_normalized,
+          1 AS is_exact
+        FROM models m CROSS JOIN input
+        WHERE m.normalized_name = input.exact
+          OR m.registry_no = input.exact
+          OR m.id = (
+            SELECT exact_alias.model_id FROM model_aliases exact_alias
+            WHERE exact_alias.normalized_name = input.exact LIMIT 1
+          )
+        UNION ALL
+        SELECT 'benchmark', b.canonical_name,
+          CASE
+            WHEN b.normalized_name = input.exact THEN b.canonical_name
+            ELSE (
+              SELECT alias.name FROM benchmark_aliases alias
+              WHERE alias.benchmark_id = b.id
+                AND alias.normalized_name = input.exact
+              LIMIT 1
+            )
+          END,
+          '/benchmarks/' || b.slug, b.normalized_name, input.exact, 1
+        FROM benchmarks b CROSS JOIN input
+        WHERE b.normalized_name = input.exact
+          OR b.id = (
+            SELECT exact_alias.benchmark_id FROM benchmark_aliases exact_alias
+            WHERE exact_alias.normalized_name = input.exact LIMIT 1
+          )
+        UNION ALL
+        SELECT 'company', c.name, c.name, '/companies/' || c.slug,
+          c.normalized_name, c.normalized_name, 1
+        FROM companies c JOIN input ON c.normalized_name = input.exact
+      ),
+      partial_candidates AS (
+        SELECT 'model' AS entity_type, m.canonical_name,
+          CASE
+            WHEN m.normalized_name LIKE input.pattern ESCAPE '\\' THEN m.canonical_name
+            WHEN m.registry_no LIKE input.pattern ESCAPE '\\' THEN m.registry_no
+            ELSE (
+              SELECT alias.name FROM model_aliases alias
+              WHERE alias.model_id = m.id
+                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+              ORDER BY alias.normalized_name, alias.id LIMIT 1
+            )
+          END AS matched_text,
+          '/models/' || m.registry_no AS href,
+          m.normalized_name AS canonical_normalized,
+          CASE
+            WHEN m.normalized_name LIKE input.pattern ESCAPE '\\' THEN m.normalized_name
+            WHEN m.registry_no LIKE input.pattern ESCAPE '\\' THEN m.registry_no
+            ELSE (
+              SELECT alias.normalized_name FROM model_aliases alias
+              WHERE alias.model_id = m.id
+                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+              ORDER BY alias.normalized_name, alias.id LIMIT 1
+            )
+          END AS matched_normalized,
+          0 AS is_exact
+        FROM models m CROSS JOIN input
+        WHERE (
+            m.normalized_name LIKE input.pattern ESCAPE '\\'
+            OR m.registry_no LIKE input.pattern ESCAPE '\\'
+            OR EXISTS (
+              SELECT 1 FROM model_aliases alias
+              WHERE alias.model_id = m.id
+                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+            )
+          )
+          AND m.normalized_name <> input.exact
+          AND m.registry_no <> input.exact
+          AND NOT EXISTS (
             SELECT 1 FROM model_aliases exact_alias
-            WHERE exact_alias.model_id = m.id AND exact_alias.normalized_name = input.exact
-          ) THEN (
-            SELECT exact_alias.name FROM model_aliases exact_alias
-            WHERE exact_alias.model_id = m.id AND exact_alias.normalized_name = input.exact
-            ORDER BY exact_alias.normalized_name, exact_alias.id LIMIT 1
+            WHERE exact_alias.model_id = m.id
+              AND exact_alias.normalized_name = input.exact
           )
-          WHEN m.normalized_name LIKE input.pattern ESCAPE '\\' THEN m.canonical_name
-          WHEN m.registry_no LIKE input.pattern ESCAPE '\\' THEN m.registry_no
-          ELSE (
-            SELECT alias.name FROM model_aliases alias
-            WHERE alias.model_id = m.id AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
-            ORDER BY alias.normalized_name, alias.id LIMIT 1
+        UNION ALL
+        SELECT 'benchmark', b.canonical_name,
+          CASE
+            WHEN b.normalized_name LIKE input.pattern ESCAPE '\\' THEN b.canonical_name
+            ELSE (
+              SELECT alias.name FROM benchmark_aliases alias
+              WHERE alias.benchmark_id = b.id
+                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+              ORDER BY alias.normalized_name, alias.id LIMIT 1
+            )
+          END,
+          '/benchmarks/' || b.slug,
+          b.normalized_name,
+          CASE
+            WHEN b.normalized_name LIKE input.pattern ESCAPE '\\' THEN b.normalized_name
+            ELSE (
+              SELECT alias.normalized_name FROM benchmark_aliases alias
+              WHERE alias.benchmark_id = b.id
+                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+              ORDER BY alias.normalized_name, alias.id LIMIT 1
+            )
+          END,
+          0
+        FROM benchmarks b CROSS JOIN input
+        WHERE (
+            b.normalized_name LIKE input.pattern ESCAPE '\\'
+            OR EXISTS (
+              SELECT 1 FROM benchmark_aliases alias
+              WHERE alias.benchmark_id = b.id
+                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+            )
           )
-        END AS matched_text,
-        '/models/' || m.registry_no AS href,
-        m.normalized_name AS canonical_normalized,
-        CASE
-          WHEN m.normalized_name = input.exact THEN m.normalized_name
-          WHEN m.registry_no = input.exact THEN m.registry_no
-          WHEN EXISTS (
-            SELECT 1 FROM model_aliases exact_alias
-            WHERE exact_alias.model_id = m.id AND exact_alias.normalized_name = input.exact
-          ) THEN input.exact
-          WHEN m.normalized_name LIKE input.pattern ESCAPE '\\' THEN m.normalized_name
-          WHEN m.registry_no LIKE input.pattern ESCAPE '\\' THEN m.registry_no
-          ELSE (
-            SELECT alias.normalized_name FROM model_aliases alias
-            WHERE alias.model_id = m.id AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
-            ORDER BY alias.normalized_name, alias.id LIMIT 1
-          )
-        END AS matched_normalized
-      FROM models m CROSS JOIN input
-      WHERE m.normalized_name LIKE input.pattern ESCAPE '\\'
-        OR m.registry_no LIKE input.pattern ESCAPE '\\'
-        OR EXISTS (
-          SELECT 1 FROM model_aliases alias
-          WHERE alias.model_id = m.id AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
-        )
-      UNION ALL
-      SELECT 'benchmark', b.canonical_name,
-        CASE
-          WHEN b.normalized_name = input.exact THEN b.canonical_name
-          WHEN EXISTS (
+          AND b.normalized_name <> input.exact
+          AND NOT EXISTS (
             SELECT 1 FROM benchmark_aliases exact_alias
-            WHERE exact_alias.benchmark_id = b.id AND exact_alias.normalized_name = input.exact
-          ) THEN (
-            SELECT exact_alias.name FROM benchmark_aliases exact_alias
-            WHERE exact_alias.benchmark_id = b.id AND exact_alias.normalized_name = input.exact
-            ORDER BY exact_alias.normalized_name, exact_alias.id LIMIT 1
+            WHERE exact_alias.benchmark_id = b.id
+              AND exact_alias.normalized_name = input.exact
           )
-          WHEN b.normalized_name LIKE input.pattern ESCAPE '\\' THEN b.canonical_name
-          ELSE (
-            SELECT alias.name FROM benchmark_aliases alias
-            WHERE alias.benchmark_id = b.id AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
-            ORDER BY alias.normalized_name, alias.id LIMIT 1
-          )
-        END,
-        '/benchmarks/' || b.slug,
-        b.normalized_name,
-        CASE
-          WHEN b.normalized_name = input.exact THEN b.normalized_name
-          WHEN EXISTS (
-            SELECT 1 FROM benchmark_aliases exact_alias
-            WHERE exact_alias.benchmark_id = b.id AND exact_alias.normalized_name = input.exact
-          ) THEN input.exact
-          WHEN b.normalized_name LIKE input.pattern ESCAPE '\\' THEN b.normalized_name
-          ELSE (
-            SELECT alias.normalized_name FROM benchmark_aliases alias
-            WHERE alias.benchmark_id = b.id AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
-            ORDER BY alias.normalized_name, alias.id LIMIT 1
-          )
-        END
-      FROM benchmarks b CROSS JOIN input
-      WHERE b.normalized_name LIKE input.pattern ESCAPE '\\'
-        OR EXISTS (
-          SELECT 1 FROM benchmark_aliases alias
-          WHERE alias.benchmark_id = b.id AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
-        )
-      UNION ALL
-      SELECT 'company', c.name, c.name, '/companies/' || c.slug,
-        c.normalized_name,
-        c.normalized_name
-      FROM companies c CROSS JOIN input
-      WHERE c.normalized_name LIKE input.pattern ESCAPE '\\'`;
+        UNION ALL
+        SELECT 'company', c.name, c.name, '/companies/' || c.slug,
+          c.normalized_name, c.normalized_name, 0
+        FROM companies c CROSS JOIN input
+        WHERE c.normalized_name LIKE input.pattern ESCAPE '\\'
+          AND c.normalized_name <> input.exact
+      ),
+      candidates AS (
+        SELECT * FROM exact_candidates
+        UNION ALL
+        SELECT * FROM partial_candidates
+      )`;
     const total = await this.count(
-      `/* search:count */ WITH input(pattern, exact) AS (VALUES (?, ?)),
-        candidates AS (${candidateSql})
+      `/* search:count */ WITH input(exact, pattern) AS (VALUES (?, ?)),
+        ${candidateCtes}
        SELECT count(*) AS total FROM candidates`,
-      [pattern, query],
+      [query, pattern],
     );
     const rows = await this.all<SearchRow>(
-      `/* search:list */ WITH input(pattern, exact) AS (VALUES (?, ?)),
-        candidates AS (${candidateSql})
+      `/* search:list */ WITH input(exact, pattern) AS (VALUES (?, ?)),
+        ${candidateCtes}
        SELECT entity_type, canonical_name, matched_text, href
        FROM candidates
-       ORDER BY (matched_normalized = ?) DESC, entity_type ASC,
-        canonical_normalized ASC, href ASC
+       ORDER BY is_exact DESC, entity_type ASC, canonical_normalized ASC, href ASC
        LIMIT ? OFFSET ?`,
-      [pattern, query, query, params.limit, (params.page - 1) * params.limit],
+      [query, pattern, params.limit, (params.page - 1) * params.limit],
     );
     return { data: rows, page: pageMetadata(params.page, params.limit, total) };
   }

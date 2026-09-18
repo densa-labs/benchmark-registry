@@ -8,6 +8,7 @@ import {
   DataTable,
   EmptyState,
   ErrorState,
+  GlobalSearchPanel,
   Header,
   LoadingState,
   MetadataRows,
@@ -159,6 +160,45 @@ describe("Registry foundation view", () => {
     expect(markup).not.toContain("UI foundation");
     expect(markup).not.toContain("Registry interface primitives");
     expect(markup).not.toContain("System states");
+  });
+
+  it("renders accessible global search loading, empty, error, and result states", () => {
+    const page = { number: 1, limit: 50 as const, total_items: 1, total_pages: 1 };
+    const markup = renderToStaticMarkup(
+      <>
+        <GlobalSearchPanel state={{ status: "loading", query: "HLE" }} />
+        <GlobalSearchPanel state={{
+          status: "results",
+          query: "missing",
+          response: { data: [], page: { ...page, total_items: 0, total_pages: 0 } },
+        }} />
+        <GlobalSearchPanel state={{
+          status: "error",
+          query: "HLE",
+          message: "Search is unavailable.",
+        }} />
+        <GlobalSearchPanel state={{
+          status: "results",
+          query: "HLE",
+          response: {
+            data: [{
+              entity_type: "benchmark",
+              canonical_name: "Humanity's Last Exam",
+              matched_text: "HLE",
+              href: "/benchmarks/humanitys-last-exam",
+            }],
+            page,
+          },
+        }} />
+      </>,
+    );
+
+    expect(markup).toContain("Searching the registry...");
+    expect(markup).toContain("No registry entries found for “missing”.");
+    expect(markup).toContain('role="alert"');
+    expect(markup).toContain('href="/benchmarks/humanitys-last-exam"');
+    expect(markup).toContain("Humanity&#x27;s Last Exam");
+    expect(markup).toContain("Matched HLE");
   });
 });
 

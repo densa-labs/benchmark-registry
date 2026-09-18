@@ -179,9 +179,14 @@ a:hover {
   box-shadow: inset 0 -0.125rem 0 var(--accent);
 }
 
-.global-search {
+.global-search-shell {
+  position: relative;
   justify-self: end;
   width: min(100%, 23rem);
+}
+
+.global-search {
+  width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   min-height: var(--control-height);
@@ -226,9 +231,85 @@ a:hover {
   background: var(--accent-strong);
 }
 
+.global-search button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 .global-search button:active,
 .button-link:active {
   transform: translateY(1px);
+}
+
+.global-search-panel {
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  right: 0;
+  width: 100%;
+  max-height: min(28rem, calc(100dvh - 5rem));
+  overflow-y: auto;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.global-search-panel--status {
+  padding: 0.8rem;
+}
+
+.global-search-panel--status p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.global-search-results {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.global-search-results li + li {
+  border-top: 1px solid var(--border);
+}
+
+.global-search-results a {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.1rem 0.75rem;
+  padding: 0.65rem 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.global-search-results a:hover,
+.global-search-results a:focus-visible {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.global-search-result__type {
+  grid-row: 1 / span 2;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.global-search-result__name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.global-search-result__match {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-muted);
+  font-family: "Geist Mono Variable", "Geist Mono", monospace;
+  font-size: 0.7rem;
 }
 
 .registry-page {
@@ -862,7 +943,7 @@ h3 {
     justify-self: end;
   }
 
-  .global-search {
+  .global-search-shell {
     grid-column: 1 / -1;
     justify-self: stretch;
     width: 100%;
@@ -905,8 +986,15 @@ h3 {
     gap: 0.75rem;
   }
 
-  .global-search {
+  .global-search-shell {
     grid-row: 3;
+  }
+
+  .global-search-panel {
+    position: static;
+    max-height: 20rem;
+    margin-top: 0.375rem;
+    box-shadow: none;
   }
 
   .registry-page {

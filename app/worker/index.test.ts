@@ -321,9 +321,10 @@ describe("filtering, sorting, latest/history, and search", () => {
       data: [{ entity_type: "model", canonical_name: "GPT-4.1", href: "/models/10002" }],
       page: { number: 2, limit: 100 },
     });
-    expect(calls.at(-1)?.bindings.slice(-3)).toEqual(["gpt-4.1", 100, 100]);
-    expect(calls.at(-1)?.sql).toContain("CROSS JOIN input");
-    expect(calls.at(-1)?.sql.match(/UNION ALL/gu)).toHaveLength(2);
+    expect(calls.at(-1)?.bindings).toEqual(["gpt-4.1", "%gpt-4.1%", 100, 100]);
+    expect(calls.at(-1)?.sql).toContain("exact_candidates AS");
+    expect(calls.at(-1)?.sql).toContain("partial_candidates AS");
+    expect(calls.at(-1)?.sql).toContain("ORDER BY is_exact DESC");
   });
 });
 

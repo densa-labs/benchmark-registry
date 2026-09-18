@@ -7,6 +7,7 @@ import {
   queryHref,
   RegistryClientError,
   resolveRegistryRoute,
+  searchRegistry,
 } from "./registry";
 
 describe("registry route data loading", () => {
@@ -163,5 +164,36 @@ describe("model URL state and date presentation", () => {
     expect(formatRegistryDate("2025-04-14T16:30:00Z", "timestamp")).toContain("UTC");
     expect(formatRegistryDate("2015", "year")).toBe("2015");
     expect(formatRegistryMonthYear("2025-04-14")).toBe("April 2025");
+  });
+});
+
+describe("global search client", () => {
+  it("requests the bounded search endpoint and returns its stable response", async () => {
+    const payload = {
+      data: [{
+        entity_type: "model",
+        canonical_name: "GPT-6 Astra",
+        matched_text: "GPT-6 Astra",
+        href: "/models/10006",
+      }],
+      page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
+    };
+    const fetcher = vi.fn().mockResolvedValue(Response.json(payload));
+
+    await expect(searchRegistry("GPT-6 Astra", fetcher)).resolves.toEqual(payload);
+    expect(fetcher).toHaveBeenCalledWith(
+      "/api/search?q=GPT-6+Astra&limit=50",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+  });
+
+  it("surfaces the API's stable search error message", async () => {
+    const fetcher = vi.fn().mockResolvedValue(Response.json(
+      { error: { code: "invalid_query", message: "Search query is too long." } },
+      { status: 400 },
+    ));
+
+    await expect(searchRegistry("query", fetcher))
+      .rejects.toEqual(new RegistryClientError("Search query is too long."));
   });
 });

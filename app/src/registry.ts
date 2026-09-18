@@ -77,6 +77,18 @@ export interface CompanyDetailResponse {
   };
 }
 
+export interface SearchResult {
+  entity_type: "model" | "benchmark" | "company";
+  canonical_name: string;
+  matched_text: string;
+  href: string;
+}
+
+export interface SearchResponse {
+  data: SearchResult[];
+  page: Page;
+}
+
 export type RegistryRoute =
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
@@ -175,6 +187,21 @@ function errorMessage(body: unknown): string {
     return body.error.message;
   }
   return "The registry data could not be loaded.";
+}
+
+export async function searchRegistry(
+  query: string,
+  fetcher: typeof fetch = fetch,
+  signal?: AbortSignal,
+): Promise<SearchResponse> {
+  const params = new URLSearchParams({ q: query, limit: "50" });
+  const response = await fetcher(`/api/search?${params.toString()}`, {
+    headers: { Accept: "application/json" },
+    signal,
+  });
+  const body: unknown = await response.json();
+  if (!response.ok) throw new RegistryClientError(errorMessage(body));
+  return body as SearchResponse;
 }
 
 async function loadBenchmarkCompanies(

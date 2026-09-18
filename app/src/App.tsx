@@ -117,7 +117,6 @@ export function App() {
         : route.kind === "companies" || route.kind === "company"
           ? "/companies"
           : "/models"}
-      onSearchSubmit={(event) => event.preventDefault()}
     >
       {content}
     </AppShell>

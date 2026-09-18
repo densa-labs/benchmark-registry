@@ -1,7 +1,19 @@
-import { useEffect, useState, type FormEvent, type ReactNode } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type FormEvent,
+  type KeyboardEvent,
+  type ReactNode,
+} from "react";
 
 import darkLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-Dark.png";
 import whiteLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-White.png";
+import {
+  RegistryClientError,
+  searchRegistry,
+  type SearchResponse,
+} from "../registry";
 import {
   readStoredTheme,
   resolveTheme,
@@ -21,14 +33,12 @@ export interface AppShellProps {
   children: ReactNode;
   navigation: NavigationItem[];
   activeHref?: string;
-  onSearchSubmit?: (event: FormEvent<HTMLFormElement>) => void;
 }
 
 export function AppShell({
   children,
   navigation,
   activeHref,
-  onSearchSubmit,
 }: AppShellProps) {
   const { theme, selectTheme } = useThemePreference();
 
@@ -40,7 +50,6 @@ export function AppShell({
       <Header
         navigation={navigation}
         activeHref={activeHref}
-        onSearchSubmit={onSearchSubmit}
         theme={theme}
       />
       <main id="main-content">{children}</main>
@@ -57,14 +66,12 @@ export function AppShell({
 interface HeaderProps {
   navigation: NavigationItem[];
   activeHref?: string;
-  onSearchSubmit?: (event: FormEvent<HTMLFormElement>) => void;
   theme?: Theme;
 }
 
 export function Header({
   navigation,
   activeHref,
-  onSearchSubmit,
   theme = "light",
 }: HeaderProps) {
   return (
@@ -90,7 +97,7 @@ export function Header({
             </a>
           ))}
         </nav>
-        <GlobalSearch onSubmit={onSearchSubmit} />
+        <GlobalSearch />
       </PageContainer>
     </header>
   );
@@ -167,26 +174,149 @@ export function ThemeToggle({ theme, onSelectTheme }: ThemeToggleProps) {
 
 interface GlobalSearchProps {
   defaultValue?: string;
-  onSubmit?: (event: FormEvent<HTMLFormElement>) => void;
 }
 
-export function GlobalSearch({ defaultValue, onSubmit }: GlobalSearchProps) {
+export type GlobalSearchState =
+  | { status: "idle" }
+  | { status: "loading"; query: string }
+  | { status: "results"; query: string; response: SearchResponse }
+  | { status: "error"; query: string; message: string };
+
+const entityLabels: Record<SearchResponse["data"][number]["entity_type"], string> = {
+  model: "Model",
+  benchmark: "Benchmark",
+  company: "Company",
+};
+
+export function GlobalSearchPanel({ state }: { state: Exclude<GlobalSearchState, { status: "idle" }> }) {
+  if (state.status === "loading") {
+    return (
+      <div className="global-search-panel global-search-panel--status" id="global-search-results">
+        <p aria-live="polite">Searching the registry...</p>
+      </div>
+    );
+  }
+
+  if (state.status === "error") {
+    return (
+      <div className="global-search-panel global-search-panel--status" id="global-search-results">
+        <p role="alert">{state.message}</p>
+      </div>
+    );
+  }
+
+  if (state.response.data.length === 0) {
+    return (
+      <div className="global-search-panel global-search-panel--status" id="global-search-results">
+        <p aria-live="polite">No registry entries found for “{state.query}”.</p>
+      </div>
+    );
+  }
+
   return (
-    <form className="global-search" role="search" onSubmit={onSubmit}>
-      <label className="visually-hidden" htmlFor="global-search-input">
-        Search the registry
-      </label>
-      <input
-        id="global-search-input"
-        name="q"
-        type="search"
-        maxLength={50}
-        defaultValue={defaultValue}
-        placeholder="Search models, benchmarks, companies"
-        autoComplete="off"
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div className="global-search-panel" id="global-search-results">
+      <p className="visually-hidden" aria-live="polite">
+        {state.response.page.total_items} search {state.response.page.total_items === 1
+          ? "result"
+          : "results"} found.
+      </p>
+      <ul className="global-search-results">
+        {state.response.data.map((result) => (
+          <li key={`${result.entity_type}:${result.href}`}>
+            <a href={result.href}>
+              <span className="global-search-result__type">
+                {entityLabels[result.entity_type]}
+              </span>
+              <span className="global-search-result__name">{result.canonical_name}</span>
+              {result.matched_text !== result.canonical_name ? (
+                <span className="global-search-result__match">
+                  Matched {result.matched_text}
+                </span>
+              ) : null}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
+  const [state, setState] = useState<GlobalSearchState>({ status: "idle" });
+  const request = useRef<AbortController | null>(null);
+
+  useEffect(() => () => request.current?.abort(), []);
+
+  const closeResults = () => {
+    request.current?.abort();
+    request.current = null;
+    setState({ status: "idle" });
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const input = event.currentTarget.elements.namedItem("q");
+    if (!(input instanceof HTMLInputElement)) return;
+    const query = input.value.trim();
+    if (query.length === 0) return;
+
+    request.current?.abort();
+    const controller = new AbortController();
+    request.current = controller;
+    setState({ status: "loading", query });
+    void searchRegistry(query, fetch, controller.signal)
+      .then((response) => {
+        if (controller.signal.aborted) return;
+        setState({ status: "results", query, response });
+      })
+      .catch((error: unknown) => {
+        if (controller.signal.aborted) return;
+        setState({
+          status: "error",
+          query,
+          message: error instanceof RegistryClientError
+            ? error.message
+            : "The registry search could not be completed.",
+        });
+      });
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLFormElement>) => {
+    if (event.key === "Escape" && state.status !== "idle") {
+      event.preventDefault();
+      closeResults();
+    }
+  };
+
+  return (
+    <div className="global-search-shell">
+      <form
+        className="global-search"
+        role="search"
+        aria-busy={state.status === "loading" ? "true" : undefined}
+        onSubmit={handleSubmit}
+        onKeyDown={handleKeyDown}
+      >
+        <label className="visually-hidden" htmlFor="global-search-input">
+          Search the registry
+        </label>
+        <input
+          id="global-search-input"
+          name="q"
+          type="search"
+          maxLength={50}
+          required
+          defaultValue={defaultValue}
+          placeholder="Search models, benchmarks, companies"
+          autoComplete="off"
+          aria-controls={state.status === "idle" ? undefined : "global-search-results"}
+          aria-expanded={state.status !== "idle"}
+          onChange={closeResults}
+        />
+        <button type="submit" disabled={state.status === "loading"}>Search</button>
+      </form>
+      {state.status === "idle" ? null : <GlobalSearchPanel state={state} />}
+    </div>
   );
 }
 
