@@ -1,0 +1,659 @@
+{
+  "records": [
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-6 Astra",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 5,
+        "registry_no": "10005",
+        "release_at": "2026-09-03",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "published_at": "2026-09-18T13:23:42Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gpt-6-astra",
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Claude Fable 5.1",
+        "company_slug": "anthropic",
+        "namespace_prefix": "20",
+        "sequence": 4,
+        "registry_no": "20004",
+        "release_at": "2026-09-01",
+        "release_precision": "date",
+        "release_source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "published_at": "2026-09-18T13:23:42Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "claude-fable-5-1",
+            "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 3.8 Flash",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 4,
+        "registry_no": "30004",
+        "release_at": "2026-09-02",
+        "release_precision": "date",
+        "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "published_at": "2026-09-18T13:23:42Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "gemini-3.8-flash",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Terminal-Bench",
+        "slug": "terminal-bench",
+        "source_url": "https://www.tbench.ai/",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Terminal-Bench Team",
+            "key": "terminal-bench-team",
+            "source_url": "https://www.tbench.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Terminal-Bench Accuracy",
+            "key": "terminal-bench-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://www.tbench.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "4.0",
+            "version_slug": "4.0",
+            "release_at": "2026-08-28",
+            "release_precision": "date",
+            "metric_key": "terminal-bench-accuracy",
+            "source_url": "https://www.tbench.ai/news/terminal-bench-4-0",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["terminal-bench-team"]
+          },
+          {
+            "version": "Science 0.1",
+            "version_slug": "science-0.1",
+            "release_at": "2026-08-27",
+            "release_precision": "date",
+            "metric_key": "terminal-bench-accuracy",
+            "source_url": "https://www.tbench.ai/news/terminal-bench-science-0-1",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["terminal-bench-team"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "OSWorld",
+        "slug": "osworld",
+        "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [
+          {
+            "name": "OSWorld 2.0",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "XLang Lab",
+            "key": "xlang-lab",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "OSWorld Partial Score",
+            "key": "osworld-partial-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          },
+          {
+            "name": "OSWorld Strict Score",
+            "key": "osworld-strict-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "2.0 v2026.08.08 Offline — Partial",
+            "version_slug": "2.0-v2026.08.08-offline-partial",
+            "release_at": "2026-08-08",
+            "release_precision": "date",
+            "metric_key": "osworld-partial-score",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["xlang-lab"]
+          },
+          {
+            "version": "2.0 v2026.08.08 — Partial",
+            "version_slug": "2.0-v2026.08.08-partial",
+            "release_at": "2026-08-08",
+            "release_precision": "date",
+            "metric_key": "osworld-partial-score",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["xlang-lab"]
+          },
+          {
+            "version": "2.0 v2026.08.08 — Strict",
+            "version_slug": "2.0-v2026.08.08-strict",
+            "release_at": "2026-08-08",
+            "release_precision": "date",
+            "metric_key": "osworld-strict-score",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["xlang-lab"]
+          },
+          {
+            "version": "2.0 v2026.06.24 — Partial (batch tool)",
+            "version_slug": "2.0-v2026.06.24-partial-batch-tool",
+            "release_at": "2026-06-26",
+            "release_precision": "date",
+            "metric_key": "osworld-partial-score",
+            "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.06.24",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["xlang-lab"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Humanity's Last Exam",
+        "slug": "humanitys-last-exam",
+        "source_url": "https://arxiv.org/abs/2501.14249",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [
+          {
+            "name": "HLE",
+            "source_url": "https://arxiv.org/abs/2501.14249",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "Center for AI Safety",
+            "key": "center-for-ai-safety",
+            "source_url": "https://lastexam.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          },
+          {
+            "name": "Scale AI",
+            "key": "scale-ai",
+            "source_url": "https://lastexam.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Humanity's Last Exam Accuracy",
+            "key": "hle-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2501.14249",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Full set — No tools",
+            "version_slug": "full-set-no-tools",
+            "release_at": "2025-01-24",
+            "release_precision": "date",
+            "metric_key": "hle-accuracy",
+            "source_url": "https://arxiv.org/abs/2501.14249",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["center-for-ai-safety", "scale-ai"]
+          },
+          {
+            "version": "Full set — With tools",
+            "version_slug": "full-set-with-tools",
+            "release_at": "2025-01-24",
+            "release_precision": "date",
+            "metric_key": "hle-accuracy",
+            "source_url": "https://arxiv.org/abs/2501.14249",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["center-for-ai-safety", "scale-ai"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "CursorBench",
+        "slug": "cursorbench",
+        "source_url": "https://prod.cursor.com/evals",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Cursor",
+            "key": "cursor",
+            "source_url": "https://prod.cursor.com/evals",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "CursorBench Accuracy",
+            "key": "cursorbench-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://prod.cursor.com/evals",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "3.2.0",
+            "version_slug": "3.2.0",
+            "release_at": "2026-07-08",
+            "release_precision": "date",
+            "metric_key": "cursorbench-accuracy",
+            "source_url": "https://prod.cursor.com/evals",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["cursor"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "BenchCAD",
+        "slug": "benchcad",
+        "source_url": "https://github.com/BenchCAD/BenchCAD-main",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "BenchCAD Team",
+            "key": "benchcad-team",
+            "source_url": "https://github.com/BenchCAD/BenchCAD-main",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Geometric Overlap",
+            "key": "benchcad-geometric-overlap",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/BenchCAD/BenchCAD-main",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Vision2Code — With tools",
+            "version_slug": "vision2code-with-tools",
+            "release_at": "2026-06-24",
+            "release_precision": "date",
+            "metric_key": "benchcad-geometric-overlap",
+            "source_url": "https://github.com/BenchCAD/BenchCAD-main/blob/main/CITATION.cff",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["benchcad-team"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "BrowseComp",
+        "slug": "browsecomp",
+        "source_url": "https://openai.com/index/browsecomp/",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "BrowseComp Accuracy",
+            "key": "browsecomp-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://openai.com/index/browsecomp/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "BrowseComp",
+            "version_slug": "browsecomp",
+            "release_at": "2025-04-10",
+            "release_precision": "date",
+            "metric_key": "browsecomp-accuracy",
+            "source_url": "https://openai.com/index/browsecomp/",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["openai"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "DeepSWE",
+        "slug": "deep-swe",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "DataCurve",
+            "key": "datacurve",
+            "source_url": "https://deepswe.datacurve.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "DeepSWE Pass@1",
+            "key": "deep-swe-pass-at-1",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepswe.datacurve.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1.1",
+            "version_slug": "1.1",
+            "release_at": "2026-06-15",
+            "release_precision": "date",
+            "metric_key": "deep-swe-pass-at-1",
+            "source_url": "https://deepswe.datacurve.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["datacurve"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "GDP.pdf",
+        "slug": "gdp-pdf",
+        "source_url": "https://arxiv.org/abs/2607.11192",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "GDP.pdf Authors",
+            "key": "gdp-pdf-authors",
+            "source_url": "https://arxiv.org/abs/2607.11192",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "GDP.pdf All Pass Rate",
+            "key": "gdp-pdf-all-pass-rate",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2607.11192",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "GDP.pdf",
+            "version_slug": "gdp.pdf",
+            "release_at": "2026-07-13",
+            "release_precision": "date",
+            "metric_key": "gdp-pdf-all-pass-rate",
+            "source_url": "https://arxiv.org/abs/2607.11192",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["gdp-pdf-authors"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "CharXiv",
+        "slug": "charxiv",
+        "source_url": "https://arxiv.org/abs/2406.18521",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "CharXiv Authors",
+            "key": "charxiv-authors",
+            "source_url": "https://arxiv.org/abs/2406.18521",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "CharXiv Accuracy",
+            "key": "charxiv-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2406.18521",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Reasoning — No tools",
+            "version_slug": "reasoning-no-tools",
+            "release_at": "2024-06-26",
+            "release_precision": "date",
+            "metric_key": "charxiv-accuracy",
+            "source_url": "https://arxiv.org/abs/2406.18521",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["charxiv-authors"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "LVBench",
+        "slug": "lvbench",
+        "source_url": "https://arxiv.org/abs/2406.08035",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "LVBench Authors",
+            "key": "lvbench-authors",
+            "source_url": "https://arxiv.org/abs/2406.08035",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "LVBench Accuracy",
+            "key": "lvbench-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2406.08035",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1024 frames — Agentic",
+            "version_slug": "1024-frames-agentic",
+            "release_at": "2024-06-12",
+            "release_precision": "date",
+            "metric_key": "lvbench-accuracy",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["lvbench-authors"]
+          },
+          {
+            "version": "1024 frames — Static",
+            "version_slug": "1024-frames-static",
+            "release_at": "2024-06-12",
+            "release_precision": "date",
+            "metric_key": "lvbench-accuracy",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["lvbench-authors"]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "HLE-Verified",
+        "slug": "hle-verified",
+        "source_url": "https://arxiv.org/abs/2602.13964",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "HLE-Verified Authors",
+            "key": "hle-verified-authors",
+            "source_url": "https://arxiv.org/abs/2602.13964",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "HLE-Verified Accuracy",
+            "key": "hle-verified-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2602.13964",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Full 1,811-item verified set",
+            "version_slug": "full-1811-item-set",
+            "release_at": "2026-02-15",
+            "release_precision": "date",
+            "metric_key": "hle-verified-accuracy",
+            "source_url": "https://arxiv.org/abs/2602.13964",
+            "source_checked_at": "2026-09-18T13:23:42Z",
+            "evaluator_keys": ["hle-verified-authors"]
+          }
+        ]
+      }
+    },
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"terminal-bench","benchmark_version":"4.0","metric_key":"terminal-bench-accuracy","score_value":"57.9","score_raw":"57.9%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"xhigh","benchmark_slug":"deep-swe","benchmark_version":"1.1","metric_key":"deep-swe-pass-at-1","score_value":"74.1","score_raw":"74.1% pass@1","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["datacurve"],"source_has_single_run":true,"sources":[{"url":"https://deepswe.datacurve.ai/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"terminal-bench","benchmark_version":"Science 0.1","metric_key":"terminal-bench-accuracy","score_value":"64.6","score_raw":"64.6%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"96.0","score_raw":"96.0%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.08.08 Offline — Partial","metric_key":"osworld-partial-score","score_value":"72.6","score_raw":"72.6%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"with tools; maximum at any effort","benchmark_slug":"benchcad","benchmark_version":"Vision2Code — With tools","metric_key":"benchcad-geometric-overlap","score_value":"95.9","score_raw":"95.9% geometric-overlap score","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"browsecomp","benchmark_version":"BrowseComp","metric_key":"browsecomp-accuracy","score_value":"91.5","score_raw":"91.5%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"terminal-bench","benchmark_version":"Science 0.1","metric_key":"terminal-bench-accuracy","score_value":"52.6","score_raw":"52.6% (standard error ±3.5–4.5 pts per model)","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"terminal-bench","benchmark_version":"4.0","metric_key":"terminal-bench-accuracy","score_value":"55.8","score_raw":"55.8%","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.08.08 — Partial","metric_key":"osworld-partial-score","score_value":"77.9","score_raw":"77.9% partial","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.08.08 — Strict","metric_key":"osworld-strict-score","score_value":"41.7","score_raw":"41.7% strict","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"no tools","benchmark_slug":"humanitys-last-exam","benchmark_version":"Full set — No tools","metric_key":"hle-accuracy","score_value":"60.9","score_raw":"60.9% no tools","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"with tools","benchmark_slug":"humanitys-last-exam","benchmark_version":"Full set — With tools","metric_key":"hle-accuracy","score_value":"65.0","score_raw":"65.0% with tools","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"max","benchmark_slug":"cursorbench","benchmark_version":"3.2.0","metric_key":"cursorbench-accuracy","score_value":"73.4","score_raw":"73.4% at max effort","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["cursor"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"highest thinking","benchmark_slug":"terminal-bench","benchmark_version":"4.0","metric_key":"terminal-bench-accuracy","score_value":"19.1","score_raw":"19.1%","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"gdp-pdf","benchmark_version":"GDP.pdf","metric_key":"gdp-pdf-all-pass-rate","score_value":"35.0","score_raw":"35.0% all pass rate","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"no tools","benchmark_slug":"charxiv","benchmark_version":"Reasoning — No tools","metric_key":"charxiv-accuracy","score_value":"86.2","score_raw":"86.2% no tools","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"lvbench","benchmark_version":"1024 frames — Agentic","metric_key":"lvbench-accuracy","score_value":"87.8","score_raw":"87.8% (agentic)","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"lvbench","benchmark_version":"1024 frames — Static","metric_key":"lvbench-accuracy","score_value":"87.1","score_raw":"87.1% (static)","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"hle-verified","benchmark_version":"Full 1,811-item verified set","metric_key":"hle-verified-accuracy","score_value":"54.9","score_raw":"54.9%","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
+    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"batch tool enabled","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.06.24 — Partial (batch tool)","metric_key":"osworld-partial-score","score_value":"59.0","score_raw":"59.0% partial score; batch tool enabled","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}}
+  ]
+}
