@@ -211,6 +211,7 @@ function modelOrder(params: ParsedListParams): string {
   const sorts: Record<string, string> = {
     name: `m.normalized_name ${order}, m.registry_no ${order}`,
     released: `${MODEL_RELEASE_KEY} ${order}, m.registry_no ${order}`,
+    published: `m.published_at ${order}, m.registry_no ASC`,
     company: `c.normalized_name ${order}, m.registry_no ${order}`,
     registry_no: `m.registry_no ${order}`,
   };

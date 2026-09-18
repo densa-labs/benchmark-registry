@@ -6,6 +6,7 @@ import {
   BenchmarkVersionPage,
 } from "./benchmark-pages";
 import { CompaniesPage, CompanyDetailPage } from "./company-pages";
+import { HomePage } from "./home-page";
 import { ModelDetailPage, ModelsPage } from "./model-pages";
 import {
   loadRegistryRoute,
@@ -80,6 +81,8 @@ export function App() {
         <ErrorState title="Unable to load registry data" description={state.message} />
       </PageContainer>
     );
+  } else if (state.route.kind === "home") {
+    content = <HomePage response={state.route.payload} />;
   } else if (state.route.kind === "models") {
     content = <ModelsPage response={state.route.payload} currentSearch={location.search} />;
   } else if (state.route.kind === "model") {
@@ -112,7 +115,9 @@ export function App() {
   return (
     <AppShell
       navigation={navigation}
-      activeHref={route.kind.startsWith("benchmark")
+      activeHref={route.kind === "home" || route.kind === "not-found"
+        ? undefined
+        : route.kind.startsWith("benchmark")
         ? "/benchmarks"
         : route.kind === "companies" || route.kind === "company"
           ? "/companies"

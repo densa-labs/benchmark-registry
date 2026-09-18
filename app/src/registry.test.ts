@@ -12,6 +12,7 @@ import {
 
 describe("registry route data loading", () => {
   it("recognizes the implemented model, benchmark, and company routes", () => {
+    expect(resolveRegistryRoute("/")).toEqual({ kind: "home" });
     expect(resolveRegistryRoute("/models")).toEqual({ kind: "models" });
     expect(resolveRegistryRoute("/models/10002")).toEqual({
       kind: "model",
@@ -35,6 +36,37 @@ describe("registry route data loading", () => {
     expect(resolveRegistryRoute("/models/10002/results")).toEqual({ kind: "not-found" });
     expect(resolveRegistryRoute("/benchmarks/gpqa/diamond/results"))
       .toEqual({ kind: "not-found" });
+  });
+
+  it("loads both homepage sections from ordered Models API requests", async () => {
+    const recent = {
+      data: [{ registry_no: "10002", name: "Recent release" }],
+      page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
+    };
+    const added = {
+      data: [{ registry_no: "30001", name: "Recent addition" }],
+      page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
+    };
+    const fetcher = vi.fn().mockImplementation((path: string) =>
+      Promise.resolve(Response.json(path.includes("sort=published") ? added : recent)),
+    );
+
+    const loaded = await loadRegistryRoute({ kind: "home" }, "", fetcher);
+
+    expect(fetcher).toHaveBeenNthCalledWith(
+      1,
+      "/api/models?limit=50",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      2,
+      "/api/models?sort=published&order=desc&limit=50",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(loaded).toEqual({
+      kind: "home",
+      payload: { recent_models: recent, recently_added: added },
+    });
   });
 
   it("loads company list and detail routes through canonical API paths", async () => {

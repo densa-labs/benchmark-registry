@@ -11,6 +11,11 @@ export interface ModelListResponse {
   page: Page;
 }
 
+export interface HomePageResponse {
+  recent_models: ModelListResponse;
+  recently_added: ModelListResponse;
+}
+
 export interface ModelDetailResponse {
   data: {
     model: ModelSummary & {
@@ -90,6 +95,7 @@ export interface SearchResponse {
 }
 
 export type RegistryRoute =
+  | { kind: "home" }
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
   | { kind: "benchmarks" }
@@ -100,6 +106,7 @@ export type RegistryRoute =
   | { kind: "not-found" };
 
 export type LoadedRegistryRoute =
+  | { kind: "home"; payload: HomePageResponse }
   | { kind: "models"; payload: ModelListResponse }
   | { kind: "model"; payload: ModelDetailResponse }
   | { kind: "benchmarks"; payload: BenchmarkListResponse }
@@ -112,6 +119,10 @@ export type LoadedRegistryRoute =
 export class RegistryClientError extends Error {}
 
 export function resolveRegistryRoute(pathname: string): RegistryRoute {
+  if (pathname === "/") {
+    return { kind: "home" };
+  }
+
   if (pathname === "/models" || pathname === "/models/") {
     return { kind: "models" };
   }
@@ -155,7 +166,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "not-found" }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "not-found" }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -247,6 +258,30 @@ export async function loadRegistryRoute(
   signal?: AbortSignal,
 ): Promise<LoadedRegistryRoute> {
   if (route.kind === "not-found") return route;
+
+  if (route.kind === "home") {
+    const request = (path: string) => fetcher(path, {
+      headers: { Accept: "application/json" },
+      signal,
+    });
+    const [recentResponse, addedResponse] = await Promise.all([
+      request("/api/models?limit=50"),
+      request("/api/models?sort=published&order=desc&limit=50"),
+    ]);
+    const [recentBody, addedBody]: unknown[] = await Promise.all([
+      recentResponse.json(),
+      addedResponse.json(),
+    ]);
+    if (!recentResponse.ok) throw new RegistryClientError(errorMessage(recentBody));
+    if (!addedResponse.ok) throw new RegistryClientError(errorMessage(addedBody));
+    return {
+      kind: "home",
+      payload: {
+        recent_models: recentBody as ModelListResponse,
+        recently_added: addedBody as ModelListResponse,
+      },
+    };
+  }
 
   const response = await fetcher(`${apiPath(route)}${search}`, {
     headers: { Accept: "application/json" },

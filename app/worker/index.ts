@@ -7,7 +7,7 @@ export interface Env {
   DB: D1Database;
 }
 
-const MODEL_SORTS = ["name", "released", "company", "registry_no"];
+const MODEL_SORTS = ["name", "released", "published", "company", "registry_no"];
 const BENCHMARK_SORTS = ["name", "released", "version"];
 const COMPANY_SORTS = ["name", "established", "latest_model"];
 const RESULT_SORTS = [

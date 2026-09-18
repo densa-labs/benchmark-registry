@@ -293,6 +293,15 @@ describe("filtering, sorting, latest/history, and search", () => {
     expect(calls.at(-1)?.sql).toMatch(/ORDER BY c\.normalized_name DESC, m\.registry_no DESC/u);
   });
 
+  it("sorts published models by published_at with the homepage tie-breaker", async () => {
+    const { response, calls } = await api("/api/models?sort=published&order=desc");
+
+    expect(response.status).toBe(200);
+    expect(calls.at(-1)?.sql).toMatch(
+      /ORDER BY m\.published_at DESC, m\.registry_no ASC/u,
+    );
+  });
+
   it("uses precision-aware date keys for deterministic default sorting", async () => {
     const { calls } = await api("/api/models");
     expect(calls.at(-1)?.sql).toContain("date_peer.release_precision = 'date'");

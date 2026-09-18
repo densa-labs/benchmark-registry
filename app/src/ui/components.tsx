@@ -55,7 +55,12 @@ export function AppShell({
       <main id="main-content">{children}</main>
       <footer className="site-footer">
         <PageContainer className="site-footer__inner">
-          <p>© 2026 Densa Labs</p>
+          <p>
+            © 2026{" "}
+            <a className="site-footer__credit-link" href="https://densa-labs.github.io/">
+              Densa Labs
+            </a>
+          </p>
           <ThemeToggle theme={theme} onSelectTheme={selectTheme} />
         </PageContainer>
       </footer>
