@@ -73,6 +73,204 @@
       }
     },
     {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.3-Codex",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 6,
+        "registry_no": "10006",
+        "release_at": "2026-02-05",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5.3-codex",
+            "source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.4",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 7,
+        "registry_no": "10007",
+        "release_at": "2026-03-05",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5.4",
+            "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.5",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 8,
+        "registry_no": "10008",
+        "release_at": "2026-04-23",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5.5",
+            "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.6 Luna",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 9,
+        "registry_no": "10009",
+        "release_at": "2026-07-09",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5.6-luna",
+            "source_url": "https://openai.com/index/gpt-5-6/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.6 Sol",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 10,
+        "registry_no": "10010",
+        "release_at": "2026-07-09",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5.6-sol",
+            "source_url": "https://openai.com/index/gpt-5-6/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.6 Terra",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 11,
+        "registry_no": "10011",
+        "release_at": "2026-07-09",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5.6-terra",
+            "source_url": "https://openai.com/index/gpt-5-6/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 3.1 Pro",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 5,
+        "registry_no": "30005",
+        "release_at": "2026-02-19",
+        "release_precision": "date",
+        "release_source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 3.5 Flash",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 6,
+        "registry_no": "30006",
+        "release_at": "2026-05-19",
+        "release_precision": "date",
+        "release_source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 3.6 Flash",
+        "company_slug": "google",
+        "namespace_prefix": "30",
+        "sequence": 7,
+        "registry_no": "30007",
+        "release_at": "2026-07-21",
+        "release_precision": "date",
+        "release_source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "published_at": "2026-09-19T05:10:15Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
       "operation": "benchmark",
       "record": {
         "canonical_name": "Terminal-Bench",
@@ -110,7 +308,9 @@
             "metric_key": "terminal-bench-accuracy",
             "source_url": "https://www.tbench.ai/news/terminal-bench-4-0",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["terminal-bench-team"]
+            "evaluator_keys": [
+              "terminal-bench-team"
+            ]
           },
           {
             "version": "Science 0.1",
@@ -120,7 +320,33 @@
             "metric_key": "terminal-bench-accuracy",
             "source_url": "https://www.tbench.ai/news/terminal-bench-science-0-1",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["terminal-bench-team"]
+            "evaluator_keys": [
+              "terminal-bench-team"
+            ]
+          },
+          {
+            "version": "2.1",
+            "version_slug": "2-1",
+            "release_at": "2026-05-06",
+            "release_precision": "date",
+            "metric_key": "terminal-bench-accuracy",
+            "source_url": "https://www.tbench.ai/news/terminal-bench-2-1",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "terminal-bench-team"
+            ]
+          },
+          {
+            "version": "2.0",
+            "version_slug": "2-0",
+            "release_at": "2025-11-07",
+            "release_precision": "date",
+            "metric_key": "terminal-bench-accuracy",
+            "source_url": "https://www.tbench.ai/news/announcement-2-0",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "terminal-bench-team"
+            ]
           }
         ]
       }
@@ -169,6 +395,17 @@
             "maximum_value": "100",
             "source_url": "https://github.com/xlang-ai/OSWorld-V2",
             "source_checked_at": "2026-09-18T13:23:42Z"
+          },
+          {
+            "name": "OSWorld-Verified success rate",
+            "key": "osworld-verified-resolved",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/xlang-ai/OSWorld",
+            "source_checked_at": "2026-09-19T05:10:15Z"
           }
         ],
         "versions": [
@@ -180,7 +417,9 @@
             "metric_key": "osworld-partial-score",
             "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["xlang-lab"]
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
           },
           {
             "version": "2.0 v2026.08.08 — Partial",
@@ -190,7 +429,9 @@
             "metric_key": "osworld-partial-score",
             "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["xlang-lab"]
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
           },
           {
             "version": "2.0 v2026.08.08 — Strict",
@@ -200,7 +441,9 @@
             "metric_key": "osworld-strict-score",
             "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["xlang-lab"]
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
           },
           {
             "version": "2.0 v2026.06.24 — Partial (batch tool)",
@@ -210,7 +453,21 @@
             "metric_key": "osworld-partial-score",
             "source_url": "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.06.24",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["xlang-lab"]
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
+          },
+          {
+            "version": "Verified",
+            "version_slug": "verified",
+            "release_at": "2025-07-28",
+            "release_precision": "date",
+            "metric_key": "osworld-verified-resolved",
+            "source_url": "https://github.com/xlang-ai/OSWorld",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
           }
         ]
       }
@@ -265,7 +522,10 @@
             "metric_key": "hle-accuracy",
             "source_url": "https://arxiv.org/abs/2501.14249",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["center-for-ai-safety", "scale-ai"]
+            "evaluator_keys": [
+              "center-for-ai-safety",
+              "scale-ai"
+            ]
           },
           {
             "version": "Full set — With tools",
@@ -275,7 +535,10 @@
             "metric_key": "hle-accuracy",
             "source_url": "https://arxiv.org/abs/2501.14249",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["center-for-ai-safety", "scale-ai"]
+            "evaluator_keys": [
+              "center-for-ai-safety",
+              "scale-ai"
+            ]
           }
         ]
       }
@@ -318,7 +581,9 @@
             "metric_key": "cursorbench-accuracy",
             "source_url": "https://prod.cursor.com/evals",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["cursor"]
+            "evaluator_keys": [
+              "cursor"
+            ]
           }
         ]
       }
@@ -361,7 +626,9 @@
             "metric_key": "benchcad-geometric-overlap",
             "source_url": "https://github.com/BenchCAD/BenchCAD-main/blob/main/CITATION.cff",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["benchcad-team"]
+            "evaluator_keys": [
+              "benchcad-team"
+            ]
           }
         ]
       }
@@ -404,7 +671,9 @@
             "metric_key": "browsecomp-accuracy",
             "source_url": "https://openai.com/index/browsecomp/",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["openai"]
+            "evaluator_keys": [
+              "openai"
+            ]
           }
         ]
       }
@@ -447,7 +716,9 @@
             "metric_key": "deep-swe-pass-at-1",
             "source_url": "https://deepswe.datacurve.ai/",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["datacurve"]
+            "evaluator_keys": [
+              "datacurve"
+            ]
           }
         ]
       }
@@ -490,7 +761,9 @@
             "metric_key": "gdp-pdf-all-pass-rate",
             "source_url": "https://arxiv.org/abs/2607.11192",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["gdp-pdf-authors"]
+            "evaluator_keys": [
+              "gdp-pdf-authors"
+            ]
           }
         ]
       }
@@ -533,7 +806,9 @@
             "metric_key": "charxiv-accuracy",
             "source_url": "https://arxiv.org/abs/2406.18521",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["charxiv-authors"]
+            "evaluator_keys": [
+              "charxiv-authors"
+            ]
           }
         ]
       }
@@ -576,7 +851,9 @@
             "metric_key": "lvbench-accuracy",
             "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["lvbench-authors"]
+            "evaluator_keys": [
+              "lvbench-authors"
+            ]
           },
           {
             "version": "1024 frames — Static",
@@ -586,7 +863,9 @@
             "metric_key": "lvbench-accuracy",
             "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["lvbench-authors"]
+            "evaluator_keys": [
+              "lvbench-authors"
+            ]
           }
         ]
       }
@@ -629,31 +908,2464 @@
             "metric_key": "hle-verified-accuracy",
             "source_url": "https://arxiv.org/abs/2602.13964",
             "source_checked_at": "2026-09-18T13:23:42Z",
-            "evaluator_keys": ["hle-verified-authors"]
+            "evaluator_keys": [
+              "hle-verified-authors"
+            ]
           }
         ]
       }
     },
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"terminal-bench","benchmark_version":"4.0","metric_key":"terminal-bench-accuracy","score_value":"57.9","score_raw":"57.9%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"xhigh","benchmark_slug":"deep-swe","benchmark_version":"1.1","metric_key":"deep-swe-pass-at-1","score_value":"74.1","score_raw":"74.1% pass@1","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["datacurve"],"source_has_single_run":true,"sources":[{"url":"https://deepswe.datacurve.ai/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"terminal-bench","benchmark_version":"Science 0.1","metric_key":"terminal-bench-accuracy","score_value":"64.6","score_raw":"64.6%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"gpqa","benchmark_version":"Diamond","metric_key":"gpqa-diamond-accuracy","score_value":"96.0","score_raw":"96.0%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.08.08 Offline — Partial","metric_key":"osworld-partial-score","score_value":"72.6","score_raw":"72.6%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"with tools; maximum at any effort","benchmark_slug":"benchcad","benchmark_version":"Vision2Code — With tools","metric_key":"benchcad-geometric-overlap","score_value":"95.9","score_raw":"95.9% geometric-overlap score","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"10005","reasoning_level":"maximum at any effort","benchmark_slug":"browsecomp","benchmark_version":"BrowseComp","metric_key":"browsecomp-accuracy","score_value":"91.5","score_raw":"91.5%","reported_at":"2026-09-03","reported_precision":"date","evaluator_keys":["openai"],"source_has_single_run":true,"sources":[{"url":"https://openai.com/index/gpt-6-astra/","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"terminal-bench","benchmark_version":"Science 0.1","metric_key":"terminal-bench-accuracy","score_value":"52.6","score_raw":"52.6% (standard error ±3.5–4.5 pts per model)","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"terminal-bench","benchmark_version":"4.0","metric_key":"terminal-bench-accuracy","score_value":"55.8","score_raw":"55.8%","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.08.08 — Partial","metric_key":"osworld-partial-score","score_value":"77.9","score_raw":"77.9% partial","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.08.08 — Strict","metric_key":"osworld-strict-score","score_value":"41.7","score_raw":"41.7% strict","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"no tools","benchmark_slug":"humanitys-last-exam","benchmark_version":"Full set — No tools","metric_key":"hle-accuracy","score_value":"60.9","score_raw":"60.9% no tools","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"with tools","benchmark_slug":"humanitys-last-exam","benchmark_version":"Full set — With tools","metric_key":"hle-accuracy","score_value":"65.0","score_raw":"65.0% with tools","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["anthropic"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"20004","reasoning_level":"max","benchmark_slug":"cursorbench","benchmark_version":"3.2.0","metric_key":"cursorbench-accuracy","score_value":"73.4","score_raw":"73.4% at max effort","reported_at":"2026-09-01","reported_precision":"date","evaluator_keys":["cursor"],"source_has_single_run":true,"sources":[{"url":"https://www.anthropic.com/claude-fable-and-mythos-5-1","checked_at":"2026-09-18T13:23:42Z","primary":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"highest thinking","benchmark_slug":"terminal-bench","benchmark_version":"4.0","metric_key":"terminal-bench-accuracy","score_value":"19.1","score_raw":"19.1%","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"gdp-pdf","benchmark_version":"GDP.pdf","metric_key":"gdp-pdf-all-pass-rate","score_value":"35.0","score_raw":"35.0% all pass rate","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"no tools","benchmark_slug":"charxiv","benchmark_version":"Reasoning — No tools","metric_key":"charxiv-accuracy","score_value":"86.2","score_raw":"86.2% no tools","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"lvbench","benchmark_version":"1024 frames — Agentic","metric_key":"lvbench-accuracy","score_value":"87.8","score_raw":"87.8% (agentic)","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"lvbench","benchmark_version":"1024 frames — Static","metric_key":"lvbench-accuracy","score_value":"87.1","score_raw":"87.1% (static)","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"","benchmark_slug":"hle-verified","benchmark_version":"Full 1,811-item verified set","metric_key":"hle-verified-accuracy","score_value":"54.9","score_raw":"54.9%","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}},
-    {"operation":"result","record":{"model_registry_no":"30004","reasoning_level":"batch tool enabled","benchmark_slug":"osworld","benchmark_version":"2.0 v2026.06.24 — Partial (batch tool)","metric_key":"osworld-partial-score","score_value":"59.0","score_raw":"59.0% partial score; batch tool enabled","reported_at":"2026-09-02","reported_precision":"date","evaluator_keys":["google-deepmind"],"source_has_single_run":true,"sources":[{"url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true},{"url":"https://deepmind.google/models/model-cards/gemini-3-8-flash/","checked_at":"2026-09-18T13:23:42Z","primary":true},{"url":"https://deepmind.google/models/evals-methodology/gemini-3-8-flash","checked_at":"2026-09-18T13:23:42Z","primary":false,"same_run":true}]}}
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SWE-bench Pro",
+        "slug": "swe-bench-pro",
+        "source_url": "https://labs.scale.com/papers/swe_bench_pro",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Scale AI",
+            "key": "scale-ai",
+            "source_url": "https://lastexam.ai/",
+            "source_checked_at": "2026-09-18T13:23:42Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Public tasks resolved",
+            "key": "swe-bench-pro-resolved",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://labs.scale.com/papers/swe_bench_pro",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Public",
+            "version_slug": "public",
+            "release_at": "2025-09-19",
+            "release_precision": "date",
+            "metric_key": "swe-bench-pro-resolved",
+            "source_url": "https://labs.scale.com/papers/swe_bench_pro",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "MMMU-Pro",
+        "slug": "mmmu-pro",
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "MMMU-Pro Authors",
+            "key": "mmmu-pro-authors",
+            "source_url": "https://arxiv.org/abs/2409.02813",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "MMMU-Pro accuracy",
+            "key": "mmmu-pro-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2409.02813",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "No tools",
+            "version_slug": "no-tools",
+            "release_at": "2024-09-04",
+            "release_precision": "date",
+            "metric_key": "mmmu-pro-accuracy",
+            "source_url": "https://arxiv.org/abs/2409.02813",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "mmmu-pro-authors"
+            ]
+          },
+          {
+            "version": "With tools",
+            "version_slug": "with-tools",
+            "release_at": "2026-03-05",
+            "release_precision": "date",
+            "metric_key": "mmmu-pro-accuracy",
+            "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "mmmu-pro-authors"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "GDPval",
+        "slug": "gdpval",
+        "source_url": "https://openai.com/index/gdpval/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Wins or ties",
+            "key": "gdpval-win-tie-rate",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://openai.com/index/gdpval/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "GDPval",
+            "version_slug": "gdpval",
+            "release_at": "2025-09-25",
+            "release_precision": "date",
+            "metric_key": "gdpval-win-tie-rate",
+            "source_url": "https://openai.com/index/gdpval/",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Toolathlon",
+        "slug": "toolathlon",
+        "source_url": "https://arxiv.org/abs/2510.25726",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Toolathlon Authors",
+            "key": "toolathlon-authors",
+            "source_url": "https://arxiv.org/abs/2510.25726",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Tasks completed",
+            "key": "toolathlon-task-success",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2510.25726",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2025-10-29",
+            "release_precision": "date",
+            "metric_key": "toolathlon-task-success",
+            "source_url": "https://arxiv.org/abs/2510.25726",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "toolathlon-authors"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "MLE-bench",
+        "slug": "mle-bench",
+        "source_url": "https://openai.com/index/mle-bench/",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Tasks solved",
+            "key": "mle-bench-solved",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://openai.com/index/mle-bench/",
+            "source_checked_at": "2026-09-19T05:10:15Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "MLE-bench",
+            "version_slug": "mle-bench",
+            "release_at": "2024-10-10",
+            "release_precision": "date",
+            "metric_key": "mle-bench-solved",
+            "source_url": "https://openai.com/index/mle-bench/",
+            "source_checked_at": "2026-09-19T05:10:15Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "maximum at any effort",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "57.9",
+        "score_raw": "57.9%",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "74.1",
+        "score_raw": "74.1% pass@1",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "datacurve"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepswe.datacurve.ai/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "maximum at any effort",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "64.6",
+        "score_raw": "64.6%",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "maximum at any effort",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "96.0",
+        "score_raw": "96.0%",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "maximum at any effort",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "72.6",
+        "score_raw": "72.6%",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "with tools; maximum at any effort",
+        "benchmark_slug": "benchcad",
+        "benchmark_version": "Vision2Code — With tools",
+        "metric_key": "benchcad-geometric-overlap",
+        "score_value": "95.9",
+        "score_raw": "95.9% geometric-overlap score",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "maximum at any effort",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "91.5",
+        "score_raw": "91.5%",
+        "reported_at": "2026-09-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-6-astra/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "52.6",
+        "score_raw": "52.6% (standard error ±3.5–4.5 pts per model)",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "55.8",
+        "score_raw": "55.8%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "77.9",
+        "score_raw": "77.9% partial",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 — Strict",
+        "metric_key": "osworld-strict-score",
+        "score_value": "41.7",
+        "score_raw": "41.7% strict",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "no tools",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "60.9",
+        "score_raw": "60.9% no tools",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "with tools",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "65.0",
+        "score_raw": "65.0% with tools",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "max",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "3.2.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "73.4",
+        "score_raw": "73.4% at max effort",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "highest thinking",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "19.1",
+        "score_raw": "19.1%",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "35.0",
+        "score_raw": "35.0% all pass rate",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "no tools",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning — No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "86.2",
+        "score_raw": "86.2% no tools",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "lvbench",
+        "benchmark_version": "1024 frames — Agentic",
+        "metric_key": "lvbench-accuracy",
+        "score_value": "87.8",
+        "score_raw": "87.8% (agentic)",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "lvbench",
+        "benchmark_version": "1024 frames — Static",
+        "metric_key": "lvbench-accuracy",
+        "score_value": "87.1",
+        "score_raw": "87.1% (static)",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "hle-verified",
+        "benchmark_version": "Full 1,811-item verified set",
+        "metric_key": "hle-verified-accuracy",
+        "score_value": "54.9",
+        "score_raw": "54.9%",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "batch tool enabled",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.06.24 — Partial (batch tool)",
+        "metric_key": "osworld-partial-score",
+        "score_value": "59.0",
+        "score_raw": "59.0% partial score; batch tool enabled",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+            "checked_at": "2026-09-18T13:23:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10006",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "56.8",
+        "score_raw": "56.8%",
+        "reported_at": "2026-02-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10006",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "77.3",
+        "score_raw": "77.3%",
+        "reported_at": "2026-02-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10006",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "64.7",
+        "score_raw": "64.7%",
+        "reported_at": "2026-02-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10006",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gdpval",
+        "benchmark_version": "GDPval",
+        "metric_key": "gdpval-win-tie-rate",
+        "score_value": "70.9",
+        "score_raw": "70.9%",
+        "reported_at": "2026-02-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "57.7",
+        "score_raw": "57.7%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "75.1",
+        "score_raw": "75.1%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "75.0",
+        "score_raw": "75.0%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gdpval",
+        "benchmark_version": "GDPval",
+        "metric_key": "gdpval-win-tie-rate",
+        "score_value": "83.0",
+        "score_raw": "83.0%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "82.7",
+        "score_raw": "82.7%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "92.8",
+        "score_raw": "92.8%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "39.8",
+        "score_raw": "39.8%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "52.1",
+        "score_raw": "52.1%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "81.2",
+        "score_raw": "81.2%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "82.1",
+        "score_raw": "82.1%",
+        "reported_at": "2026-03-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-4/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "82.7",
+        "score_raw": "82.7%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "78.7",
+        "score_raw": "78.7%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gdpval",
+        "benchmark_version": "GDPval",
+        "metric_key": "gdpval-win-tie-rate",
+        "score_value": "84.9",
+        "score_raw": "84.9%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "84.4",
+        "score_raw": "84.4%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "93.6",
+        "score_raw": "93.6%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "41.4",
+        "score_raw": "41.4%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "52.2",
+        "score_raw": "52.2%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "81.2",
+        "score_raw": "81.2%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "83.2",
+        "score_raw": "83.2%",
+        "reported_at": "2026-04-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-5-5/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "84.7",
+        "score_raw": "84.7%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "67.2",
+        "score_raw": "67.2%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "83.3",
+        "score_raw": "83.3%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "92.3",
+        "score_raw": "92.3%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "78.4",
+        "score_raw": "78.4%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "79.5",
+        "score_raw": "79.5%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "22.7",
+        "score_raw": "22.7%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "88.8",
+        "score_raw": "88.8%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "72.7",
+        "score_raw": "72.7%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "90.4",
+        "score_raw": "90.4%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "94.6",
+        "score_raw": "94.6%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "83",
+        "score_raw": "83%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "84.6",
+        "score_raw": "84.6%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "30.7",
+        "score_raw": "30.7%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "87.4",
+        "score_raw": "87.4%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "69.6",
+        "score_raw": "69.6%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "87.5",
+        "score_raw": "87.5%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "92.9",
+        "score_raw": "92.9%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "80.7",
+        "score_raw": "80.7%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "82",
+        "score_raw": "82%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "24.7",
+        "score_raw": "24.7%",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/gpt-5-6/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "68.5",
+        "score_raw": "68.5%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "94.3",
+        "score_raw": "94.3%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "80.6",
+        "score_raw": "80.6%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "54.2",
+        "score_raw": "54.2%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "85.9",
+        "score_raw": "85.9%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "80.5",
+        "score_raw": "80.5%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "44.4",
+        "score_raw": "44.4%",
+        "reported_at": "2026-02-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "76.2",
+        "score_raw": "76.2%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "55.1",
+        "score_raw": "55.1%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "78.4",
+        "score_raw": "78.4%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning — No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "84.2",
+        "score_raw": "84.2%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "83.6",
+        "score_raw": "83.6%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "40.2",
+        "score_raw": "40.2%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "score_value": "56.5",
+        "score_raw": "56.5%",
+        "reported_at": "2026-05-19",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "78.0",
+        "score_raw": "78.0%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "58.7",
+        "score_raw": "58.7%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "49",
+        "score_raw": "49%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "83.0",
+        "score_raw": "83.0%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning — No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "85.2",
+        "score_raw": "85.2%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "mle-bench",
+        "benchmark_version": "MLE-bench",
+        "metric_key": "mle-bench-solved",
+        "score_value": "63.9",
+        "score_raw": "63.9%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-09-19T05:10:15Z",
+            "primary": true
+          }
+        ]
+      }
+    }
   ]
 }
