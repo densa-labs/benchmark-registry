@@ -7,7 +7,7 @@
 # Benchmark Registry
 
 **A project of [Densa Labs](https://densa-labs.github.io).**<br>
-[Benchmark Registry](https://benchmarkregistry.org) puts your favorite models' benchmark results in one place. It solves a simple but felt problem: finding benchmark results scattered across different models, benchmarks, companies, and evaluators.
+[Benchmark Registry](https://benchmarkregistry.org) puts AI models and their benchmark results in one place. It solves a simple but felt problem: finding benchmark results scattered across different models, benchmarks, companies, and evaluators.
 
 ## What is Benchmark Registry?
 
