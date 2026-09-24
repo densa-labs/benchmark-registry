@@ -72,5 +72,4 @@ Benchmark Registry v2 is currently in development.
 
 ## License
 
-Code is licensed under [Apache License 2.0](LICENSE).<br>
-Benchmark Registry data licensed under [ODC-By 1.0](DATA_LICENSE).
+Code is licensed under [Apache License 2.0](LICENSE).
