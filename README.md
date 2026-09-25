@@ -7,7 +7,7 @@
 # Benchmark Registry
 
 **A project of [Densa Labs](https://densa-labs.github.io).**<br>
-[Benchmark Registry](https://benchmarkregistry.org) puts AI models and their benchmark results in one place. It solves a simple but felt problem: finding benchmark results scattered across different models, benchmarks, companies, and evaluators.
+[Benchmark Registry](https://benchmarkregistry.org) puts AI models and their benchmark results in one place.<br> It solves a simple but felt problem: finding benchmark results scattered across different models, benchmarks, companies, and evaluators.
 
 ## What is Benchmark Registry?
 
@@ -22,24 +22,14 @@ It tracks:
 - **Sources and reported dates**
 - **Companies and model developers**
 
-## Data sources
-
 Benchmark results are sourced from primary sources:
 
-**1. Official benchmark or evaluator results**<br>
-**2. Official model developer system cards, model cards, technical reports, or evaluation pages**
+- **Official benchmark or evaluator results**<br>
+- **Official model developer system cards, model developer blogs, or technical reports**
 
 ## Registry numbers
 
-Models receive stable Registry numbers based on their provider namespace and chronological release order.
-
-Examples:
-
-```text
-10006   OpenAI GPT-6 Astra
-20004   Anthropic Claude Opus 4.6
-110001  DeepSeek Coder
-```
+Models receive stable Registry numbers based on their provider namespace and the order in which they are added to the Registry. ***(Ex. 10006 GPT-5.3-Codex)***
 
 ### Namespace allocation
 
@@ -48,27 +38,25 @@ Examples:
 10  = OpenAI
 15  = OpenAI OSS
 20  = Anthropic
-30  = Google
+30  = Google DeepMind
 35  = Google Gemma
 40  = SpaceXAI
 50  = Cursor
 60  = NVIDIA
-70  = Microsoft
-80  = Meta
+70  = Microsoft AI
+80  = Meta AI
 90  = Mistral
 100 = intentionally unused
-110 = DeepSeek
+110 = DeepSeek AI
 120 = Moonshot AI
-130 = Alibaba
+130 = Alibaba (Tongyi Lab)
 140 = MiniMax
 150 = Z.ai
 160 = Thinking Machines
-170 = SSI
+170 = SSI*
 ```
 
-## Status
-
-Benchmark Registry v2 is currently in development.
+**SSI is a reserved namespace. As of September 2026, SSI has not publicly released any models.*
 
 ## License
 
