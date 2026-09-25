@@ -121,7 +121,7 @@ describe("P7.2 benchmark pages", () => {
     );
 
     expect(markup).toContain("Registry benchmarks");
-    expect(markup).toContain("1 benchmark");
+    expect(markup).toContain("1 benchmark family");
     expect(markup).toContain('action="/benchmarks"');
     expect(markup).toContain("Search benchmark names or aliases");
     expect(markup).toContain('href="/benchmarks/gpqa"');
@@ -130,6 +130,22 @@ describe("P7.2 benchmark pages", () => {
     expect(markup).toContain("Sort by Released ascending");
     expect(markup).not.toContain("Sort by Score");
     expect(markup).not.toContain("/benchmarks/gpqa/Diamond");
+  });
+
+  it("labels the index total as families rather than versions or results", () => {
+    const markup = renderToStaticMarkup(
+      <BenchmarksPage
+        response={{
+          ...benchmarkListResponse,
+          page: { ...benchmarkListResponse.page, total_items: 53 },
+        }}
+        currentSearch=""
+      />,
+    );
+
+    expect(markup).toContain("53 benchmark families");
+    expect(markup).not.toContain("53 benchmark versions");
+    expect(markup).not.toContain("53 results");
   });
 
   it("renders every family version and marks only the deterministically latest one", () => {

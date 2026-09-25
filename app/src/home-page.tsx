@@ -50,15 +50,15 @@ function ModelList({
 
 export function HomePage({ response }: { response: HomePageResponse }) {
   const modelCount = response.recent_models.page.total_items;
-  const recordLabel = `${new Intl.NumberFormat("en-US").format(modelCount)} ${
-    modelCount === 1 ? "record" : "records"
+  const modelLabel = `${new Intl.NumberFormat("en-US").format(modelCount)} ${
+    modelCount === 1 ? "model" : "models"
   }`;
 
   return (
     <PageContainer className="registry-page home-page">
       <PageHeader
         title="Benchmark Registry"
-        description={recordLabel}
+        description={modelLabel}
       />
 
       <div className="home-sections">

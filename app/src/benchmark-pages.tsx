@@ -203,7 +203,7 @@ export function BenchmarksPage({
     <PageContainer className="registry-page">
       <PageHeader
         title="Benchmarks"
-        description={countLabel(response.page.total_items, "benchmark")}
+        description={countLabel(response.page.total_items, "benchmark family", "benchmark families")}
       />
       <LocalSearch
         action={pathname}
@@ -216,7 +216,7 @@ export function BenchmarksPage({
         <div className="results-section__header">
           <div>
             <h2 id="benchmark-index-heading">Registry benchmarks</h2>
-            <p>{countLabel(response.page.total_items, "benchmark")}</p>
+            <p>{countLabel(response.page.total_items, "benchmark family", "benchmark families")}</p>
           </div>
           <PageSizeForm
             action={pathname}

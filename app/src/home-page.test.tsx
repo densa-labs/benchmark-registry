@@ -48,7 +48,8 @@ describe("homepage", () => {
     );
 
     expect(markup).toContain('role="search"');
-    expect(markup).toContain("4,506 records");
+    expect(markup).toContain("4,506 models");
+    expect(markup).not.toContain("4,506 records");
     expect(markup).not.toContain("Source-backed AI models and benchmark results.");
     expect(markup).toContain("Recent Models");
     expect(markup).toContain("Recently Added");
