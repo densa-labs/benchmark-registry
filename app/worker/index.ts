@@ -46,6 +46,11 @@ async function handleApi(request: Request, env: Env): Promise<Response> {
   const path = url.pathname.split("/").filter(Boolean).map(decodeSegment);
   const repository = new RegistryRepository(env.DB);
 
+  if (path.length === 2 && path[1] === "stats") {
+    parseParameters(url.searchParams, { allowed: [] });
+    return Response.json(await repository.stats());
+  }
+
   if (path.length === 2 && path[1] === "models") {
     const params = parseParameters(url.searchParams, {
       allowed: ["page", "limit", "q", "company", "sort", "order"],

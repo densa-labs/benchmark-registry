@@ -80,6 +80,7 @@ const companyRow = {
 function defaultResponder(tag: string): unknown[] {
   if (tag.endsWith(":count")) return [{ total: 1 }];
   const responses: Record<string, unknown[]> = {
+    "registry:stats": [{ benchmark_results: 594, models: 92, benchmarks: 53, versions: 104 }],
     "model-page:redirect": [],
     "models:list": [modelRow],
     "model:requested": [{ id: 2 }],
@@ -156,6 +157,22 @@ async function api(path: string, responder?: QueryResponder) {
 }
 
 describe("read API response contracts", () => {
+  it("returns exact Registry counts, including zero results", async () => {
+    const { response, body, calls } = await api("/api/stats");
+    expect(response.status).toBe(200);
+    expect(body).toEqual({ data: {
+      benchmark_results: 594, models: 92, benchmarks: 53, versions: 104,
+    } });
+    expect(calls[0].sql).toContain("FROM results");
+
+    const empty = await api("/api/stats", (tag) => tag === "registry:stats"
+      ? [{ benchmark_results: 0, models: 0, benchmarks: 0, versions: 0 }]
+      : []);
+    expect(empty.body).toEqual({ data: {
+      benchmark_results: 0, models: 0, benchmarks: 0, versions: 0,
+    } });
+  });
+
   it("returns model summaries with pagination", async () => {
     const { response, body } = await api("/api/models");
     expect(response.status).toBe(200);

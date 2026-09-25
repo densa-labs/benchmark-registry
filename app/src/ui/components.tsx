@@ -79,8 +79,31 @@ export function Header({
   activeHref,
   theme = "light",
 }: HeaderProps) {
+  const headerRef = useRef<HTMLElement>(null);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+    let travel = 0;
+    const handleScroll = () => {
+      const y = Math.max(0, window.scrollY);
+      const delta = y - lastY;
+      if (Math.sign(delta) !== Math.sign(travel)) travel = delta;
+      else travel += delta;
+      if (y <= (headerRef.current?.offsetHeight ?? 0)) setHidden(false);
+      else if (travel >= 12) setHidden(true);
+      else if (travel <= -12) setHidden(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="site-header">
+    <header
+      className={hidden ? "site-header site-header--hidden" : "site-header"}
+      ref={headerRef}
+    >
       <PageContainer className="site-header__inner">
         <a className="wordmark" href="/" aria-label="Benchmark Registry home">
           <img

@@ -12,8 +12,17 @@ export interface ModelListResponse {
 }
 
 export interface HomePageResponse {
+  stats: {
+    data: {
+      benchmark_results: number;
+      models: number;
+      benchmarks: number;
+      versions: number;
+    };
+  };
   recent_models: ModelListResponse;
   recently_added: ModelListResponse;
+  all_models: ModelSummary[];
 }
 
 export interface ModelDetailResponse {
@@ -268,21 +277,40 @@ export async function loadRegistryRoute(
       headers: { Accept: "application/json" },
       signal,
     });
-    const [recentResponse, addedResponse] = await Promise.all([
+    const [statsResponse, recentResponse, addedResponse, directoryResponse] = await Promise.all([
+      request("/api/stats"),
       request("/api/models?limit=50"),
       request("/api/models?sort=published&order=desc&limit=50"),
+      request("/api/models?sort=name&order=asc&limit=500"),
     ]);
-    const [recentBody, addedBody]: unknown[] = await Promise.all([
+    const [statsBody, recentBody, addedBody, directoryBody]: unknown[] = await Promise.all([
+      statsResponse.json(),
       recentResponse.json(),
       addedResponse.json(),
+      directoryResponse.json(),
     ]);
+    if (!statsResponse.ok) throw new RegistryClientError(errorMessage(statsBody));
     if (!recentResponse.ok) throw new RegistryClientError(errorMessage(recentBody));
     if (!addedResponse.ok) throw new RegistryClientError(errorMessage(addedBody));
+    if (!directoryResponse.ok) throw new RegistryClientError(errorMessage(directoryBody));
+    const directory = directoryBody as ModelListResponse;
+    const remainingPages = Array.from(
+      { length: Math.max(0, directory.page.total_pages - 1) },
+      (_, index) => index + 2,
+    );
+    const remaining = await Promise.all(remainingPages.map(async (page) => {
+      const response = await request(`/api/models?sort=name&order=asc&limit=500&page=${page}`);
+      const body: unknown = await response.json();
+      if (!response.ok) throw new RegistryClientError(errorMessage(body));
+      return body as ModelListResponse;
+    }));
     return {
       kind: "home",
       payload: {
+        stats: statsBody as HomePageResponse["stats"],
         recent_models: recentBody as ModelListResponse,
         recently_added: addedBody as ModelListResponse,
+        all_models: [directory, ...remaining].flatMap((page) => page.data),
       },
     };
   }

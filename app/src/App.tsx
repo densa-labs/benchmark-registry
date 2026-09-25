@@ -6,7 +6,7 @@ import {
   BenchmarkVersionPage,
 } from "./benchmark-pages";
 import { CompaniesPage, CompanyDetailPage } from "./company-pages";
-import { HomePage } from "./home-page";
+import { HomeLoadingState, HomePage } from "./home-page";
 import { ModelDetailPage, ModelsPage } from "./model-pages";
 import {
   loadRegistryRoute,
@@ -70,7 +70,7 @@ export function App() {
       </PageContainer>
     );
   } else if (state.status === "loading") {
-    content = (
+    content = route.kind === "home" ? <HomeLoadingState /> : (
       <PageContainer className="registry-page">
         <LoadingState columns={5} rows={6} />
       </PageContainer>

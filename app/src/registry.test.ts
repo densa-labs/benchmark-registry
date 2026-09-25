@@ -38,7 +38,7 @@ describe("registry route data loading", () => {
       .toEqual({ kind: "not-found" });
   });
 
-  it("loads both homepage sections from ordered Models API requests", async () => {
+  it("loads homepage statistics, both ordered feeds, and the complete model directory", async () => {
     const recent = {
       data: [{ registry_no: "10002", name: "Recent release" }],
       page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
@@ -47,25 +47,54 @@ describe("registry route data loading", () => {
       data: [{ registry_no: "30001", name: "Recent addition" }],
       page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
     };
-    const fetcher = vi.fn().mockImplementation((path: string) =>
-      Promise.resolve(Response.json(path.includes("sort=published") ? added : recent)),
-    );
+    const directory = {
+      data: [{ registry_no: "10001", name: "Alpha" }],
+      page: { number: 1, limit: 500, total_items: 2, total_pages: 2 },
+    };
+    const finalPage = {
+      data: [{ registry_no: "10002", name: "Beta" }],
+      page: { number: 2, limit: 500, total_items: 2, total_pages: 2 },
+    };
+    const stats = { data: { benchmark_results: 594, models: 2, benchmarks: 53, versions: 104 } };
+    const fetcher = vi.fn().mockImplementation((path: string) => Promise.resolve(Response.json(
+      path === "/api/stats" ? stats
+        : path.includes("sort=published") ? added
+        : path.endsWith("page=2") ? finalPage
+        : path.includes("sort=name") ? directory
+        : recent,
+    )));
 
     const loaded = await loadRegistryRoute({ kind: "home" }, "", fetcher);
 
     expect(fetcher).toHaveBeenNthCalledWith(
       1,
-      "/api/models?limit=50",
+      "/api/stats",
       expect.objectContaining({ headers: { Accept: "application/json" } }),
     );
     expect(fetcher).toHaveBeenNthCalledWith(
       2,
+      "/api/models?limit=50",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      3,
       "/api/models?sort=published&order=desc&limit=50",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      4,
+      "/api/models?sort=name&order=asc&limit=500",
+      expect.objectContaining({ headers: { Accept: "application/json" } }),
+    );
+    expect(fetcher).toHaveBeenNthCalledWith(
+      5,
+      "/api/models?sort=name&order=asc&limit=500&page=2",
       expect.objectContaining({ headers: { Accept: "application/json" } }),
     );
     expect(loaded).toEqual({
       kind: "home",
-      payload: { recent_models: recent, recently_added: added },
+      payload: { stats, recent_models: recent, recently_added: added,
+        all_models: [...directory.data, ...finalPage.data] },
     });
   });
 
@@ -177,6 +206,14 @@ describe("registry route data loading", () => {
     ));
     await expect(loadRegistryRoute({ kind: "models" }, "?limit=1", invalid))
       .rejects.toEqual(new RegistryClientError("Limit is invalid."));
+
+    const failedStats = vi.fn().mockImplementation((path: string) => Promise.resolve(
+      path === "/api/stats"
+        ? Response.json({ error: { message: "Statistics unavailable." } }, { status: 503 })
+        : Response.json({ data: [], page: { total_pages: 0 } }),
+    ));
+    await expect(loadRegistryRoute({ kind: "home" }, "", failedStats))
+      .rejects.toEqual(new RegistryClientError("Statistics unavailable."));
   });
 });
 

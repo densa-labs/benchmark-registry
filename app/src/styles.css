@@ -122,12 +122,17 @@ a:hover {
   z-index: 1;
   border-bottom: 1px solid var(--border);
   background: var(--background);
+  transition: transform 240ms ease;
+}
+
+.site-header--hidden:not(:focus-within) {
+  transform: translateY(calc(-100% - 1px));
 }
 
 .site-header__inner {
   min-height: var(--header-height);
   display: grid;
-  grid-template-columns: auto auto minmax(15rem, 1fr);
+  grid-template-columns: auto auto minmax(16rem, 1fr);
   align-items: center;
   gap: clamp(1rem, 2.5vw, 2rem);
 }
@@ -149,8 +154,8 @@ a:hover {
 }
 
 .wordmark__logo {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex: 0 0 auto;
   object-fit: contain;
 }
@@ -182,7 +187,7 @@ a:hover {
 .global-search-shell {
   position: relative;
   justify-self: end;
-  width: min(100%, 23rem);
+  width: min(100%, 27rem);
 }
 
 .global-search {
@@ -480,9 +485,46 @@ h3 {
   margin-top: 2rem;
 }
 
-.home-page .page-header__description {
+.home-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+}
+
+.home-intro h1 {
+  margin-bottom: 0.25rem;
+}
+
+.home-scale {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.home-scale p {
+  margin: 0;
+}
+
+.home-scale__primary {
+  font-size: 1rem;
+  font-weight: 575;
+}
+
+.home-scale__primary strong {
+  font-family: "Geist Mono Variable", "Geist Mono", monospace;
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+}
+
+.home-scale__support {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  color: var(--text-muted);
   font-size: 0.75rem;
-  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
 }
 
 .home-section {
@@ -555,6 +597,101 @@ h3 {
 
 .home-model-list__metadata .registry-number {
   font-size: 0.72rem;
+}
+
+.home-directory {
+  margin-top: clamp(2.75rem, 5vw, 4rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-strong);
+}
+
+.home-directory .home-section__header > span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-directory__groups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.home-directory__group h3 {
+  margin: 0 0 0.3rem;
+  color: var(--text-muted);
+  font-family: "Geist Mono Variable", "Geist Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.home-directory__group ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 1.25rem;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+
+.home-directory__group li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 0.5rem;
+  min-width: 0;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.78rem;
+}
+
+.home-directory__model {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-weight: 600;
+}
+
+.home-directory__provider {
+  grid-column: 1;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.home-directory__group .registry-number {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.home-page--loading [role="status"] {
+  display: grid;
+  gap: 2rem;
+}
+
+.home-loading__intro,
+.home-loading__sections > div,
+.home-loading__directory {
+  background: var(--surface-strong);
+}
+
+.home-loading__intro {
+  width: min(100%, 38rem);
+  height: 4.5rem;
+}
+
+.home-loading__sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.home-loading__sections > div {
+  height: 13rem;
+}
+
+.home-loading__directory {
+  height: 8rem;
 }
 
 .metadata-rows {
@@ -1031,7 +1168,8 @@ h3 {
 @media (max-width: 62rem) {
   .site-header__inner {
     grid-template-columns: auto 1fr;
-    padding-block: 0.8rem;
+    gap: 0.65rem 1rem;
+    padding-block: 0.6rem;
   }
 
   .primary-nav {
@@ -1052,6 +1190,14 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .home-loading__sections {
+    grid-template-columns: 1fr;
+  }
+
+  .home-directory__group ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .state-grid > div {
     display: grid;
     grid-template-columns: 7rem minmax(0, 1fr);
@@ -1069,24 +1215,45 @@ h3 {
     width: min(100% - 1.25rem, 76rem);
   }
 
-  .site-header {
-    position: static;
-  }
-
   .site-header__inner {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem;
+    padding-block: 0.5rem;
   }
 
   .primary-nav {
-    grid-row: 2;
-    justify-self: stretch;
-    justify-content: space-between;
-    gap: 0.75rem;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    gap: 0.6rem;
   }
 
   .global-search-shell {
-    grid-row: 3;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .wordmark span {
+    display: none;
+  }
+
+  .home-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .home-scale {
+    text-align: left;
+  }
+
+  .home-scale__support {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .home-directory__group ul {
+    grid-template-columns: 1fr;
   }
 
   .global-search-panel {
@@ -1185,6 +1352,12 @@ h3 {
 
   .state-grid > div {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
   }
 }
 

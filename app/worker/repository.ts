@@ -347,6 +347,21 @@ export class RegistryRepository {
     return Number(row.total);
   }
 
+  async stats() {
+    const row = await this.first<{
+      benchmark_results: number;
+      models: number;
+      benchmarks: number;
+      versions: number;
+    }>(`/* registry:stats */ SELECT
+      (SELECT count(*) FROM results) AS benchmark_results,
+      (SELECT count(*) FROM models) AS models,
+      (SELECT count(*) FROM benchmarks) AS benchmarks,
+      (SELECT count(*) FROM benchmark_versions) AS versions`);
+    if (row === null) throw new Error("Registry statistics query returned no row.");
+    return { data: row };
+  }
+
   async models(params: ParsedListParams) {
     const clauses: string[] = [];
     const bindings: BindValue[] = [];

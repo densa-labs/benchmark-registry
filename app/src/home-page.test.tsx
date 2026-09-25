@@ -1,7 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
-import { HomePage } from "./home-page";
+import { HomeLoadingState, HomePage } from "./home-page";
 import type { HomePageResponse } from "./registry";
 import { AppShell } from "./ui/components";
 
@@ -23,6 +23,7 @@ function model(
 }
 
 const response: HomePageResponse = {
+  stats: { data: { benchmark_results: 594, models: 92, benchmarks: 53, versions: 104 } },
   recent_models: {
     data: [
       model("10002", "Newest release", "2026-09-18", "2026-09-18T01:00:00Z"),
@@ -37,9 +38,19 @@ const response: HomePageResponse = {
     ],
     page: { number: 1, limit: 50, total_items: 4506, total_pages: 91 },
   },
+  all_models: [
+    model("10001", "Earlier release", "2026-09-17", "2026-09-18T02:00:00Z"),
+    model("10002", "Newest release", "2026-09-18", "2026-09-18T01:00:00Z"),
+  ],
 };
 
 describe("homepage", () => {
+  it("shows a homepage loading state", () => {
+    const markup = renderToStaticMarkup(<HomeLoadingState />);
+    expect(markup).toContain("Loading homepage data");
+    expect(markup).toContain('aria-busy="true"');
+  });
+
   it("renders global search and both frozen model sections without rankings", () => {
     const markup = renderToStaticMarkup(
       <AppShell navigation={[]}>
@@ -48,11 +59,14 @@ describe("homepage", () => {
     );
 
     expect(markup).toContain('role="search"');
-    expect(markup).toContain("4,506 models");
-    expect(markup).not.toContain("4,506 records");
-    expect(markup).not.toContain("Source-backed AI models and benchmark results.");
+    expect(markup).toContain("594</strong> benchmark results");
+    expect(markup).toContain("92 models");
+    expect(markup).toContain("53 benchmarks");
+    expect(markup).toContain("104 versions");
+    expect(markup).not.toContain("One place for AI model benchmark results.");
     expect(markup).toContain("Recent Models");
     expect(markup).toContain("Recently Added");
+    expect(markup).toContain("All Models");
     expect(markup).not.toContain("Top Models");
   });
 
@@ -68,5 +82,32 @@ describe("homepage", () => {
       .toBeLessThan(recentSection.indexOf("Earlier release"));
     expect(addedSection.indexOf("Latest addition"))
       .toBeLessThan(addedSection.indexOf("Earlier addition"));
+  });
+
+  it("renders every directory model with a canonical model link", () => {
+    const models = Array.from({ length: 92 }, (_, index) => model(
+      String(10000 + index), `Model ${index + 1}`, "2026-09-17", "2026-09-18T00:00:00Z",
+    ));
+    const markup = renderToStaticMarkup(
+      <HomePage response={{ ...response, all_models: models }} />,
+    );
+    const directory = markup.slice(markup.indexOf('id="all-models-heading"'));
+    expect(directory.match(/class="home-directory__model"/gu)).toHaveLength(92);
+    for (const entry of models) {
+      expect(directory).toContain(`href="/models/${entry.registry_no}"`);
+    }
+  });
+
+  it("renders exact zero counts and empty sections", () => {
+    const emptyPage = { data: [], page: { number: 1, limit: 50 as const, total_items: 0, total_pages: 0 } };
+    const markup = renderToStaticMarkup(<HomePage response={{
+      stats: { data: { benchmark_results: 0, models: 0, benchmarks: 0, versions: 0 } },
+      recent_models: emptyPage,
+      recently_added: emptyPage,
+      all_models: [],
+    }} />);
+    expect(markup).toContain("0</strong> benchmark results");
+    expect(markup).toContain("0 models");
+    expect(markup.match(/No models found/gu)).toHaveLength(3);
   });
 });
