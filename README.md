@@ -15,17 +15,17 @@ Benchmark Registry is a structured, updating registry of AI models and their ben
 
 It tracks:
 
+- **Companies and model developers**
 - **Models and model families**
-- **Benchmark versions and metrics**
 - **Reasoning/effort variants**
+- **Benchmark versions and metrics**
 - **Evaluators**
 - **Sources and reported dates**
-- **Companies and model developers**
 
 Benchmark results are sourced from primary sources:
 
 - **Official benchmark or evaluator results**<br>
-- **Official model developer system cards, blogs, or technical reports**
+- **Official model developer system cards, technical reports, or blogs**
 
 ## Registry numbers
 
