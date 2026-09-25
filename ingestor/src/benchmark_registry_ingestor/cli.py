@@ -26,7 +26,14 @@ def build_parser() -> argparse.ArgumentParser:
         version=f"%(prog)s {__version__}",
     )
     subparsers = parser.add_subparsers(dest="operation")
-    for operation in ("company", "model", "benchmark", "result", "batch"):
+    for operation in (
+        "company",
+        "company_correction",
+        "model",
+        "benchmark",
+        "result",
+        "batch",
+    ):
         command = subparsers.add_parser(
             operation,
             help=f"validate and ingest a {operation} JSON document",

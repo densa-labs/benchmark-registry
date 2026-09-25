@@ -79,6 +79,7 @@ RECORD_FIELDS = {
         "source_checked_at",
         "namespace_authorizations",
     },
+    "company_correction": {"slug", "expected", "corrected", "reason"},
     "model": {
         "canonical_name",
         "company_slug",
@@ -120,6 +121,17 @@ RECORD_FIELDS = {
         "evaluator_keys",
         "sources",
     },
+}
+
+ESTABLISHMENT_CORRECTION_FIELDS = (
+    "established_at",
+    "established_precision",
+    "established_source_url",
+    "established_source_normalized_url",
+    "source_checked_at",
+)
+ESTABLISHMENT_INPUT_FIELDS = set(ESTABLISHMENT_CORRECTION_FIELDS) - {
+    "established_source_normalized_url"
 }
 
 
@@ -182,6 +194,7 @@ class Plan:
     catalog: Catalog
     statements: list[Statement] = field(default_factory=list)
     outcomes: list[Outcome] = field(default_factory=list)
+    corrected_company_slugs: set[str] = field(default_factory=set)
 
     def valid(self, operation: str, identifier: str, message: str) -> None:
         self.outcomes.append(Outcome("VALID", operation, identifier, message))
@@ -278,6 +291,15 @@ class Ingestor:
                     for outcome in verification.outcomes
                 ]
             except DatabaseFailure as exc:
+                if any(
+                    item_operation == "company_correction"
+                    for item_operation, _ in records
+                ):
+                    try:
+                        self._build(records)
+                    except IngestionFailure as current:
+                        if current.status == "CONFLICT":
+                            raise current from exc
                 raise IngestionFailure("ERROR", operation, str(exc)) from exc
         return plan.outcomes
 
@@ -295,7 +317,7 @@ class Ingestor:
                 item_operation = require_string(
                     item.get("operation"), f"records[{index}].operation"
                 )
-                if item_operation not in {"company", "model", "benchmark", "result"}:
+                if item_operation not in RECORD_FIELDS:
                     raise IngestionFailure(
                         "ERROR", f"records[{index}]", "unsupported batch operation"
                     )
@@ -306,7 +328,7 @@ class Ingestor:
                     )
                 )
             return records
-        if operation not in {"company", "model", "benchmark", "result"}:
+        if operation not in RECORD_FIELDS:
             raise IngestionFailure("ERROR", operation, "unsupported operation")
         return [(operation, _mapping(payload, operation))]
 
@@ -328,12 +350,125 @@ class Ingestor:
     def _identifier(operation: str, record: Record) -> str:
         fields = {
             "company": "slug",
+            "company_correction": "slug",
             "model": "registry_no",
             "benchmark": "slug",
             "result": "run_ref",
         }
         value = record.get(fields[operation])
         return str(value) if value is not None else operation
+
+    @staticmethod
+    def _establishment_correction_state(
+        value: object, field: str, *, corrected: bool
+    ) -> Record:
+        state = _mapping(value, field)
+        _reject_unknown_fields(state, ESTABLISHMENT_INPUT_FIELDS, field)
+        if set(state) != ESTABLISHMENT_INPUT_FIELDS:
+            raise ValueErrorDetail(
+                f"{field} must explicitly include every establishment and check field"
+            )
+        values = (
+            state["established_at"],
+            state["established_precision"],
+            state["established_source_url"],
+        )
+        if all(item is None for item in values) and not corrected:
+            established_at = established_precision = None
+            established_source_url = normalized_url = None
+        elif any(item is None for item in values):
+            raise ValueErrorDetail(
+                f"{field} establishment fields must be all present or all null"
+            )
+        else:
+            established_at, established_precision = normalize_temporal(
+                values[0], values[1], f"{field}.established_at"
+            )
+            established_source_url, normalized_url = normalize_url(
+                values[2], f"{field}.established_source_url"
+            )
+        return {
+            "established_at": established_at,
+            "established_precision": established_precision,
+            "established_source_url": established_source_url,
+            "established_source_normalized_url": normalized_url,
+            "source_checked_at": normalize_checked_at(
+                state["source_checked_at"], f"{field}.source_checked_at"
+            ),
+        }
+
+    def _plan_company_correction(self, plan: Plan, record: Record) -> None:
+        slug = require_slug(record.get("slug"))
+        if slug in plan.corrected_company_slugs:
+            raise IngestionFailure(
+                "ERROR", slug, "batch contains multiple corrections for one company"
+            )
+        plan.corrected_company_slugs.add(slug)
+        reason = require_string(record.get("reason"), "reason")
+        if not reason.strip():
+            raise ValueErrorDetail("reason must explain the correction")
+        expected = self._establishment_correction_state(
+            record.get("expected"), "expected", corrected=False
+        )
+        corrected = self._establishment_correction_state(
+            record.get("corrected"), "corrected", corrected=True
+        )
+        if all(
+            expected[key] == corrected[key]
+            for key in ("established_at", "established_precision", "established_source_url")
+        ):
+            raise ValueErrorDetail(
+                "correction must change an establishment fact or source"
+            )
+        company = plan.catalog.one("companies", slug=slug)
+        if company is None:
+            raise IngestionFailure("ERROR", slug, "company does not exist")
+        fields = ESTABLISHMENT_CORRECTION_FIELDS
+        if _same(company, corrected, fields):
+            plan.skipped("company_correction", slug, "correction already applied")
+            return
+        if not _same(company, expected, fields):
+            raise IngestionFailure(
+                "CONFLICT",
+                slug,
+                "company establishment no longer matches expected state",
+            )
+
+        # The NOT NULL guard aborts the whole D1 batch if facts change after planning.
+        plan.statements.append(
+            Statement(
+                """UPDATE companies SET established_at = ?, established_precision = ?,
+                established_source_url = ?, established_source_normalized_url = ?,
+                source_checked_at = ?,
+                source_url = CASE WHEN established_at IS ?
+                    AND established_precision IS ? AND established_source_url IS ?
+                    AND established_source_normalized_url IS ? AND source_checked_at = ?
+                    THEN source_url ELSE NULL END
+                WHERE id = ? AND slug = ?""",
+                (
+                    *(corrected[field] for field in fields),
+                    *(expected[field] for field in fields),
+                    company["id"],
+                    slug,
+                ),
+            )
+        )
+        # A missing or renamed row must also fail rather than silently update zero rows.
+        plan.statements.append(
+            Statement(
+                """INSERT INTO companies (name, normalized_name, slug, source_url,
+                normalized_source_url, source_checked_at)
+                SELECT NULL, NULL, NULL, NULL, NULL, NULL
+                WHERE NOT EXISTS (SELECT 1 FROM companies WHERE id = ? AND slug = ?
+                    AND established_at IS ? AND established_precision IS ?
+                    AND established_source_url IS ?
+                    AND established_source_normalized_url IS ?
+                    AND source_checked_at = ?)""",
+                (company["id"], slug, *(corrected[field] for field in fields)),
+            )
+        )
+        company.update(corrected)
+        plan.valid("company_correction", slug, "establishment correction validated")
 
     def _plan_company(self, plan: Plan, record: Record) -> None:
         name, normalized_name = normalize_name(record.get("name"), "name")

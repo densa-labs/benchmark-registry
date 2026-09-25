@@ -59,6 +59,36 @@ def company_record() -> dict:
     }
 
 
+def company_correction_record() -> dict:
+    return {
+        "slug": "openai",
+        "expected": {
+            "established_at": None,
+            "established_precision": None,
+            "established_source_url": None,
+            "source_checked_at": CHECKED_AT,
+        },
+        "corrected": {
+            "established_at": "2015",
+            "established_precision": "year",
+            "established_source_url": "https://openai.com/about/",
+            "source_checked_at": "2026-09-25T00:00:00Z",
+        },
+        "reason": "Official company history establishes the founding year.",
+    }
+
+
+def seed_company_without_establishment(ingestor: Ingestor) -> None:
+    record = company_record()
+    record.update(
+        established_at=None,
+        established_precision=None,
+        established_source_url=None,
+        establishment_gap_documented=True,
+    )
+    assert ingestor.run("company", record, commit=True)[0].status == "VALID"
+
+
 def model_record(
     *,
     sequence: int = 1,
@@ -288,6 +318,147 @@ def test_dry_run_does_not_mutate(ingestor: Ingestor, database: LocalDatabase) ->
 
     assert outcomes[0].status == "VALID"
     assert database.query("SELECT * FROM companies") == []
+
+
+def test_company_correction_dry_run_commit_and_replay(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_company_without_establishment(ingestor)
+    correction = company_correction_record()
+    before = database.query("SELECT * FROM companies WHERE slug = 'openai'")[0]
+    assert (
+        ingestor.run("company_correction", correction, commit=False)[0].status
+        == "VALID"
+    )
+    assert database.query("SELECT * FROM companies WHERE slug = 'openai'")[0] == before
+
+    assert ingestor.run("company_correction", correction, commit=True)[0].status == "VALID"
+    after = database.query("SELECT * FROM companies WHERE slug = 'openai'")[0]
+    assert after["id"] == before["id"]
+    assert after["established_at"] == "2015"
+    assert after["established_precision"] == "year"
+    assert after["established_source_url"] == "https://openai.com/about/"
+    assert after["source_checked_at"] == "2026-09-25T00:00:00Z"
+    assert after["source_url"] == before["source_url"]
+    assert ingestor.run("company_correction", correction, commit=False)[0].status == "SKIPPED"
+    assert ingestor.run("company_correction", correction, commit=True)[0].status == "SKIPPED"
+    assert database.query("SELECT * FROM companies WHERE slug = 'openai'")[0] == after
+
+
+def test_company_correction_conflict_does_not_overwrite(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_company_without_establishment(ingestor)
+    conflicting = company_correction_record()
+    conflicting["corrected"]["established_at"] = "2000"
+    assert ingestor.run("company_correction", conflicting, commit=True)[0].status == "VALID"
+    before = database.query("SELECT * FROM companies WHERE slug = 'openai'")[0]
+    assert_failure(
+        ingestor, "company_correction", company_correction_record(),
+        match="expected state", status="CONFLICT",
+    )
+    assert database.query("SELECT * FROM companies WHERE slug = 'openai'")[0] == before
+
+
+def test_company_correction_missing_target_and_malformed_input(ingestor: Ingestor) -> None:
+    correction = company_correction_record()
+    assert_failure(ingestor, "company_correction", correction, match="does not exist")
+    seed_company_without_establishment(ingestor)
+    missing_field = company_correction_record()
+    del missing_field["expected"]["source_checked_at"]
+    assert_failure(ingestor, "company_correction", missing_field, match="explicitly include")
+    missing_reason = company_correction_record()
+    del missing_reason["reason"]
+    assert_failure(ingestor, "company_correction", missing_reason, match="reason")
+    unknown_field = company_correction_record()
+    unknown_field["corrected"]["registry_no"] = "10001"
+    assert_failure(ingestor, "company_correction", unknown_field, match="unsupported field")
+
+
+def test_company_correction_requires_provenance_and_valid_precision(
+    ingestor: Ingestor
+) -> None:
+    seed_company_without_establishment(ingestor)
+    missing_source = company_correction_record()
+    missing_source["corrected"]["established_source_url"] = None
+    assert_failure(ingestor, "company_correction", missing_source, match="all present")
+    missing_check = company_correction_record()
+    missing_check["corrected"]["source_checked_at"] = None
+    assert_failure(ingestor, "company_correction", missing_check, match="non-empty string")
+    bad_precision = company_correction_record()
+    bad_precision["corrected"]["established_at"] = "2015-01-01"
+    assert_failure(ingestor, "company_correction", bad_precision, match="YYYY")
+
+
+def test_ordinary_company_operation_still_conflicts_after_correction(
+    ingestor: Ingestor
+) -> None:
+    seed_company_without_establishment(ingestor)
+    assert ingestor.run("company_correction", company_correction_record(), commit=True)[0].status == "VALID"
+    assert_failure(ingestor, "company", company_record(), match="different facts", status="CONFLICT")
+
+
+def test_company_correction_batch_is_atomic(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_company_without_establishment(ingestor)
+    correction = company_correction_record()
+    batch = {"records": [
+        {"operation": "company_correction", "record": correction},
+        {"operation": "company_correction", "record": {**correction, "slug": "missing"}},
+    ]}
+    assert_failure(ingestor, "batch", batch, match="does not exist")
+    assert database.query("SELECT established_at FROM companies WHERE slug = 'openai'")[0]["established_at"] is None
+
+
+def test_company_correction_rejects_duplicate_target_in_batch(ingestor: Ingestor) -> None:
+    seed_company_without_establishment(ingestor)
+    correction = company_correction_record()
+    assert_failure(ingestor, "batch", {"records": [
+        {"operation": "company_correction", "record": correction},
+        {"operation": "company_correction", "record": correction},
+    ]}, match="multiple corrections")
+
+
+def test_company_correction_rechecks_state_during_atomic_write(
+    ingestor: Ingestor, database: LocalDatabase, database_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    seed_company_without_establishment(ingestor)
+    original_execute = database.execute_batch
+
+    def concurrent_change(statements: list[Statement]) -> None:
+        with sqlite3.connect(database_path) as connection:
+            connection.execute(
+                """UPDATE companies SET established_at = '2000',
+                    established_precision = 'year',
+                    established_source_url = 'https://example.org/history',
+                    established_source_normalized_url = 'https://example.org/history'
+                    WHERE slug = 'openai'"""
+            )
+        original_execute(statements)
+
+    monkeypatch.setattr(database, "execute_batch", concurrent_change)
+    assert_failure(
+        ingestor, "company_correction", company_correction_record(),
+        status="CONFLICT",
+    )
+    row = database.query("SELECT established_at, source_checked_at FROM companies WHERE slug = 'openai'")[0]
+    assert row == {"established_at": "2000", "source_checked_at": CHECKED_AT}
+
+
+def test_company_correction_write_failure_rolls_back_batch(
+    ingestor: Ingestor, database: LocalDatabase, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    seed_company_without_establishment(ingestor)
+    original_execute = database.execute_batch
+
+    def fail_after_correction(statements: list[Statement]) -> None:
+        original_execute([*statements, Statement("INSERT INTO companies (name) VALUES (NULL)", ())])
+
+    monkeypatch.setattr(database, "execute_batch", fail_after_correction)
+    assert_failure(ingestor, "company_correction", company_correction_record())
+    assert database.query("SELECT established_at FROM companies WHERE slug = 'openai'")[0]["established_at"] is None
 
 
 def test_duplicate_and_conflicting_result(

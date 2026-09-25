@@ -1,0 +1,156 @@
+{
+  "records": [
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "alibaba",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "1999",
+          "established_precision": "year",
+          "established_source_url": "https://www.alibabagroup.com/en-US/about-alibaba",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official Alibaba Group history states it was founded in 1999."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "meta",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2004-02-04",
+          "established_precision": "date",
+          "established_source_url": "https://about.fb.com/ltam/company.info/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official Meta company information gives its founding date."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "microsoft",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "1975",
+          "established_precision": "year",
+          "established_source_url": "https://news.microsoft.com/facts-about-microsoft/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official Microsoft company facts state it was founded in 1975."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "mistral",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2023",
+          "established_precision": "year",
+          "established_source_url": "https://mistral.ai/about/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official Mistral AI about page states its founding year."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "moonshot-ai",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2023",
+          "established_precision": "year",
+          "established_source_url": "https://www.moonshot.cn/about",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official Moonshot AI about page states its founding year."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "nvidia",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "1993",
+          "established_precision": "year",
+          "established_source_url": "https://www.nvidia.com/content/timeline/time_93.html",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official NVIDIA timeline places its founding in 1993."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "spacexai",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2023",
+          "established_precision": "year",
+          "established_source_url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official xAI report states xAI was founded in 2023; Registry slug is spacexai."
+      }
+    },
+    {
+      "operation": "company_correction",
+      "record": {
+        "slug": "z-ai",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2019-03-15",
+          "established_precision": "date",
+          "established_source_url": "https://z.ai/company",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "reason": "Official Z.ai company page gives ZhipuAI founding date; Registry slug is z-ai."
+      }
+    }
+  ]
+}
