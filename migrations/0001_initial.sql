@@ -239,15 +239,15 @@ CREATE INDEX idx_results_model_benchmark_version
 CREATE TRIGGER models_validate_insert
 BEFORE INSERT ON models
 BEGIN
-    SELECT CASE WHEN NOT EXISTS (
+    SELECT (CASE WHEN NOT EXISTS (
         SELECT 1
         FROM namespaces
         WHERE id = NEW.namespace_id
           AND prefix <> '100'
           AND NEW.registry_no = prefix || printf('%03d', NEW.sequence)
-    ) THEN RAISE(ABORT, 'registry number does not match namespace and sequence') END;
+    ) THEN RAISE(ABORT, 'registry number does not match namespace and sequence') END);
 
-    SELECT CASE WHEN NOT EXISTS (
+    SELECT (CASE WHEN NOT EXISTS (
         SELECT 1
         FROM namespaces
         WHERE id = NEW.namespace_id
@@ -255,28 +255,28 @@ BEGIN
               (prefix = '00' AND NEW.status = 'stealth')
               OR (prefix <> '00' AND NEW.status <> 'stealth')
           )
-    ) THEN RAISE(ABORT, 'stealth status does not match namespace') END;
+    ) THEN RAISE(ABORT, 'stealth status does not match namespace') END);
 
-    SELECT CASE WHEN EXISTS (
+    SELECT (CASE WHEN EXISTS (
         SELECT 1
         FROM model_aliases
         WHERE normalized_name = NEW.normalized_name
           AND model_id <> NEW.id
-    ) THEN RAISE(ABORT, 'model canonical name collides with an alias') END;
+    ) THEN RAISE(ABORT, 'model canonical name collides with an alias') END);
 END;
 
 CREATE TRIGGER models_validate_update
 BEFORE UPDATE ON models
 BEGIN
-    SELECT CASE WHEN NOT EXISTS (
+    SELECT (CASE WHEN NOT EXISTS (
         SELECT 1
         FROM namespaces
         WHERE id = NEW.namespace_id
           AND prefix <> '100'
           AND NEW.registry_no = prefix || printf('%03d', NEW.sequence)
-    ) THEN RAISE(ABORT, 'registry number does not match namespace and sequence') END;
+    ) THEN RAISE(ABORT, 'registry number does not match namespace and sequence') END);
 
-    SELECT CASE WHEN NOT EXISTS (
+    SELECT (CASE WHEN NOT EXISTS (
         SELECT 1
         FROM namespaces
         WHERE id = NEW.namespace_id
@@ -284,16 +284,16 @@ BEGIN
               (prefix = '00' AND NEW.status = 'stealth')
               OR (prefix <> '00' AND NEW.status <> 'stealth')
           )
-    ) THEN RAISE(ABORT, 'stealth status does not match namespace') END;
+    ) THEN RAISE(ABORT, 'stealth status does not match namespace') END);
 
-    SELECT CASE WHEN EXISTS (
+    SELECT (CASE WHEN EXISTS (
         SELECT 1
         FROM model_aliases
         WHERE normalized_name = NEW.normalized_name
           AND model_id <> NEW.id
-    ) THEN RAISE(ABORT, 'model canonical name collides with an alias') END;
+    ) THEN RAISE(ABORT, 'model canonical name collides with an alias') END);
 
-    SELECT CASE WHEN EXISTS (
+    SELECT (CASE WHEN EXISTS (
         SELECT 1 FROM registry_redirects WHERE source_model_id = OLD.id
     ) AND NOT EXISTS (
         SELECT 1
@@ -301,9 +301,9 @@ BEGIN
         WHERE id = NEW.namespace_id
           AND prefix = '00'
           AND NEW.status = 'stealth'
-    ) THEN RAISE(ABORT, 'redirect source must remain a stealth model') END;
+    ) THEN RAISE(ABORT, 'redirect source must remain a stealth model') END);
 
-    SELECT CASE WHEN EXISTS (
+    SELECT (CASE WHEN EXISTS (
         SELECT 1 FROM registry_redirects WHERE target_model_id = OLD.id
     ) AND NOT EXISTS (
         SELECT 1
@@ -311,7 +311,7 @@ BEGIN
         WHERE id = NEW.namespace_id
           AND prefix <> '00'
           AND NEW.status <> 'stealth'
-    ) THEN RAISE(ABORT, 'redirect target must remain a confirmed model') END;
+    ) THEN RAISE(ABORT, 'redirect target must remain a confirmed model') END);
 END;
 
 CREATE TRIGGER namespaces_preserve_assigned_prefix
@@ -442,14 +442,14 @@ END;
 CREATE TRIGGER registry_redirects_validate_insert
 BEFORE INSERT ON registry_redirects
 BEGIN
-    SELECT CASE WHEN EXISTS (
+    SELECT (CASE WHEN EXISTS (
         SELECT 1
         FROM registry_redirects
         WHERE source_model_id = NEW.target_model_id
            OR target_model_id = NEW.source_model_id
-    ) THEN RAISE(ABORT, 'redirect chains and cycles are not allowed') END;
+    ) THEN RAISE(ABORT, 'redirect chains and cycles are not allowed') END);
 
-    SELECT CASE WHEN NOT EXISTS (
+    SELECT (CASE WHEN NOT EXISTS (
         SELECT 1
         FROM models AS source_model
         JOIN namespaces AS source_namespace
@@ -463,13 +463,13 @@ BEGIN
           AND source_model.status = 'stealth'
           AND target_namespace.prefix <> '00'
           AND target_model.status <> 'stealth'
-    ) THEN RAISE(ABORT, 'redirect endpoints have invalid roles') END;
+    ) THEN RAISE(ABORT, 'redirect endpoints have invalid roles') END);
 END;
 
 CREATE TRIGGER registry_redirects_validate_update
 BEFORE UPDATE ON registry_redirects
 BEGIN
-    SELECT CASE WHEN EXISTS (
+    SELECT (CASE WHEN EXISTS (
         SELECT 1
         FROM registry_redirects
         WHERE source_model_id <> OLD.source_model_id
@@ -477,9 +477,9 @@ BEGIN
               source_model_id = NEW.target_model_id
               OR target_model_id = NEW.source_model_id
           )
-    ) THEN RAISE(ABORT, 'redirect chains and cycles are not allowed') END;
+    ) THEN RAISE(ABORT, 'redirect chains and cycles are not allowed') END);
 
-    SELECT CASE WHEN NOT EXISTS (
+    SELECT (CASE WHEN NOT EXISTS (
         SELECT 1
         FROM models AS source_model
         JOIN namespaces AS source_namespace
@@ -493,5 +493,5 @@ BEGIN
           AND source_model.status = 'stealth'
           AND target_namespace.prefix <> '00'
           AND target_model.status <> 'stealth'
-    ) THEN RAISE(ABORT, 'redirect endpoints have invalid roles') END;
+    ) THEN RAISE(ABORT, 'redirect endpoints have invalid roles') END);
 END;

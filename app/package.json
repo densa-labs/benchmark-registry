@@ -10,7 +10,17 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
-    "db:migrate:local": "wrangler d1 migrations apply DB --local"
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrations:list:staging": "wrangler d1 migrations list DB --env staging --remote",
+    "db:migrate:staging": "wrangler d1 migrations apply DB --env staging --remote",
+    "build:staging": "tsc --noEmit && CLOUDFLARE_ENV=staging vite build",
+    "verify:staging": "node scripts/verify-staging.mjs",
+    "deploy:staging": "tsc --noEmit && CLOUDFLARE_ENV=staging vite build && node scripts/verify-staging.mjs && wrangler deploy --config dist/benchmark_registry/wrangler.json",
+    "db:migrations:list:production": "wrangler d1 migrations list DB --env production --remote",
+    "db:migrate:production": "wrangler d1 migrations apply DB --env production --remote",
+    "build:production": "tsc --noEmit && CLOUDFLARE_ENV=production vite build",
+    "verify:production": "node scripts/verify-production.mjs",
+    "deploy:production": "tsc --noEmit && CLOUDFLARE_ENV=production vite build && node scripts/verify-production.mjs && wrangler deploy --config dist/benchmark_registry/wrangler.json"
   },
   "engines": {
     "node": "^22.12.0 || ^24.0.0 || >=26.0.0"

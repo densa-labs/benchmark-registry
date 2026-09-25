@@ -16,5 +16,60 @@
       "preview_database_id": "benchmark-registry-local",
       "migrations_dir": "../migrations"
     }
-  ]
+  ],
+  "env": {
+    "staging": {
+      "workers_dev": false,
+      "preview_urls": false,
+      "vars": {
+        "STAGING_CRAWLER_PROTECTION": "enabled"
+      },
+      "assets": {
+        "binding": "ASSETS",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": true
+      },
+      "routes": [
+        {
+          "pattern": "staging.benchmarkregistry.org",
+          "custom_domain": true
+        }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "benchmark-registry-staging",
+          "migrations_dir": "../migrations"
+        }
+      ]
+    },
+    "production": {
+      "account_id": "1aed6fdb33b34b24c2914fcaaf48786b",
+      "workers_dev": false,
+      "preview_urls": false,
+      "assets": {
+        "binding": "ASSETS",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": true
+      },
+      "routes": [
+        {
+          "pattern": "benchmarkregistry.org",
+          "custom_domain": true
+        },
+        {
+          "pattern": "www.benchmarkregistry.org",
+          "custom_domain": true
+        }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "benchmark-registry-production",
+          "database_id": "a7b3e1d1-34d6-432b-bd31-8ec4636916ab",
+          "migrations_dir": "../migrations"
+        }
+      ]
+    }
+  }
 }

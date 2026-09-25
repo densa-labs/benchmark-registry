@@ -138,8 +138,12 @@ function createEnv(responder: QueryResponder = (tag) => defaultResponder(tag)) {
     },
   };
   const assetFetch = vi.fn().mockResolvedValue(new Response("asset"));
+  const env: Env = {
+    ASSETS: { fetch: assetFetch } as unknown as Fetcher,
+    DB: db as unknown as D1Database,
+  };
   return {
-    env: { ASSETS: { fetch: assetFetch } as unknown as Fetcher, DB: db as unknown as D1Database } satisfies Env,
+    env,
     calls,
     assetFetch,
   };
@@ -423,5 +427,59 @@ describe("redirects, missing records, and failure isolation", () => {
     const response = await worker.fetch(request, env);
     expect(await response.text()).toBe("asset");
     expect(assetFetch).toHaveBeenCalledWith(request);
+  });
+});
+
+describe("staging crawler protection", () => {
+  it("adds the robots tag to staging assets and API responses", async () => {
+    const { env, assetFetch } = createEnv();
+    env.STAGING_CRAWLER_PROTECTION = "enabled";
+
+    for (const path of ["/", "/assets/logo.png", "/api/models", "/api/missing"]) {
+      const response = await worker.fetch(
+        new Request(`https://staging.benchmarkregistry.org${path}`),
+        env,
+      );
+      expect(response.headers.get("X-Robots-Tag")).toBe("noindex, nofollow, noarchive");
+    }
+    expect(assetFetch).toHaveBeenCalledTimes(2);
+  });
+
+  it("serves staging robots.txt and leaves production responses unchanged", async () => {
+    const { env, assetFetch } = createEnv();
+    env.STAGING_CRAWLER_PROTECTION = "enabled";
+
+    const staging = await worker.fetch(
+      new Request("https://staging.benchmarkregistry.org/robots.txt"),
+      env,
+    );
+    expect(staging.headers.get("Content-Type")).toContain("text/plain");
+    expect(staging.headers.get("X-Robots-Tag")).toBe("noindex, nofollow, noarchive");
+    expect(await staging.text()).toBe("User-agent: *\nDisallow: /\n");
+    expect(assetFetch).not.toHaveBeenCalled();
+
+    const production = await worker.fetch(
+      new Request("https://benchmarkregistry.org/"),
+      env,
+    );
+    expect(production.headers.has("X-Robots-Tag")).toBe(false);
+    expect(await production.text()).toBe("asset");
+  });
+});
+
+describe("production www redirect", () => {
+  it("permanently redirects paths and queries to the apex without using assets or D1", async () => {
+    const { env, assetFetch, calls } = createEnv();
+    for (const path of ["/models", "/search?q=opus", "/api/models?limit=50"]) {
+      const response = await worker.fetch(
+        new Request(`https://www.benchmarkregistry.org${path}`),
+        env,
+      );
+      expect(response.status).toBe(308);
+      expect(response.headers.get("Location")).toBe(`https://benchmarkregistry.org${path}`);
+      expect(response.headers.has("X-Robots-Tag")).toBe(false);
+    }
+    expect(assetFetch).not.toHaveBeenCalled();
+    expect(calls).toEqual([]);
   });
 });
