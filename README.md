@@ -25,7 +25,7 @@ It tracks:
 Benchmark results are sourced from primary sources:
 
 - **Official benchmark or evaluator results**<br>
-- **Official model developer system cards, model developer blogs, or technical reports**
+- **Official model developer system cards, blogs, or technical reports**
 
 ## Registry numbers
 
