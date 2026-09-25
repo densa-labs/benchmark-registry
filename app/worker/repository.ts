@@ -68,6 +68,8 @@ interface CompanyListRow {
   company_slug: string;
   established_at: string | null;
   established_precision: CompanyDatePrecision | null;
+  entity_kind: "company" | "ai_unit";
+  established_basis: "source" | "user_attested";
   latest_registry_no: string | null;
   latest_model_name: string | null;
   latest_company_name: string | null;
@@ -618,7 +620,8 @@ export class RegistryRepository {
     const rows = await this.all<CompanyListRow>(
       `/* companies:list */ WITH ${this.latestModelsCte()}
        SELECT c.id, c.name AS company_name, c.slug AS company_slug,
-        c.established_at, c.established_precision,
+        c.established_at, c.established_precision, c.provider_kind AS entity_kind,
+        c.established_basis,
         lm.registry_no AS latest_registry_no,
         lm.canonical_name AS latest_model_name,
         c.name AS latest_company_name,
@@ -638,6 +641,8 @@ export class RegistryRepository {
         slug: row.company_slug,
         established_at: row.established_at,
         established_precision: row.established_precision,
+        entity_kind: row.entity_kind ?? "company",
+        established_basis: row.established_basis ?? "source",
         latest_model: latestModelFromCompany(row),
       })),
       page: pageMetadata(params.page, params.limit, total),
@@ -648,7 +653,8 @@ export class RegistryRepository {
     const row = await this.first<CompanyListRow>(
       `/* company:detail */ WITH ${this.latestModelsCte()}
        SELECT c.id, c.name AS company_name, c.slug AS company_slug,
-        c.established_at, c.established_precision,
+        c.established_at, c.established_precision, c.provider_kind AS entity_kind,
+        c.established_basis,
         lm.registry_no AS latest_registry_no,
         lm.canonical_name AS latest_model_name,
         c.name AS latest_company_name,
@@ -680,6 +686,8 @@ export class RegistryRepository {
           slug: row.company_slug,
           established_at: row.established_at,
           established_precision: row.established_precision,
+          entity_kind: row.entity_kind ?? "company",
+          established_basis: row.established_basis ?? "source",
         },
         latest_model: latestModelFromCompany(row),
         results: results.map(resultFromRow),

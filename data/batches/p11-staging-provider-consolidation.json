@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "operation": "provider_name_correction",
+      "record": {
+        "slug": "tongyi",
+        "expected_name": "Tongyi",
+        "corrected_name": "Alibaba (Tongyi)",
+        "reason": "Use the Registry owner requested standalone AI-unit name."
+      }
+    },
+    {
+      "operation": "provider_name_correction",
+      "record": {
+        "slug": "google-deepmind",
+        "expected_name": "Google DeepMind",
+        "corrected_name": "Google (DeepMind)",
+        "reason": "Use the Registry owner requested standalone AI-unit name."
+      }
+    },
+    {
+      "operation": "provider_name_correction",
+      "record": {
+        "slug": "meta-ai",
+        "expected_name": "Meta AI",
+        "corrected_name": "Meta AI (originally Facebook AI Research)",
+        "reason": "Use the Registry owner requested standalone AI-unit name."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "alibaba",
+        "replacement_slug": "tongyi",
+        "expected": {
+          "name": "Alibaba",
+          "established_at": "1999",
+          "established_precision": "year",
+          "established_source_url": "https://www.alibabagroup.com/en-US/about-alibaba",
+          "source_url": "https://www.alibabacloud.com/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "authorized_prefixes": [
+          "130"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "google",
+        "replacement_slug": "google-deepmind",
+        "expected": {
+          "name": "Google",
+          "established_at": "1998",
+          "established_precision": "year",
+          "established_source_url": "https://about.google/intl/ALL_en/our-story/",
+          "source_url": "https://about.google/intl/ALL_en/our-story/",
+          "source_checked_at": "2026-09-17T00:00:00Z"
+        },
+        "authorized_prefixes": [
+          "30",
+          "35"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "meta",
+        "replacement_slug": "meta-ai",
+        "expected": {
+          "name": "Meta",
+          "established_at": "2004-02-04",
+          "established_precision": "date",
+          "established_source_url": "https://about.fb.com/ltam/company.info/",
+          "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "authorized_prefixes": [
+          "80"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "microsoft",
+        "replacement_slug": "microsoft-ai",
+        "expected": {
+          "name": "Microsoft",
+          "established_at": "1975",
+          "established_precision": "year",
+          "established_source_url": "https://news.microsoft.com/facts-about-microsoft/",
+          "source_url": "https://www.microsoft.com/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "authorized_prefixes": [
+          "70"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    }
+  ]
+}

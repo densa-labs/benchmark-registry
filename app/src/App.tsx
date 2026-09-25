@@ -25,7 +25,7 @@ import {
 const navigation = [
   { href: "/models", label: "Models" },
   { href: "/benchmarks", label: "Benchmarks" },
-  { href: "/companies", label: "Companies" },
+  { href: "/companies", label: "Organizations" },
 ];
 
 type LoadState =

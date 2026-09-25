@@ -177,7 +177,7 @@ export function ModelsPage({
     },
     {
       key: "company",
-      label: "Company",
+      label: "Provider",
       sortHref: companySort.href,
       sortDirection: companySort.direction,
       render: (model) => (
@@ -310,7 +310,7 @@ export function ModelDetailPage({
               value: formatRegistryDate(model.released_at, model.release_precision),
             },
             {
-              label: "Company",
+              label: "Provider",
               value: <a href={`/companies/${model.company.slug}`}>{model.company.name}</a>,
             },
             {

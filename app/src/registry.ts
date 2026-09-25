@@ -65,6 +65,8 @@ export interface CompanyListResponse {
   data: Array<CompanySummary & {
     established_at: string | null;
     established_precision: "year" | "date" | "timestamp" | null;
+    entity_kind: "company" | "ai_unit";
+    established_basis: "source" | "user_attested";
     latest_model: ModelSummary | null;
   }>;
   page: Page;
@@ -75,6 +77,8 @@ export interface CompanyDetailResponse {
     company: CompanySummary & {
       established_at: string | null;
       established_precision: "year" | "date" | "timestamp" | null;
+      entity_kind: "company" | "ai_unit";
+      established_basis: "source" | "user_attested";
     };
     latest_model: ModelSummary | null;
     results: ResultRow[];

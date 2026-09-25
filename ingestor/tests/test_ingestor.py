@@ -89,6 +89,42 @@ def seed_company_without_establishment(ingestor: Ingestor) -> None:
     assert ingestor.run("company", record, commit=True)[0].status == "VALID"
 
 
+def attestation_record() -> dict:
+    return {
+        "slug": "openai",
+        "expected": {
+            "established_at": "2015-12-11",
+            "established_precision": "date",
+            "established_source_url": "https://openai.com/about/",
+            "source_checked_at": CHECKED_AT,
+        },
+        "corrected": {
+            "established_at": "2015-12-12",
+            "established_precision": "date",
+            "established_source_url": "https://openai.com/about/",
+            "source_checked_at": CHECKED_AT,
+            "established_basis": "user_attested",
+            "established_attestation_ref": "data/batches/example-attestations.json",
+            "established_attested_at": "2026-09-25T00:00:00Z",
+        },
+        "reason": "Registry owner supplied a revised date.",
+    }
+
+
+def ai_unit_record() -> dict:
+    record = company_record()
+    record.update(
+        name="OpenAI Lab",
+        slug="openai-lab",
+        entity_kind="ai_unit",
+        established_at="2016-01-01",
+        established_basis="user_attested",
+        established_attestation_ref="data/batches/example-attestations.json",
+        established_attested_at="2026-09-25T00:00:00Z",
+    )
+    return record
+
+
 def model_record(
     *,
     sequence: int = 1,
@@ -459,6 +495,140 @@ def test_company_correction_write_failure_rolls_back_batch(
     monkeypatch.setattr(database, "execute_batch", fail_after_correction)
     assert_failure(ingestor, "company_correction", company_correction_record())
     assert database.query("SELECT established_at FROM companies WHERE slug = 'openai'")[0]["established_at"] is None
+
+
+def test_user_attestation_requires_old_state_and_replays_safely(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    attestation = attestation_record()
+    before = database.query("SELECT * FROM companies WHERE slug = 'openai'")[0]
+    assert ingestor.run("company_attestation", attestation, commit=False)[0].status == "VALID"
+    assert database.query("SELECT * FROM companies WHERE slug = 'openai'")[0] == before
+    assert ingestor.run("company_attestation", attestation, commit=True)[0].status == "VALID"
+    after = database.query("SELECT * FROM companies WHERE slug = 'openai'")[0]
+    assert after["established_at"] == "2015-12-12"
+    assert after["established_basis"] == "user_attested"
+    assert after["established_attestation_ref"] == "data/batches/example-attestations.json"
+    assert ingestor.run("company_attestation", attestation, commit=False)[0].status == "SKIPPED"
+    assert database.query("SELECT * FROM companies WHERE slug = 'openai'")[0] == after
+    wrong = attestation_record()
+    wrong["corrected"]["established_at"] = "2015-12-13"
+    assert_failure(ingestor, "company_attestation", wrong, status="CONFLICT")
+
+
+def test_user_attestation_requires_audit_reference_and_date(ingestor: Ingestor) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    missing_ref = attestation_record()
+    missing_ref["corrected"]["established_attestation_ref"] = None
+    assert_failure(ingestor, "company_attestation", missing_ref)
+    malformed_date = attestation_record()
+    malformed_date["corrected"]["established_at"] = "2015"
+    assert_failure(ingestor, "company_attestation", malformed_date)
+    missing_company = attestation_record()
+    missing_company["slug"] = "missing"
+    assert_failure(ingestor, "company_attestation", missing_company)
+
+
+def test_ai_unit_provider_correction_preserves_registry_number(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    ingestor.run("model", model_record(), commit=True)
+    unit = ai_unit_record()
+    assert ingestor.run("company", unit, commit=True)[0].status == "VALID"
+    correction = {
+        "from_company_slug": "openai",
+        "to_company_slug": "openai-lab",
+        "registry_nos": ["10001"],
+        "reason": "Owner identifies the AI unit as provider.",
+    }
+    before = database.query("SELECT * FROM models WHERE registry_no = '10001'")[0]
+    assert ingestor.run("model_provider_correction", correction, commit=False)[0].status == "VALID"
+    assert database.query("SELECT * FROM models WHERE registry_no = '10001'")[0] == before
+    assert ingestor.run("model_provider_correction", correction, commit=True)[0].status == "VALID"
+    after = database.query("SELECT * FROM models WHERE registry_no = '10001'")[0]
+    assert after["registry_no"] == before["registry_no"]
+    assert after["namespace_id"] == before["namespace_id"]
+    assert after["company_id"] != before["company_id"]
+    assert ingestor.run("model_provider_correction", correction, commit=False)[0].status == "SKIPPED"
+    child = database.query("SELECT * FROM companies WHERE slug = 'openai-lab'")[0]
+    assert child["provider_kind"] == "ai_unit"
+    parent = database.query("SELECT * FROM companies WHERE slug = 'openai'")[0]
+    assert parent["established_at"] == "2015-12-11"
+
+
+def test_provider_correction_rejects_incomplete_model_set(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    ingestor.run("model", model_record(), commit=True)
+    ingestor.run("model", model_record(sequence=2, registry_no="10002", name="Second Model"), commit=True)
+    ingestor.run("company", ai_unit_record(), commit=True)
+    correction = {
+        "from_company_slug": "openai",
+        "to_company_slug": "openai-lab",
+        "registry_nos": ["10001"],
+        "reason": "Owner identifies the AI unit as provider.",
+    }
+    assert_failure(ingestor, "model_provider_correction", correction, status="CONFLICT")
+    assert database.query("SELECT DISTINCT company_id FROM models") == [{"company_id": 1}]
+
+
+def test_provider_name_correction_is_compare_and_set(ingestor: Ingestor, database: LocalDatabase) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    record = {
+        "slug": "openai", "expected_name": "OpenAI", "corrected_name": "OpenAI Lab",
+        "reason": "Use the owner-supplied provider identity.",
+    }
+    assert ingestor.run("provider_name_correction", record, commit=False)[0].status == "VALID"
+    assert database.query("SELECT name FROM companies")[0]["name"] == "OpenAI"
+    assert ingestor.run("provider_name_correction", record, commit=True)[0].status == "VALID"
+    assert database.query("SELECT name FROM companies")[0]["name"] == "OpenAI Lab"
+    assert ingestor.run("provider_name_correction", record, commit=False)[0].status == "SKIPPED"
+    record["corrected_name"] = "Different Lab"
+    assert_failure(ingestor, "provider_name_correction", record, status="CONFLICT")
+
+
+def test_provider_retirement_is_guarded_and_replay_safe(ingestor: Ingestor, database: LocalDatabase) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    ingestor.run("model", model_record(), commit=True)
+    ingestor.run("company", ai_unit_record(), commit=True)
+    record = {
+        "slug": "openai", "replacement_slug": "openai-lab",
+        "expected": {key: company_record()[key] for key in (
+            "name", "established_at", "established_precision", "established_source_url",
+            "source_url", "source_checked_at",
+        )},
+        "authorized_prefixes": ["10"],
+        "reason": "The standalone AI unit replaces the former provider row.",
+    }
+    assert_failure(ingestor, "provider_retirement", record, status="CONFLICT")
+    move = {"from_company_slug": "openai", "to_company_slug": "openai-lab",
+            "registry_nos": ["10001"], "reason": "Owner identifies the unit as provider."}
+    assert ingestor.run("model_provider_correction", move, commit=True)[0].status == "VALID"
+    assert ingestor.run("provider_retirement", record, commit=False)[0].status == "VALID"
+    assert len(database.query("SELECT * FROM companies")) == 2
+    assert ingestor.run("provider_retirement", record, commit=True)[0].status == "VALID"
+    assert [row["slug"] for row in database.query("SELECT slug FROM companies")] == ["openai-lab"]
+    assert database.query("PRAGMA foreign_key_check") == []
+    assert ingestor.run("provider_retirement", record, commit=False)[0].status == "SKIPPED"
+    assert ingestor.run("model_provider_correction", move, commit=False)[0].status == "SKIPPED"
+
+
+def test_provider_retirement_rejects_fact_drift(ingestor: Ingestor) -> None:
+    ingestor.run("company", company_record(), commit=True)
+    ingestor.run("company", ai_unit_record(), commit=True)
+    record = {
+        "slug": "openai", "replacement_slug": "openai-lab",
+        "expected": {key: company_record()[key] for key in (
+            "name", "established_at", "established_precision", "established_source_url",
+            "source_url", "source_checked_at",
+        )},
+        "authorized_prefixes": ["10"], "reason": "Remove superseded provider.",
+    }
+    record["expected"]["established_at"] = "2015-12-12"
+    assert_failure(ingestor, "provider_retirement", record, status="CONFLICT")
 
 
 def test_duplicate_and_conflicting_result(

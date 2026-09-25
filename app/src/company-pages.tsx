@@ -26,6 +26,11 @@ function countLabel(count: number, singular: string, plural = `${singular}s`): s
   return `${count.toLocaleString("en-US")} ${count === 1 ? singular : plural}`;
 }
 
+function EstablishedValue({ company }: { company: Pick<CompanyListResponse["data"][number], "established_at" | "established_precision"> }) {
+  if (!company.established_at || !company.established_precision) return <>Not available</>;
+  return <>{formatRegistryDate(company.established_at, company.established_precision)}</>;
+}
+
 function HiddenQueryFields({
   search,
   exclude,
@@ -175,7 +180,7 @@ export function CompaniesPage({
   const columns: TableColumn<CompanyListResponse["data"][number]>[] = [
     {
       key: "company",
-      label: "Company",
+      label: "Organization",
       className: "data-table__primary",
       sortHref: nameSort.href,
       sortDirection: nameSort.direction,
@@ -186,9 +191,7 @@ export function CompaniesPage({
       label: "Established",
       sortHref: establishedSort.href,
       sortDirection: establishedSort.direction,
-      render: (company) => company.established_at && company.established_precision
-        ? formatRegistryDate(company.established_at, company.established_precision)
-        : "Not available",
+      render: (company) => <EstablishedValue company={company} />,
     },
     {
       key: "latest-model",
@@ -202,21 +205,21 @@ export function CompaniesPage({
   return (
     <PageContainer className="registry-page">
       <PageHeader
-        title="Companies"
-        description={countLabel(response.page.total_items, "company", "companies")}
+        title="Organizations"
+        description={countLabel(response.page.total_items, "organization")}
       />
       <LocalSearch
         action={pathname}
         currentSearch={currentSearch}
-        label="Search companies"
-        placeholder="Search company names"
+        label="Search organizations"
+        placeholder="Search organization names"
       />
 
       <section className="results-section" aria-labelledby="company-index-heading">
         <div className="results-section__header">
           <div>
-            <h2 id="company-index-heading">Registry companies</h2>
-            <p>{countLabel(response.page.total_items, "company", "companies")}</p>
+            <h2 id="company-index-heading">Registry organizations</h2>
+            <p>{countLabel(response.page.total_items, "organization")}</p>
           </div>
           <PageSizeForm
             action={pathname}
@@ -226,14 +229,14 @@ export function CompaniesPage({
         </div>
         {response.data.length === 0 ? (
           <EmptyState
-            title={query ? "No matching companies" : "No companies found"}
+            title={query ? "No matching organizations" : "No organizations found"}
             description={query
-              ? "Try a different company name."
-              : "The registry does not contain any companies."}
+              ? "Try a different organization name."
+              : "The registry does not contain any organizations."}
           />
         ) : (
           <DataTable
-            caption="Registry companies"
+            caption="Registry organizations"
             columns={columns}
             rows={response.data}
             getRowKey={(company) => company.slug}
@@ -316,9 +319,7 @@ export function CompanyDetailPage({
     },
   ];
 
-  const established = company.established_at && company.established_precision
-    ? formatRegistryDate(company.established_at, company.established_precision)
-    : "Not available";
+  const established = <EstablishedValue company={company} />;
   const latestModelValue = latestModel ? (
     <span>
       <a href={`/models/${latestModel.registry_no}`}>{latestModel.name}</a>
@@ -329,7 +330,7 @@ export function CompanyDetailPage({
   return (
     <PageContainer className="registry-page">
       <PageHeader title={company.name} />
-      <section className="entity-metadata" aria-label="Company metadata">
+      <section className="entity-metadata" aria-label="Organization metadata">
         <MetadataRows
           items={[
             { label: "Established", value: established },

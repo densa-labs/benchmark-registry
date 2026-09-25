@@ -335,7 +335,7 @@ export function BenchmarkVersionPage({
   const columns: TableColumn<ResultRow>[] = [
     {
       key: "company",
-      label: "Company",
+      label: "Provider",
       sortHref: companySort.href,
       sortDirection: companySort.direction,
       render: (result) => (
@@ -429,11 +429,11 @@ export function BenchmarkVersionPage({
             ]}
           />
           <Tabs
-            label="Company filter"
+            label="Provider filter"
             items={[
               {
                 href: queryHref(pathname, currentSearch, { company: null, page: null }),
-                label: "All companies",
+                label: "All providers",
                 active: activeCompany === null,
               },
               ...response.available_companies.map((company) => ({

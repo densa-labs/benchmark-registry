@@ -78,8 +78,18 @@ RECORD_FIELDS = {
         "source_url",
         "source_checked_at",
         "namespace_authorizations",
+        "entity_kind",
+        "established_basis",
+        "established_attestation_ref",
+        "established_attested_at",
     },
     "company_correction": {"slug", "expected", "corrected", "reason"},
+    "company_attestation": {"slug", "expected", "corrected", "reason"},
+    "model_provider_correction": {
+        "from_company_slug", "to_company_slug", "registry_nos", "reason"
+    },
+    "provider_name_correction": {"slug", "expected_name", "corrected_name", "reason"},
+    "provider_retirement": {"slug", "replacement_slug", "expected", "authorized_prefixes", "reason"},
     "model": {
         "canonical_name",
         "company_slug",
@@ -195,6 +205,7 @@ class Plan:
     statements: list[Statement] = field(default_factory=list)
     outcomes: list[Outcome] = field(default_factory=list)
     corrected_company_slugs: set[str] = field(default_factory=set)
+    corrected_model_registry_nos: set[str] = field(default_factory=set)
 
     def valid(self, operation: str, identifier: str, message: str) -> None:
         self.outcomes.append(Outcome("VALID", operation, identifier, message))
@@ -292,7 +303,7 @@ class Ingestor:
                 ]
             except DatabaseFailure as exc:
                 if any(
-                    item_operation == "company_correction"
+                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement"}
                     for item_operation, _ in records
                 ):
                     try:
@@ -351,6 +362,10 @@ class Ingestor:
         fields = {
             "company": "slug",
             "company_correction": "slug",
+            "company_attestation": "slug",
+            "model_provider_correction": "to_company_slug",
+            "provider_name_correction": "slug",
+            "provider_retirement": "slug",
             "model": "registry_no",
             "benchmark": "slug",
             "result": "run_ref",
@@ -470,6 +485,286 @@ class Ingestor:
         company.update(corrected)
         plan.valid("company_correction", slug, "establishment correction validated")
 
+    @staticmethod
+    def _attestation_metadata(record: Record) -> Record:
+        basis = record.get("established_basis", "source")
+        if basis not in {"source", "user_attested"}:
+            raise ValueErrorDetail("established_basis must be source or user_attested")
+        if basis == "source":
+            if record.get("established_attestation_ref") is not None or record.get(
+                "established_attested_at"
+            ) is not None:
+                raise ValueErrorDetail("source-backed establishment cannot have attestation fields")
+            return {
+                "established_basis": "source",
+                "established_attestation_ref": None,
+                "established_attested_at": None,
+            }
+        reference = require_string(
+            record.get("established_attestation_ref"), "established_attestation_ref"
+        )
+        if not reference.startswith("data/batches/") or not reference.endswith(".json"):
+            raise ValueErrorDetail("established_attestation_ref must name a tracked batch")
+        return {
+            "established_basis": "user_attested",
+            "established_attestation_ref": reference,
+            "established_attested_at": normalize_checked_at(
+                record.get("established_attested_at"), "established_attested_at"
+            ),
+        }
+
+    def _plan_company_attestation(self, plan: Plan, record: Record) -> None:
+        slug = require_slug(record.get("slug"))
+        if slug in plan.corrected_company_slugs:
+            raise IngestionFailure("ERROR", slug, "batch contains multiple corrections for one company")
+        plan.corrected_company_slugs.add(slug)
+        reason = require_string(record.get("reason"), "reason")
+        if not reason.strip():
+            raise ValueErrorDetail("reason must explain the attestation")
+        expected = self._establishment_correction_state(
+            record.get("expected"), "expected", corrected=False
+        )
+        corrected_input = _mapping(record.get("corrected"), "corrected")
+        _reject_unknown_fields(
+            corrected_input,
+            ESTABLISHMENT_INPUT_FIELDS | {
+                "established_basis", "established_attestation_ref", "established_attested_at"
+            },
+            "corrected",
+        )
+        corrected = self._establishment_correction_state(
+            {field: corrected_input.get(field) for field in ESTABLISHMENT_INPUT_FIELDS},
+            "corrected",
+            corrected=True,
+        )
+        corrected.update(self._attestation_metadata(corrected_input))
+        if corrected["established_basis"] != "user_attested":
+            raise ValueErrorDetail("company_attestation requires user_attested basis")
+        company = plan.catalog.one("companies", slug=slug)
+        if company is None:
+            raise IngestionFailure("ERROR", slug, "company does not exist")
+        fields = (*ESTABLISHMENT_CORRECTION_FIELDS, "established_basis",
+                  "established_attestation_ref", "established_attested_at")
+        if _same(company, corrected, fields):
+            plan.skipped("company_attestation", slug, "attestation already applied")
+            return
+        if not _same(company, expected, ESTABLISHMENT_CORRECTION_FIELDS) or any(
+            company[key] is not None
+            for key in ("established_attestation_ref", "established_attested_at")
+        ) or company["established_basis"] != "source":
+            raise IngestionFailure("CONFLICT", slug, "company establishment no longer matches expected state")
+        plan.statements.append(Statement(
+            """UPDATE companies SET established_at = ?, established_precision = ?,
+               established_source_url = ?, established_source_normalized_url = ?,
+               source_checked_at = ?, established_basis = ?,
+               established_attestation_ref = ?, established_attested_at = ?,
+               source_url = CASE WHEN established_at IS ? AND established_precision IS ?
+                 AND established_source_url IS ? AND established_source_normalized_url IS ?
+                 AND source_checked_at = ? AND established_basis = 'source'
+                 AND established_attestation_ref IS NULL AND established_attested_at IS NULL
+                 THEN source_url ELSE NULL END
+               WHERE id = ? AND slug = ?""",
+            (*(corrected[key] for key in fields),
+             *(expected[key] for key in ESTABLISHMENT_CORRECTION_FIELDS), company["id"], slug),
+        ))
+        plan.statements.append(Statement(
+            """INSERT INTO companies (name, normalized_name, slug, source_url,
+               normalized_source_url, source_checked_at)
+               SELECT NULL, NULL, NULL, NULL, NULL, NULL
+               WHERE NOT EXISTS (SELECT 1 FROM companies WHERE id = ? AND slug = ?
+                 AND established_at IS ? AND established_precision IS ?
+                 AND established_source_url IS ? AND established_source_normalized_url IS ?
+                 AND source_checked_at = ? AND established_basis = ?
+                 AND established_attestation_ref = ? AND established_attested_at = ?)""",
+            (company["id"], slug, *(corrected[key] for key in fields)),
+        ))
+        company.update(corrected)
+        plan.valid("company_attestation", slug, "user attestation validated")
+
+    def _plan_model_provider_correction(self, plan: Plan, record: Record) -> None:
+        old_slug = require_slug(record.get("from_company_slug"), "from_company_slug")
+        new_slug = require_slug(record.get("to_company_slug"), "to_company_slug")
+        if old_slug == new_slug:
+            raise ValueErrorDetail("provider correction requires distinct companies")
+        reason = require_string(record.get("reason"), "reason")
+        if not reason.strip():
+            raise ValueErrorDetail("reason must explain the provider correction")
+        numbers = _list(record.get("registry_nos"), "registry_nos", required=True)
+        if any(not isinstance(value, str) or not value for value in numbers):
+            raise ValueErrorDetail("registry_nos must contain non-empty strings")
+        if len(set(numbers)) != len(numbers):
+            raise ValueErrorDetail("registry_nos contains duplicates")
+        if plan.corrected_model_registry_nos.intersection(numbers):
+            raise ValueErrorDetail("a model is corrected more than once in the batch")
+        plan.corrected_model_registry_nos.update(numbers)
+        new = plan.catalog.one("companies", slug=new_slug)
+        if new is None or new["provider_kind"] != "ai_unit":
+            raise IngestionFailure("ERROR", new_slug, "destination AI unit does not exist")
+        old = plan.catalog.one("companies", slug=old_slug)
+        models = [plan.catalog.one("models", registry_no=number) for number in numbers]
+        if any(model is None for model in models):
+            raise IngestionFailure("ERROR", new_slug, "model Registry No. does not exist")
+        if all(model["company_id"] == new["id"] for model in models):
+            plan.skipped("model_provider_correction", new_slug, "models already reassigned")
+            return
+        if old is None:
+            raise IngestionFailure("ERROR", old_slug, "original provider does not exist")
+        if any(model["company_id"] != old["id"] for model in models):
+            raise IngestionFailure("CONFLICT", new_slug, "model provider no longer matches expected parent")
+        current = {model["registry_no"] for model in plan.catalog.many("models", company_id=old["id"])}
+        if current != set(numbers):
+            raise IngestionFailure("CONFLICT", new_slug, "parent model set differs from correction")
+        for model in models:
+            if plan.catalog.one("namespace_companies", namespace_id=model["namespace_id"], company_id=new["id"]) is None:
+                raise IngestionFailure("ERROR", new_slug, "AI unit lacks namespace authorization")
+            plan.statements.append(Statement(
+                """UPDATE models SET company_id = CASE WHEN company_id = ? THEN ? ELSE NULL END
+                   WHERE id = ? AND registry_no = ?""",
+                (old["id"], new["id"], model["id"], model["registry_no"]),
+            ))
+            plan.statements.append(Statement(
+                """INSERT INTO models (canonical_name, normalized_name, company_id,
+                   namespace_id, sequence, registry_no, release_at, release_precision,
+                   release_source_url, release_source_normalized_url, source_checked_at,
+                   published_at, status)
+                   SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+                          NULL, NULL, NULL
+                   WHERE NOT EXISTS (SELECT 1 FROM models WHERE id = ? AND registry_no = ?
+                     AND company_id = ?)""",
+                (model["id"], model["registry_no"], new["id"]),
+            ))
+            model["company_id"] = new["id"]
+        plan.valid("model_provider_correction", new_slug, "model providers validated")
+
+    def _plan_provider_name_correction(self, plan: Plan, record: Record) -> None:
+        slug = require_slug(record.get("slug"))
+        old_name, old_normalized = normalize_name(record.get("expected_name"), "expected_name")
+        new_name, new_normalized = normalize_name(record.get("corrected_name"), "corrected_name")
+        reason = require_string(record.get("reason"), "reason")
+        if not reason.strip() or old_name == new_name:
+            raise ValueErrorDetail("provider name correction requires a change and reason")
+        company = plan.catalog.one("companies", slug=slug)
+        if company is None:
+            raise IngestionFailure("ERROR", slug, "provider does not exist")
+        if company["name"] == new_name and company["normalized_name"] == new_normalized:
+            plan.skipped("provider_name_correction", slug, "name already corrected")
+            return
+        if company["name"] != old_name or company["normalized_name"] != old_normalized:
+            raise IngestionFailure("CONFLICT", slug, "provider name differs from expected")
+        duplicate = plan.catalog.one("companies", normalized_name=new_normalized)
+        if duplicate is not None and duplicate["id"] != company["id"]:
+            raise IngestionFailure("CONFLICT", slug, "corrected name belongs to another provider")
+        plan.statements.append(Statement(
+            """UPDATE companies SET name = CASE WHEN name = ? AND normalized_name = ?
+               THEN ? ELSE NULL END, normalized_name = ? WHERE id = ? AND slug = ?""",
+            (old_name, old_normalized, new_name, new_normalized, company["id"], slug),
+        ))
+        plan.statements.append(Statement(
+            """INSERT INTO companies (name, normalized_name, slug, source_url,
+               normalized_source_url, source_checked_at)
+               SELECT NULL, NULL, NULL, NULL, NULL, NULL
+               WHERE NOT EXISTS (SELECT 1 FROM companies WHERE id = ? AND slug = ?
+                 AND name = ? AND normalized_name = ?)""",
+            (company["id"], slug, new_name, new_normalized),
+        ))
+        company.update(name=new_name, normalized_name=new_normalized)
+        plan.valid("provider_name_correction", slug, "provider name correction validated")
+
+    def _plan_provider_retirement(self, plan: Plan, record: Record) -> None:
+        slug = require_slug(record.get("slug"))
+        replacement_slug = require_slug(record.get("replacement_slug"), "replacement_slug")
+        reason = require_string(record.get("reason"), "reason")
+        if not reason.strip() or slug == replacement_slug:
+            raise ValueErrorDetail("provider retirement requires distinct providers and reason")
+        expected = _mapping(record.get("expected"), "expected")
+        fields = ("name", "established_at", "established_precision", "established_source_url", "source_url", "source_checked_at")
+        _reject_unknown_fields(expected, set(fields), "expected")
+        if set(expected) != set(fields):
+            raise ValueErrorDetail("expected must include every former provider fact")
+        name, normalized_name = normalize_name(expected["name"], "expected.name")
+        expected_state = self._establishment_correction_state(
+            {field: expected[field] for field in ESTABLISHMENT_INPUT_FIELDS},
+            "expected", corrected=False,
+        )
+        source_url, normalized_source_url = normalize_url(expected["source_url"], "expected.source_url")
+        prefixes = _list(record.get("authorized_prefixes"), "authorized_prefixes", required=True)
+        if any(not isinstance(prefix, str) or not prefix for prefix in prefixes) or len(set(prefixes)) != len(prefixes):
+            raise ValueErrorDetail("authorized_prefixes must contain distinct strings")
+        replacement = plan.catalog.one("companies", slug=replacement_slug)
+        if replacement is None or replacement["provider_kind"] not in {"ai_unit", "company"}:
+            raise IngestionFailure("ERROR", replacement_slug, "replacement AI unit does not exist")
+        company = plan.catalog.one("companies", slug=slug)
+        if company is None:
+            if replacement["provider_kind"] != "ai_unit" or replacement["parent_company_id"] is not None:
+                raise IngestionFailure("CONFLICT", replacement_slug, "replacement AI unit is not standalone")
+            plan.skipped("provider_retirement", slug, "former provider already retired")
+            return
+        if replacement["provider_kind"] == "company":
+            if replacement["entity_kind"] != "ai_unit" or replacement["parent_company_id"] != company["id"]:
+                raise IngestionFailure("CONFLICT", replacement_slug, "replacement is not the staged AI unit")
+            plan.statements.append(Statement(
+                """UPDATE companies SET entity_kind = 'company', parent_company_id = NULL,
+                   provider_kind = 'ai_unit' WHERE id = ? AND slug = ?
+                   AND entity_kind = 'ai_unit' AND parent_company_id = ?
+                   AND provider_kind = 'company'""",
+                (replacement["id"], replacement_slug, company["id"]),
+            ))
+            plan.statements.append(Statement(
+                """INSERT INTO companies (name, normalized_name, slug, source_url,
+                   normalized_source_url, source_checked_at)
+                   SELECT NULL, NULL, NULL, NULL, NULL, NULL
+                   WHERE NOT EXISTS (SELECT 1 FROM companies WHERE id = ? AND slug = ?
+                     AND entity_kind = 'company' AND parent_company_id IS NULL
+                     AND provider_kind = 'ai_unit')""",
+                (replacement["id"], replacement_slug),
+            ))
+            replacement.update(entity_kind="company", parent_company_id=None, provider_kind="ai_unit")
+        elif replacement["provider_kind"] != "ai_unit" or replacement["parent_company_id"] is not None:
+            raise IngestionFailure("CONFLICT", replacement_slug, "replacement AI unit state differs")
+        if company["entity_kind"] != "company" or company["name"] != name or company["normalized_name"] != normalized_name or company["source_url"] != source_url or company["normalized_source_url"] != normalized_source_url or not _same(company, expected_state, ESTABLISHMENT_CORRECTION_FIELDS):
+            raise IngestionFailure("CONFLICT", slug, "former provider facts differ from expected")
+        if plan.catalog.many("models", company_id=company["id"]):
+            raise IngestionFailure("CONFLICT", slug, "former provider still owns models")
+        authorizations = plan.catalog.many("namespace_companies", company_id=company["id"])
+        actual_prefixes = {plan.catalog.one("namespaces", id=authorization["namespace_id"])["prefix"] for authorization in authorizations}
+        if actual_prefixes != set(prefixes):
+            raise IngestionFailure("CONFLICT", slug, "former provider authorizations differ")
+        authorization_ids = sorted(authorization["namespace_id"] for authorization in authorizations)
+        placeholders = ", ".join("?" for _ in authorization_ids)
+        plan.statements.append(Statement(
+            """INSERT INTO companies (name, normalized_name, slug, source_url,
+               normalized_source_url, source_checked_at)
+               SELECT NULL, NULL, NULL, NULL, NULL, NULL
+               WHERE (SELECT COUNT(*) FROM namespace_companies WHERE company_id = ?) != CAST(? AS INTEGER)
+                  OR (SELECT COUNT(*) FROM namespace_companies
+                      WHERE company_id = ? AND namespace_id IN (""" + placeholders + """)) != CAST(? AS INTEGER)
+                  OR EXISTS (SELECT 1 FROM models WHERE company_id = ?)""",
+            (company["id"], len(prefixes), company["id"], *authorization_ids,
+             len(prefixes), company["id"]),
+        ))
+        plan.statements.append(Statement("DELETE FROM namespace_companies WHERE company_id = ?", (company["id"],)))
+        plan.statements.append(Statement(
+            """DELETE FROM companies WHERE id = ? AND slug = ? AND name = ?
+               AND normalized_name = ? AND established_at IS ?
+               AND established_precision IS ? AND established_source_url IS ?
+               AND established_source_normalized_url IS ? AND source_checked_at = ?
+               AND source_url = ? AND normalized_source_url = ?
+               AND entity_kind = 'company'""",
+            (company["id"], slug, name, normalized_name,
+             *(expected_state[field] for field in ESTABLISHMENT_CORRECTION_FIELDS),
+             source_url, normalized_source_url),
+        ))
+        plan.statements.append(Statement(
+            """INSERT INTO companies (name, normalized_name, slug, source_url,
+               normalized_source_url, source_checked_at)
+               SELECT NULL, NULL, NULL, NULL, NULL, NULL
+               WHERE EXISTS (SELECT 1 FROM companies WHERE id = ?)""",
+            (company["id"],),
+        ))
+        plan.catalog.rows["namespace_companies"] = [row for row in plan.catalog.rows["namespace_companies"] if row["company_id"] != company["id"]]
+        plan.catalog.rows["companies"].remove(company)
+        plan.valid("provider_retirement", slug, "former provider retired")
+
     def _plan_company(self, plan: Plan, record: Record) -> None:
         name, normalized_name = normalize_name(record.get("name"), "name")
         slug = require_slug(record.get("slug"))
@@ -505,6 +800,12 @@ class Ingestor:
             established_source_url, established_source_normalized_url = normalize_url(
                 establishment_values[2], "established_source_url"
             )
+        kind = record.get("entity_kind", "company")
+        if kind not in {"company", "ai_unit"}:
+            raise ValueErrorDetail("entity_kind must be company or ai_unit")
+        attestation = self._attestation_metadata(record)
+        if attestation["established_basis"] == "user_attested" and established_at is None:
+            raise ValueErrorDetail("user attestation requires an establishment date")
         expected = {
             "name": name,
             "normalized_name": normalized_name,
@@ -516,6 +817,10 @@ class Ingestor:
             "source_url": source_url,
             "normalized_source_url": normalized_source_url,
             "source_checked_at": source_checked_at,
+            "entity_kind": "company",
+            "parent_company_id": None,
+            "provider_kind": kind,
+            **attestation,
         }
         existing = plan.catalog.one("companies", slug=slug)
         normalized_existing = plan.catalog.one(
@@ -541,8 +846,10 @@ class Ingestor:
                         id, name, normalized_name, slug, established_at,
                         established_precision, established_source_url,
                         established_source_normalized_url, source_url,
-                        normalized_source_url, source_checked_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                        normalized_source_url, source_checked_at, entity_kind,
+                        parent_company_id, provider_kind, established_basis,
+                        established_attestation_ref, established_attested_at
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                     tuple(company[field] for field in ("id", *expected)),
                 )
             )

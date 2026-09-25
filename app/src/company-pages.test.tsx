@@ -20,6 +20,8 @@ const companyListResponse: CompanyListResponse = {
     slug: "openai",
     established_at: "2015-12-11",
     established_precision: "date",
+    entity_kind: "company",
+    established_basis: "source",
     latest_model: model,
   }],
   page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
@@ -32,6 +34,8 @@ const companyDetailResponse: CompanyDetailResponse = {
       slug: "openai",
       established_at: "2015-12-11",
       established_precision: "date",
+      entity_kind: "company",
+      established_basis: "source",
     },
     latest_model: model,
     results: [{
@@ -63,10 +67,10 @@ describe("P7.3 company pages", () => {
       <CompaniesPage response={companyListResponse} currentSearch="?limit=50" />,
     );
 
-    expect(markup).toContain("Registry companies");
-    expect(markup).toContain("1 company");
+    expect(markup).toContain("Registry organizations");
+    expect(markup).toContain("1 organization");
     expect(markup).toContain('action="/companies"');
-    expect(markup).toContain("Search company names");
+    expect(markup).toContain("Search organization names");
     expect(markup).toContain('href="/companies/openai"');
     expect(markup).toContain("December 11, 2015");
     expect(markup).toContain('href="/models/10002"');
@@ -84,7 +88,7 @@ describe("P7.3 company pages", () => {
       />,
     );
 
-    expect(markup).toContain('aria-label="Company metadata"');
+    expect(markup).toContain('aria-label="Organization metadata"');
     expect(markup).toContain("Established");
     expect(markup).toContain("December 11, 2015");
     expect(markup).toContain("Latest model");
@@ -136,5 +140,23 @@ describe("P7.3 company pages", () => {
       "/companies/openai?q=gpt&amp;view=latest&amp;limit=50",
     );
     expect(markup).not.toContain("view=latest&amp;page=2");
+  });
+
+  it("renders standalone AI-unit establishment dates without a qualifier", () => {
+    const response: CompanyDetailResponse = {
+      data: {
+        ...companyDetailResponse.data,
+        company: {
+          ...companyDetailResponse.data.company,
+          name: "Tongyi",
+          slug: "tongyi",
+          established_basis: "user_attested",
+        },
+      },
+    };
+    const unitMarkup = renderToStaticMarkup(<CompanyDetailPage response={response} currentSearch="" />);
+    expect(unitMarkup).toContain("December 11, 2015");
+    expect(unitMarkup).not.toContain("user-provided");
+    expect(unitMarkup).not.toContain("Parent company");
   });
 });

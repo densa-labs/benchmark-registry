@@ -177,8 +177,8 @@ describe("P7.2 benchmark pages", () => {
     expect(markup).toContain("Metric");
     expect(markup).toContain('aria-label="Result view"');
     expect(markup).toContain('aria-current="page">History</a>');
-    expect(markup).toContain('aria-label="Company filter"');
-    expect(markup).toContain("All companies");
+    expect(markup).toContain('aria-label="Provider filter"');
+    expect(markup).toContain("All providers");
     expect(markup).toContain("Anthropic");
     expect(markup).toContain("Google");
     expect(markup).toContain("OpenAI");

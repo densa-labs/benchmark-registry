@@ -1,0 +1,491 @@
+{
+  "records": [
+    {
+      "operation": "company",
+      "record": {
+        "name": "Alibaba (Tongyi)",
+        "slug": "tongyi",
+        "entity_kind": "ai_unit",
+        "established_at": "2022-09-02",
+        "established_precision": "date",
+        "established_source_url": "https://www.alibabacloud.com/",
+        "established_basis": "user_attested",
+        "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+        "established_attested_at": "2026-09-25T08:41:23Z",
+        "source_url": "https://www.alibabacloud.com/",
+        "source_checked_at": "2026-09-25T08:10:26Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "130",
+            "source_url": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+            "source_checked_at": "2026-09-24T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "anthropic",
+        "expected": {
+          "established_at": "2021",
+          "established_precision": "year",
+          "established_source_url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+          "source_checked_at": "2026-09-17T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2021-01-26",
+          "established_precision": "date",
+          "established_source_url": "https://www.anthropic.com/company",
+          "source_checked_at": "2026-09-17T00:00:00Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "cursor",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2022-08-15",
+          "established_precision": "date",
+          "established_source_url": "https://cursor.com/",
+          "source_checked_at": "2026-09-24T00:00:00Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "deepseek",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2023-07-17",
+          "established_precision": "date",
+          "established_source_url": "https://deepseek.com/",
+          "source_checked_at": "2026-09-24T00:00:00Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company",
+      "record": {
+        "name": "Google (DeepMind)",
+        "slug": "google-deepmind",
+        "entity_kind": "ai_unit",
+        "established_at": "2010-09-23",
+        "established_precision": "date",
+        "established_source_url": "https://about.google/intl/ALL_en/our-story/",
+        "established_basis": "user_attested",
+        "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+        "established_attested_at": "2026-09-25T08:41:23Z",
+        "source_url": "https://about.google/intl/ALL_en/our-story/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "30",
+            "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          },
+          {
+            "namespace_prefix": "35",
+            "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+            "source_checked_at": "2026-09-24T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "company",
+      "record": {
+        "name": "Meta AI (originally Facebook AI Research)",
+        "slug": "meta-ai",
+        "entity_kind": "ai_unit",
+        "established_at": "2013-12-09",
+        "established_precision": "date",
+        "established_source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "established_basis": "user_attested",
+        "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+        "established_attested_at": "2026-09-25T08:41:23Z",
+        "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "source_checked_at": "2026-09-25T08:10:26Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "80",
+            "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+            "source_checked_at": "2026-09-24T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "company",
+      "record": {
+        "name": "Microsoft AI",
+        "slug": "microsoft-ai",
+        "entity_kind": "ai_unit",
+        "established_at": "2024-03-19",
+        "established_precision": "date",
+        "established_source_url": "https://www.microsoft.com/",
+        "established_basis": "user_attested",
+        "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+        "established_attested_at": "2026-09-25T08:41:23Z",
+        "source_url": "https://www.microsoft.com/",
+        "source_checked_at": "2026-09-25T08:10:26Z",
+        "namespace_authorizations": [
+          {
+            "namespace_prefix": "70",
+            "source_url": "https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/",
+            "source_checked_at": "2026-09-24T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "minimax",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2021-06-30",
+          "established_precision": "date",
+          "established_source_url": "https://www.minimax.io/",
+          "source_checked_at": "2026-09-24T00:00:00Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "mistral",
+        "expected": {
+          "established_at": "2023",
+          "established_precision": "year",
+          "established_source_url": "https://mistral.ai/about/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "corrected": {
+          "established_at": "2023-04-28",
+          "established_precision": "date",
+          "established_source_url": "https://mistral.ai/news/mistral-3/",
+          "source_checked_at": "2026-09-25T08:10:26Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "moonshot-ai",
+        "expected": {
+          "established_at": "2023",
+          "established_precision": "year",
+          "established_source_url": "https://www.moonshot.cn/about",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "corrected": {
+          "established_at": "2023-03-01",
+          "established_precision": "date",
+          "established_source_url": "https://www.kimi.com/",
+          "source_checked_at": "2026-09-25T08:10:26Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "nvidia",
+        "expected": {
+          "established_at": "1993",
+          "established_precision": "year",
+          "established_source_url": "https://www.nvidia.com/content/timeline/time_93.html",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "corrected": {
+          "established_at": "1993-04-05",
+          "established_precision": "date",
+          "established_source_url": "https://www.nvidia.com/",
+          "source_checked_at": "2026-09-25T08:10:26Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "openai",
+        "expected": {
+          "established_at": "2015-12-11",
+          "established_precision": "date",
+          "established_source_url": "https://openai.com/index/introducing-openai/",
+          "source_checked_at": "2026-09-17T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2015-12-11",
+          "established_precision": "date",
+          "established_source_url": "https://openai.com/our-structure/",
+          "source_checked_at": "2026-09-17T00:00:00Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "spacexai",
+        "expected": {
+          "established_at": "2023",
+          "established_precision": "year",
+          "established_source_url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "corrected": {
+          "established_at": "2023-03-09",
+          "established_precision": "date",
+          "established_source_url": "https://x.ai/",
+          "source_checked_at": "2026-09-25T08:10:26Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "thinking-machines",
+        "expected": {
+          "established_at": null,
+          "established_precision": null,
+          "established_source_url": null,
+          "source_checked_at": "2026-09-24T00:00:00Z"
+        },
+        "corrected": {
+          "established_at": "2025-02-19",
+          "established_precision": "date",
+          "established_source_url": "https://thinkingmachines.ai/",
+          "source_checked_at": "2026-09-24T00:00:00Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "company_attestation",
+      "record": {
+        "slug": "z-ai",
+        "expected": {
+          "established_at": "2019-03-15",
+          "established_precision": "date",
+          "established_source_url": "https://z.ai/company",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "corrected": {
+          "established_at": "2019-06-11",
+          "established_precision": "date",
+          "established_source_url": "https://z.ai/",
+          "source_checked_at": "2026-09-25T08:10:26Z",
+          "established_basis": "user_attested",
+          "established_attestation_ref": "data/batches/p11-user-attested-dates.json",
+          "established_attested_at": "2026-09-25T08:41:23Z"
+        },
+        "reason": "Registry owner supplied this exact date; it has not been independently verified."
+      }
+    },
+    {
+      "operation": "model_provider_correction",
+      "record": {
+        "from_company_slug": "alibaba",
+        "to_company_slug": "tongyi",
+        "registry_nos": [
+          "130001",
+          "130002",
+          "130003",
+          "130004",
+          "130005",
+          "130006",
+          "130007",
+          "130008"
+        ],
+        "reason": "Registry owner identifies this AI unit as the model provider; parent company record is retained."
+      }
+    },
+    {
+      "operation": "model_provider_correction",
+      "record": {
+        "from_company_slug": "google",
+        "to_company_slug": "google-deepmind",
+        "registry_nos": [
+          "30001",
+          "30002",
+          "30003",
+          "30004",
+          "30005",
+          "30006",
+          "30007",
+          "30008",
+          "30009",
+          "30010",
+          "35001",
+          "35002",
+          "35003",
+          "35004",
+          "35005"
+        ],
+        "reason": "Registry owner identifies this AI unit as the model provider; parent company record is retained."
+      }
+    },
+    {
+      "operation": "model_provider_correction",
+      "record": {
+        "from_company_slug": "meta",
+        "to_company_slug": "meta-ai",
+        "registry_nos": [
+          "80001",
+          "80002",
+          "80003",
+          "80004",
+          "80005"
+        ],
+        "reason": "Registry owner identifies this AI unit as the model provider; parent company record is retained."
+      }
+    },
+    {
+      "operation": "model_provider_correction",
+      "record": {
+        "from_company_slug": "microsoft",
+        "to_company_slug": "microsoft-ai",
+        "registry_nos": [
+          "70001",
+          "70002",
+          "70003"
+        ],
+        "reason": "Registry owner identifies this AI unit as the model provider; parent company record is retained."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "alibaba",
+        "replacement_slug": "tongyi",
+        "expected": {
+          "name": "Alibaba",
+          "established_at": "1999",
+          "established_precision": "year",
+          "established_source_url": "https://www.alibabagroup.com/en-US/about-alibaba",
+          "source_url": "https://www.alibabacloud.com/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "authorized_prefixes": [
+          "130"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "google",
+        "replacement_slug": "google-deepmind",
+        "expected": {
+          "name": "Google",
+          "established_at": "1998",
+          "established_precision": "year",
+          "established_source_url": "https://about.google/intl/ALL_en/our-story/",
+          "source_url": "https://about.google/intl/ALL_en/our-story/",
+          "source_checked_at": "2026-09-17T00:00:00Z"
+        },
+        "authorized_prefixes": [
+          "30",
+          "35"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "meta",
+        "replacement_slug": "meta-ai",
+        "expected": {
+          "name": "Meta",
+          "established_at": "2004-02-04",
+          "established_precision": "date",
+          "established_source_url": "https://about.fb.com/ltam/company.info/",
+          "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "authorized_prefixes": [
+          "80"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    },
+    {
+      "operation": "provider_retirement",
+      "record": {
+        "slug": "microsoft",
+        "replacement_slug": "microsoft-ai",
+        "expected": {
+          "name": "Microsoft",
+          "established_at": "1975",
+          "established_precision": "year",
+          "established_source_url": "https://news.microsoft.com/facts-about-microsoft/",
+          "source_url": "https://www.microsoft.com/",
+          "source_checked_at": "2026-09-25T08:10:26Z"
+        },
+        "authorized_prefixes": [
+          "70"
+        ],
+        "reason": "Remove the duplicate parent row after its models move to the standalone AI unit; preserve the former facts in this tracked batch."
+      }
+    }
+  ]
+}

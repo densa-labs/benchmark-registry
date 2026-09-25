@@ -228,7 +228,7 @@ describe("read API response contracts", () => {
     };
     const { body } = await api("/api/companies/openai", responder);
     expect(body).toEqual({ data: {
-      company: { name: "OpenAI", slug: "openai", established_at: null, established_precision: null },
+      company: { name: "OpenAI", slug: "openai", established_at: null, established_precision: null, entity_kind: "company", established_basis: "source" },
       latest_model: null,
       results: [],
       result_page: { number: 1, limit: 50, total_items: 0, total_pages: 0 },

@@ -29,6 +29,10 @@ def build_parser() -> argparse.ArgumentParser:
     for operation in (
         "company",
         "company_correction",
+        "company_attestation",
+        "model_provider_correction",
+        "provider_name_correction",
+        "provider_retirement",
         "model",
         "benchmark",
         "result",

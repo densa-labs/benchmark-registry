@@ -31,7 +31,7 @@ describe("Registry foundation view", () => {
     expect(markup).toContain('maxLength="50"');
     expect(markup).toContain("Models");
     expect(markup).toContain("Benchmarks");
-    expect(markup).toContain("Companies");
+    expect(markup).toContain("Organizations");
     expect(markup).toContain('id="main-content"');
     expect(markup).toContain("Benchmark-Registry-B-Logo-Dark.png");
     expect(markup).toContain("© 2026");
@@ -287,7 +287,7 @@ describe("P7.1 model pages", () => {
     expect(markup).toContain("GPT-4.1");
     expect(markup).toContain('aria-label="Model metadata"');
     expect(markup).toContain("Released");
-    expect(markup).toContain("Company");
+    expect(markup).toContain("Provider");
     expect(markup).toContain("Source");
     expect(markup).toContain("Registry No.");
     expect(markup).toContain("Search benchmarks");
