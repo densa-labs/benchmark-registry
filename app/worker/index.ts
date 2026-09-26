@@ -1,6 +1,7 @@
 import { ApiError, jsonError } from "./api";
 import { parseParameters } from "./params";
 import { RegistryRepository } from "./repository";
+import { documentMetadata, rewriteMetadata, escapeHtml, PRODUCTION_ORIGIN } from "./metadata";
 
 export interface Env {
   ASSETS: Fetcher;
@@ -142,13 +143,60 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
     }
   }
 
-  return env.ASSETS.fetch(request);
+  if (['GET', 'HEAD'].includes(request.method) && pathname === '/robots.txt') {
+    const body = url.hostname === APEX_HOSTNAME
+      ? `User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`
+      : STAGING_ROBOTS;
+    return new Response(request.method === 'HEAD' ? null : body, {
+      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    });
+  }
+  if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
+    try {
+      const paths = await new RegistryRepository(env.DB).sitemapPaths();
+      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(PRODUCTION_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
+      return new Response(request.method === 'HEAD' ? null : body, {
+        headers: { 'Content-Type': 'application/xml; charset=utf-8' },
+      });
+    } catch (error) {
+      console.error('Sitemap data lookup failed.', error);
+      return new Response('The request could not be completed.', { status: 500 });
+    }
+  }
+
+  const response = await env.ASSETS.fetch(request.method === "HEAD"
+    ? new Request(request, { method: "GET" }) : request);
+  if (!["GET", "HEAD"].includes(request.method)
+    || !response.ok || !response.headers.get("Content-Type")?.includes("text/html")) {
+    return request.method === "HEAD" ? new Response(null, {
+      status: response.status, statusText: response.statusText, headers: response.headers,
+    }) : response;
+  }
+
+  try {
+    const metadata = await documentMetadata(url, new RegistryRepository(env.DB));
+    if (metadata.canonical && url.pathname !== new URL(metadata.canonical).pathname) {
+      url.pathname = new URL(metadata.canonical).pathname;
+      return Response.redirect(url.toString(), 308);
+    }
+    const html = rewriteMetadata(await response.text(), metadata, url);
+    const headers = new Headers(response.headers);
+    // The static template's validators and length no longer describe this response.
+    for (const header of ["ETag", "Content-Length", "Last-Modified", "Content-Encoding"]) headers.delete(header);
+    headers.set("Cache-Control", "no-store");
+    return new Response(request.method === "HEAD" ? null : html, {
+      status: metadata.status ?? response.status, headers,
+    });
+  } catch (error) {
+    console.error("Document metadata lookup failed.", error);
+    return new Response("The request could not be completed.", { status: 500 });
+  }
 }
 
 const worker = {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
-    if (url.hostname === WWW_HOSTNAME) {
+    if (url.hostname === WWW_HOSTNAME || (url.hostname === APEX_HOSTNAME && url.protocol === "http:")) {
       url.hostname = APEX_HOSTNAME;
       url.protocol = "https:";
       return Response.redirect(url.toString(), 308);
@@ -162,10 +210,12 @@ const worker = {
       })
       : await handleRequest(request, env);
 
-    if (!protectStaging) return response;
+    const nonProduction = url.hostname !== APEX_HOSTNAME;
+    const apiDocument = url.pathname === '/api' || url.pathname.startsWith('/api/');
+    if (!protectStaging && !nonProduction && !apiDocument) return response;
 
     const headers = new Headers(response.headers);
-    headers.set("X-Robots-Tag", STAGING_ROBOTS_TAG);
+    headers.set("X-Robots-Tag", protectStaging || nonProduction ? STAGING_ROBOTS_TAG : "noindex, follow");
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,

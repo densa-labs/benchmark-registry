@@ -375,6 +375,74 @@ export class RegistryRepository {
     return Number(row.total);
   }
 
+  async metadataModel(registryNo: string) {
+    return this.first<{ name: string; company_name: string; registry_no: string; company_slug: string }>(
+      `/* metadata:model */ SELECT m.canonical_name AS name, c.name AS company_name, m.registry_no, c.slug AS company_slug
+       FROM models m JOIN companies c ON c.id = m.company_id WHERE m.registry_no = ?`,
+      [registryNo],
+    );
+  }
+
+  async metadataCompany(slug: string) {
+    return this.first<{ name: string }>(
+      "/* metadata:company */ SELECT name FROM companies WHERE slug = ?", [slug],
+    );
+  }
+
+  async metadataBenchmark(slug: string, versionSlug?: string) {
+    const row = await this.first<{ name: string; slug: string; aliases: string; version: string | null; evaluator_names: string }>(
+      `/* metadata:benchmark */ SELECT b.canonical_name AS name, b.slug,
+       ${BENCHMARK_ALIASES} AS aliases, ${versionSlug === undefined ? "NULL" : "bv.version"} AS version,
+       ${versionSlug === undefined ? "'[]'" : `COALESCE((
+         SELECT json_group_array(evaluator.name) FROM (
+           SELECT eo.name FROM benchmark_version_evaluators bve
+           JOIN evaluator_organizations eo ON eo.id = bve.evaluator_organization_id
+           WHERE bve.benchmark_version_id = bv.id ORDER BY eo.normalized_name, eo.id
+         ) evaluator
+       ), '[]')`} AS evaluator_names
+       FROM benchmarks b ${versionSlug === undefined ? "" : "JOIN benchmark_versions bv ON bv.benchmark_id = b.id"}
+       WHERE b.slug = ? ${versionSlug === undefined ? "" : "AND bv.version_slug = ?"}`,
+      versionSlug === undefined ? [slug] : [slug, versionSlug],
+    );
+    return row ? {
+      ...row, aliases: parseJsonArray(row.aliases), evaluator_names: parseJsonArray(row.evaluator_names),
+    } : null;
+  }
+
+  async metadataResult(slug: string, versionSlug: string, resultKey: string) {
+    return this.first<{ name: string; company_name: string; registry_no: string; company_slug: string; retained_count: number; score_raw: string; primary_source_url: string; reasoning_level: string }>(
+      `/* metadata:result */ SELECT m.canonical_name AS name, c.name AS company_name,
+       m.registry_no, c.slug AS company_slug, r.score_raw, r.primary_source_url, r.reasoning_level,
+       (SELECT count(*) FROM results peers WHERE peers.model_id = r.model_id
+        AND peers.benchmark_version_id = r.benchmark_version_id) AS retained_count
+       FROM results r JOIN models m ON m.id = r.model_id
+       JOIN companies c ON c.id = m.company_id
+       JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
+       JOIN benchmarks b ON b.id = bv.benchmark_id
+       WHERE b.slug = ? AND bv.version_slug = ? AND r.result_key = ?`,
+      [slug, versionSlug, resultKey],
+    );
+  }
+
+  async sitemapPaths(): Promise<string[]> {
+    const rows = await this.all<{ path: string }>(`
+      /* seo:sitemap */ SELECT '/models/' || m.registry_no AS path FROM models m
+      WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id = m.id)
+      UNION ALL SELECT '/benchmarks/' || slug FROM benchmarks
+      UNION ALL SELECT '/benchmarks/' || b.slug || '/' || bv.version_slug
+        FROM benchmark_versions bv JOIN benchmarks b ON b.id = bv.benchmark_id
+      UNION ALL SELECT '/companies/' || slug FROM companies
+      UNION ALL SELECT '/benchmarks/' || b.slug || '/' || bv.version_slug
+        || '?view=history&result=' || r.result_key
+        FROM results r JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
+        JOIN benchmarks b ON b.id = bv.benchmark_id
+        WHERE (SELECT count(*) FROM results peers WHERE peers.model_id = r.model_id
+          AND peers.benchmark_version_id = r.benchmark_version_id) = 1
+          AND NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id = r.model_id)
+      ORDER BY path`);
+    return ['/', '/models', '/benchmarks', '/companies', ...rows.map((row) => row.path)];
+  }
+
   async stats() {
     const row = await this.first<{
       benchmark_results: number;

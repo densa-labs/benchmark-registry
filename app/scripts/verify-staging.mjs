@@ -11,7 +11,7 @@ const source = JSON.parse(readFileSync("wrangler.jsonc", "utf8"));
 const staging = source.env?.staging;
 assert.equal(source.name, "benchmark-registry");
 assert.equal(source.vars?.STAGING_CRAWLER_PROTECTION, undefined);
-assert.deepEqual(source.assets?.run_worker_first, ["/api/*", "/models/*"]);
+assert.equal(source.assets?.run_worker_first, true);
 assert.equal(staging?.workers_dev, false);
 assert.equal(staging?.preview_urls, false);
 assert.deepEqual(staging?.routes, [{ pattern: hostname, custom_domain: true }]);
