@@ -215,9 +215,13 @@ const entityLabels: Record<SearchResponse["data"][number]["entity_type"], string
   model: "Model",
   benchmark: "Benchmark",
   company: "Company",
+  result: "Result",
 };
 
-export function GlobalSearchPanel({ state }: { state: Exclude<GlobalSearchState, { status: "idle" }> }) {
+export function GlobalSearchPanel({ state, activeIndex = -1 }: {
+  state: Exclude<GlobalSearchState, { status: "idle" }>;
+  activeIndex?: number;
+}) {
   if (state.status === "loading") {
     return (
       <div className="global-search-panel global-search-panel--status" id="global-search-results">
@@ -250,18 +254,18 @@ export function GlobalSearchPanel({ state }: { state: Exclude<GlobalSearchState,
           : "results"} found.
       </p>
       <ul className="global-search-results">
-        {state.response.data.map((result) => {
+        {state.response.data.map((result, index) => {
           const displayName = result.entity_type === "benchmark"
             ? benchmarkDisplayName({ name: result.canonical_name, aliases: result.aliases })
             : result.canonical_name;
-          const description = displayName !== result.canonical_name
+          const description = result.entity_type === "result" ? result.matched_text : displayName !== result.canonical_name
             ? result.canonical_name
             : result.matched_text !== result.canonical_name
               ? `Matched ${result.matched_text}`
               : undefined;
           return (
             <li key={`${result.entity_type}:${result.href}`}>
-              <a href={result.href}>
+              <a href={result.href} aria-current={index === activeIndex ? "true" : undefined}>
                 <span className="global-search-result__type">
                   {entityLabels[result.entity_type]}
                 </span>
@@ -285,6 +289,8 @@ export function GlobalSearchPanel({ state }: { state: Exclude<GlobalSearchState,
 export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
   const [state, setState] = useState<GlobalSearchState>({ status: "idle" });
   const request = useRef<AbortController | null>(null);
+  const shell = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   useEffect(() => () => request.current?.abort(), []);
 
@@ -292,10 +298,15 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
     request.current?.abort();
     request.current = null;
     setState({ status: "idle" });
+    setActiveIndex(-1);
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (state.status === "results" && activeIndex >= 0) {
+      window.location.assign(state.response.data[activeIndex].href);
+      return;
+    }
     const input = event.currentTarget.elements.namedItem("q");
     if (!(input instanceof HTMLInputElement)) return;
     const query = input.value.trim();
@@ -304,10 +315,15 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
     request.current?.abort();
     const controller = new AbortController();
     request.current = controller;
+    setActiveIndex(-1);
     setState({ status: "loading", query });
     void searchRegistry(query, fetch, controller.signal)
       .then((response) => {
         if (controller.signal.aborted) return;
+        if (response.direct_href) {
+          window.location.assign(response.direct_href);
+          return;
+        }
         setState({ status: "results", query, response });
       })
       .catch((error: unknown) => {
@@ -322,21 +338,31 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
       });
   };
 
-  const handleKeyDown = (event: KeyboardEvent<HTMLFormElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Escape" && state.status !== "idle") {
       event.preventDefault();
       closeResults();
+      shell.current?.querySelector<HTMLInputElement>("input")?.focus();
+    } else if ((event.key === "ArrowDown" || event.key === "ArrowUp") && state.status === "results" && state.response.data.length) {
+      event.preventDefault();
+      const links = shell.current?.querySelectorAll<HTMLAnchorElement>(".global-search-results a");
+      const focused = links ? [...links].indexOf(document.activeElement as HTMLAnchorElement) : -1;
+      const current = focused >= 0 ? focused : activeIndex;
+      const next = event.key === "ArrowDown"
+        ? (current + 1) % state.response.data.length
+        : (current <= 0 ? state.response.data.length : current) - 1;
+      setActiveIndex(next);
+      links?.[next]?.focus();
     }
   };
 
   return (
-    <div className="global-search-shell">
+    <div className="global-search-shell" ref={shell} onKeyDown={handleKeyDown}>
       <form
         className="global-search"
         role="search"
         aria-busy={state.status === "loading" ? "true" : undefined}
         onSubmit={handleSubmit}
-        onKeyDown={handleKeyDown}
       >
         <label className="visually-hidden" htmlFor="global-search-input">
           Search the registry
@@ -356,7 +382,7 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
         />
         <button type="submit" disabled={state.status === "loading"}>Search</button>
       </form>
-      {state.status === "idle" ? null : <GlobalSearchPanel state={state} />}
+      {state.status === "idle" ? null : <GlobalSearchPanel state={state} activeIndex={activeIndex} />}
     </div>
   );
 }

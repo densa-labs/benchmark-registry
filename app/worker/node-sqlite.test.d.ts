@@ -2,6 +2,7 @@ declare module "node:sqlite" {
   interface StatementSync {
     all(...bindings: unknown[]): unknown[];
     get(...bindings: unknown[]): unknown;
+    run(...bindings: unknown[]): unknown;
   }
 
   export class DatabaseSync {

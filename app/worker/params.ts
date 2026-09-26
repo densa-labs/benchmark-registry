@@ -10,6 +10,7 @@ export interface ParsedListParams {
   sort?: string;
   order?: SortOrder;
   view?: ResultView;
+  result?: string;
 }
 
 interface ParameterPolicy {
@@ -115,7 +116,13 @@ export function parseParameters(
     throw new ApiError(400, "invalid_query", "View must be 'latest' or 'history'.");
   }
 
+  const result = searchParams.get("result") ?? undefined;
+  if (result !== undefined && !/^[a-f0-9]{64}$/u.test(result)) {
+    throw new ApiError(400, "invalid_query", "Result must be a valid immutable result key.");
+  }
+
   return {
+    result,
     page,
     limit,
     q,

@@ -150,6 +150,14 @@ describe("P7.2 benchmark pages", () => {
     expect(markup).not.toContain("53 results");
   });
 
+  it("preserves and clears the shareable selected evaluation filter", () => {
+    const key = "a".repeat(64);
+    const markup = renderToStaticMarkup(<BenchmarkVersionPage response={benchmarkVersionResponse} currentSearch={`?view=history&result=${key}`} />);
+    expect(markup).toContain("Showing the selected evaluation.");
+    expect(markup).toContain('href="/benchmarks/gpqa/diamond?view=history"');
+    expect(markup).toContain(`name="result" value="${key}"`);
+  });
+
   it("renders every family version and marks only the deterministically latest one", () => {
     const markup = renderToStaticMarkup(
       <BenchmarkFamilyPage response={benchmarkFamilyResponse} />,

@@ -109,7 +109,8 @@ function defaultResponder(tag: string): unknown[] {
     "companies:list": [companyRow],
     "company:detail": [companyRow],
     "company-results:list": [resultRow],
-    "search:list": [{
+    "search:catalogue": [{
+      id: 2, normalized_name: "gpt-4.1", aliases: '[{"name":"gpt-4.1-2025-04-14","normalized_name":"gpt-4.1-2025-04-14"}]', registry_alias: '["10002"]', versions: "[]",
       entity_type: "model",
       canonical_name: modelRow.model_name,
       matched_text: "gpt-4.1-2025-04-14",
@@ -366,15 +367,27 @@ describe("filtering, sorting, latest/history, and search", () => {
   });
 
   it("returns one global search candidate per entity and paginates it", async () => {
-    const { body, calls } = await api("/api/search?q=%20GPT-4.1%20&page=2&limit=100");
-    expect(body).toMatchObject({
+    const first = await api("/api/search?q=%20GPT-4.1%20&limit=100");
+    expect(first.body).toMatchObject({
       data: [{ entity_type: "model", canonical_name: "GPT-4.1", href: "/models/10002" }],
-      page: { number: 2, limit: 100 },
+      page: { number: 1, limit: 100, total_items: 1 },
     });
-    expect(calls.at(-1)?.bindings).toEqual(["gpt-4.1", 100, 100]);
-    expect(calls.at(-1)?.sql).toContain("exact_candidates AS");
-    expect(calls.at(-1)?.sql).toContain("partial_candidates AS");
-    expect(calls.at(-1)?.sql).toContain("ORDER BY is_exact DESC");
+    const second = await api("/api/search?q=GPT-4.1&page=2&limit=100");
+    expect(second.body).toMatchObject({ data: [], page: { number: 2, limit: 100, total_items: 1 } });
+    expect(first.calls).toHaveLength(1);
+    expect(first.calls[0].sql).toContain("search:catalogue");
+    expect(first.calls[0].bindings).toEqual([]);
+  });
+
+  it("validates and binds the scoped immutable result filter", async () => {
+    const key = "a".repeat(64);
+    const { calls, response } = await api(`/api/benchmarks/swe-bench-verified/2025-02-01?view=history&result=${key}`);
+    expect(response.status).toBe(200);
+    const query = calls.find((c) => tagFor(c.sql) === "benchmark-version-results:list");
+    expect(query?.sql).toContain("r.result_key = ?");
+    expect(query?.bindings).toContain(key);
+    expect((await api("/api/benchmarks/swe-bench-verified/2025-02-01?result=invalid")).response.status).toBe(400);
+    expect((await api(`/api/models/10002?result=${key}`)).response.status).toBe(400);
   });
 });
 

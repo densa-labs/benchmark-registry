@@ -78,7 +78,7 @@ async function handleApi(request: Request, env: Env): Promise<Response> {
   }
   if (path.length === 4 && path[1] === "benchmarks") {
     const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "company", "sort", "order", "view"],
+      allowed: ["page", "limit", "q", "company", "sort", "order", "view", "result"],
       sorts: RESULT_SORTS,
     });
     return Response.json(await repository.benchmarkVersion(path[2], path[3], params));

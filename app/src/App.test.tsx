@@ -202,6 +202,21 @@ describe("Registry foundation view", () => {
     expect(markup).toContain("Humanity&#x27;s Last Exam");
     expect(markup).toContain("Matched HLE");
   });
+  it("renders compact combined actions with reasoning context and selected-link semantics", () => {
+    const href = `/benchmarks/cursorbench/4-0?view=history&result=${"a".repeat(64)}`;
+    const markup = renderToStaticMarkup(<GlobalSearchPanel activeIndex={0} state={{
+      status: "results", query: "cursorbench 4 opus 5.5", response: {
+        data: [{ entity_type: "result", canonical_name: "Claude Opus 5.5 × CursorBench 4.0", matched_text: "Reasoning: max", href }],
+        page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
+      },
+    }} />);
+    expect(markup).toContain("Claude Opus 5.5 × CursorBench 4.0");
+    expect(markup).toContain("Reasoning: max");
+    expect(markup).not.toContain("Matched Reasoning");
+    expect(markup).toContain('aria-current="true"');
+    expect(markup).toContain(href.replaceAll("&", "&amp;"));
+  });
+
 });
 
 const model = {

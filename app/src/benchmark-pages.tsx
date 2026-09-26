@@ -25,7 +25,7 @@ import {
   type BenchmarkVersionPageResponse,
 } from "./registry";
 
-const PRESERVED_QUERY_KEYS = ["q", "company", "sort", "order", "view", "limit"];
+const PRESERVED_QUERY_KEYS = ["q", "company", "sort", "order", "view", "limit", "result"];
 
 function countLabel(count: number, singular: string, plural = `${singular}s`): string {
   return `${count.toLocaleString("en-US")} ${count === 1 ? singular : plural}`;
@@ -412,6 +412,12 @@ export function BenchmarkVersionPage({
         label="Search models"
         placeholder="Search model names, aliases, or Registry Nos."
       />
+
+      {params.has("result") ? (
+        <p className="local-search__clear">
+          Showing the selected evaluation. <a href={queryHref(pathname, currentSearch, { result: null, page: null })}>Show all results</a>
+        </p>
+      ) : null}
 
       <section className="results-section" aria-labelledby="benchmark-results-heading">
         <div className="results-section__header">

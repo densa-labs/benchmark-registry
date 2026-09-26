@@ -104,10 +104,11 @@ interface SearchResultFields {
 
 export type SearchResult = SearchResultFields & (
   | { entity_type: "benchmark"; aliases: string[] }
-  | { entity_type: "model" | "company" }
+  | { entity_type: "model" | "company" | "result" }
 );
 
 export interface SearchResponse {
+  direct_href?: string;
   data: SearchResult[];
   page: Page;
 }

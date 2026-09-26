@@ -12,6 +12,7 @@ import {
   resultFromRow,
   modelFromRow,
 } from "./api";
+import { interpretSearch, orderSearch, type SearchEntity } from "./search";
 import { likePattern, type ParsedListParams, type SortOrder } from "./params";
 
 type BindValue = string | number | null;
@@ -82,12 +83,19 @@ interface CompanyListRow {
   latest_status: ModelSummary["status"] | null;
 }
 
-interface SearchRow {
-  entity_type: "model" | "benchmark" | "company";
-  canonical_name: string;
-  matched_text: string;
-  href: string;
-  benchmark_aliases: string;
+interface SearchCatalogueRow extends Omit<SearchEntity, "aliases" | "normalized_aliases" | "versions"> {
+  aliases: string;
+  registry_alias: string;
+  versions: string;
+}
+interface SearchRelationshipRow {
+  model_id: number;
+  benchmark_id: number;
+  version_id: number;
+  version: string;
+  version_slug: string;
+  reasoning_level: string;
+  result_key: string;
 }
 
 const MODEL_COLUMNS = `
@@ -257,6 +265,10 @@ function resultFilters(
   const clauses = [scopeSql];
   const bindings = [...scopeBindings];
   if ((params.view ?? "latest") === "latest") clauses.push(LATEST_RESULT_PREDICATE);
+  if (params.result !== undefined) {
+    clauses.push("r.result_key = ?");
+    bindings.push(params.result);
+  }
   if (params.company !== undefined) {
     clauses.push("c.slug = ?");
     bindings.push(params.company);
@@ -729,170 +741,70 @@ export class RegistryRepository {
   }
 
   async search(params: ParsedListParams) {
-    const query = params.q!;
-    // instr preserves literal substring semantics without LIKE-pattern overhead.
-    const candidateCtes = `
-      exact_candidates AS (
-        SELECT 'model' AS entity_type, m.canonical_name,
-          CASE
-            WHEN m.normalized_name = input.exact THEN m.canonical_name
-            WHEN m.registry_no = input.exact THEN m.registry_no
-            ELSE (
-              SELECT alias.name FROM model_aliases alias
-              WHERE alias.model_id = m.id
-                AND alias.normalized_name = input.exact
-              LIMIT 1
-            )
-          END AS matched_text,
-          '/models/' || m.registry_no AS href,
-          m.normalized_name AS canonical_normalized,
-          input.exact AS matched_normalized,
-          1 AS is_exact
-        FROM models m CROSS JOIN input
-        WHERE m.normalized_name = input.exact
-          OR m.registry_no = input.exact
-          OR m.id = (
-            SELECT exact_alias.model_id FROM model_aliases exact_alias
-            WHERE exact_alias.normalized_name = input.exact LIMIT 1
-          )
-        UNION ALL
-        SELECT 'benchmark', b.canonical_name,
-          CASE
-            WHEN b.normalized_name = input.exact THEN b.canonical_name
-            ELSE (
-              SELECT alias.name FROM benchmark_aliases alias
-              WHERE alias.benchmark_id = b.id
-                AND alias.normalized_name = input.exact
-              LIMIT 1
-            )
-          END,
-          '/benchmarks/' || b.slug, b.normalized_name, input.exact, 1
-        FROM benchmarks b CROSS JOIN input
-        WHERE b.normalized_name = input.exact
-          OR b.id = (
-            SELECT exact_alias.benchmark_id FROM benchmark_aliases exact_alias
-            WHERE exact_alias.normalized_name = input.exact LIMIT 1
-          )
-        UNION ALL
-        SELECT 'company', c.name, c.name, '/companies/' || c.slug,
-          c.normalized_name, c.normalized_name, 1
-        FROM companies c JOIN input ON c.normalized_name = input.exact
-      ),
-      partial_candidates AS (
-        SELECT 'model' AS entity_type, m.canonical_name,
-          CASE
-            WHEN instr(m.normalized_name, input.exact) > 0 THEN m.canonical_name
-            WHEN instr(m.registry_no, input.exact) > 0 THEN m.registry_no
-            ELSE (
-              SELECT alias.name FROM model_aliases alias
-              WHERE alias.model_id = m.id
-                AND instr(alias.normalized_name, input.exact) > 0
-              ORDER BY alias.normalized_name, alias.id LIMIT 1
-            )
-          END AS matched_text,
-          '/models/' || m.registry_no AS href,
-          m.normalized_name AS canonical_normalized,
-          CASE
-            WHEN instr(m.normalized_name, input.exact) > 0 THEN m.normalized_name
-            WHEN instr(m.registry_no, input.exact) > 0 THEN m.registry_no
-            ELSE (
-              SELECT alias.normalized_name FROM model_aliases alias
-              WHERE alias.model_id = m.id
-                AND instr(alias.normalized_name, input.exact) > 0
-              ORDER BY alias.normalized_name, alias.id LIMIT 1
-            )
-          END AS matched_normalized,
-          0 AS is_exact
-        FROM models m CROSS JOIN input
-        WHERE (
-            instr(m.normalized_name, input.exact) > 0
-            OR instr(m.registry_no, input.exact) > 0
-            OR EXISTS (
-              SELECT 1 FROM model_aliases alias
-              WHERE alias.model_id = m.id
-                AND instr(alias.normalized_name, input.exact) > 0
-            )
-          )
-          AND m.normalized_name <> input.exact
-          AND m.registry_no <> input.exact
-          AND NOT EXISTS (
-            SELECT 1 FROM model_aliases exact_alias
-            WHERE exact_alias.model_id = m.id
-              AND exact_alias.normalized_name = input.exact
-          )
-        UNION ALL
-        SELECT 'benchmark', b.canonical_name,
-          CASE
-            WHEN instr(b.normalized_name, input.exact) > 0 THEN b.canonical_name
-            ELSE (
-              SELECT alias.name FROM benchmark_aliases alias
-              WHERE alias.benchmark_id = b.id
-                AND instr(alias.normalized_name, input.exact) > 0
-              ORDER BY alias.normalized_name, alias.id LIMIT 1
-            )
-          END,
-          '/benchmarks/' || b.slug,
-          b.normalized_name,
-          CASE
-            WHEN instr(b.normalized_name, input.exact) > 0 THEN b.normalized_name
-            ELSE (
-              SELECT alias.normalized_name FROM benchmark_aliases alias
-              WHERE alias.benchmark_id = b.id
-                AND instr(alias.normalized_name, input.exact) > 0
-              ORDER BY alias.normalized_name, alias.id LIMIT 1
-            )
-          END,
-          0
-        FROM benchmarks b CROSS JOIN input
-        WHERE (
-            instr(b.normalized_name, input.exact) > 0
-            OR EXISTS (
-              SELECT 1 FROM benchmark_aliases alias
-              WHERE alias.benchmark_id = b.id
-                AND instr(alias.normalized_name, input.exact) > 0
-            )
-          )
-          AND b.normalized_name <> input.exact
-          AND NOT EXISTS (
-            SELECT 1 FROM benchmark_aliases exact_alias
-            WHERE exact_alias.benchmark_id = b.id
-              AND exact_alias.normalized_name = input.exact
-          )
-        UNION ALL
-        SELECT 'company', c.name, c.name, '/companies/' || c.slug,
-          c.normalized_name, c.normalized_name, 0
-        FROM companies c CROSS JOIN input
-        WHERE instr(c.normalized_name, input.exact) > 0
-          AND c.normalized_name <> input.exact
-      ),
-      candidates AS (
-        SELECT * FROM exact_candidates
-        UNION ALL
-        SELECT * FROM partial_candidates
-      )`;
-    const total = await this.count(
-      `/* search:count */ WITH input(exact) AS (VALUES (?)),
-        ${candidateCtes}
-       SELECT count(*) AS total FROM candidates`,
-      [query],
-    );
-    const rows = await this.all<SearchRow>(
-      `/* search:list */ WITH input(exact) AS (VALUES (?)),
-        ${candidateCtes}
-       SELECT candidates.entity_type, candidates.canonical_name, matched_text, href,
-         ${BENCHMARK_ALIASES} AS benchmark_aliases
-       FROM candidates
-       LEFT JOIN benchmarks b ON candidates.entity_type = 'benchmark'
-         AND candidates.href = '/benchmarks/' || b.slug
-       ORDER BY is_exact DESC, entity_type ASC, canonical_normalized ASC, href ASC
-       LIMIT ? OFFSET ?`,
-      [query, params.limit, (params.page - 1) * params.limit],
-    );
+    // Only names/aliases/version identities leave D1. Matching stays in the
+    // Worker; no catalogue is sent to the browser and no per-token SQL occurs.
+    const rows = await this.all<SearchCatalogueRow>(`/* search:catalogue */
+      SELECT 'model' AS entity_type, m.id, m.canonical_name, m.normalized_name,
+        '/models/' || m.registry_no AS href,
+        json_array(m.registry_no) AS registry_alias,
+        COALESCE((SELECT json_group_array(json_object('name', name, 'normalized_name', normalized_name)) FROM (
+          SELECT name, normalized_name FROM model_aliases WHERE model_id = m.id ORDER BY normalized_name
+        )), '[]') AS aliases, '[]' AS versions
+      FROM models m
+      UNION ALL
+      SELECT 'benchmark', b.id, b.canonical_name, b.normalized_name,
+        '/benchmarks/' || b.slug, '[]',
+        COALESCE((SELECT json_group_array(json_object('name', name, 'normalized_name', normalized_name))
+          FROM (SELECT name, normalized_name FROM benchmark_aliases WHERE benchmark_id = b.id ORDER BY normalized_name)), '[]'),
+        COALESCE((SELECT json_group_array(json_object('id', id, 'version', version, 'version_slug', version_slug))
+          FROM (SELECT id, version, version_slug FROM benchmark_versions WHERE benchmark_id = b.id ORDER BY version_slug)), '[]')
+      FROM benchmarks b
+      UNION ALL
+      SELECT 'company', c.id, c.name, c.normalized_name,
+        '/companies/' || c.slug, '[]', '[]', '[]' FROM companies c`, []);
+    const entities = rows.map((row) => {
+      const aliases = JSON.parse(row.aliases) as { name: string; normalized_name: string }[];
+      const registryAliases = parseJsonArray(row.registry_alias);
+      return { ...row,
+        aliases: [...aliases.map((alias) => alias.name), ...registryAliases],
+        normalized_aliases: [...aliases.map((alias) => alias.normalized_name), ...registryAliases],
+        versions: JSON.parse(row.versions) as SearchEntity["versions"],
+      };
+    });
+    const { ranked, interpretations } = interpretSearch(params.q!, entities);
+    let directHref: string | undefined;
+    if (interpretations.length) {
+      const relationships = await this.all<SearchRelationshipRow>(`/* search:relationships */
+        SELECT r.model_id, bv.benchmark_id, bv.id AS version_id,
+          bv.version, bv.version_slug, r.reasoning_level, r.result_key
+        FROM results r JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
+        WHERE r.model_id IN (SELECT value FROM json_each(?))
+          AND bv.benchmark_id IN (SELECT value FROM json_each(?))
+        ORDER BY r.result_key`, [
+        JSON.stringify([...new Set(interpretations.map((i) => i.model.id))]),
+        JSON.stringify([...new Set(interpretations.map((i) => i.benchmark.id))]),
+      ]);
+      const connected = relationships.flatMap((row) => {
+        const intent = interpretations.find((i) => i.model.id === row.model_id
+          && i.benchmark.id === row.benchmark_id && (i.versionId === undefined || i.versionId === row.version_id));
+        if (!intent) return [];
+        const href = `${intent.benchmark.href}/${row.version_slug}?view=history&result=${row.result_key}`;
+        return [{ hit: {
+          entity_type: "result" as const,
+          canonical_name: `${intent.model.canonical_name} × ${intent.benchmark.canonical_name} ${row.version}`,
+          matched_text: row.reasoning_level ? `Reasoning: ${row.reasoning_level}` : "Evaluation result",
+          href,
+        }, rank: intent.high ? 3 : 5 }];
+      });
+      ranked.push(...connected);
+      if (interpretations.length === 1 && interpretations[0].high && connected.length === 1
+        && !ranked.some((entry) => entry.rank < 3)) directHref = connected[0].hit.href;
+    }
+    const hits = orderSearch(ranked);
     return {
-      data: rows.map(({ benchmark_aliases: aliases, ...row }) => row.entity_type === "benchmark"
-        ? { ...row, aliases: parseJsonArray(aliases) }
-        : row),
-      page: pageMetadata(params.page, params.limit, total),
+      data: hits.slice((params.page - 1) * params.limit, params.page * params.limit),
+      page: pageMetadata(params.page, params.limit, hits.length),
+      ...(params.page === 1 && directHref ? { direct_href: directHref } : {}),
     };
   }
 }
