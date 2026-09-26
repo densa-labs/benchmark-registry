@@ -21,7 +21,7 @@ const metric = {
 };
 
 const latestVersion = {
-  benchmark: { name: "GPQA", slug: "gpqa" },
+  benchmark: { name: "Graduate-Level Google-Proof Q&A", slug: "gpqa", aliases: ["GPQA"] },
   version: "Diamond",
   version_slug: "diamond",
   released_at: "2023-11-20",
@@ -48,7 +48,7 @@ const benchmarkListResponse: BenchmarkListResponse = {
 
 const benchmarkFamilyResponse: BenchmarkFamilyResponse = {
   data: {
-    benchmark: { ...latestVersion.benchmark, aliases: ["Graduate-Level Google-Proof Q&A"] },
+    benchmark: latestVersion.benchmark,
     versions: [latestVersion, olderVersion],
   },
 };
@@ -125,6 +125,8 @@ describe("P7.2 benchmark pages", () => {
     expect(markup).toContain('action="/benchmarks"');
     expect(markup).toContain("Search benchmark names or aliases");
     expect(markup).toContain('href="/benchmarks/gpqa"');
+    expect(markup).toContain('>GPQA</a>');
+    expect(markup).toContain('title="Graduate-Level Google-Proof Q&amp;A"');
     expect(markup).toContain("Diamond");
     expect(markup).toContain("November 20, 2023");
     expect(markup).toContain("Sort by Released ascending");
@@ -154,6 +156,7 @@ describe("P7.2 benchmark pages", () => {
     );
 
     expect(markup).toContain("GPQA");
+    expect(markup).toContain("Graduate-Level Google-Proof Q&amp;A");
     expect(markup).toContain("2 versions");
     expect(markup).toContain('href="/benchmarks/gpqa/diamond"');
     expect(markup).toContain('href="/benchmarks/gpqa/main"');
@@ -170,6 +173,7 @@ describe("P7.2 benchmark pages", () => {
     );
 
     expect(markup).toContain('aria-label="Benchmark version metadata"');
+    expect(markup).toContain("Graduate-Level Google-Proof Q&amp;A");
     expect(markup).toContain("Evaluated by");
     expect(markup).toContain("Center for AI Safety, Scale AI");
     expect(markup).toContain("Release date");

@@ -9,6 +9,7 @@ import {
 
 import darkLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-Dark.png";
 import whiteLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-White.png";
+import { benchmarkDisplayName } from "../benchmark-names";
 import {
   RegistryClientError,
   searchRegistry,
@@ -249,21 +250,33 @@ export function GlobalSearchPanel({ state }: { state: Exclude<GlobalSearchState,
           : "results"} found.
       </p>
       <ul className="global-search-results">
-        {state.response.data.map((result) => (
-          <li key={`${result.entity_type}:${result.href}`}>
-            <a href={result.href}>
-              <span className="global-search-result__type">
-                {entityLabels[result.entity_type]}
-              </span>
-              <span className="global-search-result__name">{result.canonical_name}</span>
-              {result.matched_text !== result.canonical_name ? (
-                <span className="global-search-result__match">
-                  Matched {result.matched_text}
+        {state.response.data.map((result) => {
+          const displayName = result.entity_type === "benchmark"
+            ? benchmarkDisplayName({ name: result.canonical_name, aliases: result.aliases })
+            : result.canonical_name;
+          const description = displayName !== result.canonical_name
+            ? result.canonical_name
+            : result.matched_text !== result.canonical_name
+              ? `Matched ${result.matched_text}`
+              : undefined;
+          return (
+            <li key={`${result.entity_type}:${result.href}`}>
+              <a href={result.href}>
+                <span className="global-search-result__type">
+                  {entityLabels[result.entity_type]}
                 </span>
-              ) : null}
-            </a>
-          </li>
-        ))}
+                <span className="global-search-result__name">
+                  {displayName}
+                </span>
+                {description ? (
+                  <span className="global-search-result__match">
+                    {description}
+                  </span>
+                ) : null}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

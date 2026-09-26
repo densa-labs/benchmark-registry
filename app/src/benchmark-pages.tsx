@@ -2,6 +2,8 @@ import type {
   BenchmarkVersionSummary,
   ResultRow,
 } from "../worker/api";
+import { BenchmarkLink } from "./benchmark-link";
+import { benchmarkDisplayName } from "./benchmark-names";
 import {
   DataTable,
   EmptyState,
@@ -176,9 +178,7 @@ export function BenchmarksPage({
       className: "data-table__primary",
       sortHref: nameSort.href,
       sortDirection: nameSort.direction,
-      render: ({ benchmark }) => (
-        <a href={`/benchmarks/${benchmark.slug}`}>{benchmark.name}</a>
-      ),
+      render: ({ benchmark }) => <BenchmarkLink benchmark={benchmark} />,
     },
     {
       key: "version",
@@ -252,6 +252,7 @@ export function BenchmarksPage({
 
 export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyResponse }) {
   const { benchmark, versions } = response.data;
+  const displayName = benchmarkDisplayName(benchmark);
   const columns: TableColumn<BenchmarkVersionSummary>[] = [
     {
       key: "version",
@@ -284,7 +285,10 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={benchmark.name} />
+      <PageHeader
+        title={displayName}
+        description={displayName === benchmark.name ? undefined : benchmark.name}
+      />
       <section className="results-section" aria-labelledby="versions-heading">
         <div className="results-section__header">
           <div>
@@ -382,7 +386,12 @@ export function BenchmarkVersionPage({
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={version.benchmark.name} />
+      <PageHeader
+        title={benchmarkDisplayName(version.benchmark)}
+        description={benchmarkDisplayName(version.benchmark) === version.benchmark.name
+          ? undefined
+          : version.benchmark.name}
+      />
       <section className="entity-metadata" aria-label="Benchmark version metadata">
         <MetadataRows
           items={[

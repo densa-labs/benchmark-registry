@@ -33,6 +33,7 @@ interface ModelDetailRow extends ModelDbRow {
 interface BenchmarkListRow {
   benchmark_name: string;
   benchmark_slug: string;
+  benchmark_aliases: string;
   latest_version: string;
   latest_released_at: string;
   latest_release_precision: DatePrecision;
@@ -49,6 +50,7 @@ interface BenchmarkVersionRow {
   id: number;
   benchmark_name: string;
   benchmark_slug: string;
+  benchmark_aliases: string;
   version: string;
   version_slug: string;
   release_at: string;
@@ -85,6 +87,7 @@ interface SearchRow {
   canonical_name: string;
   matched_text: string;
   href: string;
+  benchmark_aliases: string;
 }
 
 const MODEL_COLUMNS = `
@@ -97,11 +100,19 @@ const MODEL_COLUMNS = `
   m.published_at,
   m.status`;
 
+const BENCHMARK_ALIASES = `COALESCE((
+  SELECT json_group_array(alias.name) FROM (
+    SELECT ba.name FROM benchmark_aliases ba
+    WHERE ba.benchmark_id = b.id ORDER BY ba.normalized_name, ba.id
+  ) alias
+), '[]')`;
+
 const RESULT_COLUMNS = `
   r.result_key,
   ${MODEL_COLUMNS},
   b.canonical_name AS benchmark_name,
   b.slug AS benchmark_slug,
+  ${BENCHMARK_ALIASES} AS benchmark_aliases,
   bv.version AS benchmark_version,
   r.reasoning_level,
   metric.name AS metric_name,
@@ -251,24 +262,25 @@ function resultFilters(
     bindings.push(params.company);
   }
   if (params.q !== undefined) {
-    const pattern = likePattern(params.q);
-    const benchmarkMatch = `(b.normalized_name LIKE ? ESCAPE '\\' OR EXISTS (
+    // Literal substring matching also supports valid 49–50 byte names without
+    // exceeding D1's 50 byte LIKE-pattern limit after adding wildcard characters.
+    const benchmarkMatch = `(instr(b.normalized_name, ?) > 0 OR EXISTS (
       SELECT 1 FROM benchmark_aliases ba
-      WHERE ba.benchmark_id = b.id AND ba.normalized_name LIKE ? ESCAPE '\\'
+      WHERE ba.benchmark_id = b.id AND instr(ba.normalized_name, ?) > 0
     ))`;
-    const modelMatch = `(m.normalized_name LIKE ? ESCAPE '\\' OR m.registry_no LIKE ? ESCAPE '\\' OR EXISTS (
+    const modelMatch = `(instr(m.normalized_name, ?) > 0 OR instr(m.registry_no, ?) > 0 OR EXISTS (
       SELECT 1 FROM model_aliases ma
-      WHERE ma.model_id = m.id AND ma.normalized_name LIKE ? ESCAPE '\\'
+      WHERE ma.model_id = m.id AND instr(ma.normalized_name, ?) > 0
     ))`;
     if (searchKind === "benchmarks") {
       clauses.push(benchmarkMatch);
-      bindings.push(pattern, pattern);
+      bindings.push(params.q, params.q);
     } else if (searchKind === "models") {
       clauses.push(modelMatch);
-      bindings.push(pattern, pattern, pattern);
+      bindings.push(params.q, params.q, params.q);
     } else {
       clauses.push(`(${benchmarkMatch} OR ${modelMatch})`);
-      bindings.push(pattern, pattern, pattern, pattern, pattern);
+      bindings.push(params.q, params.q, params.q, params.q, params.q);
     }
   }
   return { sql: clauses.join(" AND "), bindings };
@@ -286,7 +298,11 @@ function metricFromVersion(row: BenchmarkVersionRow): MetricSummary {
 
 function versionFromRow(row: BenchmarkVersionRow): BenchmarkVersionSummary {
   return {
-    benchmark: { name: row.benchmark_name, slug: row.benchmark_slug },
+    benchmark: {
+      name: row.benchmark_name,
+      slug: row.benchmark_slug,
+      aliases: parseJsonArray(row.benchmark_aliases),
+    },
     version: row.version,
     version_slug: row.version_slug,
     released_at: row.release_at,
@@ -443,12 +459,11 @@ export class RegistryRepository {
     const bindings: BindValue[] = [];
     let where = "";
     if (params.q !== undefined) {
-      const pattern = likePattern(params.q);
-      where = `WHERE b.normalized_name LIKE ? ESCAPE '\\' OR EXISTS (
+      where = `WHERE instr(b.normalized_name, ?) > 0 OR EXISTS (
         SELECT 1 FROM benchmark_aliases ba
-        WHERE ba.benchmark_id = b.id AND ba.normalized_name LIKE ? ESCAPE '\\'
+        WHERE ba.benchmark_id = b.id AND instr(ba.normalized_name, ?) > 0
       )`;
-      bindings.push(pattern, pattern);
+      bindings.push(params.q, params.q);
     }
     const total = await this.count(
       `/* benchmarks:count */ SELECT count(*) AS total FROM benchmarks b ${where}`,
@@ -474,6 +489,7 @@ export class RegistryRepository {
         FROM benchmark_versions bv
       )
       SELECT b.canonical_name AS benchmark_name, b.slug AS benchmark_slug,
+        ${BENCHMARK_ALIASES} AS benchmark_aliases,
         b.normalized_name, rv.version AS latest_version,
         rv.release_at AS latest_released_at,
         rv.release_precision AS latest_release_precision,
@@ -487,7 +503,11 @@ export class RegistryRepository {
     );
     return {
       data: rows.map((row) => ({
-        benchmark: { name: row.benchmark_name, slug: row.benchmark_slug },
+        benchmark: {
+          name: row.benchmark_name,
+          slug: row.benchmark_slug,
+          aliases: parseJsonArray(row.benchmark_aliases),
+        },
         latest_version: row.latest_version,
         latest_released_at: row.latest_released_at,
         latest_release_precision: row.latest_release_precision,
@@ -500,19 +520,15 @@ export class RegistryRepository {
     const benchmark = await this.first<BenchmarkFamilyRow>(
       `/* benchmark:detail */ SELECT b.id, b.canonical_name AS benchmark_name,
         b.slug AS benchmark_slug,
-        COALESCE((
-          SELECT json_group_array(alias.name) FROM (
-            SELECT ba.name FROM benchmark_aliases ba
-            WHERE ba.benchmark_id = b.id ORDER BY ba.normalized_name, ba.id
-          ) alias
-        ), '[]') AS aliases
+        ${BENCHMARK_ALIASES} AS aliases
        FROM benchmarks b WHERE b.slug = ?`,
       [slug],
     );
     if (benchmark === null) throw new ApiError(404, "not_found", "Benchmark not found.");
     const versions = await this.all<BenchmarkVersionRow>(
       `/* benchmark:versions */ SELECT bv.id, b.canonical_name AS benchmark_name,
-        b.slug AS benchmark_slug, bv.version, bv.version_slug, bv.release_at,
+        b.slug AS benchmark_slug, ${BENCHMARK_ALIASES} AS benchmark_aliases,
+        bv.version, bv.version_slug, bv.release_at,
         bv.release_precision, metric.name AS metric_name, metric.key AS metric_key,
         metric.unit AS metric_unit, metric.storage_kind, metric.display_precision,
         bv.source_url, '[]' AS evaluator_names
@@ -539,6 +555,7 @@ export class RegistryRepository {
     const version = await this.first<BenchmarkVersionRow>(
       `/* benchmark-version:detail */ SELECT bv.id,
         b.canonical_name AS benchmark_name, b.slug AS benchmark_slug,
+        ${BENCHMARK_ALIASES} AS benchmark_aliases,
         bv.version, bv.version_slug, bv.release_at, bv.release_precision,
         metric.name AS metric_name, metric.key AS metric_key,
         metric.unit AS metric_unit, metric.storage_kind, metric.display_precision,
@@ -713,7 +730,7 @@ export class RegistryRepository {
 
   async search(params: ParsedListParams) {
     const query = params.q!;
-    const pattern = likePattern(query);
+    // instr preserves literal substring semantics without LIKE-pattern overhead.
     const candidateCtes = `
       exact_candidates AS (
         SELECT 'model' AS entity_type, m.canonical_name,
@@ -764,36 +781,36 @@ export class RegistryRepository {
       partial_candidates AS (
         SELECT 'model' AS entity_type, m.canonical_name,
           CASE
-            WHEN m.normalized_name LIKE input.pattern ESCAPE '\\' THEN m.canonical_name
-            WHEN m.registry_no LIKE input.pattern ESCAPE '\\' THEN m.registry_no
+            WHEN instr(m.normalized_name, input.exact) > 0 THEN m.canonical_name
+            WHEN instr(m.registry_no, input.exact) > 0 THEN m.registry_no
             ELSE (
               SELECT alias.name FROM model_aliases alias
               WHERE alias.model_id = m.id
-                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+                AND instr(alias.normalized_name, input.exact) > 0
               ORDER BY alias.normalized_name, alias.id LIMIT 1
             )
           END AS matched_text,
           '/models/' || m.registry_no AS href,
           m.normalized_name AS canonical_normalized,
           CASE
-            WHEN m.normalized_name LIKE input.pattern ESCAPE '\\' THEN m.normalized_name
-            WHEN m.registry_no LIKE input.pattern ESCAPE '\\' THEN m.registry_no
+            WHEN instr(m.normalized_name, input.exact) > 0 THEN m.normalized_name
+            WHEN instr(m.registry_no, input.exact) > 0 THEN m.registry_no
             ELSE (
               SELECT alias.normalized_name FROM model_aliases alias
               WHERE alias.model_id = m.id
-                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+                AND instr(alias.normalized_name, input.exact) > 0
               ORDER BY alias.normalized_name, alias.id LIMIT 1
             )
           END AS matched_normalized,
           0 AS is_exact
         FROM models m CROSS JOIN input
         WHERE (
-            m.normalized_name LIKE input.pattern ESCAPE '\\'
-            OR m.registry_no LIKE input.pattern ESCAPE '\\'
+            instr(m.normalized_name, input.exact) > 0
+            OR instr(m.registry_no, input.exact) > 0
             OR EXISTS (
               SELECT 1 FROM model_aliases alias
               WHERE alias.model_id = m.id
-                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+                AND instr(alias.normalized_name, input.exact) > 0
             )
           )
           AND m.normalized_name <> input.exact
@@ -806,33 +823,33 @@ export class RegistryRepository {
         UNION ALL
         SELECT 'benchmark', b.canonical_name,
           CASE
-            WHEN b.normalized_name LIKE input.pattern ESCAPE '\\' THEN b.canonical_name
+            WHEN instr(b.normalized_name, input.exact) > 0 THEN b.canonical_name
             ELSE (
               SELECT alias.name FROM benchmark_aliases alias
               WHERE alias.benchmark_id = b.id
-                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+                AND instr(alias.normalized_name, input.exact) > 0
               ORDER BY alias.normalized_name, alias.id LIMIT 1
             )
           END,
           '/benchmarks/' || b.slug,
           b.normalized_name,
           CASE
-            WHEN b.normalized_name LIKE input.pattern ESCAPE '\\' THEN b.normalized_name
+            WHEN instr(b.normalized_name, input.exact) > 0 THEN b.normalized_name
             ELSE (
               SELECT alias.normalized_name FROM benchmark_aliases alias
               WHERE alias.benchmark_id = b.id
-                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+                AND instr(alias.normalized_name, input.exact) > 0
               ORDER BY alias.normalized_name, alias.id LIMIT 1
             )
           END,
           0
         FROM benchmarks b CROSS JOIN input
         WHERE (
-            b.normalized_name LIKE input.pattern ESCAPE '\\'
+            instr(b.normalized_name, input.exact) > 0
             OR EXISTS (
               SELECT 1 FROM benchmark_aliases alias
               WHERE alias.benchmark_id = b.id
-                AND alias.normalized_name LIKE input.pattern ESCAPE '\\'
+                AND instr(alias.normalized_name, input.exact) > 0
             )
           )
           AND b.normalized_name <> input.exact
@@ -845,7 +862,7 @@ export class RegistryRepository {
         SELECT 'company', c.name, c.name, '/companies/' || c.slug,
           c.normalized_name, c.normalized_name, 0
         FROM companies c CROSS JOIN input
-        WHERE c.normalized_name LIKE input.pattern ESCAPE '\\'
+        WHERE instr(c.normalized_name, input.exact) > 0
           AND c.normalized_name <> input.exact
       ),
       candidates AS (
@@ -854,20 +871,28 @@ export class RegistryRepository {
         SELECT * FROM partial_candidates
       )`;
     const total = await this.count(
-      `/* search:count */ WITH input(exact, pattern) AS (VALUES (?, ?)),
+      `/* search:count */ WITH input(exact) AS (VALUES (?)),
         ${candidateCtes}
        SELECT count(*) AS total FROM candidates`,
-      [query, pattern],
+      [query],
     );
     const rows = await this.all<SearchRow>(
-      `/* search:list */ WITH input(exact, pattern) AS (VALUES (?, ?)),
+      `/* search:list */ WITH input(exact) AS (VALUES (?)),
         ${candidateCtes}
-       SELECT entity_type, canonical_name, matched_text, href
+       SELECT candidates.entity_type, candidates.canonical_name, matched_text, href,
+         ${BENCHMARK_ALIASES} AS benchmark_aliases
        FROM candidates
+       LEFT JOIN benchmarks b ON candidates.entity_type = 'benchmark'
+         AND candidates.href = '/benchmarks/' || b.slug
        ORDER BY is_exact DESC, entity_type ASC, canonical_normalized ASC, href ASC
        LIMIT ? OFFSET ?`,
-      [query, pattern, params.limit, (params.page - 1) * params.limit],
+      [query, params.limit, (params.page - 1) * params.limit],
     );
-    return { data: rows, page: pageMetadata(params.page, params.limit, total) };
+    return {
+      data: rows.map(({ benchmark_aliases: aliases, ...row }) => row.entity_type === "benchmark"
+        ? { ...row, aliases: parseJsonArray(aliases) }
+        : row),
+      page: pageMetadata(params.page, params.limit, total),
+    };
   }
 }

@@ -26,6 +26,7 @@ export interface ModelSummary {
 export interface BenchmarkRef {
   name: string;
   slug: string;
+  aliases: string[];
 }
 
 export interface MetricSummary {
@@ -173,6 +174,7 @@ export interface ResultDbRow extends ModelDbRow {
   result_key: string;
   benchmark_name: string;
   benchmark_slug: string;
+  benchmark_aliases: string;
   benchmark_version: string;
   reasoning_level: string;
   metric_name: string;
@@ -199,7 +201,11 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
   return {
     result_key: row.result_key,
     model: modelFromRow(row),
-    benchmark: { name: row.benchmark_name, slug: row.benchmark_slug },
+    benchmark: {
+      name: row.benchmark_name,
+      slug: row.benchmark_slug,
+      aliases: parseJsonArray(row.benchmark_aliases),
+    },
     benchmark_version: row.benchmark_version,
     reasoning_level: row.reasoning_level === "" ? null : row.reasoning_level,
     metric,

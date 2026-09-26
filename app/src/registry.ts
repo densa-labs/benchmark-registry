@@ -1,4 +1,5 @@
 import type {
+  BenchmarkRef,
   BenchmarkVersionSummary,
   CompanySummary,
   ModelSummary,
@@ -39,7 +40,7 @@ export interface ModelDetailResponse {
 
 export interface BenchmarkListResponse {
   data: Array<{
-    benchmark: { name: string; slug: string };
+    benchmark: BenchmarkRef;
     latest_version: string;
     latest_released_at: string;
     latest_release_precision: "date" | "timestamp";
@@ -49,7 +50,7 @@ export interface BenchmarkListResponse {
 
 export interface BenchmarkFamilyResponse {
   data: {
-    benchmark: { name: string; slug: string; aliases: string[] };
+    benchmark: BenchmarkRef;
     versions: BenchmarkVersionSummary[];
   };
 }
@@ -95,12 +96,16 @@ export interface CompanyDetailResponse {
   };
 }
 
-export interface SearchResult {
-  entity_type: "model" | "benchmark" | "company";
+interface SearchResultFields {
   canonical_name: string;
   matched_text: string;
   href: string;
 }
+
+export type SearchResult = SearchResultFields & (
+  | { entity_type: "benchmark"; aliases: string[] }
+  | { entity_type: "model" | "company" }
+);
 
 export interface SearchResponse {
   data: SearchResult[];

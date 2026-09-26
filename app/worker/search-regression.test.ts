@@ -89,6 +89,21 @@ function seedSearchFixtures(database: DatabaseSync) {
       'humanitys-last-exam'
     );
     INSERT INTO benchmark_aliases VALUES (1, 1, 'HLE', 'hle');
+    INSERT INTO benchmarks VALUES (
+      2, 'Massive Multi-discipline Multimodal Understanding',
+      'massive multi-discipline multimodal understanding', 'mmmu'
+    );
+    INSERT INTO benchmark_aliases VALUES (2, 2, 'MMMU', 'mmmu');
+    INSERT INTO benchmarks VALUES (
+      3, 'Massive Multitask Language Understanding',
+      'massive multitask language understanding', 'mmlu'
+    );
+    INSERT INTO benchmark_aliases VALUES (3, 3, 'MMLU', 'mmlu');
+    INSERT INTO benchmarks VALUES (
+      4, 'Graduate-Level Google-Proof Q&A',
+      'graduate-level google-proof q&a', 'gpqa'
+    );
+    INSERT INTO benchmark_aliases VALUES (4, 4, 'GPQA', 'gpqa');
   `);
 }
 
@@ -133,6 +148,51 @@ describe("P8 fixed global search regression suite", () => {
       result.canonical_name,
       result.href,
     ])).toEqual(expected);
+  });
+
+  it.each([
+    ["MMMU", "Massive Multi-discipline Multimodal Understanding", "/benchmarks/mmmu"],
+    ["MMLU", "Massive Multitask Language Understanding", "/benchmarks/mmlu"],
+    ["GPQA", "Graduate-Level Google-Proof Q&A", "/benchmarks/gpqa"],
+  ])("resolves %s and its canonical name to one benchmark family", async (alias, canonical, href) => {
+    const byAlias = await search(alias);
+    const byCanonical = await search(canonical);
+    const aliasResult = byAlias.data.find((result) => result.href === href);
+    const canonicalResult = byCanonical.data.find((result) => result.href === href);
+
+    expect(aliasResult).toMatchObject({
+      entity_type: "benchmark",
+      canonical_name: canonical,
+      matched_text: alias,
+      aliases: [alias],
+      href,
+    });
+    expect(canonicalResult).toMatchObject({
+      entity_type: "benchmark",
+      canonical_name: canonical,
+      matched_text: canonical,
+      aliases: [alias],
+      href,
+    });
+  });
+
+  it("finds the 49 byte MMMU expansion under D1's 50 byte LIKE-pattern limit", async () => {
+    database.function("like", { varargs: true }, (pattern) => {
+      if (new TextEncoder().encode(pattern).byteLength > 50) {
+        throw new Error("LIKE or GLOB pattern too complex");
+      }
+      return 0;
+    });
+
+    const response = await search("Massive Multi-discipline Multimodal Understanding");
+    expect(response.data).toMatchObject([{
+      canonical_name: "Massive Multi-discipline Multimodal Understanding",
+      href: "/benchmarks/mmmu",
+    }]);
+  });
+
+  it.each(["%", "_", "\\"])("treats %s as literal search text", async (query) => {
+    expect((await search(query)).data).toEqual([]);
   });
 
   it("Unicode-case-folds queries and de-duplicates a canonical-name/alias collision", async () => {

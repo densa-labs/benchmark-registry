@@ -184,6 +184,7 @@ describe("Registry foundation view", () => {
           response: {
             data: [{
               entity_type: "benchmark",
+              aliases: ["HLE"],
               canonical_name: "Humanity's Last Exam",
               matched_text: "HLE",
               href: "/benchmarks/humanitys-last-exam",
@@ -229,7 +230,7 @@ const modelDetailResponse: ModelDetailResponse = {
     results: [{
       result_key: "a".repeat(64),
       model,
-      benchmark: { name: "SWE-bench", slug: "swe-bench" },
+      benchmark: { name: "SWE-bench", slug: "swe-bench", aliases: [] },
       benchmark_version: "Verified",
       reasoning_level: "high",
       metric: {

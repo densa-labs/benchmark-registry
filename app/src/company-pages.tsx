@@ -1,4 +1,5 @@
 import type { ModelSummary, ResultRow } from "../worker/api";
+import { BenchmarkLink } from "./benchmark-link";
 import {
   DataTable,
   EmptyState,
@@ -278,8 +279,7 @@ export function CompanyDetailPage({
       sortDirection: benchmarkSort.direction,
       render: (result) => (
         <span className="table-cell-stack">
-          <a href={`/benchmarks/${result.benchmark.slug}`}>{result.benchmark.name}</a>
-          <span>{result.benchmark_version}</span>
+          <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} />
         </span>
       ),
     },

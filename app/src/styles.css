@@ -887,6 +887,15 @@ h3 {
   font-size: 0.72rem;
 }
 
+.benchmark-link {
+  display: inline-block;
+  max-width: min(100%, 28rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
 .model-status {
   text-transform: capitalize;
 }

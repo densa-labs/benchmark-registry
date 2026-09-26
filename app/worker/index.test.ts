@@ -29,6 +29,7 @@ const resultRow = {
   result_key: "a".repeat(64),
   benchmark_name: "SWE-bench Verified",
   benchmark_slug: "swe-bench-verified",
+  benchmark_aliases: '["SWE-bench"]',
   benchmark_version: "2025-02-01",
   reasoning_level: "max",
   metric_name: "Resolved",
@@ -48,6 +49,7 @@ const versionRow = {
   id: 7,
   benchmark_name: "SWE-bench Verified",
   benchmark_slug: "swe-bench-verified",
+  benchmark_aliases: '["SWE-bench"]',
   version: "2025-02-01",
   version_slug: "2025-02-01",
   release_at: "2025-02-01",
@@ -90,6 +92,7 @@ function defaultResponder(tag: string): unknown[] {
     "benchmarks:list": [{
       benchmark_name: versionRow.benchmark_name,
       benchmark_slug: versionRow.benchmark_slug,
+      benchmark_aliases: versionRow.benchmark_aliases,
       latest_version: versionRow.version,
       latest_released_at: versionRow.release_at,
       latest_release_precision: versionRow.release_precision,
@@ -197,6 +200,7 @@ describe("read API response contracts", () => {
         model: { registry_no: "10002", source_url: "https://example.com/model", aliases: ["gpt-4.1-2025-04-14"] },
         redirected_from: null,
         results: [{
+          benchmark: { name: "SWE-bench Verified", aliases: ["SWE-bench"] },
           reasoning_level: "max",
           score: { raw: "54.6%", value: "54.6", display: "54.6%" },
           evaluator_names: ["OpenAI", "SWE-bench"],
@@ -210,12 +214,12 @@ describe("read API response contracts", () => {
     const family = await api("/api/benchmarks/swe-bench-verified");
     expect(family.body).toMatchObject({ data: {
       benchmark: { name: "SWE-bench Verified", slug: "swe-bench-verified", aliases: ["SWE-bench"] },
-      versions: [{ version: "2025-02-01", version_slug: "2025-02-01" }],
+      versions: [{ benchmark: { aliases: ["SWE-bench"] }, version: "2025-02-01", version_slug: "2025-02-01" }],
     } });
 
     const version = await api("/api/benchmarks/swe-bench-verified/2025-02-01");
     expect(version.body).toMatchObject({ data: {
-      version: { benchmark: { slug: "swe-bench-verified" }, metric: { key: "resolved" } },
+      version: { benchmark: { slug: "swe-bench-verified", aliases: ["SWE-bench"] }, metric: { key: "resolved" } },
       evaluator_names: ["SWE-bench"],
       source_url: "https://example.com/benchmark",
       view: "latest",
@@ -226,7 +230,7 @@ describe("read API response contracts", () => {
   it("returns benchmark and company list payloads", async () => {
     const benchmarks = await api("/api/benchmarks");
     expect(benchmarks.body).toMatchObject({ data: [{
-      benchmark: { slug: "swe-bench-verified" },
+      benchmark: { slug: "swe-bench-verified", aliases: ["SWE-bench"] },
       latest_version: "2025-02-01",
     }] });
     const companies = await api("/api/companies");
@@ -367,7 +371,7 @@ describe("filtering, sorting, latest/history, and search", () => {
       data: [{ entity_type: "model", canonical_name: "GPT-4.1", href: "/models/10002" }],
       page: { number: 2, limit: 100 },
     });
-    expect(calls.at(-1)?.bindings).toEqual(["gpt-4.1", "%gpt-4.1%", 100, 100]);
+    expect(calls.at(-1)?.bindings).toEqual(["gpt-4.1", 100, 100]);
     expect(calls.at(-1)?.sql).toContain("exact_candidates AS");
     expect(calls.at(-1)?.sql).toContain("partial_candidates AS");
     expect(calls.at(-1)?.sql).toContain("ORDER BY is_exact DESC");

@@ -41,7 +41,7 @@ const companyDetailResponse: CompanyDetailResponse = {
     results: [{
       result_key: "a".repeat(64),
       model,
-      benchmark: { name: "SWE-bench", slug: "swe-bench" },
+      benchmark: { name: "SWE-bench", slug: "swe-bench", aliases: [] },
       benchmark_version: "Verified",
       reasoning_level: "high",
       metric: {
