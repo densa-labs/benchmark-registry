@@ -31,7 +31,9 @@ shared components/styles rather than separate page-specific visual systems.
   alignment. Homepage loading uses the actual intro, two model lists, and
   directory structure. All skeletons share a subdued two-second shimmer, gated
   by `prefers-reduced-motion: no-preference`. Removed the old override that
-  changed its appearance and geometry.
+  changed its appearance and geometry. Loading headings, metadata labels, and
+  table headers now also use silhouette placeholders; only visually hidden status
+  announcements contain loading text.
 - Worker documents now use React's hydratable server renderer and include
   escaped, request-local initial data. The client hydrates the same loaded page
   components without replacing them with a loader or repeating the startup read.
@@ -46,7 +48,8 @@ shared components/styles rather than separate page-specific visual systems.
   The expansion does not move the main content. Its link region can accept
   future navigation items without changing the shell. Opening and closing use
   restrained 200 ms grid/slide transitions with a short fade. Mobile header inset
-  is 16 px; active navigation/tab underlines sit 0.2em below their text.
+  is 16 px. Navigation and result tabs retain their previous bottom-edge active
+  indicators; the temporary text-underline changes were reverted on request.
 - The shared sticky header uses cumulative direction thresholds (32 px down,
   10 px up), clamps elastic overscroll, and resets on resize/page restoration.
   An open menu or keyboard-focused header stays visible. The staging banner is
@@ -106,8 +109,8 @@ crawl, sitemap enumeration, integrity audit, or remote data write was performed.
 
 Final staging deployment:
 
-- Worker version: `5c22d794-ed56-4a0c-8f92-b91515f3b231`
-- Build timestamp: `2026-09-28 04:36:31` UTC
+- Worker version: `01086cc1-1f6c-403c-94e0-8b494e0e4c30`
+- Build timestamp: `2026-09-28 04:56:48` UTC
 - Exact staging title/banner timestamp verified in the browser.
 - Red favicon configuration, startup console identity, persisted themes,
   timestamp toggle, mobile menu, global Escape, result tabs, organization order,
@@ -121,14 +124,14 @@ Final staging deployment:
 
 Final production deployment, after the staging gate:
 
-- Worker version: `6a434ac1-2a6c-408a-a129-f9501cc6277b`
-- Build timestamp: `2026-09-28 04:38:03` UTC
+- Worker version: `73e45f83-488a-48bd-8c3b-821966213ac4`
+- Build timestamp: `2026-09-28 04:57:31` UTC
 - Same application source, with production environment definitions/assets.
 - No staging banner/title/red favicon/console identification appeared.
 - All page types, exact-result state, desktop/mobile Light/Dark/System controls,
   persistence, footer/date toggle, organization order, and both SVG sort
   directions were verified in the browser. Production console was quiet.
-- A final bounded set of **16 HTTP checks** passed: 11 documents including an
+- During the initial polish verification, a bounded set of **16 HTTP checks** passed: 11 documents including an
   empty filtered result and a real entity 404, three SVG favicons, robots, and
   one 50-row API response. Existing titles, canonical/indexing policy, initial
   content/bootstrap, API noindex header, and status behavior were retained.
@@ -147,21 +150,32 @@ Light/Dark. Desktop 1280 px and mobile 390/320 px checks found no page overflow.
 Fast server-rendered pages already contain loaded content, so they do not show
 an artificial loader. During a real pending native navigation, after 120 ms the
 shared shell shows the destination route skeleton without intercepting navigation
-or fetching extra data. A local eight-second document delay verified 36 visible
+or fetching extra data. The 120 ms threshold delays only the indicator, never
+requests or page loading; no artificial loading duration exists in the app.
+A local eight-second document delay verified 36 visible
 skeleton elements before the Models document arrived. Global search also shows
 shimmer rows while its request is pending. Page restoration/Escape clears the
 navigation feedback. No navigation/cache/performance architecture was changed.
 
-The final correction deployments were checked again for 320 px banner fit,
+The P11.8 deployments were checked for 320 px banner fit,
 16 px mobile branding inset, sticky banner/hide/reveal behavior, footer geometry,
 localized stable timestamps, System persistence, Light/Dark switching, menu
 navigation, desktop layout, and quiet production console. At Asia/Manila the
-production build displays `2026-09-28 12:38:03 UTC+08:00`; its UTC instant remains
-`2026-09-28 04:38:03`. The bounded 16-check production suite passed again.
+production build displays `2026-09-28 12:57:31 UTC+08:00`; its UTC instant remains
+`2026-09-28 04:57:31`. Earlier bounded 16-check production runs passed.
+
+The underline/silhouette follow-up restored the previous navigation/tab bottom
+indicators and removed visible text from every route loader. Eight deterministic
+route cases and actual light/dark static previews confirm silhouette-only loading.
+The native GET submission test confirms navigation is never canceled or delayed
+by the indicator threshold. A single-row production D1 read succeeded before
+verification. Final staging/production checks used representative browser pages;
+no production crawl or repeat integrity audit was performed. These corrections
+were verified/deployed from an isolated checkout to exclude concurrent work.
 
 ## Automated evidence
 
-- `npm test`: **282 tests across 15 files passed**.
+- `npm test`: **290 tests across 15 files passed**.
 - `npm run test:links`: **8 offline fixture tests passed**; no live audit invoked.
 - `npm run typecheck`: passed.
 - `npm run lint`: passed.
@@ -179,9 +193,9 @@ server/client markup compatibility through actual Worker routes (including 404).
 Additional cases cover timezone offsets/DST, cumulative scroll thresholds,
 overscroll/menu pinning, and native GET navigation feedback with restoration.
 
-Raw local evidence is in `/private/tmp/p118-corrections-tests.log`,
-`/private/tmp/p118-corrections-staging-deploy.log`,
-`/private/tmp/p118-corrections-production-deploy.log`, and
+Raw local evidence is in `/private/tmp/p118-underline-tests-isolated.log`,
+`/private/tmp/p118-underline-staging.log`,
+`/private/tmp/p118-underline-production.log`, and
 `/private/tmp/p118-production-representative.json`. Production screenshots are
 saved in the Codex visualization directory for this task.
 

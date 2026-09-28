@@ -26,11 +26,10 @@ export function RouteLoadingState({ route }: { route: RegistryRoute }) {
       <span className="visually-hidden">Loading registry results</span>
       <div aria-hidden="true">
         <header className="page-header">
-          {index ? <h1>{route.kind === "companies" ? "Organizations" : route.kind === "models" ? "Models" : "Benchmarks"}</h1>
-            : <h1><span className="skeleton skeleton--title" /></h1>}
+          <h1><span className="skeleton skeleton--title" /></h1>
           {index || family || route.kind === "benchmark-version" ? <p className="page-header__description"><span className="skeleton skeleton--subtitle" /></p> : null}
         </header>
-        {labels.length ? <section className="entity-metadata"><MetadataRows items={labels.map((label) => ({ label, value: <span className="skeleton skeleton--value" /> }))} /></section> : null}
+        {labels.length ? <section className="entity-metadata"><MetadataRows loading items={labels.map((label) => ({ label, value: <span className="skeleton skeleton--value" /> }))} /></section> : null}
         {!family ? <div className="local-search"><div className="local-search__field"><span className="local-search__label skeleton skeleton--label" /><div className="local-search__controls loading-search"><span className="skeleton" /></div></div></div> : null}
         <section className="results-section">
           <div className="results-section__header"><div><h2><span className="skeleton skeleton--section" /></h2><p><span className="skeleton skeleton--label" /></p></div>{!family ? <span className="skeleton skeleton--control" /> : null}</div>

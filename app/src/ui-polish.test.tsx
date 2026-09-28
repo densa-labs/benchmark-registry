@@ -8,7 +8,7 @@ import { readInitialDocument, serializeInitialDocument } from "./bootstrap";
 import { AppShell, Header, LoadingState, SortableHeader } from "./ui/components";
 import { RouteLoadingState } from "./ui/route-loading";
 import { HomeLoadingState } from "./home-page";
-import type { LoadedRegistryRoute } from "./registry";
+import { resolveRegistryRoute, type LoadedRegistryRoute } from "./registry";
 import { BUILD_TIMESTAMP } from "./build";
 import { formatBuildTime } from "./build-time";
 import { readFileSync } from "node:fs";
@@ -118,14 +118,17 @@ describe("P11.8 visible interactions", () => {
       <form method="get" action="/models"><input name="q" defaultValue="gpt" /></form><p>Loaded page</p>
     </AppShell>);
     await act(() => {
-      container.querySelector("main form")!.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+      const submission = new Event("submit", { bubbles: true, cancelable: true });
+      expect(container.querySelector("main form")!.dispatchEvent(submission)).toBe(true);
+      expect(submission.defaultPrevented).toBe(false);
       vi.advanceTimersByTime(119);
     });
     expect(container.querySelector(".skeleton")).toBeNull();
     await act(() => { vi.advanceTimersByTime(1); });
     expect(container.querySelector("main")?.getAttribute("aria-busy")).toBe("true");
     expect(container.querySelector(".skeleton")).toBeTruthy();
-    expect(container.querySelector("h1")?.textContent).toBe("Models");
+    expect(container.querySelector("h1 .skeleton")).toBeTruthy();
+    expect(container.querySelector("h1")?.textContent).toBe("");
     expect(fetcher).not.toHaveBeenCalled();
     await act(() => window.dispatchEvent(new Event("pageshow")));
     expect(container.querySelector(".skeleton")).toBeNull();
@@ -140,6 +143,14 @@ describe("P11.8 visible interactions", () => {
 });
 
 describe("P11.8 presentation contracts", () => {
+  it.each(["/", "/models", "/models/10001", "/benchmarks", "/benchmarks/example", "/benchmarks/example/1-0", "/companies", "/companies/example"])("renders only silhouettes for %s loading content", (pathname) => {
+    const route = resolveRegistryRoute(pathname);
+    container.innerHTML = renderToStaticMarkup(route.kind === "home" ? <HomeLoadingState /> : <RouteLoadingState route={route} />);
+    expect(container.querySelectorAll(".skeleton").length).toBeGreaterThan(0);
+    expect(container.querySelector('[role="status"]')).toBeTruthy();
+    container.querySelectorAll(".visually-hidden").forEach((announcement) => announcement.remove());
+    expect(container.textContent?.trim()).toBe("");
+  });
   it.each([undefined, "asc", "desc"] as const)("renders currentColor SVG sorting for %s", (direction) => {
     container.innerHTML = renderToStaticMarkup(<SortableHeader href="?sort=model" label="Model" direction={direction} />);
     expect(container.querySelector("a")?.getAttribute("href")).toBe("?sort=model");
@@ -151,7 +162,8 @@ describe("P11.8 presentation contracts", () => {
   it("uses loaded table geometry for route skeletons and a shared reduced-motion shimmer", () => {
     const org = renderToStaticMarkup(<RouteLoadingState route={{ kind: "company", slug: "openai" }} />);
     container.innerHTML = org;
-    expect([...container.querySelectorAll("th")].map((th) => th.textContent)).toEqual(["Model", "Benchmark", "Score", "Source", "Registry No."]);
+    expect([...container.querySelectorAll("th")].map((th) => th.textContent)).toEqual(["", "", "", "", ""]);
+    expect(container.querySelectorAll("thead .skeleton")).toHaveLength(5);
     expect(container.querySelectorAll(".metadata-row")).toHaveLength(2);
     expect(container.querySelectorAll("thead .data-table__primary")).toHaveLength(2);
     const home = renderToStaticMarkup(<HomeLoadingState />);

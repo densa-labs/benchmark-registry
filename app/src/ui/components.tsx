@@ -513,12 +513,12 @@ export interface MetadataItem {
   value: ReactNode;
 }
 
-export function MetadataRows({ items }: { items: MetadataItem[] }) {
+export function MetadataRows({ items, loading = false }: { items: MetadataItem[]; loading?: boolean }) {
   return (
     <dl className="metadata-rows">
       {items.map((item) => (
         <div className="metadata-row" key={item.label}>
-          <dt>{item.label}</dt>
+          <dt>{loading ? <span className="skeleton skeleton--label" /> : item.label}</dt>
           <dd>{item.value}</dd>
         </div>
       ))}
@@ -718,7 +718,7 @@ export function LoadingState({ columns = 5, rows = 4, labels }: { columns?: numb
     <div className="loading-state" role="status" aria-live="polite" aria-busy="true">
       <span className="visually-hidden">Loading registry results</span>
       <div className="table-scroll" aria-hidden="true"><table className="data-table" data-columns={headers.length}>
-        <thead><tr>{headers.map((label, index) => <th key={index} className={cellClass(label)}>{label || <span className="skeleton" />}</th>)}</tr></thead>
+        <thead><tr>{headers.map((label, index) => <th key={index} className={cellClass(label)}><span className="skeleton skeleton--label" style={{ width: `${Math.max(label.length, 4)}ch` }} /></th>)}</tr></thead>
         <tbody>{Array.from({ length: rows }, (_, rowIndex) => <tr key={rowIndex}>{headers.map((label, index) =>
           <td key={index} className={cellClass(label)}><span className="skeleton skeleton--cell" /></td>)}</tr>)}</tbody>
       </table></div>
