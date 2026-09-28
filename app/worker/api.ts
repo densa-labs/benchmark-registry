@@ -1,3 +1,4 @@
+import { exactResultPath } from "./result-links";
 export type DatePrecision = "date" | "timestamp";
 export type CompanyDatePrecision = "year" | DatePrecision;
 export type ResultView = "latest" | "history";
@@ -48,9 +49,11 @@ export interface BenchmarkVersionSummary {
 
 export interface ResultRow {
   result_key: string;
+  exact_result_href: string | null;
   model: ModelSummary;
   benchmark: BenchmarkRef;
   benchmark_version: string;
+  benchmark_version_slug: string;
   reasoning_level: string | null;
   metric: MetricSummary;
   score: {
@@ -171,11 +174,13 @@ export function modelFromRow(row: ModelDbRow): ModelSummary {
 }
 
 export interface ResultDbRow extends ModelDbRow {
+  exact_result_indexable: number;
   result_key: string;
   benchmark_name: string;
   benchmark_slug: string;
   benchmark_aliases: string;
   benchmark_version: string;
+  benchmark_version_slug: string;
   reasoning_level: string;
   metric_name: string;
   metric_key: string;
@@ -200,6 +205,8 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
   };
   return {
     result_key: row.result_key,
+    exact_result_href: row.exact_result_indexable === 1
+      ? exactResultPath(row.benchmark_slug, row.benchmark_version_slug, row.result_key) : null,
     model: modelFromRow(row),
     benchmark: {
       name: row.benchmark_name,
@@ -207,6 +214,7 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
       aliases: parseJsonArray(row.benchmark_aliases),
     },
     benchmark_version: row.benchmark_version,
+    benchmark_version_slug: row.benchmark_version_slug,
     reasoning_level: row.reasoning_level === "" ? null : row.reasoning_level,
     metric,
     score: {

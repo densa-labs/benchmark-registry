@@ -31,6 +31,8 @@ const resultRow = {
   benchmark_slug: "swe-bench-verified",
   benchmark_aliases: '["SWE-bench"]',
   benchmark_version: "2025-02-01",
+  benchmark_version_slug: "2025-02-01",
+  exact_result_indexable: 1,
   reasoning_level: "max",
   metric_name: "Resolved",
   metric_key: "resolved",

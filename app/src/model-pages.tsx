@@ -1,3 +1,4 @@
+import { ResultScoreLink } from "./result-score-link";
 import type { ModelSummary, ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
 import {
@@ -277,7 +278,7 @@ export function ModelDetailPage({
       sortDirection: benchmarkSort.direction,
       render: (result) => (
         <span className="table-cell-stack">
-          <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} />
+          <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
           {result.reasoning_level ? (
             <span>{model.name} ({result.reasoning_level})</span>
           ) : null}
@@ -288,7 +289,7 @@ export function ModelDetailPage({
       key: "score",
       label: "Score",
       className: "numeric",
-      render: (result) => result.score.display,
+      render: (result) => <ResultScoreLink result={result} />,
     },
     {
       key: "source",

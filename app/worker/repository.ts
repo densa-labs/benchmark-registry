@@ -1,3 +1,4 @@
+import { EXACT_RESULT_ELIGIBLE_SQL } from "./result-links";
 import {
   ApiError,
   type BenchmarkVersionSummary,
@@ -122,6 +123,8 @@ const RESULT_COLUMNS = `
   b.slug AS benchmark_slug,
   ${BENCHMARK_ALIASES} AS benchmark_aliases,
   bv.version AS benchmark_version,
+  bv.version_slug AS benchmark_version_slug,
+  ${EXACT_RESULT_ELIGIBLE_SQL} AS exact_result_indexable,
   r.reasoning_level,
   metric.name AS metric_name,
   metric.key AS metric_key,
@@ -410,9 +413,10 @@ export class RegistryRepository {
   }
 
   async metadataResult(slug: string, versionSlug: string, resultKey: string) {
-    return this.first<{ name: string; company_name: string; registry_no: string; company_slug: string; retained_count: number; score_raw: string; primary_source_url: string; reasoning_level: string }>(
+    return this.first<{ name: string; company_name: string; registry_no: string; company_slug: string; retained_count: number; exact_result_indexable: number; score_raw: string; primary_source_url: string; reasoning_level: string }>(
       `/* metadata:result */ SELECT m.canonical_name AS name, c.name AS company_name,
        m.registry_no, c.slug AS company_slug, r.score_raw, r.primary_source_url, r.reasoning_level,
+       ${EXACT_RESULT_ELIGIBLE_SQL} AS exact_result_indexable,
        (SELECT count(*) FROM results peers WHERE peers.model_id = r.model_id
         AND peers.benchmark_version_id = r.benchmark_version_id) AS retained_count
        FROM results r JOIN models m ON m.id = r.model_id
@@ -436,9 +440,7 @@ export class RegistryRepository {
         || '?view=history&result=' || r.result_key
         FROM results r JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
         JOIN benchmarks b ON b.id = bv.benchmark_id
-        WHERE (SELECT count(*) FROM results peers WHERE peers.model_id = r.model_id
-          AND peers.benchmark_version_id = r.benchmark_version_id) = 1
-          AND NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id = r.model_id)
+        WHERE ${EXACT_RESULT_ELIGIBLE_SQL}
       ORDER BY path`);
     return ['/', '/models', '/benchmarks', '/companies', ...rows.map((row) => row.path)];
   }
@@ -459,7 +461,7 @@ export class RegistryRepository {
   }
 
   async models(params: ParsedListParams) {
-    const clauses: string[] = [];
+    const clauses: string[] = ["NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id = m.id)"];
     const bindings: BindValue[] = [];
     if (params.company !== undefined) {
       clauses.push("c.slug = ?");

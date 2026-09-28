@@ -81,35 +81,8 @@ export function App() {
         <ErrorState title="Unable to load registry data" description={state.message} />
       </PageContainer>
     );
-  } else if (state.route.kind === "home") {
-    content = <HomePage response={state.route.payload} />;
-  } else if (state.route.kind === "models") {
-    content = <ModelsPage response={state.route.payload} currentSearch={location.search} />;
-  } else if (state.route.kind === "model") {
-    content = <ModelDetailPage response={state.route.payload} currentSearch={location.search} />;
-  } else if (state.route.kind === "benchmarks") {
-    content = <BenchmarksPage response={state.route.payload} currentSearch={location.search} />;
-  } else if (state.route.kind === "benchmark") {
-    content = <BenchmarkFamilyPage response={state.route.payload} />;
-  } else if (state.route.kind === "benchmark-version") {
-    content = (
-      <BenchmarkVersionPage
-        response={state.route.payload}
-        currentSearch={location.search}
-      />
-    );
-  } else if (state.route.kind === "companies") {
-    content = <CompaniesPage response={state.route.payload} currentSearch={location.search} />;
-  } else if (state.route.kind === "company") {
-    content = (
-      <CompanyDetailPage response={state.route.payload} currentSearch={location.search} />
-    );
   } else {
-    content = (
-      <PageContainer className="registry-page">
-        <NotFoundState />
-      </PageContainer>
-    );
+    return <RegistryDocument loaded={state.route} currentSearch={location.search} />;
   }
 
   return (
@@ -123,6 +96,49 @@ export function App() {
           ? "/companies"
           : "/models"}
     >
+      {content}
+    </AppShell>
+  );
+}
+
+// Shared by the client and the Worker initial document; effects stay client-only.
+export function RegistryDocument({ loaded, currentSearch }: { loaded: LoadedRegistryRoute; currentSearch: string }) {
+  let content;
+  if (loaded.kind === "home") {
+    content = <HomePage response={loaded.payload} />;
+  } else if (loaded.kind === "models") {
+    content = <ModelsPage response={loaded.payload} currentSearch={currentSearch} />;
+  } else if (loaded.kind === "model") {
+    content = <ModelDetailPage response={loaded.payload} currentSearch={currentSearch} />;
+  } else if (loaded.kind === "benchmarks") {
+    content = <BenchmarksPage response={loaded.payload} currentSearch={currentSearch} />;
+  } else if (loaded.kind === "benchmark") {
+    content = <BenchmarkFamilyPage response={loaded.payload} />;
+  } else if (loaded.kind === "benchmark-version") {
+    content = (
+      <BenchmarkVersionPage
+        response={loaded.payload}
+        currentSearch={currentSearch}
+      />
+    );
+  } else if (loaded.kind === "companies") {
+    content = <CompaniesPage response={loaded.payload} currentSearch={currentSearch} />;
+  } else if (loaded.kind === "company") {
+    content = (
+      <CompanyDetailPage response={loaded.payload} currentSearch={currentSearch} />
+    );
+  } else {
+    content = (
+      <PageContainer className="registry-page">
+        <NotFoundState />
+      </PageContainer>
+    );
+  }
+
+  return (
+    <AppShell navigation={navigation} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
+      ? undefined : loaded.kind.startsWith("benchmark") ? "/benchmarks"
+      : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {content}
     </AppShell>
   );

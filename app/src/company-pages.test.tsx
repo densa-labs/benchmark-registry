@@ -43,6 +43,8 @@ const companyDetailResponse: CompanyDetailResponse = {
       model,
       benchmark: { name: "SWE-bench", slug: "swe-bench", aliases: [] },
       benchmark_version: "Verified",
+      benchmark_version_slug: "verified",
+      exact_result_href: null,
       reasoning_level: "high",
       metric: {
         name: "Resolved",
@@ -96,7 +98,7 @@ describe("P7.3 company pages", () => {
     expect(markup).toContain("Search benchmarks or models");
     expect(markup).toContain('aria-label="Result view"');
     expect(markup).toContain('aria-current="page">History</a>');
-    expect(markup).toContain('href="/benchmarks/swe-bench"');
+    expect(markup).toContain('href="/benchmarks/swe-bench/verified"');
     expect(markup).toContain("Verified");
     expect(markup).toContain("GPT-4.1 (high)");
     expect(markup).toContain("54.6%");

@@ -1,3 +1,4 @@
+import { renderDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { parseParameters } from "./params";
 import { RegistryRepository } from "./repository";
@@ -179,7 +180,11 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
       url.pathname = new URL(metadata.canonical).pathname;
       return Response.redirect(url.toString(), 308);
     }
-    const html = rewriteMetadata(await response.text(), metadata, url);
+    const content = metadata.status === 404 ? undefined : await renderDocument(url, async (input) => {
+      // Run the existing read API directly against this environment's isolated D1.
+      return handleApi(new Request(new URL(String(input), url.origin)), env);
+    });
+    const html = rewriteMetadata(await response.text(), metadata, url, content);
     const headers = new Headers(response.headers);
     // The static template's validators and length no longer describe this response.
     for (const header of ["ETag", "Content-Length", "Last-Modified", "Content-Encoding"]) headers.delete(header);

@@ -1,9 +1,10 @@
+import { ResultScoreLink } from "./result-score-link";
 import type {
   BenchmarkVersionSummary,
   ResultRow,
 } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
-import { benchmarkDisplayName } from "./benchmark-names";
+import { benchmarkDisplayName, benchmarkVersionLabel } from "./benchmark-names";
 import {
   DataTable,
   EmptyState,
@@ -260,7 +261,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
       className: "data-table__primary",
       render: (version) => (
         <a href={`/benchmarks/${benchmark.slug}/${version.version_slug}`}>
-          {version.version}
+          {benchmarkVersionLabel(benchmark, version.version)}
         </a>
       ),
     },
@@ -363,7 +364,7 @@ export function BenchmarkVersionPage({
       key: "score",
       label: "Score",
       className: "numeric",
-      render: (result) => result.score.display,
+      render: (result) => <ResultScoreLink result={result} />,
     },
     {
       key: "source",
@@ -395,12 +396,13 @@ export function BenchmarkVersionPage({
       <section className="entity-metadata" aria-label="Benchmark version metadata">
         <MetadataRows
           items={[
+            { label: "Benchmark", value: <BenchmarkLink benchmark={version.benchmark} /> },
             { label: "Evaluated by", value: evaluatorNames.join(", ") },
             {
               label: "Release date",
               value: formatRegistryDate(version.released_at, version.release_precision),
             },
-            { label: "Version", value: version.version },
+            { label: "Version", value: <BenchmarkLink benchmark={version.benchmark} version={version.version} versionSlug={version.version_slug} /> },
             { label: "Metric", value: version.metric.name },
           ]}
         />
