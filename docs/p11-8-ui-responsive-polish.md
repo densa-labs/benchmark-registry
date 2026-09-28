@@ -33,7 +33,9 @@ shared components/styles rather than separate page-specific visual systems.
   by `prefers-reduced-motion: no-preference`. Removed the old override that
   changed its appearance and geometry. Loading headings, metadata labels, and
   table headers now also use silhouette placeholders; only visually hidden status
-  announcements contain loading text.
+  announcements contain loading text. Follow-up polish removed the loading view's
+  input outline, table and metadata dividers, tab rules, and suggestion borders;
+  the placeholders remain as plain silhouettes.
 - Worker documents now use React's hydratable server renderer and include
   escaped, request-local initial data. The client hydrates the same loaded page
   components without replacing them with a loader or repeating the startup read.
@@ -109,8 +111,8 @@ crawl, sitemap enumeration, integrity audit, or remote data write was performed.
 
 Final staging deployment:
 
-- Worker version: `01086cc1-1f6c-403c-94e0-8b494e0e4c30`
-- Build timestamp: `2026-09-28 04:56:48` UTC
+- Worker version: `37f11be0-1e9c-4593-ae3d-5f6eb7df18f3`
+- Build timestamp: `2026-09-28 05:05:33` UTC
 - Exact staging title/banner timestamp verified in the browser.
 - Red favicon configuration, startup console identity, persisted themes,
   timestamp toggle, mobile menu, global Escape, result tabs, organization order,
@@ -124,8 +126,8 @@ Final staging deployment:
 
 Final production deployment, after the staging gate:
 
-- Worker version: `73e45f83-488a-48bd-8c3b-821966213ac4`
-- Build timestamp: `2026-09-28 04:57:31` UTC
+- Worker version: `689050a8-eff2-46a4-88ab-974b4b2fd5f9`
+- Build timestamp: `2026-09-28 05:06:07` UTC
 - Same application source, with production environment definitions/assets.
 - No staging banner/title/red favicon/console identification appeared.
 - All page types, exact-result state, desktop/mobile Light/Dark/System controls,
@@ -161,17 +163,19 @@ The P11.8 deployments were checked for 320 px banner fit,
 16 px mobile branding inset, sticky banner/hide/reveal behavior, footer geometry,
 localized stable timestamps, System persistence, Light/Dark switching, menu
 navigation, desktop layout, and quiet production console. At Asia/Manila the
-production build displays `2026-09-28 12:57:31 UTC+08:00`; its UTC instant remains
-`2026-09-28 04:57:31`. Earlier bounded 16-check production runs passed.
+production build displays `2026-09-28 13:06:07 UTC+08:00`; its UTC instant remains
+`2026-09-28 05:06:07`. Earlier bounded 16-check production runs passed.
 
 The underline/silhouette follow-up restored the previous navigation/tab bottom
-indicators and removed visible text from every route loader. Eight deterministic
+indicators. It removed outlines and divider rules from loading search, metadata,
+tabs, table headers and rows, homepage sections, and global search suggestions.
+Skeleton previews showed only placeholder silhouettes. Eight deterministic
 route cases and actual light/dark static previews confirm silhouette-only loading.
 The native GET submission test confirms navigation is never canceled or delayed
 by the indicator threshold. A single-row production D1 read succeeded before
-verification. Final staging/production checks used representative browser pages;
-no production crawl or repeat integrity audit was performed. These corrections
-were verified/deployed from an isolated checkout to exclude concurrent work.
+verification. The final line-removal builds were separately deployed to staging
+and production. The updated production build timestamp is `2026-09-28 13:06:07 UTC+08:00` for Asia/Manila. These corrections were deployed from an isolated
+checkout to exclude concurrent work.
 
 ## Automated evidence
 

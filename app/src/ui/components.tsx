@@ -313,7 +313,7 @@ export function GlobalSearchPanel({ state, activeIndex = -1 }: {
 }) {
   if (state.status === "loading") {
     return (
-      <div className="global-search-panel global-search-panel--status" id="global-search-results">
+      <div className="global-search-panel global-search-panel--status global-search-panel--loading" id="global-search-results">
         <p className="visually-hidden" aria-live="polite">Searching the registry...</p>
         <ul className="global-search-loading" aria-hidden="true">{[0, 1, 2].map((row) =>
           <li key={row}><span className="skeleton skeleton--label" /><span className="skeleton skeleton--value" /></li>

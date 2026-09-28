@@ -268,6 +268,12 @@ a:hover {
   padding: 0.8rem;
 }
 
+.global-search-panel--loading {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
 .global-search-panel--status p {
   margin: 0;
   color: var(--text-muted);
@@ -988,6 +994,12 @@ h3 {
   border-bottom: 1px solid var(--border-strong);
 }
 .loading-state { min-width: 0; }
+.route-loading [aria-hidden="true"] *,
+.home-page--loading [aria-hidden="true"] * { border-color: transparent; box-shadow: none; }
+.route-loading .loading-search { background: transparent; }
+.route-loading .data-table th { background: transparent; }
+.route-loading .table-scroll { overflow: hidden; scrollbar-width: none; }
+.global-search-panel--loading .global-search-loading li { border: 0; }
 .skeleton { display: inline-block; max-width: 100%; height: 0.625rem; background: var(--surface-strong); vertical-align: middle; }
 .skeleton--title { display: block; width: 18rem; height: 1.15em; }
 .skeleton--subtitle { width: 13rem; height: 0.875rem; }

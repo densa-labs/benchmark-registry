@@ -174,6 +174,7 @@ describe("P11.8 presentation contracts", () => {
     expect(styles).toContain("@media (prefers-reduced-motion: no-preference)");
     expect(styles).toContain("animation: skeleton-loading");
     expect(styles.match(/animation: skeleton-loading/gu)).toHaveLength(1);
+    expect(styles).toContain('.route-loading [aria-hidden="true"] *,\n.home-page--loading [aria-hidden="true"] * { border-color: transparent; box-shadow: none; }');
     expect(styles).toContain("height: 1.15em");
     expect(styles).not.toContain("position: sticky;\n    left: 0");
   });
