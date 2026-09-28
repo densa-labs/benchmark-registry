@@ -1,13 +1,16 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "@fontsource-variable/geist";
-import "@fontsource-variable/geist-mono";
+import { createRoot, hydrateRoot } from "react-dom/client";
 
 import { App } from "./App";
 import "./styles.css";
 import { applyStoredTheme } from "./theme";
+import { readInitialDocument } from "./bootstrap";
+import { identifyBuild, installErrorDiagnostics } from "./diagnostics";
+import { resolveRegistryRoute } from "./registry";
 
-applyStoredTheme(document.documentElement, window.localStorage);
+try { applyStoredTheme(document.documentElement, window.localStorage); } catch { /* OS theme remains available through CSS. */ }
+identifyBuild(resolveRegistryRoute(window.location.pathname).kind);
+installErrorDiagnostics(window);
 
 const rootElement = document.getElementById("root");
 
@@ -15,8 +18,7 @@ if (!rootElement) {
   throw new Error("Application root element was not found.");
 }
 
-createRoot(rootElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+const initial = readInitialDocument(document);
+const application = <StrictMode><App initial={initial} /></StrictMode>;
+if (initial) hydrateRoot(rootElement, application);
+else createRoot(rootElement).render(application);

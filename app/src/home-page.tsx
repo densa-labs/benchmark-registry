@@ -9,11 +9,19 @@ export function HomeLoadingState() {
     <PageContainer className="registry-page home-page home-page--loading">
       <div role="status" aria-busy="true" aria-label="Loading homepage data">
         <span className="visually-hidden">Loading homepage data</span>
-        <div className="home-loading__intro" />
-        <div className="home-loading__sections">
-          <div /><div />
+        <div aria-hidden="true">
+          <header className="home-intro"><h1><span className="skeleton skeleton--title" /></h1><div className="home-scale"><p className="home-scale__primary"><span className="skeleton skeleton--section" /></p><p className="home-scale__support"><span className="skeleton skeleton--subtitle" /></p></div></header>
+          <div className="home-sections">{[0, 1].map((section) => <section className="home-section" key={section}>
+            <header className="home-section__header"><div><h2><span className="skeleton skeleton--section" /></h2><p><span className="skeleton skeleton--subtitle" /></p></div><span className="skeleton skeleton--label" /></header>
+            <ol className="home-model-list">{Array.from({ length: 5 }, (_, row) => <li key={row}>
+              <span className="home-model-list__identity"><span className="skeleton skeleton--value" /><span className="skeleton skeleton--label" /></span>
+              <span className="home-model-list__metadata"><span className="skeleton skeleton--value" /><span className="skeleton skeleton--label" /></span>
+            </li>)}</ol>
+          </section>)}</div>
+          <section className="home-directory"><header className="home-section__header"><div><h2><span className="skeleton skeleton--section" /></h2><p><span className="skeleton skeleton--subtitle" /></p></div></header>
+            <div className="home-directory__group"><h3><span className="skeleton skeleton--initial" /></h3><ul>{Array.from({ length: 9 }, (_, row) => <li key={row}><span className="skeleton skeleton--value" /><span className="home-directory__provider skeleton skeleton--label" /><span className="registry-number skeleton skeleton--label" /></li>)}</ul></div>
+          </section>
         </div>
-        <div className="home-loading__directory" />
       </div>
     </PageContainer>
   );

@@ -6,6 +6,7 @@ import type {
   Page,
   ResultRow,
 } from "../worker/api";
+import { diagnoseApiFailure } from "./diagnostics";
 
 export interface ModelListResponse {
   data: ModelSummary[];
@@ -230,7 +231,7 @@ export async function searchRegistry(
     signal,
   });
   const body: unknown = await response.json();
-  if (!response.ok) throw new RegistryClientError(errorMessage(body));
+  if (!response.ok) { diagnoseApiFailure(response.status); throw new RegistryClientError(errorMessage(body)); }
   return body as SearchResponse;
 }
 
@@ -255,7 +256,7 @@ async function loadBenchmarkCompanies(
       signal,
     });
     const body: unknown = await response.json();
-    if (!response.ok) throw new RegistryClientError(errorMessage(body));
+    if (!response.ok) { diagnoseApiFailure(response.status); throw new RegistryClientError(errorMessage(body)); }
 
     const payload = body as BenchmarkVersionResponse;
     for (const result of payload.data.results) {
@@ -328,7 +329,7 @@ export async function loadRegistryRoute(
   const body: unknown = await response.json();
 
   if (response.status === 404) return { kind: "not-found" };
-  if (!response.ok) throw new RegistryClientError(errorMessage(body));
+  if (!response.ok) { diagnoseApiFailure(response.status); throw new RegistryClientError(errorMessage(body)); }
 
   switch (route.kind) {
     case "models":

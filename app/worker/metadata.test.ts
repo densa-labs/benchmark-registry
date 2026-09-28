@@ -4,7 +4,10 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import worker, { type Env } from "./index";
 import { asD1Database, seedSearchFixtures } from "./search-test-fixtures";
 
-vi.mock("./document", () => ({ renderDocument: async () => undefined }));
+vi.mock("./document", async (importOriginal) => ({
+  ...await importOriginal<typeof import("./document")>(),
+  renderDocument: async () => undefined,
+}));
 
 const resultKey = "a".repeat(64);
 

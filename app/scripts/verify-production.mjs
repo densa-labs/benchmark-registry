@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { stdout } from "node:process";
+import { verifyUiBuild } from "./verify-ui-build.mjs";
 
 const workerName = "benchmark-registry-production";
 const databaseName = "benchmark-registry-production";
@@ -69,3 +70,4 @@ assert.ok(existsSync(join(configs[0], "..", deployment.main)));
 assert.ok(existsSync(join(configs[0], "..", deployment.d1_databases[0].migrations_dir)));
 
 stdout.write(`Verified ${workerName}, apex and www, and isolated ${databaseName} binding.\n`);
+verifyUiBuild(false, join(configs[0], "..", deployment.main));

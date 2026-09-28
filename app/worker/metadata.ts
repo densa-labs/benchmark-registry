@@ -2,6 +2,7 @@ import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-na
 import { resolveRegistryRoute } from "../src/registry";
 import type { BenchmarkRef } from "./api";
 import { RegistryRepository } from "./repository";
+import { IS_STAGING } from "../src/build";
 
 export interface DocumentMetadata {
   title: string;
@@ -126,6 +127,7 @@ export function escapeHtml(value: string): string {
 
 export function metadataHead(metadata: DocumentMetadata, url: URL): string {
   const title = escapeHtml(metadata.title);
+  const documentTitle = IS_STAGING ? "STAGING | Benchmark Registry" : title;
   const description = escapeHtml(metadata.description);
   // Sharing metadata follows the same deterministic production canonical.
   const pageUrl = metadata.canonical
@@ -133,7 +135,7 @@ export function metadataHead(metadata: DocumentMetadata, url: URL): string {
   const canonical = metadata.canonical ? `<link rel="canonical" href="${escapeHtml(metadata.canonical)}">` : "";
   const robots = metadata.noindex || url.hostname !== 'benchmarkregistry.org'
     ? '<meta name="robots" content="noindex, follow">' : '';
-  return `<title>${title}</title>
+  return `<title>${documentTitle}</title>
 <meta name="description" content="${description}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">

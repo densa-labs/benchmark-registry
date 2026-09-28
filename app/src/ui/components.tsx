@@ -2,25 +2,31 @@ import {
   useEffect,
   useRef,
   useState,
+  useSyncExternalStore,
   type FormEvent,
   type KeyboardEvent,
   type ReactNode,
 } from "react";
 
-import darkLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-Dark.png";
-import whiteLogoUrl from "../../../assets/Benchmark-Registry-B-Logo-White.png";
+import { BUILD_TIMESTAMP, IS_STAGING, REGISTRY_DATA_DATE } from "../build";
+import { formatBuildTime, viewerTimeZone } from "../build-time";
+import { advanceHeaderScroll, initialHeaderScroll } from "./header-scroll";
+import { useNavigationLoading } from "./navigation-loading";
+import { diagnoseTheme } from "../diagnostics";
+import { ExternalIcon, GitHubIcon, MenuIcon, RegistryMark, SortIcon } from "./icons";
 import { benchmarkDisplayName } from "../benchmark-names";
 import {
   RegistryClientError,
   searchRegistry,
   type SearchResponse,
+  type RegistryRoute,
 } from "../registry";
 import {
   readStoredTheme,
   resolveTheme,
   storeTheme,
   SYSTEM_DARK_THEME_QUERY,
-  type Theme,
+  type ThemePreference,
 } from "../theme";
 
 export type SortDirection = "asc" | "desc";
@@ -34,14 +40,19 @@ export interface AppShellProps {
   children: ReactNode;
   navigation: NavigationItem[];
   activeHref?: string;
+  renderPending?: (route: RegistryRoute) => ReactNode;
 }
 
 export function AppShell({
   children,
   navigation,
   activeHref,
+  renderPending,
 }: AppShellProps) {
-  const { theme, selectTheme } = useThemePreference();
+  const { preference, selectTheme } = useThemePreference();
+  const [showBuildTime, setShowBuildTime] = useState(false);
+  const buildTime = useLocalizedBuildTime();
+  const pending = useNavigationLoading(Boolean(renderPending));
 
   return (
     <div className="app-shell">
@@ -51,18 +62,26 @@ export function AppShell({
       <Header
         navigation={navigation}
         activeHref={activeHref}
-        theme={theme}
       />
-      <main id="main-content">{children}</main>
+      <main id="main-content" aria-busy={pending ? true : undefined} style={pending ? { minHeight: pending.height } : undefined}>
+        {pending && renderPending ? renderPending(pending.route) : children}
+      </main>
       <footer className="site-footer">
         <PageContainer className="site-footer__inner">
-          <p>
+          <div className="site-footer__dates"><p>
             © 2026{" "}
             <a className="site-footer__credit-link" href="https://densa-labs.github.io/">
               Densa Labs
             </a>
           </p>
-          <ThemeToggle theme={theme} onSelectTheme={selectTheme} />
+          <button className="last-updated" type="button" onClick={() => setShowBuildTime((shown) => !shown)}>
+            Last updated: {showBuildTime ? buildTime : REGISTRY_DATA_DATE}
+          </button></div>
+          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/legal">Legal</a></nav>
+          <div className="site-footer__controls">
+            <ThemeToggle theme={preference} onSelectTheme={selectTheme} />
+            <a className="github-link" href="https://github.com/densa-labs/benchmark-registry" aria-label="Benchmark Registry on GitHub"><GitHubIcon /></a>
+          </div>
         </PageContainer>
       </footer>
     </div>
@@ -72,49 +91,100 @@ export function AppShell({
 interface HeaderProps {
   navigation: NavigationItem[];
   activeHref?: string;
-  theme?: Theme;
+  theme?: ThemePreference;
 }
 
 export function Header({
   navigation,
   activeHref,
-  theme = "light",
 }: HeaderProps) {
   const headerRef = useRef<HTMLElement>(null);
   const [hidden, setHidden] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const scrollState = useRef(initialHeaderScroll());
+  const buildTime = useLocalizedBuildTime();
+  const mobile = useSyncExternalStore(subscribeMobileViewport, isMobileViewport, () => false);
+
+  const reveal = () => {
+    scrollState.current = initialHeaderScroll(window.scrollY);
+    setHidden(false);
+  };
 
   useEffect(() => {
-    let lastY = window.scrollY;
-    let travel = 0;
+    scrollState.current = initialHeaderScroll(window.scrollY);
+    let frame: number | undefined;
+    const sample = () => {
+      frame = undefined;
+      const focused = document.activeElement;
+      const pinned = menuOpen || Boolean(focused?.matches(":focus-visible") && headerRef.current?.contains(focused));
+      const next = advanceHeaderScroll(scrollState.current, window.scrollY, {
+        maxY: document.documentElement.scrollHeight - window.innerHeight,
+        topBoundary: (headerRef.current?.offsetHeight ?? 60) + 48,
+        pinned,
+      });
+      if (next.hidden !== scrollState.current.hidden) setHidden(next.hidden);
+      scrollState.current = next;
+    };
     const handleScroll = () => {
-      const y = Math.max(0, window.scrollY);
-      const delta = y - lastY;
-      if (Math.sign(delta) !== Math.sign(travel)) travel = delta;
-      else travel += delta;
-      if (y <= (headerRef.current?.offsetHeight ?? 0)) setHidden(false);
-      else if (travel >= 12) setHidden(true);
-      else if (travel <= -12) setHidden(false);
-      lastY = y;
+      if (frame === undefined) frame = requestAnimationFrame(sample);
+    };
+    const reset = () => {
+      scrollState.current = initialHeaderScroll(window.scrollY);
+      setHidden(false);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", reset);
+    window.addEventListener("pageshow", reset);
+    return () => {
+      if (frame !== undefined) cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", reset);
+      window.removeEventListener("pageshow", reset);
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const viewport = window.matchMedia("(max-width: 62rem)");
+    const update = () => { if (!viewport.matches) setMenuOpen(false); };
+    viewport.addEventListener("change", update);
+    return () => viewport.removeEventListener("change", update);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      setMenuOpen(false);
+      menuButton.current?.focus();
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   return (
+    <div className="site-header-shell">
+      {IS_STAGING ? <div className="staging-banner">STAGING | Last update: {buildTime}</div> : null}
     <header
-      className={hidden ? "site-header site-header--hidden" : "site-header"}
+      className={hidden && !menuOpen ? "site-header site-header--hidden" : "site-header"}
       ref={headerRef}
+      onFocusCapture={reveal}
     >
       <PageContainer className="site-header__inner">
         <a className="wordmark" href="/" aria-label="Benchmark Registry home">
-          <img
-            className="wordmark__logo"
-            src={theme === "dark" ? whiteLogoUrl : darkLogoUrl}
-            alt=""
-            aria-hidden="true"
-          />
+          <RegistryMark />
           <span>Benchmark Registry</span>
         </a>
+        <button className="mobile-menu-toggle" type="button" ref={menuButton}
+          aria-expanded={menuOpen} aria-controls="header-menu" aria-label={menuOpen ? "Close menu" : "Open menu"}
+          onClick={() => { reveal(); setMenuOpen((open) => !open); }}><MenuIcon open={menuOpen} /></button>
+        <div id="header-menu" className={`header-menu${menuOpen ? " header-menu--open" : ""}`}
+          inert={mobile && !menuOpen ? true : undefined}
+          onClickCapture={(event) => {
+            if ((event.target as Element).closest("a[href]")) setMenuOpen(false);
+          }}>
+        <div className="header-menu__content"><div className="header-menu__body"><GlobalSearch />
         <nav className="primary-nav" aria-label="Primary navigation">
           {navigation.map((item) => (
             <a
@@ -126,49 +196,83 @@ export function Header({
             </a>
           ))}
         </nav>
-        <GlobalSearch />
+        </div></div>
+        </div>
       </PageContainer>
     </header>
+    </div>
   );
 }
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") {
-    return "light";
-  }
+function isMobileViewport() { return window.matchMedia("(max-width: 62rem)").matches; }
+function subscribeMobileViewport(notify: () => void) {
+  const viewport = window.matchMedia("(max-width: 62rem)");
+  viewport.addEventListener("change", notify);
+  return () => viewport.removeEventListener("change", notify);
+}
 
-  return resolveTheme(
-    readStoredTheme(window.localStorage),
-    window.matchMedia(SYSTEM_DARK_THEME_QUERY).matches,
-  );
+const subscribeTimeZone = (notify: () => void) => {
+  window.addEventListener("focus", notify);
+  return () => window.removeEventListener("focus", notify);
+};
+function useLocalizedBuildTime() {
+  const zone = useSyncExternalStore(subscribeTimeZone, viewerTimeZone, () => "UTC");
+  return formatBuildTime(BUILD_TIMESTAMP, zone);
 }
 
 function useThemePreference() {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const preference = useSyncExternalStore(subscribeTheme, currentThemePreference, () => "system" as ThemePreference);
+  const lastThemeReport = useRef("");
 
   useEffect(() => {
-    const systemTheme = window.matchMedia(SYSTEM_DARK_THEME_QUERY);
-    const handleSystemThemeChange = (event: MediaQueryListEvent) => {
-      if (readStoredTheme(window.localStorage) === null) {
-        setTheme(event.matches ? "dark" : "light");
+    const system = window.matchMedia(SYSTEM_DARK_THEME_QUERY);
+    const report = () => {
+      const current = currentThemePreference();
+      const resolved = resolveTheme(current === "system" ? null : current, system.matches);
+      const key = `${current}:${resolved}`;
+      if (lastThemeReport.current !== key) {
+        diagnoseTheme(current, resolved);
+        lastThemeReport.current = key;
       }
     };
+    report();
+    system.addEventListener("change", report);
+    return () => system.removeEventListener("change", report);
+  }, [preference]);
 
-    systemTheme.addEventListener("change", handleSystemThemeChange);
-    return () => systemTheme.removeEventListener("change", handleSystemThemeChange);
-  }, []);
-
-  const selectTheme = (nextTheme: Theme) => {
-    setTheme(nextTheme);
-    storeTheme(nextTheme, document.documentElement, window.localStorage);
+  const selectTheme = (next: ThemePreference) => {
+    try { storeTheme(next, document.documentElement, window.localStorage); }
+    catch { if (next === "system") delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = next; }
+    window.dispatchEvent(new Event("registry-theme-change"));
   };
+  return { preference, selectTheme };
+}
 
-  return { theme, selectTheme };
+function currentThemePreference(): ThemePreference {
+  const theme = document.documentElement.dataset.theme;
+  return theme === "light" || theme === "dark" ? theme : "system";
+}
+
+function subscribeTheme(notify: () => void) {
+  const storedChanged = () => {
+    try {
+      const stored = readStoredTheme(window.localStorage);
+      if (stored) document.documentElement.dataset.theme = stored;
+      else delete document.documentElement.dataset.theme;
+    } catch { /* Keep this page's current preference. */ }
+    notify();
+  };
+  window.addEventListener("registry-theme-change", notify);
+  window.addEventListener("storage", storedChanged);
+  return () => {
+    window.removeEventListener("registry-theme-change", notify);
+    window.removeEventListener("storage", storedChanged);
+  };
 }
 
 interface ThemeToggleProps {
-  theme: Theme;
-  onSelectTheme: (theme: Theme) => void;
+  theme: ThemePreference;
+  onSelectTheme: (theme: ThemePreference) => void;
 }
 
 export function ThemeToggle({ theme, onSelectTheme }: ThemeToggleProps) {
@@ -176,26 +280,11 @@ export function ThemeToggle({ theme, onSelectTheme }: ThemeToggleProps) {
     <fieldset className="theme-toggle">
       <legend className="visually-hidden">Color theme</legend>
       <div className="theme-toggle__options">
-        <input
-          className="theme-toggle__input visually-hidden"
-          id="theme-light"
-          name="color-theme"
-          type="radio"
-          value="light"
-          checked={theme === "light"}
-          onChange={() => onSelectTheme("light")}
-        />
-        <label htmlFor="theme-light">Light</label>
-        <input
-          className="theme-toggle__input visually-hidden"
-          id="theme-dark"
-          name="color-theme"
-          type="radio"
-          value="dark"
-          checked={theme === "dark"}
-          onChange={() => onSelectTheme("dark")}
-        />
-        <label htmlFor="theme-dark">Dark</label>
+        {(["light", "dark", "system"] as const).map((choice) => <span key={choice}>
+          <input className="theme-toggle__input visually-hidden" id={`theme-${choice}`} name="color-theme"
+            type="radio" value={choice} checked={theme === choice} onChange={() => onSelectTheme(choice)} />
+          <label htmlFor={`theme-${choice}`}>{choice.charAt(0).toUpperCase() + choice.slice(1)}</label>
+        </span>)}
       </div>
     </fieldset>
   );
@@ -225,7 +314,10 @@ export function GlobalSearchPanel({ state, activeIndex = -1 }: {
   if (state.status === "loading") {
     return (
       <div className="global-search-panel global-search-panel--status" id="global-search-results">
-        <p aria-live="polite">Searching the registry...</p>
+        <p className="visually-hidden" aria-live="polite">Searching the registry...</p>
+        <ul className="global-search-loading" aria-hidden="true">{[0, 1, 2].map((row) =>
+          <li key={row}><span className="skeleton skeleton--label" /><span className="skeleton skeleton--value" /></li>
+        )}</ul>
       </div>
     );
   }
@@ -443,7 +535,7 @@ export function SourceLink({ href, children = "Source" }: SourceLinkProps) {
   return (
     <a className="source-link" href={href} target="_blank" rel="noreferrer">
       <span>{children}</span>
-      <span aria-hidden="true">↗</span>
+      <ExternalIcon />
       <span className="visually-hidden"> (opens in a new tab)</span>
     </a>
   );
@@ -470,9 +562,7 @@ export function SortableHeader({ href, label, direction }: SortableHeaderProps) 
       aria-label={`Sort by ${label} ${nextDirection}`}
     >
       <span>{label}</span>
-      <span className="sortable-header__indicator" aria-hidden="true">
-        {direction === "asc" ? "↑" : direction === "desc" ? "↓" : "↕"}
-      </span>
+      <SortIcon direction={direction} />
     </a>
   );
 }
@@ -501,7 +591,7 @@ export function DataTable<Row>({
 }: DataTableProps<Row>) {
   return (
     <div className="table-scroll" tabIndex={0} aria-label={`${caption}, scrollable`}>
-      <table className="data-table">
+      <table className="data-table" data-columns={columns.length}>
         <caption className="visually-hidden">{caption}</caption>
         <thead>
           <tr>
@@ -509,7 +599,7 @@ export function DataTable<Row>({
               <th
                 key={column.key}
                 scope="col"
-                className={column.className}
+                className={[column.className, column.sortHref ? "data-table__sortable" : undefined].filter(Boolean).join(" ")}
                 aria-sort={
                   column.sortDirection
                     ? column.sortDirection === "asc"
@@ -620,17 +710,18 @@ export function Tabs({ label, items }: { label: string; items: TabItem[] }) {
   );
 }
 
-export function LoadingState({ columns = 5, rows = 4 }: { columns?: number; rows?: number }) {
+export function LoadingState({ columns = 5, rows = 4, labels }: { columns?: number; rows?: number; labels?: string[] }) {
+  const headers = labels ?? Array.from({ length: columns }, () => "");
+  const cellClass = (label: string) => label === "Score" || label === "Registry No." ? "numeric"
+    : ["Model", "Benchmark", "Organization", "Version"].includes(label) ? "data-table__primary" : undefined;
   return (
     <div className="loading-state" role="status" aria-live="polite" aria-busy="true">
       <span className="visually-hidden">Loading registry results</span>
-      {Array.from({ length: rows }, (_, rowIndex) => (
-        <div className="loading-state__row" key={rowIndex} aria-hidden="true">
-          {Array.from({ length: columns }, (_, columnIndex) => (
-            <span className="skeleton" key={columnIndex} />
-          ))}
-        </div>
-      ))}
+      <div className="table-scroll" aria-hidden="true"><table className="data-table" data-columns={headers.length}>
+        <thead><tr>{headers.map((label, index) => <th key={index} className={cellClass(label)}>{label || <span className="skeleton" />}</th>)}</tr></thead>
+        <tbody>{Array.from({ length: rows }, (_, rowIndex) => <tr key={rowIndex}>{headers.map((label, index) =>
+          <td key={index} className={cellClass(label)}><span className="skeleton skeleton--cell" /></td>)}</tr>)}</tbody>
+      </table></div>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 export type Theme = "light" | "dark";
+export type ThemePreference = Theme | "system";
 
 export const THEME_STORAGE_KEY = "benchmark-registry-theme";
 export const SYSTEM_DARK_THEME_QUERY = "(prefers-color-scheme: dark)";
@@ -41,11 +42,12 @@ export function applyStoredTheme(
 }
 
 export function storeTheme(
-  theme: Theme,
+  theme: ThemePreference,
   root: ThemeRoot,
   storage: Pick<ThemeStorage, "setItem">,
 ) {
-  root.dataset.theme = theme;
+  if (theme === "system") delete root.dataset.theme;
+  else root.dataset.theme = theme;
 
   try {
     storage.setItem(THEME_STORAGE_KEY, theme);

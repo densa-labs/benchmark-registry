@@ -273,6 +273,18 @@ export function CompanyDetailPage({
   const registrySort = sortLink(pathname, currentSearch, "registry_no");
   const columns: TableColumn<ResultRow>[] = [
     {
+      key: "model",
+      label: "Model",
+      className: "data-table__primary",
+      sortHref: modelSort.href,
+      sortDirection: modelSort.direction,
+      render: (result) => (
+        <a href={`/models/${result.model.registry_no}`}>
+          {result.model.name}{result.reasoning_level ? ` (${result.reasoning_level})` : null}
+        </a>
+      ),
+    },
+    {
       key: "benchmark",
       label: "Benchmark",
       className: "data-table__primary",
@@ -282,17 +294,6 @@ export function CompanyDetailPage({
         <span className="table-cell-stack">
           <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
         </span>
-      ),
-    },
-    {
-      key: "model",
-      label: "Model",
-      sortHref: modelSort.href,
-      sortDirection: modelSort.direction,
-      render: (result) => (
-        <a href={`/models/${result.model.registry_no}`}>
-          {result.model.name}{result.reasoning_level ? ` (${result.reasoning_level})` : null}
-        </a>
       ),
     },
     {

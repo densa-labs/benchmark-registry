@@ -1,4 +1,4 @@
-import { renderDocument } from "./document";
+import { renderDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { parseParameters } from "./params";
 import { RegistryRepository } from "./repository";
@@ -180,11 +180,12 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
       url.pathname = new URL(metadata.canonical).pathname;
       return Response.redirect(url.toString(), 308);
     }
-    const content = metadata.status === 404 ? undefined : await renderDocument(url, async (input) => {
+    const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // Run the existing read API directly against this environment's isolated D1.
       return handleApi(new Request(new URL(String(input), url.origin)), env);
     });
-    const html = rewriteMetadata(await response.text(), metadata, url, content);
+    const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
+      .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
     const headers = new Headers(response.headers);
     // The static template's validators and length no longer describe this response.
     for (const header of ["ETag", "Content-Length", "Last-Modified", "Content-Encoding"]) headers.delete(header);

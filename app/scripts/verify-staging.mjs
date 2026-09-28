@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { stdout } from "node:process";
+import { verifyUiBuild } from "./verify-ui-build.mjs";
 
 const workerName = "benchmark-registry-staging";
 const databaseName = "benchmark-registry-staging";
@@ -47,3 +48,4 @@ assert.ok(existsSync(join(configs[0], "..", deployment.main)));
 assert.ok(existsSync(join(configs[0], "..", deployment.d1_databases[0].migrations_dir)));
 
 stdout.write(`Verified ${workerName}, ${hostname}, and isolated ${databaseName} binding.\n`);
+verifyUiBuild(true, join(configs[0], "..", deployment.main));

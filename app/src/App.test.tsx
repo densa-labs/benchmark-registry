@@ -33,7 +33,7 @@ describe("Registry foundation view", () => {
     expect(markup).toContain("Benchmarks");
     expect(markup).toContain("Organizations");
     expect(markup).toContain('id="main-content"');
-    expect(markup).toContain("Benchmark-Registry-B-Logo-Dark.png");
+    expect(markup).toContain('class="wordmark__logo"');
     expect(markup).toContain("© 2026");
     expect(markup).toContain('href="https://densa-labs.github.io/">Densa Labs</a>');
     expect(markup).toContain('name="color-theme"');
@@ -45,10 +45,8 @@ describe("Registry foundation view", () => {
     const lightMarkup = renderToStaticMarkup(<Header navigation={[]} theme="light" />);
     const darkMarkup = renderToStaticMarkup(<Header navigation={[]} theme="dark" />);
 
-    expect(lightMarkup).toContain("Benchmark-Registry-B-Logo-Dark.png");
-    expect(lightMarkup).not.toContain("Benchmark-Registry-B-Logo-White.png");
-    expect(darkMarkup).toContain("Benchmark-Registry-B-Logo-White.png");
-    expect(darkMarkup).not.toContain("Benchmark-Registry-B-Logo-Dark.png");
+    expect(lightMarkup).toContain('fill="currentColor"');
+    expect(darkMarkup).toBe(lightMarkup);
   });
 
   it("renders the theme choice as text labels backed by native radio controls", () => {

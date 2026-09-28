@@ -1,9 +1,10 @@
-import { renderToStaticMarkup } from "react-dom/server";
+import { renderToString } from "react-dom/server";
+import { serializeInitialDocument } from "../src/bootstrap";
 import { RegistryDocument } from "../src/App";
 import { loadRegistryRoute, resolveRegistryRoute } from "../src/registry";
 import { ApiError } from "./api";
 
-export async function renderDocument(url: URL, readApi: (input: string) => Promise<Response>): Promise<string> {
+export async function renderDocument(url: URL, readApi: (input: string) => Promise<Response>) {
   const route = resolveRegistryRoute(url.pathname);
   let search = url.search;
   const fetcher = (async (input: RequestInfo | URL) => readApi(String(input))) as typeof fetch;
@@ -17,5 +18,12 @@ export async function renderDocument(url: URL, readApi: (input: string) => Promi
     search = "";
     loaded = await loadRegistryRoute(route, search, fetcher);
   }
-  return renderToStaticMarkup(<RegistryDocument loaded={loaded} currentSearch={search} />);
+  return renderInitialDocument(loaded, search);
+}
+
+export function renderInitialDocument(loaded: import("../src/registry").LoadedRegistryRoute, currentSearch: string) {
+  return {
+    markup: renderToString(<RegistryDocument loaded={loaded} currentSearch={currentSearch} />),
+    bootstrap: `<script id="registry-initial-document" type="application/json">${serializeInitialDocument({ loaded, currentSearch })}</script>`,
+  };
 }

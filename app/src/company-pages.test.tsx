@@ -82,6 +82,16 @@ describe("P7.3 company pages", () => {
     expect(markup).not.toContain("Sort by Score");
   });
 
+  it("puts Model before Benchmark in organization result tables without sorting Score", () => {
+    const markup = renderToStaticMarkup(<CompanyDetailPage response={companyDetailResponse} currentSearch="" />);
+    const headings = [...markup.matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/gu)]
+      .map(([, content]) => content.replace(/<[^>]*>/gu, ""));
+    expect(headings).toEqual(["Model", "Benchmark", "Score", "Source", "Registry No."]);
+    expect(markup).toContain("Sort by Model ascending");
+    expect(markup).toContain("Sort by Benchmark ascending");
+    expect(markup).not.toContain("Sort by Score");
+  });
+
   it("renders company metadata and the frozen benchmark result controls", () => {
     const markup = renderToStaticMarkup(
       <CompanyDetailPage

@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import type { InitialDocument } from "./bootstrap";
+import { RouteLoadingState } from "./ui/route-loading";
 
 import {
   BenchmarkFamilyPage,
@@ -13,11 +15,11 @@ import {
   RegistryClientError,
   resolveRegistryRoute,
   type LoadedRegistryRoute,
+  type RegistryRoute,
 } from "./registry";
 import {
   AppShell,
   ErrorState,
-  LoadingState,
   NotFoundState,
   PageContainer,
 } from "./ui/components";
@@ -27,6 +29,10 @@ const navigation = [
   { href: "/benchmarks", label: "Benchmarks" },
   { href: "/companies", label: "Organizations" },
 ];
+
+function renderPendingRoute(route: RegistryRoute) {
+  return route.kind === "home" ? <HomeLoadingState /> : <RouteLoadingState route={route} />;
+}
 
 type LoadState =
   | { status: "loading" }
@@ -38,16 +44,17 @@ function currentLocation() {
   return { pathname: window.location.pathname, search: window.location.search };
 }
 
-export function App() {
+export function App({ initial }: { initial?: InitialDocument }) {
   const location = currentLocation();
   const route = useMemo(
     () => resolveRegistryRoute(location.pathname),
     [location.pathname],
   );
-  const [state, setState] = useState<LoadState>({ status: "loading" });
+  const [state, setState] = useState<LoadState>(() => initial
+    ? { status: "loaded", route: initial.loaded } : { status: "loading" });
 
   useEffect(() => {
-    if (route.kind === "not-found") return;
+    if (initial || route.kind === "not-found") return;
 
     const controller = new AbortController();
     void loadRegistryRoute(route, location.search, fetch, controller.signal)
@@ -60,7 +67,7 @@ export function App() {
         setState({ status: "error", message });
       });
     return () => controller.abort();
-  }, [route, location.search]);
+  }, [route, location.search, initial]);
 
   let content;
   if (route.kind === "not-found") {
@@ -71,9 +78,7 @@ export function App() {
     );
   } else if (state.status === "loading") {
     content = route.kind === "home" ? <HomeLoadingState /> : (
-      <PageContainer className="registry-page">
-        <LoadingState columns={5} rows={6} />
-      </PageContainer>
+      <RouteLoadingState route={route} />
     );
   } else if (state.status === "error") {
     content = (
@@ -82,7 +87,7 @@ export function App() {
       </PageContainer>
     );
   } else {
-    return <RegistryDocument loaded={state.route} currentSearch={location.search} />;
+    return <RegistryDocument loaded={state.route} currentSearch={initial?.currentSearch ?? location.search} />;
   }
 
   return (
@@ -136,7 +141,7 @@ export function RegistryDocument({ loaded, currentSearch }: { loaded: LoadedRegi
   }
 
   return (
-    <AppShell navigation={navigation} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
+    <AppShell navigation={navigation} renderPending={renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
       ? undefined : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {content}

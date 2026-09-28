@@ -7,6 +7,10 @@ import units from "../../migrations/0005_standalone_ai_units.sql?raw";
 import template from "../index.html?raw";
 import worker, { type Env } from "./index";
 import { asD1Database } from "./search-test-fixtures";
+import { createElement } from "react";
+import { renderToString } from "react-dom/server";
+import { App } from "../src/App";
+import type { InitialDocument } from "../src/bootstrap";
 
 const exactKey = "a".repeat(64);
 const ambiguousKeys = ["b".repeat(64), "c".repeat(64)];
@@ -65,6 +69,22 @@ describe("P11.7 initial document crawlability", () => {
   function links(html: string): string[] {
     return [...html.matchAll(/<a\b[^>]*href="([^"]+)"/gu)].map((match) => match[1].replaceAll("&amp;", "&"));
   }
+
+  it.each(["/", "/models", "/models/10001", "/benchmarks", "/benchmarks/example", versionPath,
+    "/companies", "/companies/example-company", exactPath, "/models/missing"])(
+    "supplies hydration-compatible visible initial HTML for %s", async (path) => {
+      const response = await worker.fetch(new Request(`https://benchmarkregistry.org${path}`), env);
+      expect(response.status).toBe(path === "/models/missing" ? 404 : 200);
+      const html = await response.text();
+      const serialized = /<script id="registry-initial-document" type="application\/json">([\s\S]*?)<\/script>/u.exec(html)?.[1];
+      expect(serialized).toBeTruthy();
+      const initial = JSON.parse(serialized!) as InitialDocument;
+      const client = renderToString(createElement(App, { initial }));
+      expect(html).toContain(`<div id="root">${client}</div>`);
+      expect(client).not.toContain("loading-state");
+      expect(client).not.toContain("home-page--loading");
+    },
+  );
 
   it("renders every homepage model directory href in initial HTML", async () => {
     const html = await page("/");
