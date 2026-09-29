@@ -1,3 +1,4 @@
+import { LEGAL_METADATA } from "../src/legal-content";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
 import { resolveRegistryRoute } from "../src/registry";
 import type { BenchmarkRef } from "./api";
@@ -24,9 +25,13 @@ const missing: DocumentMetadata = {
   description: "The requested Benchmark Registry page could not be found.",
 };
 
-async function pageMetadata(url: URL, repository: RegistryReader): Promise<DocumentMetadata> {
+async function pageMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
   const route = resolveRegistryRoute(url.pathname);
   switch (route.kind) {
+    case "legal":
+    case "privacy":
+    case "terms":
+      return { title: `${LEGAL_METADATA[route.kind].title} | ${SITE_NAME}`, description: LEGAL_METADATA[route.kind].description };
     case "home":
       return { title: SITE_NAME, description: "AI model benchmark results in one place | Benchmark Registry" };
     case "models":
@@ -36,7 +41,7 @@ async function pageMetadata(url: URL, repository: RegistryReader): Promise<Docum
     case "companies":
       return { title: `Companies | ${SITE_NAME}`, description: "AI companies, models, and benchmark results" };
     case "model": {
-      const model = await repository.metadataModel(route.registryNo);
+      const model = await requireRepository(repository).metadataModel(route.registryNo);
       return model ? {
         title: `${model.name} | Benchmarks`,
         description: `${model.company_name}'s ${model.name} model evaluation and benchmark results | ${SITE_NAME}`,
@@ -45,7 +50,7 @@ async function pageMetadata(url: URL, repository: RegistryReader): Promise<Docum
       } : missing;
     }
     case "company": {
-      const company = await repository.metadataCompany(route.slug);
+      const company = await requireRepository(repository).metadataCompany(route.slug);
       return company ? {
         title: `${company.name} | Benchmarks`,
         description: `${company.name} model evaluation and benchmark results | ${SITE_NAME}`,
@@ -53,13 +58,13 @@ async function pageMetadata(url: URL, repository: RegistryReader): Promise<Docum
     }
     case "benchmark":
     case "benchmark-version": {
-      const benchmark = await repository.metadataBenchmark(route.slug, route.kind === "benchmark-version" ? route.version : undefined);
+      const benchmark = await requireRepository(repository).metadataBenchmark(route.slug, route.kind === "benchmark-version" ? route.version : undefined);
       if (!benchmark) return missing;
       if (benchmark.version !== null) {
         const label = benchmarkVersionLabel(benchmark, benchmark.version);
         const keys = url.searchParams.getAll("result");
         if (keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
-          const model = await repository.metadataResult(route.slug, route.kind === "benchmark-version" ? route.version : "", keys[0]);
+          const model = await requireRepository(repository).metadataResult(route.slug, route.kind === "benchmark-version" ? route.version : "", keys[0]);
           if (model) return {
             title: `${model.name} | ${label}`,
             description: `${model.company_name}'s ${model.name} evaluation results on ${label}`,
@@ -84,7 +89,7 @@ async function pageMetadata(url: URL, repository: RegistryReader): Promise<Docum
   }
 }
 
-export async function documentMetadata(url: URL, repository: RegistryReader): Promise<DocumentMetadata> {
+export async function documentMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
   const metadata = await pageMetadata(url, repository);
   const route = resolveRegistryRoute(url.pathname);
   const segment = encodeURIComponent;
@@ -98,7 +103,7 @@ export async function documentMetadata(url: URL, repository: RegistryReader): Pr
   metadata.canonical = PRODUCTION_ORIGIN + path;
   const keys = url.searchParams.getAll('result');
   if (route.kind === 'benchmark-version' && keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
-    const result = await repository.metadataResult(route.slug, route.version, keys[0]);
+    const result = await requireRepository(repository).metadataResult(route.slug, route.version, keys[0]);
     if (result?.exact_result_indexable === 1) {
       const exact = `${PRODUCTION_ORIGIN}${path}?view=history&result=${keys[0]}`;
       // Only the stable history/result state is indexable. Extra UI state still needs noindex.
@@ -158,4 +163,9 @@ export function rewriteMetadata(html: string, metadata: DocumentMetadata, url: U
   const links = metadata.links ?? (metadata.canonical ? [{ href: new URL(metadata.canonical).pathname, label: metadata.title }] : []);
   const summary = `<main class="page-container registry-page"><h1>${escapeHtml(metadata.title)}</h1><p>${escapeHtml(metadata.description)}</p>${(metadata.facts ?? []).map((fact) => `<p>${escapeHtml(fact)}</p>`).join('')}${links.map((link) => `<p><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a></p>`).join('')}</main>`;
   return rewritten.replace(/<div id="root"><\/div>/u, `<div id="root">${content ?? summary}</div>`);
+}
+
+function requireRepository(repository?: RegistryReader): RegistryReader {
+  if (!repository) throw new Error("Registry reader required for data route.");
+  return repository;
 }

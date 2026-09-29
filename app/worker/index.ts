@@ -1,3 +1,5 @@
+import { LEGAL_PATHS } from "../src/legal-content";
+import { diagnoseWorkerFailure } from "./diagnostics";
 import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { apiParameters } from "./request-policy";
@@ -48,19 +50,19 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
   return jsonError(404, "not_found", "API route not found.");
 }
 
-export async function handleRequest(request: Request, env: Env, repository: RegistryReader): Promise<Response> {
+export async function handleRequest(request: Request, env: Env, repository?: RegistryReader): Promise<Response> {
   const url = new URL(request.url);
   const { pathname } = url;
 
   if (pathname === "/api" || pathname.startsWith("/api/")) {
     try {
-      return await handleApi(request, env, repository);
+      return await handleApi(request, env, requireRepository(repository));
     } catch (error) {
       if (error instanceof MaterializationFailure) throw error;
       if (error instanceof ApiError) {
         return jsonError(error.status, error.code, error.message);
       }
-      console.error("Read API request failed.", error);
+      diagnoseWorkerFailure("read-api");
       return jsonError(500, "internal_error", "The request could not be completed.");
     }
   }
@@ -69,7 +71,7 @@ export async function handleRequest(request: Request, env: Env, repository: Regi
     try {
       const registryNo = modelPageRegistryNo(pathname);
       if (registryNo !== null) {
-        const target = await repository.modelRedirectTarget(registryNo);
+        const target = await requireRepository(repository).modelRedirectTarget(registryNo);
         if (target !== null) {
           url.pathname = `/models/${target}`;
           return Response.redirect(url.toString(), 308);
@@ -80,7 +82,7 @@ export async function handleRequest(request: Request, env: Env, repository: Regi
       if (error instanceof ApiError) {
         return new Response("Invalid model route.", { status: error.status });
       }
-      console.error("Model route redirect lookup failed.", error);
+      diagnoseWorkerFailure("model-redirect");
       return new Response("The request could not be completed.", { status: 500 });
     }
   }
@@ -95,14 +97,14 @@ export async function handleRequest(request: Request, env: Env, repository: Regi
   }
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
-      const paths = await repository.sitemapPaths();
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), ...LEGAL_PATHS])];
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(PRODUCTION_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
       });
     } catch (error) {
       if (error instanceof MaterializationFailure) throw error;
-      console.error('Sitemap data lookup failed.', error);
+      diagnoseWorkerFailure("sitemap");
       return new Response('The request could not be completed.', { status: 500 });
     }
   }
@@ -124,7 +126,7 @@ export async function handleRequest(request: Request, env: Env, repository: Regi
     }
     const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
-      return handleApi(new Request(new URL(String(input), url.origin)), env, repository);
+      return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
     }, env.REGISTRY_REVISION);
     const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
       .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
@@ -137,7 +139,7 @@ export async function handleRequest(request: Request, env: Env, repository: Regi
     });
   } catch (error) {
     if (error instanceof MaterializationFailure) throw error;
-    console.error("Document metadata lookup failed.", error);
+    diagnoseWorkerFailure("document");
     return new Response("The request could not be completed.", { status: 500 });
   }
 }
@@ -159,6 +161,7 @@ const worker = {
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
     if(staticAsset) response=await env.ASSETS.fetch(request);
     else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
+    else if (LEGAL_PATHS.some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {
         const publication=await store.publication();
@@ -174,6 +177,7 @@ const worker = {
         }
         if(lastError) throw lastError;
       } catch {
+        diagnoseWorkerFailure("materialized-read");
         if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
         else if (url.pathname === '/sitemap.xml') response=new Response('The materialized registry is temporarily unavailable.',{status:500});
         else {
@@ -208,3 +212,8 @@ const worker = {
 } satisfies ExportedHandler<Env>;
 
 export default worker;
+
+function requireRepository(repository?: RegistryReader): RegistryReader {
+  if (!repository) throw new Error("Registry reader required for data route.");
+  return repository;
+}

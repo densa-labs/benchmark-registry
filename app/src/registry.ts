@@ -1,3 +1,4 @@
+import type { LegalKind } from "./legal-content";
 import type {
   BenchmarkRef,
   BenchmarkVersionSummary,
@@ -124,6 +125,9 @@ export type RegistryRoute =
   | { kind: "benchmark-version"; slug: string; version: string }
   | { kind: "companies" }
   | { kind: "company"; slug: string }
+  | { kind: "legal" }
+  | { kind: "privacy" }
+  | { kind: "terms" }
   | { kind: "not-found" };
 
 export type LoadedRegistryRoute =
@@ -135,6 +139,9 @@ export type LoadedRegistryRoute =
   | { kind: "benchmark-version"; payload: BenchmarkVersionPageResponse }
   | { kind: "companies"; payload: CompanyListResponse }
   | { kind: "company"; payload: CompanyDetailResponse }
+  | { kind: "legal" }
+  | { kind: "privacy" }
+  | { kind: "terms" }
   | { kind: "not-found" };
 
 export class RegistryClientError extends Error {}
@@ -142,6 +149,10 @@ export class RegistryClientError extends Error {}
 export function resolveRegistryRoute(pathname: string): RegistryRoute {
   if (pathname === "/") {
     return { kind: "home" };
+  }
+
+  for (const kind of ["legal", "privacy", "terms"] as const) {
+    if (pathname === `/${kind}` || pathname === `/${kind}/`) return { kind };
   }
 
   if (pathname === "/models" || pathname === "/models/") {
@@ -187,7 +198,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "not-found" }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -292,7 +303,7 @@ export async function loadRegistryRoute(
   fetcher: typeof fetch = fetch,
   signal?: AbortSignal,
 ): Promise<LoadedRegistryRoute> {
-  if (route.kind === "not-found") return route;
+  if (route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
   if (route.kind === "home") {
     const request = (path: string) => fetcher(path, {

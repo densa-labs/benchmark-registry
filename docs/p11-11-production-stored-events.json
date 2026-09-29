@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-09-28T14:05:00.532Z",
+  "finalVersion": "3fc7d7ee-521c-4105-937f-39b2868d1b19",
+  "buildTime": "2026-09-28T14:01:12Z",
+  "queryRange": "last one hour",
+  "latestEarlierStoredTimestamp": "2026-09-28 21:55:54.299 GMT+8",
+  "newStoredEvents": 0,
+  "earlierEventCount": 46,
+  "earlierErrorCount": 0,
+  "controlledChecks": "Three legal pages, invalid children, representative model/API/search, sitemap/robots/HEAD/slash, bounded browser checks",
+  "legacyLogsRemainUntilAutomaticExpiry": true,
+  "rawVisitorValuesSaved": false
+}

@@ -1,0 +1,28 @@
+{
+  "verifiedDate": "2026-09-28",
+  "zonePlan": "Free Website",
+  "workersPlan": "Free",
+  "precursorEnabled": true,
+  "securityStorageKey": "_cfPre_tabId",
+  "securityDashboardFields": [
+    "Time",
+    "Source IP",
+    "Host",
+    "Path",
+    "device type",
+    "operating system",
+    "cache status",
+    "browser",
+    "HTTP method"
+  ],
+  "securityEventsRetentionHours": 24,
+  "securityAnalyticsRetentionDays": 7,
+  "rumBefore": "automatic injection enabled",
+  "rumAfter": "Disable selected, Update saved, verified after reload",
+  "earlierRumRetention": {
+    "unsampledDays": 7,
+    "sampledMonths": 6
+  },
+  "logpush": false,
+  "note": "Only categories/field names, no beacon tokens, request identifiers or visitor values. Security protection remains enabled."
+}

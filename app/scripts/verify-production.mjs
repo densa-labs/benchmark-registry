@@ -58,3 +58,13 @@ assert.ok(existsSync(join(configs[0], "..", deployment.main)));
 
 stdout.write(`Verified ${workerName}, apex and www, and isolated KV binding without D1.\n`);
 verifyUiBuild(false, join(configs[0], "..", deployment.main));
+
+// Validate the privacy controls in the actual generated deployment config.
+assert.deepEqual(deployment.observability, source.env.production.observability);
+assert.equal(deployment.observability.logs.invocation_logs, false);
+assert.equal(deployment.observability.logs.persist, false);
+assert.equal(deployment.observability.redact_query_string, true);
+assert.equal(deployment.observability.traces.enabled, false);
+assert.equal(deployment.observability.traces.persist, false);
+assert.deepEqual(deployment.observability.logs.destinations, []);
+assert.deepEqual(deployment.observability.traces.destinations, []);

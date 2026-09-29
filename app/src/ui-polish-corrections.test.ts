@@ -50,6 +50,7 @@ describe("native navigation skeleton eligibility", () => {
     expect(navigationRoute("?sort=name", "https://benchmarkregistry.org/models")).toEqual({ kind: "models" });
     expect(navigationRoute("#main-content", "https://benchmarkregistry.org/models")).toBeNull();
     expect(navigationRoute("https://github.com/densa-labs/benchmark-registry", "https://benchmarkregistry.org/")).toBeNull();
-    expect(navigationRoute("/legal", "https://benchmarkregistry.org/")).toBeNull();
+    expect(navigationRoute("/legal", "https://benchmarkregistry.org/")).toEqual({ kind: "legal" });
+    expect(navigationRoute("/legal/arbitrary", "https://benchmarkregistry.org/")).toBeNull();
   });
 });

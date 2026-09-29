@@ -1364,3 +1364,11 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .global-search:focus-within, .local-search__controls:focus-within { outline: 2px solid Highlight; }
   .global-search button, .local-search button, .page-size-form button, .button-link { border: 1px solid ButtonText; }
 }
+
+/* Static policies use the shared shell and a comfortable reading measure. */
+.legal-page { max-width: 48rem; }
+.legal-page section { margin-top: 2rem; }
+.legal-page p { line-height: 1.65; max-width: 68ch; }
+.legal-page section p { margin-top: 0.75rem; }
+.legal-page a, .legal-email { overflow-wrap: anywhere; }
+.legal-updated { color: var(--text-muted); margin-bottom: 2rem; }

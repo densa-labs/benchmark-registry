@@ -20,4 +20,7 @@ export const accessibilityRoutes: { path: string; loaded: LoadedRegistryRoute }[
   { path: "/companies", loaded: { kind: "companies", payload: { data: [{ ...company, latest_model: model }], page } } },
   { path: "/companies/openai", loaded: { kind: "company", payload: { data: { company, latest_model: model, results: [result], result_page: page } } } },
   { path: "/models/99999", loaded: { kind: "not-found" } },
+  { path: "/legal", loaded: { kind: "legal" } },
+  { path: "/privacy", loaded: { kind: "privacy" } },
+  { path: "/terms", loaded: { kind: "terms" } },
 ];

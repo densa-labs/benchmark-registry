@@ -62,6 +62,28 @@ it("exposes exactly the current primary sort, including benchmark name default",
   expect(container.querySelector("[aria-sort]")?.textContent).toBe("Benchmark");
 });
 
+it("keeps Support's name and icon semantic, and navigates legal documents with heading focus", async () => {
+  history.replaceState(null, "", "/legal");
+  const initial = { loaded: { kind: "legal" as const }, currentSearch: "" };
+  const fetcher = vi.fn(async (input: RequestInfo | URL) => { expect(input).toBe("/privacy"); return new Response(`<html><head><title>Privacy Policy | Benchmark Registry</title></head><body><script id="registry-initial-document" type="application/json">${serializeInitialDocument({ loaded: { kind: "privacy" }, currentSearch: "" })}</script></body></html>`); });
+  vi.stubGlobal("fetch", fetcher);
+  await mount(<App initial={initial} />);
+  const support = container.querySelector('a[href="mailto:support@benchmarkregistry.org"]')!;
+  expect(support.textContent).toBe("Support");
+  expect(support.querySelector("svg")?.getAttribute("aria-hidden")).toBe("true");
+  expect(support.querySelector("svg")?.getAttribute("stroke")).toBe("currentColor");
+  expect(support.hasAttribute("target")).toBe(false);
+  expect(container.querySelector('.primary-nav [aria-current]')).toBeNull();
+  const privacy = container.querySelector<HTMLAnchorElement>('main a[href="/privacy"]')!;
+  privacy.focus(); await click(privacy);
+  expect(container.querySelector("h1")?.textContent).toBe("Privacy Policy");
+  expect(document.activeElement).toBe(container.querySelector("h1"));
+  expect(document.title).toBe("Privacy Policy | Benchmark Registry");
+  expect(container.querySelector('[data-route-status]')?.textContent).toContain("Privacy Policy");
+  expect(fetcher).toHaveBeenCalled();
+  expect(fetcher.mock.calls.every(([input]) => input === "/privacy")).toBe(true);
+});
+
 it("moves the skip link's keyboard focus to main", async () => {
   await mount(<AppShell navigation={[]}><h1>Registry</h1></AppShell>);
   const skip = container.querySelector<HTMLAnchorElement>(".skip-link")!;

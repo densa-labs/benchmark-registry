@@ -32,7 +32,23 @@
           "binding": "READ_STORE",
           "id": "0bc4e56c19ab4a95966f0c81fe13a579"
         }
-      ]
+      ],
+      "observability": {
+        "enabled": true,
+        "redact_query_string": true,
+        "logs": {
+          "enabled": true,
+          "invocation_logs": false,
+          "persist": false,
+          "head_sampling_rate": 1,
+          "destinations": []
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false,
+          "destinations": []
+        }
+      }
     },
     "production": {
       "account_id": "1aed6fdb33b34b24c2914fcaaf48786b",
@@ -54,9 +70,19 @@
         }
       ],
       "observability": {
+        "enabled": true,
+        "redact_query_string": true,
         "logs": {
           "enabled": true,
-          "invocation_logs": true
+          "invocation_logs": false,
+          "persist": false,
+          "head_sampling_rate": 1,
+          "destinations": []
+        },
+        "traces": {
+          "enabled": false,
+          "persist": false,
+          "destinations": []
         }
       },
       "kv_namespaces": [

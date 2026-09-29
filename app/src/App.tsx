@@ -1,3 +1,5 @@
+import { LegalPage } from "./legal-pages";
+import { isLegalKind } from "./legal-content";
 import { Fragment, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { InitialDocument } from "./bootstrap";
 import { useDocumentNavigation } from "./navigation";
@@ -104,7 +106,7 @@ export function App({ initial }: { initial?: InitialDocument }) {
   return (
     <AppShell
       navigation={navigation}
-      activeHref={state.status === "error" || route.kind === "home" || route.kind === "not-found"
+      activeHref={state.status === "error" || route.kind === "home" || route.kind === "not-found" || isLegalKind(route.kind)
         ? undefined
         : route.kind.startsWith("benchmark")
         ? "/benchmarks"
@@ -143,6 +145,8 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
     content = (
       <CompanyDetailPage response={loaded.payload} currentSearch={currentSearch} />
     );
+  } else if (isLegalKind(loaded.kind)) {
+    content = <LegalPage kind={loaded.kind} />;
   } else {
     content = (
       <PageContainer className="registry-page">
@@ -153,7 +157,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
 
   if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
-    <AppShell navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
+    <AppShell navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
       ? undefined : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}
