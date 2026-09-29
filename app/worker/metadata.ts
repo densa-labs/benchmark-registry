@@ -1,7 +1,7 @@
 import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
 import { resolveRegistryRoute } from "../src/registry";
 import type { BenchmarkRef } from "./api";
-import { RegistryRepository } from "./repository";
+import type { RegistryReader } from "./materialized-repository";
 import { IS_STAGING } from "../src/build";
 
 export interface DocumentMetadata {
@@ -24,7 +24,7 @@ const missing: DocumentMetadata = {
   description: "The requested Benchmark Registry page could not be found.",
 };
 
-async function pageMetadata(url: URL, repository: RegistryRepository): Promise<DocumentMetadata> {
+async function pageMetadata(url: URL, repository: RegistryReader): Promise<DocumentMetadata> {
   const route = resolveRegistryRoute(url.pathname);
   switch (route.kind) {
     case "home":
@@ -84,7 +84,7 @@ async function pageMetadata(url: URL, repository: RegistryRepository): Promise<D
   }
 }
 
-export async function documentMetadata(url: URL, repository: RegistryRepository): Promise<DocumentMetadata> {
+export async function documentMetadata(url: URL, repository: RegistryReader): Promise<DocumentMetadata> {
   const metadata = await pageMetadata(url, repository);
   const route = resolveRegistryRoute(url.pathname);
   const segment = encodeURIComponent;

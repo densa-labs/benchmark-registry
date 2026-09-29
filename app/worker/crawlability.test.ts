@@ -5,7 +5,7 @@ import namespaces from "../../migrations/0002_seed_namespaces.sql?raw";
 import attestations from "../../migrations/0004_provider_attestations.sql?raw";
 import units from "../../migrations/0005_standalone_ai_units.sql?raw";
 import template from "../index.html?raw";
-import worker, { type Env } from "./index";
+import worker, { type Env } from "./canonical-reference";
 import { asD1Database } from "./search-test-fixtures";
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";

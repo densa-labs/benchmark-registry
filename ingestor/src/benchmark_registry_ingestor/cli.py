@@ -2,6 +2,8 @@
 
 import argparse
 import json
+import os
+import subprocess
 import sys
 from collections.abc import Sequence
 from pathlib import Path
@@ -11,7 +13,32 @@ from benchmark_registry_ingestor.database import (
     DatabaseFailure,
     database_from_environment,
 )
-from benchmark_registry_ingestor.engine import IngestionFailure, Ingestor
+from benchmark_registry_ingestor.engine import (
+    IngestionFailure,
+    Ingestor,
+    PublicationPending,
+)
+
+
+def publication_callback(target: str):
+    if target != "remote":
+        return None
+    environments = {
+        "59a384d9-5fba-45e4-97be-3bd1e047def1": "staging",
+        "a7b3e1d1-34d6-432b-bd31-8ec4636916ab": "production",
+    }
+    environment = environments.get(os.environ.get("CLOUDFLARE_D1_DATABASE_ID", ""))
+    if environment is None:
+        return None  # Disposable atomicity probes have no public read store.
+    app = Path(__file__).parents[3] / "app"
+
+    def publish():
+        subprocess.run(
+            ["node", "scripts/materialize.mjs", "--environment", environment],
+            cwd=app, check=True, capture_output=True, text=True,
+        )
+
+    return publish
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -74,11 +101,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         with args.input.open(encoding="utf-8") as input_file:
             payload = json.load(input_file)
         database = database_from_environment(args.target, commit=args.commit)
-        outcomes = Ingestor(database).run(
+        outcomes = Ingestor(database, publication_callback(args.target)).run(
             args.operation,
             payload,
             commit=args.commit,
         )
+    except PublicationPending as exc:
+        print(json.dumps({"status": "ERROR", "operation": args.operation,
+                          "canonical_committed": True, "materialization_pending": True,
+                          "message": str(exc)}, sort_keys=True), file=sys.stderr)
+        return 4
     except (OSError, json.JSONDecodeError, DatabaseFailure) as exc:
         print(
             json.dumps(

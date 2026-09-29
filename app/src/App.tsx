@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import type { InitialDocument } from "./bootstrap";
+import { useDocumentNavigation } from "./navigation";
 import { RouteLoadingState } from "./ui/route-loading";
 
 import {
@@ -53,6 +54,15 @@ export function App({ initial }: { initial?: InitialDocument }) {
   const [state, setState] = useState<LoadState>(() => initial
     ? { status: "loaded", route: initial.loaded } : { status: "loading" });
 
+  const [currentSearch, setCurrentSearch] = useState(initial?.currentSearch ?? location.search);
+  const [navigationError, setNavigationError] = useState<string>();
+  const [pendingRoute, setPendingRoute] = useState<RegistryRoute>();
+  useDocumentNavigation(initial, (document) => {
+    setNavigationError(undefined);
+    setCurrentSearch(document.currentSearch);
+    setState({status:"loaded",route:document.loaded});
+  }, setNavigationError, setPendingRoute);
+
   useEffect(() => {
     if (initial || route.kind === "not-found") return;
 
@@ -81,13 +91,9 @@ export function App({ initial }: { initial?: InitialDocument }) {
       <RouteLoadingState route={route} />
     );
   } else if (state.status === "error") {
-    content = (
-      <PageContainer className="registry-page">
-        <ErrorState title="Unable to load registry data" description={state.message} />
-      </PageContainer>
-    );
+    content = <PageContainer className="registry-page"><ErrorState title="Unable to load registry data" description={state.message} /></PageContainer>;
   } else {
-    return <RegistryDocument loaded={state.route} currentSearch={initial?.currentSearch ?? location.search} />;
+    return <RegistryDocument loaded={state.route} currentSearch={currentSearch} enhanced navigationError={navigationError} pendingRoute={pendingRoute} />;
   }
 
   return (
@@ -107,7 +113,7 @@ export function App({ initial }: { initial?: InitialDocument }) {
 }
 
 // Shared by the client and the Worker initial document; effects stay client-only.
-export function RegistryDocument({ loaded, currentSearch }: { loaded: LoadedRegistryRoute; currentSearch: string }) {
+export function RegistryDocument({ loaded, currentSearch, enhanced = false, navigationError, pendingRoute }: { loaded: LoadedRegistryRoute; currentSearch: string; enhanced?: boolean; navigationError?: string; pendingRoute?: RegistryRoute }) {
   let content;
   if (loaded.kind === "home") {
     content = <HomePage response={loaded.payload} />;
@@ -140,11 +146,13 @@ export function RegistryDocument({ loaded, currentSearch }: { loaded: LoadedRegi
     );
   }
 
+  if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
-    <AppShell navigation={navigation} renderPending={renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
+    <AppShell navigation={navigation} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
       ? undefined : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
-      {content}
+      {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}
+      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{content}</Fragment>
     </AppShell>
   );
 }

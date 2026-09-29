@@ -5,7 +5,6 @@ from pathlib import Path
 
 import pytest
 
-
 MIGRATIONS = Path(__file__).parents[2] / "migrations"
 
 

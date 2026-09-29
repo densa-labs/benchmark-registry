@@ -4,7 +4,7 @@ import { RegistryDocument } from "../src/App";
 import { loadRegistryRoute, resolveRegistryRoute } from "../src/registry";
 import { ApiError } from "./api";
 
-export async function renderDocument(url: URL, readApi: (input: string) => Promise<Response>) {
+export async function renderDocument(url: URL, readApi: (input: string) => Promise<Response>, revision?: string) {
   const route = resolveRegistryRoute(url.pathname);
   let search = url.search;
   const fetcher = (async (input: RequestInfo | URL) => readApi(String(input))) as typeof fetch;
@@ -18,12 +18,12 @@ export async function renderDocument(url: URL, readApi: (input: string) => Promi
     search = "";
     loaded = await loadRegistryRoute(route, search, fetcher);
   }
-  return renderInitialDocument(loaded, search);
+  return renderInitialDocument(loaded, search, revision);
 }
 
-export function renderInitialDocument(loaded: import("../src/registry").LoadedRegistryRoute, currentSearch: string) {
+export function renderInitialDocument(loaded: import("../src/registry").LoadedRegistryRoute, currentSearch: string, revision?: string) {
   return {
     markup: renderToString(<RegistryDocument loaded={loaded} currentSearch={currentSearch} />),
-    bootstrap: `<script id="registry-initial-document" type="application/json">${serializeInitialDocument({ loaded, currentSearch })}</script>`,
+    bootstrap: `<script id="registry-initial-document" type="application/json">${serializeInitialDocument({ loaded, currentSearch, revision })}</script>`,
   };
 }

@@ -5,7 +5,6 @@ from pathlib import Path
 from benchmark_registry_ingestor.database import LocalDatabase
 from benchmark_registry_ingestor.engine import Ingestor
 
-
 ROOT = Path(__file__).parents[2]
 BATCHES = ROOT / "data" / "batches"
 

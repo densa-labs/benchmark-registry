@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Any
@@ -31,6 +32,10 @@ class IngestionFailure(RuntimeError):
         self.status = status
         self.identifier = identifier
         self.message = message
+
+
+class PublicationPending(RuntimeError):
+    """Canonical commit succeeded; its materialization still needs maintenance."""
 
 
 @dataclass(frozen=True)
@@ -263,8 +268,19 @@ def _source(record: Record, prefix: str = "source") -> Record:
 
 
 class Ingestor:
-    def __init__(self, database: Database):
+    def __init__(self, database: Database, after_commit: Callable[[], None] | None = None):
         self.database = database
+        self.after_commit = after_commit
+
+    def _publish_committed(self) -> None:
+        if self.after_commit is not None:
+            try:
+                self.after_commit()
+            except Exception as exc:
+                raise PublicationPending(
+                    "Canonical data committed; materialization is pending. "
+                    "The previous published generation remains live. Retry the materializer."
+                ) from exc
 
     def run(
         self,
@@ -292,6 +308,7 @@ class Ingestor:
                         "remote write response was ambiguous and logical identities "
                         "do not prove the batch committed; no retry was attempted",
                     ) from None
+                self._publish_committed()
                 return [
                     Outcome(
                         "SKIPPED",
@@ -312,6 +329,7 @@ class Ingestor:
                         if current.status == "CONFLICT":
                             raise current from exc
                 raise IngestionFailure("ERROR", operation, str(exc)) from exc
+            self._publish_committed()
         return plan.outcomes
 
     def _records(self, operation: str, payload: object) -> list[tuple[str, Record]]:

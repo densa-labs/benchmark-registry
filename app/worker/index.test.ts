@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import worker, { type Env } from "./index";
+import worker, { type Env } from "./canonical-reference";
 
 interface QueryCall {
   sql: string;
@@ -354,11 +354,11 @@ describe("filtering, sorting, latest/history, and search", () => {
 
   it("defaults result endpoints to latest and supports history", async () => {
     const latest = await api("/api/benchmarks/swe-bench-verified/2025-02-01");
-    expect(latest.calls.find((call) => tagFor(call.sql) === "benchmark-version-results:count")?.sql).toContain("row_number() OVER");
+    expect(latest.calls.find((call) => tagFor(call.sql) === "benchmark-version-results:count")?.sql).toContain("NOT EXISTS (\n  SELECT 1 FROM results candidate");
 
     const history = await api("/api/benchmarks/swe-bench-verified/2025-02-01?view=history");
     expect(history.body).toMatchObject({ data: { view: "history" } });
-    expect(history.calls.find((call) => tagFor(call.sql) === "benchmark-version-results:count")?.sql).not.toContain("row_number() OVER");
+    expect(history.calls.find((call) => tagFor(call.sql) === "benchmark-version-results:count")?.sql).not.toContain("NOT EXISTS (\n  SELECT 1 FROM results candidate");
   });
 
   it("binds benchmark-version company filters", async () => {

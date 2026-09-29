@@ -13,7 +13,8 @@ import {
   resultFromRow,
   modelFromRow,
 } from "./api";
-import { interpretSearch, orderSearch, type SearchEntity } from "./search";
+import type { SearchEntity } from "./search";
+import { searchResponse } from "./search-response";
 import { likePattern, type ParsedListParams, type SortOrder } from "./params";
 
 type BindValue = string | number | null;
@@ -173,33 +174,36 @@ const RESULT_REPORTED_KEY = `CASE
   ELSE r.reported_at
 END`;
 
-const LATEST_RESULT_PREDICATE = `r.id IN (
-  SELECT ranked.id FROM (
-    SELECT candidate.id,
-      row_number() OVER (
-        PARTITION BY candidate.model_id, candidate.reasoning_level,
-          candidate.benchmark_version_id, candidate.metric_id,
-          candidate.evaluator_set_key
-        ORDER BY
-          CASE
-            WHEN candidate.reported_precision = 'date' OR EXISTS (
-              SELECT 1 FROM results date_peer
-              WHERE date_peer.model_id = candidate.model_id
-                AND date_peer.reasoning_level = candidate.reasoning_level
-                AND date_peer.benchmark_version_id = candidate.benchmark_version_id
-                AND date_peer.metric_id = candidate.metric_id
-                AND date_peer.evaluator_set_key = candidate.evaluator_set_key
-                AND substr(date_peer.reported_at, 1, 10) = substr(candidate.reported_at, 1, 10)
-                AND date_peer.reported_precision = 'date'
-            ) THEN substr(candidate.reported_at, 1, 10)
-            ELSE candidate.reported_at
-          END DESC,
-          candidate.result_key ASC
-      ) AS position
-    FROM results candidate
-  ) ranked
-  WHERE ranked.position = 1
+function seriesReportedKey(alias: string): string {
+  return `CASE WHEN ${alias}.reported_precision = 'date' OR EXISTS (
+    SELECT 1 FROM results date_peer
+    WHERE date_peer.model_id = ${alias}.model_id
+      AND date_peer.reasoning_level = ${alias}.reasoning_level
+      AND date_peer.benchmark_version_id = ${alias}.benchmark_version_id
+      AND date_peer.metric_id = ${alias}.metric_id
+      AND date_peer.evaluator_set_key = ${alias}.evaluator_set_key
+      AND substr(date_peer.reported_at, 1, 10) = substr(${alias}.reported_at, 1, 10)
+      AND date_peer.reported_precision = 'date'
+  ) THEN substr(${alias}.reported_at, 1, 10) ELSE ${alias}.reported_at END`;
+}
+
+const LATEST_RESULT_PREDICATE = `NOT EXISTS (
+  SELECT 1 FROM results candidate
+  WHERE candidate.model_id = r.model_id
+    AND candidate.reasoning_level = r.reasoning_level
+    AND candidate.benchmark_version_id = r.benchmark_version_id
+    AND candidate.metric_id = r.metric_id
+    AND candidate.evaluator_set_key = r.evaluator_set_key
+    AND (${seriesReportedKey("candidate")} > ${seriesReportedKey("r")}
+      OR (${seriesReportedKey("candidate")} = ${seriesReportedKey("r")}
+        AND candidate.result_key < r.result_key))
 )`;
+
+// Counts need no entity/metric joins unless matching names or filtering company.
+function resultCountJoins(params: ParsedListParams, companyScope = false): string {
+  if (params.q !== undefined) return RESULT_JOINS;
+  return `FROM results r${companyScope || params.company !== undefined ? " JOIN models m ON m.id = r.model_id" : ""}${params.company !== undefined ? " JOIN companies c ON c.id = m.company_id" : ""}`;
+}
 
 const BENCHMARK_VERSION_KEY = `CASE
   WHEN bv.release_precision = 'date' OR EXISTS (
@@ -349,7 +353,28 @@ function latestModelFromCompany(row: CompanyListRow): ModelSummary | null {
 }
 
 export class RegistryRepository {
-  constructor(private readonly db: D1Database) {}
+  constructor(
+    private readonly db: D1Database,
+    private readonly cachedData?: <T>(key: string, load: () => Promise<T>) => Promise<T>,
+  ) {}
+
+  private readonly firstReads = new Map<string, Promise<unknown>>();
+
+  async materializedFields(key: string) {
+    if(key === "models") return this.all<{identity:string; name:string; company:string; released:string; aliases:string}>(`SELECT m.registry_no AS identity,m.normalized_name AS name,c.normalized_name AS company,${MODEL_RELEASE_KEY} AS released,
+      COALESCE((SELECT json_group_array(normalized_name) FROM model_aliases WHERE model_id=m.id),'[]') AS aliases FROM models m JOIN companies c ON c.id=m.company_id`);
+    if(key === "benchmarks") return this.all<{identity:string; released:string}>(`WITH ranked AS (SELECT bv.*,${BENCHMARK_VERSION_KEY} AS released,row_number() OVER(PARTITION BY bv.benchmark_id ORDER BY ${BENCHMARK_VERSION_KEY} DESC,bv.version ASC,bv.id ASC) AS position FROM benchmark_versions bv)
+      SELECT b.slug AS identity,ranked.released FROM benchmarks b JOIN ranked ON ranked.benchmark_id=b.id AND ranked.position=1`);
+    if(key === "companies") return this.all<{identity:string; established:string|null}>(`SELECT c.slug AS identity,${COMPANY_ESTABLISHED_KEY} AS established FROM companies c`);
+    const [kind,...parts]=key.split(":");
+    const scope=kind === "model" ? "r.model_id=(SELECT id FROM models WHERE registry_no=?)" : kind === "company" ? "m.company_id=(SELECT id FROM companies WHERE slug=?)" : "r.benchmark_version_id=(SELECT bv.id FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id WHERE b.slug=? AND bv.version_slug=?)";
+    return this.all<{identity:string; latest:number; reported:string; source:string; aliases:string}>(`/* materialization:result-fields */ SELECT r.result_key AS identity,${LATEST_RESULT_PREDICATE} AS latest,${RESULT_REPORTED_KEY} AS reported,r.primary_source_normalized_url AS source,
+      COALESCE((SELECT json_group_array(normalized_name) FROM model_aliases WHERE model_id=m.id),'[]') AS aliases FROM results r JOIN models m ON m.id=r.model_id WHERE ${scope}`,parts);
+  }
+
+  async materializedRedirects() {
+    return this.all<{source:string; target:string}>("SELECT source.registry_no AS source,target.registry_no AS target FROM registry_redirects rr JOIN models source ON source.id=rr.source_model_id JOIN models target ON target.id=rr.target_model_id");
+  }
 
   async modelRedirectTarget(registryNo: string): Promise<string | null> {
     const row = await this.first<{ registry_no: string }>(
@@ -369,7 +394,13 @@ export class RegistryRepository {
   }
 
   private async first<T>(sql: string, bindings: BindValue[] = []): Promise<T | null> {
-    return this.db.prepare(sql).bind(...bindings).first<T>();
+    const key = JSON.stringify([sql, bindings]);
+    let value = this.firstReads.get(key);
+    if (!value) {
+      value = this.db.prepare(sql).bind(...bindings).first<T>();
+      this.firstReads.set(key, value);
+    }
+    return value as Promise<T | null>;
   }
 
   private async count(sql: string, bindings: BindValue[]): Promise<number> {
@@ -519,7 +550,7 @@ export class RegistryRepository {
     if (row === null) throw new Error("Redirect target is missing.");
     const filters = resultFilters(params, "r.model_id = ?", [targetId], "benchmarks");
     const total = await this.count(
-      `/* model-results:count */ SELECT count(*) AS total ${RESULT_JOINS} WHERE ${filters.sql}`,
+      `/* model-results:count */ SELECT count(*) AS total ${resultCountJoins(params)} WHERE ${filters.sql}`,
       filters.bindings,
     );
     const results = await this.all<ResultDbRow>(
@@ -660,7 +691,7 @@ export class RegistryRepository {
     if (version === null) throw new ApiError(404, "not_found", "Benchmark version not found.");
     const filters = resultFilters(params, "r.benchmark_version_id = ?", [version.id], "models");
     const total = await this.count(
-      `/* benchmark-version-results:count */ SELECT count(*) AS total ${RESULT_JOINS} WHERE ${filters.sql}`,
+      `/* benchmark-version-results:count */ SELECT count(*) AS total ${resultCountJoins(params)} WHERE ${filters.sql}`,
       filters.bindings,
     );
     const results = await this.all<ResultDbRow>(
@@ -668,7 +699,13 @@ export class RegistryRepository {
        WHERE ${filters.sql} ORDER BY ${resultOrder(params)} LIMIT ? OFFSET ?`,
       [...filters.bindings, params.limit, (params.page - 1) * params.limit],
     );
+    const companyFilters = resultFilters({ ...params, company: undefined }, "r.benchmark_version_id = ?", [version.id], "models");
+    const availableCompanies = await this.all<{name: string; slug: string}>(
+      `/* benchmark-version:companies */ SELECT DISTINCT c.name, c.slug ${RESULT_JOINS}
+       WHERE ${companyFilters.sql} ORDER BY c.normalized_name, c.slug`, companyFilters.bindings,
+    );
     return {
+      available_companies: availableCompanies,
       data: {
         version: versionFromRow(version),
         evaluator_names: parseJsonArray(version.evaluator_names),
@@ -681,7 +718,7 @@ export class RegistryRepository {
     };
   }
 
-  private latestModelsCte(): string {
+  private latestModelsCte(companyScope = false): string {
     return `eligible_models AS (
       SELECT m.*,
         CASE
@@ -698,7 +735,7 @@ export class RegistryRepository {
           ELSE m.release_at
         END AS release_key
       FROM models m
-      WHERE NOT EXISTS (
+      WHERE ${companyScope ? "m.company_id = (SELECT id FROM companies WHERE slug = ?) AND" : ""} NOT EXISTS (
         SELECT 1 FROM registry_redirects redirect WHERE redirect.source_model_id = m.id
       )
     ), latest_models AS (
@@ -765,7 +802,7 @@ export class RegistryRepository {
 
   async company(slug: string, params: ParsedListParams) {
     const row = await this.first<CompanyListRow>(
-      `/* company:detail */ WITH ${this.latestModelsCte()}
+      `/* company:detail */ WITH ${this.latestModelsCte(true)}
        SELECT c.id, c.name AS company_name, c.slug AS company_slug,
         c.established_at, c.established_precision, c.provider_kind AS entity_kind,
         c.established_basis,
@@ -780,12 +817,12 @@ export class RegistryRepository {
        FROM companies c
        LEFT JOIN latest_models lm ON lm.company_id = c.id AND lm.position = 1
        WHERE c.slug = ?`,
-      [slug],
+      [slug, slug],
     );
     if (row === null) throw new ApiError(404, "not_found", "Company not found.");
     const filters = resultFilters(params, "m.company_id = ?", [row.id], "both");
     const total = await this.count(
-      `/* company-results:count */ SELECT count(*) AS total ${RESULT_JOINS} WHERE ${filters.sql}`,
+      `/* company-results:count */ SELECT count(*) AS total ${resultCountJoins(params, true)} WHERE ${filters.sql}`,
       filters.bindings,
     );
     const results = await this.all<ResultDbRow>(
@@ -810,10 +847,10 @@ export class RegistryRepository {
     };
   }
 
-  async search(params: ParsedListParams) {
+  async materializedSearchEntities() {
     // Only names/aliases/version identities leave D1. Matching stays in the
     // Worker; no catalogue is sent to the browser and no per-token SQL occurs.
-    const rows = await this.all<SearchCatalogueRow>(`/* search:catalogue */
+    const loadCatalogue = () => this.all<SearchCatalogueRow>(`/* search:catalogue */
       SELECT 'model' AS entity_type, m.id, m.canonical_name, m.normalized_name,
         '/models/' || m.registry_no AS href,
         json_array(m.registry_no) AS registry_alias,
@@ -832,6 +869,7 @@ export class RegistryRepository {
       UNION ALL
       SELECT 'company', c.id, c.name, c.normalized_name,
         '/companies/' || c.slug, '[]', '[]', '[]' FROM companies c`, []);
+    const rows = this.cachedData ? await this.cachedData("search-catalogue", loadCatalogue) : await loadCatalogue();
     const entities = rows.map((row) => {
       const aliases = JSON.parse(row.aliases) as { name: string; normalized_name: string }[];
       const registryAliases = parseJsonArray(row.registry_alias);
@@ -841,40 +879,19 @@ export class RegistryRepository {
         versions: JSON.parse(row.versions) as SearchEntity["versions"],
       };
     });
-    const { ranked, interpretations } = interpretSearch(params.q!, entities);
-    let directHref: string | undefined;
-    if (interpretations.length) {
-      const relationships = await this.all<SearchRelationshipRow>(`/* search:relationships */
+    return entities;
+  }
+
+  async materializedSearchRelationships(models?: number[], benchmarks?: number[]) {
+    return this.all<SearchRelationshipRow>(`/* search:relationships */
         SELECT r.model_id, bv.benchmark_id, bv.id AS version_id,
           bv.version, bv.version_slug, r.reasoning_level, r.result_key
         FROM results r JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
-        WHERE r.model_id IN (SELECT value FROM json_each(?))
-          AND bv.benchmark_id IN (SELECT value FROM json_each(?))
-        ORDER BY r.result_key`, [
-        JSON.stringify([...new Set(interpretations.map((i) => i.model.id))]),
-        JSON.stringify([...new Set(interpretations.map((i) => i.benchmark.id))]),
-      ]);
-      const connected = relationships.flatMap((row) => {
-        const intent = interpretations.find((i) => i.model.id === row.model_id
-          && i.benchmark.id === row.benchmark_id && (i.versionId === undefined || i.versionId === row.version_id));
-        if (!intent) return [];
-        const href = `${intent.benchmark.href}/${row.version_slug}?view=history&result=${row.result_key}`;
-        return [{ hit: {
-          entity_type: "result" as const,
-          canonical_name: `${intent.model.canonical_name} × ${intent.benchmark.canonical_name} ${row.version}`,
-          matched_text: row.reasoning_level ? `Reasoning: ${row.reasoning_level}` : "Evaluation result",
-          href,
-        }, rank: intent.high ? 3 : 5 }];
-      });
-      ranked.push(...connected);
-      if (interpretations.length === 1 && interpretations[0].high && connected.length === 1
-        && !ranked.some((entry) => entry.rank < 3)) directHref = connected[0].hit.href;
-    }
-    const hits = orderSearch(ranked);
-    return {
-      data: hits.slice((params.page - 1) * params.limit, params.page * params.limit),
-      page: pageMetadata(params.page, params.limit, hits.length),
-      ...(params.page === 1 && directHref ? { direct_href: directHref } : {}),
-    };
+        ${models ? "WHERE r.model_id IN (SELECT value FROM json_each(?)) AND bv.benchmark_id IN (SELECT value FROM json_each(?))" : ""}
+        ORDER BY r.result_key`, models ? [JSON.stringify(models), JSON.stringify(benchmarks)] : []);
+  }
+
+  async search(params: ParsedListParams) {
+    return searchResponse(params,await this.materializedSearchEntities(),(models,benchmarks)=>this.materializedSearchRelationships(models,benchmarks));
   }
 }

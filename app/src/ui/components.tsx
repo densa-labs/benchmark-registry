@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 
+import { navigateRegistry } from "../navigation";
 import { BUILD_TIMESTAMP, IS_STAGING, REGISTRY_DATA_DATE } from "../build";
 import { formatBuildTime, viewerTimeZone } from "../build-time";
 import { advanceHeaderScroll, initialHeaderScroll } from "./header-scroll";
@@ -105,6 +106,12 @@ export function Header({
   const scrollState = useRef(initialHeaderScroll());
   const buildTime = useLocalizedBuildTime();
   const mobile = useSyncExternalStore(subscribeMobileViewport, isMobileViewport, () => false);
+
+  useEffect(() => {
+    const close = () => setMenuOpen(false);
+    window.addEventListener("registry:navigated",close);
+    return () => window.removeEventListener("registry:navigated",close);
+  }, []);
 
   const reveal = () => {
     scrollState.current = initialHeaderScroll(window.scrollY);
@@ -384,7 +391,11 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
   const shell = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(-1);
 
-  useEffect(() => () => request.current?.abort(), []);
+  useEffect(() => {
+    const close = () => {request.current?.abort();setState({status:"idle"});setActiveIndex(-1);};
+    window.addEventListener("registry:navigated",close);
+    return () => {request.current?.abort();window.removeEventListener("registry:navigated",close);};
+  }, []);
 
   const closeResults = () => {
     request.current?.abort();
@@ -413,7 +424,7 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
       .then((response) => {
         if (controller.signal.aborted) return;
         if (response.direct_href) {
-          window.location.assign(response.direct_href);
+          navigateRegistry(response.direct_href);
           return;
         }
         setState({ status: "results", query, response });

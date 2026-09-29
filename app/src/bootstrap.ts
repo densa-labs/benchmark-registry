@@ -2,6 +2,7 @@ import type { LoadedRegistryRoute } from "./registry";
 
 export interface InitialDocument {
   loaded: LoadedRegistryRoute;
+  revision?: string;
   currentSearch: string;
 }
 

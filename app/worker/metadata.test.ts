@@ -1,7 +1,7 @@
 import template from "../index.html?raw";
 import { DatabaseSync } from "node:sqlite";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import worker, { type Env } from "./index";
+import worker, { type Env } from "./canonical-reference";
 import { asD1Database, seedSearchFixtures } from "./search-test-fixtures";
 
 vi.mock("./document", async (importOriginal) => ({

@@ -5,7 +5,7 @@ import { stdout } from "node:process";
 import { verifyUiBuild } from "./verify-ui-build.mjs";
 
 const workerName = "benchmark-registry-staging";
-const databaseName = "benchmark-registry-staging";
+
 const hostname = "staging.benchmarkregistry.org";
 
 const source = JSON.parse(readFileSync("wrangler.jsonc", "utf8"));
@@ -16,15 +16,13 @@ assert.equal(source.assets?.run_worker_first, true);
 assert.equal(staging?.workers_dev, false);
 assert.equal(staging?.preview_urls, false);
 assert.deepEqual(staging?.routes, [{ pattern: hostname, custom_domain: true }]);
-assert.deepEqual(staging?.vars, { STAGING_CRAWLER_PROTECTION: "enabled" });
+assert.deepEqual(staging?.vars, { STAGING_CRAWLER_PROTECTION: "enabled", READ_ENVIRONMENT:"staging" });
 assert.deepEqual(staging?.assets, {
   binding: "ASSETS",
   not_found_handling: "single-page-application",
   run_worker_first: true,
 });
-assert.deepEqual(staging?.d1_databases, [
-  { binding: "DB", database_name: databaseName, migrations_dir: "../migrations" },
-]);
+assert.equal(staging?.d1_databases, undefined);
 
 const configs = readdirSync("dist", { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
@@ -37,15 +35,15 @@ assert.equal(deployment.name, workerName);
 assert.equal(deployment.workers_dev, false);
 assert.equal(deployment.preview_urls, false);
 assert.deepEqual(deployment.routes, [{ pattern: hostname, custom_domain: true }]);
-assert.deepEqual(deployment.vars, { STAGING_CRAWLER_PROTECTION: "enabled" });
+assert.deepEqual(deployment.vars, { STAGING_CRAWLER_PROTECTION: "enabled", READ_ENVIRONMENT:"staging" });
 assert.equal(deployment.assets?.binding, "ASSETS");
 assert.equal(deployment.assets?.run_worker_first, true);
-assert.equal(deployment.d1_databases?.length, 1);
-assert.equal(deployment.d1_databases[0].binding, "DB");
-assert.equal(deployment.d1_databases[0].database_name, databaseName);
-assert.notEqual(deployment.d1_databases[0].database_id, source.d1_databases[0].database_id);
+assert.equal(deployment.d1_databases?.length ?? 0,0);
+assert.equal(deployment.kv_namespaces.length,1);
+assert.equal(deployment.kv_namespaces[0].binding,"READ_STORE");
+assert.equal(deployment.kv_namespaces[0].id,source.env.staging.kv_namespaces[0].id);
+assert.notEqual(source.env.staging.kv_namespaces[0].id,source.env.production.kv_namespaces[0].id);
 assert.ok(existsSync(join(configs[0], "..", deployment.main)));
-assert.ok(existsSync(join(configs[0], "..", deployment.d1_databases[0].migrations_dir)));
 
-stdout.write(`Verified ${workerName}, ${hostname}, and isolated ${databaseName} binding.\n`);
+stdout.write(`Verified ${workerName}, ${hostname}, and isolated KV binding without D1.\n`);
 verifyUiBuild(true, join(configs[0], "..", deployment.main));

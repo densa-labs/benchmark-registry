@@ -57,6 +57,7 @@ export interface BenchmarkFamilyResponse {
 }
 
 export interface BenchmarkVersionResponse {
+  available_companies?: CompanySummary[];
   data: {
     version: BenchmarkVersionSummary;
     evaluator_names: string[];
@@ -220,11 +221,20 @@ function errorMessage(body: unknown): string {
   return "The registry data could not be loaded.";
 }
 
+let searchGeneration: string | undefined;
+export function setSearchGeneration(generation: string) { searchGeneration=generation; }
+const searchCaches = new WeakMap<typeof fetch, Map<string, {time:number; generation?:string; body:SearchResponse}>>();
+
 export async function searchRegistry(
   query: string,
   fetcher: typeof fetch = fetch,
   signal?: AbortSignal,
 ): Promise<SearchResponse> {
+  if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
+  let cache = searchCaches.get(fetcher);
+  if (!cache) {cache=new Map();searchCaches.set(fetcher,cache);}
+  const cached = cache.get(query);
+  if (cached && cached.generation===searchGeneration && Date.now() - cached.time < 60_000) return cached.body;
   const params = new URLSearchParams({ q: query, limit: "50" });
   const response = await fetcher(`/api/search?${params.toString()}`, {
     headers: { Accept: "application/json" },
@@ -232,6 +242,11 @@ export async function searchRegistry(
   });
   const body: unknown = await response.json();
   if (!response.ok) { diagnoseApiFailure(response.status); throw new RegistryClientError(errorMessage(body)); }
+  if (!body || typeof body !== "object" || !("data" in body) || !Array.isArray(body.data) || !("page" in body)) throw new RegistryClientError("Invalid search response.");
+  if (!signal?.aborted) {
+    cache.set(query,{time:Date.now(),generation:response.headers.get('X-Registry-Revision') ?? searchGeneration,body:body as SearchResponse});
+    if (cache.size > 16) cache.delete(cache.keys().next().value!);
+  }
   return body as SearchResponse;
 }
 
@@ -341,7 +356,7 @@ export async function loadRegistryRoute(
     case "benchmark":
       return { kind: "benchmark", payload: body as BenchmarkFamilyResponse };
     case "benchmark-version": {
-      const availableCompanies = await loadBenchmarkCompanies(
+      const availableCompanies = (body as BenchmarkVersionResponse).available_companies ?? await loadBenchmarkCompanies(
         route,
         search,
         fetcher,

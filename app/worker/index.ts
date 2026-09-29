@@ -1,12 +1,14 @@
 import { renderDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
-import { parseParameters } from "./params";
-import { RegistryRepository } from "./repository";
+import { apiParameters } from "./request-policy";
+import { withRegistryCache, type CacheEnvironment } from "./cache";
+import type { RegistryReader } from "./materialized-repository";
+import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
+import { MaterializationFailure } from "./read-model";
 import { documentMetadata, rewriteMetadata, escapeHtml, PRODUCTION_ORIGIN } from "./metadata";
 
-export interface Env {
+export interface Env extends CacheEnvironment, ReadStoreEnvironment {
   ASSETS: Fetcher;
-  DB: D1Database;
   STAGING_CRAWLER_PROTECTION?: "enabled";
 }
 
@@ -15,18 +17,6 @@ const WWW_HOSTNAME = "www.benchmarkregistry.org";
 const APEX_HOSTNAME = "benchmarkregistry.org";
 const STAGING_ROBOTS = "User-agent: *\nDisallow: /\n";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
-
-const MODEL_SORTS = ["name", "released", "published", "company", "registry_no"];
-const BENCHMARK_SORTS = ["name", "released", "version"];
-const COMPANY_SORTS = ["name", "established", "latest_model"];
-const RESULT_SORTS = [
-  "benchmark",
-  "model",
-  "company",
-  "source",
-  "registry_no",
-  "reported_at",
-];
 
 function modelPageRegistryNo(pathname: string): string | null {
   const match = /^\/models\/([^/]+)\/?$/u.exec(pathname);
@@ -42,81 +32,31 @@ function decodeSegment(value: string): string {
   }
 }
 
-async function handleApi(request: Request, env: Env): Promise<Response> {
+async function handleApi(request: Request, env: Env, repository: RegistryReader): Promise<Response> {
   if (request.method !== "GET") return jsonError(404, "not_found", "API route not found.");
-  const url = new URL(request.url);
-  const path = url.pathname.split("/").filter(Boolean).map(decodeSegment);
-  const repository = new RegistryRepository(env.DB);
-
-  if (path.length === 2 && path[1] === "stats") {
-    parseParameters(url.searchParams, { allowed: [] });
-    return Response.json(await repository.stats());
-  }
-
-  if (path.length === 2 && path[1] === "models") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "company", "sort", "order"],
-      sorts: MODEL_SORTS,
-    });
-    return Response.json(await repository.models(params));
-  }
-  if (path.length === 3 && path[1] === "models") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "sort", "order", "view"],
-      sorts: RESULT_SORTS,
-    });
-    return Response.json(await repository.model(path[2], params));
-  }
-  if (path.length === 2 && path[1] === "benchmarks") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "sort", "order"],
-      sorts: BENCHMARK_SORTS,
-    });
-    return Response.json(await repository.benchmarks(params));
-  }
-  if (path.length === 3 && path[1] === "benchmarks") {
-    parseParameters(url.searchParams, { allowed: [] });
-    return Response.json(await repository.benchmark(path[2]));
-  }
-  if (path.length === 4 && path[1] === "benchmarks") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "company", "sort", "order", "view", "result"],
-      sorts: RESULT_SORTS,
-    });
-    return Response.json(await repository.benchmarkVersion(path[2], path[3], params));
-  }
-  if (path.length === 2 && path[1] === "companies") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "sort", "order"],
-      sorts: COMPANY_SORTS,
-    });
-    return Response.json(await repository.companies(params));
-  }
-  if (path.length === 3 && path[1] === "companies") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q", "sort", "order", "view"],
-      sorts: RESULT_SORTS,
-    });
-    return Response.json(await repository.company(path[2], params));
-  }
-  if (path.length === 2 && path[1] === "search") {
-    const params = parseParameters(url.searchParams, {
-      allowed: ["page", "limit", "q"],
-      requireQuery: true,
-    });
-    return Response.json(await repository.search(params));
-  }
+  const {path, params} = apiParameters(new URL(request.url));
+  if (path.length === 2 && path[1] === "revision") return Response.json({revision:env.REGISTRY_REVISION});
+  if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
+  if (path.length === 2 && path[1] === "models") return Response.json(await repository.models(params));
+  if (path.length === 3 && path[1] === "models") return Response.json(await repository.model(path[2],params));
+  if (path.length === 2 && path[1] === "benchmarks") return Response.json(await repository.benchmarks(params));
+  if (path.length === 3 && path[1] === "benchmarks") return Response.json(await repository.benchmark(path[2]));
+  if (path.length === 4 && path[1] === "benchmarks") return Response.json(await repository.benchmarkVersion(path[2],path[3],params));
+  if (path.length === 2 && path[1] === "companies") return Response.json(await repository.companies(params));
+  if (path.length === 3 && path[1] === "companies") return Response.json(await repository.company(path[2],params));
+  if (path.length === 2 && path[1] === "search") return Response.json(await repository.search(params));
   return jsonError(404, "not_found", "API route not found.");
 }
 
-async function handleRequest(request: Request, env: Env): Promise<Response> {
+export async function handleRequest(request: Request, env: Env, repository: RegistryReader): Promise<Response> {
   const url = new URL(request.url);
   const { pathname } = url;
 
   if (pathname === "/api" || pathname.startsWith("/api/")) {
     try {
-      return await handleApi(request, env);
+      return await handleApi(request, env, repository);
     } catch (error) {
+      if (error instanceof MaterializationFailure) throw error;
       if (error instanceof ApiError) {
         return jsonError(error.status, error.code, error.message);
       }
@@ -129,13 +69,14 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
     try {
       const registryNo = modelPageRegistryNo(pathname);
       if (registryNo !== null) {
-        const target = await new RegistryRepository(env.DB).modelRedirectTarget(registryNo);
+        const target = await repository.modelRedirectTarget(registryNo);
         if (target !== null) {
           url.pathname = `/models/${target}`;
           return Response.redirect(url.toString(), 308);
         }
       }
     } catch (error) {
+      if (error instanceof MaterializationFailure) throw error;
       if (error instanceof ApiError) {
         return new Response("Invalid model route.", { status: error.status });
       }
@@ -154,12 +95,13 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
   }
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
-      const paths = await new RegistryRepository(env.DB).sitemapPaths();
+      const paths = await repository.sitemapPaths();
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(PRODUCTION_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
       });
     } catch (error) {
+      if (error instanceof MaterializationFailure) throw error;
       console.error('Sitemap data lookup failed.', error);
       return new Response('The request could not be completed.', { status: 500 });
     }
@@ -175,15 +117,15 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
   }
 
   try {
-    const metadata = await documentMetadata(url, new RegistryRepository(env.DB));
+    const metadata = await documentMetadata(url, repository);
     if (metadata.canonical && url.pathname !== new URL(metadata.canonical).pathname) {
       url.pathname = new URL(metadata.canonical).pathname;
       return Response.redirect(url.toString(), 308);
     }
     const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
-      // Run the existing read API directly against this environment's isolated D1.
-      return handleApi(new Request(new URL(String(input), url.origin)), env);
-    });
+      // SSR and public API share one pinned materialized generation.
+      return handleApi(new Request(new URL(String(input), url.origin)), env, repository);
+    }, env.REGISTRY_REVISION);
     const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
       .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
     const headers = new Headers(response.headers);
@@ -194,13 +136,14 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
       status: metadata.status ?? response.status, headers,
     });
   } catch (error) {
+    if (error instanceof MaterializationFailure) throw error;
     console.error("Document metadata lookup failed.", error);
     return new Response("The request could not be completed.", { status: 500 });
   }
 }
 
 const worker = {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx?: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     if (url.hostname === WWW_HOSTNAME || (url.hostname === APEX_HOSTNAME && url.protocol === "http:")) {
       url.hostname = APEX_HOSTNAME;
@@ -210,12 +153,40 @@ const worker = {
     const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
       && url.hostname === STAGING_HOSTNAME;
 
-    const response = protectStaging && url.pathname === "/robots.txt"
-      ? new Response(request.method === "HEAD" ? null : STAGING_ROBOTS, {
-        headers: { "Content-Type": "text/plain; charset=utf-8" },
-      })
-      : await handleRequest(request, env);
+    env={...env,CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
+    const store=new PublishedReadStore(env,url.origin);
+    let response:Response;
+    const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
+    if(staticAsset) response=await env.ASSETS.fetch(request);
+    else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
+    else {
+      try {
+        const publication=await store.publication();
+        let lastError:unknown;
+        response=new Response('The materialized registry is temporarily unavailable.',{status:500});
+        for(const [index,ref] of [publication.current,publication.previous].entries()) {
+          if(!ref) continue;
+          try {
+            const readEnv={...env,REGISTRY_REVISION:ref.generation,REGISTRY_DEGRADED:index>0};
+            response=await withRegistryCache(request,readEnv,async(cachedEnv,cacheRequest=request)=>handleRequest(cacheRequest,{...readEnv,...cachedEnv},await store.repository(ref)));
+            lastError=undefined;break;
+          } catch(error) {lastError=error;}
+        }
+        if(lastError) throw lastError;
+      } catch {
+        if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
+        else response=new Response('The materialized registry is temporarily unavailable.',{status:500});
+      }
+    }
 
+    const diagnostics = new Headers(response.headers);
+    diagnostics.set("X-Registry-Read-Store-Reads",String(store.reads));
+    diagnostics.set("X-Registry-D1-Queries", "0");
+    diagnostics.set("X-Registry-D1-Rows", "0");
+    diagnostics.set("Server-Timing", "d1;dur=0.00");
+    if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", "public, max-age=31536000, immutable");
+    if (response.status >= 400) diagnostics.set("Cache-Control", "no-store");
+    response = new Response(response.body,{status:response.status,statusText:response.statusText,headers:diagnostics});
     const nonProduction = url.hostname !== APEX_HOSTNAME;
     const apiDocument = url.pathname === '/api' || url.pathname.startsWith('/api/');
     if (!protectStaging && !nonProduction && !apiDocument) return response;
