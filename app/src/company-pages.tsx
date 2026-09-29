@@ -65,7 +65,7 @@ function LocalSearch({
 }) {
   const query = new URLSearchParams(currentSearch).get("q") ?? "";
   return (
-    <form className="local-search" role="search" method="get" action={action}>
+    <form className="local-search" role="search" aria-label={label} method="get" action={action}>
       <div className="local-search__field">
         <label className="local-search__label" htmlFor="local-search-input">
           {label}
@@ -81,13 +81,13 @@ function LocalSearch({
             autoComplete="off"
             required
           />
-          <button type="submit">Search</button>
+          <button type="submit" data-focus-key="local-search-submit">Search</button>
         </span>
       </div>
       <HiddenQueryFields search={currentSearch} exclude={["q"]} />
       {query ? (
         <a
-          className="local-search__clear"
+          className="local-search__clear" data-focus-key="clear-search"
           href={queryHref(action, currentSearch, { q: null, page: null })}
         >
           Clear search
@@ -110,7 +110,7 @@ function PageSizeForm({
     <form className="page-size-form" method="get" action={action}>
       <HiddenQueryFields search={currentSearch} exclude={["limit"]} />
       <PageSizeSelector value={value} id="results-page-size" />
-      <button type="submit">Apply</button>
+      <button type="submit" data-focus-key="page-size-apply">Apply</button>
     </form>
   );
 }
@@ -125,7 +125,7 @@ function sortLink(
   const explicitDirection = params.get("sort") === key
     ? (params.get("order") ?? "asc") as SortDirection
     : undefined;
-  const direction = explicitDirection ?? defaultDirection;
+  const direction = explicitDirection ?? (params.has("sort") ? undefined : defaultDirection);
   return {
     href: queryHref(pathname, currentSearch, {
       sort: key,
@@ -307,7 +307,7 @@ export function CompanyDetailPage({
       label: "Source",
       sortHref: sourceSort.href,
       sortDirection: sourceSort.direction,
-      render: (result) => <SourceLink href={result.primary_source_url} />,
+      render: (result) => <SourceLink href={result.primary_source_url} context={`${result.model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`} />,
     },
     {
       key: "registry-no",

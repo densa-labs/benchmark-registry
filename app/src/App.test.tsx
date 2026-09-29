@@ -25,7 +25,7 @@ describe("Registry foundation view", () => {
   it("renders the application shell, navigation, search, and container", () => {
     const markup = renderToStaticMarkup(<App />);
 
-    expect(markup).toContain("Skip to content");
+    expect(markup).toContain("Skip to main content");
     expect(markup).toContain('aria-label="Primary navigation"');
     expect(markup).toContain('role="search"');
     expect(markup).toContain('maxLength="50"');
@@ -193,7 +193,7 @@ describe("Registry foundation view", () => {
       </>,
     );
 
-    expect(markup).toContain("Searching the registry...");
+    expect(markup).toContain('class="global-search-loading" aria-hidden="true"');
     expect(markup).toContain("No registry entries found for “missing”.");
     expect(markup).toContain('role="alert"');
     expect(markup).toContain('href="/benchmarks/humanitys-last-exam"');
@@ -211,7 +211,7 @@ describe("Registry foundation view", () => {
     expect(markup).toContain("Claude Opus 5.5 × CursorBench 4.0");
     expect(markup).toContain("Reasoning: max");
     expect(markup).not.toContain("Matched Reasoning");
-    expect(markup).toContain('aria-current="true"');
+    expect(markup).toContain('data-active="true"');
     expect(markup).toContain(href.replaceAll("&", "&amp;"));
   });
 

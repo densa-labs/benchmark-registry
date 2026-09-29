@@ -4,6 +4,7 @@ export interface InitialDocument {
   loaded: LoadedRegistryRoute;
   revision?: string;
   currentSearch: string;
+  failure?: string;
 }
 
 // This belongs to the current HTML response only; it is not a browser data cache.

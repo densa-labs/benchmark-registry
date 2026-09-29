@@ -1,0 +1,729 @@
+{
+  "stagingMatrix": {
+    "started": "2026-09-28T10:35:00.416Z",
+    "routeChecks": [
+      {
+        "label": "/ 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 43
+      },
+      {
+        "label": "/models 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 47
+      },
+      {
+        "label": "/models/10005 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 49
+      },
+      {
+        "label": "/benchmarks 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 47
+      },
+      {
+        "label": "/benchmarks/gpqa 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 46
+      },
+      {
+        "label": "/benchmarks/gpqa/diamond 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 49
+      },
+      {
+        "label": "/companies 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 47
+      },
+      {
+        "label": "/companies/openai 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 50
+      },
+      {
+        "label": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 50
+      },
+      {
+        "label": "/models/99999 1440 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 41
+      },
+      {
+        "label": "/ 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 43
+      },
+      {
+        "label": "/models 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 47
+      },
+      {
+        "label": "/models/10005 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 49
+      },
+      {
+        "label": "/benchmarks 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 47
+      },
+      {
+        "label": "/benchmarks/gpqa 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 46
+      },
+      {
+        "label": "/benchmarks/gpqa/diamond 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 49
+      },
+      {
+        "label": "/companies 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 47
+      },
+      {
+        "label": "/companies/openai 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 50
+      },
+      {
+        "label": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 50
+      },
+      {
+        "label": "/models/99999 1440 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 41
+      },
+      {
+        "label": "/ 390 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 42
+      },
+      {
+        "label": "/models 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 157
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "/models/10005 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "/benchmarks 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 63
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "/benchmarks/gpqa 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 46
+      },
+      {
+        "label": "/benchmarks/gpqa/diamond 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 174
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "/companies 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 30
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "/companies/openai 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 160
+          }
+        ],
+        "passes": 51
+      },
+      {
+        "label": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 51
+      },
+      {
+        "label": "/models/99999 390 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "label": "/ 390 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 42
+      },
+      {
+        "label": "/models 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 157
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "/models/10005 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "/benchmarks 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 63
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "/benchmarks/gpqa 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 46
+      },
+      {
+        "label": "/benchmarks/gpqa/diamond 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 174
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "/companies 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 30
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "/companies/openai 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 160
+          }
+        ],
+        "passes": 51
+      },
+      {
+        "label": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b 390 dark",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 51
+      },
+      {
+        "label": "/models/99999 390 dark",
+        "violations": [],
+        "incomplete": [],
+        "passes": 40
+      }
+    ],
+    "result": "PASS",
+    "note": "40 route/theme/viewport axe checks passed before the subsequent enlarged-text CSS correction. That run later found reflow overflow; the final targeted post-correction run passed."
+  },
+  "stagingFinal": {
+    "host": "staging.benchmarkregistry.org",
+    "started": "2026-09-28T10:45:32.363Z",
+    "axeVersion": "4.13.0",
+    "routes": [
+      {
+        "label": "Mobile global search expanded",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 167
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "Empty local search",
+        "violations": [],
+        "incomplete": [],
+        "passes": 42
+      },
+      {
+        "label": "Explicit Dark theme",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 157
+          }
+        ],
+        "passes": 48
+      },
+      {
+        "label": "Navigation failure retains page and alert",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 175
+          }
+        ],
+        "passes": 48
+      }
+    ],
+    "interactions": [
+      "Skip link visible and focuses main; mobile Space/open, search Tab/Enter/results, nested Escape and focus restoration; closed menu omitted from Tab order.",
+      "Sort state and restored control focus; keyboard table scrolling; pagination announcement; local search/empty/clear; cold and cached route identity focus.",
+      {
+        "darkContrast": {
+          "text": 17.05142639794523,
+          "muted": 6.052456547894523,
+          "focus": 7.261235771935444,
+          "control": 4.030630895083772,
+          "accent": 7.184656801071799
+        }
+      },
+      "Native theme arrows, one selected radio, explicit theme persistence, System restoration; Last updated Space/Enter toggle; Legal/theme/GitHub keyboard order.",
+      "Reduced-motion menu/scrolling; 320px viewport with 200% text: page, menu and footer reflow.",
+      "Injected staging-browser navigation failure: static reduced-motion skeleton, retained page, accessible error alert."
+    ],
+    "limits": [
+      "Automated Chrome keyboard and accessibility-tree checks; no physical screen reader or touch-device test.",
+      "200% text resize and constrained layout are automated separately from actual browser zoom."
+    ],
+    "result": "PASS"
+  },
+  "production": {
+    "host": "benchmarkregistry.org",
+    "started": "2026-09-28T10:50:18.010Z",
+    "axeVersion": "4.13.0",
+    "routes": [
+      {
+        "label": "/ 390 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 42
+      },
+      {
+        "label": "/models/10005 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "/benchmarks/gpqa/diamond 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 174
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "/companies/openai 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 160
+          }
+        ],
+        "passes": 51
+      },
+      {
+        "label": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b 390 light",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 51
+      },
+      {
+        "label": "/models/99999 390 light",
+        "violations": [],
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "label": "Mobile global search expanded",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 167
+          }
+        ],
+        "passes": 50
+      },
+      {
+        "label": "Empty local search",
+        "violations": [],
+        "incomplete": [],
+        "passes": 42
+      },
+      {
+        "label": "Explicit Dark theme",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 157
+          }
+        ],
+        "passes": 48
+      }
+    ],
+    "interactions": [
+      "Skip link visible and focuses main; mobile Space/open, search Tab/Enter/results, nested Escape and focus restoration; closed menu omitted from Tab order.",
+      "Sort state and restored control focus; keyboard table scrolling; pagination announcement; local search/empty/clear; cold and cached route identity focus.",
+      {
+        "darkContrast": {
+          "text": 17.05142639794523,
+          "muted": 6.052456547894523,
+          "focus": 7.261235771935444,
+          "control": 4.030630895083772,
+          "accent": 7.184656801071799
+        }
+      },
+      "Native theme arrows, one selected radio, explicit theme persistence, System restoration; Last updated Space/Enter toggle; Legal/theme/GitHub keyboard order.",
+      "Reduced-motion menu/scrolling; 320px viewport with 200% text: page, menu and footer reflow."
+    ],
+    "limits": [
+      "Automated Chrome keyboard and accessibility-tree checks; no physical screen reader or touch-device test.",
+      "200% text resize and constrained layout are automated separately from actual browser zoom."
+    ],
+    "result": "PASS"
+  },
+  "actualBrowserZoom": {
+    "result": "PASS",
+    "method": "Disposable Chrome profile default page zoom, actual CSS viewport/DPR ratio verified",
+    "results": [
+      {
+        "factor": 1,
+        "dpr": 1,
+        "width": 1280,
+        "pageWidth": 1280,
+        "heading": "GPT-6 Astra"
+      },
+      {
+        "factor": 2,
+        "dpr": 2,
+        "width": 640,
+        "pageWidth": 640,
+        "heading": "GPT-6 Astra"
+      }
+    ],
+    "menuUsable": true,
+    "footerFits": true
+  },
+  "contrastAndTree": {
+    "result": "PASS",
+    "reports": [
+      {
+        "theme": "light",
+        "body": 17.72,
+        "muted": 5.2,
+        "accent": 10.46,
+        "focus": 6,
+        "controlBoundary": 3.55,
+        "banner": 6.53
+      },
+      {
+        "theme": "dark",
+        "body": 17.05,
+        "muted": 6.05,
+        "accent": 7.18,
+        "focus": 7.26,
+        "controlBoundary": 4.03,
+        "banner": 6.53
+      }
+    ],
+    "targets": [
+      {
+        "name": "Open menu",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "Search",
+        "width": 67.6,
+        "height": 44
+      },
+      {
+        "name": "Models",
+        "width": 358,
+        "height": 44
+      },
+      {
+        "name": "Benchmarks",
+        "width": 358,
+        "height": 44
+      },
+      {
+        "name": "Organizations",
+        "width": 358,
+        "height": 44
+      },
+      {
+        "name": "Last updated: September 26, 2026",
+        "width": 197.8,
+        "height": 44
+      },
+      {
+        "name": "Legal",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "name": "Benchmark Registry on GitHub",
+        "width": 44,
+        "height": 44
+      }
+    ],
+    "accessibility": {
+      "landmarks": [
+        {
+          "role": "main",
+          "name": ""
+        },
+        {
+          "role": "contentinfo",
+          "name": ""
+        },
+        {
+          "role": "region",
+          "name": "Staging environment"
+        },
+        {
+          "role": "banner",
+          "name": ""
+        },
+        {
+          "role": "region",
+          "name": "Recent Models"
+        },
+        {
+          "role": "region",
+          "name": "Recently Added"
+        },
+        {
+          "role": "region",
+          "name": "All Models"
+        },
+        {
+          "role": "navigation",
+          "name": "Footer navigation"
+        },
+        {
+          "role": "region",
+          "name": "C models"
+        },
+        {
+          "role": "region",
+          "name": "D models"
+        },
+        {
+          "role": "region",
+          "name": "G models"
+        },
+        {
+          "role": "region",
+          "name": "I models"
+        },
+        {
+          "role": "region",
+          "name": "K models"
+        },
+        {
+          "role": "region",
+          "name": "M models"
+        },
+        {
+          "role": "region",
+          "name": "N models"
+        },
+        {
+          "role": "region",
+          "name": "O models"
+        },
+        {
+          "role": "region",
+          "name": "P models"
+        },
+        {
+          "role": "region",
+          "name": "Q models"
+        }
+      ],
+      "headings": [
+        {
+          "name": "Benchmark Registry",
+          "level": 1
+        },
+        {
+          "name": "Recent Models",
+          "level": 2
+        },
+        {
+          "name": "Recently Added",
+          "level": 2
+        },
+        {
+          "name": "All Models",
+          "level": 2
+        },
+        {
+          "name": "C",
+          "level": 3
+        },
+        {
+          "name": "D",
+          "level": 3
+        },
+        {
+          "name": "G",
+          "level": 3
+        },
+        {
+          "name": "I",
+          "level": 3
+        },
+        {
+          "name": "K",
+          "level": 3
+        },
+        {
+          "name": "M",
+          "level": 3
+        },
+        {
+          "name": "N",
+          "level": 3
+        },
+        {
+          "name": "O",
+          "level": 3
+        },
+        {
+          "name": "P",
+          "level": 3
+        },
+        {
+          "name": "Q",
+          "level": 3
+        }
+      ],
+      "unnamedButtons": 0
+    }
+  }
+}

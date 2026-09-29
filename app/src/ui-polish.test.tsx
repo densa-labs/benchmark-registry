@@ -41,6 +41,7 @@ async function click(element: Element) { await act(() => element.dispatchEvent(n
 
 describe("P11.8 visible interactions", () => {
   it("preserves the full wordmark and opens a search-first menu with SVG icons", async () => {
+    window.matchMedia = vi.fn().mockReturnValue({ matches: true, addEventListener: vi.fn(), removeEventListener: vi.fn() });
     await mount(<Header navigation={navigation} activeHref="/models" />);
     const button = container.querySelector("button.mobile-menu-toggle")!;
     expect(button.getAttribute("aria-expanded")).toBe("false");

@@ -1,4 +1,4 @@
-import { renderDocument, renderInitialDocument } from "./document";
+import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { apiParameters } from "./request-policy";
 import { withRegistryCache, type CacheEnvironment } from "./cache";
@@ -175,7 +175,13 @@ const worker = {
         if(lastError) throw lastError;
       } catch {
         if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
-        else response=new Response('The materialized registry is temporarily unavailable.',{status:500});
+        else if (url.pathname === '/sitemap.xml') response=new Response('The materialized registry is temporarily unavailable.',{status:500});
+        else {
+          const template = await env.ASSETS.fetch(new Request(new URL('/',url),{method:'GET'}));
+          const failure = renderFailureDocument(url.search);
+          const html = rewriteMetadata(await template.text(), { title: 'Registry temporarily unavailable | Benchmark Registry', description: 'The registry data could not be loaded. Try again shortly.', noindex: true }, url, failure.markup).replace('</body>',`${failure.bootstrap}</body>`);
+          response=new Response(request.method === 'HEAD' ? null : html,{status:500,headers:{'Content-Type':'text/html; charset=utf-8'}});
+        }
       }
     }
 

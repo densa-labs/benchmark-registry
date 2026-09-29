@@ -1,6 +1,7 @@
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { InitialDocument } from "./bootstrap";
 import { useDocumentNavigation } from "./navigation";
+import { focusNavigation, type NavigationNotice } from "./navigation-accessibility";
 import { RouteLoadingState } from "./ui/route-loading";
 
 import {
@@ -52,16 +53,20 @@ export function App({ initial }: { initial?: InitialDocument }) {
     [location.pathname],
   );
   const [state, setState] = useState<LoadState>(() => initial
-    ? { status: "loaded", route: initial.loaded } : { status: "loading" });
+    ? initial.failure ? { status: "error", message: initial.failure } : { status: "loaded", route: initial.loaded } : { status: "loading" });
 
   const [currentSearch, setCurrentSearch] = useState(initial?.currentSearch ?? location.search);
   const [navigationError, setNavigationError] = useState<string>();
   const [pendingRoute, setPendingRoute] = useState<RegistryRoute>();
-  useDocumentNavigation(initial, (document) => {
+  const [notice, setNotice] = useState<NavigationNotice>();
+  useDocumentNavigation(initial, (document, update) => {
     setNavigationError(undefined);
     setCurrentSearch(document.currentSearch);
     setState({status:"loaded",route:document.loaded});
+    if (update) setNotice(update);
   }, setNavigationError, setPendingRoute);
+
+  useLayoutEffect(() => { if (notice) focusNavigation(notice); }, [notice]);
 
   useEffect(() => {
     if (initial || route.kind === "not-found") return;
@@ -80,7 +85,9 @@ export function App({ initial }: { initial?: InitialDocument }) {
   }, [route, location.search, initial]);
 
   let content;
-  if (route.kind === "not-found") {
+  if (state.status === "error") {
+    content = <PageContainer className="registry-page"><ErrorState title="Unable to load registry data" description={state.message} primary /><p className="state-message__action"><a href="">Try again</a></p></PageContainer>;
+  } else if (route.kind === "not-found") {
     content = (
       <PageContainer className="registry-page">
         <NotFoundState />
@@ -90,16 +97,14 @@ export function App({ initial }: { initial?: InitialDocument }) {
     content = route.kind === "home" ? <HomeLoadingState /> : (
       <RouteLoadingState route={route} />
     );
-  } else if (state.status === "error") {
-    content = <PageContainer className="registry-page"><ErrorState title="Unable to load registry data" description={state.message} /></PageContainer>;
   } else {
-    return <RegistryDocument loaded={state.route} currentSearch={currentSearch} enhanced navigationError={navigationError} pendingRoute={pendingRoute} />;
+    return <RegistryDocument loaded={state.route} currentSearch={currentSearch} enhanced navigationError={navigationError} pendingRoute={pendingRoute} announcement={notice?.message} />;
   }
 
   return (
     <AppShell
       navigation={navigation}
-      activeHref={route.kind === "home" || route.kind === "not-found"
+      activeHref={state.status === "error" || route.kind === "home" || route.kind === "not-found"
         ? undefined
         : route.kind.startsWith("benchmark")
         ? "/benchmarks"
@@ -113,7 +118,7 @@ export function App({ initial }: { initial?: InitialDocument }) {
 }
 
 // Shared by the client and the Worker initial document; effects stay client-only.
-export function RegistryDocument({ loaded, currentSearch, enhanced = false, navigationError, pendingRoute }: { loaded: LoadedRegistryRoute; currentSearch: string; enhanced?: boolean; navigationError?: string; pendingRoute?: RegistryRoute }) {
+export function RegistryDocument({ loaded, currentSearch, enhanced = false, navigationError, pendingRoute, announcement }: { loaded: LoadedRegistryRoute; currentSearch: string; enhanced?: boolean; navigationError?: string; pendingRoute?: RegistryRoute; announcement?: string }) {
   let content;
   if (loaded.kind === "home") {
     content = <HomePage response={loaded.payload} />;
@@ -148,7 +153,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
 
   if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
-    <AppShell navigation={navigation} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
+    <AppShell navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found"
       ? undefined : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}

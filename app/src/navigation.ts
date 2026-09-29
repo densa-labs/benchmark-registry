@@ -4,18 +4,19 @@ import type { InitialDocument } from "./bootstrap";
 import { applyNavigationHead, DocumentCache, parseBrowserDocument, readNavigationHead, type BrowserDocument } from "./document-cache";
 import { locallySortedDocument } from "./local-sort";
 import { resolveRegistryRoute, type RegistryRoute } from "./registry";
+import { navigationNotice, type NavigationNotice } from "./navigation-accessibility";
 
 export function navigateRegistry(href: string) {
   if (window.dispatchEvent(new CustomEvent("registry:navigate",{detail:href,cancelable:true}))) window.location.assign(href);
 }
 
-export function useDocumentNavigation(initial: InitialDocument | undefined, onLoad: (document: BrowserDocument) => void, onError: (message: string) => void, onPending: (route?: RegistryRoute) => void) {
+export function useDocumentNavigation(initial: InitialDocument | undefined, onLoad: (document: BrowserDocument, notice?: NavigationNotice) => void, onError: (message: string) => void, onPending: (route?: RegistryRoute) => void) {
   const callbacks = useRef({onLoad,onError,onPending});
   useEffect(() => {callbacks.current={onLoad,onError,onPending};},[onLoad,onError,onPending]);
   useEffect(() => {
     const cache = new DocumentCache();
     let current: BrowserDocument | undefined = initial ? {...initial,href:window.location.pathname+window.location.search,head:readNavigationHead(document),time:Date.now()} : undefined;
-    if (current) cache.put(current);
+    if (current && !initial?.failure) cache.put(current);
     let controller: AbortController | undefined;
     let sequence = 0;
     let loadingTimer: ReturnType<typeof setTimeout> | undefined;
@@ -49,6 +50,7 @@ export function useDocumentNavigation(initial: InitialDocument | undefined, onLo
     };
     const warmTimer=setTimeout(()=>document.querySelectorAll<HTMLAnchorElement>('.primary-nav a[href]').forEach((link)=>prepare(new URL(link.href))),400);
     const navigate = async (url: URL, pop = false) => {
+      const originFocus = document.activeElement;
       const id = ++sequence;
       const started=performance.now();
       controller?.abort();clearLoading();controller=new AbortController();
@@ -66,7 +68,7 @@ export function useDocumentNavigation(initial: InitialDocument | undefined, onLo
           if (!refresh && !pop) history.pushState(null,"",next.href);
           else if (refresh && new URL(next.href,window.location.origin).href !== window.location.href) history.replaceState(null,"",next.href);
           const samePage=oldHref?.split("?")[0] === new URL(next.href,window.location.origin).pathname;
-          applyNavigationHead(next.head);callbacks.current.onLoad(next);
+          applyNavigationHead(next.head);callbacks.current.onLoad(next, refresh ? undefined : navigationNotice(next, samePage, pop, originFocus));
           if (!refresh) {
             window.dispatchEvent(new Event("registry:navigated"));
             if (IS_STAGING) requestAnimationFrame(()=>requestAnimationFrame(()=>console.info("[registry] navigation",JSON.stringify({route:next.loaded.kind,cache:cached ? "browser" : "network",duration_ms:Math.round(performance.now()-started)}))));

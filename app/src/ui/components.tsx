@@ -41,6 +41,8 @@ export interface AppShellProps {
   children: ReactNode;
   navigation: NavigationItem[];
   activeHref?: string;
+  busy?: boolean;
+  announcement?: string;
   renderPending?: (route: RegistryRoute) => ReactNode;
 }
 
@@ -49,6 +51,8 @@ export function AppShell({
   navigation,
   activeHref,
   renderPending,
+  busy,
+  announcement,
 }: AppShellProps) {
   const { preference, selectTheme } = useThemePreference();
   const [showBuildTime, setShowBuildTime] = useState(false);
@@ -57,16 +61,17 @@ export function AppShell({
 
   return (
     <div className="app-shell">
-      <a className="skip-link" href="#main-content">
-        Skip to content
+      <a className="skip-link" href="#main-content" onClick={() => document.getElementById("main-content")?.focus({ preventScroll: true })}>
+        Skip to main content
       </a>
       <Header
         navigation={navigation}
         activeHref={activeHref}
       />
-      <main id="main-content" aria-busy={pending ? true : undefined} style={pending ? { minHeight: pending.height } : undefined}>
+      <main id="main-content" tabIndex={-1} aria-busy={pending || busy ? true : undefined} style={pending ? { minHeight: pending.height } : undefined}>
         {pending && renderPending ? renderPending(pending.route) : children}
       </main>
+      <p className="visually-hidden" role="status" aria-atomic="true" data-route-status>{announcement}</p>
       <footer className="site-footer">
         <PageContainer className="site-footer__inner">
           <div className="site-footer__dates"><p>
@@ -75,9 +80,9 @@ export function AppShell({
               Densa Labs
             </a>
           </p>
-          <button className="last-updated" type="button" onClick={() => setShowBuildTime((shown) => !shown)}>
+          <button className="last-updated" type="button" aria-pressed={showBuildTime} aria-describedby="last-updated-help" onClick={() => setShowBuildTime((shown) => !shown)}>
             Last updated: {showBuildTime ? buildTime : REGISTRY_DATA_DATE}
-          </button></div>
+          </button><span id="last-updated-help" className="visually-hidden">Toggle between the data update date and the application build time.</span></div>
           <nav className="site-footer__links" aria-label="Footer navigation"><a href="/legal">Legal</a></nav>
           <div className="site-footer__controls">
             <ThemeToggle theme={preference} onSelectTheme={selectTheme} />
@@ -161,7 +166,7 @@ export function Header({
   useEffect(() => {
     if (!menuOpen) return;
     const closeOnEscape = (event: globalThis.KeyboardEvent) => {
-      if (event.key !== "Escape") return;
+      if (event.key !== "Escape" || event.defaultPrevented) return;
       event.preventDefault();
       setMenuOpen(false);
       menuButton.current?.focus();
@@ -170,9 +175,13 @@ export function Header({
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [menuOpen]);
 
+  const primaryNavigation = <nav className="primary-nav" aria-label="Primary navigation">
+    {navigation.map((item) => <a key={item.href} href={item.href} aria-current={activeHref === item.href ? "page" : undefined}>{item.label}</a>)}
+  </nav>;
+
   return (
     <div className="site-header-shell">
-      {IS_STAGING ? <div className="staging-banner">STAGING | Last update: {buildTime}</div> : null}
+      {IS_STAGING ? <section className="staging-banner" aria-label="Staging environment">STAGING | Last update: {buildTime}</section> : null}
     <header
       className={hidden && !menuOpen ? "site-header site-header--hidden" : "site-header"}
       ref={headerRef}
@@ -189,20 +198,15 @@ export function Header({
         <div id="header-menu" className={`header-menu${menuOpen ? " header-menu--open" : ""}`}
           inert={mobile && !menuOpen ? true : undefined}
           onClickCapture={(event) => {
-            if ((event.target as Element).closest("a[href]")) setMenuOpen(false);
+            if ((event.target as Element).closest("a[href]")) {
+              setMenuOpen(false);
+              if (mobile) menuButton.current?.focus();
+            }
           }}>
-        <div className="header-menu__content"><div className="header-menu__body"><GlobalSearch />
-        <nav className="primary-nav" aria-label="Primary navigation">
-          {navigation.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              aria-current={activeHref === item.href ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div className="header-menu__content"><div className="header-menu__body">
+        {!mobile ? primaryNavigation : null}
+        <GlobalSearch />
+        {mobile ? primaryNavigation : null}
         </div></div>
         </div>
       </PageContainer>
@@ -321,7 +325,6 @@ export function GlobalSearchPanel({ state, activeIndex = -1 }: {
   if (state.status === "loading") {
     return (
       <div className="global-search-panel global-search-panel--status global-search-panel--loading" id="global-search-results">
-        <p className="visually-hidden" aria-live="polite">Searching the registry...</p>
         <ul className="global-search-loading" aria-hidden="true">{[0, 1, 2].map((row) =>
           <li key={row}><span className="skeleton skeleton--label" /><span className="skeleton skeleton--value" /></li>
         )}</ul>
@@ -340,18 +343,13 @@ export function GlobalSearchPanel({ state, activeIndex = -1 }: {
   if (state.response.data.length === 0) {
     return (
       <div className="global-search-panel global-search-panel--status" id="global-search-results">
-        <p aria-live="polite">No registry entries found for “{state.query}”.</p>
+        <p>No registry entries found for “{state.query}”.</p>
       </div>
     );
   }
 
   return (
     <div className="global-search-panel" id="global-search-results">
-      <p className="visually-hidden" aria-live="polite">
-        {state.response.page.total_items} search {state.response.page.total_items === 1
-          ? "result"
-          : "results"} found.
-      </p>
       <ul className="global-search-results">
         {state.response.data.map((result, index) => {
           const displayName = result.entity_type === "benchmark"
@@ -364,7 +362,7 @@ export function GlobalSearchPanel({ state, activeIndex = -1 }: {
               : undefined;
           return (
             <li key={`${result.entity_type}:${result.href}`}>
-              <a href={result.href} aria-current={index === activeIndex ? "true" : undefined}>
+              <a href={result.href} data-active={index === activeIndex ? "true" : undefined}>
                 <span className="global-search-result__type">
                   {entityLabels[result.entity_type]}
                 </span>
@@ -406,10 +404,6 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (state.status === "results" && activeIndex >= 0) {
-      window.location.assign(state.response.data[activeIndex].href);
-      return;
-    }
     const input = event.currentTarget.elements.namedItem("q");
     if (!(input instanceof HTMLInputElement)) return;
     const query = input.value.trim();
@@ -464,6 +458,7 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
       <form
         className="global-search"
         role="search"
+        aria-label="Global registry search"
         aria-busy={state.status === "loading" ? "true" : undefined}
         onSubmit={handleSubmit}
       >
@@ -480,11 +475,15 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
           placeholder="Search models, benchmarks, companies"
           autoComplete="off"
           aria-controls={state.status === "idle" ? undefined : "global-search-results"}
-          aria-expanded={state.status !== "idle"}
+          onFocus={() => setActiveIndex(-1)}
           onChange={closeResults}
         />
         <button type="submit" disabled={state.status === "loading"}>Search</button>
       </form>
+      <p className="visually-hidden" role="status" aria-atomic="true">
+        {state.status === "loading" ? "Searching the registry…" : state.status === "results" ? state.response.data.length === 0
+          ? `No registry entries found for “${state.query}”.` : `${state.response.page.total_items} search results found.` : ""}
+      </p>
       {state.status === "idle" ? null : <GlobalSearchPanel state={state} activeIndex={activeIndex} />}
     </div>
   );
@@ -513,7 +512,7 @@ export function PageHeader({ title, description, kicker }: PageHeaderProps) {
   return (
     <header className="page-header">
       {kicker ? <p className="kicker">{kicker}</p> : null}
-      <h1>{title}</h1>
+      <h1 tabIndex={-1}>{title}</h1>
       {description ? <p className="page-header__description">{description}</p> : null}
     </header>
   );
@@ -540,13 +539,15 @@ export function MetadataRows({ items, loading = false }: { items: MetadataItem[]
 interface SourceLinkProps {
   href: string;
   children?: ReactNode;
+  context?: string;
 }
 
-export function SourceLink({ href, children = "Source" }: SourceLinkProps) {
+export function SourceLink({ href, children = "Source", context }: SourceLinkProps) {
   return (
     <a className="source-link" href={href} target="_blank" rel="noreferrer">
       <span>{children}</span>
       <ExternalIcon />
+      {context ? <span className="visually-hidden"> for {context}</span> : null}
       <span className="visually-hidden"> (opens in a new tab)</span>
     </a>
   );
@@ -570,6 +571,7 @@ export function SortableHeader({ href, label, direction }: SortableHeaderProps) 
         .filter(Boolean)
         .join(" ")}
       href={href}
+      data-focus-key={`sort-${label}`}
       aria-label={`Sort by ${label} ${nextDirection}`}
     >
       <span>{label}</span>
@@ -601,7 +603,7 @@ export function DataTable<Row>({
   getRowKey,
 }: DataTableProps<Row>) {
   return (
-    <div className="table-scroll" tabIndex={0} aria-label={`${caption}, scrollable`}>
+    <div className="table-scroll" role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
       <table className="data-table" data-columns={columns.length}>
         <caption className="visually-hidden">{caption}</caption>
         <thead>
@@ -661,21 +663,21 @@ export function Pagination({ page, totalPages, getHref }: PaginationProps) {
   return (
     <nav className="pagination" aria-label="Pagination">
       {hasPrevious ? (
-        <a href={getHref(page - 1)} rel="prev">
+        <a href={getHref(page - 1)} rel="prev" data-focus-key="page-previous" aria-label="Previous page">
           Previous
         </a>
       ) : (
-        <span aria-disabled="true">Previous</span>
+        <button type="button" disabled>Previous</button>
       )}
       <span className="pagination__status">
         Page <strong>{page}</strong> of <strong>{totalPages}</strong>
       </span>
       {hasNext ? (
-        <a href={getHref(page + 1)} rel="next">
+        <a href={getHref(page + 1)} rel="next" data-focus-key="page-next" aria-label="Next page">
           Next
         </a>
       ) : (
-        <span aria-disabled="true">Next</span>
+        <button type="button" disabled>Next</button>
       )}
     </nav>
   );
@@ -711,7 +713,8 @@ export function Tabs({ label, items }: { label: string; items: TabItem[] }) {
       {items.map((item) => (
         <a
           key={item.href}
-          href={item.href}
+              href={item.href}
+              data-focus-key={`tab-${label}-${item.label}`}
           aria-current={item.active ? "page" : undefined}
         >
           {item.label}
@@ -746,17 +749,18 @@ interface EmptyStateProps {
 export function EmptyState({ title, description, action }: EmptyStateProps) {
   return (
     <section className="state-message" role="status">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <p>{description}</p>
       {action ? <div className="state-message__action">{action}</div> : null}
     </section>
   );
 }
 
-export function ErrorState({ title, description }: Omit<EmptyStateProps, "action">) {
+export function ErrorState({ title, description, primary = false }: Omit<EmptyStateProps, "action"> & { primary?: boolean }) {
+  const Heading = primary ? "h1" : "h2";
   return (
     <section className="state-message state-message--error" role="alert">
-      <h2>{title}</h2>
+      <Heading tabIndex={-1}>{title}</Heading>
       <p>{description}</p>
     </section>
   );
@@ -766,7 +770,7 @@ export function NotFoundState() {
   return (
     <section className="state-message state-message--not-found">
       <p className="state-code">404</p>
-      <h2>Registry entry not found</h2>
+      <h1 tabIndex={-1}>Registry entry not found</h1>
       <p>Check the address or return to the registry index.</p>
       <div className="state-message__action">
         <a className="button-link" href="/models">

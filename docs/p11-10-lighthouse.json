@@ -1,0 +1,588 @@
+{
+  "baselineMobile": {
+    "fetchTime": "2026-09-28T10:15:35.104Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 98,
+      "accessibility": 96,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": 1442.3660000000007,
+      "total-blocking-time": 151,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [
+      {
+        "id": "target-size",
+        "weight": 7,
+        "group": "a11y-best-practices"
+      }
+    ],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 1,
+        "title": "`[aria-*]` attributes match their roles"
+      },
+      "target-size": {
+        "score": 0,
+        "title": "Touch targets do not have sufficient size or spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 1,
+        "title": "Accessibility tree is well-formed"
+      }
+    },
+    "longTasks": [
+      {
+        "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+        "duration": 201,
+        "startTime": 2242.750000000001
+      },
+      {
+        "url": "https://benchmarkregistry.org/",
+        "duration": 63,
+        "startTime": 1184.2380000000005
+      }
+    ],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 12960
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 12960
+        }
+      }
+    ]
+  },
+  "baselineDesktop": {
+    "fetchTime": "2026-09-28T10:16:33.734Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 99,
+      "accessibility": 90,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "metrics": {
+      "largest-contentful-paint": 779.181,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [
+      {
+        "id": "aria-allowed-attr",
+        "weight": 10,
+        "group": "a11y-aria"
+      },
+      {
+        "id": "target-size",
+        "weight": 7,
+        "group": "a11y-best-practices"
+      }
+    ],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 0,
+        "title": "`[aria-*]` attributes do not match their roles"
+      },
+      "target-size": {
+        "score": 0,
+        "title": "Touch targets do not have sufficient size or spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 0,
+        "title": "Accessibility tree is not well-formed"
+      }
+    },
+    "longTasks": [],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 13999
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 13999
+        }
+      }
+    ]
+  },
+  "productionMobile": {
+    "fetchTime": "2026-09-28T10:54:08.851Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": 1421.6090000000002,
+      "total-blocking-time": 155,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 1,
+        "title": "`[aria-*]` attributes match their roles"
+      },
+      "target-size": {
+        "score": 1,
+        "title": "Touch targets have sufficient size and spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 1,
+        "title": "Accessibility tree is well-formed"
+      }
+    },
+    "longTasks": [
+      {
+        "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+        "duration": 205,
+        "startTime": 2215.1630000000005
+      },
+      {
+        "url": "https://benchmarkregistry.org/",
+        "duration": 57,
+        "startTime": 1166.0910000000001
+      }
+    ],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 13230
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 13230
+        }
+      }
+    ]
+  },
+  "productionDesktop": {
+    "fetchTime": "2026-09-28T10:53:20.700Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": 896.3570000000002,
+      "total-blocking-time": 58,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 1,
+        "title": "`[aria-*]` attributes match their roles"
+      },
+      "target-size": {
+        "score": 1,
+        "title": "Touch targets have sufficient size and spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 1,
+        "title": "Accessibility tree is well-formed"
+      }
+    },
+    "longTasks": [
+      {
+        "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+        "duration": 108,
+        "startTime": 1235.9870000000003
+      }
+    ],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 14208
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 14208
+        }
+      }
+    ]
+  },
+  "productionMobileParallel": {
+    "fetchTime": "2026-09-28T10:50:39.343Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 88,
+      "accessibility": 100,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": 1422.8410000000003,
+      "total-blocking-time": 457,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 1,
+        "title": "`[aria-*]` attributes match their roles"
+      },
+      "target-size": {
+        "score": 1,
+        "title": "Touch targets have sufficient size and spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 1,
+        "title": "Accessibility tree is well-formed"
+      }
+    },
+    "longTasks": [
+      {
+        "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+        "duration": 507,
+        "startTime": 2220.6060000000007
+      }
+    ],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 12827
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 12827
+        }
+      }
+    ]
+  },
+  "productionDesktopParallel": {
+    "fetchTime": "2026-09-28T10:50:41.711Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": 1224.5679999999993,
+      "total-blocking-time": 60,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 1,
+        "title": "`[aria-*]` attributes match their roles"
+      },
+      "target-size": {
+        "score": 1,
+        "title": "Touch targets have sufficient size and spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 1,
+        "title": "Accessibility tree is well-formed"
+      }
+    },
+    "longTasks": [
+      {
+        "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+        "duration": 110,
+        "startTime": 1224.5679999999993
+      }
+    ],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 12827
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 12827
+        }
+      }
+    ]
+  },
+  "productionMobileIsolatedFirst": {
+    "fetchTime": "2026-09-28T10:52:23.320Z",
+    "url": "https://benchmarkregistry.org/",
+    "lighthouseVersion": "13.5.0",
+    "scores": {
+      "performance": 89,
+      "accessibility": 100,
+      "best-practices": 81,
+      "seo": 100,
+      "agentic-browsing": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": 1457.453,
+      "total-blocking-time": 438,
+      "cumulative-layout-shift": 0
+    },
+    "accessibilityFailures": [],
+    "treeAudits": {
+      "errors-in-console": {
+        "score": 1,
+        "title": "No browser errors logged to the console"
+      },
+      "aria-allowed-attr": {
+        "score": 1,
+        "title": "`[aria-*]` attributes match their roles"
+      },
+      "target-size": {
+        "score": 1,
+        "title": "Touch targets have sufficient size and spacing."
+      },
+      "agent-accessibility-tree": {
+        "score": 1,
+        "title": "Accessibility tree is well-formed"
+      }
+    },
+    "longTasks": [
+      {
+        "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+        "duration": 488,
+        "startTime": 2247.223
+      },
+      {
+        "url": "https://benchmarkregistry.org/",
+        "duration": 51,
+        "startTime": 1199.863
+      }
+    ],
+    "deprecations": [
+      {
+        "value": "StorageType.persistent is deprecated. Please use standardized navigator.storage instead.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 13253
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "type": "link",
+              "url": "https://chromestatus.com/feature/5176235376246784",
+              "text": "Check the feature status page for more details."
+            },
+            {
+              "type": "link",
+              "url": "https://chromiumdash.appspot.com/schedule",
+              "text": "This change will go into effect with milestone 106."
+            }
+          ]
+        }
+      },
+      {
+        "value": "The Protected Audience API is deprecated and will be removed in a future release.",
+        "source": {
+          "type": "source-location",
+          "url": "https://benchmarkregistry.org/cdn-cgi/challenge-platform/scripts/precursor/main.js",
+          "urlProvider": "network",
+          "line": 0,
+          "column": 13253
+        }
+      }
+    ]
+  }
+}

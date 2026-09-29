@@ -13,13 +13,13 @@ export function HomeLoadingState() {
           <header className="home-intro"><h1><span className="skeleton skeleton--title" /></h1><div className="home-scale"><p className="home-scale__primary"><span className="skeleton skeleton--section" /></p><p className="home-scale__support"><span className="skeleton skeleton--subtitle" /></p></div></header>
           <div className="home-sections">{[0, 1].map((section) => <section className="home-section" key={section}>
             <header className="home-section__header"><div><h2><span className="skeleton skeleton--section" /></h2><p><span className="skeleton skeleton--subtitle" /></p></div><span className="skeleton skeleton--label" /></header>
-            <ol className="home-model-list">{Array.from({ length: 5 }, (_, row) => <li key={row}>
+            <ol className="home-model-list" role="list">{Array.from({ length: 5 }, (_, row) => <li key={row}>
               <span className="home-model-list__identity"><span className="skeleton skeleton--value" /><span className="skeleton skeleton--label" /></span>
               <span className="home-model-list__metadata"><span className="skeleton skeleton--value" /><span className="skeleton skeleton--label" /></span>
             </li>)}</ol>
           </section>)}</div>
           <section className="home-directory"><header className="home-section__header"><div><h2><span className="skeleton skeleton--section" /></h2><p><span className="skeleton skeleton--subtitle" /></p></div></header>
-            <div className="home-directory__group"><h3><span className="skeleton skeleton--initial" /></h3><ul>{Array.from({ length: 9 }, (_, row) => <li key={row}><span className="skeleton skeleton--value" /><span className="home-directory__provider skeleton skeleton--label" /><span className="registry-number skeleton skeleton--label" /></li>)}</ul></div>
+            <div className="home-directory__group"><h3><span className="skeleton skeleton--initial" /></h3><ul role="list">{Array.from({ length: 9 }, (_, row) => <li key={row}><span className="skeleton skeleton--value" /><span className="home-directory__provider skeleton skeleton--label" /><span className="registry-number skeleton skeleton--label" /></li>)}</ul></div>
           </section>
         </div>
       </div>
@@ -44,7 +44,7 @@ function ModelList({
   }
 
   return (
-    <ol className="home-model-list">
+    <ol className="home-model-list" role="list">
       {models.slice(0, HOMEPAGE_MODEL_LIMIT).map((model) => {
         const date = dateKind === "released"
           ? formatRegistryDate(model.released_at, model.release_precision)
@@ -60,7 +60,7 @@ function ModelList({
               <time dateTime={dateKind === "released" ? model.released_at : model.published_at}>
                 {date}
               </time>
-              <a className="registry-number" href={`/models/${model.registry_no}`}>
+              <a className="registry-number" href={`/models/${model.registry_no}`} aria-label={`Registry No. ${model.registry_no}, ${model.name}`}>
                 {model.registry_no}
               </a>
             </span>
@@ -86,8 +86,8 @@ export function HomePage({ response }: { response: HomePageResponse }) {
   return (
     <PageContainer className="registry-page home-page">
       <header className="home-intro">
-        <h1>Benchmark Registry</h1>
-        <div className="home-scale" aria-label="Registry size">
+        <h1 tabIndex={-1}>Benchmark Registry</h1>
+        <div className="home-scale">
           <p className="home-scale__primary">
             <strong>{count(resultCount)}</strong> benchmark {resultCount === 1 ? "result" : "results"}
           </p>
@@ -141,7 +141,7 @@ export function HomePage({ response }: { response: HomePageResponse }) {
             {Array.from(modelGroups, ([initial, models]) => (
               <section className="home-directory__group" key={initial} aria-label={`${initial} models`}>
                 <h3>{initial}</h3>
-                <ul>
+                <ul role="list">
                   {models.map((model) => (
                     <li key={model.registry_no}>
                       <a className="home-directory__model" href={`/models/${model.registry_no}`}>
