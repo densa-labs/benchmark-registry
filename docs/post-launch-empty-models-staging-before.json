@@ -1,0 +1,23 @@
+[
+  {
+    "registry_no": "10015",
+    "canonical_name": "GPT-6.1 Sol",
+    "release_at": "2026-09-29",
+    "release_source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review",
+    "company_slug": "openai"
+  },
+  {
+    "registry_no": "20001",
+    "canonical_name": "Claude 3.7 Sonnet",
+    "release_at": "2025-02-24",
+    "release_source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+    "company_slug": "anthropic"
+  },
+  {
+    "registry_no": "20016",
+    "canonical_name": "Claude Sonnet 5.5",
+    "release_at": "2026-09-28",
+    "release_source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+    "company_slug": "anthropic"
+  }
+]

@@ -1,0 +1,1084 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "low",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "64.4",
+        "score_raw": "64.4%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "73.0",
+        "score_raw": "73.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "75.2",
+        "score_raw": "75.2%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "71.9",
+        "score_raw": "71.9%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "71.9",
+        "score_raw": "71.9%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "low",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "27.0",
+        "score_raw": "27.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "30.0",
+        "score_raw": "30.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "high",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "32.0",
+        "score_raw": "32.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "31.8",
+        "score_raw": "31.8%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "max",
+        "benchmark_slug": "gdp-pdf",
+        "benchmark_version": "GDP.pdf",
+        "metric_key": "gdp-pdf-all-pass-rate",
+        "score_value": "31.0",
+        "score_raw": "31.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "24.7",
+        "score_raw": "24.7%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "31.7",
+        "score_raw": "31.7%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "33.2",
+        "score_raw": "33.2%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "35.5",
+        "score_raw": "35.5%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "36.1",
+        "score_raw": "36.1%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "low",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "59.0",
+        "score_raw": "59.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "66.8",
+        "score_raw": "66.8%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "high",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "69.6",
+        "score_raw": "69.6%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "69.4",
+        "score_raw": "69.4%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline — Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "71.4",
+        "score_raw": "71.4%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "low",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "43.7",
+        "score_raw": "43.7%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "47.6",
+        "score_raw": "47.6%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "51.1",
+        "score_raw": "51.1%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "53.7",
+        "score_raw": "53.7%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "max",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "57.0",
+        "score_raw": "57.0%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "70.6",
+        "score_raw": "70.6%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "59.9",
+        "score_raw": "59.9%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "71.0",
+        "score_raw": "71.0%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "81.3",
+        "score_raw": "81.3%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "90.3",
+        "score_raw": "90.3%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "56.9",
+        "score_raw": "56.9%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "64.5",
+        "score_raw": "64.5%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "score_value": "77.8",
+        "score_raw": "77.8%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "44.7",
+        "score_raw": "44.7%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "low",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "35.8",
+        "score_raw": "35.8%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/evals",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "medium",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "39.2",
+        "score_raw": "39.2%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/evals",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "high",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "47.8",
+        "score_raw": "47.8%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/evals",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "53.1",
+        "score_raw": "53.1%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/evals",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "55.5",
+        "score_raw": "55.5%",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/evals",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "No extended thinking",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "68.0",
+        "score_raw": "68.0%",
+        "reported_at": "2025-02-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "64K extended thinking",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "78.2",
+        "score_raw": "78.2%",
+        "reported_at": "2025-02-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "No extended thinking",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "62.3",
+        "score_raw": "62.3%",
+        "reported_at": "2025-02-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+            "checked_at": "2026-09-30T08:10:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
