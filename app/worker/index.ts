@@ -196,6 +196,11 @@ const worker = {
     diagnostics.set("Server-Timing", "d1;dur=0.00");
     if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", "public, max-age=31536000, immutable");
     if (response.status >= 400) diagnostics.set("Cache-Control", "no-store");
+    // Keep zone-injected analytics from executing in internal staging. Allow
+    // same-origin application and Cloudflare security scripts, including inline checks.
+    if (protectStaging && diagnostics.get("Content-Type")?.includes("text/html")) {
+      diagnostics.set("Content-Security-Policy", "script-src-elem 'self' 'unsafe-inline'");
+    }
     response = new Response(response.body,{status:response.status,statusText:response.statusText,headers:diagnostics});
     const nonProduction = url.hostname !== APEX_HOSTNAME;
     const apiDocument = url.pathname === '/api' || url.pathname.startsWith('/api/');

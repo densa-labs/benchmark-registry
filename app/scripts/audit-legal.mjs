@@ -13,13 +13,15 @@ const origin=`https://${values.host}`, staging=values.host.startsWith('staging.'
 const extraHTTPHeaders=staging?{'CF-Access-Jwt-Assertion':execFileSync(values.cloudflared??'cloudflared',['access','token',`--app=${origin}`],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim()}:{};
 const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
 const axeSource=readFileSync(new URL('../node_modules/axe-core/axe.min.js',import.meta.url),'utf8');
-const evidence={host:values.host,verifiedAt:new Date().toISOString(),routes:[],interactions:[],storage:null,externalRequests:[],consoleDiagnostics:[],limits:['Automated Chrome and axe; no physical screen reader.','320px plus 200% text resize tests reflow, not native browser zoom.','Mailto semantics checked without sending email.']};
+const evidence={host:values.host,verifiedAt:new Date().toISOString(),routes:[],interactions:[],storage:null,externalRequests:[],analyticsResponses:[],blockedAnalyticsRequests:0,consoleDiagnostics:[],limits:['Automated Chrome and axe; no physical screen reader.','320px plus 200% text resize tests reflow, not native browser zoom.','Mailto semantics checked without sending email.']};
 const errors=[],external=new Set(),diagnostics=[];let challengePlatformRequest=false;
 try {
   const context=await browser.newContext({viewport:{width:1440,height:900},extraHTTPHeaders});
   const page=await context.newPage();page.setDefaultTimeout(8000);
   page.on('pageerror',e=>errors.push(e.message));
   page.on('request',r=>{if(new URL(r.url()).pathname.startsWith('/cdn-cgi/challenge-platform/')) challengePlatformRequest=true;if(new URL(r.url()).origin!==origin) external.add(new URL(r.url()).origin);});
+  page.on('response',r=>{if(r.url().includes('beacon.min.js') || new URL(r.url()).pathname==='/cdn-cgi/rum') evidence.analyticsResponses.push({resource:r.url().includes('beacon.min.js')?'beacon.min.js':'/cdn-cgi/rum',status:r.status()});});
+  page.on('requestfailed',r=>{if(r.url().includes('beacon.min.js')) evidence.blockedAnalyticsRequests++;});
   page.on('console',m=>{if(m.text().includes('[registry]') || m.text().includes('[Benchmark Registry]')) diagnostics.push(m.type());});
   for(const width of [1440,390]) {
     await page.setViewportSize({width,height:900});
@@ -71,7 +73,9 @@ try {
   }
   evidence.interactions.push('Explicit Dark persists; all three pages fit 320px at 200% text in Light and Dark.');
   await page.locator('label[for=theme-system]').click();
-  evidence.externalRequests=[...external];assert.deepEqual(errors,[]);assert.deepEqual([...external],[]);
+  evidence.externalRequests=[...external];assert.deepEqual(errors,[]);assert.deepEqual([...external],['https://static.cloudflareinsights.com']);
+  if(staging) {assert.deepEqual(evidence.analyticsResponses,[]);assert.ok(evidence.blockedAnalyticsRequests>0);}
+  else {assert.ok(evidence.analyticsResponses.some(r=>r.resource==='beacon.min.js' && r.status===200));assert.ok(evidence.analyticsResponses.some(r=>r.resource==='/cdn-cgi/rum' && r.status===204));}
   if(!staging) assert.deepEqual(diagnostics,[]);
   evidence.challengePlatformRequest=challengePlatformRequest;evidence.externalRequests=[...external];evidence.consoleDiagnostics=Object.fromEntries([...new Set(diagnostics)].map(type=>[type,diagnostics.filter(value=>value===type).length]));evidence.result='PASS';
   await context.close();

@@ -13,6 +13,7 @@ def main():
     parser.add_argument('--host', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--cloudflared', default='cloudflared')
+    parser.add_argument('--expected-urls', type=int, default=808)
     args = parser.parse_args()
     client = LiveClient(args.host, args.cloudflared)
     checks = []
@@ -34,7 +35,8 @@ def main():
             assert 'href="/privacy">Privacy Policy</a>' in html and 'href="/terms">Terms</a>' in html
             assert re.search(r'href="mailto:support@benchmarkregistry.org"[^>]*>Support<svg[^>]*aria-hidden="true"', html)
         else:
-            assert '<time dateTime="2026-09-28">September 28, 2026</time>' in html
+            date, label = ('2026-09-30', 'September 30, 2026') if kind == 'privacy' else ('2026-09-28', 'September 28, 2026')
+            assert f'<time dateTime="{date}">{label}</time>' in html
         if client.staging:
             assert headers['x-robots-tag'] == 'noindex, nofollow, noarchive'
         checks.append({'path': path, 'status': status, 'd1_queries': 0, 'd1_rows': 0, 'read_store_reads': 0, 'set_cookie_present': 'set-cookie' in headers, 'initial_html': True, 'metadata': True})
@@ -47,7 +49,7 @@ def main():
         checks.append({'path': path, 'status': status, 'd1_queries': 0, 'd1_rows': 0, 'cache': headers.get('x-registry-cache')})
     status, _, xml = client.request('/sitemap.xml')
     locations = re.findall(r'<loc>(.*?)</loc>', xml)
-    assert status == 200 and len(locations) == len(set(locations)) == 808
+    assert status == 200 and len(locations) == len(set(locations)) == args.expected_urls
     assert all(url.startswith('https://benchmarkregistry.org/') for url in locations)
     for kind in pages:
         assert locations.count('https://benchmarkregistry.org/' + kind) == 1

@@ -62,7 +62,7 @@ it("links the minimal Legal hub to Privacy, Terms and an accessible SVG Support 
   expect(html).not.toContain("↗");
 });
 
-it("distinguishes disabled application persistence from Cloudflare security and earlier analytics retention", async () => {
+it("distinguishes enabled Web Analytics from disabled application persistence and Cloudflare security", async () => {
   const { env } = fixture();
   const html = await (await worker.fetch(new Request("https://benchmarkregistry.org/privacy"), env)).text();
   expect(html).toContain("Persisted per-request Worker logs, automatic invocation records and traces are disabled.");
@@ -70,7 +70,33 @@ it("distinguishes disabled application persistence from Cloudflare security and 
   expect(html).toContain("Security Events are available for 24 hours and Security Analytics for seven days.");
   expect(html).toContain("unsampled for seven days, then available in sampled aggregates for up to six months");
   expect(html).toContain("three-day Workers Free retention period");
+  expect(html).toContain("We use Cloudflare Web Analytics on the public site");
+  expect(html).toContain("Query strings, including search terms, are not logged");
+  expect(html).toContain("excluding visitor data in the EU");
+  expect(html).toContain("plus Switzerland and the United Kingdom");
+  expect(html).toContain("analytics beacon does not use cookies or browser storage");
+  expect(html).not.toContain("disabled on September 28");
   expect(html).not.toMatch(/GDPR compliant|CCPA compliant|tracking-free|GPS coordinates/u);
+});
+
+it("revises only the Privacy date and blocks staging analytics execution while permitting same-origin security scripts", async () => {
+  const { env } = fixture();
+  const production = await worker.fetch(new Request("https://benchmarkregistry.org/privacy"), env);
+  expect(await production.text()).toContain('<time dateTime="2026-09-30">September 30, 2026</time>');
+  expect(production.headers.get("Cache-Control")).not.toContain("no-transform");
+  expect(production.headers.get("Content-Security-Policy")).toBeNull();
+  const terms = await worker.fetch(new Request("https://benchmarkregistry.org/terms"), env);
+  expect(await terms.text()).toContain('<time dateTime="2026-09-28">September 28, 2026</time>');
+  env.STAGING_CRAWLER_PROTECTION = "enabled";
+  for (const path of ["/privacy", "/privacy/arbitrary"]) {
+    const response = await worker.fetch(new Request(`https://staging.benchmarkregistry.org${path}`), env);
+    expect(response.headers.get("Content-Security-Policy")).toBe("script-src-elem 'self' 'unsafe-inline'");
+    expect(response.headers.get("X-Robots-Tag")).toBe("noindex, nofollow, noarchive");
+  }
+  for (const file of ["../index.html", "../src/legal-pages.tsx", "./index.ts"]) {
+    const source = readFileSync(new URL(file, import.meta.url), "utf8");
+    expect(source).not.toMatch(/static\.cloudflareinsights\.com|data-cf-beacon|sendBeacon\(/u);
+  }
 });
 
 it.each(["/legal/arbitrary", "/privacy/arbitrary", "/terms/arbitrary"])("returns an independent static 404 for %s", async (path) => {

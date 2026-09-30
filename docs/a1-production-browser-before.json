@@ -1,0 +1,519 @@
+{
+  "startedAt": "2026-09-30T07:50:31.312Z",
+  "steps": [
+    {
+      "label": "home",
+      "path": "/",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "BODY",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 1
+    },
+    {
+      "label": "models",
+      "path": "/models",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "H1",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 3
+    },
+    {
+      "label": "model",
+      "path": "/models/20015",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "H1",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 5
+    },
+    {
+      "label": "benchmark",
+      "path": "/benchmarks/cursorbench/4-0",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "H1",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 7
+    },
+    {
+      "label": "organization",
+      "path": "/companies/anthropic",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "H1",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 9
+    },
+    {
+      "label": "back",
+      "path": "/benchmarks/cursorbench/4-0",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "H1",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 11
+    },
+    {
+      "label": "forward",
+      "path": "/companies/anthropic",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "H1",
+      "cookies": [
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 13
+    },
+    {
+      "label": "same-page query",
+      "path": "/companies/anthropic?q=a1-controlled-search",
+      "scripts": 1,
+      "localStorageKeys": [],
+      "sessionStorageKeys": [
+        "_cfPre_tabId"
+      ],
+      "indexedDBNames": [],
+      "cacheStorageKeys": [],
+      "serviceWorkers": 0,
+      "focus": "INPUT",
+      "cookies": [
+        {
+          "name": "__cf_ob",
+          "domain": "benchmarkregistry.org"
+        },
+        {
+          "name": "cf_clearance",
+          "domain": ".benchmarkregistry.org"
+        }
+      ],
+      "beaconRequests": 15
+    }
+  ],
+  "headers": {
+    "cache-control": "public, max-age=60, must-revalidate",
+    "x-registry-d1-queries": "0",
+    "x-registry-d1-rows": "0"
+  },
+  "benchmarkHref": "/benchmarks/cursorbench/4-0",
+  "responses": [
+    {
+      "stage": "home",
+      "path": "beacon.min.js",
+      "status": 200
+    },
+    {
+      "stage": "home",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "models",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "models",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "model",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "model",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "benchmark",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "benchmark",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "organization",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "organization",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "back",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "back",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "forward",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "forward",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "query",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    },
+    {
+      "stage": "query",
+      "path": "/cdn-cgi/rum",
+      "status": 204
+    }
+  ],
+  "events": [
+    {
+      "stage": "home",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/",
+      "navigationType": "navigate",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "eventType",
+        "nt",
+        "location",
+        "versions",
+        "bi",
+        "memory",
+        "firstPaint",
+        "firstContentfulPaint",
+        "timingsV2",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "models",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "models",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/models",
+      "referrer": "https://benchmarkregistry.org/",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "model",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "model",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/models/20015",
+      "referrer": "https://benchmarkregistry.org/models",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "benchmark",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "benchmark",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/benchmarks/cursorbench/4-0",
+      "referrer": "https://benchmarkregistry.org/models/20015",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "organization",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "organization",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/companies/anthropic",
+      "referrer": "https://benchmarkregistry.org/benchmarks/cursorbench/4-0",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "back",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "back",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/benchmarks/cursorbench/4-0",
+      "referrer": "https://benchmarkregistry.org/companies/anthropic",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "forward",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "forward",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/companies/anthropic",
+      "referrer": "https://benchmarkregistry.org/benchmarks/cursorbench/4-0",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    },
+    {
+      "stage": "query",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "bodyKeys": [],
+      "queryPresent": false
+    },
+    {
+      "stage": "query",
+      "method": "POST",
+      "path": "/cdn-cgi/rum",
+      "eventType": 1,
+      "location": "https://benchmarkregistry.org/companies/anthropic",
+      "referrer": "https://benchmarkregistry.org/companies/anthropic",
+      "navigationType": "soft-navigation",
+      "bodyKeys": [
+        "startTime",
+        "pageloadId",
+        "n",
+        "eventType",
+        "nt",
+        "location",
+        "referrer",
+        "versions",
+        "bi",
+        "siteToken",
+        "st"
+      ],
+      "queryPresent": false
+    }
+  ],
+  "browserVersion": "154.0.8037.58",
+  "finishedAt": "2026-09-30T07:50:46.378Z"
+}

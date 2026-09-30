@@ -17,6 +17,11 @@ function PrivacyPolicy() {
       <p>We use aggregate request counts, failures, response status, cache activity and performance metrics for reliability, debugging and security. Persisted per-request Worker logs, automatic invocation records and traces are disabled. We do not export application logs to another destination.</p>
       <p>Application errors emit only a fixed failure category and build version. During exceptional debugging, authorized operators can view temporary live diagnostics; Cloudflare may include request and network context in that live view. We do not save those live sessions as application logs.</p>
     </section>
+    <section><h2>Cloudflare Web Analytics</h2>
+      <p>We use Cloudflare Web Analytics on the public site to understand aggregate page views, visits and web performance. It processes page paths, referring pages, browser/device categories, country information and performance measurements. Query strings, including search terms, are not logged by Web Analytics. Ad blockers and privacy tools can prevent measurement.</p>
+      <p>We enable Cloudflare’s “excluding visitor data in the EU” setting. Cloudflare defines this exclusion by the data center a visitor connects to: its listed EU/EEA countries, plus Switzerland and the United Kingdom. The analytics beacon is not injected for those connections. This exclusion applies to Web Analytics; Cloudflare still separately processes requests for delivery and security.</p>
+      <p>The analytics beacon does not use cookies or browser storage. Cloudflare receives the source IP as part of handling a beacon request, then discards it at the nearest data center rather than storing it in RUM databases or logs. Web Analytics is separate from our disabled persisted application request logging and from Cloudflare’s security storage.</p>
+    </section>
     <section><h2>Storage in your browser</h2>
       <p>Your Light, Dark or System theme choice is saved locally until you change it or clear browser storage. Public Registry pages and data are cached for speed. Navigation and search results can remain in page-session memory, are refreshed or invalidated as data changes, and disappear when the page session ends.</p>
       <p>Searches and filters are sent in the request URL to show matching public data. Your browser may keep visited URLs in its history and responses in its ordinary HTTP cache. We do not keep a persistent application search history or use these caches to build a visitor profile.</p>
@@ -33,7 +38,7 @@ function PrivacyPolicy() {
     </section>
     <section><h2>Retention</h2>
       <p>New per-request Worker logs and traces are not persisted. Logs saved before the September 28, 2026 hardening may contain IP addresses, network-derived location, browser/connection information and full request URLs, including queries. Those earlier logs expire automatically within Cloudflare’s three-day Workers Free retention period; disabling new persistence does not erase them immediately.</p>
-      <p>Aggregate Worker metrics are available for up to three months and zone analytics for the last 30 days. A previously enabled Cloudflare Web Analytics beacon collected page-view and web-performance statistics; it was disabled on September 28, 2026. Earlier Web Analytics data is unsampled for seven days, then available in sampled aggregates for up to six months. These are separate from application request logs. Our application logging settings do not control Cloudflare’s separate security processing. On our current Free zone plan, Security Events are available for 24 hours and Security Analytics for seven days. Cloudflare security session storage lasts for the browser tab session; security cookies have their own lifetimes. Local theme storage remains until changed or cleared; page-session caches end with the session, and your browser controls its history and HTTP-cache retention.</p>
+      <p>Aggregate Worker metrics are available for up to three months and zone analytics for the last 30 days. Web Analytics data is unsampled for seven days, then available in sampled aggregates for up to six months. These are separate from application request logs. Our application logging settings do not control Cloudflare’s separate security processing. On our current Free zone plan, Security Events are available for 24 hours and Security Analytics for seven days. Cloudflare security session storage lasts for the browser tab session; security cookies have their own lifetimes. Local theme storage remains until changed or cleared; page-session caches end with the session, and your browser controls its history and HTTP-cache retention.</p>
     </section>
     <section><h2>Changes</h2><p>We may update this policy when the service or its data handling changes. The date above identifies this version.</p></section>
     <Contact />
@@ -62,7 +67,9 @@ export function LegalPage({ kind }: { kind: LegalKind }) {
       <section><h2><a href="/terms">Terms</a></h2><p>Terms for using this public reference service.</p></section>
       <section><h2><a className="source-link" href="mailto:support@benchmarkregistry.org">Support<ExternalIcon /></a></h2><p>For questions or corrections: <span className="legal-email">support@benchmarkregistry.org</span>.</p></section>
     </> : <>
-      <p className="legal-updated">Last updated: <time dateTime="2026-09-28">September 28, 2026</time></p>
+      <p className="legal-updated">Last updated: {kind === "privacy"
+        ? <time dateTime="2026-09-30">September 30, 2026</time>
+        : <time dateTime="2026-09-28">September 28, 2026</time>}</p>
       {kind === "privacy" ? <PrivacyPolicy /> : <Terms />}
     </>}
   </PageContainer>;

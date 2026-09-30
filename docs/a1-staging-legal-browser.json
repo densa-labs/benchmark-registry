@@ -1,0 +1,122 @@
+{
+  "host": "staging.benchmarkregistry.org",
+  "verifiedAt": "2026-09-30T08:20:40.966Z",
+  "routes": [
+    {
+      "kind": "legal",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "passes": 41
+    },
+    {
+      "kind": "privacy",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "passes": 42
+    },
+    {
+      "kind": "terms",
+      "width": 1440,
+      "theme": "light",
+      "violations": [],
+      "passes": 42
+    },
+    {
+      "kind": "legal",
+      "width": 1440,
+      "theme": "dark",
+      "violations": [],
+      "passes": 41
+    },
+    {
+      "kind": "privacy",
+      "width": 1440,
+      "theme": "dark",
+      "violations": [],
+      "passes": 42
+    },
+    {
+      "kind": "terms",
+      "width": 1440,
+      "theme": "dark",
+      "violations": [],
+      "passes": 42
+    },
+    {
+      "kind": "legal",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "passes": 40
+    },
+    {
+      "kind": "privacy",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "passes": 41
+    },
+    {
+      "kind": "terms",
+      "width": 390,
+      "theme": "light",
+      "violations": [],
+      "passes": 41
+    },
+    {
+      "kind": "legal",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "passes": 40
+    },
+    {
+      "kind": "privacy",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "passes": 41
+    },
+    {
+      "kind": "terms",
+      "width": 390,
+      "theme": "dark",
+      "violations": [],
+      "passes": 41
+    }
+  ],
+  "interactions": [
+    "Footer Legal, Privacy and Terms keyboard navigation focus the new H1; Support has the exact accessible name, decorative SVG, mailto and visible focus; back navigation works.",
+    "Explicit Dark persists; all three pages fit 320px at 200% text in Light and Dark."
+  ],
+  "storage": {
+    "localStorageKeys": [
+      "benchmark-registry-theme"
+    ],
+    "theme": "dark",
+    "sessionStorageKeys": [
+      "_cfPre_tabId"
+    ],
+    "indexedDbNames": [],
+    "cacheStorageKeys": [],
+    "serviceWorkers": 0,
+    "cookieNames": []
+  },
+  "externalRequests": [
+    "https://static.cloudflareinsights.com"
+  ],
+  "analyticsResponses": [],
+  "blockedAnalyticsRequests": 20,
+  "consoleDiagnostics": {
+    "info": 71
+  },
+  "limits": [
+    "Automated Chrome and axe; no physical screen reader.",
+    "320px plus 200% text resize tests reflow, not native browser zoom.",
+    "Mailto semantics checked without sending email."
+  ],
+  "challengePlatformRequest": true,
+  "result": "PASS"
+}

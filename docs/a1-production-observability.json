@@ -1,0 +1,25 @@
+{
+  "verifiedAt": "2026-09-30T08:16:37.560Z",
+  "version": "4a2bb7bb-2277-42a1-8027-32d20ea9cdfe",
+  "observability": null,
+  "logpush": false,
+  "tail_consumers": null,
+  "publicD1Binding": false,
+  "sourceControls": {
+    "enabled": true,
+    "redact_query_string": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false,
+      "persist": false,
+      "head_sampling_rate": 1,
+      "destinations": []
+    },
+    "traces": {
+      "enabled": false,
+      "persist": false,
+      "destinations": []
+    }
+  },
+  "note": "Cloudflare normalizes disabled persistence and empty destinations to null; dashboard stored-event inspection is recorded separately."
+}

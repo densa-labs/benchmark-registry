@@ -1,0 +1,78 @@
+{
+  "verifiedAt": "2026-09-30T08:22:42Z",
+  "hostname": "benchmarkregistry.org",
+  "source": "Signed-in Cloudflare Web Analytics dashboard; aggregate values only",
+  "configuration": {
+    "automaticSetup": true,
+    "enabledExcludingEU": true,
+    "physicalExcludedRegionTest": false
+  },
+  "initialObservation": {
+    "timeApproxUTC": "07:32",
+    "window": "Last 24 hours",
+    "excludeBots": true,
+    "pageviews": 2,
+    "visits": 2
+  },
+  "finalDefaultObservation": {
+    "window": "Last 24 hours",
+    "excludeBots": true,
+    "pageviews": 5,
+    "visits": 5,
+    "hosts": {
+      "benchmarkregistry.org": 4,
+      "staging.benchmarkregistry.org": 1
+    },
+    "countryPageviews": {
+      "Philippines": 4,
+      "United States": 1
+    },
+    "referrerCategories": {
+      "direct": 5
+    }
+  },
+  "verificationTrafficIncludedObservation": {
+    "window": "Last 24 hours",
+    "excludeBotsFilterRemoved": true,
+    "pageviews": 42,
+    "visits": 13,
+    "hosts": {
+      "benchmarkregistry.org": 41,
+      "staging.benchmarkregistry.org": 1
+    },
+    "navigationTypes": {
+      "softNavigation": 29,
+      "hardNavigation": 13
+    },
+    "topPaths": {
+      "/benchmarks/cursorbench/4-0": 11,
+      "/": 11,
+      "/companies/anthropic": 10,
+      "/models": 7,
+      "/privacy": 2
+    },
+    "referrerCategories": {
+      "sameSite": 29,
+      "direct": 13
+    },
+    "countryPageviews": {
+      "Philippines": 41,
+      "United States": 1
+    }
+  },
+  "coreWebVitalsObservation": {
+    "window": "Last 24 hours",
+    "excludeBots": true,
+    "lcpP50Ms": 884,
+    "lcpP75Ms": 2032,
+    "lcpGoodPercent": 100,
+    "clsGoodPercent": 100,
+    "inp": "No data"
+  },
+  "notes": [
+    "The single staging pageview was collected before the A1 staging exclusion. It remains historical data; it was not deleted.",
+    "Final staging tests sent zero RUM requests; new staging HTML blocks the injected analytics script with CSP.",
+    "Bot exclusion hides automated verification traffic. These aggregate snapshots are not a count of unique human visitors or exact attribution to tests.",
+    "Cloudflare documents a delay of a few minutes. No exact per-event reporting latency was measured."
+  ]
+}
