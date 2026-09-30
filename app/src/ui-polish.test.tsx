@@ -70,6 +70,7 @@ describe("P11.8 visible interactions", () => {
   it("keeps exactly one Light/Dark/System choice active and restores OS control", async () => {
     await mount(<AppShell navigation={navigation}><p>Registry</p></AppShell>);
     expect(container.querySelector<HTMLInputElement>("#theme-system")?.checked).toBe(true);
+    expect([...container.querySelectorAll('.theme-toggle label')].map(label => label.textContent)).toEqual(["System", "Light", "Dark"]);
     for (const choice of ["light", "dark", "system"]) {
       await click(container.querySelector(`#theme-${choice}`)!);
       expect(container.querySelectorAll('input[name="color-theme"]:checked')).toHaveLength(1);

@@ -8,9 +8,12 @@ import type {
   ResultRow,
 } from "../worker/api";
 import { diagnoseApiFailure } from "./diagnostics";
+import type { FeaturedResult } from "../worker/featured-result";
+
+export type ModelListEntry = ModelSummary & { featured_result?: FeaturedResult | null };
 
 export interface ModelListResponse {
-  data: ModelSummary[];
+  data: ModelListEntry[];
   page: Page;
 }
 
@@ -25,7 +28,7 @@ export interface HomePageResponse {
   };
   recent_models: ModelListResponse;
   recently_added: ModelListResponse;
-  all_models: ModelSummary[];
+  all_models: ModelListEntry[];
 }
 
 export interface ModelDetailResponse {

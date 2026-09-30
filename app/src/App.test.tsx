@@ -266,6 +266,17 @@ const modelDetailResponse: ModelDetailResponse = {
 };
 
 describe("P7.1 model pages", () => {
+  it("replaces Registry numbers with a display-only recorded benchmark score", () => {
+    const markup = renderToStaticMarkup(<ModelsPage response={{ ...modelListResponse, data: [{ ...model,
+      featured_result: modelDetailResponse.data.results[0],
+    }] }} currentSearch="" />);
+    expect(markup).toContain("Benchmark score");
+    expect(markup).toContain("SWE-bench Verified (high)");
+    expect(markup).toContain("54.6%");
+    expect(markup).not.toContain(">Registry No.<");
+    expect(markup).not.toContain("Sort by Benchmark score");
+    expect(markup).not.toContain(">10002<");
+  });
   it("renders the model index with local search, allowed sorting, and pagination controls", () => {
     const markup = renderToStaticMarkup(
       <ModelsPage response={modelListResponse} currentSearch="?limit=50" />,

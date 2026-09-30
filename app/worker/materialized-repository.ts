@@ -3,6 +3,7 @@ import { normalizeSearch, type ParsedListParams } from './params';
 import type { RegistryRepository } from './repository';
 import { searchResponse } from './search-response';
 import type { ReadData, ReadManifest, ResultFields } from './read-model';
+import { highestRecordedResult, type FeaturedResult } from './featured-result';
 export type RegistryReader=Pick<RegistryRepository,'modelRedirectTarget'|'metadataModel'|'metadataCompany'|'metadataBenchmark'|'metadataResult'|'sitemapPaths'|'stats'|'models'|'model'|'benchmarks'|'benchmark'|'benchmarkVersion'|'companies'|'company'|'search'>;
 const binary=(a:string|null,b:string|null)=>{
   if(a===b) return 0;if(a===null) return -1;if(b===null) return 1;
@@ -16,6 +17,7 @@ const match=(query:string,...names:string[])=>names.some(name=>name.includes(que
 function page<T>(rows:T[],p:ParsedListParams) {return {data:rows.slice((p.page-1)*p.limit,p.page*p.limit),page:pageMetadata(p.page,p.limit,rows.length)};}
 
 export class MaterializedRepository implements RegistryReader {
+  private featuredResults = new Map<string, Promise<FeaturedResult | null>>();
   constructor(readonly manifest:ReadManifest,private readonly read:<K extends keyof ReadData>(key:string)=>Promise<ReadData[K]>) {}
   private get<K extends keyof ReadData>(key:string):Promise<ReadData[K]> {if(!this.manifest.objects[key]) throw new ApiError(404,'not_found',key.startsWith('model:')?'Model not found.':key.startsWith('company:')?'Company not found.':key.startsWith('family:')?'Benchmark not found.':'Benchmark version not found.');return this.read<K>(key);}
   async modelRedirectTarget(no:string) {return (await this.get<'redirects'>('redirects')).find(row=>row.source===no)?.target ?? null;}
@@ -53,7 +55,15 @@ export class MaterializedRepository implements RegistryReader {
       const key=(row:typeof a,f:typeof x)=>p.sort==='name'?f.name:p.sort==='company'?f.company:p.sort==='released'?f.released:p.sort==='published'?row.published_at:row.registry_no;
       return direction(p)*binary(key(a,x),key(b,y)) || (p.sort==='published'?1:direction(p))*binary(a.registry_no,b.registry_no);
     });
-    return page(rows,p);
+    const response = page(rows,p);
+    // Derive from the complete, current model projections, including history.
+    // This also supports existing published generations without a data migration.
+    const data = await Promise.all(response.data.map(async row => {
+      if (!this.featuredResults.has(row.registry_no)) this.featuredResults.set(row.registry_no,
+        this.get<'model'>(`model:${row.registry_no}`).then(model => highestRecordedResult(model.response.data.results)));
+      return { ...row, featured_result: await this.featuredResults.get(row.registry_no)! };
+    }));
+    return { ...response, data };
   }
   async benchmarks(p:ParsedListParams) {
     const o=await this.get<'benchmarks'>('benchmarks'),fields=new Map(o.fields.map(field=>[field.identity,field]));

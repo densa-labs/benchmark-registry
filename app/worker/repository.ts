@@ -1,4 +1,5 @@
 import { EXACT_RESULT_ELIGIBLE_SQL } from "./result-links";
+import { highestRecordedResult } from "./featured-result";
 import {
   ApiError,
   type BenchmarkVersionSummary,
@@ -519,7 +520,20 @@ export class RegistryRepository {
        LIMIT ? OFFSET ?`,
       [...bindings, params.limit, (params.page - 1) * params.limit],
     );
-    return { data: rows.map(modelFromRow), page: pageMetadata(params.page, params.limit, total) };
+    const recorded = rows.length ? (await this.all<ResultDbRow>(
+      `/* models:featured-results */ SELECT ${RESULT_COLUMNS} ${RESULT_JOINS}
+       WHERE m.registry_no IN (SELECT value FROM json_each(?)) AND r.score_value IS NOT NULL`,
+      [JSON.stringify(rows.map(row => row.registry_no))],
+    )).map(resultFromRow) : [];
+    const byModel = new Map<string, typeof recorded>();
+    for (const result of recorded) {
+      const results = byModel.get(result.model.registry_no) ?? [];
+      results.push(result);
+      byModel.set(result.model.registry_no, results);
+    }
+    return { data: rows.map(row => ({ ...modelFromRow(row),
+      featured_result: highestRecordedResult(byModel.get(row.registry_no) ?? []),
+    })), page: pageMetadata(params.page, params.limit, total) };
   }
 
   async model(registryNo: string, params: ParsedListParams) {

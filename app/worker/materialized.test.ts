@@ -10,6 +10,8 @@ import {digest,type Publication} from './read-model';
 import {shadowGeneration} from './shadow';
 import {MaterializedRepository} from './materialized-repository';
 import {RegistryRepository} from './repository';
+import { highestRecordedResult } from './featured-result';
+import type { ModelListResponse } from '../src/registry';
 const databases:DatabaseSync[]=[];
 afterEach(()=>{databases.splice(0).forEach(db=>db.close());});
 class Store implements ProducerStore {
@@ -73,6 +75,28 @@ it('no-op canonical updates cause no generation, payload rewrite or invalidation
   f.sqlite.exec("UPDATE models SET canonical_name=canonical_name WHERE registry_no='10001'");
   const before=f.queries();expect(await buildGeneration(f.db,'local',build.manifest)).toBeNull();
   expect(f.queries()-before).toBe(1);expect(f.store.writes).toHaveLength(writes);
+});
+it('refreshes featured scores from current model history even when the models index is unchanged',async()=>{
+  const f=fixture();const {build,publication}=await bootstrap(f);
+  const original=f.sqlite.prepare(`SELECT r.* FROM results r JOIN models m ON m.id=r.model_id
+    JOIN metrics metric ON metric.id=r.metric_id WHERE m.registry_no='10001' AND metric.unit='percent' ORDER BY r.id LIMIT 1`).get() as Record<string,string|number|null>;
+  f.sqlite.prepare("UPDATE results SET score_value='99',score_raw='99%',reported_at='2010-01-01',reported_precision='date' WHERE id=?").run(original.id);
+  const id=Number((f.sqlite.prepare('SELECT max(id) AS n FROM results').get() as {n:number}).n)+1;
+  const newer={...original,id,result_key:'f'.repeat(64),run_ref:'featured-score-newer-run',score_value:'1',score_raw:'1%',reported_at:'2030-01-01',reported_precision:'date'};
+  f.sqlite.exec('BEGIN');
+  f.sqlite.prepare(`INSERT INTO results(${Object.keys(newer).join(',')}) VALUES(${Object.keys(newer).map(()=>'?').join(',')})`).run(...Object.values(newer));
+  f.sqlite.prepare('INSERT INTO result_evaluators SELECT ?,evaluator_organization_id FROM result_evaluators WHERE result_id=?').run(id,original.id);
+  f.sqlite.exec('COMMIT');
+  const next=(await buildGeneration(f.db,'local',build.manifest))!;
+  expect(next.rebuilt).not.toContain('models');
+  await publishGeneration(f.store,next,f.db,publication);
+  const response=await worker.fetch(new Request('https://benchmarkregistry.org/api/models?q=10001'),f.env);
+  const body=await response.json() as ModelListResponse;
+  expect(body.data[0].featured_result).toMatchObject({result_key:original.result_key,score:{value:'99',display:'99.0%'}});
+  const history=await new RegistryRepository(f.db).model('10001',{page:1,limit:500,view:'history'});
+  expect(body.data[0].featured_result).toEqual(highestRecordedResult(history.data.results));
+  expect(response.headers.get('X-Registry-D1-Rows')).toBe('0');
+  expect(f.env.DB.prepare).not.toHaveBeenCalled();
 });
 it('new result regenerates only affected scopes and retires exact eligibility coherently',async()=>{
   const f=fixture();const {build,publication}=await bootstrap(f);

@@ -4,6 +4,14 @@ import { describe, expect, it } from "vitest";
 import { HomeLoadingState, HomePage } from "./home-page";
 import type { HomePageResponse } from "./registry";
 import { AppShell } from "./ui/components";
+import type { FeaturedResult } from "../worker/featured-result";
+
+const featured: FeaturedResult = {
+  result_key: "a".repeat(64), exact_result_href: null,
+  benchmark: { name: "SWE-bench", slug: "swe-bench", aliases: [] },
+  benchmark_version: "Verified", benchmark_version_slug: "verified", reasoning_level: "max",
+  score: { raw: "73.3%", value: "73.3", display: "73.3%" },
+};
 
 function model(
   registryNo: string,
@@ -45,6 +53,20 @@ const response: HomePageResponse = {
 };
 
 describe("homepage", () => {
+  it("shows benchmark name, reasoning and score in all three model sections instead of Registry numbers", () => {
+    const withScore = { ...response.all_models[0], featured_result: featured };
+    const page = { ...response.recent_models, data: [withScore] };
+    const markup = renderToStaticMarkup(<HomePage response={{ ...response, recent_models: page, recently_added: page, all_models: [withScore] }} />);
+    expect(markup.match(/SWE-bench Verified \(max\)/gu)).toHaveLength(6); // visible labels and accessible link names
+    expect(markup.match(/model-benchmark-score__value/gu)).toHaveLength(3);
+    expect(markup).toContain('href="/benchmarks/swe-bench/verified"');
+    expect(markup).not.toContain('class="registry-number"');
+    expect(markup).not.toContain(">10001<");
+  });
+  it("shows a clear absence state for models with no numeric benchmark results", () => {
+    const markup = renderToStaticMarkup(<HomePage response={response} />);
+    expect(markup.match(/No benchmark results/gu)).toHaveLength(6);
+  });
   it("shows a homepage loading state", () => {
     const markup = renderToStaticMarkup(<HomeLoadingState />);
     expect(markup).toContain("Loading homepage data");

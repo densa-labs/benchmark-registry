@@ -291,7 +291,7 @@ export function ThemeToggle({ theme, onSelectTheme }: ThemeToggleProps) {
     <fieldset className="theme-toggle">
       <legend className="visually-hidden">Color theme</legend>
       <div className="theme-toggle__options">
-        {(["light", "dark", "system"] as const).map((choice) => <span key={choice}>
+        {(["system", "light", "dark"] as const).map((choice) => <span key={choice}>
           <input className="theme-toggle__input visually-hidden" id={`theme-${choice}`} name="color-theme"
             type="radio" value={choice} checked={theme === choice} onChange={() => onSelectTheme(choice)} />
           <label htmlFor={`theme-${choice}`}>{choice.charAt(0).toUpperCase() + choice.slice(1)}</label>

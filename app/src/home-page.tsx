@@ -1,5 +1,5 @@
-import type { ModelSummary } from "../worker/api";
-import { formatRegistryDate, type HomePageResponse } from "./registry";
+import { type ModelListEntry, type HomePageResponse } from "./registry";
+import { ModelBenchmarkScore } from "./model-benchmark-score";
 import { EmptyState, PageContainer } from "./ui/components";
 
 const HOMEPAGE_MODEL_LIMIT = 5;
@@ -29,10 +29,8 @@ export function HomeLoadingState() {
 
 function ModelList({
   models,
-  dateKind,
 }: {
-  models: ModelSummary[];
-  dateKind: "released" | "published";
+  models: ModelListEntry[];
 }) {
   if (models.length === 0) {
     return (
@@ -46,10 +44,6 @@ function ModelList({
   return (
     <ol className="home-model-list" role="list">
       {models.slice(0, HOMEPAGE_MODEL_LIMIT).map((model) => {
-        const date = dateKind === "released"
-          ? formatRegistryDate(model.released_at, model.release_precision)
-          : formatRegistryDate(model.published_at, "timestamp");
-
         return (
           <li key={model.registry_no}>
             <span className="home-model-list__identity">
@@ -57,12 +51,7 @@ function ModelList({
               <a href={`/companies/${model.company.slug}`}>{model.company.name}</a>
             </span>
             <span className="home-model-list__metadata">
-              <time dateTime={dateKind === "released" ? model.released_at : model.published_at}>
-                {date}
-              </time>
-              <a className="registry-number" href={`/models/${model.registry_no}`} aria-label={`Registry No. ${model.registry_no}, ${model.name}`}>
-                {model.registry_no}
-              </a>
+              <ModelBenchmarkScore result={model.featured_result} />
             </span>
           </li>
         );
@@ -75,7 +64,7 @@ export function HomePage({ response }: { response: HomePageResponse }) {
   const { benchmark_results: resultCount, models: modelCount, benchmarks: benchmarkCount,
     versions: versionCount } = response.stats.data;
   const count = (value: number) => new Intl.NumberFormat("en-US").format(value);
-  const modelGroups = new Map<string, ModelSummary[]>();
+  const modelGroups = new Map<string, ModelListEntry[]>();
   for (const model of response.all_models) {
     const initial = /^[a-z]$/iu.test(model.name.charAt(0))
       ? model.name.charAt(0).toLocaleUpperCase("en-US")
@@ -108,7 +97,7 @@ export function HomePage({ response }: { response: HomePageResponse }) {
             </div>
             <a href="/models">View all models</a>
           </header>
-          <ModelList models={response.recent_models.data} dateKind="released" />
+          <ModelList models={response.recent_models.data} />
         </section>
 
         <section className="home-section" aria-labelledby="recently-added-heading">
@@ -119,7 +108,7 @@ export function HomePage({ response }: { response: HomePageResponse }) {
             </div>
             <a href="/models?sort=published&order=desc">View all additions</a>
           </header>
-          <ModelList models={response.recently_added.data} dateKind="published" />
+          <ModelList models={response.recently_added.data} />
         </section>
       </div>
 
@@ -148,7 +137,7 @@ export function HomePage({ response }: { response: HomePageResponse }) {
                         {model.name}
                       </a>
                       <span className="home-directory__provider">{model.company.name}</span>
-                      <span className="registry-number">{model.registry_no}</span>
+                      <ModelBenchmarkScore result={model.featured_result} />
                     </li>
                   ))}
                 </ul>

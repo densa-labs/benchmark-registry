@@ -1,5 +1,6 @@
 import { ResultScoreLink } from "./result-score-link";
-import type { ModelSummary, ResultRow } from "../worker/api";
+import type { ResultRow } from "../worker/api";
+import { ModelBenchmarkScore } from "./model-benchmark-score";
 import { BenchmarkLink } from "./benchmark-link";
 import {
   DataTable,
@@ -19,6 +20,7 @@ import {
   queryHref,
   type ModelDetailResponse,
   type ModelListResponse,
+  type ModelListEntry,
 } from "./registry";
 
 const PRESERVED_QUERY_KEYS = ["q", "company", "sort", "order", "view", "limit"];
@@ -167,8 +169,7 @@ export function ModelsPage({
   const nameSort = sortLink(pathname, currentSearch, "name");
   const releasedSort = sortLink(pathname, currentSearch, "released", "desc");
   const companySort = sortLink(pathname, currentSearch, "company");
-  const registrySort = sortLink(pathname, currentSearch, "registry_no");
-  const columns: TableColumn<ModelSummary>[] = [
+  const columns: TableColumn<ModelListEntry>[] = [
     {
       key: "model",
       label: "Model",
@@ -199,12 +200,10 @@ export function ModelsPage({
       render: (model) => <span className="model-status">{model.status}</span>,
     },
     {
-      key: "registry-no",
-      label: "Registry No.",
-      className: "numeric registry-number",
-      sortHref: registrySort.href,
-      sortDirection: registrySort.direction,
-      render: (model) => <a href={`/models/${model.registry_no}`}>{model.registry_no}</a>,
+      key: "benchmark-score",
+      label: "Benchmark score",
+      className: "numeric",
+      render: (model) => <ModelBenchmarkScore result={model.featured_result} />,
     },
   ];
   const query = new URLSearchParams(currentSearch).get("q");

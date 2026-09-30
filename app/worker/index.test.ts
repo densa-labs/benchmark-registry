@@ -191,9 +191,22 @@ describe("read API response contracts", () => {
         release_precision: "date",
         published_at: "2026-09-17T00:00:00Z",
         status: "active",
+        featured_result: null,
       }],
       page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
     });
+  });
+
+  it("includes the highest recorded result without altering model pagination or order", async () => {
+    const { body, calls } = await api("/api/models?sort=name", (tag) => tag === "models:featured-results"
+      ? [{ ...resultRow, score_value: "9", score_raw: "9%" },
+        { ...resultRow, result_key: "b".repeat(64), score_value: "73.3", score_raw: "73.3%", reasoning_level: "max" }]
+      : defaultResponder(tag));
+    expect(body).toMatchObject({ data: [{ registry_no: "10002", featured_result: {
+      reasoning_level: "max", score: { value: "73.3", display: "73.3%" },
+      benchmark: { name: resultRow.benchmark_name }, result_key: "b".repeat(64),
+    } }], page: { total_items: 1 } });
+    expect(calls.find(call => tagFor(call.sql) === "models:featured-results")?.bindings).toEqual(['["10002"]']);
   });
 
   it("returns model detail and exact score fields", async () => {
@@ -265,7 +278,7 @@ describe("query validation and pagination", () => {
     const { response, body, calls } = await api(`/api/models?limit=${limit}`);
     expect(response.status).toBe(200);
     expect(body.page).toMatchObject({ limit });
-    expect(calls.at(-1)?.bindings.at(-2)).toBe(limit);
+    expect(calls.find(call => tagFor(call.sql) === "models:list")?.bindings.at(-2)).toBe(limit);
   });
 
   it("returns empty out-of-range pages with accurate metadata", async () => {
@@ -334,22 +347,22 @@ describe("filtering, sorting, latest/history, and search", () => {
 
   it("selects only allow-listed sort SQL and adds a stable tie-breaker", async () => {
     const { calls } = await api("/api/models?sort=company&order=desc");
-    expect(calls.at(-1)?.sql).toMatch(/ORDER BY c\.normalized_name DESC, m\.registry_no DESC/u);
+    expect(calls.find(call => tagFor(call.sql) === "models:list")?.sql).toMatch(/ORDER BY c\.normalized_name DESC, m\.registry_no DESC/u);
   });
 
   it("sorts published models by published_at with the homepage tie-breaker", async () => {
     const { response, calls } = await api("/api/models?sort=published&order=desc");
 
     expect(response.status).toBe(200);
-    expect(calls.at(-1)?.sql).toMatch(
+    expect(calls.find(call => tagFor(call.sql) === "models:list")?.sql).toMatch(
       /ORDER BY m\.published_at DESC, m\.registry_no ASC/u,
     );
   });
 
   it("uses precision-aware date keys for deterministic default sorting", async () => {
     const { calls } = await api("/api/models");
-    expect(calls.at(-1)?.sql).toContain("date_peer.release_precision = 'date'");
-    expect(calls.at(-1)?.sql).toMatch(/m\.normalized_name ASC, m\.registry_no ASC/u);
+    expect(calls.find(call => tagFor(call.sql) === "models:list")?.sql).toContain("date_peer.release_precision = 'date'");
+    expect(calls.find(call => tagFor(call.sql) === "models:list")?.sql).toMatch(/m\.normalized_name ASC, m\.registry_no ASC/u);
   });
 
   it("defaults result endpoints to latest and supports history", async () => {
