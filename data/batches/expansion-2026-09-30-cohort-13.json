@@ -1,0 +1,1262 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original",
+        "metric_key": "mmlu-pro-accuracy",
+        "score_value": "83",
+        "score_raw": "83.0",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original",
+        "metric_key": "mmlu-pro-accuracy",
+        "score_value": "86.4",
+        "score_raw": "86.4",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "max",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original",
+        "metric_key": "mmlu-pro-accuracy",
+        "score_value": "86.2",
+        "score_raw": "86.2",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original",
+        "metric_key": "mmlu-pro-accuracy",
+        "score_value": "82.9",
+        "score_raw": "82.9",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original",
+        "metric_key": "mmlu-pro-accuracy",
+        "score_value": "87.1",
+        "score_raw": "87.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "max",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original",
+        "metric_key": "mmlu-pro-accuracy",
+        "score_value": "87.5",
+        "score_raw": "87.5",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "23.1",
+        "score_raw": "23.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "28.9",
+        "score_raw": "28.9",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "max",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "34.1",
+        "score_raw": "34.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "45",
+        "score_raw": "45.0",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "46.2",
+        "score_raw": "46.2",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "max",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "57.9",
+        "score_raw": "57.9",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "71.2",
+        "score_raw": "71.2",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "87.4",
+        "score_raw": "87.4",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "72.9",
+        "score_raw": "72.9",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "89.1",
+        "score_raw": "89.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "49.1",
+        "score_raw": "49.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "56.6",
+        "score_raw": "56.6",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "59.1",
+        "score_raw": "59.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "63.3",
+        "score_raw": "63.3",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "73.7",
+        "score_raw": "73.7",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "78.6",
+        "score_raw": "78.6",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "73.6",
+        "score_raw": "73.6",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "79.4",
+        "score_raw": "79.4",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "69.7",
+        "score_raw": "69.7",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "70.2",
+        "score_raw": "70.2",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "69.8",
+        "score_raw": "69.8",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "74.1",
+        "score_raw": "74.1",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "53.5",
+        "score_raw": "53.5",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "80.4",
+        "score_raw": "80.4",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "score_value": "40.7",
+        "score_raw": "40.7",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "high",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "score_value": "43.5",
+        "score_raw": "43.5",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "non-thinking",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "score_value": "46.3",
+        "score_raw": "46.3",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "high",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "score_value": "49",
+        "score_raw": "49.0",
+        "reported_at": "2026-04-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "deepseek"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://arxiv.org/abs/2606.19348v1",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424",
+            "checked_at": "2026-10-02T04:46:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

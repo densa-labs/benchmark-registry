@@ -1,0 +1,65 @@
+{
+  "target_registry_no": "60003",
+  "model": "NVIDIA Nemotron 3 Ultra 550B-A55B",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+      "review_status": "Entire relevant source inspected; second pass complete."
+    },
+    {
+      "url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf",
+      "review_status": "Entire relevant source inspected; second pass complete."
+    },
+    {
+      "url": "https://github.com/NVIDIA-NeMo/Evaluator/blob/main/examples/nemotron/nemotron-3-ultra/reproducibility.md",
+      "review_status": "Entire relevant source inspected; second pass complete."
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4/blob/main/safety.md",
+      "review_status": "Entire subcard inspected; no numeric model benchmark score reported."
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4/blob/main/explainability.md",
+      "review_status": "Entire subcard inspected; no numeric model benchmark score reported."
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4/blob/main/bias.md",
+      "review_status": "Entire subcard inspected; no numeric model benchmark score reported."
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4/blob/main/privacy.md",
+      "review_status": "Entire subcard inspected; no numeric model benchmark score reported."
+    }
+  ],
+  "completeness_totals_final": true,
+  "remaining_work": "Source audit complete: 101 observations = 95 individually unresolved + 6 deferred historical column/identity conflicts; zero pending or unexplained observations. No safely representable new result and no canonical correction was forced. All individual blockers retained in the evidence ledger.",
+  "visible_supported_results_recorded": 101,
+  "outcomes": {
+    "conflict_deferred": 6,
+    "unresolved": 95
+  },
+  "unexplained_source_visible_results": 0,
+  "completeness_second_pass": {
+    "every_evaluation_table": true,
+    "appendices": true,
+    "additional_benchmark_sections": true,
+    "all_images_captions_footnotes": true,
+    "reasoning_tool_configs": true,
+    "linked_supplements": true
+  },
+  "review_locations": {
+    "model_card": "Entire 1,107-line card; 22 NVFP4 score cells, neighboring BF16 identity, deployment and reasoning controls, dataset/evaluation sections, citation and every relevant link.",
+    "technical_report": "All 65 text pages; all 18 table and 17 figure captions cross-checked. Main capability tables and missed visual figures reviewed at printed pages 1, 2, 30, 31, 38, 39, 47, 49, 50 and 65. Appendix A.1 settings and A.2 scaffold matrices fully inspected.",
+    "supplements": "Full 42-line reproducibility guide; entire v0.2/v0.3 READMEs; nine linked evaluation YAML recipes; all four linked safety/explainability/bias/privacy subcards."
+  },
+  "exact_identity_review": "Canonical model release source identifies NVFP4 and canonical aliases are empty. Source explicitly distinguishes BF16, NVFP4 and Base artifacts. NVFP4 values are target candidates; historical BF16 values recorded as conflicts requiring identity/metadata review.",
+  "excluded_non_target_observations": [
+    "Competitor columns; separate Base BF16 checkpoint Table 2; intermediate teachers/student/warmup/SFT/RLVR/MOPD tables 3\u20135; intermediate-checkpoint quantization ablations Tables 13\u201314; separate Nemotron 3 Super Table 16.",
+    "BF16-only Table 10: 36 observations belong to separately released precision artifact, not target NVFP4. BF16 repeats in Table 18/card, reference columns in Table 17 and normalized IOI Figure 1 labels are not new target observations.",
+    "Unboosted MTP head column in Table 6 is a pre-release head variant, not released boosted head; competitor MTP columns excluded.",
+    "Architecture/data composition/training losses, MTP training infrastructure, fault percentages, container startup/PTQ timings, memory footprints and training dataset bias proportions are not released target-model capability benchmarks.",
+    "Repeated main scores in Figure 1/Table 18/HF card counted once. IOI 94.1% label is rounded normalization of 564.7/600. Final IMO-ProofBench 173/210 repeats Table 11. Unlabeled chart coordinates and asymptotic descriptive throughput claims were not digitized or counted as separate evaluations."
+  ]
+}

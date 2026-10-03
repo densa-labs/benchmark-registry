@@ -1,0 +1,79 @@
+{
+  "target_registry_no": "20004",
+  "model": "Claude Fable 5.1",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+      "reviewed": [
+        "Full capabilities \u00a7\u00a78.1\u20138.19 and Appendix9, physical pages167\u2013212, including all prose/footnotes. Relevant capability figures167,170,173,174,177\u2013179,181\u2013182,185\u2013191,196\u2013200 visually inspected.",
+        "Identity and methodology \u00a7\u00a71.4\u20131.5; complete Cyber \u00a7\u00a73.1\u20133.5, Safeguards \u00a7\u00a74.1\u20134.4 and Agentic safety \u00a7\u00a75.1\u20135.2; relevant Alignment intro/pilot/fallback \u00a7\u00a76.1\u20136.2,6.4.9 prose.",
+        "Rendered safeguard figures on physical pages53\u201355,57,63,71\u201372; DRACO effort figure179. Explicit numeric labels extracted; repeated child/suicide values merged.",
+        "Second pass: child/self-harm/disordered-eating tables65,67,69 visually checked; explicit identities in \u00a7\u00a76.2\u20136.7 and \u00a77 reviewed; Fable-only fallback figure121 verified; full Appendix9 pages206\u2013212 reviewed again.",
+        "All target-specific numeric labels across capability figures reconciled; MILU93.0% figure201 rechecked. Private red-team counts, pilot bounds and relative multi-agent latency retained explicitly."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "reviewed": [
+        "Entire release prose/table/captions/footnotes; four benchmark tabs selected and all five-effort point labels read.",
+        "Numeric partner quotes: Browserbase82%, Crosby57.0 (no percent sign), Samaya55.9%; stable suite versions unresolved.",
+        "Second pass: all partner quotes, case-study quantities, repeated safeguards comparisons and footnotes reconciled; repeated scores merge with original observations."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "reviewed": [
+        "Complete article and customer quotes; no model-specific benchmark results."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+      "reviewed": [
+        "Complete article/footnotes; Fable5-only85% claim excluded as separate-model evidence; Fable5.1 relative85% claim retained from its own launch."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+      "reviewed": [
+        "Full severity rubrics and Appendix hypothetical/historical examples reviewed; methodology examples are not Fable5.1 benchmark results."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "reviewed": [
+        "Complete article/footnotes; covers historical incidents and an experimental reward-hacked Opus-class model, not exact final Fable5.1 scored evaluation."
+      ],
+      "remaining": []
+    }
+  ],
+  "visible_supported_results_recorded": 211,
+  "outcomes": {
+    "unresolved": 180,
+    "ingested_new": 20,
+    "conflict": 10,
+    "already_present_identical": 1
+  },
+  "identity_exclusions": [
+    "\u00a73.3 expressly reports Mythos5.1 and explicitly reports no Fable5.1 cyber capability scores.",
+    "ArXivMath and \u00a78.19 life sciences expressly report Mythos5.1; no scores transferred to Fable5.1.",
+    "BBQ tables73\u201374 explicitly Mythos5.1; \u00a7\u00a76.3\u20136.7 explicitly Mythos5.1 exceptFablefallback\u00a76.4.9. \u00a77 welfare explicitlyMythos5.1.",
+    "Malicious-agent/agentic-influence scores in\u00a75.1 explicitlyMythos5.1 or helpful-only variants; no transfer to Fable5.1.",
+    "Launch molecular design/protein binders and genomics-kernel results explicitly Mythos5.1; only Fable5.1 Venus case-study quantities retained.",
+    "Pricing percentages, dataset sizes, prompt counts and anecdotal project durations are not benchmark performance results. Unlabeled continuous curves do not establish exact numeric coordinates."
+  ],
+  "unexplained_source_visible_results": 0,
+  "reconciliation": {
+    "total": 211,
+    "ingested_new": 20,
+    "already_present_identical": 1,
+    "valid_conflicts_deferred": 10,
+    "unresolved_with_explicit_reason": 180
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+  "source_title": "Introducing Claude Sonnet 5.5",
+  "source_publisher": "Anthropic",
+  "source_publication_date": "2026-09-28",
+  "inspection": "All four rendered tabs reviewed in browser; exact accessible DOM labels independently match cached HTML.",
+  "panels": [
+    {
+      "benchmark": "Terminal-Bench 4.0",
+      "labels": [
+        "Sonnet 5.5 \u00b7 Low: 20.0% $0.76",
+        "Sonnet 5.5 \u00b7 Med: 28.8% $0.83",
+        "Sonnet 5.5 \u00b7 High: 43.0% $1.94",
+        "Sonnet 5.5 \u00b7 Xhigh: 61.5% $5.30",
+        "Sonnet 5.5 \u00b7 Max: 70.6% $12.54"
+      ]
+    },
+    {
+      "benchmark": "FrontierCode v1.1, main set",
+      "labels": [
+        "Sonnet 5.5 \u00b7 Low: 29.3% $0.19",
+        "Sonnet 5.5 \u00b7 Med: 36.5% $0.24",
+        "Sonnet 5.5 \u00b7 High: 49.4% $0.42",
+        "Sonnet 5.5 \u00b7 Xhigh: 52.1% $1.59",
+        "Sonnet 5.5 \u00b7 Max: 46.2% $20.78"
+      ]
+    },
+    {
+      "benchmark": "CursorBench 4.0",
+      "labels": [
+        "Sonnet 5.5 \u00b7 Low: 35.8% $0.50",
+        "Sonnet 5.5 \u00b7 Med: 39.2% $0.70",
+        "Sonnet 5.5 \u00b7 High: 47.8% $1.67",
+        "Sonnet 5.5 \u00b7 Xhigh: 53.1% $3.88",
+        "Sonnet 5.5 \u00b7 Max: 55.5% $9.67"
+      ]
+    },
+    {
+      "benchmark": "AA-Briefcase v1.1",
+      "labels": [
+        "Sonnet 5.5 \u00b7 Low: 1264.0 $0.87",
+        "Sonnet 5.5 \u00b7 Med: 1461.0 $1.64",
+        "Sonnet 5.5 \u00b7 High: 1634.0 $3.95",
+        "Sonnet 5.5 \u00b7 Xhigh: 1746.0 $9.63",
+        "Sonnet 5.5 \u00b7 Max: 1811.0 $29.19"
+      ]
+    }
+  ]
+}

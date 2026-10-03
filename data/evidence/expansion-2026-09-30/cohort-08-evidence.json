@@ -1,0 +1,102 @@
+{
+  "target_registry_no": "10015",
+  "candidates": [
+    {
+      "observation_id": "sol61-057",
+      "target_registry_no": "10015",
+      "model": "GPT-6.1 Sol",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "source_title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "source_publisher": "OpenAI",
+      "source_publication_date": "2026-09-29",
+      "reported_at": "2026-09-29",
+      "benchmark_as_displayed": "Biological capability evaluations: Critical threshold \u2014 SHP2 Protein Function Prediction",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Mean R\u00b2 across three assay datasets",
+      "displayed_score": "0.332",
+      "normalized_stored_score": "0.332",
+      "reasoning_level": null,
+      "configuration": "",
+      "location": "Table 13: Biological capability evaluations: Critical threshold; target column; row SHP2 Protein Function Prediction",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Astra \u00a710.1.1.2 explicitly introduces three new evaluations using unpublished collaborator data. Each named evaluation defines one quality metric in its own methodology section, and September 3 is the first public introduction of the original suite. The Sol release points to this methodology and reports one unambiguous own-model score; the helpful-only asterisk applies only to the Astra comparison column. Sol reasoning effort is unspecified. The composite-score formula is not disclosed, so no equivalence, component interpretation, percentage scale or bounds is asserted.",
+      "ancillary_metadata": {},
+      "canonical_benchmark_slug": "shp2-protein-function-prediction",
+      "canonical_version": "Original",
+      "metric_key": "shp2-mean-r-squared",
+      "normalization": "None; retain the original numeric scale, with no percentage rescaling. Bounds are unset because the source does not establish them.",
+      "benchmark_identity_sources": [
+        "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical"
+      ],
+      "published_cohort": "08"
+    },
+    {
+      "observation_id": "sol61-058",
+      "target_registry_no": "10015",
+      "model": "GPT-6.1 Sol",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "source_title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "source_publisher": "OpenAI",
+      "source_publication_date": "2026-09-29",
+      "reported_at": "2026-09-29",
+      "benchmark_as_displayed": "Biological capability evaluations: Critical threshold \u2014 Coronavirus--ACE2 Cell-Entry Screen",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Composite reward",
+      "displayed_score": "0.423",
+      "normalized_stored_score": "0.423",
+      "reasoning_level": null,
+      "configuration": "",
+      "location": "Table 13: Biological capability evaluations: Critical threshold; target column; row Coronavirus--ACE2 Cell-Entry Screen",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Astra \u00a710.1.1.2 explicitly introduces three new evaluations using unpublished collaborator data. Each named evaluation defines one quality metric in its own methodology section, and September 3 is the first public introduction of the original suite. The Sol release points to this methodology and reports one unambiguous own-model score; the helpful-only asterisk applies only to the Astra comparison column. Sol reasoning effort is unspecified. The composite-score formula is not disclosed, so no equivalence, component interpretation, percentage scale or bounds is asserted.",
+      "ancillary_metadata": {},
+      "canonical_benchmark_slug": "coronavirus-ace2-cell-entry-screen",
+      "canonical_version": "Original",
+      "metric_key": "coronavirus-ace2-composite-score",
+      "normalization": "None; retain the original numeric scale, with no percentage rescaling. Bounds are unset because the source does not establish them.",
+      "benchmark_identity_sources": [
+        "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical"
+      ],
+      "published_cohort": "08"
+    },
+    {
+      "observation_id": "sol61-059",
+      "target_registry_no": "10015",
+      "model": "GPT-6.1 Sol",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "source_title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "source_publisher": "OpenAI",
+      "source_publication_date": "2026-09-29",
+      "reported_at": "2026-09-29",
+      "benchmark_as_displayed": "Biological capability evaluations: Critical threshold \u2014 Phage--plasmid Co-evolution",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Negative log-likelihood (lower is better)",
+      "displayed_score": "12.946",
+      "normalized_stored_score": "12.946",
+      "reasoning_level": null,
+      "configuration": "",
+      "location": "Table 13: Biological capability evaluations: Critical threshold; target column; row Phage--plasmid Co-evolution",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Astra \u00a710.1.1.2 explicitly introduces three new evaluations using unpublished collaborator data. Each named evaluation defines one quality metric in its own methodology section, and September 3 is the first public introduction of the original suite. The Sol release points to this methodology and reports one unambiguous own-model score; the helpful-only asterisk applies only to the Astra comparison column. Sol reasoning effort is unspecified. The composite-score formula is not disclosed, so no equivalence, component interpretation, percentage scale or bounds is asserted.",
+      "ancillary_metadata": {},
+      "canonical_benchmark_slug": "phage-plasmid-co-evolution",
+      "canonical_version": "Original",
+      "metric_key": "phage-plasmid-negative-log-likelihood",
+      "normalization": "None; retain the original numeric scale, with no percentage rescaling. Bounds are unset because the source does not establish them.",
+      "benchmark_identity_sources": [
+        "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical"
+      ],
+      "published_cohort": "08"
+    }
+  ],
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "benchmark_metadata": {
+    "first_public_introduction": "2026-09-03",
+    "version_basis": "Original refers to the explicitly introduced initial three evaluation suites in Astra \u00a710.1.1.2; no subsequent version or dataset replacement is reported in the referenced Sol addendum.",
+    "release_date_basis": "Visible Published September 3, 2026 plus explicit introducing three new evaluations statement. This is first public definition, not an inferred unpublished experimental-data creation date.",
+    "developer_run_evaluator": "OpenAI; scientific data providers are not misrepresented as independently evaluating the Sol run."
+  }
+}

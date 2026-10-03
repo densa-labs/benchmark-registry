@@ -1,0 +1,110 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 20,
+  "models": [
+    {
+      "registry_no": "20004",
+      "before": 9,
+      "added": 20,
+      "after": 29,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 8,
+  "companies_verified": [
+    "anthropic"
+  ],
+  "exact_results": [
+    {
+      "result_key": "6afc8cc003d80d5244dcff78b24e09cea295b0201f2f18325d15baba90bbddb0",
+      "eligible": false
+    },
+    {
+      "result_key": "70ee09f22352db0b544a4ee14ab50b50b64aa27fd831814efcca85819b382bce",
+      "eligible": false
+    },
+    {
+      "result_key": "a870f752384016f25153cac2aecd22b24ec9b97819ca3e24c36686728cc55626",
+      "eligible": false
+    },
+    {
+      "result_key": "cff136a01eae94de246f207f87650d503885aec513a7d18b720e659140d7931e",
+      "eligible": false
+    },
+    {
+      "result_key": "0897ff6cec9fa3d229a844a1a7fd03389437626324b89e95dca20c99af73c63e",
+      "eligible": true
+    },
+    {
+      "result_key": "5ae2a2399a570d376c5c92366078c224650584801abcfa0c6c51851c375f2a09",
+      "eligible": true
+    },
+    {
+      "result_key": "039594aecfd117dcabe589588307919bbdf17e18d96cb333605cfc6828f477bc",
+      "eligible": false
+    },
+    {
+      "result_key": "24d94dac21269b0728116e10c7bb9c609f6fc385fafc19c6f928587f313c2d64",
+      "eligible": false
+    },
+    {
+      "result_key": "40e37bc59a065cae992f7d643fa2a2331cda4d57007b835b5491e0dc4548845c",
+      "eligible": false
+    },
+    {
+      "result_key": "e28078ec2d41bc1de6cb5b9d673e13ec5324f941f2e36bf73f9ba8b5d58fa4c2",
+      "eligible": false
+    },
+    {
+      "result_key": "7e59c7b5b331f0ce2cea869f891ff15d5890a918f08786aba7854c60f8767f23",
+      "eligible": true
+    },
+    {
+      "result_key": "d531272181ee047cd6645a4b158fa2074264aea6842c54ed261e443c794a7294",
+      "eligible": true
+    },
+    {
+      "result_key": "386aa74c1e5d6797af43597a91ab207f013efd1ba6dcf4d29b66ed8d45b5e576",
+      "eligible": false
+    },
+    {
+      "result_key": "5702b2246348d8dc502aa6dd0a082b78cf377655d41877fbdb0483fb24caaf9b",
+      "eligible": false
+    },
+    {
+      "result_key": "ba52869d4855dc50102b4ab7fc4cb33eae65a298c09eff751a4943eacaf45a2a",
+      "eligible": false
+    },
+    {
+      "result_key": "f85de763e157ddb98dc0ed34070974ccfb5568ef91d7c77ff5740d628c2c1bad",
+      "eligible": false
+    },
+    {
+      "result_key": "458f524db32ad0557718882006d3853d3ac4c56e7029fa9f43e9673b56dedae7",
+      "eligible": false
+    },
+    {
+      "result_key": "7cff7f463bf992077e0af44ee8885c52a7be24196c3356476b8fdcf4ed180358",
+      "eligible": false
+    },
+    {
+      "result_key": "98545df113a0548211164f51b55c4e516f7e1e2a87ed0e0251aadc3f7a8ccd93",
+      "eligible": false
+    },
+    {
+      "result_key": "a16cc68171bc4e7678d6b3e098af7474d4821733827928e988b377b6ed6a781b",
+      "eligible": false
+    }
+  ],
+  "stats": {
+    "benchmark_results": 801,
+    "models": 94,
+    "benchmarks": 66,
+    "versions": 117
+  },
+  "sitemap_count": 883,
+  "published_generations": [
+    "14253904893549a7a51de5e969e8cde9"
+  ]
+}

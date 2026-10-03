@@ -1,0 +1,24 @@
+{
+  "environment": "staging",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "916da121af2d3dcecfefe2c5d9f73ca85b7b565ee0022813ef4db4faee9c5326",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "2c2e3d870c58da94c8f1bc779dae369ffb7a0f3dccaf12ad58d5e96b628184c7",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "2f034316c8e206e93a7dd8ddad0902de7e0b646f903c25754abfa6f9faad70c2",
+      "message": "result is valid"
+    }
+  ]
+}

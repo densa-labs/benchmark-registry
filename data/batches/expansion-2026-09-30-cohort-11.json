@@ -1,0 +1,858 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Embodied Reasoning Question Answer",
+        "slug": "erqa",
+        "source_url": "https://github.com/embodiedreasoning/ERQA",
+        "source_checked_at": "2026-10-02T00:49:35Z",
+        "aliases": [
+          {
+            "name": "ERQA",
+            "source_url": "https://github.com/embodiedreasoning/ERQA",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Multiple-choice accuracy",
+            "key": "erqa-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/embodiedreasoning/ERQA",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "No tools",
+            "version_slug": "no-tools",
+            "release_at": "2026-04-08",
+            "release_precision": "date",
+            "metric_key": "erqa-accuracy",
+            "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "google-deepmind"
+            ]
+          },
+          {
+            "version": "With Python",
+            "version_slug": "with-python",
+            "release_at": "2026-04-08",
+            "release_precision": "date",
+            "metric_key": "erqa-accuracy",
+            "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "google-deepmind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "ScreenSpot-Pro",
+        "slug": "screenspot-pro",
+        "source_url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+        "source_checked_at": "2026-10-02T00:49:35Z",
+        "aliases": [
+          {
+            "name": "ScreenSpot Pro",
+            "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "ScreenSpot-Pro Authors",
+            "key": "screenspot-pro-authors",
+            "source_url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Point-in-box accuracy",
+            "key": "screenspot-pro-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "No tools",
+            "version_slug": "no-tools",
+            "release_at": "2026-04-08",
+            "release_precision": "date",
+            "metric_key": "screenspot-pro-accuracy",
+            "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "screenspot-pro-authors"
+            ]
+          },
+          {
+            "version": "With Python",
+            "version_slug": "with-python",
+            "release_at": "2026-04-08",
+            "release_precision": "date",
+            "metric_key": "screenspot-pro-accuracy",
+            "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "screenspot-pro-authors"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "MedXpertQA",
+        "slug": "medxpertqa",
+        "source_url": "https://arxiv.org/abs/2501.18362",
+        "source_checked_at": "2026-09-24T00:00:00Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "MedXpertQA Authors",
+            "key": "medxpertqa-authors",
+            "source_url": "https://arxiv.org/abs/2501.18362",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Text multiple-choice accuracy",
+            "key": "medxpertqa-text-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2501.18362",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Text",
+            "version_slug": "text",
+            "release_at": "2025-01-30",
+            "release_precision": "date",
+            "metric_key": "medxpertqa-text-accuracy",
+            "source_url": "https://arxiv.org/abs/2501.18362",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "medxpertqa-authors"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "International Physics Olympiad",
+        "slug": "ipho",
+        "source_url": "https://www.ipho2025.fr/sujets-officiels-ipho-france-2025",
+        "source_checked_at": "2026-10-02T00:49:35Z",
+        "aliases": [
+          {
+            "name": "IPhO",
+            "source_url": "https://www.ipho2025.fr/sujets-officiels-ipho-france-2025",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "International Physics Olympiad",
+            "key": "international-physics-olympiad",
+            "source_url": "https://www.ipho2025.fr/sujets-officiels-ipho-france-2025",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Percentage of theoretical-exam rubric points",
+            "key": "ipho-theory-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://www.ipho2025.fr/sujets-officiels-ipho-france-2025",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "2025 Theory",
+            "version_slug": "2025-theory",
+            "release_at": "2025-07-21",
+            "release_precision": "date",
+            "metric_key": "ipho-theory-score",
+            "source_url": "https://www.ipho2025.fr/photo-gallery",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "international-physics-olympiad"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "FrontierScience",
+        "slug": "frontierscience",
+        "source_url": "https://openai.com/index/frontierscience/",
+        "source_checked_at": "2026-10-02T00:49:35Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Research accuracy (at least 7/10 rubric points)",
+            "key": "frontierscience-research-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://openai.com/index/frontierscience/",
+            "source_checked_at": "2026-10-02T00:49:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Research",
+            "version_slug": "research",
+            "release_at": "2025-12-16",
+            "release_precision": "date",
+            "metric_key": "frontierscience-research-accuracy",
+            "source_url": "https://openai.com/index/frontierscience/",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SWE-bench",
+        "slug": "swe-bench",
+        "source_url": "https://www.swebench.com/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Verified \u2014 Muse Spark corrected tests",
+            "version_slug": "verified-muse-spark-corrected-tests",
+            "release_at": "2026-04-08",
+            "release_precision": "date",
+            "metric_key": "swe-bench-resolved",
+            "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "source_checked_at": "2026-10-02T00:49:35Z",
+            "evaluator_keys": [
+              "meta"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "86.4",
+        "score_raw": "86.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "88.9",
+        "score_raw": "88.9%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "80.4",
+        "score_raw": "80.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With Python",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "81.3",
+        "score_raw": "81.3%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "erqa",
+        "benchmark_version": "No tools",
+        "metric_key": "erqa-accuracy",
+        "score_value": "64.7",
+        "score_raw": "64.7%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "erqa",
+        "benchmark_version": "With Python",
+        "metric_key": "erqa-accuracy",
+        "score_value": "67",
+        "score_raw": "67.0%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "screenspot-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "screenspot-pro-accuracy",
+        "score_value": "72.2",
+        "score_raw": "72.2%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "screenspot-pro",
+        "benchmark_version": "With Python",
+        "metric_key": "screenspot-pro-accuracy",
+        "score_value": "84.1",
+        "score_raw": "84.1%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "42.8",
+        "score_raw": "42.8%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "50.4",
+        "score_raw": "50.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "89.5",
+        "score_raw": "89.5%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "healthbench",
+        "benchmark_version": "HealthBench Hard",
+        "metric_key": "healthbench-score",
+        "score_value": "42.8",
+        "score_raw": "42.8%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "medxpertqa",
+        "benchmark_version": "Text",
+        "metric_key": "medxpertqa-text-accuracy",
+        "score_value": "52.6",
+        "score_raw": "52.6%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "medxpertqa",
+        "benchmark_version": "MM",
+        "metric_key": "medxpertqa-mm-accuracy",
+        "score_value": "78.4",
+        "score_raw": "78.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "deepsearchqa",
+        "benchmark_version": "900-prompt set",
+        "metric_key": "deepsearchqa-f1",
+        "score_value": "74.8",
+        "score_raw": "74.8%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified \u2014 Muse Spark corrected tests",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "77.4",
+        "score_raw": "77.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "52.4",
+        "score_raw": "52.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "59",
+        "score_raw": "59.0%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "contemplating",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "50.2",
+        "score_raw": "50.2%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "contemplating",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "58.4",
+        "score_raw": "58.4%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "contemplating",
+        "benchmark_slug": "ipho",
+        "benchmark_version": "2025 Theory",
+        "metric_key": "ipho-theory-score",
+        "score_value": "82.6",
+        "score_raw": "82.6%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "contemplating",
+        "benchmark_slug": "frontierscience",
+        "benchmark_version": "Research",
+        "metric_key": "frontierscience-research-accuracy",
+        "score_value": "38.3",
+        "score_raw": "38.3%",
+        "reported_at": "2026-04-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "cybergym",
+        "benchmark_version": "Original",
+        "metric_key": "cybergym-success",
+        "score_value": "43.5",
+        "score_raw": "43.5%",
+        "reported_at": "2026-05-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "meta"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/",
+            "checked_at": "2026-10-02T00:49:35Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

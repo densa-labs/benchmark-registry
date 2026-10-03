@@ -1,0 +1,185 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "CharXiv",
+        "slug": "charxiv",
+        "source_url": "https://arxiv.org/abs/2406.18521",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Reasoning \u2014 Search and code execution",
+            "version_slug": "reasoning-search-code-execution",
+            "release_at": "2026-07-21",
+            "release_precision": "date",
+            "metric_key": "charxiv-accuracy",
+            "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+            "source_checked_at": "2026-10-03T10:16:56Z",
+            "evaluator_keys": [
+              "google-deepmind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Search and code execution",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "89.4",
+        "score_raw": "89.4%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Search and code execution",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "84.9",
+        "score_raw": "84.9%",
+        "reported_at": "2026-07-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30010",
+        "reasoning_level": "",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Search and code execution",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "88.7",
+        "score_raw": "88.7%",
+        "reported_at": "2026-08-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30010",
+        "reasoning_level": "",
+        "benchmark_slug": "lvbench",
+        "benchmark_version": "1024 frames \u2014 Static",
+        "metric_key": "lvbench-accuracy",
+        "score_value": "85.4",
+        "score_raw": "85.4%",
+        "reported_at": "2026-08-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "",
+        "benchmark_slug": "lvbench",
+        "benchmark_version": "1024 frames \u2014 Static",
+        "metric_key": "lvbench-accuracy",
+        "score_value": "84.2",
+        "score_raw": "84.2%",
+        "reported_at": "2026-08-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": true
+          },
+          {
+            "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+            "checked_at": "2026-10-03T10:16:56Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

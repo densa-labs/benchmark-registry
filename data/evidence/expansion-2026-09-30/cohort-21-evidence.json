@@ -1,0 +1,59 @@
+{
+  "pass": "expansion-2026-09-30",
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "candidates": [
+    {
+      "target_registry_no": "40001",
+      "model": "Grok 4.5",
+      "source_url": "https://media.x.ai/v1/website/4p5-5184fdf9.pdf",
+      "source_title": "Grok 4.5 Model Card",
+      "source_publisher": "SpaceXAI",
+      "source_publication_date": "2026-07-14",
+      "source_revision_date": "2026-07-20",
+      "reported_at": "2026-07-20",
+      "benchmark_as_displayed": "SWE-Bench Multilingual",
+      "version_as_displayed": "",
+      "displayed_score": "78.0",
+      "normalized_stored_score": "78",
+      "reasoning_level": "high",
+      "configuration": "fixed scaffold; Cursor-linked results",
+      "location": "PDF physical page 8; Grok 4.5 (high) row",
+      "evaluator_as_displayed": "cursor",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Controlled ingestion and public verification passed in both environments. The primary Cursor co-developer card explicitly establishes evaluator and high effort; other citations remain research evidence.",
+      "observation_id": "grok-observation-004",
+      "additional_evidence": [
+        {
+          "url": "https://cursor.com/resources/grok-4-5-model-card.pdf",
+          "title": "Grok 4.5 Model Card (Cursor)",
+          "publisher": "Cursor",
+          "publication_date": "2026-07-14",
+          "location": "Physical page 8, section 2.5, Grok 4.5 (high) 78.0%; footnote explicitly identifies Cursor runs"
+        },
+        {
+          "url": "https://cursor.com/blog/grok-4-5",
+          "title": "Introducing Grok 4.5",
+          "publisher": "Cursor",
+          "publication_date": "2026-07-08",
+          "location": "Main benchmark image; SWE-Bench Multilingual row, Grok 4.5 column 78.0%; no effort label in image"
+        }
+      ],
+      "canonical_benchmark_slug": "swe-bench",
+      "canonical_benchmark_version": "Multilingual",
+      "canonical_metric_key": "swe-bench-resolved",
+      "metric_as_displayed": "Resolve rate (%)",
+      "reconciliation_key_fields": [
+        "target_registry_no",
+        "benchmark_as_displayed",
+        "version_as_displayed",
+        "metric_as_displayed",
+        "displayed_score",
+        "reasoning_level"
+      ],
+      "published_cohort": "21",
+      "candidate_primary_source_url": "https://cursor.com/resources/grok-4-5-model-card.pdf",
+      "candidate_reported_at": "2026-07-14"
+    }
+  ],
+  "normalization": "78.0% stored as canonical decimal 78 on existing percent metric; no scale conversion. Card explicitly supplies high effort and Cursor evaluator. Fixed scaffold detail retained in research provenance, with no unsupported standard/strict version selection."
+}

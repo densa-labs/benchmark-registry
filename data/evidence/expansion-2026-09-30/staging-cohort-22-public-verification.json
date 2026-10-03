@@ -1,0 +1,69 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 1,
+  "models": [
+    {
+      "registry_no": "35001",
+      "before": 8,
+      "added": 0,
+      "after": 8,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "35002",
+      "before": 8,
+      "added": 0,
+      "after": 8,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "35003",
+      "before": 8,
+      "added": 0,
+      "after": 8,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "35004",
+      "before": 8,
+      "added": 0,
+      "after": 8,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "35005",
+      "before": 8,
+      "added": 1,
+      "after": 9,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 1,
+  "companies_verified": [
+    "google-deepmind"
+  ],
+  "exact_results": [
+    {
+      "result_key": "80e989dfcbf873bbfc2c465eee33549ac4ba350c144cc02ca052f3561f3c1312",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 915,
+    "models": 94,
+    "benchmarks": 72,
+    "versions": 129
+  },
+  "sitemap_count": 932,
+  "published_generations": [
+    "f502a76a1c0c4a64aacb417f78addd86"
+  ],
+  "search_checks": [
+    {
+      "query": "MMMLU",
+      "benchmark_slug": "mmmlu",
+      "status": "PASS"
+    }
+  ]
+}

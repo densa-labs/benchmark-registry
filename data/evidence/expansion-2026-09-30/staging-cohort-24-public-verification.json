@@ -1,0 +1,83 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 5,
+  "models": [
+    {
+      "registry_no": "30004",
+      "before": 8,
+      "added": 0,
+      "after": 8,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "30006",
+      "before": 8,
+      "added": 1,
+      "after": 9,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "30007",
+      "before": 5,
+      "added": 2,
+      "after": 7,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "30010",
+      "before": 6,
+      "added": 2,
+      "after": 8,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 2,
+  "companies_verified": [
+    "google-deepmind"
+  ],
+  "exact_results": [
+    {
+      "result_key": "655ae371f8f2908e8cdffbb9878dc479f816abf06bfe79eb7cdd06fc8f5f3a1e",
+      "eligible": true
+    },
+    {
+      "result_key": "64c2f04fd3cd7617d362d647017b3fddb48b51e51f4e868090ccea7ee3fd8e6c",
+      "eligible": true
+    },
+    {
+      "result_key": "7dae32678a0f8ccc3f4977e738c30c3128c917508021196ebecbcc5cfaede976",
+      "eligible": true
+    },
+    {
+      "result_key": "dd34f0204cdf210d61ff4527766fb558daa1d441ac361bd6e1eef40e43cb0cfa",
+      "eligible": true
+    },
+    {
+      "result_key": "750062ce1c8f880484bea52ffa478ae83be8b872e0b174aaec9acae54c765d7d",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 925,
+    "models": 94,
+    "benchmarks": 73,
+    "versions": 133
+  },
+  "sitemap_count": 947,
+  "published_generations": [
+    "7d8949461ad6415b85743aac289d58d5"
+  ],
+  "search_checks": [
+    {
+      "query": "CharXiv",
+      "benchmark_slug": "charxiv",
+      "status": "PASS"
+    },
+    {
+      "query": "LVBench",
+      "benchmark_slug": "lvbench",
+      "status": "PASS"
+    }
+  ]
+}

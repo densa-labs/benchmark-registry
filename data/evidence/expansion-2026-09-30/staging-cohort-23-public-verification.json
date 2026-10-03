@@ -1,0 +1,62 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 5,
+  "models": [
+    {
+      "registry_no": "120003",
+      "before": 11,
+      "added": 5,
+      "after": 16,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 5,
+  "companies_verified": [
+    "moonshot-ai"
+  ],
+  "exact_results": [
+    {
+      "result_key": "1e7d03c66c824fe8c96a60d2ad8a8c469e5587e776bcaec63f27f75e75c999da",
+      "eligible": true
+    },
+    {
+      "result_key": "9533dc65f2412fd59ed8fda7e0ec5687b9293f2ecd8d205a465bf2b6b6d34826",
+      "eligible": true
+    },
+    {
+      "result_key": "3f9602d021f19f3e5e7d8548a150d2c7d57c496604e25086468a152376cd1d64",
+      "eligible": true
+    },
+    {
+      "result_key": "494ede846876d200de4b7e9573815336196f4c12edfa84c4da3bc3b8eabd279c",
+      "eligible": true
+    },
+    {
+      "result_key": "3d76ee1a60cda57192c849fb8b3f1a43d73b6477323a539c9848f377158b4cb0",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 920,
+    "models": 94,
+    "benchmarks": 73,
+    "versions": 132
+  },
+  "sitemap_count": 941,
+  "published_generations": [
+    "3ada927aa51b4d01a65ca91749d3ae49"
+  ],
+  "search_checks": [
+    {
+      "query": "Video-MME",
+      "benchmark_slug": "video-mme",
+      "status": "PASS"
+    },
+    {
+      "query": "VideoMME",
+      "benchmark_slug": "video-mme",
+      "status": "PASS"
+    }
+  ]
+}

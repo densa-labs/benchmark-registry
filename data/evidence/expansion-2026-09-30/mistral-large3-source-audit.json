@@ -1,0 +1,47 @@
+{
+  "registry_no": "90001",
+  "model": "Mistral Large 3",
+  "status": "IN_PROGRESS",
+  "selected_model_card_exhaustively_inspected": "YES",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "visible_supported_records": 9,
+  "already_present_identical": 0,
+  "conflicts": 0,
+  "new_candidates": 0,
+  "unresolved": 9,
+  "unexplained_remainder": 0,
+  "reviewed_sections": [
+    "Complete model-card benchmark section and every figure",
+    "Model-card remaining sections including usage details; no additional evaluation tables",
+    "Full official launch blog text and target-model figures",
+    "Official model documentation"
+  ],
+  "second_pass": [
+    "All model-card figures reinspected with row/column headers and footnotes",
+    "Repeated own-model values reconciled; competitor-only rows excluded",
+    "No benchmark skipped for absence from Registry"
+  ],
+  "remaining_work": [
+    "Linked official technical governance material and any evaluation supplements need source-access review.",
+    "Resolve or explicitly close candidate mapping decisions before whole-model completeness."
+  ],
+  "exclusions": [
+    {
+      "reason": "First figure explicitly labeled Base Model Benchmark Comparison; separately released base artifact is not the Registry instruct target.",
+      "scores": {
+        "MMLU (8-lang average)": "85.5",
+        "GPQA Diamond (5-shot, no CoT)": "43.9",
+        "SimpleQA exact match": "23.8",
+        "AMC": "52.0",
+        "LiveCodeBench (no CoT)": "34.4"
+      }
+    },
+    {
+      "reason": "Last launch GPQA figure contains Ministral and competitor models only, no Mistral Large 3 score."
+    },
+    {
+      "reason": "HF page community evaluation panel GPQA 67.17 is not a developer-authored model-card result and is outside this official-developer pass."
+    }
+  ]
+}

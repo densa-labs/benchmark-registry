@@ -1,0 +1,29 @@
+{
+  "environment": "production",
+  "status": "PUBLISHED",
+  "objects": 317,
+  "bytes": 3719005,
+  "canonicalUrls": 924,
+  "approvedExact": 612,
+  "ambiguous": 301,
+  "generation": "a3115c54cd814647b0c775b41e24293e",
+  "canonicalRevision": "94d89e390e9fef370999ad6cba1cb69d",
+  "rebuilt": [
+    "company:spacexai",
+    "model:40001",
+    "search-relationships",
+    "stats",
+    "version:swe-bench:multilingual",
+    "home-panels",
+    "inventory"
+  ],
+  "removed": [],
+  "objectWrites": 7,
+  "manifestWrites": 1,
+  "pointerWrites": 2,
+  "d1Queries": 27,
+  "d1RowsRead": 7470,
+  "d1RowsWritten": 2,
+  "kvReads": 359,
+  "kvWrites": 10
+}

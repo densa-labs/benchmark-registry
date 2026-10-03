@@ -1,0 +1,4585 @@
+[
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "Terminal-bench 2.1",
+    "version_as_displayed": "Terminus 2",
+    "configuration": "Terminus 2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "76.2%",
+    "normalized_stored_score": "76.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 1, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "terminal-bench",
+      "2.1",
+      "terminal-bench-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      0,
+      1,
+      2,
+      57,
+      58,
+      59
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.5 column",
+        "displayed_score": "76.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.5 column",
+        "displayed_score": "76.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.5 column",
+        "displayed_score": "76.2%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.5 column",
+        "displayed_score": "76.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.5 column",
+        "displayed_score": "76.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.5 column",
+        "displayed_score": "76.2%"
+      }
+    ],
+    "displayed_scores": [
+      "76.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "SWE-Bench Pro (Public)",
+    "version_as_displayed": "Public",
+    "configuration": "Public",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "55.1%",
+    "normalized_stored_score": "55.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 2, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "swe-bench-pro",
+      "Public",
+      "swe-bench-pro-resolved"
+    ],
+    "ingestion_outcome": "conflict_deferred",
+    "explicit_reason": "Current HTML and July comparison report55.1, but full May model-card PDF and methodology PDF visibly report53.9. Same logical Public evaluation lacks correction/run explanation; preserve both, no overwrite.",
+    "observation_indices": [
+      3,
+      4,
+      5,
+      45,
+      46,
+      47
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.5 column",
+        "displayed_score": "55.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.5 column",
+        "displayed_score": "53.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.5 column",
+        "displayed_score": "53.9%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.5 column",
+        "displayed_score": "55.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.5 column",
+        "displayed_score": "55.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.5 column",
+        "displayed_score": "55.1%"
+      }
+    ],
+    "displayed_scores": [
+      "55.1%",
+      "53.9%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "MCP Atlas",
+    "version_as_displayed": "Public leaderboard",
+    "configuration": "Public leaderboard",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "83.6%",
+    "normalized_stored_score": "83.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 3, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      6,
+      7,
+      8
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.5 column",
+        "displayed_score": "83.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.5 column",
+        "displayed_score": "83.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.5 column",
+        "displayed_score": "83.6%"
+      }
+    ],
+    "displayed_scores": [
+      "83.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "Toolathlon",
+    "version_as_displayed": "Original",
+    "configuration": "Original",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "56.5%",
+    "normalized_stored_score": "56.5",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "toolathlon",
+      "Original",
+      "toolathlon-task-success"
+    ],
+    "ingestion_outcome": "conflict_deferred",
+    "explicit_reason": "Methodology explicitly credits benchmark authors HKUST, while existing evaluator set credits Google. Guarded evaluator/source correction required and unsupported here; no duplicate added.",
+    "observation_indices": [
+      9,
+      10,
+      11
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.5 column",
+        "displayed_score": "56.5%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.5 column",
+        "displayed_score": "56.5%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.5 column",
+        "displayed_score": "56.5%"
+      }
+    ],
+    "displayed_scores": [
+      "56.5%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "OSWorld-Verified",
+    "version_as_displayed": "Verified",
+    "configuration": "Verified",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "78.4%",
+    "normalized_stored_score": "78.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 5, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "osworld",
+      "Verified",
+      "osworld-verified-resolved"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      12,
+      13,
+      14,
+      75,
+      76,
+      77
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.5 column",
+        "displayed_score": "78.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.5 column",
+        "displayed_score": "78.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.5 column",
+        "displayed_score": "78.4%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.5 column",
+        "displayed_score": "78.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.5 column",
+        "displayed_score": "78.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.5 column",
+        "displayed_score": "78.4%"
+      }
+    ],
+    "displayed_scores": [
+      "78.4%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "Finance Agent v2",
+    "version_as_displayed": "v2",
+    "configuration": "v2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "57.9%",
+    "normalized_stored_score": "57.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 6, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      15,
+      16,
+      17
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.5 column",
+        "displayed_score": "57.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.5 column",
+        "displayed_score": "57.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.5 column",
+        "displayed_score": "57.9%"
+      }
+    ],
+    "displayed_scores": [
+      "57.9%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "GDPval-AA",
+    "version_as_displayed": "Original leaderboard",
+    "configuration": "Original leaderboard",
+    "metric": "Elo",
+    "displayed_score": "1656",
+    "normalized_stored_score": "1656",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 7, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      18,
+      19,
+      20
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.5 column",
+        "displayed_score": "1656"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.5 column",
+        "displayed_score": "1656"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.5 column",
+        "displayed_score": "1656"
+      }
+    ],
+    "displayed_scores": [
+      "1656"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "No tools",
+    "configuration": "No tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "84.2%",
+    "normalized_stored_score": "84.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — No tools",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      21,
+      22,
+      23,
+      81,
+      82,
+      83
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.5 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.5 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.5 column",
+        "displayed_score": "84.2%"
+      }
+    ],
+    "displayed_scores": [
+      "84.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "MMMU-Pro",
+    "version_as_displayed": "Standard/Vision mean; no tools",
+    "configuration": "Standard/Vision mean; no tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "83.6%",
+    "normalized_stored_score": "83.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 9, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "mmmu-pro",
+      "No tools",
+      "mmmu-pro-accuracy"
+    ],
+    "ingestion_outcome": "conflict_deferred",
+    "explicit_reason": "Registry generic No tools edition does not preserve Google average across Standard10-option and Vision settings. Guarded metadata correction unsupported; do not duplicate or silently conflate.",
+    "observation_indices": [
+      24,
+      25,
+      26
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.5 column",
+        "displayed_score": "83.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.5 column",
+        "displayed_score": "83.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.5 column",
+        "displayed_score": "83.6%"
+      }
+    ],
+    "displayed_scores": [
+      "83.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "Blueprint-Bench 2",
+    "version_as_displayed": "Normalized score",
+    "configuration": "Normalized score",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "33.6%",
+    "normalized_stored_score": "33.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 10, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      27,
+      28,
+      29
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 10, Gemini 3.5 column",
+        "displayed_score": "33.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 10, Gemini 3.5 column",
+        "displayed_score": "33.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 10, Gemini 3.5 column",
+        "displayed_score": "33.6%"
+      }
+    ],
+    "displayed_scores": [
+      "33.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "GDM-MRCR v2 (8-needle)",
+    "version_as_displayed": "128K cumulative",
+    "configuration": "128K cumulative",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "77.3%",
+    "normalized_stored_score": "77.3",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 11, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed.",
+    "observation_indices": [
+      30,
+      31,
+      32,
+      93,
+      94,
+      95
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 11, Gemini 3.5 column",
+        "displayed_score": "77.3%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 11, Gemini 3.5 column",
+        "displayed_score": "77.3%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 11, Gemini 3.5 column",
+        "displayed_score": "77.3%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.5 column",
+        "displayed_score": "77.3%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.5 column",
+        "displayed_score": "77.3%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.5 column",
+        "displayed_score": "77.3%"
+      }
+    ],
+    "displayed_scores": [
+      "77.3%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "GDM-MRCR v2 (8-needle)",
+    "version_as_displayed": "1M pointwise",
+    "configuration": "1M pointwise",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "26.6%",
+    "normalized_stored_score": "26.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 12, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed.",
+    "observation_indices": [
+      33,
+      34,
+      35,
+      99,
+      100,
+      101
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.5 column",
+        "displayed_score": "26.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.5 column",
+        "displayed_score": "26.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.5 column",
+        "displayed_score": "26.6%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 10, Gemini 3.5 column",
+        "displayed_score": "26.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 10, Gemini 3.5 column",
+        "displayed_score": "26.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 10, Gemini 3.5 column",
+        "displayed_score": "26.6%"
+      }
+    ],
+    "displayed_scores": [
+      "26.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "Humanity’s Last Exam",
+    "version_as_displayed": "Full text+MM; tools unspecified",
+    "configuration": "Full text+MM; tools unspecified",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "40.2%",
+    "normalized_stored_score": "40.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 13, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Source40.2 labels full text+MM but does not establish no-tools configuration. Existing No tools value is retained; author accuracy/calibration metrics also block new records. Exact metadata correction or version confirmation needed.",
+    "observation_indices": [
+      36,
+      37,
+      38
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.5 column",
+        "displayed_score": "40.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.5 column",
+        "displayed_score": "40.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.5 column",
+        "displayed_score": "40.2%"
+      }
+    ],
+    "displayed_scores": [
+      "40.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-05-19",
+    "benchmark_as_displayed": "ARC-AGI-2",
+    "version_as_displayed": "Semi-private verified",
+    "configuration": "Semi-private verified",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "72.1%",
+    "normalized_stored_score": "72.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 14, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      39,
+      40,
+      41
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "location": "HTML full evaluation table, row 14, Gemini 3.5 column",
+        "displayed_score": "72.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 14, Gemini 3.5 column",
+        "displayed_score": "72.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "location": "methodology full evaluation table, row 14, Gemini 3.5 column",
+        "displayed_score": "72.1%"
+      }
+    ],
+    "displayed_scores": [
+      "72.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "SWE-Bench Pro (Public)",
+    "version_as_displayed": "Public",
+    "configuration": "Public",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "58.7%",
+    "normalized_stored_score": "58.7",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 1, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "swe-bench-pro",
+      "Public",
+      "swe-bench-pro-resolved"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      42,
+      43,
+      44
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.6 column",
+        "displayed_score": "58.7%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.6 column",
+        "displayed_score": "58.7%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.6 column",
+        "displayed_score": "58.7%"
+      }
+    ],
+    "displayed_scores": [
+      "58.7%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "DeepSWE v1.1",
+    "version_as_displayed": "High/medium respectively",
+    "configuration": "High/medium respectively",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "49%",
+    "normalized_stored_score": "49",
+    "reasoning_level": "high",
+    "location": "HTML full evaluation table, row 2, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "deep-swe",
+      "1.1",
+      "deep-swe-pass-at-1"
+    ],
+    "ingestion_outcome": "conflict_deferred",
+    "explicit_reason": "July table reports49%, August comparison48.6%. Rounding may explain this, but no stable author run is provided to establish sameness. Existing49 preserved; exact raw score/date reconciliation deferred.",
+    "observation_indices": [
+      48,
+      49,
+      50,
+      117,
+      118,
+      119
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.6 column",
+        "displayed_score": "49%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.6 column",
+        "displayed_score": "49%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.6 column",
+        "displayed_score": "49%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.6 column",
+        "displayed_score": "48.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.6 column",
+        "displayed_score": "48.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.6 column",
+        "displayed_score": "48.6%"
+      }
+    ],
+    "displayed_scores": [
+      "49%",
+      "48.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "DeepSWE v1.1",
+    "version_as_displayed": "High/medium respectively",
+    "configuration": "High/medium respectively",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "37%",
+    "normalized_stored_score": "37",
+    "reasoning_level": "medium",
+    "location": "HTML full evaluation table, row 2, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "deep-swe",
+      "1.1",
+      "deep-swe-pass-at-1"
+    ],
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author v1.1 publishes pass@1, cost, output tokens and steps; frozen multi-metric contract blocks new rows. Google3.6/3.5 quotes author results. No new run is inferred from 49 versus48.6 rounding or from a newer release comparison column.",
+    "observation_indices": [
+      51,
+      52,
+      53
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.5 column",
+        "displayed_score": "37%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.5 column",
+        "displayed_score": "37%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.5 column",
+        "displayed_score": "37%"
+      }
+    ],
+    "displayed_scores": [
+      "37%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "Terminal-bench 2.1",
+    "version_as_displayed": "Terminus 2",
+    "configuration": "Terminus 2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "78.0%",
+    "normalized_stored_score": "78",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 3, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "terminal-bench",
+      "2.1",
+      "terminal-bench-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      54,
+      55,
+      56,
+      129,
+      130,
+      131
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.6 column",
+        "displayed_score": "78.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.6 column",
+        "displayed_score": "78.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.6 column",
+        "displayed_score": "78.0%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.6 column",
+        "displayed_score": "78.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.6 column",
+        "displayed_score": "78.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.6 column",
+        "displayed_score": "78.0%"
+      }
+    ],
+    "displayed_scores": [
+      "78.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "MLE-Bench",
+    "version_as_displayed": "Partial 30; Average Position Score",
+    "configuration": "Partial 30; Average Position Score",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "63.9%",
+    "normalized_stored_score": "63.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports Partial30 Average Position Score, two runs, percentile formula and H100/scaffold. Author MLE-bench reports medal rates and other scores; canonical Partial30 task/revision is not independently pinned, so do not equate this custom rank aggregate to medal rate or invent a metric-specific version.",
+    "observation_indices": [
+      60,
+      61,
+      62
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.6 column",
+        "displayed_score": "63.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.6 column",
+        "displayed_score": "63.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.6 column",
+        "displayed_score": "63.9%"
+      }
+    ],
+    "displayed_scores": [
+      "63.9%"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "MLE-Bench",
+    "version_as_displayed": "Partial 30; Average Position Score",
+    "configuration": "Partial 30; Average Position Score",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "49.7%",
+    "normalized_stored_score": "49.7",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports Partial30 Average Position Score, two runs, percentile formula and H100/scaffold. Author MLE-bench reports medal rates and other scores; canonical Partial30 task/revision is not independently pinned, so do not equate this custom rank aggregate to medal rate or invent a metric-specific version.",
+    "observation_indices": [
+      63,
+      64,
+      65
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.5 column",
+        "displayed_score": "49.7%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.5 column",
+        "displayed_score": "49.7%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.5 column",
+        "displayed_score": "49.7%"
+      }
+    ],
+    "displayed_scores": [
+      "49.7%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "GDPval-AA v2",
+    "version_as_displayed": "v2 leaderboard",
+    "configuration": "v2 leaderboard",
+    "metric": "Elo",
+    "displayed_score": "1421",
+    "normalized_stored_score": "1421",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 5, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      66,
+      67,
+      68,
+      147,
+      148,
+      149
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.6 column",
+        "displayed_score": "1421"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.6 column",
+        "displayed_score": "1421"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.6 column",
+        "displayed_score": "1421"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "1422"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "1422"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "1422"
+      }
+    ],
+    "displayed_scores": [
+      "1421",
+      "1422"
+    ]
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "GDPval-AA v2",
+    "version_as_displayed": "v2 leaderboard",
+    "configuration": "v2 leaderboard",
+    "metric": "Elo",
+    "displayed_score": "1349",
+    "normalized_stored_score": "1349",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 5, Gemini 3.5 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      69,
+      70,
+      71
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.5 column",
+        "displayed_score": "1349"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.5 column",
+        "displayed_score": "1349"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.5 column",
+        "displayed_score": "1349"
+      }
+    ],
+    "displayed_scores": [
+      "1349"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "OSWorld-Verified",
+    "version_as_displayed": "Verified",
+    "configuration": "Verified",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "83.0%",
+    "normalized_stored_score": "83",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 6, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "osworld",
+      "Verified",
+      "osworld-verified-resolved"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      72,
+      73,
+      74
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.6 column",
+        "displayed_score": "83.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.6 column",
+        "displayed_score": "83.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.6 column",
+        "displayed_score": "83.0%"
+      }
+    ],
+    "displayed_scores": [
+      "83.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "No tools",
+    "configuration": "No tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "85.2%",
+    "normalized_stored_score": "85.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 7, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — No tools",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      78,
+      79,
+      80,
+      165,
+      166,
+      167
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.6 column",
+        "displayed_score": "85.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.6 column",
+        "displayed_score": "85.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.6 column",
+        "displayed_score": "85.2%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 11, Gemini 3.6 column",
+        "displayed_score": "85.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 11, Gemini 3.6 column",
+        "displayed_score": "85.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 11, Gemini 3.6 column",
+        "displayed_score": "85.2%"
+      }
+    ],
+    "displayed_scores": [
+      "85.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "Search and code execution",
+    "configuration": "Search and code execution",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "89.4%",
+    "normalized_stored_score": "89.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Search and code execution",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact developer result and documented evaluation configuration ingested through cohort24 and verified in both environments. No scale conversion; exact displayed spelling retained in score_raw. Reasoning remains unset.",
+    "observation_indices": [
+      84,
+      85,
+      86,
+      171,
+      172,
+      173
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      }
+    ],
+    "displayed_scores": [
+      "89.4%"
+    ],
+    "published_cohort": "24"
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.5 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "Search and code execution",
+    "configuration": "Search and code execution",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "84.9%",
+    "normalized_stored_score": "84.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Search and code execution",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact developer result and documented evaluation configuration ingested through cohort24 and verified in both environments. No scale conversion; exact displayed spelling retained in score_raw. Reasoning remains unset.",
+    "observation_indices": [
+      87,
+      88,
+      89
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.9%"
+      }
+    ],
+    "displayed_scores": [
+      "84.9%"
+    ],
+    "published_cohort": "24"
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "GDM-MRCR v2 (8-needle)",
+    "version_as_displayed": "128K cumulative",
+    "configuration": "128K cumulative",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "91.8%",
+    "normalized_stored_score": "91.8",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 9, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed.",
+    "observation_indices": [
+      90,
+      91,
+      92,
+      183,
+      184,
+      185
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.6 column",
+        "displayed_score": "91.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.6 column",
+        "displayed_score": "91.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.6 column",
+        "displayed_score": "91.8%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 14, Gemini 3.6 column",
+        "displayed_score": "91.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 14, Gemini 3.6 column",
+        "displayed_score": "91.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 14, Gemini 3.6 column",
+        "displayed_score": "91.8%"
+      }
+    ],
+    "displayed_scores": [
+      "91.8%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "GDM-MRCR v2 (8-needle)",
+    "version_as_displayed": "1M pointwise",
+    "configuration": "1M pointwise",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "54.0%",
+    "normalized_stored_score": "54",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 10, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed.",
+    "observation_indices": [
+      96,
+      97,
+      98
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 10, Gemini 3.6 column",
+        "displayed_score": "54.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 10, Gemini 3.6 column",
+        "displayed_score": "54.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 10, Gemini 3.6 column",
+        "displayed_score": "54.0%"
+      }
+    ],
+    "displayed_scores": [
+      "54.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "Artificial Analysis Intelligence Index",
+    "version_as_displayed": "Composite index",
+    "configuration": "Composite index",
+    "metric": "Index points",
+    "displayed_score": "56",
+    "normalized_stored_score": "56",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 1, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      102,
+      103,
+      104
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.7 column",
+        "displayed_score": "56"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.7 column",
+        "displayed_score": "56"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.7 column",
+        "displayed_score": "56"
+      }
+    ],
+    "displayed_scores": [
+      "56"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Artificial Analysis Intelligence Index",
+    "version_as_displayed": "Composite index",
+    "configuration": "Composite index",
+    "metric": "Index points",
+    "displayed_score": "52",
+    "normalized_stored_score": "52",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 1, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      105,
+      106,
+      107
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.6 column",
+        "displayed_score": "52"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.6 column",
+        "displayed_score": "52"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.6 column",
+        "displayed_score": "52"
+      }
+    ],
+    "displayed_scores": [
+      "52"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "FrontierCode 1.1 Main",
+    "version_as_displayed": "1.1 Main",
+    "configuration": "1.1 Main",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "43.6%",
+    "normalized_stored_score": "43.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 2, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      108,
+      109,
+      110
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.7 column",
+        "displayed_score": "43.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.7 column",
+        "displayed_score": "43.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.7 column",
+        "displayed_score": "43.6%"
+      }
+    ],
+    "displayed_scores": [
+      "43.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "FrontierCode 1.1 Main",
+    "version_as_displayed": "1.1 Main",
+    "configuration": "1.1 Main",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "34.4%",
+    "normalized_stored_score": "34.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 2, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      111,
+      112,
+      113
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.6 column",
+        "displayed_score": "34.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.6 column",
+        "displayed_score": "34.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.6 column",
+        "displayed_score": "34.4%"
+      }
+    ],
+    "displayed_scores": [
+      "34.4%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "DeepSWE v1.1",
+    "version_as_displayed": "High",
+    "configuration": "High",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "65.3%",
+    "normalized_stored_score": "65.3",
+    "reasoning_level": "high",
+    "location": "HTML full evaluation table, row 3, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "deep-swe",
+      "1.1",
+      "deep-swe-pass-at-1"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      114,
+      115,
+      116,
+      225,
+      226,
+      227
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.7 column",
+        "displayed_score": "65.3%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.7 column",
+        "displayed_score": "65.3%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.7 column",
+        "displayed_score": "65.3%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.7 column",
+        "displayed_score": "65.3%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.7 column",
+        "displayed_score": "65.3%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.7 column",
+        "displayed_score": "65.3%"
+      }
+    ],
+    "displayed_scores": [
+      "65.3%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "Code Arena",
+    "version_as_displayed": "Web Dev Elo",
+    "configuration": "Web Dev Elo",
+    "metric": "Elo",
+    "displayed_score": "1588",
+    "normalized_stored_score": "1588",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      120,
+      121,
+      122
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.7 column",
+        "displayed_score": "1588"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.7 column",
+        "displayed_score": "1588"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.7 column",
+        "displayed_score": "1588"
+      }
+    ],
+    "displayed_scores": [
+      "1588"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Code Arena",
+    "version_as_displayed": "Web Dev Elo",
+    "configuration": "Web Dev Elo",
+    "metric": "Elo",
+    "displayed_score": "1538",
+    "normalized_stored_score": "1538",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      123,
+      124,
+      125
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.6 column",
+        "displayed_score": "1538"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.6 column",
+        "displayed_score": "1538"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.6 column",
+        "displayed_score": "1538"
+      }
+    ],
+    "displayed_scores": [
+      "1538"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "Terminal-bench 2.1",
+    "version_as_displayed": "Terminus 2",
+    "configuration": "Terminus 2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "85.8%",
+    "normalized_stored_score": "85.8",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 5, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "terminal-bench",
+      "2.1",
+      "terminal-bench-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      126,
+      127,
+      128,
+      249,
+      250,
+      251
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.7 column",
+        "displayed_score": "85.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.7 column",
+        "displayed_score": "85.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.7 column",
+        "displayed_score": "85.8%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.7 column",
+        "displayed_score": "85.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.7 column",
+        "displayed_score": "85.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.7 column",
+        "displayed_score": "85.8%"
+      }
+    ],
+    "displayed_scores": [
+      "85.8%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "Terminal-bench 3.0",
+    "version_as_displayed": "Modified cli-2ph-simplex / vpp-loss-divergence",
+    "configuration": "Modified cli-2ph-simplex / vpp-loss-divergence",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "14.9%",
+    "normalized_stored_score": "14.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 6, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Google modified cli-2ph-simplex and vpp-loss-divergence; no stable task-set commit or edition label is supplied. Do not map this branch to ordinary3.0.",
+    "observation_indices": [
+      132,
+      133,
+      134
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.7 column",
+        "displayed_score": "14.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.7 column",
+        "displayed_score": "14.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.7 column",
+        "displayed_score": "14.9%"
+      }
+    ],
+    "displayed_scores": [
+      "14.9%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Terminal-bench 3.0",
+    "version_as_displayed": "Modified cli-2ph-simplex / vpp-loss-divergence",
+    "configuration": "Modified cli-2ph-simplex / vpp-loss-divergence",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "5.4%",
+    "normalized_stored_score": "5.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 6, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Google modified cli-2ph-simplex and vpp-loss-divergence; no stable task-set commit or edition label is supplied. Do not map this branch to ordinary3.0.",
+    "observation_indices": [
+      135,
+      136,
+      137
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.6 column",
+        "displayed_score": "5.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.6 column",
+        "displayed_score": "5.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.6 column",
+        "displayed_score": "5.4%"
+      }
+    ],
+    "displayed_scores": [
+      "5.4%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "AutomationBench",
+    "version_as_displayed": "Private set",
+    "configuration": "Private set",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "30.4%",
+    "normalized_stored_score": "30.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 7, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      138,
+      139,
+      140
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.7 column",
+        "displayed_score": "30.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.7 column",
+        "displayed_score": "30.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.7 column",
+        "displayed_score": "30.4%"
+      }
+    ],
+    "displayed_scores": [
+      "30.4%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "AutomationBench",
+    "version_as_displayed": "Private set",
+    "configuration": "Private set",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "17.0%",
+    "normalized_stored_score": "17",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 7, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      141,
+      142,
+      143
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.6 column",
+        "displayed_score": "17.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.6 column",
+        "displayed_score": "17.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.6 column",
+        "displayed_score": "17.0%"
+      }
+    ],
+    "displayed_scores": [
+      "17.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "GDPval-AA v2",
+    "version_as_displayed": "v2 leaderboard",
+    "configuration": "v2 leaderboard",
+    "metric": "Elo",
+    "displayed_score": "1525",
+    "normalized_stored_score": "1525",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      144,
+      145,
+      146,
+      231,
+      232,
+      233
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.7 column",
+        "displayed_score": "1525"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.7 column",
+        "displayed_score": "1525"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.7 column",
+        "displayed_score": "1525"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.7 column",
+        "displayed_score": "1482"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.7 column",
+        "displayed_score": "1482"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.7 column",
+        "displayed_score": "1482"
+      }
+    ],
+    "displayed_scores": [
+      "1525",
+      "1482"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "Harvey LAB-AA",
+    "version_as_displayed": "AA leaderboard",
+    "configuration": "AA leaderboard",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "90.7%",
+    "normalized_stored_score": "90.7",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 9, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      150,
+      151,
+      152
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "90.7%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "90.7%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "90.7%"
+      }
+    ],
+    "displayed_scores": [
+      "90.7%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Harvey LAB-AA",
+    "version_as_displayed": "AA leaderboard",
+    "configuration": "AA leaderboard",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "85.1%",
+    "normalized_stored_score": "85.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 9, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      153,
+      154,
+      155
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.6 column",
+        "displayed_score": "85.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.6 column",
+        "displayed_score": "85.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.6 column",
+        "displayed_score": "85.1%"
+      }
+    ],
+    "displayed_scores": [
+      "85.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "GDP.PDF",
+    "version_as_displayed": "All pass rate",
+    "configuration": "All pass rate",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "34.0%",
+    "normalized_stored_score": "34",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 10, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "gdp-pdf",
+      "GDP.pdf",
+      "gdp-pdf-all-pass-rate"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      156,
+      157,
+      158,
+      261,
+      262,
+      263
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 10, Gemini 3.7 column",
+        "displayed_score": "34.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 10, Gemini 3.7 column",
+        "displayed_score": "34.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 10, Gemini 3.7 column",
+        "displayed_score": "34.0%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.7 column",
+        "displayed_score": "34.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.7 column",
+        "displayed_score": "34.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.7 column",
+        "displayed_score": "34.0%"
+      }
+    ],
+    "displayed_scores": [
+      "34.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "GDP.PDF",
+    "version_as_displayed": "All pass rate",
+    "configuration": "All pass rate",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "22.0%",
+    "normalized_stored_score": "22",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 10, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "gdp-pdf",
+      "GDP.pdf",
+      "gdp-pdf-all-pass-rate"
+    ],
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author GDP.PDF defines question/criterion success and all-pass score for the same release. Frozen one-metric-per-version contract stops new records; existing numeric matches are audited separately.",
+    "observation_indices": [
+      159,
+      160,
+      161
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 10, Gemini 3.6 column",
+        "displayed_score": "22.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 10, Gemini 3.6 column",
+        "displayed_score": "22.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 10, Gemini 3.6 column",
+        "displayed_score": "22.0%"
+      }
+    ],
+    "displayed_scores": [
+      "22.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "No tools",
+    "configuration": "No tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "84.5%",
+    "normalized_stored_score": "84.5",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 11, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — No tools",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      162,
+      163,
+      164,
+      267,
+      268,
+      269
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 11, Gemini 3.7 column",
+        "displayed_score": "84.5%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 11, Gemini 3.7 column",
+        "displayed_score": "84.5%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 11, Gemini 3.7 column",
+        "displayed_score": "84.5%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.7 column",
+        "displayed_score": "84.5%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.7 column",
+        "displayed_score": "84.5%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.7 column",
+        "displayed_score": "84.5%"
+      }
+    ],
+    "displayed_scores": [
+      "84.5%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "Search and code execution",
+    "configuration": "Search and code execution",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "88.7%",
+    "normalized_stored_score": "88.7",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 12, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Search and code execution",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact developer result and documented evaluation configuration ingested through cohort24 and verified in both environments. No scale conversion; exact displayed spelling retained in score_raw. Reasoning remains unset.",
+    "observation_indices": [
+      168,
+      169,
+      170
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "88.7%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "88.7%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "88.7%"
+      }
+    ],
+    "displayed_scores": [
+      "88.7%"
+    ],
+    "published_cohort": "24"
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "LVBench",
+    "version_as_displayed": "1024 frames; no tools",
+    "configuration": "1024 frames; no tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "85.4%",
+    "normalized_stored_score": "85.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 13, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "lvbench",
+      "1024 frames — Static",
+      "lvbench-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact developer result and documented evaluation configuration ingested through cohort24 and verified in both environments. No scale conversion; exact displayed spelling retained in score_raw. Reasoning remains unset.",
+    "observation_indices": [
+      174,
+      175,
+      176,
+      273,
+      274,
+      275
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      }
+    ],
+    "displayed_scores": [
+      "85.4%"
+    ],
+    "published_cohort": "24"
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "LVBench",
+    "version_as_displayed": "1024 frames; no tools",
+    "configuration": "1024 frames; no tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "84.2%",
+    "normalized_stored_score": "84.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 13, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "lvbench",
+      "1024 frames — Static",
+      "lvbench-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact developer result and documented evaluation configuration ingested through cohort24 and verified in both environments. No scale conversion; exact displayed spelling retained in score_raw. Reasoning remains unset.",
+    "observation_indices": [
+      177,
+      178,
+      179
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.6 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.6 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.6 column",
+        "displayed_score": "84.2%"
+      }
+    ],
+    "displayed_scores": [
+      "84.2%"
+    ],
+    "published_cohort": "24"
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "GDM-MRCR v2 (8-needle)",
+    "version_as_displayed": "128K cumulative",
+    "configuration": "128K cumulative",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "97.0%",
+    "normalized_stored_score": "97",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 14, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed.",
+    "observation_indices": [
+      180,
+      181,
+      182
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 14, Gemini 3.7 column",
+        "displayed_score": "97.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 14, Gemini 3.7 column",
+        "displayed_score": "97.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 14, Gemini 3.7 column",
+        "displayed_score": "97.0%"
+      }
+    ],
+    "displayed_scores": [
+      "97.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "OSWorld-2.0",
+    "version_as_displayed": "Pre-Aug8 patch; partial score; no batch tools",
+    "configuration": "Pre-Aug8 patch; partial score; no batch tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "47.9%",
+    "normalized_stored_score": "47.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 15, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings.",
+    "observation_indices": [
+      186,
+      187,
+      188
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 15, Gemini 3.7 column",
+        "displayed_score": "47.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 15, Gemini 3.7 column",
+        "displayed_score": "47.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 15, Gemini 3.7 column",
+        "displayed_score": "47.9%"
+      }
+    ],
+    "displayed_scores": [
+      "47.9%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "OSWorld-2.0",
+    "version_as_displayed": "Pre-Aug8 patch; partial score; no batch tools",
+    "configuration": "Pre-Aug8 patch; partial score; no batch tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "33.8%",
+    "normalized_stored_score": "33.8",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 15, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings.",
+    "observation_indices": [
+      189,
+      190,
+      191
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 15, Gemini 3.6 column",
+        "displayed_score": "33.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 15, Gemini 3.6 column",
+        "displayed_score": "33.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 15, Gemini 3.6 column",
+        "displayed_score": "33.8%"
+      }
+    ],
+    "displayed_scores": [
+      "33.8%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "Agent’s Last Exam",
+    "version_as_displayed": "Default ALE-Claw",
+    "configuration": "Default ALE-Claw",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "26.3%",
+    "normalized_stored_score": "26.3",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 16, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer pass rate and ALE-Claw harness are explicit, but exact author release/task snapshot and pass metric equivalence require confirmation. Leave unresolved pending authoritative version metadata.",
+    "observation_indices": [
+      192,
+      193,
+      194
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 16, Gemini 3.7 column",
+        "displayed_score": "26.3%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 16, Gemini 3.7 column",
+        "displayed_score": "26.3%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 16, Gemini 3.7 column",
+        "displayed_score": "26.3%"
+      }
+    ],
+    "displayed_scores": [
+      "26.3%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Agent’s Last Exam",
+    "version_as_displayed": "Default ALE-Claw",
+    "configuration": "Default ALE-Claw",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "24.2%",
+    "normalized_stored_score": "24.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 16, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer pass rate and ALE-Claw harness are explicit, but exact author release/task snapshot and pass metric equivalence require confirmation. Leave unresolved pending authoritative version metadata.",
+    "observation_indices": [
+      195,
+      196,
+      197
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 16, Gemini 3.6 column",
+        "displayed_score": "24.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 16, Gemini 3.6 column",
+        "displayed_score": "24.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 16, Gemini 3.6 column",
+        "displayed_score": "24.2%"
+      }
+    ],
+    "displayed_scores": [
+      "24.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "HLE-Verified",
+    "version_as_displayed": "Full 1811 (668 original +1143 revised)",
+    "configuration": "Full 1811 (668 original +1143 revised)",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "53.6%",
+    "normalized_stored_score": "53.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 17, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "hle-verified",
+      "Full 1,811-item verified set",
+      "hle-verified-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      198,
+      199,
+      200,
+      282,
+      283,
+      284,
+      314
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 17, Gemini 3.7 column",
+        "displayed_score": "53.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 17, Gemini 3.7 column",
+        "displayed_score": "53.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 17, Gemini 3.7 column",
+        "displayed_score": "53.6%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 11, Gemini 3.7 column",
+        "displayed_score": "53.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 11, Gemini 3.7 column",
+        "displayed_score": "53.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 11, Gemini 3.7 column",
+        "displayed_score": "53.6%"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "location": "Performance figure with exact model and value labels",
+        "displayed_score": "53.6%"
+      }
+    ],
+    "displayed_scores": [
+      "53.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "HLE-Verified",
+    "version_as_displayed": "Full 1811 (668 original +1143 revised)",
+    "configuration": "Full 1811 (668 original +1143 revised)",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "51.2%",
+    "normalized_stored_score": "51.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 17, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "hle-verified",
+      "Full 1,811-item verified set",
+      "hle-verified-accuracy"
+    ],
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author HLE-Verified paper Section5.1 explicitly defines Accuracy and Calibration Error for the same release; frozen multi-metric contract blocks new51.2. Google668+1143 partition also differs from author641+1170 while total1811 agrees; do not infer task revision.",
+    "observation_indices": [
+      201,
+      202,
+      203
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 17, Gemini 3.6 column",
+        "displayed_score": "51.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 17, Gemini 3.6 column",
+        "displayed_score": "51.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 17, Gemini 3.6 column",
+        "displayed_score": "51.2%"
+      }
+    ],
+    "displayed_scores": [
+      "51.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "BioMysteryBench",
+    "version_as_displayed": "Human solvable",
+    "configuration": "Human solvable",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "87.1%",
+    "normalized_stored_score": "87.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 18, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed.",
+    "observation_indices": [
+      204,
+      205,
+      206,
+      294,
+      295,
+      296
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 18, Gemini 3.7 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 18, Gemini 3.7 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 18, Gemini 3.7 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "87.1%"
+      }
+    ],
+    "displayed_scores": [
+      "87.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "BioMysteryBench",
+    "version_as_displayed": "Human solvable",
+    "configuration": "Human solvable",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "80.6%",
+    "normalized_stored_score": "80.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 18, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed.",
+    "observation_indices": [
+      207,
+      208,
+      209
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 18, Gemini 3.6 column",
+        "displayed_score": "80.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 18, Gemini 3.6 column",
+        "displayed_score": "80.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 18, Gemini 3.6 column",
+        "displayed_score": "80.6%"
+      }
+    ],
+    "displayed_scores": [
+      "80.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "BioMysteryBench",
+    "version_as_displayed": "Human difficult",
+    "configuration": "Human difficult",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "43.5%",
+    "normalized_stored_score": "43.5",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 19, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed.",
+    "observation_indices": [
+      210,
+      211,
+      212,
+      300,
+      301,
+      302
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 19, Gemini 3.7 column",
+        "displayed_score": "43.5%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 19, Gemini 3.7 column",
+        "displayed_score": "43.5%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 19, Gemini 3.7 column",
+        "displayed_score": "43.5%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 14, Gemini 3.7 column",
+        "displayed_score": "43.5%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 14, Gemini 3.7 column",
+        "displayed_score": "43.5%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 14, Gemini 3.7 column",
+        "displayed_score": "43.5%"
+      }
+    ],
+    "displayed_scores": [
+      "43.5%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "BioMysteryBench",
+    "version_as_displayed": "Human difficult",
+    "configuration": "Human difficult",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "41.2%",
+    "normalized_stored_score": "41.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 19, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed.",
+    "observation_indices": [
+      213,
+      214,
+      215
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 19, Gemini 3.6 column",
+        "displayed_score": "41.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 19, Gemini 3.6 column",
+        "displayed_score": "41.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 19, Gemini 3.6 column",
+        "displayed_score": "41.2%"
+      }
+    ],
+    "displayed_scores": [
+      "41.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "LABBench2",
+    "version_as_displayed": "Macro-average; terminal/internet",
+    "configuration": "Macro-average; terminal/internet",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "82.1%",
+    "normalized_stored_score": "82.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 20, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author evals/summarize_report.py defines Accuracy and Attempted Accuracy for the same release. Developer September aggregate is an11-subtask macro-average; August aggregation is unstated. Frozen one-metric contract prevents silently selecting accuracy.",
+    "observation_indices": [
+      216,
+      217,
+      218,
+      306,
+      307,
+      308
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 20, Gemini 3.7 column",
+        "displayed_score": "82.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 20, Gemini 3.7 column",
+        "displayed_score": "82.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 20, Gemini 3.7 column",
+        "displayed_score": "82.1%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 15, Gemini 3.7 column",
+        "displayed_score": "82.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 15, Gemini 3.7 column",
+        "displayed_score": "82.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 15, Gemini 3.7 column",
+        "displayed_score": "82.1%"
+      }
+    ],
+    "displayed_scores": [
+      "82.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.6 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "LABBench2",
+    "version_as_displayed": "Macro-average; terminal/internet",
+    "configuration": "Macro-average; terminal/internet",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "76.1%",
+    "normalized_stored_score": "76.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 20, Gemini 3.6 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author evals/summarize_report.py defines Accuracy and Attempted Accuracy for the same release. Developer September aggregate is an11-subtask macro-average; August aggregation is unstated. Frozen one-metric contract prevents silently selecting accuracy.",
+    "observation_indices": [
+      219,
+      220,
+      221
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 20, Gemini 3.6 column",
+        "displayed_score": "76.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 20, Gemini 3.6 column",
+        "displayed_score": "76.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 20, Gemini 3.6 column",
+        "displayed_score": "76.1%"
+      }
+    ],
+    "displayed_scores": [
+      "76.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "DeepSWE v1.1",
+    "version_as_displayed": "High",
+    "configuration": "High",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "73.7%",
+    "normalized_stored_score": "73.7",
+    "reasoning_level": "high",
+    "location": "HTML full evaluation table, row 1, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "deep-swe",
+      "1.1",
+      "deep-swe-pass-at-1"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      222,
+      223,
+      224
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 1, Gemini 3.8 column",
+        "displayed_score": "73.7%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 1, Gemini 3.8 column",
+        "displayed_score": "73.7%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 1, Gemini 3.8 column",
+        "displayed_score": "73.7%"
+      }
+    ],
+    "displayed_scores": [
+      "73.7%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "GDPval-AA v2",
+    "version_as_displayed": "v2 leaderboard",
+    "configuration": "v2 leaderboard",
+    "metric": "Elo",
+    "displayed_score": "1545",
+    "normalized_stored_score": "1545",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 2, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      228,
+      229,
+      230
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 2, Gemini 3.8 column",
+        "displayed_score": "1545"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 2, Gemini 3.8 column",
+        "displayed_score": "1545"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 2, Gemini 3.8 column",
+        "displayed_score": "1545"
+      }
+    ],
+    "displayed_scores": [
+      "1545"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "Finance Agent v2",
+    "version_as_displayed": "v2",
+    "configuration": "v2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "61.4%",
+    "normalized_stored_score": "61.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 3, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      234,
+      235,
+      236,
+      309
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.8 column",
+        "displayed_score": "61.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.8 column",
+        "displayed_score": "61.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.8 column",
+        "displayed_score": "61.4%"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "location": "Performance figure with exact model and value labels",
+        "displayed_score": "61.4%"
+      }
+    ],
+    "displayed_scores": [
+      "61.4%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Finance Agent v2",
+    "version_as_displayed": "v2",
+    "configuration": "v2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "59.0%",
+    "normalized_stored_score": "59",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 3, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      237,
+      238,
+      239,
+      310
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 3, Gemini 3.7 column",
+        "displayed_score": "59.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 3, Gemini 3.7 column",
+        "displayed_score": "59.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 3, Gemini 3.7 column",
+        "displayed_score": "59.0%"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "location": "Performance figure with exact model and value labels",
+        "displayed_score": "59.0%"
+      }
+    ],
+    "displayed_scores": [
+      "59.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "Harvey’s Legal Agent Benchmark",
+    "version_as_displayed": "All pass rate",
+    "configuration": "All pass rate",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "10.0%",
+    "normalized_stored_score": "1E+1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      240,
+      241,
+      242,
+      311
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.8 column",
+        "displayed_score": "10.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.8 column",
+        "displayed_score": "10.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.8 column",
+        "displayed_score": "10.0%"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "location": "Performance figure with exact model and value labels",
+        "displayed_score": "10.0%"
+      }
+    ],
+    "displayed_scores": [
+      "10.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Harvey’s Legal Agent Benchmark",
+    "version_as_displayed": "All pass rate",
+    "configuration": "All pass rate",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "8.8%",
+    "normalized_stored_score": "8.8",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 4, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun.",
+    "observation_indices": [
+      243,
+      244,
+      245,
+      312
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 4, Gemini 3.7 column",
+        "displayed_score": "8.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 4, Gemini 3.7 column",
+        "displayed_score": "8.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 4, Gemini 3.7 column",
+        "displayed_score": "8.8%"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "location": "Performance figure with exact model and value labels",
+        "displayed_score": "8.8%"
+      }
+    ],
+    "displayed_scores": [
+      "8.8%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "Terminal-bench 2.1",
+    "version_as_displayed": "Terminus 2",
+    "configuration": "Terminus 2",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "89.4%",
+    "normalized_stored_score": "89.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 5, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "terminal-bench",
+      "2.1",
+      "terminal-bench-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      246,
+      247,
+      248
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 5, Gemini 3.8 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 5, Gemini 3.8 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 5, Gemini 3.8 column",
+        "displayed_score": "89.4%"
+      }
+    ],
+    "displayed_scores": [
+      "89.4%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "Terminal-bench 4.0",
+    "version_as_displayed": "4.0",
+    "configuration": "4.0",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "19.1%",
+    "normalized_stored_score": "19.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 6, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "terminal-bench",
+      "4.0",
+      "terminal-bench-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      252,
+      253,
+      254
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.8 column",
+        "displayed_score": "19.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.8 column",
+        "displayed_score": "19.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.8 column",
+        "displayed_score": "19.1%"
+      }
+    ],
+    "displayed_scores": [
+      "19.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "Terminal-bench 4.0",
+    "version_as_displayed": "4.0",
+    "configuration": "4.0",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "11.2%",
+    "normalized_stored_score": "11.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 6, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "terminal-bench",
+      "4.0",
+      "terminal-bench-accuracy"
+    ],
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer quotes the benchmark author leaderboard and highest-scoring thinking level, without the exact original run identifier or supported named reasoning level. Do not infer a Google-run result or create a new snapshot run.",
+    "observation_indices": [
+      255,
+      256,
+      257
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 6, Gemini 3.7 column",
+        "displayed_score": "11.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 6, Gemini 3.7 column",
+        "displayed_score": "11.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 6, Gemini 3.7 column",
+        "displayed_score": "11.2%"
+      }
+    ],
+    "displayed_scores": [
+      "11.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "GDP.PDF",
+    "version_as_displayed": "All pass rate",
+    "configuration": "All pass rate",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "35.0%",
+    "normalized_stored_score": "35",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 7, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "gdp-pdf",
+      "GDP.pdf",
+      "gdp-pdf-all-pass-rate"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      258,
+      259,
+      260
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 7, Gemini 3.8 column",
+        "displayed_score": "35.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 7, Gemini 3.8 column",
+        "displayed_score": "35.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 7, Gemini 3.8 column",
+        "displayed_score": "35.0%"
+      }
+    ],
+    "displayed_scores": [
+      "35.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "No tools",
+    "configuration": "No tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "86.2%",
+    "normalized_stored_score": "86.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — No tools",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "conflict_deferred",
+    "explicit_reason": "Existing reasoning_level is no tools, but this is a tool configuration, not a reasoning level. Source does not specify reasoning. Guarded result metadata correction is unsupported; no new duplicate.",
+    "observation_indices": [
+      264,
+      265,
+      266
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.8 column",
+        "displayed_score": "86.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.8 column",
+        "displayed_score": "86.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.8 column",
+        "displayed_score": "86.2%"
+      }
+    ],
+    "displayed_scores": [
+      "86.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "LVBench",
+    "version_as_displayed": "1024 frames; no tools",
+    "configuration": "1024 frames; no tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "87.1%",
+    "normalized_stored_score": "87.1",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 9, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "lvbench",
+      "1024 frames — Static",
+      "lvbench-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      270,
+      271,
+      272
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.8 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.8 column",
+        "displayed_score": "87.1%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.8 column",
+        "displayed_score": "87.1%"
+      }
+    ],
+    "displayed_scores": [
+      "87.1%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "LVBench",
+    "version_as_displayed": "1024 frames; agentic",
+    "configuration": "1024 frames; agentic",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "87.8%",
+    "normalized_stored_score": "87.8",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 10, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "lvbench",
+      "1024 frames — Agentic",
+      "lvbench-accuracy"
+    ],
+    "ingestion_outcome": "conflict_deferred",
+    "explicit_reason": "Main card labels87.8 agentic but linked methodology says all LVBench scores are without tools. Existing Agentic record retained; no configuration guessed or silent correction.",
+    "observation_indices": [
+      276,
+      277,
+      278
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 10, Gemini 3.8 column",
+        "displayed_score": "87.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 10, Gemini 3.8 column",
+        "displayed_score": "87.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 10, Gemini 3.8 column",
+        "displayed_score": "87.8%"
+      }
+    ],
+    "displayed_scores": [
+      "87.8%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "HLE-Verified",
+    "version_as_displayed": "Full 1811 (668 original +1143 revised)",
+    "configuration": "Full 1811 (668 original +1143 revised)",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "54.9%",
+    "normalized_stored_score": "54.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 11, Gemini 3.8 column",
+    "canonical_benchmark_mapping": [
+      "hle-verified",
+      "Full 1,811-item verified set",
+      "hle-verified-accuracy"
+    ],
+    "ingestion_outcome": "already_present_identical",
+    "explicit_reason": "Canonical exact developer/evaluator score and configuration already present; repeated comparisons are citations, not a new evaluation run.",
+    "observation_indices": [
+      279,
+      280,
+      281,
+      313
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 11, Gemini 3.8 column",
+        "displayed_score": "54.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 11, Gemini 3.8 column",
+        "displayed_score": "54.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 11, Gemini 3.8 column",
+        "displayed_score": "54.9%"
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "location": "Performance figure with exact model and value labels",
+        "displayed_score": "54.9%"
+      }
+    ],
+    "displayed_scores": [
+      "54.9%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "OSWorld-2.0",
+    "version_as_displayed": "Pre-Aug8 patch; partial score; batch tools",
+    "configuration": "Pre-Aug8 patch; partial score; batch tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "59.0%",
+    "normalized_stored_score": "59",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 12, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings.",
+    "observation_indices": [
+      285,
+      286,
+      287
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.8 column",
+        "displayed_score": "59.0%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.8 column",
+        "displayed_score": "59.0%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.8 column",
+        "displayed_score": "59.0%"
+      }
+    ],
+    "displayed_scores": [
+      "59.0%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "OSWorld-2.0",
+    "version_as_displayed": "Pre-Aug8 patch; partial score; batch tools",
+    "configuration": "Pre-Aug8 patch; partial score; batch tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "50.6%",
+    "normalized_stored_score": "50.6",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 12, Gemini 3.7 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings.",
+    "observation_indices": [
+      288,
+      289,
+      290
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "50.6%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "50.6%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "50.6%"
+      }
+    ],
+    "displayed_scores": [
+      "50.6%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "BioMysteryBench",
+    "version_as_displayed": "Human solvable",
+    "configuration": "Human solvable",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "88.8%",
+    "normalized_stored_score": "88.8",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 13, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed.",
+    "observation_indices": [
+      291,
+      292,
+      293
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.8 column",
+        "displayed_score": "88.8%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.8 column",
+        "displayed_score": "88.8%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.8 column",
+        "displayed_score": "88.8%"
+      }
+    ],
+    "displayed_scores": [
+      "88.8%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "BioMysteryBench",
+    "version_as_displayed": "Human difficult",
+    "configuration": "Human difficult",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "56.5%",
+    "normalized_stored_score": "56.5",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 14, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed.",
+    "observation_indices": [
+      297,
+      298,
+      299
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 14, Gemini 3.8 column",
+        "displayed_score": "56.5%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 14, Gemini 3.8 column",
+        "displayed_score": "56.5%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 14, Gemini 3.8 column",
+        "displayed_score": "56.5%"
+      }
+    ],
+    "displayed_scores": [
+      "56.5%"
+    ]
+  },
+  {
+    "target_registry_no": "30004",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "source_title": "Gemini 3.8 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-09-02",
+    "benchmark_as_displayed": "LABBench2",
+    "version_as_displayed": "Macro-average; terminal/internet",
+    "configuration": "Macro-average; terminal/internet",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "86.2%",
+    "normalized_stored_score": "86.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 15, Gemini 3.8 column",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Author evals/summarize_report.py defines Accuracy and Attempted Accuracy for the same release. Developer September aggregate is an11-subtask macro-average; August aggregation is unstated. Frozen one-metric contract prevents silently selecting accuracy.",
+    "observation_indices": [
+      303,
+      304,
+      305
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 15, Gemini 3.8 column",
+        "displayed_score": "86.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 15, Gemini 3.8 column",
+        "displayed_score": "86.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 15, Gemini 3.8 column",
+        "displayed_score": "86.2%"
+      }
+    ],
+    "displayed_scores": [
+      "86.2%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "GRB",
+    "version_as_displayed": "74 tasks; 2-hour timeout",
+    "configuration": "74 tasks; 2-hour timeout",
+    "metric": "Average pass@1 (%)",
+    "displayed_score": "27%",
+    "normalized_stored_score": "27",
+    "reasoning_level": null,
+    "location": "p37 Results; bug caveat and scaffolding p36–38",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Internal benchmark74 tasks,2-hour budget,average pass@1 is explicit. Linked report has August publication without a day or immutable task revision; model-card date alone does not establish the benchmark edition release date. Approximately20% buggy tasks must remain included; hypothetical47% is excluded.",
+    "observation_indices": [
+      315
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p37 Results; bug caveat and scaffolding p36–38",
+        "displayed_score": "27%"
+      }
+    ],
+    "displayed_scores": [
+      "27%"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Stealth",
+    "version_as_displayed": "Four challenges",
+    "configuration": "Four challenges",
+    "metric": "Challenges passed (count of4)",
+    "displayed_score": "3",
+    "normalized_stored_score": "3",
+    "reasoning_level": null,
+    "location": "p39 and41; passes top50% human baseline",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded.",
+    "observation_indices": [
+      316
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p39 and41; passes top50% human baseline",
+        "displayed_score": "3"
+      }
+    ],
+    "displayed_scores": [
+      "3"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash model card / evaluation supplement",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "Eleven challenges",
+    "configuration": "Eleven challenges",
+    "metric": "Challenges passed (count of11)",
+    "displayed_score": "6",
+    "normalized_stored_score": "6",
+    "reasoning_level": null,
+    "location": "p41; challenge pass threshold >20%; 50 attempts each",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      317
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p41; challenge pass threshold >20%; 50 attempts each",
+        "displayed_score": "6"
+      }
+    ],
+    "displayed_scores": [
+      "6"
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Stealth",
+    "version_as_displayed": "Classifier Evasion",
+    "configuration": "Classifier Evasion; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p39 Figure7; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded.",
+    "observation_indices": [
+      318
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p39 Figure7; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Stealth",
+    "version_as_displayed": "Oversight Pattern",
+    "configuration": "Oversight Pattern; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p39 Figure7; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded.",
+    "observation_indices": [
+      319
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p39 Figure7; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Stealth",
+    "version_as_displayed": "Strategic Rule Breaking",
+    "configuration": "Strategic Rule Breaking; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p39 Figure7; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded.",
+    "observation_indices": [
+      320
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p39 Figure7; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "max_tokens",
+    "configuration": "max_tokens; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      321
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "context_size_mod",
+    "configuration": "context_size_mod; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      322
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "irreversibility",
+    "configuration": "irreversibility; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      323
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "oversight_frequency",
+    "configuration": "oversight_frequency; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      324
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "output_filters",
+    "configuration": "output_filters; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      325
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "disabled_tool",
+    "configuration": "disabled_tool; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      326
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "faulty_tool",
+    "configuration": "faulty_tool; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      327
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "slow_tool",
+    "configuration": "slow_tool; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      328
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "max_tool_calls",
+    "configuration": "max_tool_calls; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      329
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "read_logs",
+    "configuration": "read_logs; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      330
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "source_title": "Gemini 3.7 Flash Frontier Safety Framework Report",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": null,
+    "benchmark_as_displayed": "SSA Situational Awareness",
+    "version_as_displayed": "approved_directories",
+    "configuration": "approved_directories; 50 attempts",
+    "metric": "Normalized score",
+    "displayed_score": null,
+    "normalized_stored_score": null,
+    "reasoning_level": null,
+    "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+    "canonical_benchmark_mapping": null,
+    "ingestion_outcome": "unresolved",
+    "explicit_reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score.",
+    "observation_indices": [
+      331
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "location": "p40 Figure8; bar lacks exact numeric label; no interpolation",
+        "displayed_score": null
+      }
+    ],
+    "displayed_scores": [
+      null
+    ]
+  }
+]

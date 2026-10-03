@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "ExploitBench - Internal Port",
+        "slug": "exploitbench-internal-port",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/exploitbench---internal-port-juneaugust-2026",
+        "source_checked_at": "2026-10-01T12:15:00Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Arbitrary code-execution success rate",
+            "key": "exploitbench-internal-port-ace-success",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/exploitbench---internal-port-juneaugust-2026",
+            "source_checked_at": "2026-10-01T12:15:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "June\u2013August 2026",
+            "version_slug": "june-august-2026",
+            "release_at": "2026-09-03",
+            "release_precision": "date",
+            "metric_key": "exploitbench-internal-port-ace-success",
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/exploitbench---internal-port-juneaugust-2026",
+            "source_checked_at": "2026-10-01T12:15:00Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "",
+        "benchmark_slug": "exploitbench-internal-port",
+        "benchmark_version": "June\u2013August 2026",
+        "metric_key": "exploitbench-internal-port-ace-success",
+        "score_value": "21.5",
+        "score_raw": "21.5%",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+            "checked_at": "2026-10-01T12:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

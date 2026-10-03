@@ -1,0 +1,24 @@
+{
+  "environment": "production",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "cl-bench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "bef78c0fa5817b16cf67aa3a00fb4db7527994d207d0abb57fe685437f4d0003",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "3eb7267bc2b4fc07255d342a3f3ae301bb873775e108bc41a0394c5c6bc8abb8",
+      "message": "result is valid"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "target_registry_no": "130008",
+  "model": "Qwen3.8-Max",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "selected_sources": [
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "date": "2026-08-03",
+      "reviewed": [
+        "Full article text, two full benchmark tables (86 rows, 94 scalar score components), all 36 footnotes",
+        "14 native images, all testimonials, overview chart, training chart and 16-cell cross-harness table",
+        "Expanded research appendix",
+        "Linked contest trajectory: all 45 submission descriptions and scores",
+        "Linked hardware UI: all 13 slider milestones and physical layout captions"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "reviewed": [
+        "Full card; explicit Qwen3.8-Max table identity; text-only weights distinguished from multimodal API Max; release-table overlap reviewed"
+      ]
+    }
+  ],
+  "visible_supported_results_recorded": 170,
+  "outcomes": {
+    "already_present_identical": 6,
+    "unresolved": 121,
+    "ingested_new": 8,
+    "pending_mapping": 35
+  },
+  "remaining_source_work": [
+    "Inspect score-bearing video/interactive media if present; do not claim complete until checked.",
+    "Resolve every remaining primary benchmark metric/version mapping and ingest safe candidates.",
+    "Second-pass whole-source completeness audit."
+  ],
+  "excluded_notes": [
+    {
+      "location": "Research reproduction text and expanded four-round appendix",
+      "reason": "AIME24 values 49.58/50.42/51.67/51.25/52.29 and +7.7/+2.7 gains evaluate fine-tuned Qwen3-8B produced by the agent, not released Qwen3.8-Max."
+    },
+    {
+      "location": "WWW2025 contest text and linked 45-submission trajectory",
+      "reason": "0.60391\u20130.85276 and component validation accuracies evaluate generated BERT/CLIP/Qwen2.5 ensembles, not direct Qwen3.8-Max inference. Agent beat-field percentage 87.1% retained as an unresolved orchestration metric below."
+    },
+    {
+      "location": "Figure 1",
+      "reason": "Eleven training checkpoints (0.474,0.469,0.487,0.586,0.606,0.622,0.616,0.647,0.725,0.719,0.689); released snapshot not identified. No training checkpoint assigned to Registry model."
+    },
+    {
+      "location": "User Feedback images 03,05\u201309,11\u201313",
+      "reason": "Qualitative claims; images 06 and12 explicitly preview identity. No numerical benchmark score for exact final model."
+    },
+    {
+      "location": "Hugging Face structured metadata WildClawBench",
+      "reason": "Community/third-party evaluation attributed to internlm, not the developer own first-party release evaluation. Not over-extracted."
+    },
+    {
+      "location": "Demos and activity totals",
+      "reason": "Commit/PR/issue/turn/action/LOC counts, number of generated menu dishes/screens and dimensional input descriptions are workflow/input statistics, not scored benchmark evaluation."
+    },
+    {
+      "location": "Hardware supplement gate breakdown",
+      "reason": "Registers/MUX/XOR/AND/OR/NOT counts describe implementation composition; gate area and physical metrics retained as observations, not discarded."
+    }
+  ],
+  "second_pass_complete": false,
+  "unexplained_recorded_remainder": 0,
+  "media_access_limitation": {
+    "source_url": "https://cloud.video.taobao.com/vod/c_n2NFWqHeC6isiHkMeVGt3Yc5gpkwXgJZjWPC82UKc.mp4",
+    "status": "BROWSER_SITE_SAFETY_BLOCK",
+    "detail": "Browser security policy prohibited loading the official embedded e-commerce video; no permission prompt or auto-review occurred. No workaround attempted. Text, tables, images and accessible HTML supplements continue to be researched. Video score audit remains unverified."
+  },
+  "hardware_discrepancy": {
+    "prose_cells": [
+      8298,
+      2010,
+      1304,
+      907,
+      765,
+      678
+    ],
+    "gate_area_milestones": [
+      8293,
+      2005,
+      1655,
+      1488,
+      1297,
+      1177,
+      1132,
+      945,
+      904,
+      845,
+      767,
+      698,
+      678
+    ],
+    "interpretation": "Gate Area values are shown independently of the launch prose Yosys cell counts. Initial 8293 Gates differs from 8298 cells in the same visible supplement. No equivalence or correction is inferred."
+  }
+}

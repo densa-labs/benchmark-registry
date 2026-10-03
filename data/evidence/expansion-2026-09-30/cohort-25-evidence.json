@@ -1,0 +1,58 @@
+[
+  {
+    "target_registry_no": "160002",
+    "model": "Inkling-Small",
+    "source_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+    "source_title": "Inkling-Small model card",
+    "source_publisher": "Thinking Machines Lab",
+    "source_publication_date": null,
+    "reported_at": "2026-07-30",
+    "reported_date_evidence": "https://thinkingmachines.ai/news/inkling-small/",
+    "benchmark_as_displayed": "Charxiv RQ original / with python",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — No tools",
+      "charxiv-accuracy"
+    ],
+    "version_as_displayed": "original",
+    "metric": "Reasoning accuracy (%)",
+    "displayed_score": "77.4%",
+    "normalized_stored_score": "77.4",
+    "reasoning_level": "effort=0.99",
+    "configuration": "original; launch explicitly specifies effort0.99 and temperature1.0 for all evaluations.",
+    "source_location": "Model card Evaluation table: Charxiv RQ original / with python; first column Inkling-Small. Launch Multimodality table and complete eval suite repeat identical aggregate.",
+    "normalization": "No scale conversion; percent suffix removed from numeric storage only. Exact percentage retained in score_raw.",
+    "exact_identity": "July30 final Inkling-Small, not July15 Small Preview.",
+    "run_identity": "One displayed aggregate per model/configuration; website, official HF card and launch repeat identical results. No synthetic rerun.",
+    "ingestion_outcome": "ingested_new",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  },
+  {
+    "target_registry_no": "160002",
+    "model": "Inkling-Small",
+    "source_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+    "source_title": "Inkling-Small model card",
+    "source_publisher": "Thinking Machines Lab",
+    "source_publication_date": null,
+    "reported_at": "2026-07-30",
+    "reported_date_evidence": "https://thinkingmachines.ai/news/inkling-small/",
+    "benchmark_as_displayed": "Charxiv RQ original / with python",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Python enabled",
+      "charxiv-accuracy"
+    ],
+    "version_as_displayed": "with python",
+    "metric": "Reasoning accuracy (%)",
+    "displayed_score": "81.3%",
+    "normalized_stored_score": "81.3",
+    "reasoning_level": "effort=0.99",
+    "configuration": "with python; launch explicitly specifies effort0.99 and temperature1.0 for all evaluations.",
+    "source_location": "Model card Evaluation table: Charxiv RQ original / with python; first column Inkling-Small. Launch Multimodality table and complete eval suite repeat identical aggregate.",
+    "normalization": "No scale conversion; percent suffix removed from numeric storage only. Exact percentage retained in score_raw.",
+    "exact_identity": "July30 final Inkling-Small, not July15 Small Preview.",
+    "run_identity": "One displayed aggregate per model/configuration; website, official HF card and launch repeat identical results. No synthetic rerun.",
+    "ingestion_outcome": "ingested_new",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  }
+]

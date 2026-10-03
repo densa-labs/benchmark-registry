@@ -1,0 +1,1765 @@
+[
+  {
+    "key": "inklingMainCard",
+    "cells": [
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling\neffort=0.99",
+        "row": 2,
+        "score": "29.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "HLE\nwith tools",
+        "model": "Inkling\neffort=0.99",
+        "row": 3,
+        "score": "46.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling\neffort=0.99",
+        "row": 4,
+        "score": "97.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling\neffort=0.99",
+        "row": 5,
+        "score": "87.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "SWEBench Verified*",
+        "model": "Inkling\neffort=0.99",
+        "row": 7,
+        "score": "77.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "SWEBench Pro\nPublic",
+        "model": "Inkling\neffort=0.99",
+        "row": 8,
+        "score": "54.3%",
+        "table": 0
+      },
+      {
+        "benchmark": "Terminal Bench 2.1*\nBest Harness",
+        "model": "Inkling\neffort=0.99",
+        "row": 9,
+        "score": "63.8%",
+        "table": 0
+      },
+      {
+        "benchmark": "GDPVal-AA v2",
+        "model": "Inkling\neffort=0.99",
+        "row": 11,
+        "score": "1238",
+        "table": 0
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "model": "Inkling\neffort=0.99",
+        "row": 12,
+        "score": "76.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling\neffort=0.99",
+        "row": 13,
+        "score": "23.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "model": "Inkling\neffort=0.99",
+        "row": 14,
+        "score": "45.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "BrowseComp\nw/ ctx management",
+        "model": "Inkling\neffort=0.99",
+        "row": 15,
+        "score": "77.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling\neffort=0.99",
+        "row": 17,
+        "score": "43.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "AA Omniscience",
+        "model": "Inkling\neffort=0.99",
+        "row": 18,
+        "score": "2.1",
+        "table": 0
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling\neffort=0.99",
+        "row": 20,
+        "score": "79.8%",
+        "table": 0
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling\neffort=0.99",
+        "row": 21,
+        "score": "88.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling\neffort=0.99",
+        "row": 23,
+        "score": "73.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ",
+        "model": "Inkling\neffort=0.99",
+        "row": 24,
+        "score": "78.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ†\nwith python",
+        "model": "Inkling\neffort=0.99",
+        "row": 25,
+        "score": "82.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "Audio MC†",
+        "model": "Inkling\neffort=0.99",
+        "row": 27,
+        "score": "56.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling\neffort=0.99",
+        "row": 28,
+        "score": "77.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "VoiceBench†",
+        "model": "Inkling\neffort=0.99",
+        "row": 29,
+        "score": "91.4%",
+        "table": 0
+      },
+      {
+        "benchmark": "FORTRESS\nAdversarial",
+        "model": "Inkling\neffort=0.99",
+        "row": 31,
+        "score": "78.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "FORTRESS\nBenign",
+        "model": "Inkling\neffort=0.99",
+        "row": 32,
+        "score": "95.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling\neffort=0.99",
+        "row": 33,
+        "score": "98.6%",
+        "table": 0
+      }
+    ]
+  },
+  {
+    "key": "inklingSmallCard",
+    "cells": [
+      {
+        "benchmark": "AA Index\nv4.1",
+        "model": "Inkling-Small",
+        "row": 2,
+        "score": "40.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "AA Index\nv4.1",
+        "model": "Inkling",
+        "row": 2,
+        "score": "41.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "Params (B)\nactivated / total",
+        "model": "Inkling-Small",
+        "row": 3,
+        "score": "12 / 276",
+        "table": 0
+      },
+      {
+        "benchmark": "Params (B)\nactivated / total",
+        "model": "Inkling",
+        "row": 3,
+        "score": "41 / 975",
+        "table": 0
+      },
+      {
+        "benchmark": "SWEBench Verified*",
+        "model": "Inkling-Small",
+        "row": 5,
+        "score": "80.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "SWEBench Verified*",
+        "model": "Inkling",
+        "row": 5,
+        "score": "77.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "SWEBench Pro\npublic",
+        "model": "Inkling-Small",
+        "row": 6,
+        "score": "55.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "SWEBench Pro\npublic",
+        "model": "Inkling",
+        "row": 6,
+        "score": "54.3%",
+        "table": 0
+      },
+      {
+        "benchmark": "Terminal Bench 2.1*\nbest harness",
+        "model": "Inkling-Small",
+        "row": 7,
+        "score": "64.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "Terminal Bench 2.1*\nbest harness",
+        "model": "Inkling",
+        "row": 7,
+        "score": "63.8%",
+        "table": 0
+      },
+      {
+        "benchmark": "SciCode",
+        "model": "Inkling-Small",
+        "row": 8,
+        "score": "48.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "SciCode",
+        "model": "Inkling",
+        "row": 8,
+        "score": "46.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "model": "Inkling-Small",
+        "row": 10,
+        "score": "1269",
+        "table": 0
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "model": "Inkling",
+        "row": 10,
+        "score": "1238",
+        "table": 0
+      },
+      {
+        "benchmark": "MCP Atlas\npublic / all",
+        "model": "Inkling-Small",
+        "row": 11,
+        "score": "79.6/79.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "MCP Atlas\npublic / all",
+        "model": "Inkling",
+        "row": 11,
+        "score": "78.8/76.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling-Small",
+        "row": 12,
+        "score": "15.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling",
+        "row": 12,
+        "score": "23.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "BrowseComp\nwith context management",
+        "model": "Inkling-Small",
+        "row": 13,
+        "score": "77.4%",
+        "table": 0
+      },
+      {
+        "benchmark": "BrowseComp\nwith context management",
+        "model": "Inkling",
+        "row": 13,
+        "score": "77.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "model": "Inkling-Small",
+        "row": 14,
+        "score": "54.4%",
+        "table": 0
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "model": "Inkling",
+        "row": 14,
+        "score": "45.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "model": "Inkling-Small",
+        "row": 15,
+        "score": "917",
+        "table": 0
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "model": "Inkling",
+        "row": 15,
+        "score": "839",
+        "table": 0
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling-Small",
+        "row": 17,
+        "score": "89.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling",
+        "row": 17,
+        "score": "87.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling-Small",
+        "row": 18,
+        "score": "31.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling",
+        "row": 18,
+        "score": "29.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "HLE†\nwith tools",
+        "model": "Inkling-Small",
+        "row": 19,
+        "score": "47.8%",
+        "table": 0
+      },
+      {
+        "benchmark": "HLE†\nwith tools",
+        "model": "Inkling",
+        "row": 19,
+        "score": "46.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling-Small",
+        "row": 20,
+        "score": "95.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling",
+        "row": 20,
+        "score": "97.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "HMMT Feb 2026",
+        "model": "Inkling-Small",
+        "row": 21,
+        "score": "90.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "HMMT Feb 2026",
+        "model": "Inkling",
+        "row": 21,
+        "score": "86.3%",
+        "table": 0
+      },
+      {
+        "benchmark": "CritPt",
+        "model": "Inkling-Small",
+        "row": 22,
+        "score": "8.3%",
+        "table": 0
+      },
+      {
+        "benchmark": "CritPt",
+        "model": "Inkling",
+        "row": 22,
+        "score": "5.4%",
+        "table": 0
+      },
+      {
+        "benchmark": "ARC-AGI-1",
+        "model": "Inkling-Small",
+        "row": 24,
+        "score": "84.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "ARC-AGI-1",
+        "model": "Inkling",
+        "row": 24,
+        "score": "79.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "model": "Inkling-Small",
+        "row": 25,
+        "score": "40.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "model": "Inkling",
+        "row": 25,
+        "score": "36.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling-Small",
+        "row": 27,
+        "score": "20.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling",
+        "row": 27,
+        "score": "43.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "AA Omniscience\nindex",
+        "model": "Inkling-Small",
+        "row": 28,
+        "score": "-9.0",
+        "table": 0
+      },
+      {
+        "benchmark": "AA Omniscience\nindex",
+        "model": "Inkling",
+        "row": 28,
+        "score": "2.1",
+        "table": 0
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling-Small",
+        "row": 30,
+        "score": "82.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling",
+        "row": 30,
+        "score": "79.8%",
+        "table": 0
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling-Small",
+        "row": 31,
+        "score": "86.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling",
+        "row": 31,
+        "score": "88.7%",
+        "table": 0
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling-Small",
+        "row": 33,
+        "score": "98.4%",
+        "table": 0
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling",
+        "row": 33,
+        "score": "98.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "FORTRESS\nadversarial",
+        "model": "Inkling-Small",
+        "row": 34,
+        "score": "71.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "FORTRESS\nadversarial",
+        "model": "Inkling",
+        "row": 34,
+        "score": "78.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "FORTRESS\nbenign",
+        "model": "Inkling-Small",
+        "row": 35,
+        "score": "96.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "FORTRESS\nbenign",
+        "model": "Inkling",
+        "row": 35,
+        "score": "95.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling-Small",
+        "row": 37,
+        "score": "74.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling",
+        "row": 37,
+        "score": "73.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ\noriginal / with python",
+        "model": "Inkling-Small",
+        "row": 38,
+        "score": "77.4/81.3%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ\noriginal / with python",
+        "model": "Inkling",
+        "row": 38,
+        "score": "78.1/82.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "Audio MC†",
+        "model": "Inkling-Small",
+        "row": 40,
+        "score": "54.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "Audio MC†",
+        "model": "Inkling",
+        "row": 40,
+        "score": "56.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling-Small",
+        "row": 41,
+        "score": "77.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling",
+        "row": 41,
+        "score": "77.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "VoiceBench†",
+        "model": "Inkling-Small",
+        "row": 42,
+        "score": "90.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "VoiceBench†",
+        "model": "Inkling",
+        "row": 42,
+        "score": "91.4%",
+        "table": 0
+      }
+    ]
+  },
+  {
+    "key": "inklingMainLaunch",
+    "cells": [
+      {
+        "benchmark": "Audio MC",
+        "model": "Inkling\neffort=0.99",
+        "row": 2,
+        "score": "56.6%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling\neffort=0.99",
+        "row": 3,
+        "score": "77.2%",
+        "table": 0
+      },
+      {
+        "benchmark": "VoiceBench",
+        "model": "Inkling\neffort=0.99",
+        "row": 4,
+        "score": "91.4%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMMU Pro\n(Standard 10)",
+        "model": "Inkling\neffort=0.99",
+        "row": 6,
+        "score": "73.5%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ",
+        "model": "Inkling\neffort=0.99",
+        "row": 7,
+        "score": "78.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ\nwith python",
+        "model": "Inkling\neffort=0.99",
+        "row": 8,
+        "score": "82.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "ForecastBench\nBrier Index ↑ · no search",
+        "model": "Inkling",
+        "row": 1,
+        "score": "61.1 ± 0.79",
+        "table": 2
+      },
+      {
+        "benchmark": "ForecastBench\nBrier Index ↑ · with search",
+        "model": "Inkling",
+        "row": 2,
+        "score": "63.7 ± 0.82",
+        "table": 2
+      },
+      {
+        "benchmark": "Prophet Arena\nBrier Score ↓",
+        "model": "Inkling",
+        "row": 3,
+        "score": "0.1617",
+        "table": 2
+      },
+      {
+        "benchmark": "FORTRESS (Adversarial)",
+        "model": "Inkling\neffort=0.99",
+        "row": 1,
+        "score": "78.0%",
+        "table": 3
+      },
+      {
+        "benchmark": "FORTRESS (Benign)",
+        "model": "Inkling\neffort=0.99",
+        "row": 2,
+        "score": "95.9%",
+        "table": 3
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling\neffort=0.99",
+        "row": 3,
+        "score": "98.6%",
+        "table": 3
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling\neffort=0.99",
+        "row": 2,
+        "score": "29.7%",
+        "table": 4
+      },
+      {
+        "benchmark": "HLE\nwith tools",
+        "model": "Inkling\neffort=0.99",
+        "row": 3,
+        "score": "46.0%",
+        "table": 4
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling\neffort=0.99",
+        "row": 4,
+        "score": "97.1%",
+        "table": 4
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling\neffort=0.99",
+        "row": 5,
+        "score": "87.2%",
+        "table": 4
+      },
+      {
+        "benchmark": "SWEBench Verified*",
+        "model": "Inkling\neffort=0.99",
+        "row": 7,
+        "score": "77.6%",
+        "table": 4
+      },
+      {
+        "benchmark": "SWEBench Pro\nPublic",
+        "model": "Inkling\neffort=0.99",
+        "row": 8,
+        "score": "54.3%",
+        "table": 4
+      },
+      {
+        "benchmark": "Terminal Bench 2.1*\nBest Harness",
+        "model": "Inkling\neffort=0.99",
+        "row": 9,
+        "score": "63.8%",
+        "table": 4
+      },
+      {
+        "benchmark": "GDPVal-AA v2",
+        "model": "Inkling\neffort=0.99",
+        "row": 11,
+        "score": "1238",
+        "table": 4
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "model": "Inkling\neffort=0.99",
+        "row": 12,
+        "score": "76.0%",
+        "table": 4
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling\neffort=0.99",
+        "row": 13,
+        "score": "23.7%",
+        "table": 4
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "model": "Inkling\neffort=0.99",
+        "row": 14,
+        "score": "45.5%",
+        "table": 4
+      },
+      {
+        "benchmark": "BrowseComp\nw/ ctx management",
+        "model": "Inkling\neffort=0.99",
+        "row": 15,
+        "score": "77.1%",
+        "table": 4
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling\neffort=0.99",
+        "row": 17,
+        "score": "43.9%",
+        "table": 4
+      },
+      {
+        "benchmark": "AA Omniscience",
+        "model": "Inkling\neffort=0.99",
+        "row": 18,
+        "score": "2.1",
+        "table": 4
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling\neffort=0.99",
+        "row": 20,
+        "score": "79.8%",
+        "table": 4
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling\neffort=0.99",
+        "row": 21,
+        "score": "88.7%",
+        "table": 4
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling\neffort=0.99",
+        "row": 23,
+        "score": "73.5%",
+        "table": 4
+      },
+      {
+        "benchmark": "Charxiv RQ",
+        "model": "Inkling\neffort=0.99",
+        "row": 24,
+        "score": "78.1%",
+        "table": 4
+      },
+      {
+        "benchmark": "Charxiv RQ†\nwith python",
+        "model": "Inkling\neffort=0.99",
+        "row": 25,
+        "score": "82.0%",
+        "table": 4
+      },
+      {
+        "benchmark": "Audio MC†",
+        "model": "Inkling\neffort=0.99",
+        "row": 27,
+        "score": "56.6%",
+        "table": 4
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling\neffort=0.99",
+        "row": 28,
+        "score": "77.2%",
+        "table": 4
+      },
+      {
+        "benchmark": "VoiceBench†",
+        "model": "Inkling\neffort=0.99",
+        "row": 29,
+        "score": "91.4%",
+        "table": 4
+      },
+      {
+        "benchmark": "FORTRESS\nAdversarial",
+        "model": "Inkling\neffort=0.99",
+        "row": 31,
+        "score": "78.0%",
+        "table": 4
+      },
+      {
+        "benchmark": "FORTRESS\nBenign",
+        "model": "Inkling\neffort=0.99",
+        "row": 32,
+        "score": "95.9%",
+        "table": 4
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling\neffort=0.99",
+        "row": 33,
+        "score": "98.6%",
+        "table": 4
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling\neffort=0.99",
+        "row": 2,
+        "score": "29.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 2,
+        "score": "29.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE\nwith tools",
+        "model": "Inkling\neffort=0.99",
+        "row": 3,
+        "score": "46.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE\nwith tools",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 3,
+        "score": "46.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling\neffort=0.99",
+        "row": 4,
+        "score": "97.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 4,
+        "score": "95.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling\neffort=0.99",
+        "row": 5,
+        "score": "87.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 5,
+        "score": "88.3%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Verified",
+        "model": "Inkling\neffort=0.99",
+        "row": 7,
+        "score": "77.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Verified",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 7,
+        "score": "77.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Pro\nPublic",
+        "model": "Inkling\neffort=0.99",
+        "row": 8,
+        "score": "54.3%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Pro\nPublic",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 8,
+        "score": "53.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "Terminal Bench 2.1\nBest Harness",
+        "model": "Inkling\neffort=0.99",
+        "row": 9,
+        "score": "63.8%*",
+        "table": 6
+      },
+      {
+        "benchmark": "Terminal Bench 2.1\nBest Harness",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 9,
+        "score": "52.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling\neffort=0.99",
+        "row": 11,
+        "score": "23.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 11,
+        "score": "13.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "MCP-Atlas",
+        "model": "Inkling\neffort=0.99",
+        "row": 12,
+        "score": "76.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "MCP-Atlas",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 12,
+        "score": "74.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling\neffort=0.99",
+        "row": 14,
+        "score": "43.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 14,
+        "score": "20.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling\neffort=0.99",
+        "row": 16,
+        "score": "79.8%",
+        "table": 6
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 16,
+        "score": "83.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling\neffort=0.99",
+        "row": 17,
+        "score": "88.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 17,
+        "score": "86.8%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling\neffort=0.99",
+        "row": 19,
+        "score": "73.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 19,
+        "score": "73.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "Charxiv RQ",
+        "model": "Inkling\neffort=0.99",
+        "row": 20,
+        "score": "78.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "Charxiv RQ",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 20,
+        "score": "76.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "Charxiv RQ\nwith python",
+        "model": "Inkling\neffort=0.99",
+        "row": 21,
+        "score": "82.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "Charxiv RQ\nwith python",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 21,
+        "score": "83.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "Audio MC",
+        "model": "Inkling\neffort=0.99",
+        "row": 23,
+        "score": "56.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "Audio MC",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 23,
+        "score": "49.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling\neffort=0.99",
+        "row": 24,
+        "score": "77.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 24,
+        "score": "77.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "VoiceBench",
+        "model": "Inkling\neffort=0.99",
+        "row": 25,
+        "score": "91.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "VoiceBench",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 25,
+        "score": "90.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nAdversarial",
+        "model": "Inkling\neffort=0.99",
+        "row": 27,
+        "score": "78.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nAdversarial",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 27,
+        "score": "75.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nBenign",
+        "model": "Inkling\neffort=0.99",
+        "row": 28,
+        "score": "95.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nBenign",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 28,
+        "score": "94.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling\neffort=0.99",
+        "row": 29,
+        "score": "98.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling-Small\n(Preview)\neffort=0.99",
+        "row": 29,
+        "score": "98.8%",
+        "table": 6
+      }
+    ]
+  },
+  {
+    "key": "inklingSmallTables",
+    "cells": [
+      {
+        "benchmark": "MMMU Pro\n(Standard 10)",
+        "model": "Inkling-Small",
+        "row": 2,
+        "score": "74.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "Charxiv RQ\noriginal / with python",
+        "model": "Inkling-Small",
+        "row": 3,
+        "score": "77.4/81.3%",
+        "table": 0
+      },
+      {
+        "benchmark": "Audio MC",
+        "model": "Inkling-Small",
+        "row": 5,
+        "score": "54.9%",
+        "table": 0
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling-Small",
+        "row": 6,
+        "score": "77.0%",
+        "table": 0
+      },
+      {
+        "benchmark": "VoiceBench",
+        "model": "Inkling-Small",
+        "row": 7,
+        "score": "90.1%",
+        "table": 0
+      },
+      {
+        "benchmark": "ForecastBench\nno search · Brier Index ↑",
+        "model": "Inkling-Small",
+        "row": 2,
+        "score": "61.3 ± 0.46",
+        "table": 2
+      },
+      {
+        "benchmark": "ForecastBench\nno search · Brier Index ↑",
+        "model": "Inkling",
+        "row": 2,
+        "score": "60.1 ± 0.54",
+        "table": 2
+      },
+      {
+        "benchmark": "ForecastBench\nwith search · Brier Index ↑",
+        "model": "Inkling-Small",
+        "row": 3,
+        "score": "61.5 ± 0.54",
+        "table": 2
+      },
+      {
+        "benchmark": "ForecastBench\nwith search · Brier Index ↑",
+        "model": "Inkling",
+        "row": 3,
+        "score": "61.0 ± 0.56",
+        "table": 2
+      },
+      {
+        "benchmark": "Prophet Arena\nBrier Score ↓",
+        "model": "Inkling-Small",
+        "row": 4,
+        "score": "0.1238 ± 0.0086",
+        "table": 2
+      },
+      {
+        "benchmark": "Prophet Arena\nBrier Score ↓",
+        "model": "Inkling",
+        "row": 4,
+        "score": "0.1276 ± 0.0092",
+        "table": 2
+      },
+      {
+        "benchmark": "FORTRESS\nadversarial",
+        "model": "Inkling-Small",
+        "row": 1,
+        "score": "71.6%",
+        "table": 4
+      },
+      {
+        "benchmark": "FORTRESS\nadversarial",
+        "model": "Inkling",
+        "row": 1,
+        "score": "78.0%",
+        "table": 4
+      },
+      {
+        "benchmark": "FORTRESS\nbenign",
+        "model": "Inkling-Small",
+        "row": 2,
+        "score": "96.9%",
+        "table": 4
+      },
+      {
+        "benchmark": "FORTRESS\nbenign",
+        "model": "Inkling",
+        "row": 2,
+        "score": "95.9%",
+        "table": 4
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling-Small",
+        "row": 3,
+        "score": "98.4%",
+        "table": 4
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling",
+        "row": 3,
+        "score": "98.6%",
+        "table": 4
+      },
+      {
+        "benchmark": "AA Index\nv4.1",
+        "model": "Inkling-Small",
+        "row": 2,
+        "score": "40.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "AA Index\nv4.1",
+        "model": "Inkling",
+        "row": 2,
+        "score": "41.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "Params (B)\nactivated / total",
+        "model": "Inkling-Small",
+        "row": 3,
+        "score": "12 / 276",
+        "table": 6
+      },
+      {
+        "benchmark": "Params (B)\nactivated / total",
+        "model": "Inkling",
+        "row": 3,
+        "score": "41 / 975",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Verified*",
+        "model": "Inkling-Small",
+        "row": 5,
+        "score": "80.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Verified*",
+        "model": "Inkling",
+        "row": 5,
+        "score": "77.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Pro\npublic",
+        "model": "Inkling-Small",
+        "row": 6,
+        "score": "55.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "SWEBench Pro\npublic",
+        "model": "Inkling",
+        "row": 6,
+        "score": "54.3%",
+        "table": 6
+      },
+      {
+        "benchmark": "Terminal Bench 2.1*\nbest harness",
+        "model": "Inkling-Small",
+        "row": 7,
+        "score": "64.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "Terminal Bench 2.1*\nbest harness",
+        "model": "Inkling",
+        "row": 7,
+        "score": "63.8%",
+        "table": 6
+      },
+      {
+        "benchmark": "SciCode",
+        "model": "Inkling-Small",
+        "row": 8,
+        "score": "48.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "SciCode",
+        "model": "Inkling",
+        "row": 8,
+        "score": "46.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "model": "Inkling-Small",
+        "row": 10,
+        "score": "1269",
+        "table": 6
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "model": "Inkling",
+        "row": 10,
+        "score": "1238",
+        "table": 6
+      },
+      {
+        "benchmark": "MCP Atlas\npublic / all",
+        "model": "Inkling-Small",
+        "row": 11,
+        "score": "79.6/79.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "MCP Atlas\npublic / all",
+        "model": "Inkling",
+        "row": 11,
+        "score": "78.8/76.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling-Small",
+        "row": 12,
+        "score": "15.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "model": "Inkling",
+        "row": 12,
+        "score": "23.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "BrowseComp\nwith context management",
+        "model": "Inkling-Small",
+        "row": 13,
+        "score": "77.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "BrowseComp\nwith context management",
+        "model": "Inkling",
+        "row": 13,
+        "score": "77.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "model": "Inkling-Small",
+        "row": 14,
+        "score": "54.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "Toolathlon Verified",
+        "model": "Inkling",
+        "row": 14,
+        "score": "45.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "model": "Inkling-Small",
+        "row": 15,
+        "score": "917",
+        "table": 6
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "model": "Inkling",
+        "row": 15,
+        "score": "839",
+        "table": 6
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling-Small",
+        "row": 17,
+        "score": "89.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "model": "Inkling",
+        "row": 17,
+        "score": "87.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling-Small",
+        "row": 18,
+        "score": "31.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE\ntext only",
+        "model": "Inkling",
+        "row": 18,
+        "score": "29.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE†\nwith tools",
+        "model": "Inkling-Small",
+        "row": 19,
+        "score": "47.8%",
+        "table": 6
+      },
+      {
+        "benchmark": "HLE†\nwith tools",
+        "model": "Inkling",
+        "row": 19,
+        "score": "46.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling-Small",
+        "row": 20,
+        "score": "95.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "AIME 2026",
+        "model": "Inkling",
+        "row": 20,
+        "score": "97.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "HMMT Feb 2026",
+        "model": "Inkling-Small",
+        "row": 21,
+        "score": "90.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "HMMT Feb 2026",
+        "model": "Inkling",
+        "row": 21,
+        "score": "86.3%",
+        "table": 6
+      },
+      {
+        "benchmark": "CritPt",
+        "model": "Inkling-Small",
+        "row": 22,
+        "score": "8.3%",
+        "table": 6
+      },
+      {
+        "benchmark": "CritPt",
+        "model": "Inkling",
+        "row": 22,
+        "score": "5.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "ARC-AGI-1",
+        "model": "Inkling-Small",
+        "row": 24,
+        "score": "84.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "ARC-AGI-1",
+        "model": "Inkling",
+        "row": 24,
+        "score": "79.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "model": "Inkling-Small",
+        "row": 25,
+        "score": "40.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "model": "Inkling",
+        "row": 25,
+        "score": "36.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling-Small",
+        "row": 27,
+        "score": "20.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "SimpleQA Verified",
+        "model": "Inkling",
+        "row": 27,
+        "score": "43.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "AA Omniscience\nindex",
+        "model": "Inkling-Small",
+        "row": 28,
+        "score": "-9.0",
+        "table": 6
+      },
+      {
+        "benchmark": "AA Omniscience\nindex",
+        "model": "Inkling",
+        "row": 28,
+        "score": "2.1",
+        "table": 6
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling-Small",
+        "row": 30,
+        "score": "82.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "IFBench",
+        "model": "Inkling",
+        "row": 30,
+        "score": "79.8%",
+        "table": 6
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling-Small",
+        "row": 31,
+        "score": "86.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "model": "Inkling",
+        "row": 31,
+        "score": "88.7%",
+        "table": 6
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling-Small",
+        "row": 33,
+        "score": "98.4%",
+        "table": 6
+      },
+      {
+        "benchmark": "StrongREJECT",
+        "model": "Inkling",
+        "row": 33,
+        "score": "98.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nadversarial",
+        "model": "Inkling-Small",
+        "row": 34,
+        "score": "71.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nadversarial",
+        "model": "Inkling",
+        "row": 34,
+        "score": "78.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nbenign",
+        "model": "Inkling-Small",
+        "row": 35,
+        "score": "96.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "FORTRESS\nbenign",
+        "model": "Inkling",
+        "row": 35,
+        "score": "95.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling-Small",
+        "row": 37,
+        "score": "74.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMMU Pro\nStandard 10",
+        "model": "Inkling",
+        "row": 37,
+        "score": "73.5%",
+        "table": 6
+      },
+      {
+        "benchmark": "Charxiv RQ\noriginal / with python",
+        "model": "Inkling-Small",
+        "row": 38,
+        "score": "77.4/81.3%",
+        "table": 6
+      },
+      {
+        "benchmark": "Charxiv RQ\noriginal / with python",
+        "model": "Inkling",
+        "row": 38,
+        "score": "78.1/82.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "Audio MC†",
+        "model": "Inkling-Small",
+        "row": 40,
+        "score": "54.9%",
+        "table": 6
+      },
+      {
+        "benchmark": "Audio MC†",
+        "model": "Inkling",
+        "row": 40,
+        "score": "56.6%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling-Small",
+        "row": 41,
+        "score": "77.0%",
+        "table": 6
+      },
+      {
+        "benchmark": "MMAU",
+        "model": "Inkling",
+        "row": 41,
+        "score": "77.2%",
+        "table": 6
+      },
+      {
+        "benchmark": "VoiceBench†",
+        "model": "Inkling-Small",
+        "row": 42,
+        "score": "90.1%",
+        "table": 6
+      },
+      {
+        "benchmark": "VoiceBench†",
+        "model": "Inkling",
+        "row": 42,
+        "score": "91.4%",
+        "table": 6
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "target_registry_nos": [
+    "130007"
+  ],
+  "checked_at": "2026-10-02T14:37:34Z",
+  "candidates": [
+    {
+      "observation_id": "qwen37plus-037",
+      "target_registry_no": "130007",
+      "model": "Qwen3.7-Plus",
+      "source_url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "source_title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-06-01",
+      "reported_at": "2026-06-01",
+      "source_checked_at": "2026-10-02T14:22:47Z",
+      "benchmark_as_displayed": "MMMLU",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Scalar score;author mapping pending",
+      "displayed_score": "89.0",
+      "normalized_stored_score": "89.0",
+      "reasoning_level": "",
+      "configuration": "",
+      "location": "Text table,row36,target final column,component1",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact named existing single-release benchmark and primary author sole accuracy metric match canonical edition. Own developer result stored on displayed0\u2013100scale unchanged;evaluated reasoning unspecified remains unset.",
+      "canonical_benchmark_slug": "mmmlu",
+      "canonical_version": "Original",
+      "metric_key": "mmmlu-accuracy",
+      "benchmark_identity_sources": [
+        "https://huggingface.co/datasets/openai/MMMLU"
+      ],
+      "published_cohort": "19"
+    },
+    {
+      "observation_id": "qwen37plus-063",
+      "target_registry_no": "130007",
+      "model": "Qwen3.7-Plus",
+      "source_url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "source_title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-06-01",
+      "reported_at": "2026-06-01",
+      "source_checked_at": "2026-10-02T14:22:47Z",
+      "benchmark_as_displayed": "RealWorldQA",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Scalar score;author mapping pending",
+      "displayed_score": "86.9",
+      "normalized_stored_score": "86.9",
+      "reasoning_level": "",
+      "configuration": "",
+      "location": "Multimodal table,row19,target final column,component1",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact named existing single-release benchmark and primary author sole accuracy metric match canonical edition. Own developer result stored on displayed0\u2013100scale unchanged;evaluated reasoning unspecified remains unset.",
+      "canonical_benchmark_slug": "realworldqa",
+      "canonical_version": "Original",
+      "metric_key": "realworldqa-accuracy",
+      "benchmark_identity_sources": [
+        "https://x.ai/news/grok-1.5v"
+      ],
+      "published_cohort": "19"
+    }
+  ],
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "new_families": 0,
+  "new_versions": 0,
+  "new_metrics": 0,
+  "new_evaluators": 0,
+  "source_audit_complete": true
+}

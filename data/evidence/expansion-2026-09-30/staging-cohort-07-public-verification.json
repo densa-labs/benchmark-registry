@@ -1,0 +1,34 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 1,
+  "models": [
+    {
+      "registry_no": "10015",
+      "before": 25,
+      "added": 1,
+      "after": 26,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 1,
+  "companies_verified": [
+    "openai"
+  ],
+  "exact_results": [
+    {
+      "result_key": "1f698fc32e43fac4b5f2f04f87782ba4f58fc2638a85270a96652c474737e01a",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 778,
+    "models": 94,
+    "benchmarks": 63,
+    "versions": 114
+  },
+  "sitemap_count": 874,
+  "published_generations": [
+    "9c4684e3fb1d4cea9983f14a8bdc5842"
+  ]
+}

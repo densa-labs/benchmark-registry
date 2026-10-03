@@ -1,0 +1,11 @@
+{
+  "environment": "staging",
+  "mode": "recovery_verification",
+  "status": "CANONICAL_COMMIT_CONFIRMED_BY_NO_WRITE_REPLAY_AND_PUBLICATION",
+  "original_commit_outcomes_unavailable": true,
+  "new_results": 2,
+  "new_versions": 2,
+  "canonical_results_after": 856,
+  "replay_artifact": "staging-cohort-12-replay.json",
+  "materialization_artifact": "staging-cohort-12-materialization-after.json"
+}

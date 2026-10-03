@@ -1,0 +1,2596 @@
+{
+  "status": "PUBLISHED_PARTIAL_PASS_AUDITS_DEFERRED_BY_USER",
+  "qualifying_models": 57,
+  "models_with_recorded_discoveries": 57,
+  "models_without_recorded_discoveries": 0,
+  "models_with_new_results_published": 39,
+  "new_results_ingested": 290,
+  "canonical_corrections": 0,
+  "new_benchmark_families": [
+    "Global MMLU",
+    "Multi-task Indic Language Understanding Benchmark",
+    "BeyondAIME",
+    "SpatialBench",
+    "LongBench",
+    "PerceptionBench",
+    "PaperBench",
+    "MTVQA",
+    "RealWorldQA",
+    "SHP2 Protein Function Prediction",
+    "Coronavirus–ACE2 Cell-Entry Screen",
+    "Phage–plasmid Co-evolution",
+    "Embodied Reasoning Question Answer",
+    "ScreenSpot-Pro",
+    "International Physics Olympiad",
+    "FrontierScience",
+    "MMMLU",
+    "CL-bench",
+    "Video-MME"
+  ],
+  "new_benchmark_versions": 28,
+  "new_metrics": 20,
+  "staging_results_before": 636,
+  "staging_results_after": 927,
+  "production_results_before": 636,
+  "production_results_after": 926,
+  "sitemap_before": 820,
+  "sitemap_after": 946,
+  "staging_and_production_public_verification": "PASS",
+  "public_d1_reads_remain_zero": true,
+  "replay_skipped_records_per_environment": {
+    "cohort_01": 113,
+    "cohort_02": 7,
+    "cohort_03": 2,
+    "cohort_04": 16,
+    "cohort_05": 7,
+    "cohort_06": 6,
+    "cohort_08": 6,
+    "cohort_09": 20,
+    "cohort_10": 30,
+    "cohort_11": 29,
+    "cohort_12": 3,
+    "cohort_13": 34,
+    "cohort_14": 3,
+    "cohort_15": 3,
+    "cohort_16": 2,
+    "cohort_17": 10,
+    "cohort_18": 2,
+    "cohort_19": 2,
+    "cohort_20": 3,
+    "cohort_21": 1,
+    "cohort_22": 1,
+    "cohort_23": 8,
+    "cohort_24": 6,
+    "cohort_25": 2
+  },
+  "replay_canonical_writes": 0,
+  "materialization_noop_rebuilt_objects": 0,
+  "source_visible_totals_fully_reconciled": false,
+  "limitations": [
+    "Source completeness audits are still open. Discovery counts do not mean a model has completed its exhaustive source audit.",
+    "HTML compound score cells and overlaps between sources still need complete result-level reconciliation.",
+    "Multiple-metric benchmark versions and indistinguishable evaluation configurations cannot be ingested under current frozen contracts.",
+    "Result metadata corrections are unsupported by the guarded correction workflow; existing conflicts remain deferred.",
+    "Further audits and mappings deferred by user on2026-10-03. This is a published partial pass; global visible-result totals are not fully reconciled."
+  ],
+  "models": [
+    {
+      "registry_no": "20013",
+      "model": "Claude Sonnet 5",
+      "release_date": "2026-06-30",
+      "before_results": 2,
+      "added": 14,
+      "after_results": 16,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "40001",
+      "model": "Grok 4.5",
+      "release_date": "2026-07-16",
+      "before_results": 2,
+      "added": 1,
+      "after_results": 3,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://cursor.com/resources/grok-4-5-model-card.pdf",
+        "https://media.x.ai/v1/website/4p5-5184fdf9.pdf",
+        "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+        "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+        "https://x.ai/news/grok-4-5",
+        "https://x.ai/news/grok-4-6"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations reconciled; each deferred conflict and unresolved result has its individual reason. No candidate pending.",
+      "visible_supported_results": 55,
+      "visible_results": 55,
+      "raw_source_observations": 79,
+      "repeated_citation_observations": 24,
+      "already_present": 0,
+      "existing": 0,
+      "unresolved": 40,
+      "conflicts": 14,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "staging_after_results": 3
+    },
+    {
+      "registry_no": "10013",
+      "model": "GPT-6 Luna",
+      "release_date": "2026-09-22",
+      "before_results": 1,
+      "added": 14,
+      "after_results": 15,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "10009",
+      "model": "GPT-5.6 Luna",
+      "release_date": "2026-07-09",
+      "before_results": 7,
+      "added": 15,
+      "after_results": 22,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deploymentsafety.openai.com/gpt-5-6",
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "10010",
+      "model": "GPT-5.6 Sol",
+      "release_date": "2026-07-09",
+      "before_results": 9,
+      "added": 14,
+      "after_results": 23,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deploymentsafety.openai.com/gpt-5-6",
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "10011",
+      "model": "GPT-5.6 Terra",
+      "release_date": "2026-07-09",
+      "before_results": 7,
+      "added": 0,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deploymentsafety.openai.com/gpt-5-6"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "80002",
+      "model": "Muse Spark 1.1",
+      "release_date": "2026-07-09",
+      "before_results": 11,
+      "added": 0,
+      "after_results": 11,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Official-source evaluation extraction and completeness audit"
+    },
+    {
+      "registry_no": "160001",
+      "model": "Inkling",
+      "release_date": "2026-07-15",
+      "before_results": 9,
+      "added": 3,
+      "after_results": 12,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://thinkingmachines.ai/model-card/inkling/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Publication complete. Authoritative AIME/HMMT/MMAU/VoiceBench/FORTRESS metadata resolution and remaining mapping audits deferred at user request. External run/source conflicts remain individually documented; source inspection complete.",
+      "staging_after_results": 12,
+      "visible_supported_results": 76,
+      "visible_results": 76,
+      "raw_source_observations": 267,
+      "already_present": 10,
+      "existing": 10,
+      "unresolved": 62,
+      "conflicts": 4,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0,
+      "source_audit_artifact": "inkling-source-audits.json"
+    },
+    {
+      "registry_no": "120003",
+      "model": "Kimi K3",
+      "release_date": "2026-07-16",
+      "before_results": 11,
+      "added": 5,
+      "after_results": 16,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/moonshotai/Kimi-K3",
+        "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "https://www.kimi.ai/blog/kimi-k3",
+        "https://arxiv.org/pdf/2607.24957v1",
+        "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "All121 visible accessible-source records reconciled:5 new+8 identical+4 deferred conflicts+104 explicitly unresolved. Five new results verified in staging and production. AISI linked figures remain uninspected because browser automatic approval review reported a usage limit; supplement audit remains NO.",
+      "staging_after_results": 16,
+      "visible_supported_results": 121,
+      "visible_results": 121,
+      "raw_source_observations": 192,
+      "repeated_citation_observations": 71,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 104,
+      "conflicts": 4,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0,
+      "all_safely_mappable_accessible_results_ingested": "YES"
+    },
+    {
+      "registry_no": "30007",
+      "model": "Gemini 3.6 Flash",
+      "release_date": "2026-07-21",
+      "before_results": 5,
+      "added": 2,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "https://deepmind.com/models/evals-methodology/gemini-3-6-flash"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible records reconciled. Deferred conflicts and unresolved records are individually documented in gemini-flash-source-audits.json; no safely mappable record remains.",
+      "staging_after_results": 7,
+      "visible_supported_results": 24,
+      "visible_results": 24,
+      "raw_source_observations": 90,
+      "repeated_citation_observations": 66,
+      "already_present": 4,
+      "existing": 4,
+      "unresolved": 17,
+      "conflicts": 1,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0
+    },
+    {
+      "registry_no": "20014",
+      "model": "Claude Opus 5",
+      "release_date": "2026-07-24",
+      "before_results": 3,
+      "added": 30,
+      "after_results": 33,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "https://www.anthropic.com/news/claude-opus-5"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "No safely mappable remainder; every unresolved observation has an explicit identity, metric, edition, configuration or provenance limit. Two source conflicts deferred; no corrections.",
+      "visible_results": 361,
+      "staging_after_results": 33,
+      "unresolved": 329,
+      "conflicts": 2
+    },
+    {
+      "registry_no": "160002",
+      "model": "Inkling-Small",
+      "release_date": "2026-07-30",
+      "before_results": 9,
+      "added": 2,
+      "after_results": 11,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://thinkingmachines.ai/model-card/inkling-small/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Publication complete. Authoritative AIME/HMMT/MMAU/VoiceBench/FORTRESS metadata resolution and remaining mapping audits deferred at user request. External run/source conflicts remain individually documented; source inspection complete.",
+      "staging_after_results": 11,
+      "visible_supported_results": 56,
+      "visible_results": 56,
+      "raw_source_observations": 140,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 46,
+      "conflicts": 0,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0,
+      "source_audit_artifact": "inkling-source-audits.json"
+    },
+    {
+      "registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "release_date": "2026-08-02",
+      "before_results": 7,
+      "added": 8,
+      "after_results": 15,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://qwen.ai/blog?id=qwen3.8",
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "35 remaining observation mappings, whole-source second pass and blocked embedded-video audit.",
+      "visible_results": 170,
+      "existing": 6,
+      "unresolved": 121
+    },
+    {
+      "registry_no": "80003",
+      "model": "Muse Spark 1.2",
+      "release_date": "2026-08-05",
+      "before_results": 9,
+      "added": 1,
+      "after_results": 10,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Exact benchmark metadata, run conflict reconciliation and pending candidate publication"
+    },
+    {
+      "registry_no": "80004",
+      "model": "Muse Glimmer 30B",
+      "release_date": "2026-08-10",
+      "before_results": 8,
+      "added": 3,
+      "after_results": 11,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+        "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+        "https://research.meta.ai/static/muse-glimmer-methodology"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Author benchmark metadata, linked methodology cross-check and pending candidate publication"
+    },
+    {
+      "registry_no": "40002",
+      "model": "Grok 4.6",
+      "release_date": "2026-08-12",
+      "before_results": 4,
+      "added": 1,
+      "after_results": 5,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+        "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+        "https://x.ai/news/grok-4-6",
+        "https://x.ai/news/grok-4-7"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations reconciled; each deferred conflict and unresolved result has its individual reason. No candidate pending.",
+      "visible_supported_results": 52,
+      "visible_results": 52,
+      "raw_source_observations": 79,
+      "repeated_citation_observations": 27,
+      "already_present": 1,
+      "existing": 1,
+      "unresolved": 45,
+      "conflicts": 5,
+      "pending_ingestion": 0,
+      "pending_mapping": 0
+    },
+    {
+      "registry_no": "70003",
+      "model": "MAI-Thinking-1",
+      "release_date": "2026-08-12",
+      "before_results": 6,
+      "added": 1,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://microsoft.ai/pdf/mai-thinking-1.pdf"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "30010",
+      "model": "Gemini 3.7 Flash",
+      "release_date": "2026-08-13",
+      "before_results": 6,
+      "added": 2,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible records reconciled. Deferred conflicts and unresolved records are individually documented in gemini-flash-source-audits.json; no safely mappable record remains.",
+      "staging_after_results": 8,
+      "visible_supported_results": 41,
+      "visible_results": 41,
+      "raw_source_observations": 122,
+      "repeated_citation_observations": 81,
+      "already_present": 5,
+      "existing": 5,
+      "unresolved": 34,
+      "conflicts": 0,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0
+    },
+    {
+      "registry_no": "150005",
+      "model": "GLM-5.3",
+      "release_date": "2026-08-14",
+      "before_results": 7,
+      "added": 0,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://z.ai/blog/glm-5.3"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "150006",
+      "model": "GLM-5.3-Flash",
+      "release_date": "2026-08-26",
+      "before_results": 6,
+      "added": 0,
+      "after_results": 6,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://z.ai/blog/glm-5.3-flash"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "20004",
+      "model": "Claude Fable 5.1",
+      "release_date": "2026-09-01",
+      "before_results": 9,
+      "added": 20,
+      "after_results": 29,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+        "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+        "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+        "https://www.anthropic.com/news/improving-alignment-security-efforts"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "Ten source/legacy metadata conflicts deferred; all unresolved observations have explicit contract or evidence reasons.",
+      "visible_results": 211,
+      "staging_after_results": 29,
+      "existing": 1,
+      "unresolved": 180,
+      "conflicts": 10
+    },
+    {
+      "registry_no": "30004",
+      "model": "Gemini 3.8 Flash",
+      "release_date": "2026-09-02",
+      "before_results": 8,
+      "added": 0,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "https://deepmind.google/models/gemini/flash/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible records reconciled. Deferred conflicts and unresolved records are individually documented in gemini-flash-source-audits.json; no safely mappable record remains.",
+      "staging_after_results": 8,
+      "visible_supported_results": 15,
+      "visible_results": 15,
+      "raw_source_observations": 48,
+      "repeated_citation_observations": 33,
+      "already_present": 6,
+      "existing": 6,
+      "unresolved": 7,
+      "conflicts": 2,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0
+    },
+    {
+      "registry_no": "80005",
+      "model": "Muse Spark 1.3",
+      "release_date": "2026-09-02",
+      "before_results": 9,
+      "added": 0,
+      "after_results": 9,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Exact benchmark metadata, run conflict reconciliation and pending candidate publication"
+    },
+    {
+      "registry_no": "10005",
+      "model": "GPT-6 Astra",
+      "release_date": "2026-09-03",
+      "before_results": 8,
+      "added": 13,
+      "after_results": 21,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "40003",
+      "model": "Grok 4.7",
+      "release_date": "2026-09-21",
+      "before_results": 3,
+      "added": 1,
+      "after_results": 4,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+        "https://x.ai/news/grok-4-7"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations reconciled; each deferred conflict and unresolved result has its individual reason. No candidate pending.",
+      "visible_supported_results": 43,
+      "visible_results": 43,
+      "raw_source_observations": 47,
+      "repeated_citation_observations": 4,
+      "already_present": 1,
+      "existing": 1,
+      "unresolved": 36,
+      "conflicts": 5,
+      "pending_ingestion": 0,
+      "pending_mapping": 0
+    },
+    {
+      "registry_no": "10014",
+      "model": "GPT-6 Sol",
+      "release_date": "2026-09-22",
+      "before_results": 3,
+      "added": 12,
+      "after_results": 15,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "20015",
+      "model": "Claude Opus 5.5",
+      "release_date": "2026-09-22",
+      "before_results": 5,
+      "added": 16,
+      "after_results": 21,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://cursor.com/cursorbench",
+        "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "20016",
+      "model": "Claude Sonnet 5.5",
+      "release_date": "2026-09-28",
+      "before_results": 14,
+      "added": 15,
+      "after_results": 29,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "https://www.anthropic.com/claude-sonnet-5-5"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "No safely mappable selected-source result remains; all 128 unresolved records have individual reasons in reviewed-sonnet55-observations.json.",
+      "visible_results": 157,
+      "existing": 14,
+      "unresolved": 128,
+      "conflicts": 0
+    },
+    {
+      "registry_no": "10015",
+      "model": "GPT-6.1 Sol",
+      "release_date": "2026-09-29",
+      "before_results": 25,
+      "added": 3,
+      "after_results": 28,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deploymentsafety.openai.com/gpt-6-1-sol",
+        "https://openai.com/index/introducing-gpt-6-1-sol/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "60 observations still pending mapping, including one staging-only Internal Port result awaiting the timestamp recheck; 110 explicitly unresolved; source second-pass checklist remains open.",
+      "visible_results": 198,
+      "existing": 25,
+      "staging_after_results": 29
+    },
+    {
+      "registry_no": "80001",
+      "model": "Muse Spark",
+      "release_date": "2026-04-08",
+      "before_results": 2,
+      "added": 23,
+      "after_results": 25,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "23 additions verified in both environments. Second completeness review remains open for513 unresolved observations and10 source conflicts.",
+      "visible_results": 546,
+      "staging_after_results": 25,
+      "unresolved": 513,
+      "conflicts": 10
+    },
+    {
+      "registry_no": "20012",
+      "model": "Claude Fable 5",
+      "release_date": "2026-06-09",
+      "before_results": 2,
+      "added": 3,
+      "after_results": 5,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+        "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "Three safely mapped additions verified in staging and production.127 individually unresolved observations and2 source-conflicting SWE-Pro values retained.132=3new+127unresolved+2conflicts;no unexplained remainder. Historical June9 configurations preserved separately from June30 safeguards.",
+      "visible_supported_results": 132,
+      "pending_ingestion": 0,
+      "unresolved": 127,
+      "conflicts": 2,
+      "already_present_identical": 0,
+      "staging_after_results": 5
+    },
+    {
+      "registry_no": "130004",
+      "model": "Qwen3.6-Plus",
+      "release_date": "2026-04-02",
+      "before_results": 11,
+      "added": 4,
+      "after_results": 15,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://qwen.ai/blog?id=qwen3.6",
+        "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All69observations accounted for:4new,7identical,56explicitlyunresolved,2validconflictsdeferred. Four additions fully published and verified;no safely mapped candidate remains.",
+      "visible_supported_results": 69,
+      "pending_ingestion": 0,
+      "staging_after_results": 15,
+      "visible_results": 69,
+      "existing": 7,
+      "conflicts": 2,
+      "unresolved": 56,
+      "pending_mapping": 0
+    },
+    {
+      "registry_no": "35001",
+      "model": "Gemma 4 26B A4B Instruct",
+      "release_date": "2026-04-02",
+      "before_results": 8,
+      "added": 0,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://arxiv.org/pdf/2607.02770v2",
+        "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "https://huggingface.co/google/gemma-4-31B-it",
+        "https://huggingface.co/google/gemma-4-12B-it",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason.",
+      "visible_supported_results": 39,
+      "visible_results": 39,
+      "raw_source_observations": 58,
+      "repeated_citation_observations": 19,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 29,
+      "conflicts": 2,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "all_safely_mappable_accessible_results_ingested": "YES"
+    },
+    {
+      "registry_no": "35002",
+      "model": "Gemma 4 31B Instruct",
+      "release_date": "2026-04-02",
+      "before_results": 8,
+      "added": 0,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://arxiv.org/pdf/2607.02770v2",
+        "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "https://huggingface.co/google/gemma-4-31B-it",
+        "https://huggingface.co/google/gemma-4-12B-it",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason.",
+      "visible_supported_results": 39,
+      "visible_results": 39,
+      "raw_source_observations": 58,
+      "repeated_citation_observations": 19,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 29,
+      "conflicts": 2,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "all_safely_mappable_accessible_results_ingested": "YES"
+    },
+    {
+      "registry_no": "35003",
+      "model": "Gemma 4 E2B Instruct",
+      "release_date": "2026-04-02",
+      "before_results": 8,
+      "added": 0,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://arxiv.org/pdf/2607.02770v2",
+        "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "https://huggingface.co/google/gemma-4-31B-it",
+        "https://huggingface.co/google/gemma-4-12B-it",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason.",
+      "visible_supported_results": 56,
+      "visible_results": 56,
+      "raw_source_observations": 73,
+      "repeated_citation_observations": 17,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 44,
+      "conflicts": 4,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "all_safely_mappable_accessible_results_ingested": "YES"
+    },
+    {
+      "registry_no": "35004",
+      "model": "Gemma 4 E4B Instruct",
+      "release_date": "2026-04-02",
+      "before_results": 8,
+      "added": 0,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://arxiv.org/pdf/2607.02770v2",
+        "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "https://huggingface.co/google/gemma-4-31B-it",
+        "https://huggingface.co/google/gemma-4-12B-it",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason.",
+      "visible_supported_results": 57,
+      "visible_results": 57,
+      "raw_source_observations": 73,
+      "repeated_citation_observations": 16,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 45,
+      "conflicts": 4,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "all_safely_mappable_accessible_results_ingested": "YES"
+    },
+    {
+      "registry_no": "150003",
+      "model": "GLM-5.1",
+      "release_date": "2026-04-07",
+      "before_results": 7,
+      "added": 0,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/zai-org/GLM-5.1"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "20010",
+      "model": "Claude Opus 4.7",
+      "release_date": "2026-04-16",
+      "before_results": 8,
+      "added": 10,
+      "after_results": 18,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://anthropic.com/claude-opus-4-7-system-card",
+        "https://www.anthropic.com/news/claude-opus-4-7"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All407observations reconcile:10published new,7identical existing,382explicitly unresolved,8conflicting representations deferred. No safely mapped candidate remains. Unresolved/conflict details are itemized in reviewed-opus47-observations.json;no unexplained remainder.",
+      "visible_supported_results": 407,
+      "pending_mapping": 0,
+      "staging_after_results": 18,
+      "already_present": 7,
+      "unresolved": 382,
+      "conflicts": 8,
+      "pending_ingestion": 0
+    },
+    {
+      "registry_no": "130005",
+      "model": "Qwen3.6-35B-A3B",
+      "release_date": "2026-04-17",
+      "before_results": 8,
+      "added": 3,
+      "after_results": 11,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "120002",
+      "model": "Kimi K2.6",
+      "release_date": "2026-04-20",
+      "before_results": 12,
+      "added": 5,
+      "after_results": 17,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/moonshotai/Kimi-K2.6"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "10008",
+      "model": "GPT-5.5",
+      "release_date": "2026-04-23",
+      "before_results": 10,
+      "added": 0,
+      "after_results": 10,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deploymentsafety.openai.com/gpt-5-6"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "110001",
+      "model": "DeepSeek-V4-Flash",
+      "release_date": "2026-04-24",
+      "before_results": 10,
+      "added": 17,
+      "after_results": 27,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "https://arxiv.org/abs/2606.19348v1",
+        "https://api-docs.deepseek.com/news/news260424"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All34 safely mapped additions verified in both environments. Remaining321 unresolved observations and6 metadata conflicts retain individual reasons in reviewed-deepseek-v4-observations.json. Series-only Putnam2025 retained separately without target assignment.",
+      "visible_results": 70,
+      "existing": 6,
+      "conflicts": 3,
+      "unresolved": 44,
+      "pending_mapping": 0,
+      "pending_ingestion": 0,
+      "staging_after_results": 27
+    },
+    {
+      "registry_no": "110002",
+      "model": "DeepSeek-V4-Pro",
+      "release_date": "2026-04-24",
+      "before_results": 10,
+      "added": 17,
+      "after_results": 27,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "https://arxiv.org/abs/2606.19348v1",
+        "https://api-docs.deepseek.com/news/news260424"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All34 safely mapped additions verified in both environments. Remaining321 unresolved observations and6 metadata conflicts retain individual reasons in reviewed-deepseek-v4-observations.json. Series-only Putnam2025 retained separately without target assignment.",
+      "visible_results": 303,
+      "existing": 6,
+      "conflicts": 3,
+      "unresolved": 277,
+      "pending_mapping": 0,
+      "pending_ingestion": 0,
+      "staging_after_results": 27
+    },
+    {
+      "registry_no": "50004",
+      "model": "Composer 2.5",
+      "release_date": "2026-05-18",
+      "before_results": 4,
+      "added": 2,
+      "after_results": 6,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://cursor.com/blog/composer-2-5",
+        "https://cursor.com/changelog/composer-2-5",
+        "https://cursor.com/composer",
+        "https://cursor.com/docs/models/cursor-composer-2-5",
+        "https://cursor.com/cursorbench",
+        "https://cursor.com/blog/cursorbench",
+        "https://cursor.com/blog/reward-hacking-coding-benchmarks"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All2 safely mapped additions verified in both environments. Five individually unresolved observations retain exact metric/edition reasons;4 duplicates skipped.",
+      "visible_results": 11,
+      "existing": 4,
+      "unresolved": 5,
+      "conflicts": 0,
+      "staging_after_results": 6,
+      "pending_ingestion": 0
+    },
+    {
+      "registry_no": "30006",
+      "model": "Gemini 3.5 Flash",
+      "release_date": "2026-05-19",
+      "before_results": 8,
+      "added": 1,
+      "after_results": 9,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "https://deepmind.com/models/evals-methodology/gemini-3-5-flash"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All visible records reconciled. Deferred conflicts and unresolved records are individually documented in gemini-flash-source-audits.json; no safely mappable record remains.",
+      "staging_after_results": 9,
+      "visible_supported_results": 18,
+      "visible_results": 18,
+      "raw_source_observations": 72,
+      "repeated_citation_observations": 54,
+      "already_present": 3,
+      "existing": 3,
+      "unresolved": 11,
+      "conflicts": 3,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "unexplained_source_visible_results": 0
+    },
+    {
+      "registry_no": "130006",
+      "model": "Qwen3.7-Max",
+      "release_date": "2026-05-20",
+      "before_results": 8,
+      "added": 2,
+      "after_results": 10,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://qwen.ai/blog?id=qwen3.7",
+        "https://docs.qwenlm.ai/resources/hUbVe_evolving_ppu_case.html",
+        "https://docs.qwenlm.ai/resources/YdJUk_yc_bench.html",
+        "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "https://github.com/AlibabaCloud-Official/Qwen3.7-max-readme/blob/main/README.md"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "Complete source audit:74 observations=2 new+7 identical+65 explicitly unresolved;zero pending or unexplained.",
+      "visible_supported_results": 74,
+      "already_present": 7,
+      "unresolved": 65,
+      "conflicts": 0,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "staging_after_results": 10
+    },
+    {
+      "registry_no": "90005",
+      "model": "Mistral Medium 3.5",
+      "release_date": "2026-05-22",
+      "before_results": 7,
+      "added": 1,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Selected model card fully reviewed; linked supplements and recorded mapping decisions remain.",
+      "visible_results": 10,
+      "existing": 6,
+      "unresolved": 2,
+      "conflicts": 1
+    },
+    {
+      "registry_no": "20011",
+      "model": "Claude Opus 4.8",
+      "release_date": "2026-05-28",
+      "before_results": 10,
+      "added": 0,
+      "after_results": 10,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www-cdn.anthropic.com/0f0c97ad20d8005706296bd92aa1c27c6b2f4f61/Claude%20Opus%204.8%20System%20Card.pdf",
+        "https://www.anthropic.com/news/claude-opus-4-8"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Current246pagecarddownloadedandparsed;pages1–9,194–199actuallyread;finishentirecard/allfigures/appendices/linkedmethods.SourcechangelogJune17correctsvirology. Terminalhighversuslegacymaxrequiresmetadatareview;ProgramBenchnear-finalsnapshotexcludedfromfinalmodelunlessexactidentitysupported.",
+      "visible_supported_results_so_far": 21,
+      "pending_mapping": 21
+    },
+    {
+      "registry_no": "140003",
+      "model": "MiniMax M3",
+      "release_date": "2026-06-01",
+      "before_results": 5,
+      "added": 2,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www.minimax.io/blog/minimax-m3",
+        "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "https://github.com/MiniMax-AI/MiniMax-M3",
+        "https://arxiv.org/abs/2606.13392",
+        "https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "All 67 observations reconciled: 2 new, 5 identical, 58 individually unresolved and 2 deferred conflicts. No pending or unexplained observations.",
+      "visible_supported_results_so_far": 35,
+      "pending_mapping": 0,
+      "visible_supported_results": 67,
+      "already_present": 5,
+      "unresolved": 58,
+      "conflicts": 2,
+      "pending_ingestion": 0,
+      "staging_after_results": 7
+    },
+    {
+      "registry_no": "70002",
+      "model": "MAI-Code-1-Flash",
+      "release_date": "2026-06-02",
+      "before_results": 4,
+      "added": 1,
+      "after_results": 5,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://microsoft.ai/news/introducingmai-code-1-flash/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "130007",
+      "model": "Qwen3.7-Plus",
+      "release_date": "2026-06-03",
+      "before_results": 12,
+      "added": 2,
+      "after_results": 14,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://qwen.ai/blog?id=qwen3.7-plus",
+        "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "Complete source audit:78 observations=2 new+11 identical+65 explicitly unresolved;zero pending or unexplained.",
+      "visible_supported_results": 78,
+      "already_present": 11,
+      "unresolved": 65,
+      "conflicts": 0,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "staging_after_results": 14
+    },
+    {
+      "registry_no": "35005",
+      "model": "Gemma 4 12B Instruct",
+      "release_date": "2026-06-03",
+      "before_results": 8,
+      "added": 1,
+      "after_results": 9,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://arxiv.org/pdf/2607.02770v2",
+        "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "https://huggingface.co/google/gemma-4-31B-it",
+        "https://huggingface.co/google/gemma-4-12B-it",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+        "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Official benchmark image is blank in rendered page. Direct native-browser navigation to 1200/1600 renditions is blocked (ERR_BLOCKED_BY_CLIENT), and web retrieval reports application/octet-stream unsupported. No image scores guessed or substituted from unofficial copies. 12B additional-launch audit remains NO.",
+      "visible_supported_results": 53,
+      "visible_results": 53,
+      "raw_source_observations": 66,
+      "repeated_citation_observations": 13,
+      "already_present": 8,
+      "existing": 8,
+      "unresolved": 44,
+      "conflicts": 0,
+      "pending_ingestion": 0,
+      "pending_mapping": 0,
+      "all_safely_mappable_accessible_results_ingested": "YES",
+      "staging_after_results": 9
+    },
+    {
+      "registry_no": "60003",
+      "model": "NVIDIA Nemotron 3 Ultra 550B-A55B",
+      "release_date": "2026-06-04",
+      "before_results": 7,
+      "added": 0,
+      "after_results": 7,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf",
+        "https://github.com/NVIDIA-NeMo/Evaluator/blob/main/examples/nemotron/nemotron-3-ultra/reproducibility.md"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "Source audit complete: 101 observations = 95 individually unresolved + 6 deferred historical column/identity conflicts; zero pending or unexplained observations. No safely representable new result and no canonical correction was forced. All individual blockers retained in the evidence ledger.",
+      "visible_supported_results_so_far": 22,
+      "pending_mapping": 0,
+      "visible_supported_results": 101,
+      "already_present": 0,
+      "unresolved": 95,
+      "conflicts": 6,
+      "pending_ingestion": 0
+    },
+    {
+      "registry_no": "150004",
+      "model": "GLM-5.2",
+      "release_date": "2026-06-16",
+      "before_results": 8,
+      "added": 0,
+      "after_results": 8,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/zai-org/GLM-5.2"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+    },
+    {
+      "registry_no": "130001",
+      "model": "Qwen3-Max-Instruct",
+      "release_date": "2025-09-24",
+      "before_results": 1,
+      "added": 0,
+      "after_results": 1,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d",
+        "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621"
+      ],
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "remaining_work": "No safely mappable remainder:5=1identical+4 individually unresolved. Source and exact model identity inspected;no score or metadata corrections.",
+      "visible_supported_results": 5,
+      "already_present": 1,
+      "unresolved": 4,
+      "conflicts": 0,
+      "pending_ingestion": 0,
+      "pending_mapping": 0
+    },
+    {
+      "registry_no": "20005",
+      "model": "Claude Sonnet 4.5",
+      "release_date": "2025-09-29",
+      "before_results": 2,
+      "added": 0,
+      "after_results": 2,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://www.anthropic.com/news/claude-sonnet-4-5",
+        "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd/Claude%20Sonnet%204.5%20System%20Card.pdf"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Wholelaunchtextandallmethodfootnotesread;13maintablescalars+1extraSWEcontextconfiguration+5privatecustomerbenchclaimsrecorded.Finishfourdomainchartsandmisalignmentfigure,andentire149pagesystemcard/allcapabilityfigures/linkedauthorprotocols;noauditYESyet.",
+      "visible_supported_results_so_far": 19,
+      "pending_mapping": 19
+    },
+    {
+      "registry_no": "90001",
+      "model": "Mistral Large 3",
+      "release_date": "2025-12-02",
+      "before_results": 1,
+      "added": 0,
+      "after_results": 1,
+      "recorded_discoveries": true,
+      "official_sources": [
+        "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512"
+      ],
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "remaining_work": "Selected model card fully reviewed; linked supplements and recorded mapping decisions remain."
+    }
+  ],
+  "publication_generations": {
+    "staging": {
+      "previous": {
+        "generation": "7d8949461ad6415b85743aac289d58d5",
+        "canonicalRevision": "385c8628310bf293fecee23aa8b807e4",
+        "watermark": 36388,
+        "objects": 324
+      },
+      "current": {
+        "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+        "canonicalRevision": "da2def864caafff6bdf5b41e7c911e58",
+        "watermark": 36463,
+        "objects": 324
+      }
+    },
+    "production": {
+      "previous": {
+        "generation": "797e8c2acdb54e879ebb0c60ed9c9e66",
+        "canonicalRevision": "3a9847053f28280ad4ed01202711870d",
+        "watermark": 36278,
+        "objects": 322
+      },
+      "current": {
+        "generation": "fdcf2a35a6f147498d661e19c07b9ad6",
+        "canonicalRevision": "7f61ee9aef4868822302594f3a063630",
+        "watermark": 36353,
+        "objects": 322
+      }
+    }
+  },
+  "new_evaluators": [
+    "Cohere For AI",
+    "AI4Bharat",
+    "Artificial Analysis",
+    "ByteDance Seed",
+    "LatchBio",
+    "LongBench Authors",
+    "ByteDance",
+    "ScreenSpot-Pro Authors",
+    "MedXpertQA Authors",
+    "International Physics Olympiad"
+  ],
+  "cohort_02": {
+    "new_results": 6,
+    "affected_models": 4,
+    "staging_and_production_public_verification": "PASS",
+    "sitemap_before": 843,
+    "sitemap_after": 849,
+    "atomic_rollback_probe": "1 passed before each commit",
+    "staging_generation": "f964f281f5204db991f0a5d6602f1fbc",
+    "production_generation": "1ba410b4c9c74c669e03eb30368f0476",
+    "new_benchmark_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 1
+  },
+  "cohort_03": {
+    "new_results": 1,
+    "affected_models": 1,
+    "staging_and_production_public_verification": "PASS",
+    "sitemap_before": 849,
+    "sitemap_after": 853,
+    "scope_inventory_increase": 3,
+    "concurrent_public_route_inventory_increase": 1,
+    "atomic_rollback_probe": "1 passed before each commit",
+    "new_benchmark_families": 1,
+    "new_versions": 1,
+    "new_metrics": 1,
+    "new_evaluators": 1,
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "f56c441557c84bfdb4069ec0952b56b2",
+          "canonicalRevision": "6a6927c58c3a52062d813a685860185a",
+          "watermark": 20806,
+          "objects": 280
+        },
+        "current": {
+          "generation": "8d9f668255494b8cba456c428540b33d",
+          "canonicalRevision": "6a6927c58c3a52062d813a685860185a",
+          "watermark": 20806,
+          "objects": 281
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "3549e44f1f9347ffbb5fb754574951ee",
+          "canonicalRevision": "72905c2c33982ff4655d1a412f8dca95",
+          "watermark": 20756,
+          "objects": 279
+        },
+        "current": {
+          "generation": "137632e62119499d809081ac97e27f67",
+          "canonicalRevision": "3f38ea37d308b4d964ee87ce0899e4f5",
+          "watermark": 20806,
+          "objects": 281
+        }
+      }
+    },
+    "publication_compatibility_evidence": "cohort-03-publication-compatibility.json"
+  },
+  "cohort_04": {
+    "new_results": 15,
+    "affected_models": 1,
+    "staging_and_production_public_verification": "PASS",
+    "sitemap_before": 853,
+    "sitemap_after": 855,
+    "atomic_rollback_probe": "1 passed before each commit",
+    "new_benchmark_families": 1,
+    "new_versions": 1,
+    "new_metrics": 1,
+    "new_evaluators": 1,
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "8d9f668255494b8cba456c428540b33d",
+          "canonicalRevision": "6a6927c58c3a52062d813a685860185a",
+          "watermark": 20806,
+          "objects": 281
+        },
+        "current": {
+          "generation": "597e2d3daef2442e9af4bafd7e101203",
+          "canonicalRevision": "86a63daba90aaf1ae50d20caea78056d",
+          "watermark": 21945,
+          "objects": 283
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "137632e62119499d809081ac97e27f67",
+          "canonicalRevision": "3f38ea37d308b4d964ee87ce0899e4f5",
+          "watermark": 20806,
+          "objects": 281
+        },
+        "current": {
+          "generation": "2fef76635f35498caac49ca3be940909",
+          "canonicalRevision": "9a2df10f52ed0222b9b27cd9fdf81f36",
+          "watermark": 21945,
+          "objects": 283
+        }
+      }
+    },
+    "canonical_results_before": 754,
+    "canonical_results_after": 769
+  },
+  "cohort_05": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 5,
+    "benchmark_records": 2,
+    "canonical_results_before": 769,
+    "canonical_results_after": 774,
+    "materialized_canonical_urls": 858,
+    "live_sitemap_urls": 862,
+    "live_sitemap_note": "Live route inventory includes four additional independently implemented public static routes beyond the materialized canonical inventory; this pass makes no product/route changes.",
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "597e2d3daef2442e9af4bafd7e101203",
+          "canonicalRevision": "86a63daba90aaf1ae50d20caea78056d",
+          "watermark": 21945,
+          "objects": 283
+        },
+        "current": {
+          "generation": "f7bead684a554cc0af5deb72edfd4aa9",
+          "canonicalRevision": "7ee928d196d8b6901257c9301db257b5",
+          "watermark": 22063,
+          "objects": 287
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "2fef76635f35498caac49ca3be940909",
+          "canonicalRevision": "9a2df10f52ed0222b9b27cd9fdf81f36",
+          "watermark": 21945,
+          "objects": 283
+        },
+        "current": {
+          "generation": "881261a0dbb94bdb8d8dbcd268027119",
+          "canonicalRevision": "06aa0fa598584b080c80aa729517bb2b",
+          "watermark": 22063,
+          "objects": 287
+        }
+      }
+    },
+    "batch_sha256": "8502063d590247fb15aee30f1210e9803ce934fef82e7376ab137cbee88f3d99",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 7,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_06": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 3,
+    "benchmark_records": 3,
+    "canonical_results_before": 774,
+    "canonical_results_after": 777,
+    "sitemap_before": 862,
+    "live_sitemap_urls": 871,
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "f7bead684a554cc0af5deb72edfd4aa9",
+          "canonicalRevision": "7ee928d196d8b6901257c9301db257b5",
+          "watermark": 22063,
+          "objects": 287
+        },
+        "current": {
+          "generation": "3c20e1db596846e282687dd927e57649",
+          "canonicalRevision": "e475374f6d334575b1bee87d5cf8c66e",
+          "watermark": 22195,
+          "objects": 293
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "881261a0dbb94bdb8d8dbcd268027119",
+          "canonicalRevision": "06aa0fa598584b080c80aa729517bb2b",
+          "watermark": 22063,
+          "objects": 287
+        },
+        "current": {
+          "generation": "80d67abf9bfd49a19d5ea43f702c553f",
+          "canonicalRevision": "d6e5f20aaa59e697f0e1fd5bb7c89666",
+          "watermark": 22195,
+          "objects": 293
+        }
+      }
+    },
+    "batch_sha256": "9521e1b50665bb12cfe472c6c63d0bbedd26d1416f8b3de7ba868a8dd627753f",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 6,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0,
+    "ingestor_tests": "45 passed, 1 deselected",
+    "atomic_rollback_probe": "1 passed before each commit"
+  },
+  "staging_sitemap_after": 949,
+  "cohort_08": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 3,
+    "new_benchmark_records": 3,
+    "counts": {
+      "staging": {
+        "before": 778,
+        "after": 781,
+        "sitemap": 883
+      },
+      "production": {
+        "before": 777,
+        "after": 780,
+        "sitemap": 880
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "9c4684e3fb1d4cea9983f14a8bdc5842",
+          "canonicalRevision": "83e1a2a40cbecebcbcc0dddc79819f80",
+          "watermark": 22296,
+          "objects": 295
+        },
+        "current": {
+          "generation": "67e401fbad5c43219c6fc37aa1694780",
+          "canonicalRevision": "b282e7ca7ab79f3349c574f29b58e51b",
+          "watermark": 22617,
+          "objects": 301
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "881261a0dbb94bdb8d8dbcd268027119",
+          "canonicalRevision": "06aa0fa598584b080c80aa729517bb2b",
+          "watermark": 22063,
+          "objects": 287
+        },
+        "current": {
+          "generation": "80d67abf9bfd49a19d5ea43f702c553f",
+          "canonicalRevision": "d6e5f20aaa59e697f0e1fd5bb7c89666",
+          "watermark": 22195,
+          "objects": 293
+        }
+      }
+    },
+    "batch_sha256": "6ae2ffd64ed7364b8b20dac3828d00627941ad997bd48f03d1cac202bf166ac6",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 6,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_07": {
+    "status": "STAGING_VERIFIED_PRODUCTION_HELD_FOR_TIMESTAMP_RECHECK",
+    "new_results_staging_only": 1,
+    "timestamp_issue_artifact": "cohort-07-evidence.json",
+    "public_d1_rows": 0
+  },
+  "cohort_09": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 20,
+    "new_benchmark_records": 0,
+    "counts": {
+      "staging": {
+        "before": 781,
+        "after": 801,
+        "sitemap": 883
+      },
+      "production": {
+        "before": 780,
+        "after": 800,
+        "sitemap": 880
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "67e401fbad5c43219c6fc37aa1694780",
+          "canonicalRevision": "b282e7ca7ab79f3349c574f29b58e51b",
+          "watermark": 22617,
+          "objects": 301
+        },
+        "current": {
+          "generation": "14253904893549a7a51de5e969e8cde9",
+          "canonicalRevision": "9e19f46b7414f48e2e3cea2046706499",
+          "watermark": 23847,
+          "objects": 301
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "1c29334ee7ed4c4c82517f9fdeb32338",
+          "canonicalRevision": "616498ee129f832d9f62f0203ed57e69",
+          "watermark": 22507,
+          "objects": 299
+        },
+        "current": {
+          "generation": "44697316704044b28d05810074ac1c0d",
+          "canonicalRevision": "99fedd1e57eed7fa7c0bfa4276cd9aa1",
+          "watermark": 23737,
+          "objects": 299
+        }
+      }
+    },
+    "batch_sha256": "189f731a4ac706c52b58558b7f469adbd47c650ba27f4d952b9be9c6ceb00ccd",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 20,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_10": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 30,
+    "new_benchmark_records": 0,
+    "counts": {
+      "staging": {
+        "before": 801,
+        "after": 831,
+        "sitemap": 887
+      },
+      "production": {
+        "before": 800,
+        "after": 830,
+        "sitemap": 884
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "14253904893549a7a51de5e969e8cde9",
+          "canonicalRevision": "9e19f46b7414f48e2e3cea2046706499",
+          "watermark": 23847,
+          "objects": 301
+        },
+        "current": {
+          "generation": "a9ec1bdf30b64751a53319e71d2ad11b",
+          "canonicalRevision": "5f999de0b0f9802c674db289a53b16e5",
+          "watermark": 29112,
+          "objects": 301
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "44697316704044b28d05810074ac1c0d",
+          "canonicalRevision": "99fedd1e57eed7fa7c0bfa4276cd9aa1",
+          "watermark": 23737,
+          "objects": 299
+        },
+        "current": {
+          "generation": "60f6c2d0603b4dad8311a5a7d57c27b6",
+          "canonicalRevision": "c393436e667fd84c7b0487a4c5574cdd",
+          "watermark": 29002,
+          "objects": 299
+        }
+      }
+    },
+    "batch_sha256": "c26d07127d440a34c9b6e50caf236d8c716adc1fbb4b88a381e03e4c6182f4bf",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 30,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_11": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 23,
+    "new_benchmark_records": 6,
+    "new_families": 4,
+    "new_versions": 8,
+    "new_metrics": 5,
+    "new_evaluators": 3,
+    "counts": {
+      "staging": {
+        "before": 831,
+        "after": 854,
+        "sitemap_before": 887,
+        "sitemap": 916
+      },
+      "production": {
+        "before": 830,
+        "after": 853,
+        "sitemap_before": 884,
+        "sitemap": 913
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "a9ec1bdf30b64751a53319e71d2ad11b",
+          "canonicalRevision": "5f999de0b0f9802c674db289a53b16e5",
+          "watermark": 29112,
+          "objects": 301
+        },
+        "current": {
+          "generation": "944e112659c448b38d6e19dd99733ddb",
+          "canonicalRevision": "9bf562ce31d9982744e5e9b8cb0a1f17",
+          "watermark": 30455,
+          "objects": 313
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "60f6c2d0603b4dad8311a5a7d57c27b6",
+          "canonicalRevision": "c393436e667fd84c7b0487a4c5574cdd",
+          "watermark": 29002,
+          "objects": 299
+        },
+        "current": {
+          "generation": "00c30ea59fff4ffea62d725e19b65bf9",
+          "canonicalRevision": "125eb9817cf4c1dd11a999873fe498bc",
+          "watermark": 30345,
+          "objects": 311
+        }
+      }
+    },
+    "batch_sha256": "daf2189a3a9cac68b6dcdc9a0edb931667f27bc4e659d64873801b3fbb3ccd26",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 29,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_12": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 2,
+    "new_benchmark_records": 1,
+    "new_families": 0,
+    "new_versions": 2,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 854,
+        "after": 856,
+        "sitemap_before": 916,
+        "sitemap": 920
+      },
+      "production": {
+        "before": 853,
+        "after": 855,
+        "sitemap_before": 913,
+        "sitemap": 917
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "944e112659c448b38d6e19dd99733ddb",
+          "canonicalRevision": "9bf562ce31d9982744e5e9b8cb0a1f17",
+          "watermark": 30455,
+          "objects": 313
+        },
+        "current": {
+          "generation": "b1f4c988a6af4daebdbda6e49fa279c4",
+          "canonicalRevision": "7af670b8417d528aa31fefde14c23aa8",
+          "watermark": 31007,
+          "objects": 315
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "00c30ea59fff4ffea62d725e19b65bf9",
+          "canonicalRevision": "125eb9817cf4c1dd11a999873fe498bc",
+          "watermark": 30345,
+          "objects": 311
+        },
+        "current": {
+          "generation": "14f7692224cc4ff2b09abe951daaeeff",
+          "canonicalRevision": "51c3fcea98b762ccaedcc8812518a0f1",
+          "watermark": 30897,
+          "objects": 313
+        }
+      }
+    },
+    "batch_sha256": "9a5ee72d05be12d381c0729a04f097a94ec92c27c3ea2e83d4822a7feceae05c",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 3,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0,
+    "staging_commit_recovery_evidence": "staging-cohort-12-commit-recovery.json"
+  },
+  "cohort_13": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 34,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 856,
+        "after": 890,
+        "sitemap_before": 920,
+        "sitemap": 908
+      },
+      "production": {
+        "before": 855,
+        "after": 889,
+        "sitemap_before": 917,
+        "sitemap": 905
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "b1f4c988a6af4daebdbda6e49fa279c4",
+          "canonicalRevision": "7af670b8417d528aa31fefde14c23aa8",
+          "watermark": 31007,
+          "objects": 315
+        },
+        "current": {
+          "generation": "f500d20f43774e8984fa3dc8f61373ae",
+          "canonicalRevision": "d2aacea9a38f89ce8d1127518805822d",
+          "watermark": 34934,
+          "objects": 315
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "14f7692224cc4ff2b09abe951daaeeff",
+          "canonicalRevision": "51c3fcea98b762ccaedcc8812518a0f1",
+          "watermark": 30897,
+          "objects": 313
+        },
+        "current": {
+          "generation": "9c96f5d0ec064a019b64fe9dff2127d0",
+          "canonicalRevision": "c5ebc616e9a2373aca6517f157e70fdf",
+          "watermark": 34824,
+          "objects": 313
+        }
+      }
+    },
+    "batch_sha256": "1bc2b7e770addb9da4291509a6d91580eb6d2e77d2c76a06a7b4e2ad7b46b560",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 34,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0,
+    "sitemap_note": "Twelve previously exact-eligible result routes become controlled ambiguous states after distinct effort configurations are added; inventory reflects canonical eligibility."
+  },
+  "cohort_14": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 3,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 890,
+        "after": 893,
+        "sitemap_before": 908,
+        "sitemap": 911
+      },
+      "production": {
+        "before": 889,
+        "after": 892,
+        "sitemap_before": 905,
+        "sitemap": 908
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "f500d20f43774e8984fa3dc8f61373ae",
+          "canonicalRevision": "d2aacea9a38f89ce8d1127518805822d",
+          "watermark": 34934,
+          "objects": 315
+        },
+        "current": {
+          "generation": "6011db257e664afda54ca27af4ed3730",
+          "canonicalRevision": "7e884e7f4f5e104dfb9b8836f11cf8ab",
+          "watermark": 34979,
+          "objects": 315
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "9c96f5d0ec064a019b64fe9dff2127d0",
+          "canonicalRevision": "c5ebc616e9a2373aca6517f157e70fdf",
+          "watermark": 34824,
+          "objects": 313
+        },
+        "current": {
+          "generation": "d6313ef60046449ca59edcc5357c5750",
+          "canonicalRevision": "3c0bf3b6c300450ba41077c1e918d289",
+          "watermark": 34869,
+          "objects": 313
+        }
+      }
+    },
+    "batch_sha256": "9bac7912758ace4d9a6d0e2b0b7318150f240aa1803229b0ec1ee978bc7c9f47",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 3,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_15": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 3,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 893,
+        "after": 896,
+        "sitemap_before": 911,
+        "sitemap": 914
+      },
+      "production": {
+        "before": 892,
+        "after": 895,
+        "sitemap_before": 908,
+        "sitemap": 911
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "6011db257e664afda54ca27af4ed3730",
+          "canonicalRevision": "7e884e7f4f5e104dfb9b8836f11cf8ab",
+          "watermark": 34979,
+          "objects": 315
+        },
+        "current": {
+          "generation": "809cde36fba94783b6c0f48f17b0c17c",
+          "canonicalRevision": "f7258ebd04db03b8b330a858063ddb51",
+          "watermark": 35087,
+          "objects": 315
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "d6313ef60046449ca59edcc5357c5750",
+          "canonicalRevision": "3c0bf3b6c300450ba41077c1e918d289",
+          "watermark": 34869,
+          "objects": 313
+        },
+        "current": {
+          "generation": "e7d2d7c8c59341bdaed9e2dc4430e139",
+          "canonicalRevision": "95f460845661ea877184d4c8e68c60b8",
+          "watermark": 34977,
+          "objects": 313
+        }
+      }
+    },
+    "batch_sha256": "0c57a4eb109f8b8487d521c0c0a88b95fdc72855e114bb9b57aec6f261ac1812",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 3,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_16": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 1,
+    "new_families": 1,
+    "new_versions": 1,
+    "new_metrics": 1,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 896,
+        "after": 897,
+        "sitemap_before": 914,
+        "sitemap": 917
+      },
+      "production": {
+        "before": 895,
+        "after": 896,
+        "sitemap_before": 911,
+        "sitemap": 914
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "809cde36fba94783b6c0f48f17b0c17c",
+          "canonicalRevision": "f7258ebd04db03b8b330a858063ddb51",
+          "watermark": 35087,
+          "objects": 315
+        },
+        "current": {
+          "generation": "08f2c3a6310e4855ac073ca4b25b3fe2",
+          "canonicalRevision": "12853f8e224367d22667a243cbf27095",
+          "watermark": 35143,
+          "objects": 317
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "e7d2d7c8c59341bdaed9e2dc4430e139",
+          "canonicalRevision": "95f460845661ea877184d4c8e68c60b8",
+          "watermark": 34977,
+          "objects": 313
+        },
+        "current": {
+          "generation": "041515d2f4614052ae236a162c5f42fc",
+          "canonicalRevision": "3e5535210bf51a95dcf58d32928a3146",
+          "watermark": 35033,
+          "objects": 315
+        }
+      }
+    },
+    "batch_sha256": "8f78ea3a9e1a68e5cc996232ef11cf67ee93917c11f3d4e386fb493bd4a127da",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 2,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_17": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 10,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 897,
+        "after": 907,
+        "sitemap_before": 917,
+        "sitemap": 922
+      },
+      "production": {
+        "before": 896,
+        "after": 906,
+        "sitemap_before": 914,
+        "sitemap": 919
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "08f2c3a6310e4855ac073ca4b25b3fe2",
+          "canonicalRevision": "12853f8e224367d22667a243cbf27095",
+          "watermark": 35143,
+          "objects": 317
+        },
+        "current": {
+          "generation": "35640290f87740a5b9f3a135e2062b65",
+          "canonicalRevision": "2117b08065b8ab5b64320714c91c134a",
+          "watermark": 35608,
+          "objects": 317
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "041515d2f4614052ae236a162c5f42fc",
+          "canonicalRevision": "3e5535210bf51a95dcf58d32928a3146",
+          "watermark": 35033,
+          "objects": 315
+        },
+        "current": {
+          "generation": "b126b818436c43a19ea2b25cba616bf3",
+          "canonicalRevision": "b9555ff47d79315123da2568eba3a533",
+          "watermark": 35498,
+          "objects": 315
+        }
+      }
+    },
+    "batch_sha256": "6f3584fc99c662e5568dbbc29a839626a4832d0a3693a4e02c03ce3de58bc0a1",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 10,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_18": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 2,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 907,
+        "after": 909,
+        "sitemap_before": 922,
+        "sitemap": 924
+      },
+      "production": {
+        "before": 906,
+        "after": 908,
+        "sitemap_before": 919,
+        "sitemap": 921
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "35640290f87740a5b9f3a135e2062b65",
+          "canonicalRevision": "2117b08065b8ab5b64320714c91c134a",
+          "watermark": 35608,
+          "objects": 317
+        },
+        "current": {
+          "generation": "0ecf42196cee4fa09471b9af6fa49edf",
+          "canonicalRevision": "68c3a1baca752767bcb9afddf573359b",
+          "watermark": 35635,
+          "objects": 317
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "b126b818436c43a19ea2b25cba616bf3",
+          "canonicalRevision": "b9555ff47d79315123da2568eba3a533",
+          "watermark": 35498,
+          "objects": 315
+        },
+        "current": {
+          "generation": "137ad95d170549d19c02af984809e4ba",
+          "canonicalRevision": "fd3eb86f89dd32589d86451b679071a5",
+          "watermark": 35525,
+          "objects": 315
+        }
+      }
+    },
+    "batch_sha256": "1dbb8572ac797b7687d7e6870912d34fd48d6348be3d3473ba425b06d6bb9429",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 2,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_19": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 2,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 909,
+        "after": 911,
+        "sitemap_before": 924,
+        "sitemap": 926
+      },
+      "production": {
+        "before": 908,
+        "after": 910,
+        "sitemap_before": 921,
+        "sitemap": 923
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "0ecf42196cee4fa09471b9af6fa49edf",
+          "canonicalRevision": "68c3a1baca752767bcb9afddf573359b",
+          "watermark": 35635,
+          "objects": 317
+        },
+        "current": {
+          "generation": "e2e37cfb0d194f628fbc9b1c9804e34b",
+          "canonicalRevision": "7d6c0ebe901bb3fc9fd0538841a04868",
+          "watermark": 35692,
+          "objects": 317
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "137ad95d170549d19c02af984809e4ba",
+          "canonicalRevision": "fd3eb86f89dd32589d86451b679071a5",
+          "watermark": 35525,
+          "objects": 315
+        },
+        "current": {
+          "generation": "61029be94c6441aa8a741ef184b8516d",
+          "canonicalRevision": "e4d8c475cba52d1e7249d44177ff0cf8",
+          "watermark": 35582,
+          "objects": 315
+        }
+      }
+    },
+    "batch_sha256": "7b803530b16faf9718e19fa21e822905bd938edf012b8bc0dcc6cb34c94a9e9a",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 2,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_20": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 2,
+    "new_families": 1,
+    "new_versions": 1,
+    "new_metrics": 1,
+    "new_evaluators": 2,
+    "counts": {
+      "staging": {
+        "before": 911,
+        "after": 913,
+        "sitemap_before": 926,
+        "sitemap": 930
+      },
+      "production": {
+        "before": 910,
+        "after": 912,
+        "sitemap_before": 923,
+        "sitemap": 927
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "e2e37cfb0d194f628fbc9b1c9804e34b",
+          "canonicalRevision": "7d6c0ebe901bb3fc9fd0538841a04868",
+          "watermark": 35692,
+          "objects": 317
+        },
+        "current": {
+          "generation": "93916cd1dceb4ffcbfd5ed668685fce3",
+          "canonicalRevision": "0d955b7276141675901acc98073db6eb",
+          "watermark": 35776,
+          "objects": 319
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "61029be94c6441aa8a741ef184b8516d",
+          "canonicalRevision": "e4d8c475cba52d1e7249d44177ff0cf8",
+          "watermark": 35582,
+          "objects": 315
+        },
+        "current": {
+          "generation": "e51d162bef1f422b9b46ca3c11b07a18",
+          "canonicalRevision": "85a8c798b15de3cbc1d24ececd8c35fb",
+          "watermark": 35666,
+          "objects": 317
+        }
+      }
+    },
+    "batch_sha256": "f1a19e6adb22b1ae85aa64fff46f928fb24bf31da6cfa3758fd4ab29e47b07b7",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 3,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_21": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 1,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 913,
+        "after": 914,
+        "sitemap_before": 930,
+        "sitemap": 931
+      },
+      "production": {
+        "before": 912,
+        "after": 913,
+        "sitemap_before": 927,
+        "sitemap": 928
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "93916cd1dceb4ffcbfd5ed668685fce3",
+          "canonicalRevision": "0d955b7276141675901acc98073db6eb",
+          "watermark": 35776,
+          "objects": 319
+        },
+        "current": {
+          "generation": "9a3ea96dd45245d79fb7d05741c934cd",
+          "canonicalRevision": "d67aa3b6164ca959b98132fd52a2302b",
+          "watermark": 35788,
+          "objects": 319
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "e51d162bef1f422b9b46ca3c11b07a18",
+          "canonicalRevision": "85a8c798b15de3cbc1d24ececd8c35fb",
+          "watermark": 35666,
+          "objects": 317
+        },
+        "current": {
+          "generation": "a3115c54cd814647b0c775b41e24293e",
+          "canonicalRevision": "94d89e390e9fef370999ad6cba1cb69d",
+          "watermark": 35678,
+          "objects": 317
+        }
+      }
+    },
+    "batch_sha256": "24c17c283ea09a355314bd6d50e1f3768a3379134f73a3a59a7bd66c4c3e7fd1",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 1,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "models_with_completed_source_audits": 27,
+  "models_remaining_source_audit": 30,
+  "cohort_22": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 1,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "counts": {
+      "staging": {
+        "before": 914,
+        "after": 915,
+        "sitemap_before": 931,
+        "sitemap": 932
+      },
+      "production": {
+        "before": 913,
+        "after": 914,
+        "sitemap_before": 928,
+        "sitemap": 929
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "9a3ea96dd45245d79fb7d05741c934cd",
+          "canonicalRevision": "d67aa3b6164ca959b98132fd52a2302b",
+          "watermark": 35788,
+          "objects": 319
+        },
+        "current": {
+          "generation": "f502a76a1c0c4a64aacb417f78addd86",
+          "canonicalRevision": "776df0bf8dffbd545b9daaea5e71c7bd",
+          "watermark": 36010,
+          "objects": 319
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "a3115c54cd814647b0c775b41e24293e",
+          "canonicalRevision": "94d89e390e9fef370999ad6cba1cb69d",
+          "watermark": 35678,
+          "objects": 317
+        },
+        "current": {
+          "generation": "5d9f9091efd9438699e55917feeb7323",
+          "canonicalRevision": "2daa9c84dcff94708ee355025c8b8e64",
+          "watermark": 35900,
+          "objects": 317
+        }
+      }
+    },
+    "batch_sha256": "a765bc34db98a9d3488b4d35d9736cd969000483f0fc0c465c1c8b2358afded6",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 1,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_23": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 5,
+    "new_families": 1,
+    "new_versions": 3,
+    "new_metrics": 1,
+    "new_evaluators": 1,
+    "counts": {
+      "staging": {
+        "before": 915,
+        "after": 920,
+        "sitemap_before": 932,
+        "sitemap": 941
+      },
+      "production": {
+        "before": 914,
+        "after": 919,
+        "sitemap_before": 929,
+        "sitemap": 938
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "f502a76a1c0c4a64aacb417f78addd86",
+          "canonicalRevision": "776df0bf8dffbd545b9daaea5e71c7bd",
+          "watermark": 36010,
+          "objects": 319
+        },
+        "current": {
+          "generation": "3ada927aa51b4d01a65ca91749d3ae49",
+          "canonicalRevision": "2afb79a0e62d8babf9fb759ae5b8d65b",
+          "watermark": 36165,
+          "objects": 323
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "5d9f9091efd9438699e55917feeb7323",
+          "canonicalRevision": "2daa9c84dcff94708ee355025c8b8e64",
+          "watermark": 35900,
+          "objects": 317
+        },
+        "current": {
+          "generation": "d96069c6249e40fc93738c51ceca739a",
+          "canonicalRevision": "e4fe420b1327b84d2672ac1cdec09d34",
+          "watermark": 36055,
+          "objects": 321
+        }
+      }
+    },
+    "batch_sha256": "7327cd99405ce1d4b5ad978462acbbfe8cd242b9040175996e1dfcb8910a20ba",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 8,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "cohort_24": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 5,
+    "new_families": 0,
+    "new_versions": 1,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "source_audits_closed": 4,
+    "visible_records": 98,
+    "outcomes": {
+      "already_present_identical": 18,
+      "conflict_deferred": 6,
+      "unresolved": 69,
+      "ingested_new": 5
+    },
+    "counts": {
+      "staging": {
+        "before": 920,
+        "after": 925,
+        "sitemap_before": 941,
+        "sitemap": 947
+      },
+      "production": {
+        "before": 919,
+        "after": 924,
+        "sitemap_before": 938,
+        "sitemap": 944
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "3ada927aa51b4d01a65ca91749d3ae49",
+          "canonicalRevision": "2afb79a0e62d8babf9fb759ae5b8d65b",
+          "watermark": 36165,
+          "objects": 323
+        },
+        "current": {
+          "generation": "7d8949461ad6415b85743aac289d58d5",
+          "canonicalRevision": "385c8628310bf293fecee23aa8b807e4",
+          "watermark": 36388,
+          "objects": 324
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "d96069c6249e40fc93738c51ceca739a",
+          "canonicalRevision": "e4fe420b1327b84d2672ac1cdec09d34",
+          "watermark": 36055,
+          "objects": 321
+        },
+        "current": {
+          "generation": "797e8c2acdb54e879ebb0c60ed9c9e66",
+          "canonicalRevision": "3a9847053f28280ad4ed01202711870d",
+          "watermark": 36278,
+          "objects": 322
+        }
+      }
+    },
+    "batch_sha256": "4e0844504e33a62daf6f1b3249216ae95051591af29bccc8fd791160be37a173",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 6,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  },
+  "models_with_exhaustively_inspected_sources": 29,
+  "scope_change": {
+    "date": "2026-10-03",
+    "instruction": "User requested expedited production publication, repo commit/push and handover; further source/mapping audits deferred.",
+    "original_exhaustive_completion_gate_met": false,
+    "all_qualifying_models_accounted_for": true,
+    "all_safely_mappable_official_results_processed": false,
+    "unreconciled_models_explicitly_deferred": true
+  },
+  "cohort_25": {
+    "status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "new_results": 2,
+    "new_families": 0,
+    "new_versions": 0,
+    "new_metrics": 0,
+    "new_evaluators": 0,
+    "source_audits_closed": 0,
+    "source_inspections_completed": 2,
+    "visible_records": 132,
+    "outcomes": {
+      "unresolved": 108,
+      "conflict_deferred": 4,
+      "already_present_identical": 18,
+      "ingested_new": 2
+    },
+    "counts": {
+      "staging": {
+        "before": 925,
+        "after": 927,
+        "sitemap_before": 947,
+        "sitemap": 949
+      },
+      "production": {
+        "before": 924,
+        "after": 926,
+        "sitemap_before": 944,
+        "sitemap": 946
+      }
+    },
+    "publication_generations": {
+      "staging": {
+        "previous": {
+          "generation": "7d8949461ad6415b85743aac289d58d5",
+          "canonicalRevision": "385c8628310bf293fecee23aa8b807e4",
+          "watermark": 36388,
+          "objects": 324
+        },
+        "current": {
+          "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+          "canonicalRevision": "da2def864caafff6bdf5b41e7c911e58",
+          "watermark": 36463,
+          "objects": 324
+        }
+      },
+      "production": {
+        "previous": {
+          "generation": "797e8c2acdb54e879ebb0c60ed9c9e66",
+          "canonicalRevision": "3a9847053f28280ad4ed01202711870d",
+          "watermark": 36278,
+          "objects": 322
+        },
+        "current": {
+          "generation": "fdcf2a35a6f147498d661e19c07b9ad6",
+          "canonicalRevision": "7f61ee9aef4868822302594f3a063630",
+          "watermark": 36353,
+          "objects": 322
+        }
+      }
+    },
+    "batch_sha256": "159b2a5225a818189495a7cf685e811c86c25d86ce45150bf67786765c2423a6",
+    "public_d1_rows": 0,
+    "replay_skipped_records": 2,
+    "replay_canonical_writes": 0,
+    "materialization_noop_kv_writes": 0
+  }
+}

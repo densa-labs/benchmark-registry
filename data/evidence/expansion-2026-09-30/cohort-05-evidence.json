@@ -1,0 +1,189 @@
+{
+  "target_registry_no": "130008",
+  "source_complete_status": "IN_PROGRESS",
+  "candidates": [
+    {
+      "observation_id": "qwen38-003",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "DeepSWE 1.1",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Score as displayed; primary metric identification pending",
+      "displayed_score": "56.6",
+      "normalized_stored_score": "56.6",
+      "normalization": "None; displayed percentage retained without multiplying or dividing.",
+      "reasoning_level": null,
+      "configuration": "DeepSWE 1.1: Evaluated with the Claude Code and mini-SWE-agent harnesses, temp=1.0, top_p=0.95, and a 256K context window. We report the highest score among both harnesses; notably, Qwen3.8-Max performs best on Claude Code.",
+      "location": "Full Benchmark Table 1, row 5, Qwen3.8-Max column, component 1; footnote 4",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact version 1.1 explicitly named, own Claude Code evaluation is distinguished from existing DataCurve mini-SWE xhigh run by evaluator, effort and identifiable release source.",
+      "canonical_benchmark_slug": "deep-swe",
+      "canonical_version": "1.1",
+      "metric_key": "deep-swe-pass-at-1",
+      "benchmark_identity_sources": [
+        "https://deepswe.datacurve.ai/"
+      ],
+      "published_cohort": "05",
+      "publication_verified": [
+        "staging",
+        "production"
+      ]
+    },
+    {
+      "observation_id": "qwen38-032",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "LongBench v2",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Score as displayed; primary metric identification pending",
+      "displayed_score": "66.3",
+      "normalized_stored_score": "66.3",
+      "normalization": "None; displayed percentage retained without multiplying or dividing.",
+      "reasoning_level": null,
+      "configuration": "Own developer-reported evaluation; detailed benchmark configuration not stated.",
+      "location": "Full Benchmark Table 1, row 35, Qwen3.8-Max column, component 1; footnote none",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Author defines v2 503-MCQ suite and one accuracy metric. Public v2 release announced 2024-12-20; code computes mean judge correctness. No context-range/tool subset invented.",
+      "canonical_benchmark_slug": "longbench",
+      "canonical_version": "v2",
+      "metric_key": "longbench-v2-accuracy",
+      "benchmark_identity_sources": [
+        "https://github.com/THUDM/LongBench"
+      ],
+      "published_cohort": "05",
+      "publication_verified": [
+        "staging",
+        "production"
+      ]
+    },
+    {
+      "observation_id": "qwen38-046",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "MedXpertQA-MM",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Score as displayed; primary metric identification pending",
+      "displayed_score": "80.4",
+      "normalized_stored_score": "80.4",
+      "normalization": "None; displayed percent scale matches stored percent metric.",
+      "reasoning_level": null,
+      "configuration": "Own developer-reported evaluation; detailed benchmark configuration not stated.",
+      "location": "Full Benchmark Table 2, row 13, Qwen3.8-Max column, component 1; footnote none",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact MedXpertQA multimodal MM subset identified; original benchmark author reports MCQ accuracy. No developer correction, tool variant or second own run reported.",
+      "canonical_benchmark_slug": "medxpertqa",
+      "canonical_version": "MM",
+      "metric_key": "medxpertqa-mm-accuracy",
+      "benchmark_identity_sources": [
+        "https://arxiv.org/html/2501.18362v1#S4.SS1"
+      ],
+      "published_cohort": "05",
+      "publication_verified": [
+        "staging",
+        "production"
+      ]
+    },
+    {
+      "observation_id": "qwen38-048",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "OSWorld-Verified",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Score as displayed; primary metric identification pending",
+      "displayed_score": "86.1",
+      "normalized_stored_score": "86.1",
+      "normalization": "None; displayed percentage retained without multiplying or dividing.",
+      "reasoning_level": null,
+      "configuration": "Own developer-reported evaluation; detailed benchmark configuration not stated.",
+      "location": "Full Benchmark Table 2, row 16, Qwen3.8-Max column, component 1; footnote none",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact Verified task suite explicitly named. Author Verified release defines task-success scoring; no additional own configuration or corrected subset reported.",
+      "canonical_benchmark_slug": "osworld",
+      "canonical_version": "Verified",
+      "metric_key": "osworld-verified-resolved",
+      "benchmark_identity_sources": [
+        "https://xlang.ai/blog/osworld-verified"
+      ],
+      "published_cohort": "05",
+      "publication_verified": [
+        "staging",
+        "production"
+      ]
+    },
+    {
+      "observation_id": "qwen38-078",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "PerceptionBench",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Score as displayed; primary metric identification pending",
+      "displayed_score": "63.5",
+      "normalized_stored_score": "63.5",
+      "normalization": "None; displayed percentage retained without multiplying or dividing.",
+      "reasoning_level": null,
+      "configuration": "PerceptionBench: Scores for comparison models are taken from the benchmark’s official release report, while our model is evaluated in-house.",
+      "location": "Full Benchmark Table 2, row 45, Qwen3.8-Max column, component 1; footnote 11",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Official released 3000-question suite has one strict 0/1 accuracy metric; source explicitly uses benchmark official report for comparisons and matches its published baseline scores. Own Qwen result is developer-run, not Moonshot-run.",
+      "canonical_benchmark_slug": "perceptionbench",
+      "canonical_version": "Original",
+      "metric_key": "perceptionbench-accuracy",
+      "benchmark_identity_sources": [
+        "https://github.com/MoonshotAI/PerceptionBench"
+      ],
+      "published_cohort": "05",
+      "publication_verified": [
+        "staging",
+        "production"
+      ]
+    }
+  ],
+  "benchmark_metadata": [
+    {
+      "family": "LongBench",
+      "version": "v2",
+      "release": "2024-12-20",
+      "release_evidence": "https://github.com/THUDM/LongBench#-updates",
+      "metric_evidence": "https://github.com/THUDM/LongBench/blob/main/result.py",
+      "maintainer": "LongBench Authors (Tsinghua University and Zhipu.AI paper team)"
+    },
+    {
+      "family": "PerceptionBench",
+      "version": "Original",
+      "release": "2026-07-27",
+      "release_evidence": "https://huggingface.co/api/datasets/moonshotai/PerceptionBench/commits/main",
+      "first_dataset_commit": "df8c4d8945af9bec6827ab61d7c91880ee164c52",
+      "first_commit_time": "2026-07-27T18:08:10Z",
+      "metric_evidence": "https://github.com/MoonshotAI/PerceptionBench#leaderboard",
+      "maintainer": "Moonshot AI",
+      "result_evaluator": "Qwen Team"
+    }
+  ],
+  "same_run_citations": "Curator verified the Hugging Face table explicitly names Qwen3.8-Max and reproduces the release table and own configurations for these two text evaluations; generic text-only weight identity is not used to assign multimodal scores.",
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+}

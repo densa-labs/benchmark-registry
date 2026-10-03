@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130007",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmlu",
+        "benchmark_version": "Original",
+        "metric_key": "mmmlu-accuracy",
+        "score_value": "89.0",
+        "score_raw": "89.0",
+        "reported_at": "2026-06-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+            "checked_at": "2026-10-02T14:37:34Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130007",
+        "reasoning_level": "",
+        "benchmark_slug": "realworldqa",
+        "benchmark_version": "Original",
+        "metric_key": "realworldqa-accuracy",
+        "score_value": "86.9",
+        "score_raw": "86.9",
+        "reported_at": "2026-06-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+            "checked_at": "2026-10-02T14:37:34Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

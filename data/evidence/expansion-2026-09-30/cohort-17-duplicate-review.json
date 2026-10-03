@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "exact_existing_results": [
+    {
+      "observation_id": "opus47-001",
+      "existing_result_key": "c5f0436c9cade27f591860a918ed89918b80209d3d96ff8d1460bb5f6876e8da",
+      "canonical_benchmark_slug": "swe-bench",
+      "canonical_version": "Verified",
+      "metric_key": "swe-bench-resolved",
+      "canonical_reasoning_level": "adaptive thinking, max",
+      "normalized_stored_score": "87.6"
+    },
+    {
+      "observation_id": "opus47-002",
+      "existing_result_key": "97d54d2dca6ae4c9c2e70ac1c4517ab5c5fb1f56e5ec715616302dd23fc8e039",
+      "canonical_benchmark_slug": "swe-bench-pro",
+      "canonical_version": "Public",
+      "metric_key": "swe-bench-pro-resolved",
+      "canonical_reasoning_level": "adaptive thinking, max",
+      "normalized_stored_score": "64.3"
+    },
+    {
+      "observation_id": "opus47-003",
+      "existing_result_key": "c1543af395772a62c63f16a9094dfd27a7cab1c46043998915391256586df5d5",
+      "canonical_benchmark_slug": "swe-bench",
+      "canonical_version": "Multilingual",
+      "metric_key": "swe-bench-resolved",
+      "canonical_reasoning_level": "adaptive thinking, max",
+      "normalized_stored_score": "80.5"
+    },
+    {
+      "observation_id": "opus47-007",
+      "existing_result_key": "7e409db089597b0fccabe5cc0c2875ab23f039ba340922400fddb5fb53741a7b",
+      "canonical_benchmark_slug": "humanitys-last-exam",
+      "canonical_version": "Full set \u2014 No tools",
+      "metric_key": "hle-accuracy",
+      "canonical_reasoning_level": "adaptive thinking, max",
+      "normalized_stored_score": "46.9"
+    },
+    {
+      "observation_id": "opus47-008",
+      "existing_result_key": "dba3b4f0240e86696230e1ac51240c5c497484d277cab74c4f5da3488b87239f",
+      "canonical_benchmark_slug": "humanitys-last-exam",
+      "canonical_version": "Full set \u2014 With tools",
+      "metric_key": "hle-accuracy",
+      "canonical_reasoning_level": "adaptive thinking, max",
+      "normalized_stored_score": "54.7"
+    },
+    {
+      "observation_id": "opus47-012",
+      "existing_result_key": "aebab58d7f07c27a848b75e8a2bacb86abc37070172d5a3541ae76104c52ebea",
+      "canonical_benchmark_slug": "gpqa",
+      "canonical_version": "Diamond",
+      "metric_key": "gpqa-diamond-accuracy",
+      "canonical_reasoning_level": "adaptive thinking, max",
+      "normalized_stored_score": "94.2"
+    },
+    {
+      "observation_id": "opus47-020",
+      "existing_result_key": "b393f7a4ddc0a56c9cee9499151a355452b3296a9a9b709ad5123e18c7b4f6a6",
+      "canonical_benchmark_slug": "terminal-bench",
+      "canonical_version": "2.0",
+      "metric_key": "terminal-bench-accuracy",
+      "canonical_reasoning_level": "no thinking",
+      "normalized_stored_score": "69.4"
+    }
+  ],
+  "canonical_writes": 0
+}

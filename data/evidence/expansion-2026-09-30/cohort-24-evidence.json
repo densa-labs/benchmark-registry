@@ -1,0 +1,308 @@
+[
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card and methodology",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "Search and code execution",
+    "configuration": "Search and code execution",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "89.4%",
+    "normalized_stored_score": "89.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Search and code execution",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact search+code configuration supports a distinct existing-contract evaluation edition. No reasoning level is supplied.",
+    "observation_indices": [
+      84,
+      85,
+      86,
+      171,
+      172,
+      173
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.6 column",
+        "displayed_score": "89.4%"
+      }
+    ],
+    "displayed_scores": [
+      "89.4%"
+    ],
+    "canonical_benchmark_slug": "charxiv",
+    "canonical_version": "Reasoning — Search and code execution",
+    "metric_key": "charxiv-accuracy",
+    "normalization": "No scale conversion. Source percentage preserved0–100; numeric value removes only the percent suffix.",
+    "evaluation_configuration": "Search and code execution; Gemini API default sampling; pass@1 except stated otherwise; no reasoning level inferred.",
+    "run_identity": "Single displayed aggregate per exact model/configuration; later comparison values repeat this same aggregate, not a new run. No independent run identifier is provided.",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  },
+  {
+    "target_registry_no": "30006",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "source_title": "Gemini 3.6 Flash model card and methodology",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-21",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "Search and code execution",
+    "configuration": "Search and code execution",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "84.9%",
+    "normalized_stored_score": "84.9",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 8, Gemini 3.5 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Search and code execution",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact search+code configuration supports a distinct existing-contract evaluation edition. No reasoning level is supplied.",
+    "observation_indices": [
+      87,
+      88,
+      89
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "location": "HTML full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.9%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.9%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "location": "methodology full evaluation table, row 8, Gemini 3.5 column",
+        "displayed_score": "84.9%"
+      }
+    ],
+    "displayed_scores": [
+      "84.9%"
+    ],
+    "canonical_benchmark_slug": "charxiv",
+    "canonical_version": "Reasoning — Search and code execution",
+    "metric_key": "charxiv-accuracy",
+    "normalization": "No scale conversion. Source percentage preserved0–100; numeric value removes only the percent suffix.",
+    "evaluation_configuration": "Search and code execution; Gemini API default sampling; pass@1 except stated otherwise; no reasoning level inferred.",
+    "run_identity": "Single displayed aggregate per exact model/configuration; later comparison values repeat this same aggregate, not a new run. No independent run identifier is provided.",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card and methodology",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "CharXiv Reasoning",
+    "version_as_displayed": "Search and code execution",
+    "configuration": "Search and code execution",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "88.7%",
+    "normalized_stored_score": "88.7",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 12, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "charxiv",
+      "Reasoning — Search and code execution",
+      "charxiv-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Exact search+code configuration supports a distinct existing-contract evaluation edition. No reasoning level is supplied.",
+    "observation_indices": [
+      168,
+      169,
+      170
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "88.7%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "88.7%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 12, Gemini 3.7 column",
+        "displayed_score": "88.7%"
+      }
+    ],
+    "displayed_scores": [
+      "88.7%"
+    ],
+    "canonical_benchmark_slug": "charxiv",
+    "canonical_version": "Reasoning — Search and code execution",
+    "metric_key": "charxiv-accuracy",
+    "normalization": "No scale conversion. Source percentage preserved0–100; numeric value removes only the percent suffix.",
+    "evaluation_configuration": "Search and code execution; Gemini API default sampling; pass@1 except stated otherwise; no reasoning level inferred.",
+    "run_identity": "Single displayed aggregate per exact model/configuration; later comparison values repeat this same aggregate, not a new run. No independent run identifier is provided.",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  },
+  {
+    "target_registry_no": "30010",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card and methodology",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "LVBench",
+    "version_as_displayed": "1024 frames; no tools",
+    "configuration": "1024 frames; no tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "85.4%",
+    "normalized_stored_score": "85.4",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 13, Gemini 3.7 column",
+    "canonical_benchmark_mapping": [
+      "lvbench",
+      "1024 frames — Static",
+      "lvbench-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Developer explicitly specifies1024 frames and no tools; map to existing Static edition. Single displayed aggregate; no reasoning level stated.",
+    "observation_indices": [
+      174,
+      175,
+      176,
+      273,
+      274,
+      275
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "location": "HTML full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "location": "methodology full evaluation table, row 9, Gemini 3.7 column",
+        "displayed_score": "85.4%"
+      }
+    ],
+    "displayed_scores": [
+      "85.4%"
+    ],
+    "canonical_benchmark_slug": "lvbench",
+    "canonical_version": "1024 frames — Static",
+    "metric_key": "lvbench-accuracy",
+    "normalization": "No scale conversion. Source percentage preserved0–100; numeric value removes only the percent suffix.",
+    "evaluation_configuration": "1024 frames; no tools; Gemini API default sampling; pass@1 except stated otherwise; no reasoning level inferred.",
+    "run_identity": "Single displayed aggregate per exact model/configuration; later comparison values repeat this same aggregate, not a new run. No independent run identifier is provided.",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  },
+  {
+    "target_registry_no": "30007",
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "source_title": "Gemini 3.7 Flash model card and methodology",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-08-13",
+    "benchmark_as_displayed": "LVBench",
+    "version_as_displayed": "1024 frames; no tools",
+    "configuration": "1024 frames; no tools",
+    "metric": "Accuracy / pass rate (%)",
+    "displayed_score": "84.2%",
+    "normalized_stored_score": "84.2",
+    "reasoning_level": null,
+    "location": "HTML full evaluation table, row 13, Gemini 3.6 column",
+    "canonical_benchmark_mapping": [
+      "lvbench",
+      "1024 frames — Static",
+      "lvbench-accuracy"
+    ],
+    "ingestion_outcome": "ingested_new",
+    "explicit_reason": "Developer explicitly specifies1024 frames and no tools; map to existing Static edition. Single displayed aggregate; no reasoning level stated.",
+    "observation_indices": [
+      177,
+      178,
+      179
+    ],
+    "source_occurrences": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "location": "HTML full evaluation table, row 13, Gemini 3.6 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "location": "PDF full evaluation table, row 13, Gemini 3.6 column",
+        "displayed_score": "84.2%"
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "location": "methodology full evaluation table, row 13, Gemini 3.6 column",
+        "displayed_score": "84.2%"
+      }
+    ],
+    "displayed_scores": [
+      "84.2%"
+    ],
+    "canonical_benchmark_slug": "lvbench",
+    "canonical_version": "1024 frames — Static",
+    "metric_key": "lvbench-accuracy",
+    "normalization": "No scale conversion. Source percentage preserved0–100; numeric value removes only the percent suffix.",
+    "evaluation_configuration": "1024 frames; no tools; Gemini API default sampling; pass@1 except stated otherwise; no reasoning level inferred.",
+    "run_identity": "Single displayed aggregate per exact model/configuration; later comparison values repeat this same aggregate, not a new run. No independent run identifier is provided.",
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+  }
+]

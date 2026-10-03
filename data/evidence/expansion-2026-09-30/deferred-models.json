@@ -1,0 +1,226 @@
+[
+  {
+    "registry_no": "20013",
+    "model": "Claude Sonnet 5",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10013",
+    "model": "GPT-6 Luna",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10009",
+    "model": "GPT-5.6 Luna",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10010",
+    "model": "GPT-5.6 Sol",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10011",
+    "model": "GPT-5.6 Terra",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "80002",
+    "model": "Muse Spark 1.1",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Official-source evaluation extraction and completeness audit"
+  },
+  {
+    "registry_no": "160001",
+    "model": "Inkling",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Publication complete. Authoritative AIME/HMMT/MMAU/VoiceBench/FORTRESS metadata resolution and remaining mapping audits deferred at user request. External run/source conflicts remain individually documented; source inspection complete."
+  },
+  {
+    "registry_no": "120003",
+    "model": "Kimi K3",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "All121 visible accessible-source records reconciled:5 new+8 identical+4 deferred conflicts+104 explicitly unresolved. Five new results verified in staging and production. AISI linked figures remain uninspected because browser automatic approval review reported a usage limit; supplement audit remains NO."
+  },
+  {
+    "registry_no": "160002",
+    "model": "Inkling-Small",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Publication complete. Authoritative AIME/HMMT/MMAU/VoiceBench/FORTRESS metadata resolution and remaining mapping audits deferred at user request. External run/source conflicts remain individually documented; source inspection complete."
+  },
+  {
+    "registry_no": "130008",
+    "model": "Qwen3.8-Max",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "35 remaining observation mappings, whole-source second pass and blocked embedded-video audit."
+  },
+  {
+    "registry_no": "80003",
+    "model": "Muse Spark 1.2",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Exact benchmark metadata, run conflict reconciliation and pending candidate publication"
+  },
+  {
+    "registry_no": "80004",
+    "model": "Muse Glimmer 30B",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Author benchmark metadata, linked methodology cross-check and pending candidate publication"
+  },
+  {
+    "registry_no": "70003",
+    "model": "MAI-Thinking-1",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "150005",
+    "model": "GLM-5.3",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "150006",
+    "model": "GLM-5.3-Flash",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "80005",
+    "model": "Muse Spark 1.3",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Exact benchmark metadata, run conflict reconciliation and pending candidate publication"
+  },
+  {
+    "registry_no": "10005",
+    "model": "GPT-6 Astra",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10014",
+    "model": "GPT-6 Sol",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "20015",
+    "model": "Claude Opus 5.5",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10015",
+    "model": "GPT-6.1 Sol",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "60 observations still pending mapping, including one staging-only Internal Port result awaiting the timestamp recheck; 110 explicitly unresolved; source second-pass checklist remains open."
+  },
+  {
+    "registry_no": "80001",
+    "model": "Muse Spark",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "23 additions verified in both environments. Second completeness review remains open for513 unresolved observations and10 source conflicts."
+  },
+  {
+    "registry_no": "150003",
+    "model": "GLM-5.1",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "130005",
+    "model": "Qwen3.6-35B-A3B",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "120002",
+    "model": "Kimi K2.6",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "10008",
+    "model": "GPT-5.5",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "90005",
+    "model": "Mistral Medium 3.5",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Selected model card fully reviewed; linked supplements and recorded mapping decisions remain."
+  },
+  {
+    "registry_no": "20011",
+    "model": "Claude Opus 4.8",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Current246pagecarddownloadedandparsed;pages1–9,194–199actuallyread;finishentirecard/allfigures/appendices/linkedmethods.SourcechangelogJune17correctsvirology. Terminalhighversuslegacymaxrequiresmetadatareview;ProgramBenchnear-finalsnapshotexcludedfromfinalmodelunlessexactidentitysupported."
+  },
+  {
+    "registry_no": "70002",
+    "model": "MAI-Code-1-Flash",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "35005",
+    "model": "Gemma 4 12B Instruct",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Official benchmark image is blank in rendered page. Direct native-browser navigation to 1200/1600 renditions is blocked (ERR_BLOCKED_BY_CLIENT), and web retrieval reports application/octet-stream unsupported. No image scores guessed or substituted from unofficial copies. 12B additional-launch audit remains NO."
+  },
+  {
+    "registry_no": "150004",
+    "model": "GLM-5.2",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Source/linked-supplement completeness audit and all remaining observation mappings"
+  },
+  {
+    "registry_no": "20005",
+    "model": "Claude Sonnet 4.5",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Wholelaunchtextandallmethodfootnotesread;13maintablescalars+1extraSWEcontextconfiguration+5privatecustomerbenchclaimsrecorded.Finishfourdomainchartsandmisalignmentfigure,andentire149pagesystemcard/allcapabilityfigures/linkedauthorprotocols;noauditYESyet."
+  },
+  {
+    "registry_no": "90001",
+    "model": "Mistral Large 3",
+    "official_source_exhaustively_inspected": "NO",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "remaining_work": "Selected model card fully reviewed; linked supplements and recorded mapping decisions remain."
+  }
+]

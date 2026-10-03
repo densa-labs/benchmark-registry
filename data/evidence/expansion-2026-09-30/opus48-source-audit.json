@@ -1,0 +1,22 @@
+{
+  "target_registry_no": "20011",
+  "model": "Claude Opus 4.8",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "selected_sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/0f0c97ad20d8005706296bd92aa1c27c6b2f4f61/Claude%20Opus%204.8%20System%20Card.pdf",
+      "review_status": "Partial;exact cited sections read"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "review_status": "Located;review completeness recorded below"
+    }
+  ],
+  "visible_supported_results_recorded_so_far": 21,
+  "outcomes_so_far": {
+    "research_pending": 21
+  },
+  "completeness_totals_final": false,
+  "remaining_work": "Current246pagecarddownloadedandparsed;pages1\u20139,194\u2013199actuallyread;finishentirecard/allfigures/appendices/linkedmethods.SourcechangelogJune17correctsvirology. Terminalhighversuslegacymaxrequiresmetadatareview;ProgramBenchnear-finalsnapshotexcludedfromfinalmodelunlessexactidentitysupported."
+}

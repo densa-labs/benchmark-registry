@@ -1,0 +1,70 @@
+{
+  "target_registry_nos": [
+    "130006"
+  ],
+  "checked_at": "2026-10-02T14:18:13Z",
+  "candidates": [
+    {
+      "target_registry_no": "130006",
+      "model": "Qwen3.7-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.7",
+      "source_title": "Qwen3.7: The Agent Frontier",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-05-20",
+      "reported_at": "2026-05-20",
+      "source_checked_at": "2026-10-02T14:11:09Z",
+      "version_as_displayed": null,
+      "reasoning_level": "",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Author original single MCQ accuracy corpus matches existing canonical version/percent metric;own exact developer release value. Score stored on displayed0\u2013100scale without rescaling. Only recommended xhigh prompt is given,so evaluated effort remains unset.",
+      "observation_id": "qwen37max-029",
+      "benchmark_as_displayed": "MMLU-Pro",
+      "displayed_score": "89.6",
+      "normalized_stored_score": "89.6",
+      "metric_as_displayed": "Scalar score; exact metric mapping under review",
+      "configuration": "",
+      "location": "Main table,row28,Qwen3.7-Max final column",
+      "canonical_benchmark_slug": "mmlu-pro",
+      "canonical_version": "Original",
+      "metric_key": "mmlu-pro-accuracy",
+      "benchmark_identity_sources": [
+        "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+      ],
+      "published_cohort": "18"
+    },
+    {
+      "target_registry_no": "130006",
+      "model": "Qwen3.7-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.7",
+      "source_title": "Qwen3.7: The Agent Frontier",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-05-20",
+      "reported_at": "2026-05-20",
+      "source_checked_at": "2026-10-02T14:11:09Z",
+      "version_as_displayed": null,
+      "reasoning_level": "",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Author original single MCQ accuracy corpus matches existing canonical version/percent metric;own exact developer release value. Score stored on displayed0\u2013100scale without rescaling. Only recommended xhigh prompt is given,so evaluated effort remains unset.",
+      "observation_id": "qwen37max-037",
+      "benchmark_as_displayed": "MMMLU",
+      "displayed_score": "90.3",
+      "normalized_stored_score": "90.3",
+      "metric_as_displayed": "Scalar score; exact metric mapping under review",
+      "configuration": "",
+      "location": "Main table,row36,Qwen3.7-Max final column",
+      "canonical_benchmark_slug": "mmmlu",
+      "canonical_version": "Original",
+      "metric_key": "mmmlu-accuracy",
+      "benchmark_identity_sources": [
+        "https://huggingface.co/datasets/openai/MMMLU"
+      ],
+      "published_cohort": "18"
+    }
+  ],
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "new_families": 0,
+  "new_versions": 0,
+  "new_metrics": 0,
+  "new_evaluators": 0,
+  "source_audit_complete": true
+}

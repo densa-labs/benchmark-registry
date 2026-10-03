@@ -1,0 +1,232 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "MATH-Vision",
+        "slug": "math-vision",
+        "source_url": "https://arxiv.org/abs/2402.14804",
+        "source_checked_at": "2026-09-24T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Original \u2014 Python enabled",
+            "version_slug": "original-python-enabled",
+            "release_at": "2026-08-06",
+            "release_precision": "date",
+            "metric_key": "math-vision-accuracy",
+            "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "source_checked_at": "2026-10-03T06:25:00Z",
+            "evaluator_keys": [
+              "moonshot-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "BabyVision",
+        "slug": "babyvision",
+        "source_url": "https://arxiv.org/abs/2601.06521",
+        "source_checked_at": "2026-09-24T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Original \u2014 Python enabled",
+            "version_slug": "original-python-enabled",
+            "release_at": "2026-08-06",
+            "release_precision": "date",
+            "metric_key": "babyvision-accuracy",
+            "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "source_checked_at": "2026-10-03T06:25:00Z",
+            "evaluator_keys": [
+              "moonshot-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Video-MME",
+        "slug": "video-mme",
+        "source_url": "https://github.com/MME-Benchmarks/Video-MME",
+        "source_checked_at": "2026-10-03T06:25:00Z",
+        "aliases": [
+          {
+            "name": "VideoMME",
+            "source_url": "https://github.com/MME-Benchmarks/Video-MME",
+            "source_checked_at": "2026-10-03T06:25:00Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "Video-MME Authors",
+            "key": "video-mme-authors",
+            "source_url": "https://github.com/MME-Benchmarks/Video-MME",
+            "source_checked_at": "2026-10-03T06:25:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Multiple-choice accuracy",
+            "key": "video-mme-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/html/2405.21075v2",
+            "source_checked_at": "2026-10-03T06:25:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original \u2014 With subtitles",
+            "version_slug": "original-with-subtitles",
+            "release_at": "2024-06-03",
+            "release_precision": "date",
+            "metric_key": "video-mme-accuracy",
+            "source_url": "https://github.com/MME-Benchmarks/Video-MME",
+            "source_checked_at": "2026-10-03T06:25:00Z",
+            "evaluator_keys": [
+              "video-mme-authors"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "91.3",
+        "score_raw": "91.3",
+        "reported_at": "2026-08-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "checked_at": "2026-10-03T06:25:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "math-vision",
+        "benchmark_version": "Original",
+        "metric_key": "math-vision-accuracy",
+        "score_value": "94.3",
+        "score_raw": "94.3",
+        "reported_at": "2026-08-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "checked_at": "2026-10-03T06:25:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "math-vision",
+        "benchmark_version": "Original \u2014 Python enabled",
+        "metric_key": "math-vision-accuracy",
+        "score_value": "97.8",
+        "score_raw": "97.8",
+        "reported_at": "2026-08-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "checked_at": "2026-10-03T06:25:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "babyvision",
+        "benchmark_version": "Original \u2014 Python enabled",
+        "metric_key": "babyvision-accuracy",
+        "score_value": "85.7",
+        "score_raw": "85.7",
+        "reported_at": "2026-08-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "checked_at": "2026-10-03T06:25:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "video-mme",
+        "benchmark_version": "Original \u2014 With subtitles",
+        "metric_key": "video-mme-accuracy",
+        "score_value": "90",
+        "score_raw": "90.0",
+        "reported_at": "2026-08-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+            "checked_at": "2026-10-03T06:25:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

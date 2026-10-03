@@ -1,0 +1,174 @@
+{
+  "target_registry_no": "130008",
+  "source_complete_status": "IN_PROGRESS",
+  "candidates": [
+    {
+      "observation_id": "qwen38-007",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "PaperBench",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Average replication score",
+      "displayed_score": "93.0",
+      "normalized_stored_score": "93.0",
+      "normalization": "None; source percentage scale retained. Canonical decimal spelling is produced by the controlled ingestor.",
+      "reasoning_level": null,
+      "configuration": "PaperBench: Evaluated in the BasicAgent setting under Code-Dev mode, judged by Claude Opus 4.6, and averaged over 3 runs (max 12 hours per run).",
+      "location": "Full Benchmark Table 1, row 9, Qwen3.8-Max column, component 1; footnote 8",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Author explicitly releases Code-Dev as a distinct variant in section 2.6, scored by average weighted rubric fulfillment across papers. JudgeEval classification metrics are a separate benchmark, not metrics of Code-Dev. Qwen specifies BasicAgent, Claude Opus 4.6 judge, three runs and 12-hour limit.",
+      "canonical_benchmark_slug": "paperbench",
+      "canonical_version": "Code-Dev",
+      "metric_key": "paperbench-code-dev-replication-score",
+      "benchmark_identity_sources": [
+        "https://arxiv.org/html/2504.01848v1",
+        "https://github.com/openai/frontier-evals/tree/main/project/paperbench"
+      ],
+      "published_cohort": "06"
+    },
+    {
+      "observation_id": "qwen38-068",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "MTVQA-Test",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Mean answer accuracy",
+      "displayed_score": "56.6",
+      "normalized_stored_score": "56.6",
+      "normalization": "None; source percentage scale retained. Canonical decimal spelling is produced by the controlled ingestor.",
+      "reasoning_level": null,
+      "configuration": "Own developer-reported evaluation; detailed benchmark configuration not stated.",
+      "location": "Full Benchmark Table 2, row 33, Qwen3.8-Max column, component 1; footnote none",
+      "ingestion_outcome": "ingested_new",
+      "reason": "The source explicitly names the Test split. Author paper section 4.3 defines accuracy and nine-language averaging. Official acc.py checks normalized ground-truth substring containment per answer, then averages language accuracies. Other language columns use the same accuracy measure; no separate quality metric is defined. Official News explicitly launches the benchmark on 2024-06-04.",
+      "canonical_benchmark_slug": "mtvqa",
+      "canonical_version": "Test",
+      "metric_key": "mtvqa-test-accuracy",
+      "benchmark_identity_sources": [
+        "https://github.com/bytedance/MTVQA",
+        "https://arxiv.org/html/2405.11985v1",
+        "https://github.com/bytedance/MTVQA/blob/main/scripts/acc.py"
+      ],
+      "published_cohort": "06"
+    },
+    {
+      "observation_id": "qwen38-071",
+      "target_registry_no": "130008",
+      "model": "Qwen3.8-Max",
+      "source_url": "https://qwen.ai/blog?id=qwen3.8",
+      "source_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-08-03",
+      "reported_at": "2026-08-03",
+      "benchmark_as_displayed": "RealWorldQA",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Answer accuracy",
+      "displayed_score": "88.0",
+      "normalized_stored_score": "88.0",
+      "normalization": "None; source percentage scale retained. Canonical decimal spelling is produced by the controlled ingestor.",
+      "reasoning_level": null,
+      "configuration": "Own developer-reported evaluation; detailed benchmark configuration not stated.",
+      "location": "Full Benchmark Table 2, row 37, Qwen3.8-Max column, component 1; footnote none",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Developer benchmark announcement explicitly releases the initial question/answer suite on 2024-04-12 and reports percentage correct. Its official dataset card identifies the sole test split with 765 answer-bearing examples; no later named benchmark version or different quality metric is introduced. Qwen reports its own evaluation; benchmark maintainer is not attributed as the Qwen run evaluator.",
+      "canonical_benchmark_slug": "realworldqa",
+      "canonical_version": "Original",
+      "metric_key": "realworldqa-accuracy",
+      "benchmark_identity_sources": [
+        "https://x.ai/news/grok-1.5v",
+        "https://huggingface.co/datasets/xai-org/RealworldQA"
+      ],
+      "published_cohort": "06"
+    }
+  ],
+  "benchmark_metadata": [
+    {
+      "id": "qwen38-007",
+      "name": "PaperBench",
+      "slug": "paperbench",
+      "version": "Code-Dev",
+      "version_slug": "code-dev",
+      "date": "2025-04-02",
+      "metric_name": "Average replication score",
+      "metric_key": "paperbench-code-dev-replication-score",
+      "url": "https://arxiv.org/html/2504.01848v1",
+      "evaluator": {
+        "name": "OpenAI",
+        "key": "openai",
+        "source_url": "https://openai.com/",
+        "source_checked_at": "2026-09-17T00:00:00Z"
+      },
+      "reason": "Author explicitly releases Code-Dev as a distinct variant in section 2.6, scored by average weighted rubric fulfillment across papers. JudgeEval classification metrics are a separate benchmark, not metrics of Code-Dev. Qwen specifies BasicAgent, Claude Opus 4.6 judge, three runs and 12-hour limit.",
+      "locations": [
+        "Author paper sections 2.3 and 2.6; section 5, Table 6",
+        "Official OpenAI repository README, PaperBench Code-Dev section"
+      ],
+      "extra_sources": [
+        "https://github.com/openai/frontier-evals/tree/main/project/paperbench"
+      ]
+    },
+    {
+      "id": "qwen38-068",
+      "name": "MTVQA",
+      "slug": "mtvqa",
+      "version": "Test",
+      "version_slug": "test",
+      "date": "2024-06-04",
+      "metric_name": "Mean answer accuracy",
+      "metric_key": "mtvqa-test-accuracy",
+      "url": "https://github.com/bytedance/MTVQA",
+      "evaluator": {
+        "name": "ByteDance",
+        "key": "bytedance",
+        "source_url": "https://github.com/bytedance/MTVQA",
+        "source_checked_at": "2026-10-01T10:51:35Z"
+      },
+      "reason": "The source explicitly names the Test split. Author paper section 4.3 defines accuracy and nine-language averaging. Official acc.py checks normalized ground-truth substring containment per answer, then averages language accuracies. Other language columns use the same accuracy measure; no separate quality metric is defined. Official News explicitly launches the benchmark on 2024-06-04.",
+      "locations": [
+        "Author README News 2024.06.04 and Evaluation",
+        "Author paper sections 3.3 and 4.3; Table 2",
+        "Official scripts/acc.py, evaluate_exact_match_accuracy and Average acc"
+      ],
+      "extra_sources": [
+        "https://arxiv.org/html/2405.11985v1",
+        "https://github.com/bytedance/MTVQA/blob/main/scripts/acc.py"
+      ]
+    },
+    {
+      "id": "qwen38-071",
+      "name": "RealWorldQA",
+      "slug": "realworldqa",
+      "version": "Original",
+      "version_slug": "original",
+      "date": "2024-04-12",
+      "metric_name": "Answer accuracy",
+      "metric_key": "realworldqa-accuracy",
+      "url": "https://x.ai/news/grok-1.5v",
+      "evaluator": {
+        "name": "SpaceXAI",
+        "key": "spacexai",
+        "source_url": "https://x.ai/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      },
+      "reason": "Developer benchmark announcement explicitly releases the initial question/answer suite on 2024-04-12 and reports percentage correct. Its official dataset card identifies the sole test split with 765 answer-bearing examples; no later named benchmark version or different quality metric is introduced. Qwen reports its own evaluation; benchmark maintainer is not attributed as the Qwen run evaluator.",
+      "locations": [
+        "Benchmark author launch Capabilities table, Real-World Understanding and initial-release paragraph",
+        "Official xai-org dataset card test split and RealWorldQA section"
+      ],
+      "extra_sources": [
+        "https://huggingface.co/datasets/xai-org/RealworldQA"
+      ]
+    }
+  ],
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS"
+}

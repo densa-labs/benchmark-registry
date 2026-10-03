@@ -1,0 +1,11 @@
+{
+  "environment": "staging",
+  "canonicalRevision": "17edca37e5e5c006b169e5ac511a2d5f",
+  "publishedRevision": "17edca37e5e5c006b169e5ac511a2d5f",
+  "pending": false,
+  "d1Queries": 1,
+  "d1RowsRead": 2,
+  "d1RowsWritten": 0,
+  "kvReads": 2,
+  "kvWrites": 0
+}

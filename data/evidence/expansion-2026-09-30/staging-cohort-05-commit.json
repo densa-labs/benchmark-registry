@@ -1,0 +1,48 @@
+{
+  "environment": "staging",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "longbench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "perceptionbench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "c35665f6b04869daaec3a6d8a2b010875a89184d556a5090f52fc6f4a21eee51",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "8a4fcbb7cde2600dc22ec754890aaa5d76ed3e3edd11187f71d1d0095d4da160",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "ab26343de78f32cc6fc0d40066f49809f06ab3189d43d83b89a804e1e4693d12",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "ef8c1629b290d9a3a96d3cb3acf89271cb26ccc427167526d0fb1b7b5023e4bd",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "f2a49da4793f09d3469de46eb21a14b57422134c8d3060af71045bfcc5c29b4c",
+      "message": "result is valid"
+    }
+  ]
+}

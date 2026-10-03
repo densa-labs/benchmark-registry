@@ -1,0 +1,1054 @@
+{
+  "checked_on": "2026-09-30",
+  "inspection_status": "Collection only; not an exhaustive inspection attestation",
+  "sources": [
+    {
+      "id": 0,
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "final_url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "status": "fetched",
+      "characters": 8195,
+      "content_type": "text/html; charset=\"utf-8\""
+    },
+    {
+      "id": 1,
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "final_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "status": "fetched",
+      "characters": 9006,
+      "content_type": "text/html; charset=\"utf-8\""
+    },
+    {
+      "id": 2,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "final_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "status": "fetched",
+      "characters": 12090,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 3,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "final_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "status": "fetched",
+      "characters": 12955,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 4,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
+      "final_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
+      "status": "fetched",
+      "characters": 8700,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 5,
+      "url": "https://cursor.com/changelog/composer-2-5",
+      "final_url": "https://cursor.com/changelog/composer-2-5",
+      "status": "fetched",
+      "characters": 2873,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 6,
+      "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+      "final_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+      "status": "fetched",
+      "characters": 13819,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 7,
+      "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+      "final_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+      "status": "fetched",
+      "characters": 14591,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 8,
+      "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+      "final_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+      "status": "fetched",
+      "characters": 16772,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 9,
+      "url": "https://deepseek.com/en/news/v4-preview/",
+      "final_url": "https://deepseek.com/en/news/v4-preview/",
+      "status": "fetched",
+      "characters": 3771,
+      "content_type": "text/html"
+    },
+    {
+      "id": 10,
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review",
+      "final_url": "https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review",
+      "status": "fetched",
+      "characters": 44033,
+      "content_type": "text/html"
+    },
+    {
+      "id": 11,
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+      "final_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+      "status": "fetched",
+      "characters": 69257,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 12,
+      "url": "https://microsoft.ai/news/introducing-mai-thinking-1/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 13,
+      "url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 14,
+      "url": "https://mistral.ai/news/mistral-3/",
+      "final_url": "https://mistral.ai/news/mistral-3/",
+      "status": "fetched",
+      "characters": 10257,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": 15,
+      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+      "final_url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+      "status": "fetched",
+      "characters": 10204,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": 16,
+      "url": "https://openai.com/index/gpt-5-6/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 17,
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 18,
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 19,
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "final_url": "https://qwen.ai/blog?id=qwen3.7",
+      "status": "fetched",
+      "characters": 4,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 20,
+      "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "final_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "status": "fetched",
+      "characters": 6085,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 21,
+      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "final_url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "status": "fetched",
+      "characters": 9147,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 22,
+      "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "final_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "status": "fetched",
+      "characters": 11015,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 23,
+      "url": "https://thinkingmachines.ai/news/inkling-small/",
+      "final_url": "https://thinkingmachines.ai/news/inkling-small/",
+      "status": "fetched",
+      "characters": 19477,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 24,
+      "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "final_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "status": "fetched",
+      "characters": 36895,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 25,
+      "url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+      "final_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+      "status": "fetched",
+      "characters": 19181,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 26,
+      "url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+      "final_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+      "status": "fetched",
+      "characters": 15126,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 27,
+      "url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+      "final_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+      "status": "fetched",
+      "characters": 23396,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 28,
+      "url": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+      "final_url": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+      "status": "fetched",
+      "characters": 343735,
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "id": 29,
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "final_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "status": "fetched",
+      "characters": 37416,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 30,
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "final_url": "https://www.anthropic.com/claude-opus-5-5",
+      "status": "fetched",
+      "characters": 40090,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 31,
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "final_url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "status": "fetched",
+      "characters": 19839,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 32,
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "final_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "status": "fetched",
+      "characters": 27323,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 33,
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "final_url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "status": "fetched",
+      "characters": 21870,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 34,
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "final_url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "status": "fetched",
+      "characters": 12185,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 35,
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "final_url": "https://www.anthropic.com/news/claude-opus-5",
+      "status": "fetched",
+      "characters": 19375,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 36,
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "final_url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "status": "fetched",
+      "characters": 15741,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 37,
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "final_url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "status": "fetched",
+      "characters": 15505,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 38,
+      "url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+      "final_url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+      "status": "fetched",
+      "characters": 46847,
+      "content_type": "text/html"
+    },
+    {
+      "id": 39,
+      "url": "https://www.kimi.com/en/help/agent/agent-overview",
+      "final_url": "https://www.kimi.com/en/help/agent/agent-overview",
+      "status": "fetched",
+      "characters": 14220,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 40,
+      "url": "https://www.minimax.io/blog/minimax-m3",
+      "final_url": "https://www.minimax.io/blog/minimax-m3",
+      "status": "fetched",
+      "characters": 23880,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 41,
+      "url": "https://x.ai/news/grok-4.5",
+      "status": "inaccessible",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 42,
+      "url": "https://x.ai/news/grok-4.6",
+      "status": "inaccessible",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 43,
+      "url": "https://x.ai/news/grok-4.7",
+      "status": "inaccessible",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 44,
+      "url": "https://z.ai/blog/glm-5.1",
+      "final_url": "https://z.ai/blog/glm-5.1",
+      "status": "fetched",
+      "characters": 0,
+      "content_type": "text/html"
+    },
+    {
+      "id": 45,
+      "url": "https://z.ai/blog/glm-5.2",
+      "final_url": "https://z.ai/blog/glm-5.2",
+      "status": "fetched",
+      "characters": 0,
+      "content_type": "text/html"
+    },
+    {
+      "id": 46,
+      "url": "https://z.ai/blog/glm-5.3",
+      "final_url": "https://z.ai/blog/glm-5.3",
+      "status": "fetched",
+      "characters": 0,
+      "content_type": "text/html"
+    },
+    {
+      "id": 47,
+      "url": "https://z.ai/blog/glm-5.3-flash",
+      "final_url": "https://z.ai/blog/glm-5.3-flash",
+      "status": "fetched",
+      "characters": 0,
+      "content_type": "text/html"
+    },
+    {
+      "id": 100,
+      "url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report",
+      "final_url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report",
+      "status": "fetched",
+      "characters": 251751,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 101,
+      "url": "https://ai.meta.com/static-resource/muse-spark-1-1-eval-methodology",
+      "status": "inaccessible",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "id": 102,
+      "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+      "final_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+      "status": "fetched",
+      "characters": 10395,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 103,
+      "url": "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/",
+      "final_url": "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/",
+      "status": "fetched",
+      "characters": 394341,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 104,
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "final_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "status": "fetched",
+      "characters": 23622,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 105,
+      "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+      "final_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+      "status": "fetched",
+      "characters": 9684,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 106,
+      "url": "http://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+      "final_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-5_flash_model_evaluation.pdf",
+      "status": "fetched",
+      "characters": 3888,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 107,
+      "url": "https://deepmind.google/models/evals-methodology/gemini-3-5-flash",
+      "final_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-5_flash_model_evaluation.pdf",
+      "status": "fetched",
+      "characters": 3888,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 108,
+      "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+      "final_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+      "status": "fetched",
+      "characters": 10559,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 109,
+      "url": "http://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+      "final_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-6_flash_model_evaluation.pdf",
+      "status": "fetched",
+      "characters": 4652,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 110,
+      "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+      "final_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+      "status": "fetched",
+      "characters": 13816,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 111,
+      "url": "http://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+      "final_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_model_evaluation.pdf",
+      "status": "fetched",
+      "characters": 5818,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 112,
+      "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+      "final_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_model_evaluation.pdf",
+      "status": "fetched",
+      "characters": 5818,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 113,
+      "url": "https://arxiv.org/abs/2606.19348",
+      "final_url": "https://arxiv.org/abs/2606.19348",
+      "status": "fetched",
+      "characters": 9095,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 114,
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4#training-methodology",
+      "final_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4#training-methodology",
+      "status": "fetched",
+      "characters": 70299,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 115,
+      "url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf",
+      "final_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf",
+      "status": "fetched",
+      "characters": 201361,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 116,
+      "url": "https://docs.mistral.ai/models/model-cards/mistral-large-3-25-12",
+      "final_url": "https://docs.mistral.ai/models/mistral-large-3-25-12",
+      "status": "fetched",
+      "characters": 1662,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 117,
+      "url": "https://docs.mistral.ai/models/model-cards/ministral-3-8b-25-12",
+      "final_url": "https://docs.mistral.ai/models/ministral-3-8b-25-12",
+      "status": "fetched",
+      "characters": 1621,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 118,
+      "url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
+      "final_url": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04",
+      "status": "fetched",
+      "characters": 1667,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 119,
+      "url": "https://research.meta.ai/static/muse-spark-1-2-methodology",
+      "final_url": "https://research.meta.ai/static/muse-spark-1-2-methodology",
+      "status": "fetched",
+      "characters": 5865,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 120,
+      "url": "https://research.meta.ai/static/muse-glimmer-methodology",
+      "final_url": "https://research.meta.ai/static/muse-glimmer-methodology",
+      "status": "fetched",
+      "characters": 24148,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 121,
+      "url": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology",
+      "final_url": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology",
+      "status": "fetched",
+      "characters": 8560,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 122,
+      "url": "https://thinkingmachines.ai/model-card/inkling-small/",
+      "final_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+      "status": "fetched",
+      "characters": 10869,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 123,
+      "url": "https://thinkingmachines.ai/model-card/inkling/",
+      "final_url": "https://thinkingmachines.ai/model-card/inkling/",
+      "status": "fetched",
+      "characters": 10214,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 124,
+      "url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+      "final_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 431696,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 125,
+      "url": "https://anthropic.com/claude-opus-5-5-system-card",
+      "final_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 470640,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 126,
+      "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+      "final_url": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 259473,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 127,
+      "url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
+      "final_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 649761,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 128,
+      "url": "https://anthropic.com/claude-opus-4-7-system-card",
+      "final_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 516037,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 129,
+      "url": "https://www.anthropic.com/claude-opus-4-8-system-card",
+      "final_url": "https://www-cdn.anthropic.com/0f0c97ad20d8005706296bd92aa1c27c6b2f4f61/Claude%20Opus%204.8%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 496706,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 130,
+      "url": "https://www.anthropic.com/claude-opus-5-system-card",
+      "final_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 387315,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 131,
+      "url": "https://www.anthropic.com/claude-sonnet-4-5-system-card",
+      "final_url": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd/Claude%20Sonnet%204.5%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 299558,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 132,
+      "url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+      "final_url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+      "status": "fetched",
+      "characters": 133963,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 133,
+      "url": "https://www.anthropic.com/claude-sonnet-5-system-card",
+      "final_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+      "status": "fetched",
+      "characters": 283419,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 134,
+      "url": "https://x.ai/news/grok-4-5",
+      "final_url": "https://x.ai/news/grok-4-5",
+      "status": "fetched",
+      "characters": 6971,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 135,
+      "url": "https://x.ai/news/grok-4-6",
+      "final_url": "https://x.ai/news/grok-4-6",
+      "status": "fetched",
+      "characters": 5837,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 136,
+      "url": "https://x.ai/news/grok-4-7",
+      "final_url": "https://x.ai/news/grok-4-7",
+      "status": "fetched",
+      "characters": 4935,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 137,
+      "url": "https://x.ai/safety",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 138,
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 139,
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 140,
+      "url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "final_url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "status": "fetched",
+      "characters": 255364,
+      "content_type": "text/html"
+    },
+    {
+      "id": 141,
+      "url": "https://deploymentsafety.openai.com/gpt-5-6",
+      "final_url": "https://deploymentsafety.openai.com/gpt-5-6",
+      "status": "fetched",
+      "characters": 139720,
+      "content_type": "text/html"
+    },
+    {
+      "id": 142,
+      "url": "https://deploymentsafety.openai.com/gpt-5-5",
+      "final_url": "https://deploymentsafety.openai.com/gpt-5-5",
+      "status": "fetched",
+      "characters": 93305,
+      "content_type": "text/html"
+    },
+    {
+      "id": 143,
+      "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+      "final_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+      "status": "fetched",
+      "characters": 14560,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 160,
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "final_url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "status": "fetched",
+      "characters": 18712,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 161,
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "final_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "status": "fetched",
+      "characters": 21320,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 162,
+      "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "final_url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "status": "fetched",
+      "characters": 30405,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 163,
+      "url": "https://arxiv.org/pdf/2606.19348",
+      "final_url": "https://arxiv.org/pdf/2606.19348",
+      "status": "fetched",
+      "characters": 198272,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 164,
+      "url": "https://arxiv.org/pdf/2607.24653",
+      "final_url": "https://arxiv.org/pdf/2607.24653",
+      "status": "fetched",
+      "characters": 225069,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 165,
+      "url": "https://cursor.com/blog/composer-2-5",
+      "final_url": "https://cursor.com/blog/composer-2-5",
+      "status": "fetched",
+      "characters": 16577,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 166,
+      "url": "https://cognition.com/frontiercode",
+      "final_url": "https://cognition.com/frontiercode",
+      "status": "fetched",
+      "characters": 5565,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 167,
+      "url": "https://microsoft.ai/news/introducing-mai-thinking-1/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 168,
+      "url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+      "status": "inaccessible",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": 170,
+      "url": "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+      "final_url": "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+      "status": "fetched",
+      "characters": 50486,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 171,
+      "url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+      "final_url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+      "status": "fetched",
+      "characters": 59789,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 172,
+      "url": "https://media.x.ai/v1/website/4p5-5184fdf9.pdf",
+      "final_url": "https://media.x.ai/v1/website/4p5-5184fdf9.pdf",
+      "status": "fetched",
+      "characters": 44719,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 173,
+      "url": "https://arxiv.org/pdf/2607.02770",
+      "final_url": "https://arxiv.org/pdf/2607.02770",
+      "status": "fetched",
+      "characters": 58940,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 174,
+      "url": "https://agents-last-exam.org/",
+      "final_url": "https://agents-last-exam.org/",
+      "status": "fetched",
+      "characters": 7699,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 175,
+      "url": "https://cognition.com/blog/frontiercode-1-1",
+      "status": "inaccessible",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": 190,
+      "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+      "final_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-8_flash_model_evaluation.pdf",
+      "status": "fetched",
+      "characters": 5838
+    },
+    {
+      "id": 191,
+      "url": "https://huggingface.co/zai-org/GLM-5.1",
+      "final_url": "https://huggingface.co/zai-org/GLM-5.1",
+      "status": "fetched",
+      "characters": 11335
+    },
+    {
+      "id": 192,
+      "url": "https://huggingface.co/zai-org/GLM-5.2",
+      "final_url": "https://huggingface.co/zai-org/GLM-5.2",
+      "status": "fetched",
+      "characters": 14547
+    },
+    {
+      "id": 193,
+      "url": "https://arxiv.org/abs/2607.07946",
+      "final_url": "https://arxiv.org/abs/2607.07946",
+      "status": "fetched",
+      "characters": 5051
+    },
+    {
+      "id": 194,
+      "url": "https://www.swe-marathon.org/",
+      "final_url": "https://www.swe-marathon.org/",
+      "status": "fetched",
+      "characters": 12
+    },
+    {
+      "id": 195,
+      "url": "https://www.frontierswe.com/",
+      "final_url": "https://www.frontierswe.com/",
+      "status": "fetched",
+      "characters": 7036
+    },
+    {
+      "id": 196,
+      "url": "https://eebench.org/",
+      "final_url": "https://eebench.org/",
+      "status": "fetched",
+      "characters": 196
+    },
+    {
+      "id": 197,
+      "url": "https://arxiv.org/abs/2606.01057",
+      "final_url": "https://arxiv.org/abs/2606.01057",
+      "status": "fetched",
+      "characters": 5290
+    },
+    {
+      "id": 198,
+      "url": "https://www.gnucleus.ai/cad-bench",
+      "final_url": "https://www.gnucleus.ai/cad-bench",
+      "status": "fetched",
+      "characters": 5837
+    },
+    {
+      "id": 199,
+      "url": "https://relbench.stanford.edu/",
+      "final_url": "https://star-project.stanford.edu/relbench/",
+      "status": "fetched",
+      "characters": 9563
+    },
+    {
+      "id": 180,
+      "url": "https://cognition.com/blog/frontier-code-1.1",
+      "final_url": "https://cognition.com/blog/frontier-code-1.1",
+      "status": "fetched",
+      "characters": 9205,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 181,
+      "url": "https://cognition.com/blog/frontier-code",
+      "final_url": "https://cognition.com/blog/frontier-code",
+      "status": "fetched",
+      "characters": 19699,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 182,
+      "url": "https://arxiv.org/pdf/2606.05405",
+      "final_url": "https://arxiv.org/pdf/2606.05405",
+      "status": "fetched",
+      "characters": 143481,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 183,
+      "url": "https://arxiv.org/html/2607.02770v2",
+      "final_url": "https://arxiv.org/html/2607.02770v2",
+      "status": "fetched",
+      "characters": 48064,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 184,
+      "url": "https://agents-last-exam.org/docs",
+      "final_url": "https://agents-last-exam.org/docs",
+      "status": "fetched",
+      "characters": 582,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 210,
+      "url": "https://arxiv.org/html/2412.03304v1",
+      "final_url": "https://arxiv.org/html/2412.03304v1",
+      "status": "fetched",
+      "characters": 154106,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 211,
+      "url": "https://arxiv.org/html/2411.02538v3",
+      "final_url": "https://arxiv.org/html/2411.02538v3",
+      "status": "fetched",
+      "characters": 306969,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 212,
+      "url": "https://arxiv.org/html/2411.19799v1",
+      "final_url": "https://arxiv.org/html/2411.19799v1",
+      "status": "fetched",
+      "characters": 111978,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 213,
+      "url": "https://arxiv.org/html/2505.13444v1",
+      "final_url": "https://arxiv.org/html/2505.13444v1",
+      "status": "fetched",
+      "characters": 109299,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 214,
+      "url": "https://github.com/databricks/officeqa",
+      "final_url": "https://github.com/databricks/officeqa",
+      "status": "fetched",
+      "characters": 16266,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 215,
+      "url": "https://arxiv.org/html/2603.08655v1",
+      "final_url": "https://arxiv.org/html/2603.08655v1",
+      "status": "fetched",
+      "characters": 79163,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 216,
+      "url": "https://chartmuseum-leaderboard.github.io/",
+      "final_url": "https://chartmuseum-leaderboard.github.io/",
+      "status": "fetched",
+      "characters": 2540,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 225,
+      "url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "final_url": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "status": "fetched",
+      "characters": 16621,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 226,
+      "url": "https://www.anthropic.com/aug-2026-risk-report",
+      "final_url": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf",
+      "status": "fetched",
+      "characters": 498543,
+      "content_type": "application/pdf"
+    },
+    {
+      "id": 227,
+      "url": "https://arxiv.org/html/2410.03859v1",
+      "final_url": "https://arxiv.org/html/2410.03859v1",
+      "status": "fetched",
+      "characters": 124387,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 228,
+      "url": "https://www.frontierswe.com/blog/v2",
+      "final_url": "https://www.frontierswe.com/blog/v2",
+      "status": "fetched",
+      "characters": 36091,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 229,
+      "url": "https://arxiv.org/html/2605.03546v1",
+      "final_url": "https://arxiv.org/html/2605.03546v1",
+      "status": "fetched",
+      "characters": 134778,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 230,
+      "url": "https://github.com/surge-ai/chartography",
+      "final_url": "https://github.com/surge-ai/chartography",
+      "status": "fetched",
+      "characters": 7204,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": 231,
+      "url": "https://cursor.com/cursorbench",
+      "final_url": "https://cursor.com/cursorbench",
+      "status": "fetched",
+      "characters": 10816,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ]
+}

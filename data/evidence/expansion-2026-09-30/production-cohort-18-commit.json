@@ -1,0 +1,18 @@
+{
+  "environment": "production",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "9aeee31205b9c18942748c2edd513c31483fc428d4faf9f07b114918a9ca9764",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "d576216e1fcbe65699805dc38d295d9d0a97a26d1da52722973c84aba5b081cf",
+      "message": "result is valid"
+    }
+  ]
+}

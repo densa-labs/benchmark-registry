@@ -1,0 +1,195 @@
+[
+  {
+    "source_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+    "location": "Table0, row3, column Inkling-Small",
+    "reason": "Parameter count is model metadata, not a benchmark result."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+    "location": "Table0, row3, column Inkling",
+    "reason": "Parameter count is model metadata, not a benchmark result."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table2, row1, column Inkling",
+    "benchmark": "ForecastBench",
+    "score": "61.1 ± 0.79",
+    "reason": "June30–July13 forecast evaluation explicitly used a different Inkling checkpoint than the released Registry model."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table2, row2, column Inkling",
+    "benchmark": "ForecastBench",
+    "score": "63.7 ± 0.82",
+    "reason": "June30–July13 forecast evaluation explicitly used a different Inkling checkpoint than the released Registry model."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table2, row3, column Inkling",
+    "benchmark": "Prophet Arena",
+    "score": "0.1617",
+    "reason": "June30–July13 forecast evaluation explicitly used a different Inkling checkpoint than the released Registry model."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row2, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "Humanity’s Last Exam",
+    "score": "29.6%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row3, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "Humanity’s Last Exam",
+    "score": "46.6%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row4, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "AIME 2026",
+    "score": "95.1%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row5, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "GPQA Diamond",
+    "score": "88.3%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row7, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "SWE-bench Verified",
+    "score": "77.4%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row8, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "SWE-bench Pro",
+    "score": "53.2%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row9, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "Terminal-Bench 2.1",
+    "score": "52.7%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row11, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "Tau 3 Banking",
+    "score": "13.6%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row12, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "MCP Atlas",
+    "score": "74.9%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row14, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "SimpleQA Verified",
+    "score": "20.9%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row16, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "IFBench",
+    "score": "83.4%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row17, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "Global-MMLU-Lite",
+    "score": "86.8%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row19, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "MMMU-Pro",
+    "score": "73.1%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row20, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "CharXiv",
+    "score": "76.7%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row21, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "CharXiv",
+    "score": "83.4%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row23, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "AudioMC",
+    "score": "49.6%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row24, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "MMAU",
+    "score": "77.5%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row25, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "VoiceBench",
+    "score": "90.0%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row27, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "FORTRESS",
+    "score": "75.6%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row28, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "FORTRESS",
+    "score": "94.1%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Table6, row29, column Inkling-Small (Preview) effort=0.99",
+    "benchmark": "StrongREJECT",
+    "score": "98.8%",
+    "reason": "Explicit Inkling-Small Preview checkpoint differs from July30 final Registry160002."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+    "location": "Table6, row3, column Inkling-Small",
+    "reason": "Parameter count is model metadata, not a benchmark result."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+    "location": "Table6, row3, column Inkling",
+    "reason": "Parameter count is model metadata, not a benchmark result."
+  },
+  {
+    "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "location": "Effort-sweep HLE seven points and repeated linked effort-scaling.png",
+    "reason": "Explicit earlier checkpoint differs from released Inkling; seven unlabeled points excluded from exact-model inventory."
+  }
+]

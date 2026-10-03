@@ -1,0 +1,102 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 10,
+  "models": [
+    {
+      "registry_no": "20010",
+      "before": 8,
+      "added": 10,
+      "after": 18,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 7,
+  "companies_verified": [
+    "anthropic"
+  ],
+  "exact_results": [
+    {
+      "result_key": "a036863e04534a4338c65bd86d3453585a0d1cbf317042446043a425ec6f8432",
+      "eligible": true
+    },
+    {
+      "result_key": "cbe2cf6748c00883215dba3f4cafd7dc3fac32940e7a8652a85e53755982671d",
+      "eligible": true
+    },
+    {
+      "result_key": "88db4904afe0b499aa8c9035b09dd4d6f94fcdc0e828aec7103543a0b702782f",
+      "eligible": true
+    },
+    {
+      "result_key": "e189391ba7f3891f98521b6956000e7f5a5f90dda25f0554c11cf838d402fc3a",
+      "eligible": true
+    },
+    {
+      "result_key": "50d742797b1b9e0052d596454cd39a5bc0c52715a4aef51f602202ad3fa2715e",
+      "eligible": false
+    },
+    {
+      "result_key": "7bc71af4941d41c17f913043b84336aeefdfd278c563baf59fe41d0e21ceced3",
+      "eligible": false
+    },
+    {
+      "result_key": "bc64adeba11496a035522f70350a185a8ea3935ca6d6139f34d979d221cbe8fc",
+      "eligible": false
+    },
+    {
+      "result_key": "c7b1b71381b65a391f9847849e21b94e3c80cbf7d799ff4a47418fe3260e4653",
+      "eligible": false
+    },
+    {
+      "result_key": "19ce40ab2d84aefec5b5f0e311d00796101bdb821e7e8620291a03ae4119819a",
+      "eligible": true
+    },
+    {
+      "result_key": "f72bd7ce2de4b651dc76148f0b336575680c205411f077a94d89eb5ab868e96a",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 907,
+    "models": 94,
+    "benchmarks": 71,
+    "versions": 128
+  },
+  "sitemap_count": 922,
+  "published_generations": [
+    "35640290f87740a5b9f3a135e2062b65"
+  ],
+  "search_checks": [
+    {
+      "query": "MMMLU",
+      "benchmark_slug": "mmmlu",
+      "status": "PASS"
+    },
+    {
+      "query": "CharXiv",
+      "benchmark_slug": "charxiv",
+      "status": "PASS"
+    },
+    {
+      "query": "Humanity",
+      "benchmark_slug": "humanitys-last-exam",
+      "status": "PASS"
+    },
+    {
+      "query": "Global MMLU",
+      "benchmark_slug": "global-mmlu",
+      "status": "PASS"
+    },
+    {
+      "query": "MILU",
+      "benchmark_slug": "milu",
+      "status": "PASS"
+    },
+    {
+      "query": "CyberGym",
+      "benchmark_slug": "cybergym",
+      "status": "PASS"
+    }
+  ]
+}

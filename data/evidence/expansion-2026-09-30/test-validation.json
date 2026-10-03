@@ -1,0 +1,245 @@
+{
+  "command": "pytest ingestor/tests/test_ingestor.py -q -k 'not disposable_remote'",
+  "passed": 45,
+  "deselected": 1,
+  "staging_dry_run_valid": 113,
+  "staging_dry_run_errors": 0,
+  "materialization_worker_tests_passed": 16,
+  "disposable_atomic_rollback_probes_passed": {
+    "staging": 1,
+    "production": 1
+  },
+  "cohort_06": {
+    "ingestor_tests_passed": 45,
+    "deselected": 1,
+    "seconds": 5.52,
+    "staging_dry_run_valid": 6,
+    "production_dry_run_valid": 6,
+    "errors": 0,
+    "disposable_atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments",
+    "replay_skipped": 6,
+    "public_d1_rows": 0
+  },
+  "cohort_08": {
+    "staging_dry_run_valid": 6,
+    "production_dry_run_valid": 6,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments",
+    "replay_skipped": 6,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_09": {
+    "staging_dry_run_valid": 20,
+    "production_dry_run_valid": 20,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments",
+    "replay_skipped": 20,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_10": {
+    "staging_dry_run_valid": 30,
+    "production_dry_run_valid": 30,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments",
+    "replay_skipped": 30,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0,
+    "transient_authentication_failures": "Recovered before production canonical mutation; see cohort10 evidence."
+  },
+  "cohort_11": {
+    "staging_dry_run_valid": 29,
+    "production_dry_run_valid": 29,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;23 exact values across21 versions and6 search queries",
+    "replay_skipped": 29,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_12": {
+    "staging_dry_run_valid": 3,
+    "production_dry_run_valid": 3,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;2 values/versions, source links, company/benchmark views, search, exact eligibility and sitemap",
+    "replay_skipped": 3,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0,
+    "staging_recovery": "Canonical commit retained; incremental publication recovered after normal lease expiry."
+  },
+  "cohort_13": {
+    "staging_dry_run_valid": 34,
+    "production_dry_run_valid": 34,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;34 values,8 versions, source links, company/benchmark views, search, reasoning, exact eligibility and sitemap",
+    "replay_skipped": 34,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_14": {
+    "staging_dry_run_valid": 3,
+    "production_dry_run_valid": 3,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;3 values/versions,source links,company/benchmark views,search,reasoning,exact eligibility,sitemap",
+    "replay_skipped": 3,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_15": {
+    "staging_dry_run_valid": 3,
+    "production_dry_run_valid": 3,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments; three values/versions, source links, company/benchmark views, search, reasoning, exact eligibility, sitemap",
+    "replay_skipped": 3,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_16": {
+    "staging_dry_run_valid": 2,
+    "production_dry_run_valid": 2,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments,new MMMLU family/version/metric,result15th,Qwen evaluator vs OpenAI maintainer,search/exact/canonicals/source/sitemap",
+    "replay_skipped_records": 2,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_17": {
+    "staging_dry_run_valid": 10,
+    "production_dry_run_valid": 10,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;tenresults,sevenversions;Opus47 count18;scores/versions/reasoning/source links/company/search/exact/canonicals/sitemap coherent",
+    "replay_skipped_records": 10,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_18": {
+    "staging_dry_run_valid": 2,
+    "production_dry_run_valid": 2,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;two results/two versions;Qwen3.7-Max count10;scores/versions/reasoning/source links/company/search/exact/canonicals/sitemap coherent",
+    "replay_skipped_records": 2,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_19": {
+    "staging_dry_run_valid": 2,
+    "production_dry_run_valid": 2,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments;two results/two versions;Qwen3.7-Plus count14;score formatting/versions/reasoning/source links/company/search/exact/canonicals/sitemap coherent",
+    "replay_skipped_records": 2,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_20": {
+    "staging_dry_run_valid": 3,
+    "production_dry_run_valid": 3,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS in both environments: 2 results, 2 versions, M3 count 7; metric display, source links, reasoning, company, search, exact result eligibility, pagination, canonical URLs and sitemap verified.",
+    "replay_skipped_records": 3,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_21": {
+    "staging_dry_run_valid": 1,
+    "production_dry_run_valid": 1,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS in both environments: Grok 4.5 result count 2 → 3; 78.0%, Multilingual edition, Cursor primary evidence, high effort, reverse views, exact result eligibility, pagination, search, canonical URLs and sitemap checked.",
+    "replay_skipped_records": 1,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_22": {
+    "staging_dry_run_valid": 1,
+    "production_dry_run_valid": 1,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS in both environments: all five Gemma model pages, 12B count 8 → 9, MMMLU Original 83.4%, thinking mode, official report evidence, reverse views, exact-result eligibility, pagination, search, canonical URLs and sitemap checked.",
+    "replay_skipped_records": 1,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_23": {
+    "staging_dry_run_valid": 8,
+    "production_dry_run_valid": 8,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments: Kimi K3 count11→16, five scores and configurations, official evidence links, model/company/benchmark reverse views, pagination, exact-result eligibility, Video-MME family+alias search, coherent generations and sitemap.",
+    "replay_skipped_records": 8,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_24": {
+    "staging_dry_run_valid": 6,
+    "production_dry_run_valid": 6,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments: all four Gemini Flash model pages, five exact scores/configurations, official sources, Google company and benchmark reverse views, pagination, exact-result eligibility, CharXiv/LVBench search, coherent generations and sitemap. Initial staging QA transport failure passed on retry without any data change.",
+    "replay_skipped_records": 6,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  },
+  "cohort_25": {
+    "staging_dry_run_valid": 2,
+    "production_dry_run_valid": 2,
+    "atomic_rollback_probes_passed": {
+      "staging": 1,
+      "production": 1
+    },
+    "public_verification": "PASS both environments: Inkling and Inkling-Small model counts, CharXiv versions and scores, effort0.99, official sources, company/benchmark reverse views, pagination, exact-result eligibility, search, sitemap and coherent generation.",
+    "replay_skipped_records": 2,
+    "public_d1_rows": 0,
+    "noop_kv_writes": 0
+  }
+}

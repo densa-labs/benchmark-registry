@@ -1,0 +1,29 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40001",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "78",
+        "score_raw": "78.0%",
+        "reported_at": "2026-07-14",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/resources/grok-4-5-model-card.pdf",
+            "checked_at": "2026-10-03T05:17:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

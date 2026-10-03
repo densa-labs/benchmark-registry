@@ -1,0 +1,1053 @@
+[
+  {
+    "registry_no": "160001",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "source_inspection_scope": "Full developer model cards, official HF model cards and complete July15/July30 release blogs; every table, radar tooltip, both compute/cost modes, token-efficiency titles, effort figures and full footnotes. No appendices or linked technical report. Linked thinking-effort guide and figure inspected. Hosting recipes are third-party integrations, not first-party eval supplements.",
+    "second_pass_completed": true,
+    "visible_records_found": 76,
+    "raw_source_occurrences": 267,
+    "outcomes": {
+      "unresolved": 62,
+      "conflict_deferred": 4,
+      "already_present_identical": 10
+    },
+    "unexplained_source_visible_results": 0,
+    "remaining_work": "Publication complete. Authoritative AIME/HMMT/MMAU/VoiceBench/FORTRESS metadata resolution and remaining mapping audits deferred at user request. External run/source conflicts remain individually documented; source inspection complete.",
+    "remaining_records": [
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "Text only; no tools",
+        "scores": [
+          "29.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "With tools",
+        "scores": [
+          "46.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "AIME 2026",
+        "configuration": "2026",
+        "scores": [
+          "97.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Official HF metadata identifies MathArena/aime_2026 or hmmt_feb_2026, and author cards confirm competition/task identity. Exact canonical version release date and score aggregation/sample configuration are not established in inspected developer documentation; benchmark author metadata research remains pending. No pass@k/majority-vote assumption."
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "configuration": "Original",
+        "scores": [
+          "87.2%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Existing Registry87.2 credits Thinking Machines, but full launch explicitly attributes GPQA to Artificial Analysis. Guarded evaluator correction is unsupported. Preserve existing record and exact source conflict; no replacement or duplicate."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "Original",
+        "scores": [
+          "1238",
+          "1233"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Official Inkling HF card1233 differs from developer website1238 without a correction or distinct run identifier."
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "configuration": "Unspecified set",
+        "scores": [
+          "76.0%",
+          "74.1%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Official Inkling HF card74.1% differs from website76.0%. Small launch separates Public78.8 from All76.0. Original subset/run cannot be established; preserve source disagreement."
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "configuration": "Original",
+        "scores": [
+          "23.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "AA Omniscience",
+        "configuration": "Index",
+        "scores": [
+          "2.1",
+          "1.0%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Official HF card1.0% differs from developer website2.1 index points. No corrected-value notice or distinguishable rerun. Accuracy40.0 in radar is a separate metric, not equivalent to this index."
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "configuration": "Original",
+        "scores": [
+          "88.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author CohereLabs card distinguishes v1.0Dec2024(15languages),v2.0Dec2025(18),v3.0May2026(23). Developer gives neither version nor language set/aggregate. Cannot map to full Global-MMLU or guess Lite3.0."
+      },
+      {
+        "benchmark": "MMMU-Pro",
+        "configuration": "Standard10",
+        "scores": [
+          "73.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "AudioMC",
+        "configuration": "Original",
+        "scores": [
+          "56.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes Scale AI. Exact AudioMC edition/metric and original primary evaluation run must be established; no developer-run attribution inferred."
+      },
+      {
+        "benchmark": "MMAU",
+        "configuration": "Original",
+        "scores": [
+          "77.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer does not specify MMAU edition, task subset or task aggregation. Author version/metric metadata research remains pending; no full/test-mini equivalence guessed."
+      },
+      {
+        "benchmark": "VoiceBench",
+        "configuration": "Original",
+        "scores": [
+          "91.4%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer adds an answer-format system message for rule-based grading. Exact author task mixture, metric aggregation and release/version need authoritative resolution; not a bare generic accuracy record."
+      },
+      {
+        "benchmark": "FORTRESS",
+        "configuration": "Adversarial",
+        "scores": [
+          "78.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Source reports refusal and benign-answer rates for two subsets. Author version/metric structure needs authoritative resolution under the frozen one-metric-per-version contract; no metric-specific artificial edition."
+      },
+      {
+        "benchmark": "FORTRESS",
+        "configuration": "Benign",
+        "scores": [
+          "95.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Source reports refusal and benign-answer rates for two subsets. Author version/metric structure needs authoritative resolution under the frozen one-metric-per-version contract; no metric-specific artificial edition."
+      },
+      {
+        "benchmark": "Artificial Analysis Intelligence Index",
+        "configuration": "v4.1",
+        "scores": [
+          "41.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "SciCode",
+        "configuration": "Original",
+        "scores": [
+          "46.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "configuration": "Public",
+        "scores": [
+          "78.8%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Launch credits ScaleAI. Public and All are distinct: Inkling78.8/76.0, Small79.6/79.2. Existing author-snapshot Public records76/79.2 have different date/reasoning metadata. Exact original run/subset identity must be confirmed before additions or guarded correction; no score overwrite."
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "configuration": "All",
+        "scores": [
+          "76.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Launch credits ScaleAI. Public and All are distinct: Inkling78.8/76.0, Small79.6/79.2. Existing author-snapshot Public records76/79.2 have different date/reasoning metadata. Exact original run/subset identity must be confirmed before additions or guarded correction; no score overwrite."
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "configuration": "Original",
+        "scores": [
+          "839"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "HMMT Feb 2026",
+        "configuration": "Feb2026",
+        "scores": [
+          "86.3%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Official HF metadata identifies MathArena/aime_2026 or hmmt_feb_2026, and author cards confirm competition/task identity. Exact canonical version release date and score aggregation/sample configuration are not established in inspected developer documentation; benchmark author metadata research remains pending. No pass@k/majority-vote assumption."
+      },
+      {
+        "benchmark": "CritPt",
+        "configuration": "Original",
+        "scores": [
+          "5.4%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "ARC-AGI-1",
+        "configuration": "Original",
+        "scores": [
+          "79.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes ARC Prize evaluation; exact author task set, evaluation configuration and run identifier are not provided in release documentation. No developer-run attribution or unpinned edition guessed."
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "configuration": "Original",
+        "scores": [
+          "36.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes ARC Prize evaluation; exact author task set, evaluation configuration and run identifier are not provided in release documentation. No developer-run attribution or unpinned edition guessed."
+      },
+      {
+        "benchmark": "ForecastBench",
+        "configuration": "no search;July19–28",
+        "scores": [
+          "60.1 ± 0.54"
+        ],
+        "outcome": "unresolved",
+        "reason": "July19–28 evaluation window is explicit, but source credits external evaluators and does not pin task/run ID or released checkpoint/configuration. Preserve uncertainty interval and exact metric; do not equate with June30–July13 different-checkpoint scores."
+      },
+      {
+        "benchmark": "ForecastBench",
+        "configuration": "with search;July19–28",
+        "scores": [
+          "61.0 ± 0.56"
+        ],
+        "outcome": "unresolved",
+        "reason": "July19–28 evaluation window is explicit, but source credits external evaluators and does not pin task/run ID or released checkpoint/configuration. Preserve uncertainty interval and exact metric; do not equate with June30–July13 different-checkpoint scores."
+      },
+      {
+        "benchmark": "Prophet Arena",
+        "configuration": "July19–28",
+        "scores": [
+          "0.1276 ± 0.0092"
+        ],
+        "outcome": "unresolved",
+        "reason": "July19–28 evaluation window is explicit, but source credits external evaluators and does not pin task/run ID or released checkpoint/configuration. Preserve uncertainty interval and exact metric; do not equate with June30–July13 different-checkpoint scores."
+      },
+      {
+        "benchmark": "AA Omniscience",
+        "configuration": "Accuracy",
+        "scores": [
+          "40.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "Design Arena",
+        "configuration": "Agentic Web Dev",
+        "scores": [
+          "1257"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer quotes external blinded-human Agentic Web Dev leaderboard. Exact author primary run, benchmark edition and evaluator metadata are not established; no arbitrary date-based snapshot run."
+      },
+      {
+        "benchmark": "Held-out reasoning aggregate",
+        "configuration": "Released checkpoint",
+        "scores": [
+          "0.356"
+        ],
+        "outcome": "unresolved",
+        "reason": "Released checkpoint reward0.356 is explicit, but unnamed mixture of AIME/HLE/GPQA and others lacks task set, weights, metric definition and benchmark edition release date. No malformed composite entity created."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July15 effort sweep; point1 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July15 effort sweep; point2 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July15 effort sweep; point3 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July15 effort sweep; point4 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July15 effort sweep; point5 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July15 effort sweep; point6 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point1 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point2 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point3 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point4 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point5 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point6 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July15 effort sweep; point7 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point1 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point2 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point3 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point4 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point5 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point6 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point1 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point2 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point3 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point4 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point5 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point6 of6",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point1 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point2 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point3 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point4 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point5 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point6 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point7 of7",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "28.6k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "8.4k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "52.2k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      },
+      {
+        "benchmark": "CritPt",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "79.3k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      }
+    ],
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "published_additions": 0
+  },
+  {
+    "registry_no": "160002",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "NO",
+    "source_inspection_scope": "Full developer model cards, official HF model cards and complete July15/July30 release blogs; every table, radar tooltip, both compute/cost modes, token-efficiency titles, effort figures and full footnotes. No appendices or linked technical report. Linked thinking-effort guide and figure inspected. Hosting recipes are third-party integrations, not first-party eval supplements.",
+    "second_pass_completed": true,
+    "visible_records_found": 56,
+    "raw_source_occurrences": 140,
+    "outcomes": {
+      "unresolved": 46,
+      "already_present_identical": 8,
+      "ingested_new": 2
+    },
+    "unexplained_source_visible_results": 0,
+    "remaining_work": "Publication complete. Authoritative AIME/HMMT/MMAU/VoiceBench/FORTRESS metadata resolution and remaining mapping audits deferred at user request. External run/source conflicts remain individually documented; source inspection complete.",
+    "remaining_records": [
+      {
+        "benchmark": "Artificial Analysis Intelligence Index",
+        "configuration": "v4.1",
+        "scores": [
+          "40.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "SciCode",
+        "configuration": "Original",
+        "scores": [
+          "48.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "Original",
+        "scores": [
+          "1269"
+        ],
+        "outcome": "unresolved",
+        "reason": "Launch explicitly quotes Artificial Analysis evaluation. Exact primary run/configuration snapshot not supplied; do not attribute this score to Thinking Machines."
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "configuration": "Public",
+        "scores": [
+          "79.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Launch credits ScaleAI. Public and All are distinct: Inkling78.8/76.0, Small79.6/79.2. Existing author-snapshot Public records76/79.2 have different date/reasoning metadata. Exact original run/subset identity must be confirmed before additions or guarded correction; no score overwrite."
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "configuration": "All",
+        "scores": [
+          "79.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Launch credits ScaleAI. Public and All are distinct: Inkling78.8/76.0, Small79.6/79.2. Existing author-snapshot Public records76/79.2 have different date/reasoning metadata. Exact original run/subset identity must be confirmed before additions or guarded correction; no score overwrite."
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "configuration": "Original",
+        "scores": [
+          "15.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "configuration": "Original",
+        "scores": [
+          "917"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "GPQA Diamond",
+        "configuration": "Original",
+        "scores": [
+          "89.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "Text only; no tools",
+        "scores": [
+          "31.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "With tools",
+        "scores": [
+          "47.8%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "AIME 2026",
+        "configuration": "2026",
+        "scores": [
+          "95.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Official HF metadata identifies MathArena/aime_2026 or hmmt_feb_2026, and author cards confirm competition/task identity. Exact canonical version release date and score aggregation/sample configuration are not established in inspected developer documentation; benchmark author metadata research remains pending. No pass@k/majority-vote assumption."
+      },
+      {
+        "benchmark": "HMMT Feb 2026",
+        "configuration": "Feb2026",
+        "scores": [
+          "90.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Official HF metadata identifies MathArena/aime_2026 or hmmt_feb_2026, and author cards confirm competition/task identity. Exact canonical version release date and score aggregation/sample configuration are not established in inspected developer documentation; benchmark author metadata research remains pending. No pass@k/majority-vote assumption."
+      },
+      {
+        "benchmark": "CritPt",
+        "configuration": "Original",
+        "scores": [
+          "8.3%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "ARC-AGI-1",
+        "configuration": "Original",
+        "scores": [
+          "84.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes ARC Prize evaluation; exact author task set, evaluation configuration and run identifier are not provided in release documentation. No developer-run attribution or unpinned edition guessed."
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "configuration": "Original",
+        "scores": [
+          "40.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes ARC Prize evaluation; exact author task set, evaluation configuration and run identifier are not provided in release documentation. No developer-run attribution or unpinned edition guessed."
+      },
+      {
+        "benchmark": "AA Omniscience",
+        "configuration": "Index",
+        "scores": [
+          "-9.0"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "Global-MMLU-Lite",
+        "configuration": "Original",
+        "scores": [
+          "86.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author CohereLabs card distinguishes v1.0Dec2024(15languages),v2.0Dec2025(18),v3.0May2026(23). Developer gives neither version nor language set/aggregate. Cannot map to full Global-MMLU or guess Lite3.0."
+      },
+      {
+        "benchmark": "FORTRESS",
+        "configuration": "Adversarial",
+        "scores": [
+          "71.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Source reports refusal and benign-answer rates for two subsets. Author version/metric structure needs authoritative resolution under the frozen one-metric-per-version contract; no metric-specific artificial edition."
+      },
+      {
+        "benchmark": "FORTRESS",
+        "configuration": "Benign",
+        "scores": [
+          "96.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Source reports refusal and benign-answer rates for two subsets. Author version/metric structure needs authoritative resolution under the frozen one-metric-per-version contract; no metric-specific artificial edition."
+      },
+      {
+        "benchmark": "MMMU-Pro",
+        "configuration": "Standard10",
+        "scores": [
+          "74.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "AudioMC",
+        "configuration": "Original",
+        "scores": [
+          "54.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes Scale AI. Exact AudioMC edition/metric and original primary evaluation run must be established; no developer-run attribution inferred."
+      },
+      {
+        "benchmark": "MMAU",
+        "configuration": "Original",
+        "scores": [
+          "77.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer does not specify MMAU edition, task subset or task aggregation. Author version/metric metadata research remains pending; no full/test-mini equivalence guessed."
+      },
+      {
+        "benchmark": "VoiceBench",
+        "configuration": "Original",
+        "scores": [
+          "90.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer adds an answer-format system message for rule-based grading. Exact author task mixture, metric aggregation and release/version need authoritative resolution; not a bare generic accuracy record."
+      },
+      {
+        "benchmark": "ForecastBench",
+        "configuration": "no search;July19–28",
+        "scores": [
+          "61.3 ± 0.46"
+        ],
+        "outcome": "unresolved",
+        "reason": "July19–28 evaluation window is explicit, but source credits external evaluators and does not pin task/run ID or released checkpoint/configuration. Preserve uncertainty interval and exact metric; do not equate with June30–July13 different-checkpoint scores."
+      },
+      {
+        "benchmark": "ForecastBench",
+        "configuration": "with search;July19–28",
+        "scores": [
+          "61.5 ± 0.54"
+        ],
+        "outcome": "unresolved",
+        "reason": "July19–28 evaluation window is explicit, but source credits external evaluators and does not pin task/run ID or released checkpoint/configuration. Preserve uncertainty interval and exact metric; do not equate with June30–July13 different-checkpoint scores."
+      },
+      {
+        "benchmark": "Prophet Arena",
+        "configuration": "July19–28",
+        "scores": [
+          "0.1238 ± 0.0086"
+        ],
+        "outcome": "unresolved",
+        "reason": "July19–28 evaluation window is explicit, but source credits external evaluators and does not pin task/run ID or released checkpoint/configuration. Preserve uncertainty interval and exact metric; do not equate with June30–July13 different-checkpoint scores."
+      },
+      {
+        "benchmark": "AA Omniscience",
+        "configuration": "Accuracy",
+        "scores": [
+          "30.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer release explicitly relies on Artificial Analysis for this evaluation, or labels this as its index/reference data. Exact primary evaluator run/configuration snapshot is not established. Preserve source-supported quote; do not reattribute to Thinking Machines. AA Omniscience accuracy and index remain separate metrics."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point1 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point2 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point3 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point4 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Terminal-Bench 2.1",
+        "configuration": "July30 compute/cost sweep; point5 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point1 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point2 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point3 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point4 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "July30 compute/cost sweep; point5 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point1 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point2 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point3 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point4 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "IFBench",
+        "configuration": "July30 compute/cost sweep; point5 of5",
+        "scores": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "All target points inspected. Exact numeric score is absent; no interpolation. Small points have named minimal/low/medium/high/xhigh labels; Inkling intermediate efforts are not all named. Chart pass@1/scaffold cannot be silently equated to main best-harness aggregate."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "23k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      },
+      {
+        "benchmark": "Tau 3 Banking",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "5.1k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      },
+      {
+        "benchmark": "AA-Briefcase",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "29k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      },
+      {
+        "benchmark": "CritPt",
+        "configuration": "Output tokens/task",
+        "scores": [
+          "101k"
+        ],
+        "outcome": "unresolved",
+        "reason": "Exact output-token figure is visible, but developer mixes internal and Artificial Analysis reference runs without per-point run attribution. The source publishes score and output-token metrics together for the same evaluation; frozen one-metric contract prevents silently selecting a metric."
+      }
+    ],
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "published_additions": 2
+  }
+]

@@ -1,0 +1,190 @@
+{
+  "source_url": "https://docs.qwenlm.ai/resources/CCoLV_eda_agent_square.html",
+  "source_title": "Qwen3.8-Max GCD hardware design trajectory",
+  "milestones": [
+    {
+      "milestone": 1,
+      "gate_count": 8293,
+      "improvement_ratio": null,
+      "reduction_from_previous": null,
+      "composition": {
+        "Registers": 282,
+        "MUX": 1155,
+        "XOR/XNOR": 1405,
+        "AND": 3333,
+        "OR": 1604,
+        "NOT": 514
+      }
+    },
+    {
+      "milestone": 2,
+      "gate_count": 2005,
+      "improvement_ratio": "4.1",
+      "reduction_from_previous": "6288",
+      "composition": {
+        "Registers": 284,
+        "MUX": 287,
+        "XOR/XNOR": 168,
+        "AND": 699,
+        "OR": 406,
+        "NOT": 161
+      }
+    },
+    {
+      "milestone": 3,
+      "gate_count": 1655,
+      "improvement_ratio": "5.0",
+      "reduction_from_previous": "350",
+      "composition": {
+        "Registers": 216,
+        "MUX": 254,
+        "XOR/XNOR": 151,
+        "AND": 583,
+        "OR": 359,
+        "NOT": 92
+      }
+    },
+    {
+      "milestone": 4,
+      "gate_count": 1488,
+      "improvement_ratio": "5.6",
+      "reduction_from_previous": "167",
+      "composition": {
+        "Registers": 198,
+        "MUX": 283,
+        "XOR/XNOR": 148,
+        "AND": 501,
+        "OR": 300,
+        "NOT": 58
+      }
+    },
+    {
+      "milestone": 5,
+      "gate_count": 1297,
+      "improvement_ratio": "6.4",
+      "reduction_from_previous": "191",
+      "composition": {
+        "Registers": 199,
+        "MUX": 268,
+        "XOR/XNOR": 116,
+        "AND": 424,
+        "OR": 251,
+        "NOT": 39
+      }
+    },
+    {
+      "milestone": 6,
+      "gate_count": 1177,
+      "improvement_ratio": "7.0",
+      "reduction_from_previous": "120",
+      "composition": {
+        "Registers": 164,
+        "MUX": 222,
+        "XOR/XNOR": 113,
+        "AND": 383,
+        "OR": 250,
+        "NOT": 45
+      }
+    },
+    {
+      "milestone": 7,
+      "gate_count": 1132,
+      "improvement_ratio": "7.3",
+      "reduction_from_previous": "45",
+      "composition": {
+        "Registers": 162,
+        "MUX": 189,
+        "XOR/XNOR": 114,
+        "AND": 407,
+        "OR": 220,
+        "NOT": 40
+      }
+    },
+    {
+      "milestone": 8,
+      "gate_count": 945,
+      "improvement_ratio": "8.8",
+      "reduction_from_previous": "187",
+      "composition": {
+        "Registers": 112,
+        "MUX": 174,
+        "XOR/XNOR": 115,
+        "AND": 276,
+        "OR": 209,
+        "NOT": 59
+      }
+    },
+    {
+      "milestone": 9,
+      "gate_count": 904,
+      "improvement_ratio": "9.2",
+      "reduction_from_previous": "41",
+      "composition": {
+        "Registers": 112,
+        "MUX": 189,
+        "XOR/XNOR": 115,
+        "AND": 239,
+        "OR": 206,
+        "NOT": 43
+      }
+    },
+    {
+      "milestone": 10,
+      "gate_count": 845,
+      "improvement_ratio": "9.8",
+      "reduction_from_previous": "59",
+      "composition": {
+        "Registers": 85,
+        "MUX": 171,
+        "XOR/XNOR": 115,
+        "AND": 226,
+        "OR": 209,
+        "NOT": 39
+      }
+    },
+    {
+      "milestone": 11,
+      "gate_count": 767,
+      "improvement_ratio": "10.8",
+      "reduction_from_previous": "78",
+      "composition": {
+        "Registers": 82,
+        "MUX": 202,
+        "XOR/XNOR": 84,
+        "AND": 165,
+        "OR": 181,
+        "NOT": 53
+      }
+    },
+    {
+      "milestone": 12,
+      "gate_count": 698,
+      "improvement_ratio": "11.9",
+      "reduction_from_previous": "69",
+      "composition": {
+        "Registers": 78,
+        "MUX": 188,
+        "XOR/XNOR": 83,
+        "AND": 170,
+        "OR": 125,
+        "NOT": 54
+      }
+    },
+    {
+      "milestone": 13,
+      "gate_count": 678,
+      "improvement_ratio": "12.2",
+      "reduction_from_previous": "20",
+      "composition": {
+        "Registers": 78,
+        "MUX": 173,
+        "XOR/XNOR": 83,
+        "AND": 138,
+        "OR": 152,
+        "NOT": 54
+      }
+    }
+  ],
+  "interpretation": "Gate Area values are shown independently of the launch prose Yosys cell counts. Initial 8293 Gates differs from 8298 cells in the same visible supplement. No equivalence or correction is inferred.",
+  "composition_exclusion": "The six gate-type counts describe implementation composition; quality/objective measurements (gate counts, improvement ratios, reductions) are separately retained."
+}

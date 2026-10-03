@@ -1,0 +1,12 @@
+{
+  "staging": {
+    "sitemap_count": 820,
+    "x_registry_generation": null,
+    "x_robots_tag": "noindex, nofollow, noarchive"
+  },
+  "production": {
+    "sitemap_count": 820,
+    "x_registry_generation": null,
+    "x_robots_tag": null
+  }
+}

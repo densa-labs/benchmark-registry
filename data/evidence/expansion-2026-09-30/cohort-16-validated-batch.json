@@ -1,0 +1,67 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "MMMLU",
+        "slug": "mmmlu",
+        "source_url": "https://huggingface.co/datasets/openai/MMMLU",
+        "source_checked_at": "2026-10-02T06:25:36Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Multiple-choice accuracy",
+            "key": "mmmlu-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/modelscope/evalscope/blob/main/docs/en/benchmarks/mmmlu.md",
+            "source_checked_at": "2026-10-02T06:25:36Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2024-09-13",
+            "release_precision": "date",
+            "metric_key": "mmmlu-accuracy",
+            "source_url": "https://huggingface.co/datasets/openai/MMMLU/commits/main",
+            "source_checked_at": "2026-10-02T06:25:36Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130004",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmlu",
+        "benchmark_version": "Original",
+        "metric_key": "mmmlu-accuracy",
+        "score_value": "89.5",
+        "score_raw": "89.5",
+        "reported_at": "2026-04-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.6",
+            "checked_at": "2026-10-02T06:25:36Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

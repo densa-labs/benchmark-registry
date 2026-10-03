@@ -1,0 +1,85 @@
+{
+  "target_registry_no": "20014",
+  "model": "Claude Opus 5",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+      "reviewed": [
+        "All capability prose/footnotes \u00a78, physicalpages152\u2013194; Appendix9 pages195\u2013198. Numeric figure labels154\u2013156,158,161\u2013166,190\u2013191 visually inspected. Figures175,177\u2013178,180 are unlabeled curves; no coordinates guessed.",
+        "Full prose/footnotes pages12\u2013122; visual figures19,23\u201324,26,39,44,47\u201349,51,55,63\u201364,74,76\u201377,94\u201395,98\u201399,101. Source changelogp2: Aug19bugbounty/Cowork update. Unlabeled RNA/AAV distributions not interpolated.",
+        "All remaining main prose/changelog/introduction read, pages1\u2013198. Visual numeric alignment figures103\u2013105,107,110\u2013115,121\u2013122 and remaining capabilityfigures174,176,184\u2013189,194 reviewed. Welfare\u00a77 entire123\u2013151 reviewed for scope: introspective preferences/affect, not ordinary capability benchmarks.",
+        "Second completeness pass: all \u00a72\u20136 evaluations, every \u00a78.1\u20138.17 subsection and tables/figure captions, all Appendix9.1\u20139.3; numeric visual pages31,38,41\u201342,53\u201354,57,59,61,66\u201368,78\u201380 checked. Explicit earlier-snapshot note \u00a72.3 p28 verified. BrowseCompxhigh transcription corrected before ingestion. FrontierCode summary effort exception reconciled with detailed \u00a78.4."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "reviewed": [
+        "Full article/quotes/footnote; launchcomparison table, FrontierBench,CursorBench andcodingindex figures visually inspected.",
+        "Every launch numeric image/tab inspected: HLE,AutomationBench,DeepSearchQA,misaligned behavior,OSS-Fuzz alongside previously reviewed figures; repeats reconciled with card, unlabeled curves not interpolated."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/research/exploit-evals",
+      "reviewed": [
+        "Full article/tables/captions inspected. May22 reports earlier MythosPreview/Opus4.6/4.7 only, no Opus5. Original898 ExploitGym instances retained as version mismatch evidence."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "reviewed": [
+        "Full article inspected. February5 earlier/unnamed model experiments do not establish Opus5 scores."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+      "reviewed": [
+        "Full article/appendix reviewed during Fable5.1 audit and revisited. No Opus5; illustrative framework values not final model scores."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+      "reviewed": [
+        "Full article/results/methodology/acknowledgements inspected. March25 classifier pipeline uses earlier Sonnet4.6; no Opus5 result transfer."
+      ],
+      "remaining": []
+    },
+    {
+      "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+      "reviewed": [
+        "Full article/footnotes and updated native usage chart inspected. Opus5 marker appears on unlabeled aggregate deployment curves, with no exact model-specific benchmark value; no interpolation."
+      ],
+      "remaining": []
+    }
+  ],
+  "visible_supported_results_recorded": 361,
+  "outcomes": {
+    "ingested_new": 30,
+    "unresolved": 329,
+    "conflict_deferred": 2
+  },
+  "unexplained_source_visible_results": 0,
+  "scope_exclusions": [
+    "Welfare\u00a77 self-rated sentiment, opinion rankings, moral-patienthood probabilities, constitution edits and deployment affect describe introspection/preferences rather than ordinary model capability benchmarks; not ingested as benchmark performance.",
+    "Unlabeled RNA/AAV distribution plots23\u201324,26 and unlabeled effort/cost curves have no exact numeric target values; no interpolation.",
+    "Training/example-transcript numbers and risk thresholds/human baselines are not model benchmark results.",
+    "Competitor rows/figures are not automatically imported."
+  ],
+  "completeness_checklist": {
+    "every_evaluation_table": true,
+    "appendices": true,
+    "additional_sections": true,
+    "no_skip_due_to_absent_benchmark": true,
+    "charts_captions_footnotes": true,
+    "separate_reasoning_tool_configs": true,
+    "linked_official_supplements": true,
+    "counts_reconcile": true
+  },
+  "remaining_ingestion": "None safely mappable:30 additions verified in both environments;329 individually documented unresolved records and2 source conflicts retained."
+}

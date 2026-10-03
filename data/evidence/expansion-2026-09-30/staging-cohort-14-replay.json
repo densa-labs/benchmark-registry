@@ -1,0 +1,15 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "statuses": {
+    "SKIPPED": 3
+  },
+  "canonical_mutations": 0,
+  "materialization_callbacks": 0,
+  "canonical_revision_unchanged": true,
+  "counts": {
+    "results": 893,
+    "benchmarks": 70,
+    "versions": 127
+  }
+}

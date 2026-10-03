@@ -1,0 +1,30 @@
+{
+  "staging": {
+    "previous": {
+      "generation": "d135b1d89ec640c0a11cf9e56248f144",
+      "canonicalRevision": "314053e78779e2ab8d7e7e2fd590c471",
+      "watermark": 20513,
+      "objects": 278
+    },
+    "current": {
+      "generation": "f964f281f5204db991f0a5d6602f1fbc",
+      "canonicalRevision": "9a12b0bd67e3a491f9026a698f7f27c9",
+      "watermark": 20756,
+      "objects": 278
+    }
+  },
+  "production": {
+    "previous": {
+      "generation": "f7360c113330408e92ca10510dd5ed5d",
+      "canonicalRevision": "4bf4bc913189f9d03c84caae706d083d",
+      "watermark": 20513,
+      "objects": 278
+    },
+    "current": {
+      "generation": "1ba410b4c9c74c669e03eb30368f0476",
+      "canonicalRevision": "72905c2c33982ff4655d1a412f8dca95",
+      "watermark": 20756,
+      "objects": 278
+    }
+  }
+}

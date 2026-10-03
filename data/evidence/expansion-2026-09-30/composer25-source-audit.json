@@ -1,0 +1,68 @@
+{
+  "target_registry_no": "50004",
+  "model": "Composer 2.5",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://cursor.com/blog/composer-2-5",
+      "reviewed": true
+    },
+    {
+      "url": "https://cursor.com/changelog/composer-2-5",
+      "reviewed": true
+    },
+    {
+      "url": "https://cursor.com/composer",
+      "reviewed": true
+    },
+    {
+      "url": "https://cursor.com/docs/models/cursor-composer-2-5",
+      "reviewed": true
+    },
+    {
+      "url": "https://cursor.com/cursorbench",
+      "reviewed": true
+    },
+    {
+      "url": "https://cursor.com/blog/cursorbench",
+      "reviewed": true
+    },
+    {
+      "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+      "reviewed": true
+    }
+  ],
+  "review_details": [
+    "Full launch and changelog, all5 unique launch figures (light/dark duplicates reconciled), launch footnotes.",
+    "Complete model page including current4.0 table and FAQs; model documentation contains no additional evaluations.",
+    "Full CursorBench page and changelog, all table columns and cost footnote.",
+    "Full linked CursorBench methodology article and all5 unique charts; no Composer2.5 values in these earlier charts.",
+    "Complete reward-hacking study, both interactive benchmark tabs, both unique study images, expanded example, footnotes1\u20132; no appendix or linked official evaluation supplement.",
+    "Second pass checked every source evaluation section/table/figure/caption/footnote and deduplicated corroborating launch/model-page values."
+  ],
+  "visible_supported_results_recorded": 11,
+  "outcomes": {
+    "already_present_identical": 4,
+    "unresolved": 5,
+    "ingested_new": 2
+  },
+  "unexplained_source_visible_results": 0,
+  "scope_exclusions": [
+    "Competitor rows excluded: Cursor is not their developer.",
+    "CursorBench historical methodology charts report Composer1.5, not2.5.",
+    "Training-compute allocations, training multipliers, pricing and context limits are not benchmark results.",
+    "Study deltas7.5 and20.7 points are comparisons derived from the paired model observations, retained as context, not additional independent scores.",
+    "Study prose74.7/54.0 rounds exact interactive74.74/54.04; counted once. Unlabeled bars not interpolated.",
+    "Qualitative quoted third-party ranking and testimonials are not first-party evaluation records."
+  ],
+  "remaining_ingestion": "All2 safely mapped additions verified in both environments. Five individually unresolved observations retain exact metric/edition reasons;4 duplicates skipped.",
+  "metadata_conflicts": [
+    {
+      "entity": "Existing CursorBench3.1 release date",
+      "existing": "2026-05-19",
+      "launch_results_reported": "2026-05-18",
+      "reason": "Author changelog dates public benchmark publication May19; developer published model evaluations May18. Distinct facts retained, no backdating or correction."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "environment": "production",
+  "status": "PASS",
+  "statuses": {
+    "SKIPPED": 7
+  },
+  "canonical_mutations": 0,
+  "materialization_callbacks": 0,
+  "canonical_revision_unchanged": true,
+  "counts": {
+    "results": 753,
+    "benchmarks": 55,
+    "versions": 106
+  }
+}

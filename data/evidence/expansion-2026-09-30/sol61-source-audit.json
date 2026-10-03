@@ -1,0 +1,354 @@
+{
+  "target_registry_no": "10015",
+  "model": "GPT-6.1 Sol",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "selected_sources": [
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "reviewed": [
+        "Full rendered prose and all 15 tables; all 39 native figures visually inspected, including multi-panel plots and numeric category/count labels.",
+        "All 48 PDF pages read; all 15 tables, 39 figure locations and footnotes matched against rendered HTML. Page 8 Table 5 visually rendered to recover omitted intervals. No extra appendix."
+      ],
+      "remaining": [
+        "Linked methodology sections",
+        "Whole-source second pass"
+      ]
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "reviewed": [
+        "Entire release prose, all six benchmark figures at five explicit efforts, all four safety tabs, every footnote; accessible target point labels read after each figure loaded."
+      ],
+      "remaining": []
+    }
+  ],
+  "visible_supported_results_recorded": 198,
+  "outcomes": {
+    "pending_mapping": 60,
+    "unresolved": 110,
+    "ingested_new": 3,
+    "already_present_identical": 25
+  },
+  "figure_inspection": [
+    {
+      "figure": 1,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image8.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 2,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image7.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 3,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image16.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 4,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image5.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 5,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image1.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 6,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image26.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 7,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image25.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 8,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image17.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 9,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image24.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 10,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image11.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 11,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image18.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 12,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image21.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 13,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image23.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 14,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image12.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 15,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image10.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 16,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image39.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 17,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image4.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 18,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image15.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 19,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image6.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 20,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image9.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 21,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image27.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 22,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image19.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 23,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image3.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 24,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image2.png",
+      "visually_inspected": true,
+      "disposition": "Unlabeled coordinates/curves are not exact numerical score reports; no values interpolated. All panels, legends and configurations inspected; explicitly quantified prose retained separately."
+    },
+    {
+      "figure": 25,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image28.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 26,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image22.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 27,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image30.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 28,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image31.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 29,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image33.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 30,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image32.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 31,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image36.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 32,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image29.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 33,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image34.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 34,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image38.png",
+      "visually_inspected": true,
+      "disposition": "Exact same target evaluation result as corresponding table; merged location evidence, not an additional run."
+    },
+    {
+      "figure": 35,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image14.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 36,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image13.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 37,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image20.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 38,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image37.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    },
+    {
+      "figure": 39,
+      "figure_url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image35.png",
+      "visually_inspected": true,
+      "disposition": "Numerical results captured or duplicate table/prose values; inspect paired configuration before ingestion."
+    }
+  ],
+  "excluded_notes": [
+    {
+      "location": "Tables 10 and 11",
+      "reason": "Selected qualitative CoT demonstrations; no aggregate benchmark scores."
+    },
+    {
+      "location": "Comparison model columns",
+      "reason": "Earlier models may be later snapshots; no automatic competitor or nearby model extraction."
+    },
+    {
+      "location": "Figure 14\u201317 counts and standard errors in Table 9",
+      "reason": "Ancillary representations of the same outcomes retained in evidence; not duplicated as different evaluation runs."
+    }
+  ],
+  "unexplained_recorded_remainder": 0,
+  "second_pass_complete": false,
+  "benchmark_metadata_reviews": [
+    {
+      "source": "MentalHealthBench paper",
+      "pages": 32,
+      "target_present": false,
+      "reviewed_sections": "\u00a72.3\u20132.3.1 scoring and \u00a74 metric decomposition; definitions are multi-metric."
+    },
+    {
+      "source": "CoT-Control paper",
+      "pages": 40,
+      "target_present": false,
+      "reviewed_sections": "\u00a72 complete suite definition, datasets, generation, metrics and baselines; original full suite differs from release card bin."
+    }
+  ],
+  "ancillary_comparisons": [
+    {
+      "benchmark": "HealthBench Professional",
+      "relative_to": "GPT-6 Sol",
+      "delta_percentage_points": "+3.4"
+    },
+    {
+      "benchmark": "HealthBench",
+      "relative_to": "GPT-6 Sol",
+      "delta_percentage_points": "+5.3"
+    },
+    {
+      "benchmark": "HealthBench Hard",
+      "relative_to": "GPT-6 Sol",
+      "delta_percentage_points": "+6.1"
+    },
+    {
+      "benchmark": "HealthBench Consensus",
+      "relative_to": "GPT-6 Sol",
+      "delta_percentage_points": "\u22120.2"
+    },
+    {
+      "benchmark": "Internal Codex Deployment Simulation severity 3+",
+      "relative_reduction_percent": {
+        "GPT-6 Sol": "33",
+        "GPT-5.6 Sol": "56"
+      }
+    },
+    {
+      "benchmark": "Internal Codex Deployment Simulation no awareness in any replay severity 3+",
+      "relative_reduction_percent": {
+        "GPT-6 Astra": "17",
+        "GPT-6 Sol": "46",
+        "GPT-5.6 Sol": "65"
+      }
+    }
+  ],
+  "linked_methodology_review": {
+    "source_url": "https://deploymentsafety.openai.com/gpt-6-astra",
+    "publication_date": "2026-09-03",
+    "reviewed_sections": [
+      "\u00a74.1.1\u20134.2",
+      "\u00a75.1\u20135.2",
+      "\u00a76.1\u20136.2",
+      "\u00a77.1",
+      "\u00a78.2\u20138.6",
+      "\u00a79.2.2 and math/honeypot subsections",
+      "\u00a710.1.1.1\u20132",
+      "\u00a710.1.2.1\u20132",
+      "\u00a710.1.3.1\u20132",
+      "\u00a710.2.2.1\u20132",
+      "\u00a711.3\u201311.8 updated Sol/Luna methodological distinctions"
+    ],
+    "scope": "Referenced evaluation definitions only; Astra comparison observations are not automatically ingested."
+  }
+}

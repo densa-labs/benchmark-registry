@@ -1,0 +1,98 @@
+{
+  "target_registry_nos": [
+    "110001",
+    "110002"
+  ],
+  "selected_sources": [
+    {
+      "url": "https://arxiv.org/abs/2606.19348v1",
+      "publication_date": "2026-04-26",
+      "pages": 58,
+      "full_text_reviewed": true,
+      "relevant_tables_figures_visually_reviewed": [
+        1,
+        28,
+        38,
+        39,
+        40,
+        41,
+        43,
+        44,
+        55,
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/news260424",
+      "publication_date": "2026-04-24",
+      "full_text_reviewed": true,
+      "all_six_figures_visually_reviewed": true
+    },
+    {
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "full_developer_card_reviewed": true,
+      "performance_image_reviewed": true
+    },
+    {
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "full_developer_card_reviewed": true,
+      "performance_image_reviewed": true
+    }
+  ],
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "second_pass_details": [
+    "All58 report pages read, including evaluation setup and AppendixB tables9\u201314.",
+    "Both developer cards read in full, all three effort columns; base rows excluded from instruct identities.",
+    "Full launch text and six figures visually reviewed; benchmark comparison rows corroborate the card, not new runs.",
+    "Report Tables6\u20137 and Figure1/launch/model-card figures reconciled as repeated observations.",
+    "Figure8 formal math, Figure9 all16 labelled long-context points, Figures11\u201312 all task/metric values, Table8 internal coding, and AppendixB retained.",
+    "Figure10 has no labelled token coordinates: no interpolation; accuracy points repeat Table7.",
+    "Figure13\u201315 are example model outputs, not model evaluation scores.",
+    "Report reference lists checked for benchmark-author identity; source-defined multiple metrics and edition uncertainties retained."
+  ],
+  "source_failures": [
+    {
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf",
+      "reason": "Launch-linked original file returns404 on current resolve URL. Developer cards link the accessible arXiv58-page report; no unseen supplement assumed empty."
+    }
+  ],
+  "scope_exclusions": [
+    "24 base-model benchmark rows each belong to separate Base checkpoints, not target instruct artifacts.",
+    "Competitor model rows excluded from developer-only scope.",
+    "Architecture FLOPs/KV-cache ratios and training/kernel statistics describe engineering, not capability benchmark observations.",
+    "85-person subjective adoption survey is not a capability benchmark.",
+    "Dates/sampling lengths/denominators retained as context, not independent benchmark scores.",
+    "Putnam2025 series-only120/120 retained once separately; no exact target assignment."
+  ],
+  "per_model": {
+    "110001": {
+      "model": "DeepSeek-V4-Flash",
+      "visible_supported_results_recorded": 70,
+      "outcomes": {
+        "ingested_new": 17,
+        "unresolved": 44,
+        "already_present_identical": 6,
+        "conflict_deferred": 3
+      },
+      "unexplained_source_visible_results": 0
+    },
+    "110002": {
+      "model": "DeepSeek-V4-Pro",
+      "visible_supported_results_recorded": 303,
+      "outcomes": {
+        "ingested_new": 17,
+        "unresolved": 277,
+        "already_present_identical": 6,
+        "conflict_deferred": 3
+      },
+      "unexplained_source_visible_results": 0
+    }
+  },
+  "unassigned_source_results": 1,
+  "pending_work": "All34 safely mapped additions verified in both environments. Remaining321 unresolved observations and6 metadata conflicts retain individual reasons in reviewed-deepseek-v4-observations.json. Series-only Putnam2025 retained separately without target assignment.",
+  "report_sha256": "55b2d72f772ac00de2e470b3ee08443c648d971c7f57c52d6202895665e5978d",
+  "benchmark_author_mapping_review": "66 previously pending observations now individually unresolved with exact edition/metric/date reasons and authoritative citations;34 existing-entity candidates validated without mutation."
+}

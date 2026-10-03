@@ -1,0 +1,214 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "PaperBench",
+        "slug": "paperbench",
+        "source_url": "https://arxiv.org/html/2504.01848v1",
+        "source_checked_at": "2026-10-01T10:51:35Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Average replication score",
+            "key": "paperbench-code-dev-replication-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/html/2504.01848v1",
+            "source_checked_at": "2026-10-01T10:51:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Code-Dev",
+            "version_slug": "code-dev",
+            "release_at": "2025-04-02",
+            "release_precision": "date",
+            "metric_key": "paperbench-code-dev-replication-score",
+            "source_url": "https://arxiv.org/html/2504.01848v1",
+            "source_checked_at": "2026-10-01T10:51:35Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "MTVQA",
+        "slug": "mtvqa",
+        "source_url": "https://github.com/bytedance/MTVQA",
+        "source_checked_at": "2026-10-01T10:51:35Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "ByteDance",
+            "key": "bytedance",
+            "source_url": "https://github.com/bytedance/MTVQA",
+            "source_checked_at": "2026-10-01T10:51:35Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Mean answer accuracy",
+            "key": "mtvqa-test-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/bytedance/MTVQA/blob/main/scripts/acc.py",
+            "source_checked_at": "2026-10-01T10:51:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Test",
+            "version_slug": "test",
+            "release_at": "2024-06-04",
+            "release_precision": "date",
+            "metric_key": "mtvqa-test-accuracy",
+            "source_url": "https://github.com/bytedance/MTVQA",
+            "source_checked_at": "2026-10-01T10:51:35Z",
+            "evaluator_keys": [
+              "bytedance"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "RealWorldQA",
+        "slug": "realworldqa",
+        "source_url": "https://x.ai/news/grok-1.5v",
+        "source_checked_at": "2026-10-01T10:51:35Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "SpaceXAI",
+            "key": "spacexai",
+            "source_url": "https://x.ai/",
+            "source_checked_at": "2026-09-24T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Answer accuracy",
+            "key": "realworldqa-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://x.ai/news/grok-1.5v",
+            "source_checked_at": "2026-10-01T10:51:35Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2024-04-12",
+            "release_precision": "date",
+            "metric_key": "realworldqa-accuracy",
+            "source_url": "https://x.ai/news/grok-1.5v",
+            "source_checked_at": "2026-10-01T10:51:35Z",
+            "evaluator_keys": [
+              "spacexai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "paperbench",
+        "benchmark_version": "Code-Dev",
+        "metric_key": "paperbench-code-dev-replication-score",
+        "score_value": "93.0",
+        "score_raw": "93.0",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T10:51:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "mtvqa",
+        "benchmark_version": "Test",
+        "metric_key": "mtvqa-test-accuracy",
+        "score_value": "56.6",
+        "score_raw": "56.6",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T10:51:35Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "realworldqa",
+        "benchmark_version": "Original",
+        "metric_key": "realworldqa-accuracy",
+        "score_value": "88.0",
+        "score_raw": "88.0",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T10:51:35Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

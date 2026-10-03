@@ -1,0 +1,12 @@
+{
+  "environment": "production",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "49a8d048d869619837693f0e96d7ddb9c6f9f7cb5a6de3a08345e5c46dedf060",
+      "message": "result is valid"
+    }
+  ]
+}

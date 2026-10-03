@@ -1,0 +1,45 @@
+{
+  "environment": "production",
+  "status": "PASS",
+  "new_results_verified": 2,
+  "models": [
+    {
+      "registry_no": "50004",
+      "before": 4,
+      "added": 2,
+      "after": 6,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 2,
+  "companies_verified": [
+    "cursor"
+  ],
+  "exact_results": [
+    {
+      "result_key": "2caef72711dab7e6c8290efffdf3b746c803c71665764eb9c0ba3f367ebe80c9",
+      "eligible": true
+    },
+    {
+      "result_key": "d7acce3c7d65f907d1686fa3f6865020c9fc5f473259dafbf9d4655b855409be",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 855,
+    "models": 94,
+    "benchmarks": 69,
+    "versions": 126
+  },
+  "sitemap_count": 917,
+  "published_generations": [
+    "14f7692224cc4ff2b09abe951daaeeff"
+  ],
+  "search_checks": [
+    {
+      "query": "SWE-bench",
+      "benchmark_slug": "swe-bench",
+      "status": "PASS"
+    }
+  ]
+}

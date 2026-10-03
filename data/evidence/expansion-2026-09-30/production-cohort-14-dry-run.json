@@ -1,0 +1,24 @@
+{
+  "environment": "production",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "3b4cee84f604ecc2adda9aa52720d58d67601c06caf1b9ebaf37b4ef7ca119a6",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "d77709685eb6f88c6f3633c7ecfb25d77403544afb5b41eb207f3f68e1fc861b",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "97909710c54ef0486d315d5cde02528f2781d947daccdc4f702fc9bb9f69652a",
+      "message": "result is valid"
+    }
+  ]
+}

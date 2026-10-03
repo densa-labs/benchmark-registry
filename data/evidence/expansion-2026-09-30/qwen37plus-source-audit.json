@@ -1,0 +1,45 @@
+{
+  "target_registry_no": "130007",
+  "model": "Qwen3.7-Plus",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "native_body_reviewed": true,
+      "text_table_rows": 41,
+      "multimodal_table_rows": 33,
+      "scalar_table_observations": 77,
+      "headline12panels_reviewed": true,
+      "all_footnotes_reviewed": true,
+      "demo_groups_expanded_and_reviewed": 5,
+      "demo_entries_reviewed": 21,
+      "no_linked_evaluation_supplement": true
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+      "entire_body_and_footnotes_reviewed": true,
+      "full_text_table_image_reviewed": true,
+      "full_multimodal_table_image_reviewed": true,
+      "headline12panels_reviewed": true,
+      "no_additional_target_model_score": true
+    }
+  ],
+  "visible_supported_results_recorded": 78,
+  "outcomes": {
+    "already_present_identical": 11,
+    "unresolved": 65,
+    "ingested_new": 2
+  },
+  "unexplained_source_visible_results": 0,
+  "remaining_work": "Complete source audit:78 observations=2 new+11 identical+65 explicitly unresolved;zero pending or unexplained.",
+  "review_details": [
+    "Original native page dateJune1;canonical model releaseJune3 from official mirror. Citation monthMay differs. Existing model release metadata preserved;do not backdate published model.",
+    "BabyVision/CharXiv withCI and withoutCI scalar cells retained separately;ScreenSpot/OSWorld explicitlynonthinking. Recommended reasoningxhigh andAPIexample are not evaluated effort.",
+    "Entire release body and five expanded groups(21demos) reviewed;duration/codelines/toolcall operational counts excluded from benchmark results. One quantified10/10functional test claim retained unresolved.",
+    "Second pass covered entire native source,41textrows/42scalars,33visionrows/35scalars,all12headlinepanels,alltableheaders/footnotes/captions,allfiveexpanded groups/21demos and complete official mirror body/threeevaluationimages. No report/appendix/evaluation supplement linked.",
+    "Charts repeat already-recorded table scores;no duplicate observations created for repeated representations. Every paired CI cell recorded individually;no digitized unlabelled charts.",
+    "Benchmark-author materials checked for all new named families including HiPhO,VisFactor,AndroidWorld,WorldVQA,MMSearchPlus,CountQA,OCRBenchv2,LingoQA,Ego3DBench,SURDS,VLADBench,TVBench and DeepPlanning. Unresolved records each give exact identity/edition/metric/configuration issue.",
+    "No Max-specific QwenWeb/NL2Repo/SVG/MRCR footnote settings transferred to Plus. Recommendedxhigh prompt andAPIexample do not determine evaluated reasoning. ScreenSpot/OS explicitenable_thinking=False retained."
+  ]
+}

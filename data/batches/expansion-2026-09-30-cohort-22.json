@@ -1,0 +1,29 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "35005",
+        "reasoning_level": "thinking mode",
+        "benchmark_slug": "mmmlu",
+        "benchmark_version": "Original",
+        "metric_key": "mmmlu-accuracy",
+        "score_value": "83.4",
+        "score_raw": "83.4",
+        "reported_at": "2026-07-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://arxiv.org/pdf/2607.02770v2",
+            "checked_at": "2026-10-03T05:50:12Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

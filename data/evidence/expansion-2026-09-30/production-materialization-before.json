@@ -1,0 +1,11 @@
+{
+  "environment": "production",
+  "canonicalRevision": "f193569db600e560044464ada5a49e11",
+  "publishedRevision": "f193569db600e560044464ada5a49e11",
+  "pending": false,
+  "d1Queries": 1,
+  "d1RowsRead": 2,
+  "d1RowsWritten": 0,
+  "kvReads": 2,
+  "kvWrites": 0
+}

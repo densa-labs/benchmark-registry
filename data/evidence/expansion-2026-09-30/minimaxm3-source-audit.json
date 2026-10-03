@@ -1,0 +1,57 @@
+{
+  "target_registry_no": "140003",
+  "model": "MiniMax M3",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://www.minimax.io/blog/minimax-m3",
+      "review_status": "Entire relevant source reviewed; second pass complete."
+    },
+    {
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "review_status": "Entire relevant source reviewed; second pass complete."
+    },
+    {
+      "url": "https://github.com/MiniMax-AI/MiniMax-M3",
+      "review_status": "Entire relevant source reviewed; second pass complete."
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.13392",
+      "review_status": "Entire relevant source reviewed; second pass complete."
+    },
+    {
+      "url": "https://www.minimax.io/blog/minimax-maxproof-math-proof-evolution",
+      "review_status": "Entire relevant source reviewed; second pass complete."
+    }
+  ],
+  "completeness_totals_final": true,
+  "remaining_work": "All 67 observations reconciled: 2 new, 5 identical, 58 individually unresolved and 2 deferred conflicts. No pending or unexplained observations.",
+  "visible_supported_results_recorded": 67,
+  "outcomes": {
+    "already_present_identical": 5,
+    "unresolved": 58,
+    "ingested_new": 2,
+    "conflict_deferred": 2
+  },
+  "unexplained_source_visible_results": 0,
+  "completeness_second_pass": {
+    "every_evaluation_table": true,
+    "appendices": true,
+    "additional_benchmark_sections": true,
+    "all_images_captions_footnotes": true,
+    "reasoning_tool_configs": true,
+    "linked_supplements": true
+  },
+  "review_locations": {
+    "launch": "Entire body twice; all32 own-model cells and full evaluation footnotes; all8 release figures, captions and explicit case-study endpoints.",
+    "model_card": "Entire95-line card, all32 own-model image cells and full image footnotes; native headline and sparse-attention figure cross-checked.",
+    "technical_report": "All30 text pages; main and appendix tables visually checked. All measured capability/scaling results are109B/6B-active prototypes or10B pilots, not final428B/23B-active release.",
+    "maxproof": "Entire release supplement and all6 figures inspected; all28 explicit problem/oracle/mean labels retained."
+  },
+  "excluded_non_target_observations": [
+    "Competitor rows; teacher/judge scores; M2 training reward-hacking example;109B and10B sparse-attention prototypes; pricing and service plans; architecture/algorithm parameters.",
+    "PostTrain animation interpolates a running frontier curve. Transient playback labels do not establish separate evaluated runs; final12-hour0.371 repeats table37.1%. Unlabeled/interpolated points were not digitized.",
+    "CUDA animation unlabeled search points and kernel-implementation annotations do not establish further separate benchmark observations. Explicit initial7.6%,final71.3%,speedup9.4\u00d7 retained."
+  ]
+}

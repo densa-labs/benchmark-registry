@@ -1,0 +1,231 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "LongBench",
+        "slug": "longbench",
+        "source_url": "https://github.com/THUDM/LongBench",
+        "source_checked_at": "2026-10-01T05:08:26Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "LongBench Authors",
+            "key": "longbench-authors",
+            "source_url": "https://arxiv.org/abs/2412.15204",
+            "source_checked_at": "2026-10-01T05:08:26Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Multiple-choice accuracy",
+            "key": "longbench-v2-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://github.com/THUDM/LongBench",
+            "source_checked_at": "2026-10-01T05:08:26Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "v2",
+            "version_slug": "v2",
+            "release_at": "2024-12-20",
+            "release_precision": "date",
+            "metric_key": "longbench-v2-accuracy",
+            "source_url": "https://github.com/THUDM/LongBench",
+            "source_checked_at": "2026-10-01T05:08:26Z",
+            "evaluator_keys": [
+              "longbench-authors"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "PerceptionBench",
+        "slug": "perceptionbench",
+        "source_url": "https://huggingface.co/datasets/moonshotai/PerceptionBench/tree/df8c4d8945af9bec6827ab61d7c91880ee164c52",
+        "source_checked_at": "2026-10-01T05:08:26Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Moonshot AI",
+            "key": "moonshot-ai",
+            "source_url": "https://www.kimi.com/en/blog/kimi-k3",
+            "source_checked_at": "2026-09-24T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Answer accuracy",
+            "key": "perceptionbench-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://huggingface.co/datasets/moonshotai/PerceptionBench/tree/df8c4d8945af9bec6827ab61d7c91880ee164c52",
+            "source_checked_at": "2026-10-01T05:08:26Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2026-07-27",
+            "release_precision": "date",
+            "metric_key": "perceptionbench-accuracy",
+            "source_url": "https://huggingface.co/datasets/moonshotai/PerceptionBench/tree/df8c4d8945af9bec6827ab61d7c91880ee164c52",
+            "source_checked_at": "2026-10-01T05:08:26Z",
+            "evaluator_keys": [
+              "moonshot-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "56.6",
+        "score_raw": "56.6",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": true
+          },
+          {
+            "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "longbench",
+        "benchmark_version": "v2",
+        "metric_key": "longbench-v2-accuracy",
+        "score_value": "66.3",
+        "score_raw": "66.3",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": true
+          },
+          {
+            "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "medxpertqa",
+        "benchmark_version": "MM",
+        "metric_key": "medxpertqa-mm-accuracy",
+        "score_value": "80.4",
+        "score_raw": "80.4",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "86.1",
+        "score_raw": "86.1",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "perceptionbench",
+        "benchmark_version": "Original",
+        "metric_key": "perceptionbench-accuracy",
+        "score_value": "63.5",
+        "score_raw": "63.5",
+        "reported_at": "2026-08-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://qwen.ai/blog?id=qwen3.8",
+            "checked_at": "2026-10-01T05:08:26Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

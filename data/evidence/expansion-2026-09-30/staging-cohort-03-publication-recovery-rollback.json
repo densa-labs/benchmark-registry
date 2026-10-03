@@ -1,0 +1,21 @@
+{
+  "environment": "staging",
+  "status": "PUBLISHED",
+  "objects": 278,
+  "bytes": 3102359,
+  "canonicalUrls": 846,
+  "approvedExact": 572,
+  "ambiguous": 181,
+  "generation": "99bc914bcf0e4ff89681d2ad3afc9643",
+  "canonicalRevision": "9a12b0bd67e3a491f9026a698f7f27c9",
+  "rebuilt": [],
+  "removed": [],
+  "objectWrites": 0,
+  "manifestWrites": 1,
+  "pointerWrites": 2,
+  "d1Queries": 5,
+  "d1RowsRead": 8,
+  "d1RowsWritten": 2,
+  "kvReads": 282,
+  "kvWrites": 3
+}

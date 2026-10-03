@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "global-mmlu",
+    "canonical_name": "Global MMLU",
+    "alias": "GMMLU",
+    "maintainer": "Cohere For AI (author affiliation; dataset now hosted by CohereLabs)",
+    "version": "Original",
+    "version_policy": "Unnumbered original benchmark, full 42-language set; not culturally-sensitive/agnostic subsets.",
+    "release_at": "2024-12-04",
+    "release_basis": "arXiv initial submission; primary paper introduces and releases benchmark",
+    "metric": "Average multiple-choice accuracy, percent",
+    "metric_location": "primary paper \u00a74 / results; model card figure8.13.1.A",
+    "sources": [
+      "https://arxiv.org/abs/2412.03304",
+      "https://arxiv.org/html/2412.03304v1",
+      "https://huggingface.co/datasets/CohereLabs/Global-MMLU"
+    ],
+    "result_evaluator": "Anthropic; benchmark maintainer is not inferred as model-run evaluator"
+  },
+  {
+    "slug": "milu",
+    "canonical_name": "Multi-task Indic Language Understanding Benchmark",
+    "alias": "MILU",
+    "maintainer": "AI4Bharat",
+    "version": "Original",
+    "version_policy": "Unnumbered original 11-language benchmark; prompting/trial settings retained in result evidence.",
+    "release_at": "2024-11-04",
+    "release_basis": "arXiv initial submission introducing benchmark",
+    "metric": "Average multiple-choice accuracy, percent",
+    "metric_location": "primary paper \u00a74, Table3; model card figure8.13.2.A",
+    "sources": [
+      "https://arxiv.org/abs/2411.02538",
+      "https://arxiv.org/html/2411.02538v3",
+      "https://github.com/AI4Bharat/MILU"
+    ],
+    "result_evaluator": "Anthropic; AI4Bharat maintained the benchmark"
+  },
+  {
+    "slug": "include",
+    "status": "unresolved",
+    "reason": "Primary paper Table3 defines Total Accuracy, Answer Accuracy, and formatting-error percentage. Card names INCLUDE without resolving Base/full subset or metric. Frozen one-metric contract prevents choosing a metric.",
+    "sources": [
+      "https://arxiv.org/abs/2411.19799",
+      "https://arxiv.org/html/2411.19799v1"
+    ]
+  }
+]

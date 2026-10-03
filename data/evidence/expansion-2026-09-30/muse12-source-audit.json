@@ -1,0 +1,33 @@
+{
+  "target_registry_no": "80003",
+  "selected_source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+  "linked_methodology": "https://research.meta.ai/static/muse-spark-1-2-methodology",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "methodology_text_pages_reviewed": [
+    1,
+    2,
+    3
+  ],
+  "figures_visually_reviewed": [
+    "Terminal-Bench 2.1",
+    "DeepSWE 1.1",
+    "Meta Internal Coding Bench",
+    "GDPVal-AA v2",
+    "MCP Atlas",
+    "KDA speedup",
+    "MLA speedup"
+  ],
+  "all_blog_sections_reviewed": true,
+  "all_secondary_tabs_reviewed": true,
+  "appendices": "None in release methodology",
+  "second_pass": "Full blog text, all evaluation charts and hidden tabs, every methodology page, captions and footnotes reviewed. Benchmark results separated from demo output, architectural sizes and pricing. All own-model benchmark numbers retained, including internal case studies and approximate coding comparison.",
+  "visible_supported_results_found": 7,
+  "outcomes": {
+    "conflict_deferred": 2,
+    "unresolved": 4,
+    "research_pending": 1
+  },
+  "unexplained_source_visible_results": 0,
+  "remaining_work": "Mapped mini-swe-agent result from the Muse 1.3 release is published. Complete author metadata for unresolved values and retain deferred conflicts. Muse 1.1 comparison findings do not complete its own report audit."
+}

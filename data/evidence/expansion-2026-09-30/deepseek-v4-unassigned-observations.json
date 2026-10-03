@@ -1,0 +1,16 @@
+[
+  {
+    "source_url": "https://arxiv.org/abs/2606.19348v1",
+    "location": "Figure8 p40 right bar and caption",
+    "model_as_displayed": "DeepSeek-V4",
+    "possible_target_registry_nos": [
+      "110001",
+      "110002"
+    ],
+    "benchmark": "Putnam2025",
+    "metric": "Proof-verified points",
+    "displayed_score": "120/120",
+    "ingestion_outcome": "unresolved",
+    "reason": "Source names series only, not Flash or Pro or effort; exact target model identity cannot be established. Count once in unassigned-source ledger, never as two model scores."
+  }
+]

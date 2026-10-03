@@ -1,0 +1,59 @@
+{
+  "environment": "production",
+  "status": "PASS",
+  "new_results_verified": 3,
+  "models": [
+    {
+      "registry_no": "130004",
+      "before": 11,
+      "added": 3,
+      "after": 14,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 3,
+  "companies_verified": [
+    "tongyi"
+  ],
+  "exact_results": [
+    {
+      "result_key": "2f034316c8e206e93a7dd8ddad0902de7e0b646f903c25754abfa6f9faad70c2",
+      "eligible": true
+    },
+    {
+      "result_key": "916da121af2d3dcecfefe2c5d9f73ca85b7b565ee0022813ef4db4faee9c5326",
+      "eligible": true
+    },
+    {
+      "result_key": "2c2e3d870c58da94c8f1bc779dae369ffb7a0f3dccaf12ad58d5e96b628184c7",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 895,
+    "models": 94,
+    "benchmarks": 69,
+    "versions": 126
+  },
+  "sitemap_count": 911,
+  "published_generations": [
+    "e7d2d7c8c59341bdaed9e2dc4430e139"
+  ],
+  "search_checks": [
+    {
+      "query": "LongBench",
+      "benchmark_slug": "longbench",
+      "status": "PASS"
+    },
+    {
+      "query": "RealWorldQA",
+      "benchmark_slug": "realworldqa",
+      "status": "PASS"
+    },
+    {
+      "query": "AI2D",
+      "benchmark_slug": "ai2d",
+      "status": "PASS"
+    }
+  ]
+}

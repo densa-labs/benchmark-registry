@@ -1,0 +1,109 @@
+{
+  "target_registry_nos": [
+    "130004"
+  ],
+  "checked_at": "2026-10-02T05:48:51Z",
+  "candidates": [
+    {
+      "observation_id": "qwen36plus-026",
+      "target_registry_no": "130004",
+      "model": "Qwen3.6-Plus",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "source_title": "Qwen3.6-Plus: Towards Real World Agents",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-04-02",
+      "reported_at": "2026-04-02",
+      "source_checked_at": "2026-10-02T05:48:51Z",
+      "benchmark_as_displayed": "LongBench v2",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Multiple-choice accuracy",
+      "displayed_score": "62.0",
+      "normalized_stored_score": "62.0",
+      "reasoning_level": "",
+      "configuration": "No result-specific configuration supplied in release table.",
+      "location": "Language table,row26,Qwen3.6-Plus final column,component1",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact named existing edition with primary benchmark-author metric evidence; own developer evaluation. No inferred reasoning or tool condition, no scale normalization.",
+      "canonical_benchmark_slug": "longbench",
+      "canonical_version": "v2",
+      "metric_key": "longbench-v2-accuracy",
+      "benchmark_identity_sources": [
+        "https://github.com/THUDM/LongBench"
+      ],
+      "published_cohort": "15"
+    },
+    {
+      "observation_id": "qwen36plus-048",
+      "target_registry_no": "130004",
+      "model": "Qwen3.6-Plus",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "source_title": "Qwen3.6-Plus: Towards Real World Agents",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-04-02",
+      "reported_at": "2026-04-02",
+      "source_checked_at": "2026-10-02T05:48:51Z",
+      "benchmark_as_displayed": "RealWorldQA",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Answer accuracy",
+      "displayed_score": "85.4",
+      "normalized_stored_score": "85.4",
+      "reasoning_level": "",
+      "configuration": "No result-specific configuration supplied in release table.",
+      "location": "Vision Language table,row6,Qwen3.6-Plus final column,component1",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact named existing edition with primary benchmark-author metric evidence; own developer evaluation. No inferred reasoning or tool condition, no scale normalization.",
+      "canonical_benchmark_slug": "realworldqa",
+      "canonical_version": "Original",
+      "metric_key": "realworldqa-accuracy",
+      "benchmark_identity_sources": [
+        "https://x.ai/news/grok-1.5v",
+        "https://huggingface.co/datasets/xai-org/RealworldQA"
+      ],
+      "published_cohort": "15"
+    },
+    {
+      "observation_id": "qwen36plus-055",
+      "target_registry_no": "130004",
+      "model": "Qwen3.6-Plus",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "source_title": "Qwen3.6-Plus: Towards Real World Agents",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-04-02",
+      "reported_at": "2026-04-02",
+      "source_checked_at": "2026-10-02T05:48:51Z",
+      "benchmark_as_displayed": "AI2D_TEST",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Multiple-choice question-answering accuracy",
+      "displayed_score": "94.4",
+      "normalized_stored_score": "94.4",
+      "reasoning_level": "",
+      "configuration": "No result-specific configuration supplied in release table.",
+      "location": "Vision Language table,row13,Qwen3.6-Plus final column,component1",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Exact named existing edition with primary benchmark-author metric evidence; own developer evaluation. No inferred reasoning or tool condition, no scale normalization.",
+      "canonical_benchmark_slug": "ai2d",
+      "canonical_version": "TEST",
+      "metric_key": "ai2d-accuracy",
+      "benchmark_identity_sources": [
+        "https://prior.allenai.org/projects/diagram-understanding",
+        "https://arxiv.org/html/1603.07396#S7.SS4",
+        "https://github.com/modelscope/evalscope/blob/main/docs/en/benchmarks/ai2d.md"
+      ],
+      "published_cohort": "15"
+    }
+  ],
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "new_families": 0,
+  "new_versions": 0,
+  "new_metrics": 0,
+  "new_evaluators": 0,
+  "source_identity_notes": "Exact original April2release developer-own-model column. Three existing benchmark editions. EvaluatorQwenTeam distinct from benchmark maintainer. No reasoning inferred from branding or API examples. Incomplete full-source audit kept explicit.",
+  "operational_failures": [
+    {
+      "environment": "staging",
+      "phase": "pre-write catalog read",
+      "reason": "Remote D1 query timeout before canonical mutation planning/execution. Retry completed ingestion and publication.",
+      "canonical_mutations_before_retry": 0
+    }
+  ]
+}

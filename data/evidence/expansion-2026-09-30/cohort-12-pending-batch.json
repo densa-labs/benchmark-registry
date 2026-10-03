@@ -1,0 +1,89 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SWE-bench",
+        "slug": "swe-bench",
+        "source_url": "https://www.swebench.com/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "versions": [
+          {
+            "version": "Multilingual \u2014 Cursor standard harness",
+            "version_slug": "multilingual-cursor-standard-harness",
+            "release_at": "2026-06-25",
+            "release_precision": "date",
+            "metric_key": "swe-bench-resolved",
+            "source_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+            "source_checked_at": "2026-10-02T01:08:30Z",
+            "evaluator_keys": [
+              "cursor"
+            ]
+          },
+          {
+            "version": "Multilingual \u2014 Cursor strict harness",
+            "version_slug": "multilingual-cursor-strict-harness",
+            "release_at": "2026-06-25",
+            "release_precision": "date",
+            "metric_key": "swe-bench-resolved",
+            "source_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+            "source_checked_at": "2026-10-02T01:08:30Z",
+            "evaluator_keys": [
+              "cursor"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "50004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual \u2014 Cursor standard harness",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "79.15",
+        "score_raw": "79.15%",
+        "reported_at": "2026-06-25",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+            "checked_at": "2026-10-02T01:08:30Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "50004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual \u2014 Cursor strict harness",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "71.60",
+        "score_raw": "71.60%",
+        "reported_at": "2026-06-25",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+            "checked_at": "2026-10-02T01:08:30Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

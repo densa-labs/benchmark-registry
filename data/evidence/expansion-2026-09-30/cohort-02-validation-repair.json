@@ -1,0 +1,12 @@
+{
+  "initial_error": "versions must contain at least one item",
+  "canonical_writes": 0,
+  "repair": "Included exact existing GPQA Diamond version metadata and gpqa-authors version evaluator set; new Artificial Analysis organization remains result evaluator only.",
+  "production_version_evaluator_read": {
+    "rows_written": 0,
+    "keys": [
+      "gpqa-authors"
+    ]
+  },
+  "additional_source_confirmation": "Glimmer launch plot/card scores and seven-page release methodology were reviewed together; same_run=true explicitly confirmed for those exact release citations."
+}

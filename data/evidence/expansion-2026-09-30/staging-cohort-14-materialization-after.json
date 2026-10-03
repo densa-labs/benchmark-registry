@@ -1,0 +1,31 @@
+{
+  "environment": "staging",
+  "status": "PUBLISHED",
+  "objects": 315,
+  "bytes": 3641411,
+  "canonicalUrls": 907,
+  "approvedExact": 597,
+  "ambiguous": 296,
+  "generation": "6011db257e664afda54ca27af4ed3730",
+  "canonicalRevision": "7e884e7f4f5e104dfb9b8836f11cf8ab",
+  "rebuilt": [
+    "company:anthropic",
+    "model:20012",
+    "search-relationships",
+    "stats",
+    "version:osworld:verified",
+    "version:swe-bench:verified",
+    "version:terminal-bench:2-1-mini-swe-agent",
+    "home-panels",
+    "inventory"
+  ],
+  "removed": [],
+  "objectWrites": 9,
+  "manifestWrites": 1,
+  "pointerWrites": 2,
+  "d1Queries": 37,
+  "d1RowsRead": 12058,
+  "d1RowsWritten": 2,
+  "kvReads": 359,
+  "kvWrites": 12
+}

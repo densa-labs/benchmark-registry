@@ -1,0 +1,12 @@
+{
+  "environment": "staging",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "80e989dfcbf873bbfc2c465eee33549ac4ba350c144cc02ca052f3561f3c1312",
+      "message": "result is valid"
+    }
+  ]
+}

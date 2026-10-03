@@ -1,0 +1,343 @@
+{
+  "targets": [
+    "120003"
+  ],
+  "status": "ACCESSIBLE_RESULTS_RECONCILED_PUBLISHED_SUPPLEMENT_AUDIT_OPEN",
+  "selected_report_exhaustively_inspected": "YES",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "report_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+  "report_current_revision_publication_date": "2026-08-06",
+  "report_initial_publication_date": "2026-07-27",
+  "report_text_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "report_visually_reviewed_pages": [
+    1,
+    13,
+    17,
+    27,
+    29,
+    32,
+    33,
+    34
+  ],
+  "evaluation_tables": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "linked_perception_report_url": "https://arxiv.org/pdf/2607.24957v1",
+  "linked_perception_text_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "linked_perception_visually_reviewed_pages": [
+    1,
+    7,
+    8,
+    9
+  ],
+  "source_observations": 192,
+  "observation_ledger": "reviewed-kimi3-observations.json",
+  "source_footnotes": "Public scores max temperature1.0; single-step top-p.95 / agentic1.0; vision 3-run mean except ZeroBench5-run. Perception linked author paper explicitly 4-run mean. Harnesses, task subsets, H20 recalibration and original leaderboard attribution retained per observation.",
+  "remaining_work": "All121 visible accessible-source records reconciled:5 new+8 identical+4 deferred conflicts+104 explicitly unresolved. Five new results verified in staging and production. AISI linked figures remain uninspected because browser automatic approval review rejected the initial access due a usage limit and rejected a later retry as an unauthorized continuation/bypass; further access is stopped; supplement audit remains NO.",
+  "excluded_observations": [
+    "MiniTriton roofline/software-performance loss traces: generated software artifact performance, not model benchmark results. Roofline SVG visually inspected in native browser.",
+    "Unlabeled cost-chart coordinates and RL training trajectories: no exact released-model numerical values; no interpolation.",
+    "Perception example answers and qualitative failure demonstrations: not aggregate benchmark scores.",
+    "Competitor rows: out of target scope. Moonshot K2.6 own scores retained for its separate target audit."
+  ],
+  "conflicting_pairs": [
+    {
+      "benchmark": "GDPval-AA v2",
+      "launch_score": "1668.0",
+      "report_score": "1686"
+    },
+    {
+      "benchmark": "JobBench",
+      "launch_score": "52.9",
+      "report_score": "54.3"
+    },
+    {
+      "benchmark": "Online Experience",
+      "launch_score": "75.5",
+      "report_score": "77.9"
+    }
+  ],
+  "metric_contract_block": "PerceptionBench author paper defines accuracy, pass@4 and pass^4 for the same benchmark release. Existing Original accuracy entity does not authorize selecting one metric or inventing metric-specific versions. New results held under docs/data-contract.md175.",
+  "second_pass": "All47report text pages and appendices reviewed; score tables and charts visually checked. Main card all659lines including all footnotes inspected. Entire launch-blog text plus coding, agentic, internal, cost and roofline figures inspected. Linked PerceptionBench full19page author report, taxonomy/dataset appendices and qualitative figures inspected. Remaining supplemental figure/benchmark-identity checks explicitly pending.",
+  "visible_supported_results": 121,
+  "repeated_citation_observations": 71,
+  "outcomes": {
+    "already_present_identical": 8,
+    "unresolved": 104,
+    "conflict_deferred": 4,
+    "ingested_new": 5
+  },
+  "unexplained_source_visible_results": 0,
+  "author_metadata_sources": [
+    {
+      "benchmark": "CritPt",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "AA-LCR",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "SciCode",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "AA-Briefcase (Elo)",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "τ³-Banking",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Harvey Lab-AA",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "CorpFin v2",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Finance Agent v2",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Legal Research Bench",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "APEX-Agents",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "AA Intelligence Index v4.1",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Vals Index",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Arena WebDev",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Arena Text",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "Agent Arena",
+      "reason": "The developer explicitly cites an external evaluation snapshot rather than a developer-run evaluation. Exact evaluator/run identity and the cited snapshot are not substantiated by an acceptable primary evaluation source in this pass; do not attribute this score to Moonshot or substitute an aggregator."
+    },
+    {
+      "benchmark": "DeepSWE",
+      "reason": "The official DeepSWE v1.1 evaluation reports pass@1, cost, output tokens and steps. Frozen one-metric-per-version contract stops new ingestion; Kimi Code and mini-SWE-agent are also separate scaffolds. Existing September author-run 69% is not this July 67.5/67.3 run."
+    },
+    {
+      "benchmark": "ProgramBench",
+      "reason": "The author defines Fully Resolved, Almost Resolved and raw test pass rate, plus cost. The developer does not identify which metric 77.8 represents; no equivalence or metric-specific edition invented."
+    },
+    {
+      "benchmark": "FrontierSWE",
+      "reason": "The developer recomputes dominance from raw task scores as of July16. Author v1 also reports average rank, best@5 and mean@5; exact opponent snapshot/aggregation is unpinned and the version has multiple metrics."
+    },
+    {
+      "benchmark": "SWE-Marathon",
+      "reason": "Explicit custom July9 pre-v1.1 H20-calibrated tasks, performance gates and reference oracles differ from author final release. No stable label/commit for this branch; do not map to ordinary v1.1."
+    },
+    {
+      "benchmark": "PostTrainBench",
+      "reason": "Developer uses H20, Claude Code and a three-run Harbor average; author versions v1.1/v1.2 differ, and official reference hardware is H100. Exact task/version snapshot is unstated."
+    },
+    {
+      "benchmark": "MLS-Bench-Lite",
+      "reason": "Author confirms Lite30 tasks and score48.3, but paper Vanilla/Agent budgets and current Harbor five-hour runs differ. Exact K3 snapshot, budget and task-setting aggregation are not specified; do not infer a matching version."
+    },
+    {
+      "benchmark": "DeepSearchQA (F1)",
+      "reason": "Author primary paper defines precision, recall, F1 and strict answer categories for one release. F1 is explicit, but frozen data-contract175 requires contract review before new results in a multi-metric version."
+    },
+    {
+      "benchmark": "ResearchRubrics",
+      "reason": "Author paper defines binary and ternary rubric compliance schemes for the same release. Developer does not identify the scheme for76.2; frozen multi-metric contract also blocks ingestion."
+    },
+    {
+      "benchmark": "Toolathlon-Verified",
+      "reason": "Verified dataset must be distinguished from the original Toolathlon tasks. Developer gives neither Verified task snapshot nor evaluation service/run identifier; do not assume equivalence to Original."
+    },
+    {
+      "benchmark": "MCPMark-Verified",
+      "reason": "Author Verified release retains127 tasks with revised verifiers, reporting total points and cost/steps/tokens. Frozen one-metric contract blocks this version; do not silently select points."
+    },
+    {
+      "benchmark": "MCP-Atlas",
+      "reason": "Developer evaluates500 public tasks with100 turns and Gemini3.1 Pro judge. Author April update specifies100 tool calls and Gemini2.5 Pro judge, with pass-rate and coverage metrics. Distinct protocol, not a correction to existing82.3."
+    },
+    {
+      "benchmark": "AutomationBench",
+      "reason": "Author public600 release reports strict pass and partial credit and changes versions. Developer does not identify a revision; frozen multi-metric contract blocks new results."
+    },
+    {
+      "benchmark": "Agents' Last Exam",
+      "reason": "Developer quotes the author leaderboard with Kimi Code and primary pass rate, but exact July23 task/revision and run identifier are not pinned. Do not treat a current leaderboard value as the same snapshot."
+    },
+    {
+      "benchmark": "OfficeQA Pro",
+      "reason": "Full PDF corpus rendered as images is explicit. Author Pro has several numerical tolerance criteria; developer63.3 does not specify its tolerance. Do not equate to oracle text or ProV2."
+    },
+    {
+      "benchmark": "SpreadsheetBench 2",
+      "reason": "Author release defines exact-cell accuracy, modification fraction and visual rubric pass. Developer score34.8 does not establish a single metric; frozen multiple-metric contract blocks ingestion."
+    },
+    {
+      "benchmark": "OSWorld 2.0",
+      "reason": "Author releases differ June24/Aug8/Sep16 and expose strict binary success versus checkpoint partial credit. Developer does not pin revision or scoring criterion for58.3."
+    },
+    {
+      "benchmark": "SaaS-Bench",
+      "reason": "Author106-task benchmark reports weighted checkpoint score and strict resolved score, plus pass@k; two tracks. Developer60.1 does not identify scoring criterion/track. Frozen multi-metric contract blocks ingestion."
+    },
+    {
+      "benchmark": "WorldVQA ForceAnswer",
+      "reason": "Developer ForceAnswer configuration is explicit but its prompt and whether all9 categories include People are unstated. Author mini-leaderboard excludes People (first8 categories); do not assume dataset equivalence."
+    },
+    {
+      "benchmark": "OmniDocBench",
+      "reason": "Author v1.5/v1.6/v1.7 change tasks and define text edit distance, TEDS, CDM and aggregate. Developer91.1 lacks edition; frozen multiple-metric contract also blocks ingestion."
+    },
+    {
+      "benchmark": "PerceptionBench",
+      "reason": "Author paper defines accuracy, pass@4 and pass^4 for the same release; frozen multiple-metric contract blocks new results. Release table uses3-run vision mean, linked author paper4-run mean; retain distinct aggregates, category/run metrics and standard deviation."
+    },
+    {
+      "benchmark": "MMVU",
+      "reason": "K3 reference identifies Yale MMVU video understanding, not another similarly named dataset. Author validation/test and multiple-choice/open-ended subsets differ; developer82.1 does not identify split or question subset."
+    },
+    {
+      "benchmark": "ZeroBench (pass@5)",
+      "reason": "Author defines pass@1 and pass@5 for one release. Developer explicitly reports pass@5 over five runs with/without Python, but frozen one-metric contract blocks new results; do not map to pass@1."
+    },
+    {
+      "benchmark": "Kimi Webdev Bench",
+      "reason": "Table4 reports Win/Tie/Lose/Win−Lose for each category against Opus4.8 in blind expert comparison. Frozen multi-metric version contract blocks these sixteen results; task snapshot/weighted aggregation is also unspecified."
+    },
+    {
+      "benchmark": "Camera Repair Management System Replication",
+      "reason": "Verifier-completion1.000 is an AET case-study training endpoint; exact released K3 checkpoint and stable benchmark task identity are not established."
+    },
+    {
+      "benchmark": "In-house exploit suite",
+      "reason": "36-task in-house suite lacks stable benchmark/version and aggregation protocol; reported14/36 is retained, not mapped to a public ExploitBench."
+    },
+    {
+      "benchmark": "In-house exploit suite user-space",
+      "reason": "Ten solved of16 user-space tasks is an internal subset; stable task/version and denominator semantics are not published."
+    },
+    {
+      "benchmark": "Tier1 vulnerability verification",
+      "reason": "Approximately70% refers to human-confirmed findings, without stable task set or exact numerator/denominator; not a safely representable exact benchmark score."
+    },
+    {
+      "benchmark": "ExploitBench",
+      "reason": "Government independent evaluation of41 tasks is cited, not developer-run. Linked author text is reviewed but its figures remain uninspected due browser automatic-review usage limit; capability/ACE and judge conditions need full source reconciliation."
+    },
+    {
+      "benchmark": "ExploitBench ACE",
+      "reason": "Zero of41 ACE outcomes is a distinct capability metric from32% success; frozen one-metric version cannot conflate these. Linked government figures remain uninspected because browser approval review hit a usage limit."
+    },
+    {
+      "benchmark": "The Last Ones",
+      "reason": "Government32-step range reports mean17 steps and1/10 completion attempts at100M tokens, distinct metrics. Frozen one-metric contract blocks mapping; linked government figure inspection remains blocked by browser review usage limit."
+    },
+    {
+      "benchmark": "AttnRes kernel",
+      "reason": "Model optimization experiment reports both speedup and runtime for a custom kernel. Stable hardware/task configuration and benchmark version are not identified; do not invent a kernel benchmark entity."
+    },
+    {
+      "benchmark": "DSA kernel",
+      "reason": "Runtime reduction is a custom kernel optimization result; stable hardware/task configuration and benchmark version are not identified."
+    },
+    {
+      "benchmark": "KDA kernel",
+      "reason": "Runtime reduction is a custom kernel optimization result; stable hardware/task configuration and benchmark version are not identified."
+    }
+  ],
+  "inaccessible_supplement": {
+    "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+    "reason": "Browser automatic approval review rejected opening the page after the full text had been read, citing review-service usage limit. Figures not inspected and no alternate browser route used."
+  },
+  "published_additions": 5,
+  "all_safely_mappable_accessible_results_ingested": "YES"
+}

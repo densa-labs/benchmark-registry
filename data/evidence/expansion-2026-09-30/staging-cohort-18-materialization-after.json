@@ -1,0 +1,30 @@
+{
+  "environment": "staging",
+  "status": "PUBLISHED",
+  "objects": 317,
+  "bytes": 3704362,
+  "canonicalUrls": 920,
+  "approvedExact": 608,
+  "ambiguous": 301,
+  "generation": "0ecf42196cee4fa09471b9af6fa49edf",
+  "canonicalRevision": "68c3a1baca752767bcb9afddf573359b",
+  "rebuilt": [
+    "company:tongyi",
+    "model:130006",
+    "search-relationships",
+    "stats",
+    "version:mmlu-pro:original",
+    "version:mmmlu:original",
+    "home-panels",
+    "inventory"
+  ],
+  "removed": [],
+  "objectWrites": 8,
+  "manifestWrites": 1,
+  "pointerWrites": 2,
+  "d1Queries": 32,
+  "d1RowsRead": 8706,
+  "d1RowsWritten": 2,
+  "kvReads": 360,
+  "kvWrites": 11
+}

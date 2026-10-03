@@ -1,0 +1,48 @@
+{
+  "environment": "staging",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "gpqa",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "5ef58f90665fd52308dc3b6aa640272faaffebf480875ca48edb776dc482baae",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "df2d520cc61b88b6a87950a47ffabc74f398d6fd44dfb6f2883d69895e5a4f5f",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "5dd7479293974aa3ca9b0dcfef876b49f699deaf78684cd0c68ec34eaf3e3a56",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "984ff22481bd2d55fca9bf1e3a2d99e545d190a3ffcd56c5240e26863bf3eacd",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "72650f5b9139033012f31c09f8557d38570f189163c03254fdbf8044dd6e6f34",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "e7092f30ee7acd165e92d88d5bb5a6228727dad4e7359dffc8388b695932a476",
+      "message": "result is valid"
+    }
+  ]
+}

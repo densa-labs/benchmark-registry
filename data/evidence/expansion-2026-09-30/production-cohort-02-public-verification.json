@@ -1,0 +1,76 @@
+{
+  "environment": "production",
+  "status": "PASS",
+  "new_results_verified": 6,
+  "models": [
+    {
+      "registry_no": "40002",
+      "before": 4,
+      "added": 1,
+      "after": 5,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "40003",
+      "before": 3,
+      "added": 1,
+      "after": 4,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "80003",
+      "before": 9,
+      "added": 1,
+      "after": 10,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "80004",
+      "before": 8,
+      "added": 3,
+      "after": 11,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 5,
+  "companies_verified": [
+    "meta-ai",
+    "spacexai"
+  ],
+  "exact_results": [
+    {
+      "result_key": "72650f5b9139033012f31c09f8557d38570f189163c03254fdbf8044dd6e6f34",
+      "eligible": true
+    },
+    {
+      "result_key": "e7092f30ee7acd165e92d88d5bb5a6228727dad4e7359dffc8388b695932a476",
+      "eligible": true
+    },
+    {
+      "result_key": "5ef58f90665fd52308dc3b6aa640272faaffebf480875ca48edb776dc482baae",
+      "eligible": true
+    },
+    {
+      "result_key": "984ff22481bd2d55fca9bf1e3a2d99e545d190a3ffcd56c5240e26863bf3eacd",
+      "eligible": true
+    },
+    {
+      "result_key": "5dd7479293974aa3ca9b0dcfef876b49f699deaf78684cd0c68ec34eaf3e3a56",
+      "eligible": true
+    },
+    {
+      "result_key": "df2d520cc61b88b6a87950a47ffabc74f398d6fd44dfb6f2883d69895e5a4f5f",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 753,
+    "models": 94,
+    "benchmarks": 55,
+    "versions": 106
+  },
+  "sitemap_count": 849,
+  "published_generations": [
+    "1ba410b4c9c74c669e03eb30368f0476"
+  ]
+}

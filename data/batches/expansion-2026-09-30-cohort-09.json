@@ -1,0 +1,504 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "89.1",
+        "score_raw": "89.1%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "67.4",
+        "score_raw": "67.4%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "max",
+        "benchmark_slug": "global-mmlu",
+        "benchmark_version": "Original",
+        "metric_key": "global-mmlu-accuracy",
+        "score_value": "94.0",
+        "score_raw": "94.0%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "max",
+        "benchmark_slug": "milu",
+        "benchmark_version": "Original",
+        "metric_key": "milu-accuracy",
+        "score_value": "93.0",
+        "score_raw": "93.0%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "low",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "26.3",
+        "score_raw": "26.3%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "35.7",
+        "score_raw": "35.7%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "40.0",
+        "score_raw": "40.0%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "49.5",
+        "score_raw": "49.5%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "low",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "40.2",
+        "score_raw": "40.2%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "43.4",
+        "score_raw": "43.4%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "49.4",
+        "score_raw": "49.4%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "51.3",
+        "score_raw": "51.3%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "53.2",
+        "score_raw": "53.2%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "55.9",
+        "score_raw": "55.9%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "58.0",
+        "score_raw": "58.0%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "60.4",
+        "score_raw": "60.4%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "low",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "3.2.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "66.2",
+        "score_raw": "66.2%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "3.2.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "68.0",
+        "score_raw": "68.0%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "high",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "3.2.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "69.4",
+        "score_raw": "69.4%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "3.2.0",
+        "metric_key": "cursorbench-accuracy",
+        "score_value": "72.8",
+        "score_raw": "72.8%",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "checked_at": "2026-10-01T12:03:26Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

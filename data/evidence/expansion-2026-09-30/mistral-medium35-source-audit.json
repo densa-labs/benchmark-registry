@@ -1,0 +1,32 @@
+{
+  "registry_no": "90005",
+  "model": "Mistral Medium 3.5",
+  "status": "IN_PROGRESS",
+  "selected_model_card_exhaustively_inspected": "YES",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "visible_supported_records": 10,
+  "already_present_identical": 6,
+  "conflicts": 1,
+  "new_candidates": 0,
+  "unresolved": 2,
+  "unexplained_remainder": 0,
+  "reviewed_sections": [
+    "Complete model-card benchmark section and every figure",
+    "Model-card remaining sections including usage details; no additional evaluation tables",
+    "Full official launch blog text and target-model figures",
+    "Official model documentation"
+  ],
+  "second_pass": [
+    "All model-card figures reinspected with row/column headers and footnotes",
+    "Repeated own-model values reconciled; competitor-only rows excluded",
+    "No benchmark skipped for absence from Registry"
+  ],
+  "remaining_work": [
+    "Linked official technical governance material and any evaluation supplements need source-access review.",
+    "Resolve or explicitly close candidate mapping decisions before whole-model completeness.",
+    "Developer model documentation shows April 28 availability whereas launch blog and Registry show May 22. Preserve existing release facts; identity/date reconciliation required before correction."
+  ],
+  "exclusions": [],
+  "ingested_new": 1
+}

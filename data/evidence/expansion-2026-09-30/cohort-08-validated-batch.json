@@ -1,0 +1,214 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SHP2 Protein Function Prediction",
+        "slug": "shp2-protein-function-prediction",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "source_checked_at": "2026-10-01T11:37:33Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Mean R\u00b2 across three assay datasets",
+            "key": "shp2-mean-r-squared",
+            "storage_kind": "decimal",
+            "unit": "r-squared",
+            "display_precision": 3,
+            "minimum_value": null,
+            "maximum_value": null,
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+            "source_checked_at": "2026-10-01T11:37:33Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2026-09-03",
+            "release_precision": "date",
+            "metric_key": "shp2-mean-r-squared",
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+            "source_checked_at": "2026-10-01T11:37:33Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Coronavirus\u2013ACE2 Cell-Entry Screen",
+        "slug": "coronavirus-ace2-cell-entry-screen",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "source_checked_at": "2026-10-01T11:37:33Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Composite score",
+            "key": "coronavirus-ace2-composite-score",
+            "storage_kind": "decimal",
+            "unit": "points",
+            "display_precision": 3,
+            "minimum_value": null,
+            "maximum_value": null,
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+            "source_checked_at": "2026-10-01T11:37:33Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2026-09-03",
+            "release_precision": "date",
+            "metric_key": "coronavirus-ace2-composite-score",
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+            "source_checked_at": "2026-10-01T11:37:33Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Phage\u2013plasmid Co-evolution",
+        "slug": "phage-plasmid-co-evolution",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "source_checked_at": "2026-10-01T11:37:33Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "OpenAI",
+            "key": "openai",
+            "source_url": "https://openai.com/",
+            "source_checked_at": "2026-09-17T00:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Negative log-likelihood",
+            "key": "phage-plasmid-negative-log-likelihood",
+            "storage_kind": "decimal",
+            "unit": "nll",
+            "display_precision": 3,
+            "minimum_value": null,
+            "maximum_value": null,
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+            "source_checked_at": "2026-10-01T11:37:33Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2026-09-03",
+            "release_precision": "date",
+            "metric_key": "phage-plasmid-negative-log-likelihood",
+            "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+            "source_checked_at": "2026-10-01T11:37:33Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "",
+        "benchmark_slug": "shp2-protein-function-prediction",
+        "benchmark_version": "Original",
+        "metric_key": "shp2-mean-r-squared",
+        "score_value": "0.332",
+        "score_raw": "0.332",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+            "checked_at": "2026-10-01T11:37:33Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "",
+        "benchmark_slug": "coronavirus-ace2-cell-entry-screen",
+        "benchmark_version": "Original",
+        "metric_key": "coronavirus-ace2-composite-score",
+        "score_value": "0.423",
+        "score_raw": "0.423",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+            "checked_at": "2026-10-01T11:37:33Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10015",
+        "reasoning_level": "",
+        "benchmark_slug": "phage-plasmid-co-evolution",
+        "benchmark_version": "Original",
+        "metric_key": "phage-plasmid-negative-log-likelihood",
+        "score_value": "12.946",
+        "score_raw": "12.946",
+        "reported_at": "2026-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+            "checked_at": "2026-10-01T11:37:33Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

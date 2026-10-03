@@ -1,0 +1,410 @@
+{
+  "target_registry_no": "20015",
+  "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+  "source_title": "Claude Opus 5.5 System Card",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "reviewed_sections": [
+    "\u00a72.2 biological automated evaluations",
+    "\u00a72.3 AI R&D and internal index",
+    "\u00a73.3 cybersecurity capabilities",
+    "\u00a76.5.4.1 factual accuracy",
+    "\u00a78 all capability subsections175\u2013221",
+    "\u00a79 appendices222\u2013230"
+  ],
+  "native_figures_reviewed": [
+    22,
+    26,
+    27,
+    29,
+    31,
+    37,
+    40,
+    50,
+    52,
+    53,
+    54,
+    129,
+    176,
+    177,
+    180,
+    182,
+    183,
+    185,
+    186,
+    187,
+    188,
+    190,
+    191,
+    192,
+    194,
+    195,
+    196,
+    197,
+    198,
+    200,
+    201,
+    202,
+    204,
+    205,
+    206,
+    207,
+    208,
+    212,
+    213,
+    214,
+    215,
+    216,
+    221
+  ],
+  "unlabelled_numeric_charts": [
+    {
+      "pages": [
+        26,
+        27
+      ],
+      "reason": "RNA four metrics, eight attempts, baseline/prior-report conditions; no exact point or mean labels; values not estimated from axes."
+    },
+    {
+      "pages": [
+        29
+      ],
+      "reason": "AAV classification five conditions; eight attempts each; no exact labels."
+    },
+    {
+      "pages": [
+        31
+      ],
+      "reason": "Autoresearch trajectories unlabelled; approximate60%headline separately recorded."
+    },
+    {
+      "pages": [
+        176,
+        177,
+        180,
+        201,
+        202,
+        205,
+        207,
+        208,
+        212
+      ],
+      "reason": "Reasoning-effort curves contain unlabelled points. Exact text/headline values recorded; remaining coordinates not estimated. Linked official result tables remain to be checked where available."
+    },
+    {
+      "pages": [
+        190,
+        191
+      ],
+      "reason": "ProgramBench multiagent alternate-snapshot curves; no exact endpoint labels."
+    },
+    {
+      "pages": [
+        192
+      ],
+      "reason": "DRACO multiagent score/latency coordinates unlabelled; approximate speedup preserved separately."
+    }
+  ],
+  "alternate_snapshot_exclusions": [
+    {
+      "task": "Knowledge base",
+      "team_size": 1,
+      "hours": 2,
+      "displayed_score": ".37",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 1,
+      "hours": 6,
+      "displayed_score": ".47",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 1,
+      "hours": 24,
+      "displayed_score": ".53",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 10,
+      "hours": 2,
+      "displayed_score": ".53",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 10,
+      "hours": 6,
+      "displayed_score": ".64",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 10,
+      "hours": 24,
+      "displayed_score": ".70",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 30,
+      "hours": 2,
+      "displayed_score": ".66",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 30,
+      "hours": 6,
+      "displayed_score": ".68",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 30,
+      "hours": 24,
+      "displayed_score": ".71",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 100,
+      "hours": 2,
+      "displayed_score": ".69",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 100,
+      "hours": 6,
+      "displayed_score": ".71",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Knowledge base",
+      "team_size": 100,
+      "hours": 24,
+      "displayed_score": ".74",
+      "pages": [
+        194,
+        196
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 1,
+      "hours": 2,
+      "displayed_score": ".07",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 1,
+      "hours": 6,
+      "displayed_score": ".14",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 1,
+      "hours": 24,
+      "displayed_score": ".39",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 10,
+      "hours": 2,
+      "displayed_score": ".15",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 10,
+      "hours": 6,
+      "displayed_score": ".42",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 10,
+      "hours": 24,
+      "displayed_score": ".66",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 30,
+      "hours": 2,
+      "displayed_score": ".34",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 30,
+      "hours": 6,
+      "displayed_score": ".58",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 30,
+      "hours": 24,
+      "displayed_score": ".66",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 100,
+      "hours": 2,
+      "displayed_score": ".44",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 100,
+      "hours": 6,
+      "displayed_score": ".64",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    },
+    {
+      "task": "Lean theorem proving",
+      "team_size": 100,
+      "hours": 24,
+      "displayed_score": ".68",
+      "pages": [
+        195,
+        197
+      ],
+      "outcome": "excluded_exact_model_identity",
+      "reason": "\u00a78.12.3 explicitly says quantitative results use a slightly different model version from released Opus5.5; no score assigned to Registry20015."
+    }
+  ],
+  "scope_exclusions": [
+    {
+      "section": "\u00a74/\u00a75/\u00a76 except factual accuracy/\u00a77",
+      "reason": "Policy, refusals, bias, prompt-injection, misuse, alignment, and welfare are outside ordinary model capability benchmarks; table/figure inventory checked to identify capability exceptions."
+    }
+  ],
+  "remaining_checks": [
+    "Second pass of whole-source table/figure inventory and any relevant capability exceptions",
+    "Complete review of linked official release/evaluation supplements",
+    "Resolve pending benchmark identities and unavailable exact chart result data",
+    "Controlled staging commit, materialization, public QA, production commit/replay verification"
+  ]
+}

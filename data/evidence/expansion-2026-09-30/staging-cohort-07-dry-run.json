@@ -1,0 +1,18 @@
+{
+  "environment": "staging",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "exploitbench-internal-port",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "1f698fc32e43fac4b5f2f04f87782ba4f58fc2638a85270a96652c474737e01a",
+      "message": "result is valid"
+    }
+  ]
+}

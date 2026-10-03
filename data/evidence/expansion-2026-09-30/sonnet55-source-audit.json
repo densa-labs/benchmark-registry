@@ -1,0 +1,62 @@
+{
+  "target_registry_no": "20016",
+  "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+  "source_title": "Claude Sonnet 5.5 System Card",
+  "physical_pages": 148,
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_source_sections_reviewed": [
+    "Contents and overview",
+    "Sections 2\u20133 all capability text and rendered figures",
+    "Section 4.4.2 BBQ ordinary QA accuracy table",
+    "Section 6.3.2.1 factual QA text and both figures",
+    "Section 6.4.2 reviewed; only monitor-evasion measures, excluded from ordinary capability scope",
+    "Section 8 all capability text and all score-bearing figures",
+    "Appendix 9.1 full four-page HLE blocklist",
+    "Sections 3.3\u20137 policy, safeguards, alignment and welfare text reviewed by section; BBQ and factual QA retained as ordinary capability results; no omitted ordinary capability table found.",
+    "Native summary table p109 and Toolathlon table p135 visually checked in second pass."
+  ],
+  "remaining_source_work": [],
+  "visible_supported_results_recorded": 157,
+  "outcomes": {
+    "already_present_identical": 14,
+    "unresolved": 128,
+    "ingested_new": 15
+  },
+  "unexplained_recorded_remainder": 0,
+  "unlabelled_chart_note": "No estimates extracted from unlabelled curves, token/cost axes, RNA/AAV plots, or multi-agent time curves. Rounded life-science plot labels reference the same more precise prose results.",
+  "excluded_notes": [
+    "Stealth attack success, CoT controllability, policy refusal/cooperation, model welfare and political bias measures are behavior/safety metrics; ordinary BBQ QA accuracy and AA factual QA were retained.",
+    "No estimates extracted from unlabelled plots. Exact launch chart cost labels and approximate prose latency/token values were separately retained as unresolved metrics.",
+    "Pricing per million tokens, generic product speed/price claims without an evaluation suite, and qualitative Pokemon completion lack benchmark numeric scores."
+  ],
+  "launch_page_exhaustively_inspected": "YES",
+  "launch_page_reviewed": [
+    "Full text and main benchmark table",
+    "All four interactive chart tabs with effort, score and exact USD cost",
+    "All testimonials, pricing and demo sections",
+    "All four interpretive footnotes",
+    "System-card link and official supplementary links"
+  ],
+  "additional_observations": "All exact effort-level chart scores and costs, approximate healthcare latencies, AA relative token metrics and developer-hosted partner numeric claims retained with explicit outcomes.",
+  "exclusion_audit": {
+    "sections_3_3_to_5": "Safeguard recall, refusal/cooperation and injection resistance rather than ordinary task quality; benign cooperation success measures policy willingness. BBQ accuracy retained separately.",
+    "sections_6_1_to_6_2": "Behavioral audit severity/traits and containment propensity; not benchmark task performance.",
+    "section_6_3": "AA-Omniscience retained; MASK honesty pressure, copying and disclosure are behavior evaluations.",
+    "section_6_4": "Grader awareness, sabotage stealth and CoT controllability; no GPQA/HLE/MMLU question-answering accuracy reported.",
+    "section_7": "Model welfare, affect, preferences and constitution endorsement, not task capability scores."
+  },
+  "second_pass_complete": true,
+  "reconciliation": "157 = 15 ingested new + 14 identical already present + 0 conflicts + 128 unresolved with individual explicit reasons.",
+  "source_scope": "The selected 148-page system card, all relevant capability sections, capability figures/footnotes, ordinary factual QA and BBQ tables, full four-page appendix, and full release page including all four interactive charts were reviewed. Older linked methodology sources were reviewed for benchmark identity; links reporting only other models do not supply Sonnet 5.5 results.",
+  "linked_developer_supplements": [
+    {
+      "url": "https://www.anthropic.com/research/Claude-accelerates-protein-design",
+      "review": "Full article and footnotes inspected; reports other-model campaigns and a different wet-lab metric. No additional Sonnet 5.5 score."
+    },
+    {
+      "url": "https://red.anthropic.com/2026/exploit-evals/",
+      "review": "Full article inspected; earlier release evaluations, no Sonnet 5.5 result."
+    }
+  ]
+}

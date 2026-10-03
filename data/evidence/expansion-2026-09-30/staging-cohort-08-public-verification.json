@@ -1,0 +1,42 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 3,
+  "models": [
+    {
+      "registry_no": "10015",
+      "before": 26,
+      "added": 3,
+      "after": 29,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 3,
+  "companies_verified": [
+    "openai"
+  ],
+  "exact_results": [
+    {
+      "result_key": "f648032ae249386d2ff50cc05432a40b45fb46469e911d80352a74c10fda5a88",
+      "eligible": true
+    },
+    {
+      "result_key": "7aaab56f9868f3a9b3bf3902542fa6668853a4220027c14c258ffe002807debd",
+      "eligible": true
+    },
+    {
+      "result_key": "c7f7f6bca8132e0e6ad25185b8cab9565f93b3b40a35a927b96c79ec153e50a0",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 781,
+    "models": 94,
+    "benchmarks": 66,
+    "versions": 117
+  },
+  "sitemap_count": 883,
+  "published_generations": [
+    "67e401fbad5c43219c6fc37aa1694780"
+  ]
+}

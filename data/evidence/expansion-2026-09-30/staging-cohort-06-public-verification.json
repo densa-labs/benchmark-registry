@@ -1,0 +1,42 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 3,
+  "models": [
+    {
+      "registry_no": "130008",
+      "before": 12,
+      "added": 3,
+      "after": 15,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 3,
+  "companies_verified": [
+    "tongyi"
+  ],
+  "exact_results": [
+    {
+      "result_key": "bdb1a2244995f494a7e58bfcf8066a24ddbcd901eebaa40829ffa15294387388",
+      "eligible": true
+    },
+    {
+      "result_key": "ee02c16a004b2d34a5de443c7ef0c673b7c71c169245c20408df7a2b28dc10ac",
+      "eligible": true
+    },
+    {
+      "result_key": "dacd3eb3a9e494455044097faac90ca26c2ae34b38fb8e6fb757dee54d831e46",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 777,
+    "models": 94,
+    "benchmarks": 62,
+    "versions": 113
+  },
+  "sitemap_count": 871,
+  "published_generations": [
+    "3c20e1db596846e282687dd927e57649"
+  ]
+}

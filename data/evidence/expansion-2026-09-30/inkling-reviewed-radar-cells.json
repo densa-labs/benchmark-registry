@@ -1,0 +1,186 @@
+{
+  "inkling": [
+    {
+      "benchmark": "HLE (no tools)",
+      "model": "Inkling",
+      "score": "29.7",
+      "index": 0
+    },
+    {
+      "benchmark": "AIME 2026",
+      "model": "Inkling",
+      "score": "97.1",
+      "index": 1
+    },
+    {
+      "benchmark": "SWE-bench Pro (Public)",
+      "model": "Inkling",
+      "score": "54.3",
+      "index": 2
+    },
+    {
+      "benchmark": "Terminal Bench 2.1",
+      "model": "Inkling",
+      "score": "63.8",
+      "index": 3
+    },
+    {
+      "benchmark": "MCP Atlas",
+      "model": "Inkling",
+      "score": "76.0",
+      "index": 4
+    },
+    {
+      "benchmark": "SimpleQA Verified",
+      "model": "Inkling",
+      "score": "43.9",
+      "index": 5
+    },
+    {
+      "benchmark": "AA Omniscience (acc)",
+      "model": "Inkling",
+      "score": "40.0",
+      "index": 6
+    },
+    {
+      "benchmark": "AudioMC",
+      "model": "Inkling",
+      "score": "56.6",
+      "index": 7
+    },
+    {
+      "benchmark": "MMMU Pro",
+      "model": "Inkling",
+      "score": "73.5",
+      "index": 8
+    },
+    {
+      "benchmark": "IFBench",
+      "model": "Inkling",
+      "score": "79.8",
+      "index": 9
+    }
+  ],
+  "small": [
+    {
+      "benchmark": "HLE (no tools)",
+      "model": "Inkling-Small",
+      "score": "31.6",
+      "index": 0
+    },
+    {
+      "benchmark": "HLE (no tools)",
+      "model": "Inkling",
+      "score": "29.7",
+      "index": 0
+    },
+    {
+      "benchmark": "AIME 2026",
+      "model": "Inkling-Small",
+      "score": "95.5",
+      "index": 1
+    },
+    {
+      "benchmark": "AIME 2026",
+      "model": "Inkling",
+      "score": "97.1",
+      "index": 1
+    },
+    {
+      "benchmark": "SWE-bench Pro (Public)",
+      "model": "Inkling-Small",
+      "score": "55.9",
+      "index": 2
+    },
+    {
+      "benchmark": "SWE-bench Pro (Public)",
+      "model": "Inkling",
+      "score": "54.3",
+      "index": 2
+    },
+    {
+      "benchmark": "Terminal Bench 2.1",
+      "model": "Inkling-Small",
+      "score": "64.7",
+      "index": 3
+    },
+    {
+      "benchmark": "Terminal Bench 2.1",
+      "model": "Inkling",
+      "score": "63.8",
+      "index": 3
+    },
+    {
+      "benchmark": "MCP Atlas (public)",
+      "model": "Inkling-Small",
+      "score": "79.6",
+      "index": 4
+    },
+    {
+      "benchmark": "MCP Atlas (public)",
+      "model": "Inkling",
+      "score": "78.8",
+      "index": 4
+    },
+    {
+      "benchmark": "SimpleQA Verified",
+      "model": "Inkling-Small",
+      "score": "20.6",
+      "index": 5
+    },
+    {
+      "benchmark": "SimpleQA Verified",
+      "model": "Inkling",
+      "score": "43.9",
+      "index": 5
+    },
+    {
+      "benchmark": "AA Omniscience (acc)",
+      "model": "Inkling-Small",
+      "score": "30.5",
+      "index": 6
+    },
+    {
+      "benchmark": "AA Omniscience (acc)",
+      "model": "Inkling",
+      "score": "40.0",
+      "index": 6
+    },
+    {
+      "benchmark": "AudioMC",
+      "model": "Inkling-Small",
+      "score": "54.9",
+      "index": 7
+    },
+    {
+      "benchmark": "AudioMC",
+      "model": "Inkling",
+      "score": "56.6",
+      "index": 7
+    },
+    {
+      "benchmark": "MMMU Pro",
+      "model": "Inkling-Small",
+      "score": "74.0",
+      "index": 8
+    },
+    {
+      "benchmark": "MMMU Pro",
+      "model": "Inkling",
+      "score": "73.5",
+      "index": 8
+    },
+    {
+      "benchmark": "IFBench",
+      "model": "Inkling-Small",
+      "score": "82.2",
+      "index": 9
+    },
+    {
+      "benchmark": "IFBench",
+      "model": "Inkling",
+      "score": "79.8",
+      "index": 9
+    }
+  ]
+}

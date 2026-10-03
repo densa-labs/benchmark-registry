@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "95",
+        "score_raw": "95%",
+        "reported_at": "2026-06-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+            "checked_at": "2026-10-02T05:24:13Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1 \u2014 mini-swe-agent",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "84.3",
+        "score_raw": "84.3%",
+        "reported_at": "2026-06-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+            "checked_at": "2026-10-02T05:24:13Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "85",
+        "score_raw": "85.0%",
+        "reported_at": "2026-06-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+            "checked_at": "2026-10-02T05:24:13Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

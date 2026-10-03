@@ -1,0 +1,52 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 2,
+  "models": [
+    {
+      "registry_no": "160001",
+      "before": 12,
+      "added": 0,
+      "after": 12,
+      "checks": "PASS"
+    },
+    {
+      "registry_no": "160002",
+      "before": 9,
+      "added": 2,
+      "after": 11,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 2,
+  "companies_verified": [
+    "thinking-machines"
+  ],
+  "exact_results": [
+    {
+      "result_key": "b4f4e1a20e12ae9a4526abf43a4ccce7cd14471b985fa5b03f3165148697abfe",
+      "eligible": true
+    },
+    {
+      "result_key": "617eebeacee380ae2957bcfc1f281fec979df590ba9c76151f25f4dcbcf49f58",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 927,
+    "models": 94,
+    "benchmarks": 73,
+    "versions": 133
+  },
+  "sitemap_count": 949,
+  "published_generations": [
+    "c09f1b48e3094904b68c4ec31f409ab4"
+  ],
+  "search_checks": [
+    {
+      "query": "CharXiv",
+      "benchmark_slug": "charxiv",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "issue": "Deployed reader rejects newly introduced home-panels manifest key from concurrent unshipped workspace work and falls back to previous generation.",
+  "resolution": "Use unchanged committed materializer in a temporary isolated checkout; rollback invalid generation through existing materializer, then incrementally replay affected canonical scopes.",
+  "materializer_revision": "7f4526c663d527a976b47ccc5462fa890e40dc77",
+  "canonical_results_rolled_back": false,
+  "product_code_changed_by_expansion": false,
+  "staging_public_verification": "PASS",
+  "concurrent_publication_update": "Both live Workers now accept the current deployed manifest format: staging 8d9f668255494b8cba456c428540b33d, production 3549e44f1f9347ffbb5fb754574951ee. Retain their currently published projection contract for production materialization.",
+  "public_d1_rows": 0,
+  "staging_sitemap_count": 853
+}

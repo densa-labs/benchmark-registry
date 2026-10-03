@@ -1,0 +1,42 @@
+{
+  "environment": "production",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "shp2-protein-function-prediction",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "coronavirus-ace2-cell-entry-screen",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "phage-plasmid-co-evolution",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "c7f7f6bca8132e0e6ad25185b8cab9565f93b3b40a35a927b96c79ec153e50a0",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "f648032ae249386d2ff50cc05432a40b45fb46469e911d80352a74c10fda5a88",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "7aaab56f9868f3a9b3bf3902542fa6668853a4220027c14c258ffe002807debd",
+      "message": "result is valid"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "target_registry_no": "20005",
+  "model": "Claude Sonnet 4.5",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "selected_sources": [
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "review_status": "Partial;exact cited sections read"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd/Claude%20Sonnet%204.5%20System%20Card.pdf",
+      "review_status": "Located;review completeness recorded below"
+    }
+  ],
+  "visible_supported_results_recorded_so_far": 19,
+  "outcomes_so_far": {
+    "research_pending": 19
+  },
+  "completeness_totals_final": false,
+  "remaining_work": "Wholelaunchtextandallmethodfootnotesread;13maintablescalars+1extraSWEcontextconfiguration+5privatecustomerbenchclaimsrecorded.Finishfourdomainchartsandmisalignmentfigure,andentire149pagesystemcard/allcapabilityfigures/linkedauthorprotocols;noauditYESyet."
+}

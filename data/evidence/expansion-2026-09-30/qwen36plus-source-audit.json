@@ -1,0 +1,41 @@
+{
+  "target_registry_no": "130004",
+  "model": "Qwen3.6-Plus",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.6",
+      "body_reviewed": true,
+      "evaluation_tables_reviewed": 2,
+      "language_scalar_rows": 42,
+      "vision_scalar_cells": 25,
+      "compound_pairs": 2,
+      "headline_figure_reviewed": true,
+      "demo_groups_expanded_and_reviewed": 9
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+      "body_and_footnotes_reviewed": true,
+      "evaluation_images_reviewed": true,
+      "headline_image_reviewed": true
+    }
+  ],
+  "visible_supported_results_recorded": 69,
+  "outcomes": {
+    "already_present_identical": 7,
+    "unresolved": 56,
+    "ingested_new": 4,
+    "conflict_deferred": 2
+  },
+  "unexplained_source_visible_results": 0,
+  "review_details": [
+    "Entire native rendered original body reviewed; both complete developer-own-model evaluation columns captured with row/column context.",
+    "Paired V* and TIR entries split according to explicit with-CI/without-CI footnote. API enable_thinking example not treated as benchmark reasoning evidence.",
+    "Seven exact release-table observations already represented; June comparison MathVision/OSWorld run and effort ambiguities preserved as conflicts rather than new runs.",
+    "Second pass reviewed both complete original tables,all footnotes,nine expanded demo groups,all12 headline chart panels,full mirror language and vision images. No appendix/report/evaluation supplement linked. Demo object-similarity outputs are not benchmark records.",
+    "Headline12 panels repeat existing table results; QwenWeb chart1502 is rounded table1501.7,not a distinct evaluation/conflict. Mirror images contain42 language rows and25 vision rows/27scalar cells.",
+    "Every pending author mapping examined;37 explicit unresolved reasons and1 safe new MMMLU mapping recorded. No candidate omitted because absent from Registry."
+  ],
+  "remaining_work": "All69observations accounted for:4new,7identical,56explicitlyunresolved,2validconflictsdeferred. Four additions fully published and verified;no safely mapped candidate remains."
+}

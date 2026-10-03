@@ -1,0 +1,34 @@
+{
+  "environment": "production",
+  "status": "PASS",
+  "new_results_verified": 1,
+  "models": [
+    {
+      "registry_no": "90005",
+      "before": 7,
+      "added": 1,
+      "after": 8,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 1,
+  "companies_verified": [
+    "mistral"
+  ],
+  "exact_results": [
+    {
+      "result_key": "99a7eb16b6de4bbd01c45558f43505a2d5cd0e551bf78f96a7d7789652143972",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 754,
+    "models": 94,
+    "benchmarks": 56,
+    "versions": 107
+  },
+  "sitemap_count": 853,
+  "published_generations": [
+    "137632e62119499d809081ac97e27f67"
+  ]
+}

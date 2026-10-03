@@ -1,0 +1,64 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "responses": [
+    {
+      "path": "/",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/api/home-panels",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/api/stats",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/compare",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/compare?models=160001,160002&reasoning=effort%253D0.99,effort%253D0.99",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/compare?models=160001,160002&benchmarks=shared&q=CharXiv",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/models/160002",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "generation": "c09f1b48e3094904b68c4ec31f409ab4",
+      "d1_rows": "0",
+      "d1_queries": "0"
+    }
+  ],
+  "home_panels_unknown_parameter_status": 400,
+  "public_d1_reads": 0
+}

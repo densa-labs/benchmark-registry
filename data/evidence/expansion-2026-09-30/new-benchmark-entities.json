@@ -1,0 +1,98 @@
+[
+  {
+    "canonical_name": "Global MMLU",
+    "slug": "global-mmlu",
+    "source_url": "https://arxiv.org/abs/2412.03304",
+    "source_checked_at": "2026-09-30T10:00:00Z",
+    "aliases": [
+      {
+        "name": "GMMLU",
+        "source_url": "https://arxiv.org/abs/2412.03304",
+        "source_checked_at": "2026-09-30T10:00:00Z"
+      }
+    ],
+    "evaluators": [
+      {
+        "name": "Cohere For AI",
+        "key": "cohere-for-ai",
+        "source_url": "https://arxiv.org/abs/2412.03304",
+        "source_checked_at": "2026-09-30T10:00:00Z"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "Average accuracy",
+        "key": "global-mmlu-accuracy",
+        "storage_kind": "decimal",
+        "unit": "percent",
+        "display_precision": 1,
+        "minimum_value": "0",
+        "maximum_value": "100",
+        "source_url": "https://arxiv.org/abs/2412.03304",
+        "source_checked_at": "2026-09-30T10:00:00Z"
+      }
+    ],
+    "versions": [
+      {
+        "version": "Original",
+        "version_slug": "original",
+        "release_at": "2024-12-04",
+        "release_precision": "date",
+        "metric_key": "global-mmlu-accuracy",
+        "source_url": "https://arxiv.org/abs/2412.03304",
+        "source_checked_at": "2026-09-30T10:00:00Z",
+        "evaluator_keys": [
+          "cohere-for-ai"
+        ]
+      }
+    ]
+  },
+  {
+    "canonical_name": "Multi-task Indic Language Understanding Benchmark",
+    "slug": "milu",
+    "source_url": "https://arxiv.org/abs/2411.02538",
+    "source_checked_at": "2026-09-30T10:00:00Z",
+    "aliases": [
+      {
+        "name": "MILU",
+        "source_url": "https://arxiv.org/abs/2411.02538",
+        "source_checked_at": "2026-09-30T10:00:00Z"
+      }
+    ],
+    "evaluators": [
+      {
+        "name": "AI4Bharat",
+        "key": "ai4bharat",
+        "source_url": "https://arxiv.org/abs/2411.02538",
+        "source_checked_at": "2026-09-30T10:00:00Z"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "Average accuracy",
+        "key": "milu-accuracy",
+        "storage_kind": "decimal",
+        "unit": "percent",
+        "display_precision": 1,
+        "minimum_value": "0",
+        "maximum_value": "100",
+        "source_url": "https://arxiv.org/abs/2411.02538",
+        "source_checked_at": "2026-09-30T10:00:00Z"
+      }
+    ],
+    "versions": [
+      {
+        "version": "Original",
+        "version_slug": "original",
+        "release_at": "2024-11-04",
+        "release_precision": "date",
+        "metric_key": "milu-accuracy",
+        "source_url": "https://arxiv.org/abs/2411.02538",
+        "source_checked_at": "2026-09-30T10:00:00Z",
+        "evaluator_keys": [
+          "ai4bharat"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "environment": "production",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "paperbench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "mtvqa",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "realworldqa",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "ee02c16a004b2d34a5de443c7ef0c673b7c71c169245c20408df7a2b28dc10ac",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "bdb1a2244995f494a7e58bfcf8066a24ddbcd901eebaa40829ffa15294387388",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "dacd3eb3a9e494455044097faac90ca26c2ae34b38fb8e6fb757dee54d831e46",
+      "message": "result is valid"
+    }
+  ]
+}

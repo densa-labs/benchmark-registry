@@ -1,0 +1,63 @@
+{
+  "target_registry_no": "10015",
+  "candidates": [
+    {
+      "observation_id": "sol61-117",
+      "target_registry_no": "10015",
+      "model": "GPT-6.1 Sol",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "source_title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "source_publisher": "OpenAI",
+      "source_publication_date": "2026-09-29",
+      "reported_at": "2026-09-29",
+      "benchmark_as_displayed": "ExploitBench - Internal Port",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Arbitrary code-execution success rate (%)",
+      "displayed_score": "21.5",
+      "normalized_stored_score": "21.5",
+      "reasoning_level": "",
+      "configuration": "Recently disclosed vulnerabilities; June\u2013August 2026 suite identity requires methodology verification.",
+      "location": "Corresponding system-card section prose",
+      "ingestion_outcome": "candidate_validated_metadata",
+      "reason": "The Sol card explicitly refers to the Astra cybersecurity evaluation methodology. The named Internal Port suite has its own June\u2013August 2026 vulnerability window and ACE-success metric. The original benchmark developer OpenAI first publicly introduces and defines this novel internal suite in the September 3 Astra release; this is the version first-public-disclosure date, not a guessed internal creation date or vulnerability-disclosure date. Exactly one target score is reported for this version with effort unspecified.",
+      "ancillary_metadata": {},
+      "canonical_benchmark_slug": "exploitbench-internal-port",
+      "canonical_version": "June\u2013August 2026",
+      "metric_key": "exploitbench-internal-port-ace-success",
+      "normalization": "None; the developer percentage scale is retained.",
+      "benchmark_identity_sources": [
+        "https://deploymentsafety.openai.com/gpt-6-astra/exploitbench---internal-port-juneaugust-2026",
+        "https://openai.com/index/gpt-6-astra/"
+      ]
+    }
+  ],
+  "publication_status": "STAGING_VERIFIED_PRODUCTION_HELD_FOR_TIMESTAMP_RECHECK",
+  "benchmark_metadata": {
+    "first_public_introduction": "2026-09-03",
+    "publication_date_evidence": "Astra card visible Published September 3, 2026 heading; official release Cybersecurity section explicitly introduces two novel benchmarks and names this internal suite.",
+    "metric": "ACE success rate, not public ExploitBench Cap Percent",
+    "version_mapping": "Sol card refers to Astra cyber methodology, where the Internal Port evaluation has the explicit June\u2013August 2026 name; no public-ExploitBench equivalence asserted.",
+    "source_urls": [
+      "https://deploymentsafety.openai.com/gpt-6-astra/exploitbench---internal-port-juneaugust-2026",
+      "https://openai.com/index/gpt-6-astra/"
+    ],
+    "model_run_source": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+    "run_configuration": "No effort is explicitly attributed to Internal Port; leave unset. Primary card reports one top-line score for this model/version."
+  },
+  "timestamp_issue": {
+    "original_staging_checked_at": "2026-10-01T12:15:00Z",
+    "actual_rechecked_at": "2026-10-01T11:37:33Z",
+    "correction_status": "DEFERRED_STAGING_METADATA_UNSUPPORTED",
+    "reason": "Initial staging preparation used a UTC timestamp ahead of the actual clock. Earlier-time corrected input conflicted with stored benchmark facts; no guarded checked-timestamp correction is exposed. No direct database edit was performed. The original batch remains held from production pending a safe resolution; an intended matching-time follow-up check did not execute because the local HTML parser dependency was unavailable. Scores, identity, metric, version and report dates remain unchanged.",
+    "affected_fields": [
+      "benchmark source_checked_at",
+      "metric source_checked_at",
+      "version source_checked_at",
+      "result primary_source_checked_at"
+    ],
+    "canonical_score_corrections": 0,
+    "corrected_batch_staging_validation": "CONFLICT: family checked timestamp is a guarded fact; correction operation unavailable",
+    "production_disposition": "Production held: initial staging checked timestamp was future-dated; the intended matching-time recheck failed before fetching. Existing guarded workflows do not expose a checked-timestamp correction. Do not backdate a later check or directly edit canonical tables.",
+    "failed_followup": "The attempted check raised ModuleNotFoundError before network access; no successful recheck or timestamp correction is claimed."
+  }
+}

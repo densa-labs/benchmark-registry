@@ -1,0 +1,48 @@
+{
+  "target_registry_no": "130001",
+  "model": "Qwen3-Max-Instruct",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d",
+      "entire_body_reviewed_twice": true,
+      "all_three_evaluation_figures_reviewed": true,
+      "full_target_chart_headers_and_five_values_reviewed": true
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621",
+      "entire_official_mirror_body_reviewed": true,
+      "no_additional_target_model_results": true
+    }
+  ],
+  "visible_supported_results_recorded": 5,
+  "outcomes": {
+    "unresolved": 4,
+    "already_present_identical": 1
+  },
+  "unexplained_source_visible_results": 0,
+  "excluded_comparisons_and_model_variants": [
+    {
+      "figure": "Text Arena",
+      "reason": "Exact row is qwen3-max-preview,not final Instruct;not transferred."
+    },
+    {
+      "figure": "Qwen3-Max-Thinking Heavy with Python",
+      "reason": "Source explicitly says under active training and not released;distinct model/configuration,not transferred."
+    },
+    {
+      "section": "Qwen3-Max-Base training efficiency",
+      "reason": "Different base checkpoint and hardware utilization/throughput,not final Instruct capability results."
+    }
+  ],
+  "completeness_second_pass": {
+    "every_evaluation_table": true,
+    "appendices": "No appendices",
+    "additional_benchmark_sections": true,
+    "all_images_captions_footnotes": true,
+    "reasoning_tool_configs": true,
+    "linked_supplements": "References concern predecessor architecture/load balancing/ChunkFlow,not extra final Max release evaluations."
+  },
+  "remaining_work": "No safely mappable remainder:5=1identical+4 individually unresolved. Source and exact model identity inspected;no score or metadata corrections."
+}

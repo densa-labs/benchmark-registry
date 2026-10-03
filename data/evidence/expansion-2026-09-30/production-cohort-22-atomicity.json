@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "test": "test_disposable_remote_d1_batch_rolls_back_atomically",
+  "passed": 1,
+  "disposable_database_id": "cc29cd46-a842-44a7-9f75-16d12fab1add"
+}

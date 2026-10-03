@@ -1,0 +1,18 @@
+{
+  "environment": "production",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "mmmlu",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "a34f714b1ff334798c4e1500d362a569694782e888817f87addf1644579bbb89",
+      "message": "result is valid"
+    }
+  ]
+}

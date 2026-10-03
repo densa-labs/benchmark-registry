@@ -1,0 +1,59 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 3,
+  "models": [
+    {
+      "registry_no": "20012",
+      "before": 2,
+      "added": 3,
+      "after": 5,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 3,
+  "companies_verified": [
+    "anthropic"
+  ],
+  "exact_results": [
+    {
+      "result_key": "97909710c54ef0486d315d5cde02528f2781d947daccdc4f702fc9bb9f69652a",
+      "eligible": true
+    },
+    {
+      "result_key": "3b4cee84f604ecc2adda9aa52720d58d67601c06caf1b9ebaf37b4ef7ca119a6",
+      "eligible": true
+    },
+    {
+      "result_key": "d77709685eb6f88c6f3633c7ecfb25d77403544afb5b41eb207f3f68e1fc861b",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 893,
+    "models": 94,
+    "benchmarks": 70,
+    "versions": 127
+  },
+  "sitemap_count": 911,
+  "published_generations": [
+    "6011db257e664afda54ca27af4ed3730"
+  ],
+  "search_checks": [
+    {
+      "query": "SWE-bench",
+      "benchmark_slug": "swe-bench",
+      "status": "PASS"
+    },
+    {
+      "query": "Terminal-Bench",
+      "benchmark_slug": "terminal-bench",
+      "status": "PASS"
+    },
+    {
+      "query": "OSWorld",
+      "benchmark_slug": "osworld",
+      "status": "PASS"
+    }
+  ]
+}

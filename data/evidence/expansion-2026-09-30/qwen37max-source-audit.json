@@ -1,0 +1,61 @@
+{
+  "target_registry_no": "130006",
+  "model": "Qwen3.7-Max",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "selected_sources": [
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "body_reviewed": true,
+      "main_table_rows_reviewed": 41,
+      "main_table_scalar_observations": 42,
+      "headline_figure_reviewed": true,
+      "scaling_figure_reviewed": true,
+      "cross_harness_figure_reviewed": true,
+      "monitoring_figure_reviewed": true,
+      "all_footnotes_reviewed": true,
+      "demo_groups_expanded_and_reviewed": 2,
+      "demos_reviewed": 6
+    },
+    {
+      "url": "https://docs.qwenlm.ai/resources/hUbVe_evolving_ppu_case.html",
+      "full_trajectory_viewed": true
+    },
+    {
+      "url": "https://docs.qwenlm.ai/resources/YdJUk_yc_bench.html",
+      "final_state_reviewed": true
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+      "body_and_footnotes_reviewed": true,
+      "full_table_image_reviewed": true,
+      "six_evaluation_figures_reviewed": true
+    },
+    {
+      "url": "https://github.com/AlibabaCloud-Official/Qwen3.7-max-readme/blob/main/README.md",
+      "entire_readme_reviewed": true,
+      "own_model_column_matches_original": true,
+      "no_additional_target_model_scores": true
+    }
+  ],
+  "visible_supported_results_recorded": 74,
+  "outcomes": {
+    "already_present_identical": 7,
+    "unresolved": 65,
+    "ingested_new": 2
+  },
+  "unexplained_source_visible_results": 0,
+  "remaining_work": "Complete source audit:74 observations=2 new+7 identical+65 explicitly unresolved;zero pending or unexplained.",
+  "scope_exclusions": [
+    "Agent Scaling earlier checkpoints are training ablations,not exact final release identity. Final Agent Expert endpoints retained unresolved.",
+    "Reward-monitoring 86h/13952trajectories/11196judgecalls/1618hacks/13rules and unlabelled RL-training curve are operational/training statistics,not independent target-model capability benchmark scores.",
+    "Headline12panels and OpenClaw cross-harness bars repeat main-table cells;not new logical evaluations.",
+    "Recommended reasoning xhigh system prompt and API enable_thinking examples do not establish executed target-model benchmark effort."
+  ],
+  "review_details": [
+    "Second pass covered entire original native body/all41rows(42scalarcells),12headlinepanels,all7finalAgentExpertendpointpanels,6cross-harnessbars,monitoringplot,fullkerneltrajectorywith16annotations,finalYCstate/94.9%/237/revenue,mirrorpeakmonth406K/phase0%annotations,all footnotes,twoexpanded demo groups/sixdemos and official GitHub mirror.",
+    "No appendix/report is linked from release;two embedded official evaluations reviewed to final state. Earlier trajectory points with no printed labels were not digitized.",
+    "New author mappings considered for every remaining named family. Existing SciCode record521 is a possible same score but source does not establish main/subproblem setup;held unresolved without duplicate/correction.",
+    "No inferred target effort from recommended xhigh/GPT5.4hackingjudge/APIexample. No score normalization;unsupported scalar and percentage representations remain explicit."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "target_registry_no": "80004",
+  "selected_sources": [
+    "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+    "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+    "https://research.meta.ai/static/muse-glimmer-methodology"
+  ],
+  "official_source_exhaustively_inspected": "NO",
+  "selected_launch_and_model_card_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "full_model_card_sections_reviewed": true,
+  "methodology_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "images_visually_reviewed": [
+    "Main benchmark table",
+    "Quantization degradation table",
+    "DFlash decoding speed chart"
+  ],
+  "source_supported_results_recorded": 40,
+  "outcomes": {
+    "unresolved": 29,
+    "already_present_identical": 8,
+    "ingested_new": 3
+  },
+  "unexplained_source_visible_results": 0,
+  "excluded_policy_metrics": [
+    {
+      "benchmark": "CI Memories",
+      "metric": "violation rate",
+      "score": "26.4"
+    },
+    {
+      "benchmark": "CI Memories",
+      "metric": "appropriate-sharing coverage",
+      "score": "64.8"
+    },
+    {
+      "benchmark": "Siren AgentDojo",
+      "metric": "attack success rate",
+      "score": "28.4"
+    }
+  ],
+  "second_pass": "All main and preparedness tables, deployment performance tables, blog images, complete card text and every methodology page reviewed. No competitor scores extracted. Unlabelled error ranges are not estimated.",
+  "remaining_work": "Linked Muse Spark safety report methodology sections and exact author version metadata for unresolved records."
+}

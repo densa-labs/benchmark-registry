@@ -1,0 +1,150 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 30,
+  "models": [
+    {
+      "registry_no": "20014",
+      "before": 3,
+      "added": 30,
+      "after": 33,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 10,
+  "companies_verified": [
+    "anthropic"
+  ],
+  "exact_results": [
+    {
+      "result_key": "1e25ba44531ba0155d6ab6df671c94e991dd80a9332a13154e0d6a2a01fb2775",
+      "eligible": false
+    },
+    {
+      "result_key": "3c9d3cb399736bb1dc68f2b633e808f2c7419cfcb34da6da22d26417d0ded2e5",
+      "eligible": false
+    },
+    {
+      "result_key": "6b751915e9bcff151bde80407b38a7a4cc52fff2017e57869c10ba485e8cd755",
+      "eligible": false
+    },
+    {
+      "result_key": "d41db2ceef6bde07a71bf85bcafcdb05f8adb4399897d8e53a2a5bfde18a9ace",
+      "eligible": false
+    },
+    {
+      "result_key": "ef6950670d4768d1e729755417812647cf1576892457f326dd5cbabc0d33f3c1",
+      "eligible": false
+    },
+    {
+      "result_key": "0af50c995b961b96b2353c04a266fe8bdbbe937938cc55396f15839edf0c54ba",
+      "eligible": false
+    },
+    {
+      "result_key": "215f23626e887905cdbbb284c2e204920e06f4ea34600d4ed993a075998d8d4f",
+      "eligible": false
+    },
+    {
+      "result_key": "3ce5980e07d45e3faede8af4cb7dc297c1211935d97e02c8df957222ef4b157b",
+      "eligible": false
+    },
+    {
+      "result_key": "5bf374ef3c61649b405844019f067baff240a677a19036bcf66ed9f95973d289",
+      "eligible": false
+    },
+    {
+      "result_key": "7d5cb813305fa2c0d88a2e4c3caa4d6b4c35da1de92f89ae81a70f9d31038773",
+      "eligible": false
+    },
+    {
+      "result_key": "4106993d7e81cd5114dcc3e1c77281f9a1408f44c74636540a7019ccfc09ad2c",
+      "eligible": false
+    },
+    {
+      "result_key": "69c9b9750b7f9c3be9b80246ad1d79f6ed587a1412cf89db928991668e72da54",
+      "eligible": false
+    },
+    {
+      "result_key": "87a0bb1afcdb02c83de40db05a3ad7dcf024745d0c9543de7f40cc301bacce75",
+      "eligible": false
+    },
+    {
+      "result_key": "99f00c03941da421fc360218fa38bcd2db447fef5069c159c84beee360b79079",
+      "eligible": false
+    },
+    {
+      "result_key": "adc927571729b84466abe25a0ee3b1abd5acac38cdf2c4e3e1e42e263c610068",
+      "eligible": false
+    },
+    {
+      "result_key": "0615b5b34c69a24b7b92c54353918e12410c234ad3d3687fb59be342952957c7",
+      "eligible": true
+    },
+    {
+      "result_key": "927ea4ca97d849207dc5af42156119b93262dc2db5cc1fea803ac076aa98f723",
+      "eligible": false
+    },
+    {
+      "result_key": "93aaa1afac83148c4336bb22a97db55cd70038a0a0ad3860ec9641f0279ef619",
+      "eligible": false
+    },
+    {
+      "result_key": "adf6f88aad62bcb0bf6d090bfbe310e4a7ce0dab099fea12adb96057e05f0291",
+      "eligible": false
+    },
+    {
+      "result_key": "b14c3be937cf8c9265e58fd5fd2905b4a0bed24dc671ce5d892e2c4d981e76f1",
+      "eligible": false
+    },
+    {
+      "result_key": "d32c0ca57be0f5e34c4c4a412cc3e3546abdddbc9cc380035d8a7be9a1084470",
+      "eligible": false
+    },
+    {
+      "result_key": "12a85ead1d48b334652faa0ba9766fcfba73434180d203b9aeae8c76045a62ad",
+      "eligible": false
+    },
+    {
+      "result_key": "20e59c3f1dd7e15b33febfce79429e6aab2e40ce3d51e8e3e6ee32e371c84c92",
+      "eligible": false
+    },
+    {
+      "result_key": "3c5469cdce8c2c99e5a8504fc52812cce52f3881eb86eb5a91cba5b5afab1106",
+      "eligible": false
+    },
+    {
+      "result_key": "a741cdd27df13b4bfa667a9799b32f8b51c61450b70a16fbebfafee8018f0358",
+      "eligible": false
+    },
+    {
+      "result_key": "c76e22faa2e3920e2db6b60eb09b081be0a35f3de5b394f4056a513022a49269",
+      "eligible": false
+    },
+    {
+      "result_key": "23e3d0997c49e5e33ea9624dd773e14627404e6b5b0de5de26196e70963933db",
+      "eligible": true
+    },
+    {
+      "result_key": "9e37f1b1477650add8af392b948c882c8250611fbdc76075d2d9c196c0b9b9b2",
+      "eligible": true
+    },
+    {
+      "result_key": "c1edbd95992eacc912b45f56cd46e186fcaca751a33e5c8c755242ae6af7e78c",
+      "eligible": true
+    },
+    {
+      "result_key": "5399ff91ab436cf38fc72325c3f5900b1e5484409cd3da03d42df26f9f8475e3",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 831,
+    "models": 94,
+    "benchmarks": 66,
+    "versions": 117
+  },
+  "sitemap_count": 887,
+  "published_generations": [
+    "a9ec1bdf30b64751a53319e71d2ad11b"
+  ]
+}

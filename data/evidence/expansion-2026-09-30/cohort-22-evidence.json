@@ -1,0 +1,68 @@
+{
+  "cohort": "22",
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "scope": "Gemma 4 complete accessible-source mapping review",
+  "candidate": {
+    "observation_id": "gemma4-observation-052",
+    "target_registry_no": "35005",
+    "model": "Gemma 4 12B Instruct",
+    "source_url": "https://arxiv.org/pdf/2607.02770v2",
+    "source_title": "Gemma 4 Technical Report, v2",
+    "source_publisher": "Google DeepMind",
+    "source_publication_date": "2026-07-24",
+    "reported_at": "2026-07-24",
+    "benchmark_as_displayed": "MMMLU",
+    "version_as_displayed": "",
+    "metric_as_displayed": "Multiple-choice accuracy (%)",
+    "displayed_score": "83.4",
+    "normalized_stored_score": "83.4",
+    "reasoning_level": "thinking mode",
+    "configuration": "Thinking enabled; no tools explicitly for AIME; other table-specific settings retained in benchmark label",
+    "location": "Physical page 5, Table 5, row 14, model column 3",
+    "evaluator_as_displayed": "google-deepmind",
+    "ingestion_outcome": "ingested_new",
+    "reason": "Exact 12B MMMLU 83.4 thinking-mode result published through the controlled ingestor and verified in both environments; report Table 5 and shared official cards corroborate the score.",
+    "canonical_benchmark_mapping": "MMMLU",
+    "source_checked_at": "2026-10-03T05:50:12Z",
+    "normalization_note": "Decimal spelling canonicalized only; no scale conversion. Unresolved observations are evidence and have not been stored as canonical scores.",
+    "canonical_benchmark_slug": "mmmlu",
+    "canonical_version": "Original",
+    "metric_key": "mmmlu-accuracy",
+    "evidence_group_id": "gemma4-result-052",
+    "source_observation_ids": [
+      "gemma4-observation-052",
+      "gemma4-observation-264"
+    ],
+    "repeated_citation_observations": 1,
+    "citations": [
+      {
+        "source_url": "https://arxiv.org/pdf/2607.02770v2",
+        "source_title": "Gemma 4 Technical Report, v2",
+        "source_publication_date": "2026-07-24",
+        "location": "Physical page 5, Table 5, row 14, model column 3",
+        "benchmark_as_displayed": "MMMLU",
+        "displayed_score": "83.4",
+        "configuration": "Thinking enabled; no tools explicitly for AIME; other table-specific settings retained in benchmark label",
+        "reasoning_level": "thinking mode"
+      },
+      {
+        "source_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "source_title": "Gemma 4 official model card",
+        "source_publication_date": "2026-07-30",
+        "location": "HTML table 3, row 11, column 4",
+        "benchmark_as_displayed": "MMMLU",
+        "displayed_score": "83.4%",
+        "configuration": "Instruction tuned. Card does not independently label thinking; matching report configuration retained only when same observation is reconciled.",
+        "reasoning_level": ""
+      }
+    ],
+    "additional_identical_official_tables": [
+      "https://huggingface.co/google/gemma-4-31B-it",
+      "https://huggingface.co/google/gemma-4-12B-it"
+    ],
+    "published_cohort": "22"
+  },
+  "source_audit": "gemma4-source-audit.json",
+  "all_visible_accessible_observations_reconciled": true,
+  "guarded_corrections": 0
+}

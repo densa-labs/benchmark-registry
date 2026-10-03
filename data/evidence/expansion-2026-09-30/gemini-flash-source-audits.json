@@ -1,0 +1,928 @@
+[
+  {
+    "registry_no": "30006",
+    "model": "Gemini 3.5 Flash",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "YES",
+    "visible_records_found": 18,
+    "raw_source_occurrences": 72,
+    "outcomes": {
+      "already_present_identical": 3,
+      "conflict_deferred": 3,
+      "unresolved": 11,
+      "ingested_new": 1
+    },
+    "unexplained_source_visible_results": 0,
+    "documents": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "full_text_reviewed": true,
+        "evaluation_table_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+        "pages_reviewed": 7,
+        "rendered_table_physical_pages": [
+          4
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-5-flash",
+        "pages_reviewed": 3,
+        "rendered_table_physical_pages": [
+          3
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      }
+    ],
+    "completeness_checks": {
+      "all_evaluation_tables": true,
+      "all_appendices": true,
+      "all_capability_sections": true,
+      "rendered_tables_and_figures": true,
+      "footnotes_and_configurations": true,
+      "linked_evaluation_supplements": true,
+      "absent_benchmarks_not_omitted": true
+    },
+    "remaining_records": [
+      {
+        "benchmark": "SWE-Bench Pro (Public)",
+        "configuration": "Public",
+        "score": [
+          "55.1%",
+          "53.9%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Current HTML and July comparison report55.1, but full May model-card PDF and methodology PDF visibly report53.9. Same logical Public evaluation lacks correction/run explanation; preserve both, no overwrite."
+      },
+      {
+        "benchmark": "MCP Atlas",
+        "configuration": "Public leaderboard",
+        "score": [
+          "83.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Toolathlon",
+        "configuration": "Original",
+        "score": [
+          "56.5%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Methodology explicitly credits benchmark authors HKUST, while existing evaluator set credits Google. Guarded evaluator/source correction required and unsupported here; no duplicate added."
+      },
+      {
+        "benchmark": "Finance Agent v2",
+        "configuration": "v2",
+        "score": [
+          "57.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "GDPval-AA",
+        "configuration": "Original leaderboard",
+        "score": [
+          "1656"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "MMMU-Pro",
+        "configuration": "Standard/Vision mean; no tools",
+        "score": [
+          "83.6%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Registry generic No tools edition does not preserve Google average across Standard10-option and Vision settings. Guarded metadata correction unsupported; do not duplicate or silently conflate."
+      },
+      {
+        "benchmark": "Blueprint-Bench 2",
+        "configuration": "Normalized score",
+        "score": [
+          "33.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "GDM-MRCR v2 (8-needle)",
+        "configuration": "128K cumulative",
+        "score": [
+          "77.3%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed."
+      },
+      {
+        "benchmark": "GDM-MRCR v2 (8-needle)",
+        "configuration": "1M pointwise",
+        "score": [
+          "26.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed."
+      },
+      {
+        "benchmark": "Humanity’s Last Exam",
+        "configuration": "Full text+MM; tools unspecified",
+        "score": [
+          "40.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Source40.2 labels full text+MM but does not establish no-tools configuration. Existing No tools value is retained; author accuracy/calibration metrics also block new records. Exact metadata correction or version confirmation needed."
+      },
+      {
+        "benchmark": "ARC-AGI-2",
+        "configuration": "Semi-private verified",
+        "score": [
+          "72.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "DeepSWE v1.1",
+        "configuration": "High/medium respectively",
+        "score": [
+          "37%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author v1.1 publishes pass@1, cost, output tokens and steps; frozen multi-metric contract blocks new rows. Google3.6/3.5 quotes author results. No new run is inferred from 49 versus48.6 rounding or from a newer release comparison column."
+      },
+      {
+        "benchmark": "MLE-Bench",
+        "configuration": "Partial 30; Average Position Score",
+        "score": [
+          "49.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports Partial30 Average Position Score, two runs, percentile formula and H100/scaffold. Author MLE-bench reports medal rates and other scores; canonical Partial30 task/revision is not independently pinned, so do not equate this custom rank aggregate to medal rate or invent a metric-specific version."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "v2 leaderboard",
+        "score": [
+          "1349"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      }
+    ],
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "published_additions": 1
+  },
+  {
+    "registry_no": "30007",
+    "model": "Gemini 3.6 Flash",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "YES",
+    "visible_records_found": 24,
+    "raw_source_occurrences": 90,
+    "outcomes": {
+      "already_present_identical": 4,
+      "conflict_deferred": 1,
+      "unresolved": 17,
+      "ingested_new": 2
+    },
+    "unexplained_source_visible_results": 0,
+    "documents": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "full_text_reviewed": true,
+        "evaluation_table_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+        "pages_reviewed": 7,
+        "rendered_table_physical_pages": [
+          4
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "pages_reviewed": 3,
+        "rendered_table_physical_pages": [
+          3
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      }
+    ],
+    "completeness_checks": {
+      "all_evaluation_tables": true,
+      "all_appendices": true,
+      "all_capability_sections": true,
+      "rendered_tables_and_figures": true,
+      "footnotes_and_configurations": true,
+      "linked_evaluation_supplements": true,
+      "absent_benchmarks_not_omitted": true
+    },
+    "remaining_records": [
+      {
+        "benchmark": "DeepSWE v1.1",
+        "configuration": "High/medium respectively",
+        "score": [
+          "49%",
+          "48.6%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "July table reports49%, August comparison48.6%. Rounding may explain this, but no stable author run is provided to establish sameness. Existing49 preserved; exact raw score/date reconciliation deferred."
+      },
+      {
+        "benchmark": "MLE-Bench",
+        "configuration": "Partial 30; Average Position Score",
+        "score": [
+          "63.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports Partial30 Average Position Score, two runs, percentile formula and H100/scaffold. Author MLE-bench reports medal rates and other scores; canonical Partial30 task/revision is not independently pinned, so do not equate this custom rank aggregate to medal rate or invent a metric-specific version."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "v2 leaderboard",
+        "score": [
+          "1421",
+          "1422"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "GDM-MRCR v2 (8-needle)",
+        "configuration": "128K cumulative",
+        "score": [
+          "91.8%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed."
+      },
+      {
+        "benchmark": "GDM-MRCR v2 (8-needle)",
+        "configuration": "1M pointwise",
+        "score": [
+          "54.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed."
+      },
+      {
+        "benchmark": "Artificial Analysis Intelligence Index",
+        "configuration": "Composite index",
+        "score": [
+          "52"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "FrontierCode 1.1 Main",
+        "configuration": "1.1 Main",
+        "score": [
+          "34.4%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Code Arena",
+        "configuration": "Web Dev Elo",
+        "score": [
+          "1538"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Terminal-bench 3.0",
+        "configuration": "Modified cli-2ph-simplex / vpp-loss-divergence",
+        "score": [
+          "5.4%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Google modified cli-2ph-simplex and vpp-loss-divergence; no stable task-set commit or edition label is supplied. Do not map this branch to ordinary3.0."
+      },
+      {
+        "benchmark": "AutomationBench",
+        "configuration": "Private set",
+        "score": [
+          "17.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Harvey LAB-AA",
+        "configuration": "AA leaderboard",
+        "score": [
+          "85.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "GDP.PDF",
+        "configuration": "All pass rate",
+        "score": [
+          "22.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author GDP.PDF defines question/criterion success and all-pass score for the same release. Frozen one-metric-per-version contract stops new records; existing numeric matches are audited separately."
+      },
+      {
+        "benchmark": "OSWorld-2.0",
+        "configuration": "Pre-Aug8 patch; partial score; no batch tools",
+        "score": [
+          "33.8%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings."
+      },
+      {
+        "benchmark": "Agent’s Last Exam",
+        "configuration": "Default ALE-Claw",
+        "score": [
+          "24.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer pass rate and ALE-Claw harness are explicit, but exact author release/task snapshot and pass metric equivalence require confirmation. Leave unresolved pending authoritative version metadata."
+      },
+      {
+        "benchmark": "HLE-Verified",
+        "configuration": "Full 1811 (668 original +1143 revised)",
+        "score": [
+          "51.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author HLE-Verified paper Section5.1 explicitly defines Accuracy and Calibration Error for the same release; frozen multi-metric contract blocks new51.2. Google668+1143 partition also differs from author641+1170 while total1811 agrees; do not infer task revision."
+      },
+      {
+        "benchmark": "BioMysteryBench",
+        "configuration": "Human solvable",
+        "score": [
+          "80.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed."
+      },
+      {
+        "benchmark": "BioMysteryBench",
+        "configuration": "Human difficult",
+        "score": [
+          "41.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed."
+      },
+      {
+        "benchmark": "LABBench2",
+        "configuration": "Macro-average; terminal/internet",
+        "score": [
+          "76.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author evals/summarize_report.py defines Accuracy and Attempted Accuracy for the same release. Developer September aggregate is an11-subtask macro-average; August aggregation is unstated. Frozen one-metric contract prevents silently selecting accuracy."
+      }
+    ],
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "published_additions": 2
+  },
+  {
+    "registry_no": "30010",
+    "model": "Gemini 3.7 Flash",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "YES",
+    "visible_records_found": 41,
+    "raw_source_occurrences": 122,
+    "outcomes": {
+      "unresolved": 34,
+      "already_present_identical": 5,
+      "ingested_new": 2
+    },
+    "unexplained_source_visible_results": 0,
+    "documents": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "full_text_reviewed": true,
+        "evaluation_table_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+        "pages_reviewed": 9,
+        "rendered_table_physical_pages": [
+          5
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-7-flash",
+        "pages_reviewed": 4,
+        "rendered_table_physical_pages": [
+          4
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+        "pages_reviewed": 41,
+        "full_text_reviewed": true,
+        "rendered_figures_reviewed": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "rendered_physical_pages": [
+          11,
+          22,
+          23,
+          26,
+          30,
+          32,
+          39,
+          40
+        ],
+        "second_pass_completed": true,
+        "appendix": "No separate appendix; all41pages and footnotes inspected."
+      }
+    ],
+    "completeness_checks": {
+      "all_evaluation_tables": true,
+      "all_appendices": true,
+      "all_capability_sections": true,
+      "rendered_tables_and_figures": true,
+      "footnotes_and_configurations": true,
+      "linked_evaluation_supplements": true,
+      "absent_benchmarks_not_omitted": true
+    },
+    "remaining_records": [
+      {
+        "benchmark": "Artificial Analysis Intelligence Index",
+        "configuration": "Composite index",
+        "score": [
+          "56"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "FrontierCode 1.1 Main",
+        "configuration": "1.1 Main",
+        "score": [
+          "43.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Code Arena",
+        "configuration": "Web Dev Elo",
+        "score": [
+          "1588"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Terminal-bench 3.0",
+        "configuration": "Modified cli-2ph-simplex / vpp-loss-divergence",
+        "score": [
+          "14.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Google modified cli-2ph-simplex and vpp-loss-divergence; no stable task-set commit or edition label is supplied. Do not map this branch to ordinary3.0."
+      },
+      {
+        "benchmark": "AutomationBench",
+        "configuration": "Private set",
+        "score": [
+          "30.4%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "v2 leaderboard",
+        "score": [
+          "1525",
+          "1482"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Harvey LAB-AA",
+        "configuration": "AA leaderboard",
+        "score": [
+          "90.7%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "GDM-MRCR v2 (8-needle)",
+        "configuration": "128K cumulative",
+        "score": [
+          "97.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author eval_hub/mrcr_v2 README defines default and lenient scoring for the same v2 release. 128K cumulative upto_128K and 1M pointwise at_1M are distinct configurations. Frozen data-contract175 blocks new multi-metric results; no range/pointwise equivalence guessed."
+      },
+      {
+        "benchmark": "OSWorld-2.0",
+        "configuration": "Pre-Aug8 patch; partial score; no batch tools",
+        "score": [
+          "47.9%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings."
+      },
+      {
+        "benchmark": "Agent’s Last Exam",
+        "configuration": "Default ALE-Claw",
+        "score": [
+          "26.3%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer pass rate and ALE-Claw harness are explicit, but exact author release/task snapshot and pass metric equivalence require confirmation. Leave unresolved pending authoritative version metadata."
+      },
+      {
+        "benchmark": "BioMysteryBench",
+        "configuration": "Human solvable",
+        "score": [
+          "87.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed."
+      },
+      {
+        "benchmark": "BioMysteryBench",
+        "configuration": "Human difficult",
+        "score": [
+          "43.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed."
+      },
+      {
+        "benchmark": "LABBench2",
+        "configuration": "Macro-average; terminal/internet",
+        "score": [
+          "82.1%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author evals/summarize_report.py defines Accuracy and Attempted Accuracy for the same release. Developer September aggregate is an11-subtask macro-average; August aggregation is unstated. Frozen one-metric contract prevents silently selecting accuracy."
+      },
+      {
+        "benchmark": "Finance Agent v2",
+        "configuration": "v2",
+        "score": [
+          "59.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Harvey’s Legal Agent Benchmark",
+        "configuration": "All pass rate",
+        "score": [
+          "8.8%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Terminal-bench 4.0",
+        "configuration": "4.0",
+        "score": [
+          "11.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer quotes the benchmark author leaderboard and highest-scoring thinking level, without the exact original run identifier or supported named reasoning level. Do not infer a Google-run result or create a new snapshot run."
+      },
+      {
+        "benchmark": "OSWorld-2.0",
+        "configuration": "Pre-Aug8 patch; partial score; batch tools",
+        "score": [
+          "50.6%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings."
+      },
+      {
+        "benchmark": "GRB",
+        "configuration": "74 tasks; 2-hour timeout",
+        "score": [
+          "27%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Internal benchmark74 tasks,2-hour budget,average pass@1 is explicit. Linked report has August publication without a day or immutable task revision; model-card date alone does not establish the benchmark edition release date. Approximately20% buggy tasks must remain included; hypothetical47% is excluded."
+      },
+      {
+        "benchmark": "SSA Stealth",
+        "configuration": "Four challenges",
+        "score": [
+          "3"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "Eleven challenges",
+        "score": [
+          "6"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Stealth",
+        "configuration": "Classifier Evasion; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded."
+      },
+      {
+        "benchmark": "SSA Stealth",
+        "configuration": "Oversight Pattern; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded."
+      },
+      {
+        "benchmark": "SSA Stealth",
+        "configuration": "Strategic Rule Breaking; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; exact plotted task scores have no numeric labels. Cover Your Tracks is explicitly invalidated and excluded."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "max_tokens; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "context_size_mod; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "irreversibility; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "oversight_frequency; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "output_filters; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "disabled_tool; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "faulty_tool; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "slow_tool; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "max_tool_calls; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "read_logs; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      },
+      {
+        "benchmark": "SSA Situational Awareness",
+        "configuration": "approved_directories; 50 attempts",
+        "score": [
+          null
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer reports passed-challenge count and normalized task scores for the same suite. Frozen multi-metric contract blocks new rows; plotted task bars have no numeric labels and are not interpolated. Reading logs in100% of runs is a diagnostic, not a100% challenge score."
+      }
+    ],
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "published_additions": 2
+  },
+  {
+    "registry_no": "30004",
+    "model": "Gemini 3.8 Flash",
+    "official_source_exhaustively_inspected": "YES",
+    "all_safely_mappable_visible_results_ingested": "YES",
+    "visible_records_found": 15,
+    "raw_source_occurrences": 48,
+    "outcomes": {
+      "already_present_identical": 6,
+      "unresolved": 7,
+      "conflict_deferred": 2
+    },
+    "unexplained_source_visible_results": 0,
+    "documents": [
+      {
+        "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "full_text_reviewed": true,
+        "evaluation_table_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf",
+        "pages_reviewed": 8,
+        "rendered_table_physical_pages": [
+          5
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+        "pages_reviewed": 4,
+        "rendered_table_physical_pages": [
+          4
+        ],
+        "full_text_reviewed": true,
+        "second_pass_completed": true
+      },
+      {
+        "url": "https://deepmind.google/models/gemini/flash/",
+        "full_text_reviewed": true,
+        "all_four_performance_figures_reviewed": true,
+        "second_pass_completed": true
+      }
+    ],
+    "completeness_checks": {
+      "all_evaluation_tables": true,
+      "all_appendices": true,
+      "all_capability_sections": true,
+      "rendered_tables_and_figures": true,
+      "footnotes_and_configurations": true,
+      "linked_evaluation_supplements": true,
+      "absent_benchmarks_not_omitted": true
+    },
+    "remaining_records": [
+      {
+        "benchmark": "GDPval-AA v2",
+        "configuration": "v2 leaderboard",
+        "score": [
+          "1545"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Finance Agent v2",
+        "configuration": "v2",
+        "score": [
+          "61.4%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "Harvey’s Legal Agent Benchmark",
+        "configuration": "All pass rate",
+        "score": [
+          "10.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly quotes an external author/leaderboard snapshot; not a developer-run evaluation. Exact original evaluator/run and snapshot are not established by acceptable first-party run evidence. Preserve quoted values; do not assign Google evaluator or create an arbitrary rerun."
+      },
+      {
+        "benchmark": "CharXiv Reasoning",
+        "configuration": "No tools",
+        "score": [
+          "86.2%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Existing reasoning_level is no tools, but this is a tool configuration, not a reasoning level. Source does not specify reasoning. Guarded result metadata correction is unsupported; no new duplicate."
+      },
+      {
+        "benchmark": "LVBench",
+        "configuration": "1024 frames; agentic",
+        "score": [
+          "87.8%"
+        ],
+        "outcome": "conflict_deferred",
+        "reason": "Main card labels87.8 agentic but linked methodology says all LVBench scores are without tools. Existing Agentic record retained; no configuration guessed or silent correction."
+      },
+      {
+        "benchmark": "OSWorld-2.0",
+        "configuration": "Pre-Aug8 patch; partial score; batch tools",
+        "score": [
+          "59.0%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Developer explicitly uses partial scoring and pre-Aug8 patch with max-over-three500-step screenshot CUA. Author also defines strict success, and batch-enabled September protocol differs from August. Frozen multiple-metric contract and unpinned pre-patch branch prevent safe new mappings."
+      },
+      {
+        "benchmark": "BioMysteryBench",
+        "configuration": "Human solvable",
+        "score": [
+          "88.8%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed."
+      },
+      {
+        "benchmark": "BioMysteryBench",
+        "configuration": "Human difficult",
+        "score": [
+          "56.5%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author full card now defines v11 July90 tasks after9 deletions and24 edits, whereas April source was99 (76 solvable/23 difficult). Google does not identify a task revision or subset denominators. Author also publishes solve-consistency/reliability metrics. No version equivalence or metric selection guessed."
+      },
+      {
+        "benchmark": "LABBench2",
+        "configuration": "Macro-average; terminal/internet",
+        "score": [
+          "86.2%"
+        ],
+        "outcome": "unresolved",
+        "reason": "Author evals/summarize_report.py defines Accuracy and Attempted Accuracy for the same release. Developer September aggregate is an11-subtask macro-average; August aggregation is unstated. Frozen one-metric contract prevents silently selecting accuracy."
+      }
+    ],
+    "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+    "published_additions": 0
+  }
+]

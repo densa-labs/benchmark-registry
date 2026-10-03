@@ -1,0 +1,54 @@
+{
+  "environment": "staging",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "math-vision",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "babyvision",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "video-mme",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "9533dc65f2412fd59ed8fda7e0ec5687b9293f2ecd8d205a465bf2b6b6d34826",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "3f9602d021f19f3e5e7d8548a150d2c7d57c496604e25086468a152376cd1d64",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "494ede846876d200de4b7e9573815336196f4c12edfa84c4da3bc3b8eabd279c",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "1e7d03c66c824fe8c96a60d2ad8a8c469e5587e776bcaec63f27f75e75c999da",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "3d76ee1a60cda57192c849fb8b3f1a43d73b6477323a539c9848f377158b4cb0",
+      "message": "result is valid"
+    }
+  ]
+}

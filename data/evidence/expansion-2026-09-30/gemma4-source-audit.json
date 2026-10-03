@@ -1,0 +1,153 @@
+{
+  "targets": [
+    "35002",
+    "35001",
+    "35005",
+    "35004",
+    "35003"
+  ],
+  "selected_report_exhaustively_inspected": "YES",
+  "official_source_exhaustively_inspected": "NO",
+  "all_safely_mappable_visible_results_ingested": "NO",
+  "report_url": "https://arxiv.org/pdf/2607.02770v2",
+  "report_text_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "report_visually_reviewed_pages": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    17
+  ],
+  "evaluation_tables": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12
+  ],
+  "source_observations": 328,
+  "report_observations": 226,
+  "model_card_observations": 76,
+  "launch_image_observations": 26,
+  "table9_extraction_note": "Nested HTML parsing misses rows; all eight rendered rows manually transcribed. Dashes skipped.",
+  "footnotes": "Table 5 thinking; Tables 6/12 thinking with 1120/280 vision tokens; Table 9 non-thinking; audio CER for ko/ja/zh and WER for other languages. No model reasoning inferred from audio prompt.",
+  "excluded_scope": "Competitor rows, parameters, weights/memory footprint and relative encoder latency without model task/protocol are outside result scope. Arena confidence intervals retained as context, not separate scores.",
+  "remaining_work": "All 244 accessible-source result observations reconciled and one new result published in both environments. Gemma 12B launch benchmark image remains inaccessible; its complete-release audit remains NO. The other four target model source audits are complete.",
+  "visible_supported_results": 244,
+  "repeated_citation_observations": 84,
+  "outcomes": {
+    "already_present_identical": 40,
+    "unresolved": 191,
+    "conflict_deferred": 12,
+    "ingested_new": 1
+  },
+  "unexplained_source_visible_results": 0,
+  "observation_ledger": "reviewed-gemma4-observations.json",
+  "reconciled_result_ledger": "gemma4-reconciled-results.json",
+  "official_release_sources_inspected": [
+    "https://arxiv.org/pdf/2607.02770v2",
+    "https://ai.google.dev/gemma/docs/core/model_card_4",
+    "https://huggingface.co/google/gemma-4-31B-it",
+    "https://huggingface.co/google/gemma-4-12B-it",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+    "https://developers.googleblog.com/gemma-4-12b-the-developer-guide/"
+  ],
+  "second_pass": "Every page and appendix of the 17-page report read; all evaluation tables 4/5/6/7/8/9/12 visually checked. Full shared card, both HF cards, April release blog and two images reviewed. Arena scatterplot has no numeric point labels; no interpolated values. June 12B launch and companion guide fully read; guide contains demonstrations but no further scores. All score-bearing accessible table cells reconciled, including audio languages, aggregates and both vision resolutions.",
+  "inaccessible_supplement": {
+    "target_registry_no": "35005",
+    "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/",
+    "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/1920x1080_xMVEyWv.width-1200.format-webp.webp",
+    "reason": "Official benchmark image is blank in rendered page. Direct native-browser navigation to 1200/1600 renditions is blocked (ERR_BLOCKED_BY_CLIENT), and web retrieval reports application/octet-stream unsupported. No image scores guessed or substituted from unofficial copies. 12B additional-launch audit remains NO."
+  },
+  "published_additions": 1,
+  "all_safely_mappable_accessible_results_ingested": "YES",
+  "per_model": {
+    "35002": {
+      "visible_supported_results": 39,
+      "outcomes": {
+        "already_present_identical": 8,
+        "unresolved": 29,
+        "conflict_deferred": 2
+      },
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "all_safely_mappable_accessible_results_ingested": "YES",
+      "unexplained_source_visible_results": 0,
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason."
+    },
+    "35001": {
+      "visible_supported_results": 39,
+      "outcomes": {
+        "already_present_identical": 8,
+        "unresolved": 29,
+        "conflict_deferred": 2
+      },
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "all_safely_mappable_accessible_results_ingested": "YES",
+      "unexplained_source_visible_results": 0,
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason."
+    },
+    "35005": {
+      "visible_supported_results": 53,
+      "outcomes": {
+        "already_present_identical": 8,
+        "unresolved": 44,
+        "ingested_new": 1
+      },
+      "official_source_exhaustively_inspected": "NO",
+      "all_safely_mappable_visible_results_ingested": "NO",
+      "all_safely_mappable_accessible_results_ingested": "YES",
+      "unexplained_source_visible_results": 0,
+      "remaining_work": "Official benchmark image is blank in rendered page. Direct native-browser navigation to 1200/1600 renditions is blocked (ERR_BLOCKED_BY_CLIENT), and web retrieval reports application/octet-stream unsupported. No image scores guessed or substituted from unofficial copies. 12B additional-launch audit remains NO."
+    },
+    "35004": {
+      "visible_supported_results": 57,
+      "outcomes": {
+        "already_present_identical": 8,
+        "unresolved": 45,
+        "conflict_deferred": 4
+      },
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "all_safely_mappable_accessible_results_ingested": "YES",
+      "unexplained_source_visible_results": 0,
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason."
+    },
+    "35003": {
+      "visible_supported_results": 56,
+      "outcomes": {
+        "already_present_identical": 8,
+        "unresolved": 44,
+        "conflict_deferred": 4
+      },
+      "official_source_exhaustively_inspected": "YES",
+      "all_safely_mappable_visible_results_ingested": "YES",
+      "all_safely_mappable_accessible_results_ingested": "YES",
+      "unexplained_source_visible_results": 0,
+      "remaining_work": "All visible observations accounted for. Every conflict and unresolved mapping retains an explicit individual reason."
+    }
+  }
+}

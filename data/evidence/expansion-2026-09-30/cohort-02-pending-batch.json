@@ -1,0 +1,223 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Graduate-Level Google-Proof Q&A",
+        "slug": "gpqa",
+        "source_url": "https://arxiv.org/abs/2311.12022",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [],
+        "versions": [
+          {
+            "version": "Diamond",
+            "version_slug": "diamond",
+            "release_at": "2023-11-20",
+            "release_precision": "date",
+            "source_url": "https://arxiv.org/abs/2311.12022",
+            "source_checked_at": "2026-09-17T00:00:00Z",
+            "metric_key": "gpqa-diamond-accuracy",
+            "evaluator_keys": [
+              "gpqa-authors"
+            ]
+          }
+        ],
+        "metrics": [],
+        "evaluators": [
+          {
+            "name": "Artificial Analysis",
+            "key": "artificial-analysis",
+            "source_url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+            "source_checked_at": "2026-10-01T03:17:42Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80003",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1 \u2014 mini-swe-agent",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "55",
+        "score_raw": "55.0",
+        "reported_at": "2026-09-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "datacurve"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+            "checked_at": "2026-10-01T00:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80004",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1 \u2014 Terminus-2",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "51.7",
+        "score_raw": "51.7",
+        "reported_at": "2026-08-10",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "artificial-analysis"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://research.meta.ai/static/muse-glimmer-methodology",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80004",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "74",
+        "score_raw": "74",
+        "reported_at": "2026-08-10",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "artificial-analysis"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://research.meta.ai/static/muse-glimmer-methodology",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80004",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "83.5",
+        "score_raw": "83.5",
+        "reported_at": "2026-08-10",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "artificial-analysis"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": true
+          },
+          {
+            "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": false,
+            "same_run": true
+          },
+          {
+            "url": "https://research.meta.ai/static/muse-glimmer-methodology",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40002",
+        "reasoning_level": "high",
+        "benchmark_slug": "cybergym",
+        "benchmark_version": "Original",
+        "metric_key": "cybergym-success",
+        "score_value": "79.7",
+        "score_raw": "79.7",
+        "reported_at": "2026-08-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "spacexai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40003",
+        "reasoning_level": "high",
+        "benchmark_slug": "cybergym",
+        "benchmark_version": "Original",
+        "metric_key": "cybergym-success",
+        "score_value": "80.3",
+        "score_raw": "80.3",
+        "reported_at": "2026-09-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "spacexai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+            "checked_at": "2026-10-01T03:17:42Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

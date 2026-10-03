@@ -1,0 +1,260 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, max",
+        "benchmark_slug": "mmmlu",
+        "benchmark_version": "Original",
+        "metric_key": "mmmlu-accuracy",
+        "score_value": "91.5",
+        "score_raw": "91.5%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, max",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "82.1",
+        "score_raw": "82.1%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, max",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "91.0",
+        "score_raw": "91.0%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "43.0",
+        "score_raw": "43.0%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "48.4",
+        "score_raw": "48.4%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "53.2",
+        "score_raw": "53.2%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking, xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "55.4",
+        "score_raw": "55.4%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking",
+        "benchmark_slug": "global-mmlu",
+        "benchmark_version": "Original",
+        "metric_key": "global-mmlu-accuracy",
+        "score_value": "89.9",
+        "score_raw": "89.9%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "adaptive thinking",
+        "benchmark_slug": "milu",
+        "benchmark_version": "Original",
+        "metric_key": "milu-accuracy",
+        "score_value": "89.9",
+        "score_raw": "89.9%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "no thinking",
+        "benchmark_slug": "cybergym",
+        "benchmark_version": "Original",
+        "metric_key": "cybergym-success",
+        "score_value": "73.1",
+        "score_raw": "73.1%",
+        "reported_at": "2026-04-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-opus-4-7",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": true
+          },
+          {
+            "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+            "checked_at": "2026-10-02T13:43:22Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

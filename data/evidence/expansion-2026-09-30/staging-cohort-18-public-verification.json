@@ -1,0 +1,50 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 2,
+  "models": [
+    {
+      "registry_no": "130006",
+      "before": 8,
+      "added": 2,
+      "after": 10,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 2,
+  "companies_verified": [
+    "tongyi"
+  ],
+  "exact_results": [
+    {
+      "result_key": "9aeee31205b9c18942748c2edd513c31483fc428d4faf9f07b114918a9ca9764",
+      "eligible": true
+    },
+    {
+      "result_key": "d576216e1fcbe65699805dc38d295d9d0a97a26d1da52722973c84aba5b081cf",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 909,
+    "models": 94,
+    "benchmarks": 71,
+    "versions": 128
+  },
+  "sitemap_count": 924,
+  "published_generations": [
+    "0ecf42196cee4fa09471b9af6fa49edf"
+  ],
+  "search_checks": [
+    {
+      "query": "MMLU-Pro",
+      "benchmark_slug": "mmlu-pro",
+      "status": "PASS"
+    },
+    {
+      "query": "MMMLU",
+      "benchmark_slug": "mmmlu",
+      "status": "PASS"
+    }
+  ]
+}

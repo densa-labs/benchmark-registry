@@ -1,0 +1,42 @@
+{
+  "environment": "staging",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "charxiv",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "64c2f04fd3cd7617d362d647017b3fddb48b51e51f4e868090ccea7ee3fd8e6c",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "655ae371f8f2908e8cdffbb9878dc479f816abf06bfe79eb7cdd06fc8f5f3a1e",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "7dae32678a0f8ccc3f4977e738c30c3128c917508021196ebecbcc5cfaede976",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "750062ce1c8f880484bea52ffa478ae83be8b872e0b174aaec9acae54c765d7d",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "dd34f0204cdf210d61ff4527766fb558daa1d441ac361bd6e1eef40e43cb0cfa",
+      "message": "result is valid"
+    }
+  ]
+}

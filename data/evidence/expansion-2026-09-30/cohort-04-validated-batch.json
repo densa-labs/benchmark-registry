@@ -1,0 +1,448 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SpatialBench",
+        "slug": "spatialbench",
+        "source_url": "https://blog.latch.bio/p/human-verification-of-spatialbench",
+        "source_checked_at": "2026-10-01T04:30:39Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "LatchBio",
+            "key": "latchbio",
+            "source_url": "https://blog.latch.bio/p/human-verification-of-spatialbench",
+            "source_checked_at": "2026-10-01T04:30:39Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Task-pass accuracy",
+            "key": "spatialbench-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://blog.latch.bio/p/human-verification-of-spatialbench",
+            "source_checked_at": "2026-10-01T04:30:39Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Verified",
+            "version_slug": "verified",
+            "release_at": "2026-05-29",
+            "release_precision": "date",
+            "metric_key": "spatialbench-accuracy",
+            "source_url": "https://blog.latch.bio/p/human-verification-of-spatialbench",
+            "source_checked_at": "2026-10-01T04:30:39Z",
+            "evaluator_keys": [
+              "latchbio"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "47.6",
+        "score_raw": "47.6",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "50.5",
+        "score_raw": "50.5",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "56.7",
+        "score_raw": "56.7",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "62.0",
+        "score_raw": "62.0",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "41.4",
+        "score_raw": "41.4",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "43.2",
+        "score_raw": "43.2",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "47.9",
+        "score_raw": "47.9",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "53.0",
+        "score_raw": "53.0",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "global-mmlu",
+        "benchmark_version": "Original",
+        "metric_key": "global-mmlu-accuracy",
+        "score_value": "92.1",
+        "score_raw": "92.1",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "milu",
+        "benchmark_version": "Original",
+        "metric_key": "milu-accuracy",
+        "score_value": "91.6",
+        "score_raw": "91.6",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "max",
+        "benchmark_slug": "spatialbench",
+        "benchmark_version": "Verified",
+        "metric_key": "spatialbench-accuracy",
+        "score_value": "72.5",
+        "score_raw": "72.5",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "low",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "20.0",
+        "score_raw": "20.0",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "medium",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "28.8",
+        "score_raw": "28.8",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "43.0",
+        "score_raw": "43.0",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "61.5",
+        "score_raw": "61.5",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+            "checked_at": "2026-10-01T04:30:39Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

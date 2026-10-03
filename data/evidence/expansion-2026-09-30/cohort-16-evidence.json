@@ -1,0 +1,44 @@
+{
+  "target_registry_nos": [
+    "130004"
+  ],
+  "checked_at": "2026-10-02T06:25:36Z",
+  "candidates": [
+    {
+      "observation_id": "qwen36plus-035",
+      "target_registry_no": "130004",
+      "model": "Qwen3.6-Plus",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6",
+      "source_title": "Qwen3.6-Plus: Towards Real World Agents",
+      "source_publisher": "Alibaba / Qwen Team",
+      "source_publication_date": "2026-04-02",
+      "reported_at": "2026-04-02",
+      "source_checked_at": "2026-10-02T05:48:51Z",
+      "benchmark_as_displayed": "MMMLU",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Multiple-choice accuracy",
+      "displayed_score": "89.5",
+      "normalized_stored_score": "89.5",
+      "reasoning_level": "",
+      "configuration": "No result-specific configuration supplied in release table.",
+      "location": "Language table,row35,Qwen3.6-Plus final column,component1",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Single released MMMLU translation corpus and sole MCQ accuracy metric established; original14-file release September13,2024. No collapse into MMLU/MMLU-Pro/other multilingual suite. Qwen is result evaluator,OpenAI benchmark maintainer. No reasoning/configuration inferred.",
+      "canonical_benchmark_slug": "mmmlu",
+      "canonical_version": "Original",
+      "metric_key": "mmmlu-accuracy",
+      "benchmark_identity_sources": [
+        "https://huggingface.co/datasets/openai/MMMLU",
+        "https://huggingface.co/datasets/openai/MMMLU/commits/main",
+        "https://github.com/modelscope/evalscope/blob/main/docs/en/benchmarks/mmmlu.md"
+      ],
+      "published_cohort": "16"
+    }
+  ],
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "new_families": 1,
+  "new_versions": 1,
+  "new_metrics": 1,
+  "new_evaluators": 0,
+  "source_identity_notes": "Single released MMMLU translation corpus and sole MCQ accuracy metric established; original14-file release September13,2024. No collapse into MMLU/MMLU-Pro/other multilingual suite. Qwen is result evaluator,OpenAI benchmark maintainer. No reasoning/configuration inferred."
+}

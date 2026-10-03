@@ -1,0 +1,66 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "FrontierCode",
+        "slug": "frontiercode",
+        "source_url": "https://cognition.com/blog/frontier-code",
+        "source_checked_at": "2026-09-30T12:00:00Z",
+        "evaluators": [
+          {
+            "name": "Cognition",
+            "key": "cognition",
+            "source_url": "https://cognition.com/blog/frontier-code-1.1",
+            "source_checked_at": "2026-09-30T12:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "FrontierCode Mean Mergeability Score",
+            "key": "frontiercode-mergeability",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://cognition.com/blog/frontier-code-1.1",
+            "source_checked_at": "2026-09-30T12:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1.1 Main",
+            "version_slug": "1.1-main",
+            "release_at": "2026-07-07",
+            "release_precision": "date",
+            "metric_key": "frontiercode-mergeability",
+            "source_url": "https://cognition.com/blog/frontier-code-1.1",
+            "source_checked_at": "2026-09-30T12:00:00Z",
+            "evaluator_keys": [
+              "cognition"
+            ]
+          },
+          {
+            "version": "1.1 Extended",
+            "version_slug": "1.1-extended",
+            "release_at": "2026-07-07",
+            "release_precision": "date",
+            "metric_key": "frontiercode-mergeability",
+            "source_url": "https://cognition.com/blog/frontier-code-1.1",
+            "source_checked_at": "2026-09-30T12:00:00Z",
+            "evaluator_keys": [
+              "cognition"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "submission_status": "BLOCKED \u2014 not valid for ingestion",
+  "blocking_reason": "Official FrontierCode methodology defines pass rate and mean mergeability score for the same benchmark version. Frozen data contract permits exactly one metric per version; selecting one or fabricating versions requires contract review.",
+  "blocking_sources": [
+    "https://cognition.com/blog/frontier-code",
+    "https://cognition.com/blog/frontier-code-1.1"
+  ]
+}

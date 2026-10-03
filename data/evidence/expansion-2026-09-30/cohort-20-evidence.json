@@ -1,0 +1,66 @@
+{
+  "pass": "expansion-2026-09-30",
+  "cohort": "20",
+  "publication_status": "VERIFIED_BOTH_ENVIRONMENTS",
+  "candidates": [
+    {
+      "observation_id": "minimaxm3-009",
+      "target_registry_no": "140003",
+      "model": "MiniMax M3",
+      "source_url": "https://www.minimax.io/blog/minimax-m3",
+      "source_title": "MiniMax M3: Frontier Coding, 1M Context, Native Multimodality \u2014 All in One Model",
+      "source_publisher": "MiniMax",
+      "source_publication_date": "2026-06-01",
+      "reported_at": "2026-06-01",
+      "source_checked_at": "2026-10-02T15:04:11Z",
+      "benchmark_as_displayed": "CL-bench",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Task solving rate (%)",
+      "displayed_score": "20.48",
+      "normalized_stored_score": "20.48",
+      "reasoning_level": "",
+      "configuration": "Original 1,899-task CL-bench edition; all task rubrics must pass. Judge low effort is not model reasoning; model reasoning remains unset.",
+      "location": "Full launch evaluation image,row9,MiniMax M3 red first column",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Controlled ingestion and public verification passed in staging and production.",
+      "canonical_benchmark_slug": "cl-bench",
+      "canonical_version": "Original",
+      "metric_key": "cl-bench-task-solving-rate",
+      "benchmark_identity_sources": [
+        "https://github.com/Tencent-Hunyuan/CL-bench",
+        "https://arxiv.org/html/2602.03587v1"
+      ],
+      "published_cohort": "20"
+    },
+    {
+      "observation_id": "minimaxm3-015",
+      "target_registry_no": "140003",
+      "model": "MiniMax M3",
+      "source_url": "https://www.minimax.io/blog/minimax-m3",
+      "source_title": "MiniMax M3: Frontier Coding, 1M Context, Native Multimodality \u2014 All in One Model",
+      "source_publisher": "MiniMax",
+      "source_publication_date": "2026-06-01",
+      "reported_at": "2026-06-01",
+      "source_checked_at": "2026-10-02T15:04:11Z",
+      "benchmark_as_displayed": "BrowseComp",
+      "version_as_displayed": null,
+      "metric_as_displayed": "Accuracy (%)",
+      "displayed_score": "83.52",
+      "normalized_stored_score": "83.52",
+      "reasoning_level": "",
+      "configuration": "WebExplorer framework; full history discarded at 64K. Model reasoning remains unset.",
+      "location": "Full launch evaluation image,row15,MiniMax M3 red first column",
+      "ingestion_outcome": "ingested_new",
+      "reason": "Controlled ingestion and public verification passed in staging and production.",
+      "canonical_benchmark_slug": "browsecomp",
+      "canonical_version": "BrowseComp",
+      "metric_key": "browsecomp-accuracy",
+      "benchmark_identity_sources": [
+        "https://openai.com/index/browsecomp/"
+      ],
+      "published_cohort": "20"
+    }
+  ],
+  "normalization": "20.48 and 83.52 remain developer percentage-scale values. No arithmetic normalization. CL-bench judge low effort is not model reasoning.",
+  "benchmark_metadata": "CL-bench Original1899-task edition is distinct from CL-bench Life405-task April edition. Authors are benchmark-version maintainers; result evaluator is MiniMax. Original author release date is February3,2026."
+}

@@ -1,0 +1,91 @@
+{
+  "target_registry_no": "40003",
+  "source_url": "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+  "selected_model_card_exhaustively_inspected": "YES",
+  "official_source_exhaustively_inspected": "YES",
+  "all_safely_mappable_visible_results_ingested": "YES",
+  "text_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "visually_reviewed_pages": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "visible_labelled_results_recorded": 25,
+  "outcomes": {
+    "already_present_identical": 1,
+    "unresolved": 36,
+    "conflict_deferred": 5,
+    "ingested_new": 1
+  },
+  "second_pass": "Entire xAI cards, all capability and behavior sections, references, captions and footnotes reviewed. Relevant rendered pages checked, including Grok 4.5 pages 21–29 on the final pass. Complete xAI release pages and interactive chart efforts inspected. Cursor co-developer release blogs, the separate 23-page Grok 4.5 card and linked training/reward-hacking supplements inspected. Every labelled own-model capability observation retained; repeated evidence coalesced only in reporting, without inventing runs.",
+  "remaining_work": "All visible observations reconciled; each deferred conflict and unresolved result has its individual reason. No candidate pending.",
+  "excluded_scope": "Competitor scores, hardware parameter/memory facts, serving throughput claims without an evaluation protocol, policy refusal/jailbreak/harmful-compliance, bias/MASK/sycophancy behavior metrics excluded. Ordinary cyber/bio capability benchmarks retained. Unlabelled chart points are not estimated.",
+  "unlabelled_figures": [
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "benchmark": "CursorBench 4.0",
+      "reason": "Frontier points lack exact numeric labels; explicit high/xhigh scores retained."
+    }
+  ],
+  "published_additions": 1,
+  "publication_batch": "expansion-2026-09-30-cohort-02",
+  "unexplained_source_visible_results": 0,
+  "raw_source_observations": 47,
+  "visible_supported_results": 43,
+  "repeated_citation_observations": 4,
+  "observation_ledger": "reviewed-grok-observations.json",
+  "reconciled_result_ledger": "grok-reconciled-results.json",
+  "official_release_sources_inspected": [
+    "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+    "https://x.ai/news/grok-4-7"
+  ]
+}

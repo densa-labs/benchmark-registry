@@ -1,0 +1,62 @@
+[
+  {
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "location": "Internal safety table and linked PDF equivalent",
+    "reason": "Five safety policy/tone/refusal comparative percentage changes are behavior/mitigation deltas, not ordinary capability benchmark scores."
+  },
+  {
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "location": "Internal safety table and linked PDF equivalent",
+    "reason": "Five safety policy/tone/refusal comparative percentage changes are behavior/mitigation deltas, not ordinary capability benchmark scores."
+  },
+  {
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+    "location": "Internal safety table and linked PDF equivalent",
+    "reason": "Five safety policy/tone/refusal comparative percentage changes are behavior/mitigation deltas, not ordinary capability benchmark scores."
+  },
+  {
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+    "location": "Internal safety table and linked PDF equivalent",
+    "reason": "Five safety policy/tone/refusal comparative percentage changes are behavior/mitigation deltas, not ordinary capability benchmark scores."
+  },
+  {
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "location": "p10–17 Figures1 and threat modeling",
+    "reason": "BIO/Chem scenario red-team rubric scores measure adversarial misuse elicitation, not an ordinary model capability benchmark. Cyber proxy CCL predictions contain no direct3.7 KeySkills benchmark result."
+  },
+  {
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "location": "p20–26 Figures2–4",
+    "reason": "Manipulation efficacy/propensity human intervention studies, including odds ratios and SI variants, are behavioral risk measurements outside ordinary capability scope."
+  },
+  {
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "location": "p30–34 Figures5–6",
+    "reason": "Mitigation violation/refusal and jailbreak OSR/QSR/rubric-match measurements assess safety behavior, not ordinary capability accuracy."
+  },
+  {
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "location": "p37",
+    "reason": "47% is a hypothetical all-bugged-tasks adjustment, not a measured GRB score.3.1 Pro~16% is explicitly preliminary and not this target."
+  },
+  {
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "location": "p39 Figure7 Cover Your Tracks",
+    "reason": "Source explicitly invalidates the score due refusal confound; retained as an excluded invalid observation."
+  },
+  {
+    "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_3-7_flash_fsf_report.pdf",
+    "location": "p40",
+    "reason": "Model read relevant logs in100% of runs is a process diagnostic, not the read_logs challenge success rate."
+  },
+  {
+    "source_url": "https://deepmind.google/models/gemini/flash/",
+    "location": "DeepSWE performance-cost curve",
+    "reason": "No exact values labeled at points. No cost or performance coordinate inferred from a curve."
+  },
+  {
+    "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "location": "Model dependencies and Frontier Safety links",
+    "reason": "Older Gemini3Flash/3.1Pro cards are linked for architecture/risks and proxy conclusions. Their scores are not measurements of3.5Flash; no model identity substitution."
+  }
+]

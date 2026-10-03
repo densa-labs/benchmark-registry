@@ -1,0 +1,106 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "CL-bench",
+        "slug": "cl-bench",
+        "source_url": "https://github.com/Tencent-Hunyuan/CL-bench",
+        "source_checked_at": "2026-10-02T15:31:40Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Tencent Hunyuan Team",
+            "key": "tencent-hunyuan",
+            "source_url": "https://github.com/Tencent-Hunyuan/CL-bench",
+            "source_checked_at": "2026-10-02T15:31:40Z"
+          },
+          {
+            "name": "Fudan NLP Group",
+            "key": "fudan-nlp",
+            "source_url": "https://github.com/Tencent-Hunyuan/CL-bench",
+            "source_checked_at": "2026-10-02T15:31:40Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Task solving rate",
+            "key": "cl-bench-task-solving-rate",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 2,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/html/2602.03587v1",
+            "source_checked_at": "2026-10-02T15:31:40Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2026-02-03",
+            "release_precision": "date",
+            "metric_key": "cl-bench-task-solving-rate",
+            "source_url": "https://arxiv.org/abs/2602.03587",
+            "source_checked_at": "2026-10-02T15:31:40Z",
+            "evaluator_keys": [
+              "tencent-hunyuan",
+              "fudan-nlp"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140003",
+        "reasoning_level": "",
+        "benchmark_slug": "cl-bench",
+        "benchmark_version": "Original",
+        "metric_key": "cl-bench-task-solving-rate",
+        "score_value": "20.48",
+        "score_raw": "20.48",
+        "reported_at": "2026-06-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "minimax"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.minimax.io/blog/minimax-m3",
+            "checked_at": "2026-10-02T15:31:40Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140003",
+        "reasoning_level": "",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "BrowseComp",
+        "metric_key": "browsecomp-accuracy",
+        "score_value": "83.52",
+        "score_raw": "83.52",
+        "reported_at": "2026-06-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "minimax"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www.minimax.io/blog/minimax-m3",
+            "checked_at": "2026-10-02T15:31:40Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

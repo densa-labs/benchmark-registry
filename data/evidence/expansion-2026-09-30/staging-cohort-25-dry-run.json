@@ -1,0 +1,18 @@
+{
+  "environment": "staging",
+  "mode": "dry-run",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "b4f4e1a20e12ae9a4526abf43a4ccce7cd14471b985fa5b03f3165148697abfe",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "617eebeacee380ae2957bcfc1f281fec979df590ba9c76151f25f4dcbcf49f58",
+      "message": "result is valid"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160002",
+        "reasoning_level": "effort=0.99",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "77.4",
+        "score_raw": "77.4%",
+        "reported_at": "2026-07-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "thinking-machines"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://thinkingmachines.ai/model-card/inkling-small/",
+            "checked_at": "2026-10-03T10:36:25Z",
+            "primary": true
+          },
+          {
+            "url": "https://thinkingmachines.ai/news/inkling-small/",
+            "checked_at": "2026-10-03T10:36:25Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160002",
+        "reasoning_level": "effort=0.99",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "81.3",
+        "score_raw": "81.3%",
+        "reported_at": "2026-07-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "thinking-machines"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://thinkingmachines.ai/model-card/inkling-small/",
+            "checked_at": "2026-10-03T10:36:25Z",
+            "primary": true
+          },
+          {
+            "url": "https://thinkingmachines.ai/news/inkling-small/",
+            "checked_at": "2026-10-03T10:36:25Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

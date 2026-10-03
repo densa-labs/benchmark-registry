@@ -1,0 +1,2881 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Global MMLU",
+        "slug": "global-mmlu",
+        "source_url": "https://arxiv.org/abs/2412.03304",
+        "source_checked_at": "2026-09-30T10:00:00Z",
+        "aliases": [
+          {
+            "name": "GMMLU",
+            "source_url": "https://arxiv.org/abs/2412.03304",
+            "source_checked_at": "2026-09-30T10:00:00Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "Cohere For AI",
+            "key": "cohere-for-ai",
+            "source_url": "https://arxiv.org/abs/2412.03304",
+            "source_checked_at": "2026-09-30T10:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Average accuracy",
+            "key": "global-mmlu-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2412.03304",
+            "source_checked_at": "2026-09-30T10:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2024-12-04",
+            "release_precision": "date",
+            "metric_key": "global-mmlu-accuracy",
+            "source_url": "https://arxiv.org/abs/2412.03304",
+            "source_checked_at": "2026-09-30T10:00:00Z",
+            "evaluator_keys": [
+              "cohere-for-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Multi-task Indic Language Understanding Benchmark",
+        "slug": "milu",
+        "source_url": "https://arxiv.org/abs/2411.02538",
+        "source_checked_at": "2026-09-30T10:00:00Z",
+        "aliases": [
+          {
+            "name": "MILU",
+            "source_url": "https://arxiv.org/abs/2411.02538",
+            "source_checked_at": "2026-09-30T10:00:00Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "AI4Bharat",
+            "key": "ai4bharat",
+            "source_url": "https://arxiv.org/abs/2411.02538",
+            "source_checked_at": "2026-09-30T10:00:00Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Average accuracy",
+            "key": "milu-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://arxiv.org/abs/2411.02538",
+            "source_checked_at": "2026-09-30T10:00:00Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Original",
+            "version_slug": "original",
+            "release_at": "2024-11-04",
+            "release_precision": "date",
+            "metric_key": "milu-accuracy",
+            "source_url": "https://arxiv.org/abs/2411.02538",
+            "source_checked_at": "2026-09-30T10:00:00Z",
+            "evaluator_keys": [
+              "ai4bharat"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "1.8",
+        "score_raw": "1.8%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "4.3",
+        "score_raw": "4.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "9.1",
+        "score_raw": "9.1%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "12.9",
+        "score_raw": "12.9%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "17",
+        "score_raw": "17.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "11.7",
+        "score_raw": "11.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "19.6",
+        "score_raw": "19.6%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "24.8",
+        "score_raw": "24.8%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "26.3",
+        "score_raw": "26.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "28.8",
+        "score_raw": "28.8%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "34.1",
+        "score_raw": "34.1%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "37.1",
+        "score_raw": "37.1%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "39",
+        "score_raw": "39.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "41.4",
+        "score_raw": "41.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "1.2",
+        "score_raw": "1.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "9.4",
+        "score_raw": "9.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "14.5",
+        "score_raw": "14.5%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "12.6",
+        "score_raw": "12.6%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "20.7",
+        "score_raw": "20.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "21.2",
+        "score_raw": "21.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "26.9",
+        "score_raw": "26.9%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "31.2",
+        "score_raw": "31.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "32",
+        "score_raw": "32.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "low",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "1.2",
+        "score_raw": "1.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "medium",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "9.3",
+        "score_raw": "9.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "42.4",
+        "score_raw": "42.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "56.2",
+        "score_raw": "56.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "62.2",
+        "score_raw": "62.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "low",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "45.4",
+        "score_raw": "45.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "medium",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "61.1",
+        "score_raw": "61.1%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "69.4",
+        "score_raw": "69.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "70.7",
+        "score_raw": "70.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "low",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "67",
+        "score_raw": "67.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "medium",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "72.8",
+        "score_raw": "72.8%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "73.2",
+        "score_raw": "73.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "73.2",
+        "score_raw": "73.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "low",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "2.4",
+        "score_raw": "2.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "medium",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "44.5",
+        "score_raw": "44.5%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "59.3",
+        "score_raw": "59.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "61.3",
+        "score_raw": "61.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "low",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "37.2",
+        "score_raw": "37.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "medium",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "56.6",
+        "score_raw": "56.6%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "65.3",
+        "score_raw": "65.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "66.6",
+        "score_raw": "66.6%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "low",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "12",
+        "score_raw": "12.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "medium",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "22.7",
+        "score_raw": "22.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "high",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "35.9",
+        "score_raw": "35.9%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "48",
+        "score_raw": "48.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "52.7",
+        "score_raw": "52.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "low",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "29.8",
+        "score_raw": "29.8%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "medium",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "49.7",
+        "score_raw": "49.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "high",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "56.5",
+        "score_raw": "56.5%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "60.9",
+        "score_raw": "60.9%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "66.2",
+        "score_raw": "66.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "low",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "62.2",
+        "score_raw": "62.2%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "medium",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "69.3",
+        "score_raw": "69.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "high",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "70",
+        "score_raw": "70.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "71.3",
+        "score_raw": "71.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "73.5",
+        "score_raw": "73.5%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "low",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "8.3",
+        "score_raw": "8.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "medium",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "31.5",
+        "score_raw": "31.5%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "high",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "41.4",
+        "score_raw": "41.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "46.7",
+        "score_raw": "46.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "52.7",
+        "score_raw": "52.7%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "low",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "43.9",
+        "score_raw": "43.9%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "medium",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "54",
+        "score_raw": "54.0%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "high",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "58.3",
+        "score_raw": "58.3%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial",
+        "metric_key": "osworld-partial-score",
+        "score_value": "64.4",
+        "score_raw": "64.4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "openai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "scicode",
+        "benchmark_version": "Original",
+        "metric_key": "scicode-accuracy",
+        "score_value": "52.2",
+        "score_raw": "52.2",
+        "reported_at": "2026-04-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "With Python",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "80.1",
+        "score_raw": "80.1",
+        "reported_at": "2026-04-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "86.7",
+        "score_raw": "86.7",
+        "reported_at": "2026-04-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "math-vision",
+        "benchmark_version": "Original",
+        "metric_key": "math-vision-accuracy",
+        "score_value": "87.4",
+        "score_raw": "87.4",
+        "reported_at": "2026-04-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "babyvision",
+        "benchmark_version": "Original",
+        "metric_key": "babyvision-accuracy",
+        "score_value": "39.8",
+        "score_raw": "39.8",
+        "reported_at": "2026-04-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "moonshot-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130005",
+        "reasoning_level": "",
+        "benchmark_slug": "nl2repo",
+        "benchmark_version": "Original",
+        "metric_key": "nl2repo-test-pass-rate",
+        "score_value": "29.4",
+        "score_raw": "29.4",
+        "reported_at": "2026-04-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130005",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "No tools",
+        "metric_key": "mmmu-pro-accuracy",
+        "score_value": "75.3",
+        "score_raw": "75.3",
+        "reported_at": "2026-04-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130005",
+        "reasoning_level": "",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "78",
+        "score_raw": "78.0",
+        "reported_at": "2026-04-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "qwen"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "effort=0.99",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "87.2",
+        "score_raw": "87.2%",
+        "reported_at": "2026-07-15",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "thinking-machines"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://thinkingmachines.ai/model-card/inkling/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "effort=0.99",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "78.1",
+        "score_raw": "78.1%",
+        "reported_at": "2026-07-15",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "thinking-machines"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://thinkingmachines.ai/model-card/inkling/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "effort=0.99",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "82",
+        "score_raw": "82.0%",
+        "reported_at": "2026-07-15",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "thinking-machines"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://thinkingmachines.ai/model-card/inkling/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "85.2",
+        "score_raw": "85.2",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "78.3",
+        "score_raw": "78.3",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "63.2",
+        "score_raw": "63.2",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1 \u2014 mini-swe-agent",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "80.4",
+        "score_raw": "80.4",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "43.2",
+        "score_raw": "43.2",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "36.5",
+        "score_raw": "36.5",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "47.2",
+        "score_raw": "47.2",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "52.8",
+        "score_raw": "52.8",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "54.6",
+        "score_raw": "54.6",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified",
+        "metric_key": "osworld-verified-resolved",
+        "score_value": "81.2",
+        "score_raw": "81.2",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 No tools",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "77",
+        "score_raw": "77.0",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "charxiv",
+        "benchmark_version": "Reasoning \u2014 Python enabled",
+        "metric_key": "charxiv-accuracy",
+        "score_value": "88.3",
+        "score_raw": "88.3",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "global-mmlu",
+        "benchmark_version": "Original",
+        "metric_key": "global-mmlu-accuracy",
+        "score_value": "89",
+        "score_raw": "89.0",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "milu",
+        "benchmark_version": "Original",
+        "metric_key": "milu-accuracy",
+        "score_value": "89.3",
+        "score_raw": "89.3",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "score_value": "89.9",
+        "score_raw": "89.9",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "score_value": "93.9",
+        "score_raw": "93.9",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "74.2",
+        "score_raw": "74.2",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "64.8",
+        "score_raw": "64.8",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "57.4",
+        "score_raw": "57.4",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "63",
+        "score_raw": "63.0",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "63.9",
+        "score_raw": "63.9",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 With tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "66.4",
+        "score_raw": "66.4",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "low",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "52.9",
+        "score_raw": "52.9",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "59",
+        "score_raw": "59.0",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "59.6",
+        "score_raw": "59.6",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "62.8",
+        "score_raw": "62.8",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set \u2014 No tools",
+        "metric_key": "hle-accuracy",
+        "score_value": "64.4",
+        "score_raw": "64.4",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "40",
+        "score_raw": "40.0",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "global-mmlu",
+        "benchmark_version": "Original",
+        "metric_key": "global-mmlu-accuracy",
+        "score_value": "94.3",
+        "score_raw": "94.3",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "max",
+        "benchmark_slug": "milu",
+        "benchmark_version": "Original",
+        "metric_key": "milu-accuracy",
+        "score_value": "93.1",
+        "score_raw": "93.1",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "70002",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond",
+        "metric_key": "gpqa-diamond-accuracy",
+        "score_value": "84.6",
+        "score_raw": "84.6",
+        "reported_at": "2026-06-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "microsoft"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "70003",
+        "reasoning_level": "",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original",
+        "metric_key": "simpleqa-verified-accuracy",
+        "score_value": "31",
+        "score_raw": "31",
+        "reported_at": "2026-08-12",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "microsoft"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+            "checked_at": "2026-09-30T10:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

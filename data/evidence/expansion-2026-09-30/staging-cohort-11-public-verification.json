@@ -1,0 +1,154 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 23,
+  "models": [
+    {
+      "registry_no": "80001",
+      "before": 2,
+      "added": 23,
+      "after": 25,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 21,
+  "companies_verified": [
+    "meta-ai"
+  ],
+  "exact_results": [
+    {
+      "result_key": "7743e455db018b42253337041cf741956ccd3c1adb6185524a7b83b2fd5d70a6",
+      "eligible": true
+    },
+    {
+      "result_key": "c3362075fd86afb1b8e12622a40fe63ea7aa035938ca8b5f434bbc2904e9ba43",
+      "eligible": true
+    },
+    {
+      "result_key": "3547c17af898e74f764078c256a695a0a8c2db0b19f42bc21e2d91c75c59d8a2",
+      "eligible": false
+    },
+    {
+      "result_key": "80e6b048bff2661acb5f7a1b7dd9b8a0070216f04464bf25d7077207a308db26",
+      "eligible": true
+    },
+    {
+      "result_key": "489560ea95e02079ad7801a180b9fc2b6cc50ad575b418ac978e38a8bad699e8",
+      "eligible": true
+    },
+    {
+      "result_key": "9c29e862724ba3a2d44a0ee8f8c5fe77de3a4c06b3b4c06c064f7dbe002ed4f0",
+      "eligible": true
+    },
+    {
+      "result_key": "a521134620ebd10011134f3f9d2f4985b66626f1b54f30312d74cbd467d7becc",
+      "eligible": true
+    },
+    {
+      "result_key": "d655d2feab06bcf2ba2ecc1900ba9f7dd36ab0e7d5be1f7248b57247791b9927",
+      "eligible": true
+    },
+    {
+      "result_key": "a06be555fdcf5613ae14ffaf84045668c0e467ab8536cbdd22a67e26f9767794",
+      "eligible": true
+    },
+    {
+      "result_key": "68b8992cb297e1aee5aca8073a9af5e4ea7cb17f6ec18fb86051aff950a930df",
+      "eligible": false
+    },
+    {
+      "result_key": "b59979832396f8d55b62bd94b0d13d6536c7d4009614381cfad85c8d49e33922",
+      "eligible": false
+    },
+    {
+      "result_key": "7d9f144653911ca11229ccae76881b05b621e180087e97254be3dda04b7fab15",
+      "eligible": false
+    },
+    {
+      "result_key": "eb012ae001229dcfcf2b41e839a6d7e5c5743faa87d23e9fbcebe46ab914517f",
+      "eligible": false
+    },
+    {
+      "result_key": "1402024b04794e1aa19355a4e9c2c3ce8dd3c16a40e3af97f1c0f123456fa600",
+      "eligible": true
+    },
+    {
+      "result_key": "dab949cbc8ec6f665f17946844937810e4f47450c2feaaf4938445b90d21379e",
+      "eligible": true
+    },
+    {
+      "result_key": "06bb9bc5a4a78754e58624b5dd724774743e0f8f165ea17919f0aedbc9fd303e",
+      "eligible": true
+    },
+    {
+      "result_key": "870d5a89e530a380738de4e1b4dc2ea30ac7579c519e5cebcc126675745e4ffc",
+      "eligible": true
+    },
+    {
+      "result_key": "03e62b17c9b6fb6bde0a3dafb2abcb1536416aafd06586ecf55d97c08d26b715",
+      "eligible": true
+    },
+    {
+      "result_key": "22b058b425f881197c796de2ea05d5d1e21b0cb5ad84c12ef8e3046b5a549233",
+      "eligible": true
+    },
+    {
+      "result_key": "ae8d01ceb9cd84ab1df371c2f6c6f1b324042aebd0e3bd817e0d6e1394562c93",
+      "eligible": true
+    },
+    {
+      "result_key": "08367bb09b5ccee9c10c33ec0f8ae06c3b285dfad0a1ac30607c2d9adf521540",
+      "eligible": true
+    },
+    {
+      "result_key": "0b9a9b51b35b1c459760bd6da8a26e209bfbe89bab59a53a0721f021231ce0aa",
+      "eligible": true
+    },
+    {
+      "result_key": "44b864e3382efbf6728eec615703ca8b1b3770e29bf577609725e17ce3eb22f5",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 854,
+    "models": 94,
+    "benchmarks": 70,
+    "versions": 125
+  },
+  "sitemap_count": 916,
+  "published_generations": [
+    "944e112659c448b38d6e19dd99733ddb"
+  ],
+  "search_checks": [
+    {
+      "query": "ERQA",
+      "benchmark_slug": "erqa",
+      "status": "PASS"
+    },
+    {
+      "query": "ScreenSpot-Pro",
+      "benchmark_slug": "screenspot-pro",
+      "status": "PASS"
+    },
+    {
+      "query": "ScreenSpot Pro",
+      "benchmark_slug": "screenspot-pro",
+      "status": "PASS"
+    },
+    {
+      "query": "IPhO",
+      "benchmark_slug": "ipho",
+      "status": "PASS"
+    },
+    {
+      "query": "FrontierScience",
+      "benchmark_slug": "frontierscience",
+      "status": "PASS"
+    },
+    {
+      "query": "MedXpertQA",
+      "benchmark_slug": "medxpertqa",
+      "status": "PASS"
+    }
+  ]
+}

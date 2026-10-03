@@ -1,0 +1,50 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 2,
+  "models": [
+    {
+      "registry_no": "140003",
+      "before": 5,
+      "added": 2,
+      "after": 7,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 2,
+  "companies_verified": [
+    "minimax"
+  ],
+  "exact_results": [
+    {
+      "result_key": "3eb7267bc2b4fc07255d342a3f3ae301bb873775e108bc41a0394c5c6bc8abb8",
+      "eligible": true
+    },
+    {
+      "result_key": "bef78c0fa5817b16cf67aa3a00fb4db7527994d207d0abb57fe685437f4d0003",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 913,
+    "models": 94,
+    "benchmarks": 72,
+    "versions": 129
+  },
+  "sitemap_count": 930,
+  "published_generations": [
+    "93916cd1dceb4ffcbfd5ed668685fce3"
+  ],
+  "search_checks": [
+    {
+      "query": "CL-bench",
+      "benchmark_slug": "cl-bench",
+      "status": "PASS"
+    },
+    {
+      "query": "BrowseComp",
+      "benchmark_slug": "browsecomp",
+      "status": "PASS"
+    }
+  ]
+}

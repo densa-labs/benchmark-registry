@@ -1,0 +1,41 @@
+{
+  "environment": "staging",
+  "status": "PASS",
+  "new_results_verified": 1,
+  "models": [
+    {
+      "registry_no": "40001",
+      "before": 2,
+      "added": 1,
+      "after": 3,
+      "checks": "PASS"
+    }
+  ],
+  "benchmark_versions_verified": 1,
+  "companies_verified": [
+    "spacexai"
+  ],
+  "exact_results": [
+    {
+      "result_key": "49a8d048d869619837693f0e96d7ddb9c6f9f7cb5a6de3a08345e5c46dedf060",
+      "eligible": true
+    }
+  ],
+  "stats": {
+    "benchmark_results": 914,
+    "models": 94,
+    "benchmarks": 72,
+    "versions": 129
+  },
+  "sitemap_count": 931,
+  "published_generations": [
+    "9a3ea96dd45245d79fb7d05741c934cd"
+  ],
+  "search_checks": [
+    {
+      "query": "SWE-bench",
+      "benchmark_slug": "swe-bench",
+      "status": "PASS"
+    }
+  ]
+}

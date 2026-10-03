@@ -1,0 +1,1478 @@
+[
+  {
+    "target_registry_no": "30006",
+    "benchmark_as_displayed": "Coding | Terminal-bench 2.1 Agentic terminal coding | Terminus-2 harness",
+    "location": "HTML table 1, row 2, column 4",
+    "slug": "terminal-bench",
+    "version": "2.1",
+    "reasoning": "",
+    "date": "2026-05-19",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "76.2",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30006",
+    "benchmark_as_displayed": "Coding | SWE-Bench Pro (Public) Diverse agentic coding tasks | Single attempt",
+    "location": "HTML table 1, row 3, column 4",
+    "slug": "swe-bench-pro",
+    "version": "Public",
+    "reasoning": "",
+    "date": "2026-05-19",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "55.1",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30006",
+    "benchmark_as_displayed": "Agentic | Toolathlon Real-world general tool use",
+    "location": "HTML table 1, row 5, column 4",
+    "slug": "toolathlon",
+    "version": "Original",
+    "reasoning": "",
+    "date": "2026-05-19",
+    "evaluators": [
+      "toolathlon-authors"
+    ],
+    "stored_score": "56.5",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30006",
+    "benchmark_as_displayed": "UI Control | OSWorld-Verified Agentic computer use",
+    "location": "HTML table 1, row 6, column 4",
+    "slug": "osworld",
+    "version": "Verified",
+    "reasoning": "",
+    "date": "2026-05-19",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "78.4",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30006",
+    "benchmark_as_displayed": "Multimodal | CharXiv Reasoning Information synthesis from complex charts | No tools",
+    "location": "HTML table 1, row 9, column 4",
+    "slug": "charxiv",
+    "version": "Reasoning — No tools",
+    "reasoning": "",
+    "date": "2026-05-19",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "84.2",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30006",
+    "benchmark_as_displayed": "Reasoning | Humanity’s Last Exam Academic reasoning (full set, text + MM)",
+    "location": "HTML table 1, row 14, column 4",
+    "slug": "humanitys-last-exam",
+    "version": "Full set — No tools",
+    "reasoning": "",
+    "date": "2026-05-19",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "40.2",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30007",
+    "benchmark_as_displayed": "SWE-Bench Pro (Public) Diverse agentic coding tasks",
+    "location": "HTML table 1, row 4, column 3",
+    "slug": "swe-bench-pro",
+    "version": "Public",
+    "reasoning": "",
+    "date": "2026-07-21",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "58.7",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30007",
+    "benchmark_as_displayed": "DeepSWE v1.1 Long-horizon software engineering",
+    "location": "HTML table 1, row 5, column 3",
+    "slug": "deep-swe",
+    "version": "1.1",
+    "reasoning": "high",
+    "date": "2026-07-21",
+    "evaluators": [
+      "datacurve"
+    ],
+    "stored_score": "49",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30007",
+    "benchmark_as_displayed": "Terminal-bench 2.1 Agentic terminal coding | Terminus-2 harness",
+    "location": "HTML table 1, row 6, column 3",
+    "slug": "terminal-bench",
+    "version": "2.1",
+    "reasoning": "",
+    "date": "2026-07-21",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "78.0",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30007",
+    "benchmark_as_displayed": "OSWorld-Verified Agentic computer use",
+    "location": "HTML table 1, row 9, column 3",
+    "slug": "osworld",
+    "version": "Verified",
+    "reasoning": "",
+    "date": "2026-07-21",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "83.0",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30007",
+    "benchmark_as_displayed": "CharXiv Reasoning Information synthesis from complex charts | No tools",
+    "location": "HTML table 1, row 10, column 3",
+    "slug": "charxiv",
+    "version": "Reasoning — No tools",
+    "reasoning": "",
+    "date": "2026-07-21",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "85.2",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30010",
+    "benchmark_as_displayed": "DeepSWE v1.1 Long-horizon software engineering",
+    "location": "HTML table 1, row 6, column 3",
+    "slug": "deep-swe",
+    "version": "1.1",
+    "reasoning": "high",
+    "date": "2026-08-13",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "65.3",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30010",
+    "benchmark_as_displayed": "Terminal-bench 2.1 Agentic terminal coding",
+    "location": "HTML table 1, row 8, column 3",
+    "slug": "terminal-bench",
+    "version": "2.1",
+    "reasoning": "",
+    "date": "2026-08-13",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "85.8",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30010",
+    "benchmark_as_displayed": "GDP.pdf Expert PDF document comprehension",
+    "location": "HTML table 1, row 13, column 3",
+    "slug": "gdp-pdf",
+    "version": "GDP.pdf",
+    "reasoning": "",
+    "date": "2026-08-13",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "34.0",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30010",
+    "benchmark_as_displayed": "CharXiv Reasoning Information synthesis from complex charts | No tools",
+    "location": "HTML table 1, row 14, column 3",
+    "slug": "charxiv",
+    "version": "Reasoning — No tools",
+    "reasoning": "",
+    "date": "2026-08-13",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "84.5",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30010",
+    "benchmark_as_displayed": "HLE-Verified Multidisciplinary expert reasoning",
+    "location": "HTML table 1, row 20, column 3",
+    "slug": "hle-verified",
+    "version": "Full 1,811-item verified set",
+    "reasoning": "",
+    "date": "2026-08-13",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "53.6",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "DeepSWE v1.1 Long-horizon software engineering",
+    "location": "HTML table 1, row 4, column 3",
+    "slug": "deep-swe",
+    "version": "1.1",
+    "reasoning": "high",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "73.7",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "Terminal-bench 2.1 Agentic terminal coding",
+    "location": "HTML table 1, row 8, column 3",
+    "slug": "terminal-bench",
+    "version": "2.1",
+    "reasoning": "",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "89.4",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "GDP.PDF Expert PDF document comprehension | All pass rate",
+    "location": "HTML table 1, row 10, column 3",
+    "slug": "gdp-pdf",
+    "version": "GDP.pdf",
+    "reasoning": "",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "35.0",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "CharXiv Reasoning Information synthesis from complex charts | No tools",
+    "location": "HTML table 1, row 11, column 3",
+    "slug": "charxiv",
+    "version": "Reasoning — No tools",
+    "reasoning": "no tools",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "86.2",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "LVBench Long video understanding",
+    "location": "HTML table 1, row 12, column 3",
+    "slug": "lvbench",
+    "version": "1024 frames — Agentic",
+    "reasoning": "",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "87.8",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "LVBench Long video understanding",
+    "location": "HTML table 1, row 13, column 3",
+    "slug": "lvbench",
+    "version": "1024 frames — Static",
+    "reasoning": "",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "87.1",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "30004",
+    "benchmark_as_displayed": "HLE-Verified Multidisciplinary expert reasoning",
+    "location": "HTML table 1, row 14, column 3",
+    "slug": "hle-verified",
+    "version": "Full 1,811-item verified set",
+    "reasoning": "",
+    "date": "2026-09-02",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "54.9",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Linked official methodology reviewed; default reasoning unset unless expressly identified. Single pass@1, averaged trials where specified.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "120002",
+    "benchmark_as_displayed": "SciCode",
+    "location": "HTML table 2, row 20, column 2",
+    "slug": "scicode",
+    "version": "Original",
+    "reasoning": "thinking",
+    "date": "2026-04-20",
+    "evaluators": [
+      "moonshot-ai"
+    ],
+    "stored_score": "52.2",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Model-card footnotes explicitly enable thinking; vision avg@3; Python settings 65,536 tokens per step and max 50 steps.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "120002",
+    "benchmark_as_displayed": "MMMU-Pro (w/ python)",
+    "location": "HTML table 2, row 31, column 2",
+    "slug": "mmmu-pro",
+    "version": "With Python",
+    "reasoning": "thinking",
+    "date": "2026-04-20",
+    "evaluators": [
+      "moonshot-ai"
+    ],
+    "stored_score": "80.1",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Model-card footnotes explicitly enable thinking; vision avg@3; Python settings 65,536 tokens per step and max 50 steps.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "120002",
+    "benchmark_as_displayed": "CharXiv (RQ) (w/ python)",
+    "location": "HTML table 2, row 33, column 2",
+    "slug": "charxiv",
+    "version": "Reasoning — Python enabled",
+    "reasoning": "thinking",
+    "date": "2026-04-20",
+    "evaluators": [
+      "moonshot-ai"
+    ],
+    "stored_score": "86.7",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Model-card footnotes explicitly enable thinking; vision avg@3; Python settings 65,536 tokens per step and max 50 steps.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "120002",
+    "benchmark_as_displayed": "MathVision",
+    "location": "HTML table 2, row 34, column 2",
+    "slug": "math-vision",
+    "version": "Original",
+    "reasoning": "thinking",
+    "date": "2026-04-20",
+    "evaluators": [
+      "moonshot-ai"
+    ],
+    "stored_score": "87.4",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Model-card footnotes explicitly enable thinking; vision avg@3; Python settings 65,536 tokens per step and max 50 steps.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "120002",
+    "benchmark_as_displayed": "BabyVision",
+    "location": "HTML table 2, row 36, column 2",
+    "slug": "babyvision",
+    "version": "Original",
+    "reasoning": "thinking",
+    "date": "2026-04-20",
+    "evaluators": [
+      "moonshot-ai"
+    ],
+    "stored_score": "39.8",
+    "evidence": {
+      "same_release_evaluation_copy": false,
+      "configuration_notes": "Model-card footnotes explicitly enable thinking; vision avg@3; Python settings 65,536 tokens per step and max 50 steps.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "SWE-bench Verified",
+    "location": "HTML table 1, row 3, column 6",
+    "slug": "swe-bench",
+    "version": "Verified",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "73.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "SWE-bench Multilingual",
+    "location": "HTML table 1, row 4, column 6",
+    "slug": "swe-bench",
+    "version": "Multilingual",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "67.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "MMLU-Pro",
+    "location": "HTML table 1, row 22, column 6",
+    "slug": "mmlu-pro",
+    "version": "Original",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "85.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "MMMU",
+    "location": "HTML table 2, row 3, column 7",
+    "slug": "mmmu",
+    "version": "MMMU",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "81.7",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "Mathvista(mini)",
+    "location": "HTML table 2, row 5, column 7",
+    "slug": "mathvista",
+    "version": "MINI",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "86.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "HallusionBench",
+    "location": "HTML table 2, row 11, column 7",
+    "slug": "hallusionbench",
+    "version": "Original",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "69.8",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "AI2D_TEST",
+    "location": "HTML table 2, row 16, column 7",
+    "slug": "ai2d",
+    "version": "TEST",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "92.7",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "NL2Repo",
+    "location": "HTML table 1, row 11, column 6",
+    "slug": "nl2repo",
+    "version": "Original",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "29.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "MMMU-Pro",
+    "location": "HTML table 2, row 4, column 7",
+    "slug": "mmmu-pro",
+    "version": "No tools",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "75.3",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "130005",
+    "benchmark_as_displayed": "CharXiv(RQ)",
+    "location": "HTML table 2, row 14, column 7",
+    "slug": "charxiv",
+    "version": "Reasoning — No tools",
+    "reasoning": "",
+    "date": "2026-04-17",
+    "evaluators": [
+      "qwen"
+    ],
+    "stored_score": "78.0",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Developer model card duplicates the official launch evaluation. No reasoning level inferred from model branding.",
+      "normalization": "No scale normalization."
+    }
+  },
+  {
+    "target_registry_no": "35001",
+    "benchmark_as_displayed": "MMLU Pro",
+    "location": "HTML table 3, row 2, column 3",
+    "slug": "mmlu-pro",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "82.6",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35001",
+    "benchmark_as_displayed": "GPQA Diamond",
+    "location": "HTML table 3, row 6, column 3",
+    "slug": "gpqa",
+    "version": "Diamond",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "82.3",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35001",
+    "benchmark_as_displayed": "BigBench Extra Hard",
+    "location": "HTML table 3, row 10, column 3",
+    "slug": "big-bench-extra-hard",
+    "version": "Original — micro average",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "64.8",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35001",
+    "benchmark_as_displayed": "MATH-Vision",
+    "location": "HTML table 3, row 15, column 3",
+    "slug": "math-vision",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "82.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35001",
+    "benchmark_as_displayed": "MedXPertQA MM",
+    "location": "HTML table 3, row 16, column 3",
+    "slug": "medxpertqa",
+    "version": "MM",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "58.1",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35002",
+    "benchmark_as_displayed": "MMLU Pro",
+    "location": "HTML table 3, row 2, column 2",
+    "slug": "mmlu-pro",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "85.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35002",
+    "benchmark_as_displayed": "GPQA Diamond",
+    "location": "HTML table 3, row 6, column 2",
+    "slug": "gpqa",
+    "version": "Diamond",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "84.3",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35002",
+    "benchmark_as_displayed": "BigBench Extra Hard",
+    "location": "HTML table 3, row 10, column 2",
+    "slug": "big-bench-extra-hard",
+    "version": "Original — micro average",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "74.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35002",
+    "benchmark_as_displayed": "MATH-Vision",
+    "location": "HTML table 3, row 15, column 2",
+    "slug": "math-vision",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "85.6",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35002",
+    "benchmark_as_displayed": "MedXPertQA MM",
+    "location": "HTML table 3, row 16, column 2",
+    "slug": "medxpertqa",
+    "version": "MM",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "61.3",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35003",
+    "benchmark_as_displayed": "MMLU Pro",
+    "location": "HTML table 3, row 2, column 6",
+    "slug": "mmlu-pro",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "60.0",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35003",
+    "benchmark_as_displayed": "GPQA Diamond",
+    "location": "HTML table 3, row 6, column 6",
+    "slug": "gpqa",
+    "version": "Diamond",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "43.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35003",
+    "benchmark_as_displayed": "BigBench Extra Hard",
+    "location": "HTML table 3, row 10, column 6",
+    "slug": "big-bench-extra-hard",
+    "version": "Original — micro average",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "21.9",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35003",
+    "benchmark_as_displayed": "MATH-Vision",
+    "location": "HTML table 3, row 15, column 6",
+    "slug": "math-vision",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "52.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35003",
+    "benchmark_as_displayed": "MedXPertQA MM",
+    "location": "HTML table 3, row 16, column 6",
+    "slug": "medxpertqa",
+    "version": "MM",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "23.5",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35004",
+    "benchmark_as_displayed": "MMLU Pro",
+    "location": "HTML table 3, row 2, column 5",
+    "slug": "mmlu-pro",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "69.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35004",
+    "benchmark_as_displayed": "GPQA Diamond",
+    "location": "HTML table 3, row 6, column 5",
+    "slug": "gpqa",
+    "version": "Diamond",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "58.6",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35004",
+    "benchmark_as_displayed": "BigBench Extra Hard",
+    "location": "HTML table 3, row 10, column 5",
+    "slug": "big-bench-extra-hard",
+    "version": "Original — micro average",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "33.1",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35004",
+    "benchmark_as_displayed": "MATH-Vision",
+    "location": "HTML table 3, row 15, column 5",
+    "slug": "math-vision",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "59.5",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35004",
+    "benchmark_as_displayed": "MedXPertQA MM",
+    "location": "HTML table 3, row 16, column 5",
+    "slug": "medxpertqa",
+    "version": "MM",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "28.7",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35005",
+    "benchmark_as_displayed": "MMLU Pro",
+    "location": "HTML table 3, row 2, column 4",
+    "slug": "mmlu-pro",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "77.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35005",
+    "benchmark_as_displayed": "GPQA Diamond",
+    "location": "HTML table 3, row 6, column 4",
+    "slug": "gpqa",
+    "version": "Diamond",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "78.8",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35005",
+    "benchmark_as_displayed": "BigBench Extra Hard",
+    "location": "HTML table 3, row 10, column 4",
+    "slug": "big-bench-extra-hard",
+    "version": "Original — micro average",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "53.0",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35005",
+    "benchmark_as_displayed": "MATH-Vision",
+    "location": "HTML table 3, row 15, column 4",
+    "slug": "math-vision",
+    "version": "Original",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "79.7",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "35005",
+    "benchmark_as_displayed": "MedXPertQA MM",
+    "location": "HTML table 3, row 16, column 4",
+    "slug": "medxpertqa",
+    "version": "MM",
+    "reasoning": "thinking mode",
+    "date": "2026-07-24",
+    "evaluators": [
+      "google-deepmind"
+    ],
+    "stored_score": "48.7",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Matched to Table 5/6 of developer technical report, whose caption explicitly specifies thinking mode. Existing report date and primary source retained on duplicate.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "GPQA Diamond",
+    "location": "HTML table 1, row 7, column 2",
+    "slug": "gpqa",
+    "version": "Diamond",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "87.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "SWEBench Verified*",
+    "location": "HTML table 1, row 9, column 2",
+    "slug": "swe-bench",
+    "version": "Verified — bash-only harness",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "77.6",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "SWEBench ProPublic",
+    "location": "HTML table 1, row 10, column 2",
+    "slug": "swe-bench-pro",
+    "version": "Public",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "54.3",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "Terminal Bench 2.1*Best Harness",
+    "location": "HTML table 1, row 11, column 2",
+    "slug": "terminal-bench",
+    "version": "2.1 — Thinking Machines internal coding harness",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "63.8",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "Toolathlon Verified",
+    "location": "HTML table 1, row 16, column 2",
+    "slug": "toolathlon",
+    "version": "Verified",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "45.5",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "BrowseCompw/ ctx management",
+    "location": "HTML table 1, row 17, column 2",
+    "slug": "browsecomp",
+    "version": "With context management — Inkling evaluation",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "77.1",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "SimpleQA Verified",
+    "location": "HTML table 1, row 19, column 2",
+    "slug": "simpleqa-verified",
+    "version": "Original",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "43.9",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "IFBench",
+    "location": "HTML table 1, row 22, column 2",
+    "slug": "ifbench",
+    "version": "Original",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "79.8",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "Charxiv RQ",
+    "location": "HTML table 1, row 26, column 2",
+    "slug": "charxiv",
+    "version": "Reasoning — No tools",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "78.1",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "Charxiv RQ†with python",
+    "location": "HTML table 1, row 27, column 2",
+    "slug": "charxiv",
+    "version": "Reasoning — Python enabled",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "82.0",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160001",
+    "benchmark_as_displayed": "StrongREJECT",
+    "location": "HTML table 1, row 35, column 2",
+    "slug": "strongreject",
+    "version": "Original",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-15",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "98.6",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "SWEBench Verified*",
+    "location": "HTML table 1, row 7, column 2",
+    "slug": "swe-bench",
+    "version": "Verified — bash-only harness",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "80.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "SWEBench Propublic",
+    "location": "HTML table 1, row 8, column 2",
+    "slug": "swe-bench-pro",
+    "version": "Public",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "55.9",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "Terminal Bench 2.1*best harness",
+    "location": "HTML table 1, row 9, column 2",
+    "slug": "terminal-bench",
+    "version": "2.1 — Thinking Machines internal coding harness",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "64.7",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "BrowseCompwith context management",
+    "location": "HTML table 1, row 15, column 2",
+    "slug": "browsecomp",
+    "version": "With context management — Inkling evaluation",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "77.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "Toolathlon Verified",
+    "location": "HTML table 1, row 16, column 2",
+    "slug": "toolathlon",
+    "version": "Verified",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "54.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "SimpleQA Verified",
+    "location": "HTML table 1, row 29, column 2",
+    "slug": "simpleqa-verified",
+    "version": "Original",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "20.6",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "IFBench",
+    "location": "HTML table 1, row 32, column 2",
+    "slug": "ifbench",
+    "version": "Original",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "82.2",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  },
+  {
+    "target_registry_no": "160002",
+    "benchmark_as_displayed": "StrongREJECT",
+    "location": "HTML table 1, row 35, column 2",
+    "slug": "strongreject",
+    "version": "Original",
+    "reasoning": "effort=0.99",
+    "date": "2026-07-30",
+    "evaluators": [
+      "thinking-machines"
+    ],
+    "stored_score": "98.4",
+    "evidence": {
+      "same_release_evaluation_copy": true,
+      "configuration_notes": "Official launch and model-card evaluation copied with exact harness/configuration; contamination-zero footnote retained in source.",
+      "normalization": "Display percent sign removed; numeric magnitude unchanged."
+    }
+  }
+]

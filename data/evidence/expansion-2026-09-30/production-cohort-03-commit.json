@@ -1,0 +1,18 @@
+{
+  "environment": "production",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "beyond-aime",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "99a7eb16b6de4bbd01c45558f43505a2d5cd0e551bf78f96a7d7789652143972",
+      "message": "result is valid"
+    }
+  ]
+}
