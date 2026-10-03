@@ -161,7 +161,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
 
   if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
-    <AppShell navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
+    <AppShell dataUpdated={loaded.updated} navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
       ? undefined : loaded.kind === "compare" ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}

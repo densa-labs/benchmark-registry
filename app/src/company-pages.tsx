@@ -337,7 +337,7 @@ export function CompanyDetailPage({
       <section className="entity-metadata" aria-label="Organization metadata">
         <MetadataRows
           items={[
-            { label: "Established", value: established },
+            { label: "Established", value: <span data-nosnippet>{established}</span> },
             { label: "Latest model", value: latestModelValue },
           ]}
         />

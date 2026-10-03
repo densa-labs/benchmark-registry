@@ -141,7 +141,7 @@ export type RegistryRoute =
   | { kind: "terms" }
   | { kind: "not-found" };
 
-export type LoadedRegistryRoute =
+type LoadedRouteData =
   | { kind: "home"; payload: HomePageResponse }
   | { kind: "compare"; payload: ComparisonResponse }
   | { kind: "models"; payload: ModelListResponse }
@@ -155,6 +155,8 @@ export type LoadedRegistryRoute =
   | { kind: "privacy" }
   | { kind: "terms" }
   | { kind: "not-found" };
+
+export type LoadedRegistryRoute = LoadedRouteData & { updated?: string };
 
 export class RegistryClientError extends Error {}
 

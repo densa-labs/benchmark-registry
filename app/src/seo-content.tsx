@@ -13,6 +13,7 @@ export interface SeoContent {
 }
 export function enrichSeoContent(loaded:LoadedRegistryRoute,snapshot:SeoSnapshot):LoadedRegistryRoute {
   const kind=loaded.kind;
+  loaded={...loaded,updated:snapshot.pages["/"]?.updated};
   if(kind!=="model" && kind!=="benchmark" && kind!=="company") return loaded;
   const path=kind==="model" ? `/models/${loaded.payload.data.model.registry_no}` : kind==="benchmark" ? `/benchmarks/${loaded.payload.data.benchmark.slug}` : `/companies/${loaded.payload.data.company.slug}`;
   const page=snapshot.pages[path];if(!page) return loaded;
@@ -29,12 +30,12 @@ export function enrichSeoContent(loaded:LoadedRegistryRoute,snapshot:SeoSnapshot
       .sort((a,b)=>Math.abs(Date.parse(a.released_at)-Date.parse(model.released_at))-Math.abs(Date.parse(b.released_at)-Date.parse(model.released_at)) || a.registry_no.localeCompare(b.registry_no,"en")).slice(0,6);
   } else if(kind==="company") content.related=snapshot.models.filter(model=>model.company.slug===loaded.payload.data.company.slug);
   else {content.top=page.topResults;content.latest=page.latestVersion;}
-  return {...loaded,payload:{...loaded.payload,data:{...loaded.payload.data,seo:content}}} as LoadedRegistryRoute;
+  return {...loaded,updated:page.updated,payload:{...loaded.payload,data:{...loaded.payload.data,seo:content}}} as LoadedRegistryRoute;
 }
 export function RelatedModels({models,label,showDates=false}:{models:ModelSummary[];label:string;showDates?:boolean}) {
   if(!models.length) return null;
   return <nav aria-label={label}><p>{label}</p><ul>{models.map(model=><li key={model.registry_no}>
-    <a href={`/models/${model.registry_no}`}>{model.name}</a>{showDates ? <> — <time dateTime={model.released_at}>{formatRegistryDate(model.released_at,model.release_precision)}</time></> : null}
+    <a href={`/models/${model.registry_no}`}>{model.name}</a>{showDates ? <> — Released <time dateTime={model.released_at}>{formatRegistryDate(model.released_at,model.release_precision)}</time></> : null}
   </li>)}</ul></nav>;
 }
 export function FamilyResults({content}:{content?:SeoContent}) {

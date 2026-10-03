@@ -45,3 +45,7 @@ Both production custom domains are configured in this repository. Deploy the Wor
 - Use URL Inspection and request indexing for `/`, one indexable benchmark page and one indexable model page.
 - Verify www/HTTP and legacy path redirects, noindex parameter pages, source-check lastmod, JSON-LD and sharing logo on the deployed edge.
 - Re-check `site:benchmarkregistry.org` and `site:www.benchmarkregistry.org` results in 1–2 weeks. Google chooses its own displayed snippets and dates; changes here do not guarantee their immediate replacement.
+
+## Date audit (Task 6)
+
+`source_checked_at` and result `primary_source_checked_at`/additional citation checks drive entity update dates. Model release and organization founding dates are not used as page dates. Organization founding metadata is retained for readers under `data-nosnippet`. The footer no longer treats its fixed data-date constant or build timestamp as a page update; its build toggle explicitly says “Application build” and is excluded from snippets. Model lists label release dates as “Released”. Legal policy effective dates remain explicit policy dates. No article publication-time tags are emitted. JSON-LD and sitemap consume the same page data timestamp in Tasks 7–8; missing timestamps are omitted, never filled with build time.
