@@ -1,3 +1,4 @@
+import type { SeoContent } from "./seo-content";
 import type { LegalKind } from "./legal-content";
 import type {
   BenchmarkRef,
@@ -21,6 +22,7 @@ export interface ModelListResponse {
 }
 
 export interface HomePageResponse {
+  seo?: SeoContent;
   stats: {
     data: {
       benchmark_results: number;
@@ -35,6 +37,7 @@ export interface HomePageResponse {
 
 export interface ModelDetailResponse {
   data: {
+    seo?: SeoContent;
     model: ModelSummary & {
       source_url: string;
       aliases: string[];
@@ -57,6 +60,7 @@ export interface BenchmarkListResponse {
 
 export interface BenchmarkFamilyResponse {
   data: {
+    seo?: SeoContent;
     benchmark: BenchmarkRef;
     versions: BenchmarkVersionSummary[];
   };
@@ -92,6 +96,7 @@ export interface CompanyListResponse {
 
 export interface CompanyDetailResponse {
   data: {
+    seo?: SeoContent;
     company: CompanySummary & {
       established_at: string | null;
       established_precision: "year" | "date" | "timestamp" | null;

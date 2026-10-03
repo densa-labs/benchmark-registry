@@ -1,3 +1,4 @@
+import { RelatedModels } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type { ModelSummary, ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
@@ -331,7 +332,8 @@ export function CompanyDetailPage({
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={company.name} />
+      <PageHeader title={company.name} description={response.data.seo?.sentence} />
+      <RelatedModels models={response.data.seo?.related ?? []} label={`${company.name} models`} showDates />
       <section className="entity-metadata" aria-label="Organization metadata">
         <MetadataRows
           items={[

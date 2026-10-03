@@ -19,6 +19,8 @@ export interface SeoPage {
   latest?: string;
   metric?: string;
   sources: string[];
+  topResults?: ResultRow[];
+  latestVersion?: BenchmarkVersionSummary;
 }
 export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[] }
 export interface SeoInputs {
@@ -63,6 +65,14 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
     const versions = input.versions.filter(version => version.benchmark.slug === family.slug);
     const rows = input.results.filter(({ row }) => row.benchmark.slug === family.slug);
     pages[`/benchmarks/${family.slug}`] = { ...summarize("benchmark", benchmarkDisplayName(family), rows, [family.checked, ...versions.map(version => version.checked)]), versions: versions.length, latest: versions[0] ? (isPlaceholder(versions[0].version) ? benchmarkDisplayName(family) : benchmarkVersionLabel(family, versions[0].version)) : undefined };
+    const familyPage=pages[`/benchmarks/${family.slug}`];
+    familyPage.latestVersion=versions[0];
+    familyPage.topResults=rows.filter(({row})=>row.benchmark_version_slug===versions[0]?.version_slug)
+      .map(({row})=>row).sort((a,b)=>{
+        const x=a.reported_at.slice(0,a.reported_precision==='date' || b.reported_precision==='date'?10:undefined);
+        const y=b.reported_at.slice(0,a.reported_precision==='date' || b.reported_precision==='date'?10:undefined);
+        return y.localeCompare(x,'en') || a.result_key.localeCompare(b.result_key,'en');
+      }).slice(0,5);
     for (const version of versions) {
       const selected = rows.filter(({ row }) => row.benchmark_version_slug === version.version_slug);
       pages[`/benchmarks/${family.slug}/${version.version_slug}`] = { ...summarize("benchmark-version", isPlaceholder(version.version) ? benchmarkDisplayName(family) : benchmarkVersionLabel(family, version.version), selected, [version.checked]), version: version.version,

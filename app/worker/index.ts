@@ -136,7 +136,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
       return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
-    }, env.REGISTRY_REVISION);
+    }, env.REGISTRY_REVISION, repository ? await repository.seoSnapshot() : undefined);
     const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
       .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
     const headers = new Headers(response.headers);

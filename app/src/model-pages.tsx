@@ -1,3 +1,4 @@
+import { RelatedModels } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type { ResultRow } from "../worker/api";
 import { ModelBenchmarkScore } from "./model-benchmark-score";
@@ -301,7 +302,8 @@ export function ModelDetailPage({
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={model.name} />
+      <PageHeader title={model.name} description={response.data.seo?.sentence} />
+      <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />
 
       <section className="entity-metadata" aria-label="Model metadata">
         <MetadataRows
