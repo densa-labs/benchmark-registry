@@ -1,3 +1,4 @@
+import { MIN_INDEXABLE_RECORDS } from "./seo-config";
 import type { SeoPage } from "../worker/seo-data";
 export const SITE_NAME = "Benchmark Registry";
 export const TITLE_LIMIT = 70;
@@ -51,4 +52,9 @@ export function buildPageMetadata(page: SeoPage): {title:string;description:stri
     case "company": return {title:seoTitle(`${name} AI Models and Benchmark Results`),description:seoDescription([
       `Benchmark results for ${page.models} ${name} models${!isPlaceholder(page.latest) ? `, including ${page.latest}` : ""}.`,"Sourced from official publications."])};
   }
+}
+
+export function isIndexablePage(page: SeoPage): boolean {
+  return page.kind !== "model" && page.kind !== "benchmark-version"
+    || page.records >= MIN_INDEXABLE_RECORDS && (page.kind !== "benchmark-version" || !isPlaceholder(page.version));
 }

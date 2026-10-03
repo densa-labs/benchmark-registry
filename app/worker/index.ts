@@ -1,3 +1,4 @@
+import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { diagnoseWorkerFailure } from "./diagnostics";
@@ -103,7 +104,9 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   }
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...LEGAL_PATHS])];
+      const snapshot=await requireRepository(repository).seoSnapshot();
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...LEGAL_PATHS])]
+        .filter(path=>!path.includes("?") && (!snapshot.pages[path] || isIndexablePage(snapshot.pages[path])));
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },

@@ -18,7 +18,7 @@ export interface DocumentMetadata {
 
 import { CANONICAL_ORIGIN, CANONICAL_HOST } from "../src/seo-config";
 
-import { buildPageMetadata, SITE_NAME, seoTitle, seoDescription } from "../src/seo";
+import { buildPageMetadata, isIndexablePage, SITE_NAME, seoTitle, seoDescription } from "../src/seo";
 import type { SeoPage } from "./seo-data";
 const missing: DocumentMetadata = {
   status: 404,
@@ -54,7 +54,7 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
     : route.kind === 'benchmark' ? `/benchmarks/${segment(route.slug)}`
     : route.kind === 'benchmark-version' ? `/benchmarks/${segment(route.slug)}/${segment(route.version)}`
     : url.pathname === '/' ? '/' : url.pathname.replace(/\/$/u, '');
-  metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0;
+  metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0 || Boolean(metadata.page && !isIndexablePage(metadata.page));
   metadata.canonical = CANONICAL_ORIGIN + path;
   return metadata;
 }
