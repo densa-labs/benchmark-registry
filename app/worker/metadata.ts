@@ -2,7 +2,7 @@ import { LEGAL_METADATA } from "../src/legal-content";
 import { resolveRegistryRoute } from "../src/registry";
 import type { RegistryReader } from "./materialized-repository";
 import { IS_STAGING } from "../src/build";
-import { comparisonHref, parseComparisonState } from "../src/compare";
+import { parseComparisonState } from "../src/compare";
 
 export interface DocumentMetadata {
   page?: SeoPage;
@@ -55,25 +55,7 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
     : route.kind === 'benchmark-version' ? `/benchmarks/${segment(route.slug)}/${segment(route.version)}`
     : url.pathname === '/' ? '/' : url.pathname.replace(/\/$/u, '');
   metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0;
-  if (metadata.status === 404) return metadata;
   metadata.canonical = CANONICAL_ORIGIN + path;
-  if (route.kind === "compare") {
-    try {
-      const state = parseComparisonState(url.search);
-      metadata.canonical = CANONICAL_ORIGIN + comparisonHref({ ...state, query: "", sharedOnly: false, page: 1, limit: 50 });
-    } catch { /* Keep the clean base canonical for malformed selection state. */ }
-  }
-  const keys = url.searchParams.getAll('result');
-  if (route.kind === 'benchmark-version' && keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
-    const result = await requireRepository(repository).metadataResult(route.slug, route.version, keys[0]);
-    if (result?.exact_result_indexable === 1) {
-      const exact = `${CANONICAL_ORIGIN}${path}?view=history&result=${keys[0]}`;
-      // Only the stable history/result state is indexable. Extra UI state still needs noindex.
-      metadata.canonical = exact;
-      metadata.noindex = url.searchParams.size !== 2
-        || url.searchParams.getAll('view').length !== 1 || url.searchParams.get('view') !== 'history';
-    }
-  }
   return metadata;
 }
 

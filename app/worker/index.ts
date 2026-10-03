@@ -8,6 +8,7 @@ import { withRegistryCache, type CacheEnvironment } from "./cache";
 import type { RegistryReader } from "./materialized-repository";
 import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
 import { MaterializationFailure } from "./read-model";
+import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
 export interface Env extends CacheEnvironment, ReadStoreEnvironment {
@@ -71,6 +72,9 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
 
   if (request.method === "GET" || request.method === "HEAD") {
     try {
+      const legacy = await legacyRedirect(url, repository);
+      if (legacy) { url.pathname=legacy; return Response.redirect(url.toString(),301); }
+
       const registryNo = modelPageRegistryNo(pathname);
       if (registryNo !== null) {
         const target = await requireRepository(repository).modelRedirectTarget(registryNo);
