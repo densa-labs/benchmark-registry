@@ -22,6 +22,7 @@ export interface SeoPage {
   sources: string[];
   topResults?: ResultRow[];
   latestVersion?: BenchmarkVersionSummary;
+  coveredBenchmarks?: Array<{name:string;path:string}>;
 }
 export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[] }
 export interface SeoInputs {
@@ -55,7 +56,12 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
     const rows = input.results.filter(({ row }) => row.model.registry_no === model.registry_no);
     pages[`/models/${model.registry_no}`] = { ...summarize("model", model.name, rows, [model.checked]),
       provider: model.company.name, registryNo: model.registry_no, released: model.released_at,
-      sources: [...new Set([model.source, ...rows.map(({ row }) => row.primary_source_url)])].sort() };
+      sources: [...new Set([model.source, ...rows.map(({ row }) => row.primary_source_url)])].sort(),
+      coveredBenchmarks: [...new Map(rows.flatMap(({row})=>[
+        [`/benchmarks/${row.benchmark.slug}`,{name:benchmarkDisplayName(row.benchmark),path:`/benchmarks/${row.benchmark.slug}`}],
+        [`/benchmarks/${row.benchmark.slug}/${row.benchmark_version_slug}`,{name:benchmarkVersionLabel(row.benchmark,row.benchmark_version),path:`/benchmarks/${row.benchmark.slug}/${row.benchmark_version_slug}`}],
+      ] as const)).values()].sort((a,b)=>a.name.localeCompare(b.name,"en") || a.path.localeCompare(b.path,"en")),
+    };
   }
   for (const company of input.companies) {
     const models = input.models.filter(model => model.company.slug === company.slug);

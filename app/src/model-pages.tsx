@@ -1,4 +1,4 @@
-import { RelatedModels } from "./seo-content";
+import { RelatedModels, RelatedLinks } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type { ResultRow } from "../worker/api";
 import { ModelBenchmarkScore } from "./model-benchmark-score";
@@ -378,6 +378,7 @@ export function ModelDetailPage({
           totalPages={page.total_pages}
         />
       </section>
+      <RelatedLinks links={response.data.seo?.links} label="Benchmarks covered" />
     </PageContainer>
   );
 }

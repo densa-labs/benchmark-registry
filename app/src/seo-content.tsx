@@ -10,6 +10,7 @@ export interface SeoContent {
   related?: ModelSummary[];
   top?: ResultRow[];
   latest?: BenchmarkVersionSummary;
+  links?: Array<{name:string;path:string}>;
 }
 export function enrichSeoContent(loaded:LoadedRegistryRoute,snapshot:SeoSnapshot):LoadedRegistryRoute {
   const kind=loaded.kind;
@@ -22,7 +23,7 @@ export function enrichSeoContent(loaded:LoadedRegistryRoute,snapshot:SeoSnapshot
   const sentence=kind==="model" ? `${page.records} benchmark results for ${page.name} from primary sources, covering ${page.benchmarks} benchmarks.${ending}`
     : kind==="benchmark" ? `${page.name} results reported for ${page.models} models across ${page.versions} versions.${ending}`
     : `Benchmark results for ${page.models} ${page.name} models from official publications.${ending}`;
-  const content:SeoContent={sentence,updated};
+  const content:SeoContent={sentence,updated,links:page.coveredBenchmarks};
   if(kind==="model") {
     const model=loaded.payload.data.model;
     // Closest published siblings by release date, with stable Registry No. ties.
@@ -51,4 +52,9 @@ export function FamilyResults({content}:{content?:SeoContent}) {
     <p>Latest version: <a href={`/benchmarks/${latest.benchmark.slug}/${latest.version_slug}`}>{benchmarkVersionLabel(latest.benchmark,latest.version)}</a></p>
     {content.top?.length ? <DataTable caption={`Recently reported results for ${benchmarkVersionLabel(latest.benchmark,latest.version)}`} rows={content.top} columns={columns} getRowKey={row=>row.result_key} /> : null}
   </section>;
+}
+
+export function RelatedLinks({links,label}:{links?:Array<{name:string;path:string}>;label:string}) {
+  if(!links?.length) return null;
+  return <nav aria-label={label}><p>{label}</p><ul>{links.map(link=><li key={link.path}><a href={link.path}>{link.name}</a></li>)}</ul></nav>;
 }
