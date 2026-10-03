@@ -15,7 +15,7 @@ export function structuredData(metadata:DocumentMetadata):Record<string,unknown>
   }))});
   if(path!=="/") graph.push({"@type":"WebPage",name:metadata.title,description:metadata.description,url:metadata.canonical,
     ...(metadata.page?.updated ? {dateModified:metadata.page.updated} : {}),publisher});
-  if(metadata.page && ["model","benchmark","benchmark-version"].includes(metadata.page.kind)) graph.push({
+  if(metadata.page && ["model","benchmark","benchmark-version","comparison"].includes(metadata.page.kind)) graph.push({
     "@type":"Dataset",name:metadata.page.name,description:metadata.description,url:metadata.canonical,
     ...(metadata.page.updated ? {dateModified:metadata.page.updated} : {}),creator:publisher,publisher,
     citation:metadata.page.sources,

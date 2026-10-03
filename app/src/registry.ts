@@ -129,6 +129,7 @@ export interface SearchResponse {
 export type RegistryRoute =
   | { kind: "home" }
   | { kind: "compare" }
+  | { kind: "comparison"; slug:string }
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
   | { kind: "benchmarks" }
@@ -144,6 +145,7 @@ export type RegistryRoute =
 type LoadedRouteData =
   | { kind: "home"; payload: HomePageResponse }
   | { kind: "compare"; payload: ComparisonResponse }
+  | { kind: "comparison"; payload: ComparisonResponse; name:string }
   | { kind: "models"; payload: ModelListResponse }
   | { kind: "model"; payload: ModelDetailResponse }
   | { kind: "benchmarks"; payload: BenchmarkListResponse }
@@ -166,6 +168,9 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 
   if (pathname === "/compare" || pathname === "/compare/") return { kind: "compare" };
+
+  const comparisonMatch=/^\/compare\/([a-z0-9-]+)\/?$/u.exec(pathname);
+  if(comparisonMatch) return {kind:"comparison",slug:comparisonMatch[1]};
 
   for (const kind of ["legal", "privacy", "terms"] as const) {
     if (pathname === `/${kind}` || pathname === `/${kind}/`) return { kind };
@@ -214,7 +219,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "compare" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "compare" | "comparison" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -321,6 +326,13 @@ export async function loadRegistryRoute(
 ): Promise<LoadedRegistryRoute> {
   if (route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
+  if (route.kind === "comparison") {
+    const response=await fetcher(`/api/comparisons/${route.slug}`,{headers:{Accept:"application/json"},signal});
+    if(response.status===404) return {kind:"not-found"};
+    const body=await response.json() as {payload:ComparisonResponse;name:string};
+    if(!response.ok) throw new RegistryClientError(errorMessage(body));
+    return {kind:"comparison",...body};
+  }
   if (route.kind === "compare") return { kind: "compare", payload: await loadComparison(search, fetcher, signal) };
 
   if (route.kind === "home") {

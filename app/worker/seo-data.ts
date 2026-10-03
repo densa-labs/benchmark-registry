@@ -1,8 +1,9 @@
+import { generateComparisonPairs, type ComparisonPair } from "../src/comparison-pairs";
 import type { BenchmarkRef, BenchmarkVersionSummary, ModelSummary, ResultRow } from "./api";
 import { isPlaceholder } from "../src/seo";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
 
-export type SeoKind = "home" | "models" | "benchmarks" | "companies" | "model" | "benchmark" | "benchmark-version" | "company";
+export type SeoKind = "home" | "models" | "benchmarks" | "companies" | "model" | "benchmark" | "benchmark-version" | "company" | "comparison";
 export interface SeoPage {
   kind: SeoKind;
   name: string;
@@ -24,7 +25,7 @@ export interface SeoPage {
   latestVersion?: BenchmarkVersionSummary;
   coveredBenchmarks?: Array<{name:string;path:string}>;
 }
-export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[] }
+export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[]; comparisons: ComparisonPair[] }
 export interface SeoInputs {
   models: Array<ModelSummary & { checked: string; source: string }>;
   companies: Array<{ name: string; slug: string; checked: string; latest?: string }>;
@@ -87,5 +88,11 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
         sources: [...new Set([version.source, ...selected.map(({ row }) => row.primary_source_url)])].sort() };
     }
   }
-  return { pages, models: input.models.map(({ checked: _checked, source: _source, ...model }) => model) };
+  const comparisons=generateComparisonPairs(input.models,input.results.map(({row})=>row));
+  for(const pair of comparisons) {
+    const [a,b]=pair.models.map(no=>input.models.find(model=>model.registry_no===no)!);
+    const results=input.results.filter(({row})=>pair.models.includes(row.model.registry_no));
+    pages[pair.path]={...summarize("comparison",`${a.name} vs ${b.name}`,results,[a.checked,b.checked]),benchmarks:pair.sharedBenchmarks};
+  }
+  return { pages, comparisons, models: input.models.map(({ checked: _checked, source: _source, ...model }) => model) };
 }

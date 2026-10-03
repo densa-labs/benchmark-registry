@@ -55,7 +55,7 @@ function BenchmarkRows({ rows, names }: { rows: ComparisonRow[]; names: [string,
   })}</>;
 }
 
-function BenchmarkSection({ title, rows, names }: { title: string; rows: ComparisonRow[]; names: [string, string] }) {
+export function BenchmarkSection({ title, rows, names }: { title: string; rows: ComparisonRow[]; names: [string, string] }) {
   if (!rows.length) return null;
   const id = title === "Shared benchmarks" ? "shared-benchmarks" : "other-benchmarks";
   return <section className="compare-benchmark-section" aria-labelledby={id}>

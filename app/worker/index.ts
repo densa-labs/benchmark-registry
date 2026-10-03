@@ -9,6 +9,7 @@ import { withRegistryCache, type CacheEnvironment } from "./cache";
 import type { RegistryReader } from "./materialized-repository";
 import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
 import { MaterializationFailure } from "./read-model";
+import { comparisonPayload } from "./seo-comparisons";
 import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
@@ -41,6 +42,12 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
   if (request.method !== "GET") return jsonError(404, "not_found", "API route not found.");
   const {path, params} = apiParameters(new URL(request.url));
   if (path.length === 2 && path[1] === "revision") return Response.json({revision:env.REGISTRY_REVISION});
+  if (path.length === 3 && path[1] === "comparisons") {
+    const snapshot=await repository.seoSnapshot();
+    const pair=snapshot.comparisons.find(pair=>pair.path===`/compare/${path[2]}`);
+    if(!pair) return jsonError(404,"not_found","Comparison not found.");
+    return Response.json(await comparisonPayload(repository,pair,snapshot));
+  }
   if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
   if (path.length === 2 && path[1] === "home-panels") return Response.json(await repository.homePanels());
   if (path.length === 2 && path[1] === "models") return Response.json(await repository.models(params));
@@ -105,7 +112,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
       const snapshot=await requireRepository(repository).seoSnapshot();
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...LEGAL_PATHS])]
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS])]
         .filter(path=>!path.includes("?") && (!snapshot.pages[path] || isIndexablePage(snapshot.pages[path])));
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc>${snapshot.pages[path]?.updated ? `<lastmod>${escapeHtml(snapshot.pages[path].updated!)}</lastmod>` : ""}</url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {

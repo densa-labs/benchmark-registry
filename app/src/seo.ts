@@ -49,6 +49,8 @@ export function buildPageMetadata(page: SeoPage): {title:string;description:stri
     case "benchmark-version": return {title:seoTitle(`${name} Results & Scores`),description:seoDescription([
       `${name} scores for ${page.models} models.`,!isPlaceholder(page.metric) ? `Metric: ${page.metric}.` : undefined,
       released && `Released ${released}.`,`${page.records} reported results from primary sources.`])};
+    case "comparison": return {title:seoTitle(`${name}: Benchmark Comparison`),description:seoDescription([
+      `${name}: compare scores across ${page.benchmarks} shared benchmarks, with reported results and primary source links.`])};
     case "company": return {title:seoTitle(`${name} AI Models and Benchmark Results`),description:seoDescription([
       `Benchmark results for ${page.models} ${name} models${!isPlaceholder(page.latest) ? `, including ${page.latest}` : ""}.`,"Sourced from official publications."])};
   }

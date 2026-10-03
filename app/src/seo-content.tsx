@@ -25,6 +25,7 @@ export function enrichSeoContent(loaded:LoadedRegistryRoute,snapshot:SeoSnapshot
     : `Benchmark results for ${page.models} ${page.name} models from official publications.${ending}`;
   const content:SeoContent={sentence,updated,links:page.coveredBenchmarks};
   if(kind==="model") {
+    content.links=[...(content.links ?? []),...snapshot.comparisons.filter(pair=>pair.models.includes(loaded.payload.data.model.registry_no)).map(pair=>({path:pair.path,name:`Compare with ${snapshot.models.find(model=>model.registry_no===pair.models.find(no=>no!==loaded.payload.data.model.registry_no))!.name}`}))];
     const model=loaded.payload.data.model;
     // Closest published siblings by release date, with stable Registry No. ties.
     content.related=snapshot.models.filter(peer=>peer.company.slug===model.company.slug && peer.registry_no!==model.registry_no)
