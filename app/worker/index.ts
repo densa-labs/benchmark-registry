@@ -39,6 +39,7 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
   const {path, params} = apiParameters(new URL(request.url));
   if (path.length === 2 && path[1] === "revision") return Response.json({revision:env.REGISTRY_REVISION});
   if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
+  if (path.length === 2 && path[1] === "home-panels") return Response.json(await repository.homePanels());
   if (path.length === 2 && path[1] === "models") return Response.json(await repository.models(params));
   if (path.length === 3 && path[1] === "models") return Response.json(await repository.model(path[2],params));
   if (path.length === 2 && path[1] === "benchmarks") return Response.json(await repository.benchmarks(params));
@@ -97,7 +98,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   }
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), ...LEGAL_PATHS])];
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...LEGAL_PATHS])];
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(PRODUCTION_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },

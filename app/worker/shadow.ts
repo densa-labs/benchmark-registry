@@ -11,13 +11,14 @@ async function request(reader:RegistryReader,path:string) {
   if(parts[1]==='companies') return parts.length===2?reader.companies(params):reader.company(parts[2],params);
   if(parts[1]==='benchmarks') return parts.length===2?reader.benchmarks(params):parts.length===3?reader.benchmark(parts[2]):reader.benchmarkVersion(parts[2],parts[3],params);
   if(parts[1]==='search') return reader.search(params);
+  if(parts[1]==='home-panels') return reader.homePanels();
   return reader.stats();
 }
 export async function shadowGeneration(db:D1Database,build:GenerationBuild) {
   const materialized=new MaterializedRepository(build.manifest,async<K extends keyof ReadData>(key:string)=>build.manifest.inlineObjects[build.manifest.objects[key]].data as ReadData[K]);
   const canonical=new RegistryRepository(db);
   const keys=Object.keys(build.manifest.objects),model=keys.includes('model:10005')?'10005':keys.find(k=>k.startsWith('model:'))!.slice(6),company=keys.includes('company:openai')?'openai':keys.find(k=>k.startsWith('company:'))!.slice(8),family=keys.includes('family:gpqa')?'gpqa':keys.find(k=>k.startsWith('family:'))!.slice(7),versionKey=keys.includes('version:gpqa:diamond')?'version:gpqa:diamond':keys.find(k=>k.startsWith('version:'))!,version=versionKey.split(':').slice(1).join('/');
-  const paths=['/stats',`/models/${model}`,`/companies/${company}`,`/benchmarks/${family}`,`/benchmarks/${version}`];
+  const paths=['/stats','/home-panels',`/models/${model}`,`/companies/${company}`,`/benchmarks/${family}`,`/benchmarks/${version}`];
   for(const [route,sorts] of [['models',['name','released','published','company','registry_no']],['benchmarks',['name','released','version']],['companies',['name','established','latest_model']]] as const) {
     paths.push('/'+route,'/'+route+'?page=2','/'+route+'?limit=100','/'+route+'?limit=500','/'+route+'?q=g');
     for(const sort of sorts) for(const order of ['asc','desc']) paths.push(`/${route}?sort=${sort}&order=${order}`);

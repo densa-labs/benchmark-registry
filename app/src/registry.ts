@@ -8,7 +8,10 @@ import type {
   ResultRow,
 } from "../worker/api";
 import { diagnoseApiFailure } from "./diagnostics";
+import type { HomePanels } from "../worker/home-panels";
 import type { FeaturedResult } from "../worker/featured-result";
+import { parseComparisonState, type ComparisonResponse } from "./compare";
+import { ApiError } from "../worker/api";
 
 export type ModelListEntry = ModelSummary & { featured_result?: FeaturedResult | null };
 
@@ -26,8 +29,7 @@ export interface HomePageResponse {
       versions: number;
     };
   };
-  recent_models: ModelListResponse;
-  recently_added: ModelListResponse;
+  panels: HomePanels;
   all_models: ModelListEntry[];
 }
 
@@ -121,6 +123,7 @@ export interface SearchResponse {
 
 export type RegistryRoute =
   | { kind: "home" }
+  | { kind: "compare" }
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
   | { kind: "benchmarks" }
@@ -135,6 +138,7 @@ export type RegistryRoute =
 
 export type LoadedRegistryRoute =
   | { kind: "home"; payload: HomePageResponse }
+  | { kind: "compare"; payload: ComparisonResponse }
   | { kind: "models"; payload: ModelListResponse }
   | { kind: "model"; payload: ModelDetailResponse }
   | { kind: "benchmarks"; payload: BenchmarkListResponse }
@@ -153,6 +157,8 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   if (pathname === "/") {
     return { kind: "home" };
   }
+
+  if (pathname === "/compare" || pathname === "/compare/") return { kind: "compare" };
 
   for (const kind of ["legal", "privacy", "terms"] as const) {
     if (pathname === `/${kind}` || pathname === `/${kind}/`) return { kind };
@@ -201,7 +207,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "compare" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -308,26 +314,25 @@ export async function loadRegistryRoute(
 ): Promise<LoadedRegistryRoute> {
   if (route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
+  if (route.kind === "compare") return { kind: "compare", payload: await loadComparison(search, fetcher, signal) };
+
   if (route.kind === "home") {
     const request = (path: string) => fetcher(path, {
       headers: { Accept: "application/json" },
       signal,
     });
-    const [statsResponse, recentResponse, addedResponse, directoryResponse] = await Promise.all([
+    const [statsResponse, panelsResponse, directoryResponse] = await Promise.all([
       request("/api/stats"),
-      request("/api/models?limit=50"),
-      request("/api/models?sort=published&order=desc&limit=50"),
+      request("/api/home-panels"),
       request("/api/models?sort=name&order=asc&limit=500"),
     ]);
-    const [statsBody, recentBody, addedBody, directoryBody]: unknown[] = await Promise.all([
+    const [statsBody, panelsBody, directoryBody]: unknown[] = await Promise.all([
       statsResponse.json(),
-      recentResponse.json(),
-      addedResponse.json(),
+      panelsResponse.json(),
       directoryResponse.json(),
     ]);
     if (!statsResponse.ok) throw new RegistryClientError(errorMessage(statsBody));
-    if (!recentResponse.ok) throw new RegistryClientError(errorMessage(recentBody));
-    if (!addedResponse.ok) throw new RegistryClientError(errorMessage(addedBody));
+    if (!panelsResponse.ok) throw new RegistryClientError(errorMessage(panelsBody));
     if (!directoryResponse.ok) throw new RegistryClientError(errorMessage(directoryBody));
     const directory = directoryBody as ModelListResponse;
     const remainingPages = Array.from(
@@ -344,8 +349,7 @@ export async function loadRegistryRoute(
       kind: "home",
       payload: {
         stats: statsBody as HomePageResponse["stats"],
-        recent_models: recentBody as ModelListResponse,
-        recently_added: addedBody as ModelListResponse,
+        panels: panelsBody as HomePanels,
         all_models: [directory, ...remaining].flatMap((page) => page.data),
       },
     };
@@ -389,6 +393,52 @@ export async function loadRegistryRoute(
     case "company":
       return { kind: "company", payload: body as CompanyDetailResponse };
   }
+}
+
+async function loadComparison(search: string, fetcher: typeof fetch, signal?: AbortSignal): Promise<ComparisonResponse> {
+  const issues: string[] = [];
+  let state;
+  try { state = parseComparisonState(search); }
+  catch (error) { issues.push(error instanceof Error ? error.message : "This comparison URL is invalid."); state = parseComparisonState(""); }
+  const request = async <T,>(path: string, allowMissing = false): Promise<T | null> => {
+    let response: Response;
+    try { response = await fetcher(path, { headers: { Accept: "application/json" }, signal }); }
+    catch (error) {
+      // The pinned Worker reader throws API errors directly during SSR.
+      if (allowMissing && error instanceof ApiError && error.status === 404) return null;
+      throw error;
+    }
+    const body: unknown = await response.json();
+    if (allowMissing && response.status === 404) return null;
+    if (!response.ok) { diagnoseApiFailure(response.status); throw new RegistryClientError(errorMessage(body)); }
+    return body as T;
+  };
+  const directory = async () => {
+    const first = (await request<ModelListResponse>("/api/models?sort=name&order=asc&limit=500"))!;
+    const models = [...first.data];
+    for (let page = 2; page <= first.page.total_pages; page++) {
+      const next = (await request<ModelListResponse>(`/api/models?sort=name&order=asc&limit=500&page=${page}`))!;
+      models.push(...next.data);
+    }
+    return models;
+  };
+  const model = async (registryNo: string) => {
+    if (!registryNo) return null;
+    const path = `/api/models/${encodeURIComponent(registryNo)}?view=latest&limit=500`;
+    const first = await request<ModelDetailResponse>(path, true);
+    if (!first) return null;
+    const results = [...first.data.results];
+    for (let page = 2; page <= first.data.result_page.total_pages; page++) {
+      const next = (await request<ModelDetailResponse>(`${path}&page=${page}`))!;
+      results.push(...next.data.results);
+    }
+    return { data: { ...first.data, results } };
+  };
+  const [models, a, b] = await Promise.all([directory(), model(state.models[0]), model(state.models[1])]);
+  for (const [side, selected] of [a, b].entries()) {
+    if (!selected && state.models[side]) issues.push(`Model ${side === 0 ? "A" : "B"} (Registry No. ${state.models[side]}) was not found. Choose another model.`);
+  }
+  return { models, selected: [a, b], issues };
 }
 
 export type QueryChange = string | number | null | undefined;

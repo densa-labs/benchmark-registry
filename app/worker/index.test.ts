@@ -91,6 +91,8 @@ function defaultResponder(tag: string): unknown[] {
     "model:redirect": [],
     "model:detail": [{ id: 2, ...modelRow, source_url: "https://example.com/model", aliases: '["gpt-4.1-2025-04-14"]' }],
     "model-results:list": [resultRow],
+    "home:additions": [resultRow],
+    "home:benchmarks": [{ benchmark_name: "SWE-bench Verified", benchmark_slug: "swe-bench-verified", benchmark_aliases: '["SWE-bench"]', model_count: 2, result_count: 3 }],
     "benchmarks:list": [{
       benchmark_name: versionRow.benchmark_name,
       benchmark_slug: versionRow.benchmark_slug,
@@ -163,6 +165,15 @@ async function api(path: string, responder?: QueryResponder) {
 }
 
 describe("read API response contracts", () => {
+  it("returns bounded homepage panels with insertion order and primary sources", async () => {
+    const { response, body, calls } = await api("/api/home-panels");
+    expect(response.status).toBe(200);
+    expect(body).toMatchObject({ explore_benchmarks: [{ model_count: 2, result_count: 3 }], latest_additions: [{ model: { name: "GPT-4.1" }, score: { display: "54.6%" }, primary_source_url: "https://example.com/result" }] });
+    expect(calls.find(call => call.sql.includes("home:additions"))?.sql).toContain("ORDER BY r.id DESC LIMIT ?");
+    expect(calls.every(call => call.bindings.includes(5))).toBe(true);
+    expect((await api("/api/home-panels?sort=score")).response.status).toBe(400);
+  });
+
   it("returns exact Registry counts, including zero results", async () => {
     const { response, body, calls } = await api("/api/stats");
     expect(response.status).toBe(200);

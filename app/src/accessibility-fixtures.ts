@@ -11,7 +11,7 @@ const models = { data: [model], page };
 
 // Small typed presentation fixtures; canonical/data equivalence stays in Worker tests.
 export const accessibilityRoutes: { path: string; loaded: LoadedRegistryRoute }[] = [
-  { path: "/", loaded: { kind: "home", payload: { recent_models: models, recently_added: models, all_models: [model], stats: { data: { models: 1, benchmarks: 1, versions: 1, benchmark_results: 1 } } } } },
+  { path: "/", loaded: { kind: "home", payload: { panels: { explore_benchmarks: [{ benchmark, model_count: 1, result_count: 1 }], latest_additions: [result] }, all_models: [model], stats: { data: { models: 1, benchmarks: 1, versions: 1, benchmark_results: 1 } } } } },
   { path: "/models", loaded: { kind: "models", payload: models } },
   { path: "/models/10001", loaded: { kind: "model", payload: { data: { model: { ...model, source_url: "https://example.com/model", aliases: [] }, redirected_from: null, results: [result], result_page: page } } } },
   { path: "/benchmarks", loaded: { kind: "benchmarks", payload: { data: [{ benchmark, latest_version: version.version, latest_released_at: version.released_at, latest_release_precision: version.release_precision }], page } } },

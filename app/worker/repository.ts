@@ -1,4 +1,5 @@
 import { EXACT_RESULT_ELIGIBLE_SQL } from "./result-links";
+import { HOME_PANEL_LIMIT, type HomePanels } from "./home-panels";
 import { highestRecordedResult } from "./featured-result";
 import {
   ApiError,
@@ -490,6 +491,35 @@ export class RegistryRepository {
       (SELECT count(*) FROM benchmark_versions) AS versions`);
     if (row === null) throw new Error("Registry statistics query returned no row.");
     return { data: row };
+  }
+
+  async homePanels(): Promise<HomePanels> {
+    const benchmarks = await this.all<{
+      benchmark_name: string; benchmark_slug: string; benchmark_aliases: string;
+      model_count: number; result_count: number;
+    }>(`/* home:benchmarks */ SELECT b.canonical_name AS benchmark_name,
+      b.slug AS benchmark_slug, ${BENCHMARK_ALIASES} AS benchmark_aliases,
+      count(DISTINCT m.id) AS model_count, count(r.id) AS result_count
+      FROM benchmarks b
+      JOIN benchmark_versions bv ON bv.benchmark_id = b.id
+      LEFT JOIN results r ON r.benchmark_version_id = bv.id
+        AND NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id = r.model_id)
+      LEFT JOIN models m ON m.id = r.model_id
+      GROUP BY b.id
+      ORDER BY model_count DESC, b.normalized_name ASC, b.slug ASC LIMIT ?`, [HOME_PANEL_LIMIT]);
+    // The controlled ingestor assigns increasing result IDs. Report dates can
+    // predate ingestion, so they must not determine Registry addition order.
+    const additions = await this.all<ResultDbRow>(`/* home:additions */ SELECT
+      ${RESULT_COLUMNS} ${RESULT_JOINS}
+      WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id = r.model_id)
+      ORDER BY r.id DESC LIMIT ?`, [HOME_PANEL_LIMIT]);
+    return {
+      explore_benchmarks: benchmarks.map(row => ({
+        benchmark: { name: row.benchmark_name, slug: row.benchmark_slug, aliases: parseJsonArray(row.benchmark_aliases) },
+        model_count: row.model_count, result_count: row.result_count,
+      })),
+      latest_additions: additions.map(resultFromRow),
+    };
   }
 
   async models(params: ParsedListParams) {

@@ -1,9 +1,11 @@
 import type { BenchmarkFamilyResponse, BenchmarkListResponse, BenchmarkVersionResponse, CompanyDetailResponse, CompanyListResponse, ModelDetailResponse, ModelListResponse } from '../src/registry';
 import type { ResultRow } from './api';
+import { HOME_PANEL_LIMIT, type HomePanels } from './home-panels';
 import type { SearchEntity } from './search';
 import type { SearchRelationship } from './search-response';
 export type ReadEnvironment='staging'|'production'|'local';
 export type ReadData={
+  'home-panels':HomePanels;
   models:{response:ModelListResponse;fields:{identity:string;name:string;company:string;released:string;aliases:string}[]};
   benchmarks:{response:BenchmarkListResponse;fields:{identity:string;released:string}[]};
   companies:{response:CompanyListResponse;fields:{identity:string;established:string|null}[]};
@@ -26,7 +28,7 @@ export interface ReadManifest {
 }
 export interface Publication {schema:1;environment:ReadEnvironment;current:GenerationRef;previous?:GenerationRef}
 export const logicalKind=(key:string)=>key.startsWith('model:')?'model':key.startsWith('family:')?'family':key.startsWith('version:')?'version':key.startsWith('company:')?'company':key;
-export const validKey=(key:string)=>['models','benchmarks','companies','stats','redirects','inventory','search-entities','search-relationships'].includes(key) || /^(model:[0-9]+|company:[a-z0-9-]+|family:[a-z0-9-]+|version:[a-z0-9-]+:[a-z0-9._-]+)$/u.test(key);
+export const validKey=(key:string)=>['models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'].includes(key) || /^(model:[0-9]+|company:[a-z0-9-]+|family:[a-z0-9-]+|version:[a-z0-9-]+:[a-z0-9._-]+)$/u.test(key);
 export async function digest(text:string) {return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)))].map(byte=>byte.toString(16).padStart(2,'0')).join('');}
 export class MaterializationFailure extends Error {}
 export function validateManifest(value:unknown,environment:ReadEnvironment):asserts value is ReadManifest {
@@ -54,6 +56,12 @@ export function validateObject(value:unknown,key:string,environment:ReadEnvironm
       const identities=new Set(fields.map(field=>field.identity));
       for(const row of data.results) if(!/^[a-f0-9]{64}$/u.test(row.result_key) || !identities.has(row.result_key) || row.exact_result_href!==null && !row.exact_result_href.endsWith(`result=${row.result_key}`)) throw new MaterializationFailure('Invalid result reference.');
     }
+  } else if(kind==='home-panels') {
+    const panels=o.data as HomePanels;
+    if(!Array.isArray(panels.explore_benchmarks) || !Array.isArray(panels.latest_additions)
+      || panels.explore_benchmarks.length>HOME_PANEL_LIMIT || panels.latest_additions.length>HOME_PANEL_LIMIT
+      || panels.explore_benchmarks.some(row=>!row.benchmark?.slug || !Number.isSafeInteger(row.model_count) || row.model_count<0 || !Number.isSafeInteger(row.result_count) || row.result_count<row.model_count)
+      || panels.latest_additions.some(row=>!/^[a-f0-9]{64}$/u.test(row.result_key))) throw new MaterializationFailure('Invalid homepage panels.');
   } else if(kind==='family') {
     const data=(d.data as {benchmark:{slug:string};versions:unknown[]});
     if(data?.benchmark?.slug!==key.slice(7) || !Array.isArray(data.versions)) throw new MaterializationFailure('Invalid benchmark family.');

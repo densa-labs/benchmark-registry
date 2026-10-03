@@ -36,7 +36,7 @@ async function bootstrap(f:ReturnType<typeof fixture>) {
   const publication=(await readPublication(f.store,'local'))!;
   return {build,evidence,publication};
 }
-const apiPaths=['/api/stats','/api/models','/api/models?sort=name&order=desc','/api/models?sort=released&order=asc&limit=100','/api/models?sort=published&order=desc','/api/models?company=openai&q=gpt','/api/models?page=2','/api/models/10001','/api/models/10001?view=history&sort=source&order=desc','/api/models/10001?q=gpqa','/api/benchmarks','/api/benchmarks?sort=released&order=asc','/api/benchmarks?sort=version&order=desc&q=g','/api/benchmarks/gpqa','/api/benchmarks/gpqa/diamond','/api/benchmarks/gpqa/diamond?view=history&company=openai&q=gpt&sort=registry_no&order=desc','/api/companies','/api/companies?sort=established&order=desc','/api/companies?sort=latest_model&order=asc&q=anth','/api/companies/openai?view=history&sort=reported_at&order=asc','/api/search?q=gpt','/api/search?q=GPQA','/api/search?q=10001','/api/search?q=GPT-4.1%20GPQA','/api/search?q=%25','/api/models/99999','/api/models?sort=score'];
+const apiPaths=['/api/home-panels','/api/stats','/api/models','/api/models?sort=name&order=desc','/api/models?sort=released&order=asc&limit=100','/api/models?sort=published&order=desc','/api/models?company=openai&q=gpt','/api/models?page=2','/api/models/10001','/api/models/10001?view=history&sort=source&order=desc','/api/models/10001?q=gpqa','/api/benchmarks','/api/benchmarks?sort=released&order=asc','/api/benchmarks?sort=version&order=desc&q=g','/api/benchmarks/gpqa','/api/benchmarks/gpqa/diamond','/api/benchmarks/gpqa/diamond?view=history&company=openai&q=gpt&sort=registry_no&order=desc','/api/companies','/api/companies?sort=established&order=desc','/api/companies?sort=latest_model&order=asc&q=anth','/api/companies/openai?view=history&sort=reported_at&order=asc','/api/search?q=gpt','/api/search?q=GPQA','/api/search?q=10001','/api/search?q=GPT-4.1%20GPQA','/api/search?q=%25','/api/models/99999','/api/models?sort=score'];
 it('bootstraps verified projections and preserves API query/search/sort/pagination/status semantics with zero public D1 reads',async()=>{
   const f=fixture();const {evidence}=await bootstrap(f);expect(evidence.objects).toBeGreaterThan(25);
   for(const path of apiPaths) {
@@ -108,9 +108,9 @@ it('new result regenerates only affected scopes and retires exact eligibility co
   f.sqlite.prepare('INSERT INTO result_evaluators SELECT ?,evaluator_organization_id FROM result_evaluators WHERE result_id=?').run(id,original.id);
   f.sqlite.exec('COMMIT');
   const next=(await buildGeneration(f.db,'local',build.manifest))!;
-  expect(next.rebuilt).toHaveLength(6);expect(next.rebuilt).toContain('search-relationships');expect(next.rebuilt).not.toContain('search-entities');expect(next.rebuilt).not.toContain('models');expect(next.rebuilt).not.toContain('benchmarks');
+  expect(next.rebuilt).toHaveLength(7);expect(next.rebuilt).toContain('home-panels');expect(next.rebuilt).toContain('search-relationships');expect(next.rebuilt).not.toContain('search-entities');expect(next.rebuilt).not.toContain('models');expect(next.rebuilt).not.toContain('benchmarks');
   const evidence=await publishGeneration(f.store,next,f.db,publication);
-  expect(evidence.objectWrites).toBeLessThanOrEqual(6);expect(evidence.ambiguous).toBeGreaterThan(0);
+  expect(evidence.objectWrites).toBeLessThanOrEqual(7);expect(evidence.ambiguous).toBeGreaterThan(0);
   expect((await readPublication(f.store,'local'))?.previous).toEqual(publication.current);
   // All changed payloads are in one value: missing standalone writes cannot split a generation.
   for(const hash of next.objects.keys()) f.store.entries.delete('objects/'+hash);
@@ -205,4 +205,39 @@ it.each([
   }
   const materialized=new MaterializedRepository(next.manifest,async(key)=>JSON.parse(f.store.entries.get('objects/'+next.manifest.objects[key])!).data);
   expect(await materialized.sitemapPaths()).toEqual(await new RegistryRepository(f.db).sitemapPaths());
+});
+
+it('refreshes homepage additions in insertion order when backfilling an old result, with zero public D1 reads', async () => {
+  const f=fixture(); const { build, publication }=await bootstrap(f);
+  const original=f.sqlite.prepare('SELECT * FROM results ORDER BY id LIMIT 1').get() as Record<string,string|number|null>;
+  const id=Number((f.sqlite.prepare('SELECT max(id) AS n FROM results').get() as {n:number}).n)+1;
+  const row={...original,id,result_key:'e'.repeat(64),run_ref:'homepage-backfill',reported_at:'2010-01-01',reported_precision:'date'};
+  f.sqlite.exec('BEGIN');
+  f.sqlite.prepare(`INSERT INTO results(${Object.keys(row).join(',')}) VALUES(${Object.keys(row).map(()=>'?').join(',')})`).run(...Object.values(row));
+  f.sqlite.prepare('INSERT INTO result_evaluators SELECT ?,evaluator_organization_id FROM result_evaluators WHERE result_id=?').run(id,original.id);
+  f.sqlite.exec('COMMIT');
+  const next=(await buildGeneration(f.db,'local',build.manifest))!;
+  expect(next.rebuilt).toContain('home-panels');
+  await publishGeneration(f.store,next,f.db,publication);
+  const response=await worker.fetch(new Request('https://benchmarkregistry.org/api/home-panels'),f.env);
+  const panels=await response.json() as import('./home-panels').HomePanels;
+  expect(panels.latest_additions[0]).toMatchObject({result_key:row.result_key,reported_at:'2010-01-01'});
+  expect(panels.latest_additions).toHaveLength(5);
+  const coverage=panels.explore_benchmarks.find(entry=>entry.benchmark.slug===panels.latest_additions[0].benchmark.slug)!;
+  const counts=f.sqlite.prepare(`SELECT count(DISTINCT r.model_id) AS models,count(*) AS results FROM results r
+    JOIN benchmark_versions bv ON bv.id=r.benchmark_version_id JOIN benchmarks b ON b.id=bv.benchmark_id
+    WHERE b.slug=? AND NOT EXISTS(SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=r.model_id)`).get(coverage.benchmark.slug) as {models:number;results:number};
+  expect(coverage).toMatchObject({model_count:counts.models,result_count:counts.results});
+  expect(response.headers.get('X-Registry-D1-Rows')).toBe('0');
+  expect(f.env.DB.prepare).not.toHaveBeenCalled();
+});
+
+it('bootstraps homepage panels in older generations without a canonical data change', async () => {
+  const f=fixture(); const {build}=await bootstrap(f);
+  const previous={...build.manifest,objects:{...build.manifest.objects},inlineObjects:{...build.manifest.inlineObjects}};
+  delete previous.inlineObjects[previous.objects['home-panels']]; delete previous.objects['home-panels'];
+  const next=(await buildGeneration(f.db,'local',previous))!;
+  expect(next.rebuilt).toEqual(['home-panels']);
+  expect(next.manifest.objects['home-panels']).toBeTruthy();
+  expect(await buildGeneration(f.db,'local',next.manifest)).toBeNull();
 });

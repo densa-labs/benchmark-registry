@@ -96,9 +96,9 @@ it("prepares main navigation from the edge so the first click uses browser data"
     return href === "/benchmarks" ? new Response(doc({kind:"benchmarks",payload:{data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}}),{headers:{"X-Registry-Cache":"hit","X-Registry-Revision":token}}) : new Response(null,{status:204});
   });
   vi.stubGlobal("fetch",fetcher);await mount();await act(()=>vi.advanceTimersByTime(400));
-  expect(fetcher).toHaveBeenCalledTimes(2); // Current /models is already loaded.
+  expect(fetcher).toHaveBeenCalledTimes(3); // Current /models is loaded; benchmarks, organizations, and compare are prepared.
   await click('.primary-nav a[href="/benchmarks"]');
-  expect(window.location.pathname).toBe("/benchmarks");expect(fetcher).toHaveBeenCalledTimes(2);
+  expect(window.location.pathname).toBe("/benchmarks");expect(fetcher).toHaveBeenCalledTimes(3);
   expect(container.querySelector('[aria-busy="true"]')).toBeNull();
 });
 it("reuses repeated identical searches without storing persistent history",async()=>{

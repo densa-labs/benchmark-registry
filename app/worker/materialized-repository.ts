@@ -4,7 +4,7 @@ import type { RegistryRepository } from './repository';
 import { searchResponse } from './search-response';
 import type { ReadData, ReadManifest, ResultFields } from './read-model';
 import { highestRecordedResult, type FeaturedResult } from './featured-result';
-export type RegistryReader=Pick<RegistryRepository,'modelRedirectTarget'|'metadataModel'|'metadataCompany'|'metadataBenchmark'|'metadataResult'|'sitemapPaths'|'stats'|'models'|'model'|'benchmarks'|'benchmark'|'benchmarkVersion'|'companies'|'company'|'search'>;
+export type RegistryReader=Pick<RegistryRepository,'modelRedirectTarget'|'metadataModel'|'metadataCompany'|'metadataBenchmark'|'metadataResult'|'sitemapPaths'|'stats'|'homePanels'|'models'|'model'|'benchmarks'|'benchmark'|'benchmarkVersion'|'companies'|'company'|'search'>;
 const binary=(a:string|null,b:string|null)=>{
   if(a===b) return 0;if(a===null) return -1;if(b===null) return 1;
   const x=Array.from(a),y=Array.from(b);
@@ -22,6 +22,7 @@ export class MaterializedRepository implements RegistryReader {
   private get<K extends keyof ReadData>(key:string):Promise<ReadData[K]> {if(!this.manifest.objects[key]) throw new ApiError(404,'not_found',key.startsWith('model:')?'Model not found.':key.startsWith('company:')?'Company not found.':key.startsWith('family:')?'Benchmark not found.':'Benchmark version not found.');return this.read<K>(key);}
   async modelRedirectTarget(no:string) {return (await this.get<'redirects'>('redirects')).find(row=>row.source===no)?.target ?? null;}
   async stats() {return this.get<'stats'>('stats');}
+  async homePanels() {return this.get<'home-panels'>('home-panels');}
   async sitemapPaths() {return this.get<'inventory'>('inventory');}
   async metadataModel(no:string) {
     if(!this.manifest.objects[`model:${no}`]) return null;

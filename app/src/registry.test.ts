@@ -38,64 +38,26 @@ describe("registry route data loading", () => {
       .toEqual({ kind: "not-found" });
   });
 
-  it("loads homepage statistics, both ordered feeds, and the complete model directory", async () => {
-    const recent = {
-      data: [{ registry_no: "10002", name: "Recent release" }],
-      page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
-    };
-    const added = {
-      data: [{ registry_no: "30001", name: "Recent addition" }],
-      page: { number: 1, limit: 50, total_items: 1, total_pages: 1 },
-    };
-    const directory = {
-      data: [{ registry_no: "10001", name: "Alpha" }],
-      page: { number: 1, limit: 500, total_items: 2, total_pages: 2 },
-    };
-    const finalPage = {
-      data: [{ registry_no: "10002", name: "Beta" }],
-      page: { number: 2, limit: 500, total_items: 2, total_pages: 2 },
-    };
+  it("loads homepage panels and the complete model directory", async () => {
+    const panels = { explore_benchmarks: [], latest_additions: [] };
+    const directory = { data: [{ registry_no: "10001", name: "Alpha" }], page: { number: 1, limit: 500, total_items: 2, total_pages: 2 } };
+    const finalPage = { data: [{ registry_no: "10002", name: "Beta" }], page: { number: 2, limit: 500, total_items: 2, total_pages: 2 } };
     const stats = { data: { benchmark_results: 594, models: 2, benchmarks: 53, versions: 104 } };
     const fetcher = vi.fn().mockImplementation((path: string) => Promise.resolve(Response.json(
-      path === "/api/stats" ? stats
-        : path.includes("sort=published") ? added
-        : path.endsWith("page=2") ? finalPage
-        : path.includes("sort=name") ? directory
-        : recent,
+      path === "/api/stats" ? stats : path === "/api/home-panels" ? panels : path.endsWith("page=2") ? finalPage : directory,
     )));
-
     const loaded = await loadRegistryRoute({ kind: "home" }, "", fetcher);
+    expect(fetcher.mock.calls.map(([path]) => path)).toEqual([
+      "/api/stats", "/api/home-panels", "/api/models?sort=name&order=asc&limit=500", "/api/models?sort=name&order=asc&limit=500&page=2",
+    ]);
+    expect(loaded).toEqual({ kind: "home", payload: { stats, panels, all_models: [...directory.data, ...finalPage.data] } });
+  });
 
-    expect(fetcher).toHaveBeenNthCalledWith(
-      1,
-      "/api/stats",
-      expect.objectContaining({ headers: { Accept: "application/json" } }),
-    );
-    expect(fetcher).toHaveBeenNthCalledWith(
-      2,
-      "/api/models?limit=50",
-      expect.objectContaining({ headers: { Accept: "application/json" } }),
-    );
-    expect(fetcher).toHaveBeenNthCalledWith(
-      3,
-      "/api/models?sort=published&order=desc&limit=50",
-      expect.objectContaining({ headers: { Accept: "application/json" } }),
-    );
-    expect(fetcher).toHaveBeenNthCalledWith(
-      4,
-      "/api/models?sort=name&order=asc&limit=500",
-      expect.objectContaining({ headers: { Accept: "application/json" } }),
-    );
-    expect(fetcher).toHaveBeenNthCalledWith(
-      5,
-      "/api/models?sort=name&order=asc&limit=500&page=2",
-      expect.objectContaining({ headers: { Accept: "application/json" } }),
-    );
-    expect(loaded).toEqual({
-      kind: "home",
-      payload: { stats, recent_models: recent, recently_added: added,
-        all_models: [...directory.data, ...finalPage.data] },
-    });
+  it("surfaces homepage panel failures", async () => {
+    const fetcher = vi.fn().mockImplementation((path: string) => Promise.resolve(
+      path === "/api/home-panels" ? Response.json({ error: { message: "Panels unavailable." } }, { status: 503 }) : Response.json({ data: [], page: { total_pages: 0 } }),
+    ));
+    await expect(loadRegistryRoute({ kind: "home" }, "", fetcher)).rejects.toEqual(new RegistryClientError("Panels unavailable."));
   });
 
   it("loads company list and detail routes through canonical API paths", async () => {

@@ -17,15 +17,31 @@ It is not a leaderboard.
 Includes:
 
 - global search,
-- Recent Models,
-- Recently Added.
+- Explore Benchmarks,
+- Latest Additions,
+- All Models (the complete alphabetical model directory).
 
-No Top Models.
+Explore Benchmarks shows at most five benchmark families, with distinct model
+counts and retained result counts across their versions. Families with more
+models appear first; ties use normalized benchmark name, then slug ascending.
+Families without results may appear with zero counts. Redirected model records
+are excluded from these counts.
 
-Recent Models uses the precision-aware `release_at` ordering in
-`data-contract.md`, descending, then canonical model name ascending. Recently
-Added is ordered by immutable Registry `published_at`
-descending, then Registry No. ascending. Neither section is a ranking.
+Latest Additions shows at most five newly inserted benchmark result records,
+ordered by the controlled ingestor's increasing result ID descending. Each row
+links to the model, benchmark version, and primary source and shows the recorded
+score and any result-level reasoning context. Result report dates are not
+Registry addition timestamps and do not determine this feed's order. Redirected
+model records are excluded. Existing results are not promoted by metadata or
+citation corrections.
+
+No Top Models. Neither panel ranks models or aggregates their scores.
+
+`GET /api/home-panels` exposes these two small panels from the same published
+read generation as the other read endpoints. It accepts no query parameters.
+The producer refreshes the panels on canonical updates and adds this projection
+to older generations on its next run, even without a data change. Existing
+generations must be rematerialized before deploying the new homepage.
 
 ## Routes
 
@@ -33,6 +49,8 @@ descending, then Registry No. ascending. Neither section is a ranking.
 /
 /models
 /models/{registry_no}
+
+/compare
 
 /benchmarks
 /benchmarks/{slug}
@@ -44,6 +62,35 @@ descending, then Registry No. ascending. Neither section is a ranking.
 
 Route slugs and benchmark version segments are the immutable route keys defined
 in `data-contract.md`; display names are never substituted into canonical URLs.
+
+## Compare models
+
+`/compare` compares two model selections using existing Registry metadata and
+the latest result per logical series from `data-contract.md`. Reasoning levels
+filter individual results; they remain result metadata.
+
+The page has sticky model/reasoning selectors, followed by aligned Information
+rows (Organization, Released, Registry No., canonical Status, and Source).
+Benchmark rows put both selections' scores beside the benchmark name. Shared
+benchmarks appear first, then other benchmarks with `—` for a missing result.
+Search and All / Shared only controls filter these rows. Result pagination uses
+50 / 100 / 500 rows, with default 50.
+
+Match benchmark version and metric identities before displaying an unmatched
+pair of versions. Preserve every evaluator's latest series and its provenance.
+Explain differences in version, metric, or evaluator set as potentially
+non-equivalent. Matching recorded context does not establish identical
+methodology: the Registry does not currently record evaluation-protocol IDs.
+Expandable details expose each result's evaluator, version, metric, reasoning,
+reported date, and primary source. No winners, score averages, or rankings.
+
+Selections use shareable query state, for example
+`/compare?models=10001,20001&reasoning=high,max`. Empty reasoning slots mean
+not specified; `~` means use the model's first recorded reasoning level in
+alphabetical order (including the empty value). Arbitrary reasoning strings
+are individually percent-encoded before joining the slots. Search, filter,
+page, and limit also use URL state. The base page is indexable; parameterized
+comparisons remain noindex and retain their selection in canonical/share URLs.
 
 ## Model page
 

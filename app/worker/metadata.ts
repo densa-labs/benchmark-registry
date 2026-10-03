@@ -4,6 +4,7 @@ import { resolveRegistryRoute } from "../src/registry";
 import type { BenchmarkRef } from "./api";
 import type { RegistryReader } from "./materialized-repository";
 import { IS_STAGING } from "../src/build";
+import { comparisonHref, parseComparisonState } from "../src/compare";
 
 export interface DocumentMetadata {
   title: string;
@@ -36,6 +37,15 @@ async function pageMetadata(url: URL, repository?: RegistryReader): Promise<Docu
       return { title: SITE_NAME, description: "AI model benchmark results in one place | Benchmark Registry" };
     case "models":
       return { title: `Models | ${SITE_NAME}`, description: "AI models and their benchmark results" };
+    case "compare": {
+      let models: string[] = [];
+      try { models = parseComparisonState(url.search).models; } catch { /* Invalid UI state renders a recoverable selection error. */ }
+      const selected = await Promise.all(models.map(number => number ? requireRepository(repository).metadataModel(number) : null));
+      return {
+        title: selected.length === 2 && selected.every(Boolean) ? `${selected[0]!.name} vs ${selected[1]!.name} | ${SITE_NAME}` : `Compare models | ${SITE_NAME}`,
+        description: "Compare AI model information, reasoning levels, and source-backed benchmark results side by side.",
+      };
+    }
     case "benchmarks":
       return { title: `Benchmarks | ${SITE_NAME}`, description: "AI benchmarks and model evaluation results" };
     case "companies":
@@ -101,6 +111,12 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
   metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0;
   if (metadata.status === 404) return metadata;
   metadata.canonical = PRODUCTION_ORIGIN + path;
+  if (route.kind === "compare") {
+    try {
+      const state = parseComparisonState(url.search);
+      metadata.canonical = PRODUCTION_ORIGIN + comparisonHref({ ...state, query: "", sharedOnly: false, page: 1, limit: 50 });
+    } catch { /* Keep the clean base canonical for malformed selection state. */ }
+  }
   const keys = url.searchParams.getAll('result');
   if (route.kind === 'benchmark-version' && keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
     const result = await requireRepository(repository).metadataResult(route.slug, route.version, keys[0]);

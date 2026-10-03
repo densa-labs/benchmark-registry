@@ -121,7 +121,8 @@ it("adds static legal sitemap paths exactly once to an existing materialized inv
   const repository = { sitemapPaths: async () => ["/", "/models", "/legal"] } as unknown as RegistryReader;
   const response = await handleRequest(new Request("https://benchmarkregistry.org/sitemap.xml"), env, repository);
   const xml = await response.text();
-  expect([...xml.matchAll(/<loc>/gu)]).toHaveLength(5);
+  expect([...xml.matchAll(/<loc>/gu)]).toHaveLength(6);
+  expect([...xml.matchAll(/https:\/\/benchmarkregistry.org\/compare</gu)]).toHaveLength(1);
   for (const [kind] of pages) expect([...xml.matchAll(new RegExp(`https://benchmarkregistry.org/${kind}<`, "g"))]).toHaveLength(1);
   expect(xml).not.toMatch(/mailto:|staging\./u);
 });

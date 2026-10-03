@@ -14,6 +14,7 @@ import {
 import { CompaniesPage, CompanyDetailPage } from "./company-pages";
 import { HomeLoadingState, HomePage } from "./home-page";
 import { ModelDetailPage, ModelsPage } from "./model-pages";
+import { ComparePage } from "./compare-page";
 import {
   loadRegistryRoute,
   RegistryClientError,
@@ -32,6 +33,7 @@ const navigation = [
   { href: "/models", label: "Models" },
   { href: "/benchmarks", label: "Benchmarks" },
   { href: "/companies", label: "Organizations" },
+  { href: "/compare", label: "Compare" },
 ];
 
 function renderPendingRoute(route: RegistryRoute) {
@@ -108,7 +110,7 @@ export function App({ initial }: { initial?: InitialDocument }) {
       navigation={navigation}
       activeHref={state.status === "error" || route.kind === "home" || route.kind === "not-found" || isLegalKind(route.kind)
         ? undefined
-        : route.kind.startsWith("benchmark")
+        : route.kind === "compare" ? "/compare" : route.kind.startsWith("benchmark")
         ? "/benchmarks"
         : route.kind === "companies" || route.kind === "company"
           ? "/companies"
@@ -124,6 +126,8 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
   let content;
   if (loaded.kind === "home") {
     content = <HomePage response={loaded.payload} />;
+  } else if (loaded.kind === "compare") {
+    content = <ComparePage response={loaded.payload} currentSearch={currentSearch} />;
   } else if (loaded.kind === "models") {
     content = <ModelsPage response={loaded.payload} currentSearch={currentSearch} />;
   } else if (loaded.kind === "model") {
@@ -158,7 +162,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
   if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
     <AppShell navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
-      ? undefined : loaded.kind.startsWith("benchmark") ? "/benchmarks"
+      ? undefined : loaded.kind === "compare" ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}
       <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{content}</Fragment>

@@ -131,7 +131,7 @@ sequence_exception_reason
 ```
 
 `published_at` is the immutable timestamp when the Registry first made the model
-public. It powers “Recently Added” and is distinct from `release_at`.
+public. It powers the model publication sort and is distinct from `release_at`.
 
 `status` is one of `preview`, `active`, `deprecated`, or `stealth`. Status changes
 do not change model identity or Registry No. Redirected stealth records remain in

@@ -1,0 +1,282 @@
+{
+  "scope": "Explore Benchmarks and Latest Additions above All Models",
+  "release_baseline": "7f4526c663d527a976b47ccc5462fa890e40dc77",
+  "isolated_homepage_release": true,
+  "local_checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "tests_passed": 391,
+    "tests_skipped": 1,
+    "staging_build_verification": "passed",
+    "production_build_verification": "passed",
+    "diff_check": "passed"
+  },
+  "browser_checks": {
+    "staging_mobile_width": 390,
+    "production_mobile_width": 390,
+    "horizontal_overflow": false,
+    "entries_per_panel": 5,
+    "benchmark_navigation": "passed",
+    "production_exact_result_navigation": "passed",
+    "production_keyboard_focus": "passed",
+    "production_console_errors": []
+  },
+  "staging": {
+    "worker_version": "159aef20-cd18-4297-a586-173ac15a7f51",
+    "publication": {
+      "environment": "staging",
+      "status": "PUBLISHED",
+      "objects": 281,
+      "bytes": 3113858,
+      "canonicalUrls": 849,
+      "approvedExact": 573,
+      "ambiguous": 181,
+      "generation": "8d9f668255494b8cba456c428540b33d",
+      "canonicalRevision": "6a6927c58c3a52062d813a685860185a",
+      "rebuilt": [
+        "home-panels"
+      ],
+      "removed": [],
+      "objectWrites": 0,
+      "manifestWrites": 1,
+      "pointerWrites": 2,
+      "d1Queries": 10,
+      "d1RowsRead": 2753,
+      "d1RowsWritten": 2,
+      "kvReads": 285,
+      "kvWrites": 3
+    },
+    "live_verification": {
+      "environment": "staging",
+      "origin": "https://staging.benchmarkregistry.org",
+      "checkedAt": "2026-10-01T04:02:08.604Z",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/api/home-panels",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/api/stats",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/benchmarks",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/models",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/benchmarks/terminal-bench",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/models/90005",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/benchmarks/beyond-aime/original",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/benchmarks/beyond-aime/original?view=history&result=99a7eb16b6de4bbd01c45558f43505a2d5cd0e551bf78f96a7d7789652143972",
+          "status": 200,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        },
+        {
+          "path": "/api/home-panels?sort=score",
+          "status": 400,
+          "revision": "8d9f668255494b8cba456c428540b33d",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, nofollow, noarchive"
+        }
+      ],
+      "counts": {
+        "benchmark_results": 754,
+        "models": 94,
+        "benchmarks": 56,
+        "versions": 107
+      },
+      "panels": {
+        "benchmarks": 5,
+        "additions": 5
+      },
+      "build": "<span id=\"last-updated-help\" class=\"visually-hidden\">Toggle between the data update date and the application build time.</span>",
+      "passed": true
+    }
+  },
+  "production": {
+    "worker_version": "69b75b5a-25ac-4a56-8f8c-8a9300550b45",
+    "publication": {
+      "environment": "production",
+      "status": "PUBLISHED",
+      "objects": 279,
+      "bytes": 3108943,
+      "canonicalUrls": 846,
+      "approvedExact": 572,
+      "ambiguous": 181,
+      "generation": "3549e44f1f9347ffbb5fb754574951ee",
+      "canonicalRevision": "72905c2c33982ff4655d1a412f8dca95",
+      "rebuilt": [
+        "home-panels"
+      ],
+      "removed": [],
+      "objectWrites": 1,
+      "manifestWrites": 1,
+      "pointerWrites": 2,
+      "d1Queries": 10,
+      "d1RowsRead": 2744,
+      "d1RowsWritten": 2,
+      "kvReads": 841,
+      "kvWrites": 4
+    },
+    "live_verification": {
+      "environment": "production",
+      "origin": "https://benchmarkregistry.org",
+      "checkedAt": "2026-10-01T04:05:39.518Z",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/api/home-panels",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, follow"
+        },
+        {
+          "path": "/api/stats",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, follow"
+        },
+        {
+          "path": "/benchmarks",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/models",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/benchmarks/terminal-bench",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/models/40003",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/benchmarks/cybergym/original",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/benchmarks/cybergym/original?view=history&result=e7092f30ee7acd165e92d88d5bb5a6228727dad4e7359dffc8388b695932a476",
+          "status": 200,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": null
+        },
+        {
+          "path": "/api/home-panels?sort=score",
+          "status": 400,
+          "revision": "3549e44f1f9347ffbb5fb754574951ee",
+          "d1Queries": "0",
+          "d1Rows": "0",
+          "robots": "noindex, follow"
+        }
+      ],
+      "counts": {
+        "benchmark_results": 753,
+        "models": 94,
+        "benchmarks": 55,
+        "versions": 106
+      },
+      "panels": {
+        "benchmarks": 5,
+        "additions": 5
+      },
+      "build": "<span id=\"last-updated-help\" class=\"visually-hidden\">Toggle between the data update date and the application build time.</span>",
+      "passed": true
+    }
+  },
+  "production_worker_sha256": "5d5a72a26c6e19c87ff0b3933502aeebbd30af6aa2a4458a825e18cbfbc446c5",
+  "release_source_sha256": {
+    "app/src/home-page.tsx": "c06d8a90013eb3f44ff3ba2020a5833ad1def6ebc8d7a8d7946e9ba198fc78dc",
+    "app/src/registry.ts": "cfc9e1e2830a7d45ffe6c80d7d94324578d052875b9ebdbce2fae9a1dbf7d49a",
+    "app/src/styles.css": "58bf17f1f99dd386e026d40bdf8941705d1e7c09fe31857de7ccb74d5bdd8612",
+    "app/worker/home-panels.ts": "a222147cfdfe90a9b441d38b2ebc2a598ec01bb1a1862e18758b8d384a0ca529",
+    "app/scripts/materialize.mjs": "1a520a61a18a98a2c1e0abc87793e9ebd557c12ad46ad935b4ee31421381ac5d"
+  }
+}

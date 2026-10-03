@@ -1,5 +1,6 @@
 import { ApiError } from "./api";
 import { parseParameters, type ParsedListParams } from "./params";
+import { parseComparisonState } from "../src/compare";
 
 const resultSorts = ["benchmark", "model", "company", "source", "registry_no", "reported_at"];
 export function apiParameters(url: URL): {path: string[]; params: ParsedListParams} {
@@ -9,7 +10,7 @@ export function apiParameters(url: URL): {path: string[]; params: ParsedListPara
   const entity = path[1];
   let allowed: string[];
   let sorts: string[] | undefined;
-  if (path.length === 2 && ["stats", "revision"].includes(entity)) allowed = [];
+  if (path.length === 2 && ["stats", "revision", "home-panels"].includes(entity)) allowed = [];
   else if (path.length === 2 && entity === "search") allowed = ["page", "limit", "q"];
   else if (path.length === 2 && entity === "models") {
     allowed = ["page", "limit", "q", "company", "sort", "order"];
@@ -47,7 +48,8 @@ export function normalizedResource(request: Request): string | null {
     // HTML defaults affect noindex and must stay distinct. Only parameter order merges.
     const api = new URL(url);
     api.pathname = "/api" + url.pathname.replace(/\/$/u, "");
-    if (url.pathname !== "/" && !["/robots.txt", "/sitemap.xml"].includes(url.pathname)) apiParameters(api);
+    if (url.pathname === "/compare" || url.pathname === "/compare/") parseComparisonState(url.search);
+    else if (url.pathname !== "/" && !["/robots.txt", "/sitemap.xml"].includes(url.pathname)) apiParameters(api);
     else if (url.searchParams.size) return null;
     if (url.searchParams.has("q")) return null;
   }

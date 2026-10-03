@@ -47,6 +47,23 @@ export async function verifyGeneration(store:ProducerStore,manifest:ReadManifest
       resultReferences.set(row.result_key,{model:row.model.registry_no,benchmark:row.benchmark.slug,version:row.benchmark_version_slug,displayVersion:row.benchmark_version,reasoning:row.reasoning_level});
     }
   }
+  // Homepage counts and citations must match this exact published generation.
+  if(all.has('home-panels')) {
+    const panels=all.get('home-panels')!.data as ReadData['home-panels'];
+    const rows=[...all].filter(([key])=>key.startsWith('version:')).flatMap(([,object])=>(object.data as ReadData['version']).response.data.results);
+    const resultRows=new Map(rows.map(row=>[row.result_key,row]));
+    if(new Set(panels.explore_benchmarks.map(row=>row.benchmark.slug)).size!==panels.explore_benchmarks.length
+      || new Set(panels.latest_additions.map(row=>row.result_key)).size!==panels.latest_additions.length) throw new Error('Duplicate homepage entries.');
+    for(const entry of panels.explore_benchmarks) {
+      const family=all.get(`family:${entry.benchmark.slug}`)?.data as ReadData['family']|undefined;
+      const results=rows.filter(row=>row.benchmark.slug===entry.benchmark.slug && !redirected.has(row.model.registry_no));
+      if(!family || JSON.stringify(entry.benchmark)!==JSON.stringify(family.data.benchmark)
+        || entry.result_count!==results.length || entry.model_count!==new Set(results.map(row=>row.model.registry_no)).size) throw new Error('Inconsistent homepage benchmark coverage.');
+    }
+    for(const row of panels.latest_additions) {
+      if(redirected.has(row.model.registry_no) || JSON.stringify(row)!==JSON.stringify(resultRows.get(row.result_key))) throw new Error('Inconsistent homepage result evidence.');
+    }
+  }
   const inventory=all.get('inventory')!.data as string[];
   if(new Set(inventory).size!==inventory.length || inventory.filter(path=>path.includes('?')).length!==exact.size || [...exact].some(path=>!inventory.includes(path))) throw new Error('Incorrect exact-result inventory.');
   const entities=all.get('search-entities')!.data as ReadData['search-entities'];

@@ -1,8 +1,10 @@
 import { type ModelListEntry, type HomePageResponse } from "./registry";
 import { ModelBenchmarkScore } from "./model-benchmark-score";
-import { EmptyState, PageContainer } from "./ui/components";
-
-const HOMEPAGE_MODEL_LIMIT = 5;
+import { EmptyState, PageContainer, SourceLink } from "./ui/components";
+import { BenchmarkLink } from "./benchmark-link";
+import { ResultScoreLink } from "./result-score-link";
+import { benchmarkVersionLabel } from "./benchmark-names";
+import { HOME_PANEL_LIMIT, type HomePanels } from "../worker/home-panels";
 
 export function HomeLoadingState() {
   return (
@@ -27,35 +29,39 @@ export function HomeLoadingState() {
   );
 }
 
-function ModelList({
-  models,
-}: {
-  models: ModelListEntry[];
-}) {
-  if (models.length === 0) {
-    return (
-      <EmptyState
-        title="No models found"
-        description="The registry does not contain any published models."
-      />
-    );
-  }
-
+function ExploreBenchmarks({ benchmarks }: { benchmarks: HomePanels["explore_benchmarks"] }) {
+  if (benchmarks.length === 0) return <EmptyState title="No benchmarks found" description="Benchmarks will appear here as they are published." />;
   return (
-    <ol className="home-model-list" role="list">
-      {models.slice(0, HOMEPAGE_MODEL_LIMIT).map((model) => {
-        return (
-          <li key={model.registry_no}>
-            <span className="home-model-list__identity">
-              <a href={`/models/${model.registry_no}`}>{model.name}</a>
-              <a href={`/companies/${model.company.slug}`}>{model.company.name}</a>
-            </span>
-            <span className="home-model-list__metadata">
-              <ModelBenchmarkScore result={model.featured_result} />
-            </span>
-          </li>
-        );
-      })}
+    <ul className="home-model-list home-benchmark-list" role="list">
+      {benchmarks.slice(0, HOME_PANEL_LIMIT).map(({ benchmark, model_count, result_count }) => (
+        <li key={benchmark.slug}>
+          <span className="home-model-list__identity">
+            <BenchmarkLink benchmark={benchmark} />
+            <span className="home-panel-detail">{model_count.toLocaleString("en-US")} {model_count === 1 ? "model" : "models"} evaluated</span>
+          </span>
+          <span className="home-panel-count">{result_count.toLocaleString("en-US")} {result_count === 1 ? "result" : "results"}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function LatestAdditions({ results }: { results: HomePanels["latest_additions"] }) {
+  if (results.length === 0) return <EmptyState title="No benchmark results yet" description="Newly added results will appear here with their sources." />;
+  return (
+    <ol className="home-model-list home-additions-list" role="list">
+      {results.slice(0, HOME_PANEL_LIMIT).map(result => (
+        <li key={result.result_key}>
+          <span className="home-model-list__identity">
+            <a href={`/models/${result.model.registry_no}`}>{result.model.name}{result.reasoning_level ? ` (${result.reasoning_level})` : ""}</a>
+            <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
+          </span>
+          <span className="home-model-list__metadata">
+            <span className="home-addition-score"><ResultScoreLink result={result} /></span>
+            <SourceLink href={result.primary_source_url} context={`${result.model.name} on ${benchmarkVersionLabel(result.benchmark, result.benchmark_version)}`} />
+          </span>
+        </li>
+      ))}
     </ol>
   );
 }
@@ -89,26 +95,25 @@ export function HomePage({ response }: { response: HomePageResponse }) {
       </header>
 
       <div className="home-sections">
-        <section className="home-section" aria-labelledby="recent-models-heading">
+        <section className="home-section" aria-labelledby="explore-benchmarks-heading">
           <header className="home-section__header">
             <div>
-              <h2 id="recent-models-heading">Recent Models</h2>
-              <p>Ordered by release date</p>
+              <h2 id="explore-benchmarks-heading">Explore Benchmarks</h2>
+              <p>Browse evaluations across models</p>
             </div>
-            <a href="/models">View all models</a>
+            <a href="/benchmarks">View all benchmarks</a>
           </header>
-          <ModelList models={response.recent_models.data} />
+          <ExploreBenchmarks benchmarks={response.panels.explore_benchmarks} />
         </section>
 
-        <section className="home-section" aria-labelledby="recently-added-heading">
+        <section className="home-section" aria-labelledby="latest-additions-heading">
           <header className="home-section__header">
             <div>
-              <h2 id="recently-added-heading">Recently Added</h2>
-              <p>Ordered by Registry publication date</p>
+              <h2 id="latest-additions-heading">Latest Additions</h2>
+              <p>New benchmark results added to the Registry</p>
             </div>
-            <a href="/models?sort=published&order=desc">View all additions</a>
           </header>
-          <ModelList models={response.recently_added.data} />
+          <LatestAdditions results={response.panels.latest_additions} />
         </section>
       </div>
 
