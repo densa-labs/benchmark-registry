@@ -535,7 +535,7 @@ describe("production www redirect", () => {
         new Request(`https://www.benchmarkregistry.org${path}`),
         env,
       );
-      expect(response.status).toBe(308);
+      expect(response.status).toBe(301);
       expect(response.headers.get("Location")).toBe(`https://benchmarkregistry.org${path}`);
       expect(response.headers.has("X-Robots-Tag")).toBe(false);
     }

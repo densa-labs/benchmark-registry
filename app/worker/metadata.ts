@@ -1,12 +1,12 @@
+import { structuredDataScript } from "./structured-data";
 import { LEGAL_METADATA } from "../src/legal-content";
-import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
 import { resolveRegistryRoute } from "../src/registry";
-import type { BenchmarkRef } from "./api";
 import type { RegistryReader } from "./materialized-repository";
 import { IS_STAGING } from "../src/build";
-import { comparisonHref, parseComparisonState } from "../src/compare";
+import { parseComparisonState } from "../src/compare";
 
 export interface DocumentMetadata {
+  page?: SeoPage;
   title: string;
   description: string;
   status?: number;
@@ -17,9 +17,10 @@ export interface DocumentMetadata {
 
 }
 
-export const PRODUCTION_ORIGIN = "https://benchmarkregistry.org";
+import { CANONICAL_ORIGIN, CANONICAL_HOST } from "../src/seo-config";
 
-const SITE_NAME = "Benchmark Registry";
+import { buildPageMetadata, isIndexablePage, SITE_NAME, seoTitle, seoDescription, entityTitle } from "../src/seo";
+import type { SeoPage } from "./seo-data";
 const missing: DocumentMetadata = {
   status: 404,
   title: `Page Not Found | ${SITE_NAME}`,
@@ -28,75 +29,21 @@ const missing: DocumentMetadata = {
 
 async function pageMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
   const route = resolveRegistryRoute(url.pathname);
-  switch (route.kind) {
-    case "legal":
-    case "privacy":
-    case "terms":
-      return { title: `${LEGAL_METADATA[route.kind].title} | ${SITE_NAME}`, description: LEGAL_METADATA[route.kind].description };
-    case "home":
-      return { title: SITE_NAME, description: "AI model benchmark results in one place | Benchmark Registry" };
-    case "models":
-      return { title: `Models | ${SITE_NAME}`, description: "AI models and their benchmark results" };
-    case "compare": {
-      let models: string[] = [];
-      try { models = parseComparisonState(url.search).models; } catch { /* Invalid UI state renders a recoverable selection error. */ }
-      const selected = await Promise.all(models.map(number => number ? requireRepository(repository).metadataModel(number) : null));
-      return {
-        title: selected.length === 2 && selected.every(Boolean) ? `${selected[0]!.name} vs ${selected[1]!.name} | ${SITE_NAME}` : `Compare models | ${SITE_NAME}`,
-        description: "Compare AI model information, reasoning levels, and source-backed benchmark results side by side.",
-      };
-    }
-    case "benchmarks":
-      return { title: `Benchmarks | ${SITE_NAME}`, description: "AI benchmarks and model evaluation results" };
-    case "companies":
-      return { title: `Companies | ${SITE_NAME}`, description: "AI companies, models, and benchmark results" };
-    case "model": {
-      const model = await requireRepository(repository).metadataModel(route.registryNo);
-      return model ? {
-        title: `${model.name} | Benchmarks`,
-        description: `${model.company_name}'s ${model.name} model evaluation and benchmark results | ${SITE_NAME}`,
-        links: [{ href: `/companies/${model.company_slug}`, label: model.company_name },
-          { href: `/models/${model.registry_no}`, label: `Registry No. ${model.registry_no}` }],
-      } : missing;
-    }
-    case "company": {
-      const company = await requireRepository(repository).metadataCompany(route.slug);
-      return company ? {
-        title: `${company.name} | Benchmarks`,
-        description: `${company.name} model evaluation and benchmark results | ${SITE_NAME}`,
-      } : missing;
-    }
-    case "benchmark":
-    case "benchmark-version": {
-      const benchmark = await requireRepository(repository).metadataBenchmark(route.slug, route.kind === "benchmark-version" ? route.version : undefined);
-      if (!benchmark) return missing;
-      if (benchmark.version !== null) {
-        const label = benchmarkVersionLabel(benchmark, benchmark.version);
-        const keys = url.searchParams.getAll("result");
-        if (keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
-          const model = await requireRepository(repository).metadataResult(route.slug, route.kind === "benchmark-version" ? route.version : "", keys[0]);
-          if (model) return {
-            title: `${model.name} | ${label}`,
-            description: `${model.company_name}'s ${model.name} evaluation results on ${label}`,
-            facts: [`Score: ${model.score_raw}`, ...(model.reasoning_level ? [`Reasoning level: ${model.reasoning_level}`] : [])],
-            links: [{ href: model.primary_source_url, label: 'Source' }, { href: `/models/${model.registry_no}`, label: `${model.name} (Registry No. ${model.registry_no})` },
-              { href: `/companies/${model.company_slug}`, label: model.company_name },
-              { href: `/benchmarks/${benchmark.slug}`, label: benchmarkDisplayName(benchmark) },
-              { href: url.pathname.replace(/\/$/u, ''), label }],
-          };
-        }
-        return {
-          title: `${label} | Results`,
-          description: benchmark.evaluator_names.length === 1
-            ? `${benchmark.evaluator_names[0]}'s ${label} model results`
-            : `Model results on ${label}`,
-        };
-      }
-      return benchmarkFamilyMetadata(benchmark);
-    }
-    case "not-found":
-      return missing;
+  if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return {
+    title: seoTitle(LEGAL_METADATA[route.kind].title), description: seoDescription([LEGAL_METADATA[route.kind].description]),
+  };
+  if (route.kind === "not-found") return missing;
+  if (route.kind === "compare") {
+    let models: string[] = [];
+    try { models = parseComparisonState(url.search).models; } catch { /* UI handles malformed selection. */ }
+    const selected = await Promise.all(models.map(number => number ? requireRepository(repository).metadataModel(number) : null));
+    return {title:selected.length===2 && selected.every(Boolean) ? entityTitle(`${selected[0]!.name} vs ${selected[1]!.name}:`,"Benchmark Comparison") : seoTitle("Compare AI Model Benchmark Results"),
+      description:seoDescription([selected.every(Boolean) && selected.length===2 ? `${selected[0]!.name} vs ${selected[1]!.name}: compare reported benchmark scores and primary sources.` : "Compare AI model information, reasoning levels, and reported benchmark results from primary sources."])};
   }
+  const snapshot = await requireRepository(repository).seoSnapshot();
+  const path = decodeURI(url.pathname).replace(/\/$/u, "") || "/";
+  const page = snapshot.pages[path];
+  return page ? {...buildPageMetadata(page), page} : missing;
 }
 
 export async function documentMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
@@ -108,36 +55,9 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
     : route.kind === 'benchmark' ? `/benchmarks/${segment(route.slug)}`
     : route.kind === 'benchmark-version' ? `/benchmarks/${segment(route.slug)}/${segment(route.version)}`
     : url.pathname === '/' ? '/' : url.pathname.replace(/\/$/u, '');
-  metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0;
-  if (metadata.status === 404) return metadata;
-  metadata.canonical = PRODUCTION_ORIGIN + path;
-  if (route.kind === "compare") {
-    try {
-      const state = parseComparisonState(url.search);
-      metadata.canonical = PRODUCTION_ORIGIN + comparisonHref({ ...state, query: "", sharedOnly: false, page: 1, limit: 50 });
-    } catch { /* Keep the clean base canonical for malformed selection state. */ }
-  }
-  const keys = url.searchParams.getAll('result');
-  if (route.kind === 'benchmark-version' && keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
-    const result = await requireRepository(repository).metadataResult(route.slug, route.version, keys[0]);
-    if (result?.exact_result_indexable === 1) {
-      const exact = `${PRODUCTION_ORIGIN}${path}?view=history&result=${keys[0]}`;
-      // Only the stable history/result state is indexable. Extra UI state still needs noindex.
-      metadata.canonical = exact;
-      metadata.noindex = url.searchParams.size !== 2
-        || url.searchParams.getAll('view').length !== 1 || url.searchParams.get('view') !== 'history';
-    }
-  }
+  metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0 || Boolean(metadata.page && !isIndexablePage(metadata.page));
+  metadata.canonical = CANONICAL_ORIGIN + path;
   return metadata;
-}
-
-function benchmarkFamilyMetadata(benchmark: BenchmarkRef): DocumentMetadata {
-  const name = benchmarkDisplayName(benchmark);
-  const expanded = name === benchmark.name ? name : `${name} (${benchmark.name})`;
-  return {
-    title: `${name} | Benchmarks`,
-    description: `Model results across versions of ${expanded}`,
-  };
 }
 
 export function escapeHtml(value: string): string {
@@ -154,31 +74,38 @@ export function metadataHead(metadata: DocumentMetadata, url: URL): string {
   const pageUrl = metadata.canonical
     ? `<meta property="og:url" content="${escapeHtml(metadata.canonical)}">` : "";
   const canonical = metadata.canonical ? `<link rel="canonical" href="${escapeHtml(metadata.canonical)}">` : "";
-  const robots = metadata.noindex || url.hostname !== 'benchmarkregistry.org'
+  const robots = metadata.noindex || url.hostname !== CANONICAL_HOST
     ? '<meta name="robots" content="noindex, follow">' : '';
   return `<title>${documentTitle}</title>
 <meta name="description" content="${description}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${title}">
+<meta name="twitter:description" content="${description}">
+<meta property="og:image" content="${CANONICAL_ORIGIN}/assets/Benchmark-Registry-B-Logo-Dark.png">
+<meta name="twitter:image" content="${CANONICAL_ORIGIN}/assets/Benchmark-Registry-B-Logo-Dark.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${SITE_NAME}">
 ${pageUrl}
 ${canonical}
-${robots}`;
+${robots}
+${structuredDataScript(metadata)}`;
 }
 
 export function rewriteMetadata(html: string, metadata: DocumentMetadata, url: URL, content?: string): string {
   // This is the app-owned Vite document template, not arbitrary external HTML.
   const rewritten = html.replace(/<head\b[^>]*>([\s\S]*?)<\/head>/iu, (head, contents: string) => {
     const cleaned = contents
+      .replace(/<script\b(?=[^>]*type=["']application\/ld\+json["'])[^>]*>[\s\S]*?<\/script>/giu, "")
       .replace(/<title\b[^>]*>[\s\S]*?<\/title>/giu, "")
-      .replace(/<meta\b(?=[^>]*\b(?:name|property)\s*=\s*["'](?:description|robots|og:[^"']+)["'])[^>]*>/giu, "");
+      .replace(/<meta\b(?=[^>]*\b(?:name|property)\s*=\s*["'](?:description|robots|og:[^"']+|twitter:[^"']+)["'])[^>]*>/giu, "");
     const withoutCanonical = cleaned.replace(/<link\b(?=[^>]*\brel\s*=\s*["']canonical["'])[^>]*>/giu, "");
     return head.slice(0, head.indexOf(">") + 1) + withoutCanonical + metadataHead(metadata, url) + "\n</head>";
   });
   const links = metadata.links ?? (metadata.canonical ? [{ href: new URL(metadata.canonical).pathname, label: metadata.title }] : []);
   const summary = `<main class="page-container registry-page"><h1>${escapeHtml(metadata.title)}</h1><p>${escapeHtml(metadata.description)}</p>${(metadata.facts ?? []).map((fact) => `<p>${escapeHtml(fact)}</p>`).join('')}${links.map((link) => `<p><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a></p>`).join('')}</main>`;
-  return rewritten.replace(/<div id="root"><\/div>/u, `<div id="root">${content ?? summary}</div>`);
+  return rewritten.replace(/<html\b[^>]*>/iu, '<html lang="en">').replace(/<div id="root"><\/div>/u, `<div id="root">${content ?? summary}</div>`);
 }
 
 function requireRepository(repository?: RegistryReader): RegistryReader {

@@ -1,3 +1,5 @@
+import { isIndexablePage } from "../src/seo";
+import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { diagnoseWorkerFailure } from "./diagnostics";
 import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
@@ -7,7 +9,9 @@ import { withRegistryCache, type CacheEnvironment } from "./cache";
 import type { RegistryReader } from "./materialized-repository";
 import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
 import { MaterializationFailure } from "./read-model";
-import { documentMetadata, rewriteMetadata, escapeHtml, PRODUCTION_ORIGIN } from "./metadata";
+import { comparisonPayload } from "./seo-comparisons";
+import { legacyRedirect } from "./seo-redirects";
+import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
 export interface Env extends CacheEnvironment, ReadStoreEnvironment {
   ASSETS: Fetcher;
@@ -15,8 +19,8 @@ export interface Env extends CacheEnvironment, ReadStoreEnvironment {
 }
 
 const STAGING_HOSTNAME = "staging.benchmarkregistry.org";
-const WWW_HOSTNAME = "www.benchmarkregistry.org";
-const APEX_HOSTNAME = "benchmarkregistry.org";
+const WWW_HOSTNAME = ALTERNATE_HOST;
+const APEX_HOSTNAME = CANONICAL_HOST;
 const STAGING_ROBOTS = "User-agent: *\nDisallow: /\n";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
 
@@ -38,7 +42,14 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
   if (request.method !== "GET") return jsonError(404, "not_found", "API route not found.");
   const {path, params} = apiParameters(new URL(request.url));
   if (path.length === 2 && path[1] === "revision") return Response.json({revision:env.REGISTRY_REVISION});
+  if (path.length === 3 && path[1] === "comparisons") {
+    const snapshot=await repository.seoSnapshot();
+    const pair=snapshot.comparisons.find(pair=>pair.path===`/compare/${path[2]}`);
+    if(!pair) return jsonError(404,"not_found","Comparison not found.");
+    return Response.json(await comparisonPayload(repository,pair,snapshot));
+  }
   if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
+  if (path.length === 2 && path[1] === "recent") return Response.json((await repository.seoSnapshot()).recent);
   if (path.length === 2 && path[1] === "home-panels") return Response.json(await repository.homePanels());
   if (path.length === 2 && path[1] === "models") return Response.json(await repository.models(params));
   if (path.length === 3 && path[1] === "models") return Response.json(await repository.model(path[2],params));
@@ -70,6 +81,9 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
 
   if (request.method === "GET" || request.method === "HEAD") {
     try {
+      const legacy = await legacyRedirect(url, repository);
+      if (legacy) { url.pathname=legacy; return Response.redirect(url.toString(),301); }
+
       const registryNo = modelPageRegistryNo(pathname);
       if (registryNo !== null) {
         const target = await requireRepository(repository).modelRedirectTarget(registryNo);
@@ -90,7 +104,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
 
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/robots.txt') {
     const body = url.hostname === APEX_HOSTNAME
-      ? `User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`
+      ? `User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`
       : STAGING_ROBOTS;
     return new Response(request.method === 'HEAD' ? null : body, {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
@@ -98,8 +112,10 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   }
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...LEGAL_PATHS])];
-      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(PRODUCTION_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
+      const snapshot=await requireRepository(repository).seoSnapshot();
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS])]
+        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
+      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc>${snapshot.pages[path]?.updated ? `<lastmod>${escapeHtml(snapshot.pages[path].updated!)}</lastmod>` : ""}</url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
       });
@@ -128,7 +144,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
       return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
-    }, env.REGISTRY_REVISION);
+    }, env.REGISTRY_REVISION, repository ? await repository.seoSnapshot() : undefined);
     const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
       .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
     const headers = new Headers(response.headers);
@@ -151,7 +167,7 @@ const worker = {
     if (url.hostname === WWW_HOSTNAME || (url.hostname === APEX_HOSTNAME && url.protocol === "http:")) {
       url.hostname = APEX_HOSTNAME;
       url.protocol = "https:";
-      return Response.redirect(url.toString(), 308);
+      return Response.redirect(url.toString(), 301);
     }
     const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
       && url.hostname === STAGING_HOSTNAME;
@@ -161,7 +177,7 @@ const worker = {
     let response:Response;
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
     if(staticAsset) response=await env.ASSETS.fetch(request);
-    else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
+    else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
     else if (LEGAL_PATHS.some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {

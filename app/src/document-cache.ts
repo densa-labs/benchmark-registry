@@ -83,17 +83,17 @@ export function parseBrowserDocument(html: string, href: string, revision?: stri
   const text = parsed.getElementById("registry-initial-document")?.textContent;
   if (!text) throw new Error("The registry data could not be loaded.");
   const initial = JSON.parse(text) as InitialDocument;
-  if (!initial.loaded || typeof initial.currentSearch !== "string" || !["home","compare","models","model","benchmarks","benchmark","benchmark-version","companies","company","not-found","legal","privacy","terms"].includes(initial.loaded.kind)) throw new Error("Invalid Registry document.");
+  if (!initial.loaded || typeof initial.currentSearch !== "string" || !["home","recent","compare","comparison","models","model","benchmarks","benchmark","benchmark-version","companies","company","not-found","legal","privacy","terms"].includes(initial.loaded.kind)) throw new Error("Invalid Registry document.");
   if (initial.loaded.kind !== "not-found" && !isLegalKind(initial.loaded.kind) && !("payload" in initial.loaded)) throw new Error("Invalid Registry payload.");
   const url=new URL(href,window.location.origin);
   return {...initial,revision:revision ?? initial.revision,href:url.pathname+url.search,head:readNavigationHead(parsed),time:Date.now()};
 }
 
 export function readNavigationHead(document: Document): string {
-  return [...document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], link[rel="canonical"]')].map((element) => element.outerHTML).join("\n");
+  return [...document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], meta[name^="twitter:"], script[type="application/ld+json"], link[rel="canonical"]')].map((element) => element.outerHTML).join("\n");
 }
 export function applyNavigationHead(head: string) {
   const parsed = new DOMParser().parseFromString(`<head>${head}</head>`,"text/html");
-  document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], link[rel="canonical"]').forEach((element) => element.remove());
+  document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], meta[name^="twitter:"], script[type="application/ld+json"], link[rel="canonical"]').forEach((element) => element.remove());
   [...parsed.head.children].forEach((element) => document.head.appendChild(document.importNode(element,true)));
 }

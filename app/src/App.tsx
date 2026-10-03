@@ -1,3 +1,7 @@
+import { BreadcrumbContext } from "./breadcrumb-context";
+import { RecentPage } from "./recent-page";
+import { StaticComparisonPage } from "./static-comparison-page";
+import { VisibleBreadcrumbs } from "./breadcrumbs";
 import { LegalPage } from "./legal-pages";
 import { isLegalKind } from "./legal-content";
 import { Fragment, useEffect, useLayoutEffect, useMemo, useState } from "react";
@@ -145,6 +149,10 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
     );
   } else if (loaded.kind === "companies") {
     content = <CompaniesPage response={loaded.payload} currentSearch={currentSearch} />;
+  } else if(loaded.kind==="recent") {
+    content=<RecentPage records={loaded.payload} />;
+  } else if (loaded.kind === "comparison") {
+    content = <StaticComparisonPage response={loaded.payload} name={loaded.name} />;
   } else if (loaded.kind === "company") {
     content = (
       <CompanyDetailPage response={loaded.payload} currentSearch={currentSearch} />
@@ -161,11 +169,11 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
 
   if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
-    <AppShell navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
-      ? undefined : loaded.kind === "compare" ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
+    <AppShell dataUpdated={loaded.updated} navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
+      ? undefined : (loaded.kind === "compare" || loaded.kind === "comparison") ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}
-      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{content}</Fragment>
+      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{loaded.kind==="not-found" && !pendingRoute ? <PageContainer><VisibleBreadcrumbs loaded={loaded} /></PageContainer> : null}<BreadcrumbContext.Provider value={pendingRoute ? undefined : loaded}>{content}</BreadcrumbContext.Provider></Fragment>
     </AppShell>
   );
 }

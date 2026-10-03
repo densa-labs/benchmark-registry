@@ -1,3 +1,5 @@
+import type { RecentRecord } from "../worker/seo-data";
+import type { SeoContent } from "./seo-content";
 import type { LegalKind } from "./legal-content";
 import type {
   BenchmarkRef,
@@ -21,6 +23,7 @@ export interface ModelListResponse {
 }
 
 export interface HomePageResponse {
+  seo?: SeoContent;
   stats: {
     data: {
       benchmark_results: number;
@@ -35,6 +38,7 @@ export interface HomePageResponse {
 
 export interface ModelDetailResponse {
   data: {
+    seo?: SeoContent;
     model: ModelSummary & {
       source_url: string;
       aliases: string[];
@@ -57,6 +61,7 @@ export interface BenchmarkListResponse {
 
 export interface BenchmarkFamilyResponse {
   data: {
+    seo?: SeoContent;
     benchmark: BenchmarkRef;
     versions: BenchmarkVersionSummary[];
   };
@@ -92,6 +97,7 @@ export interface CompanyListResponse {
 
 export interface CompanyDetailResponse {
   data: {
+    seo?: SeoContent;
     company: CompanySummary & {
       established_at: string | null;
       established_precision: "year" | "date" | "timestamp" | null;
@@ -123,7 +129,9 @@ export interface SearchResponse {
 
 export type RegistryRoute =
   | { kind: "home" }
+  | { kind: "recent" }
   | { kind: "compare" }
+  | { kind: "comparison"; slug:string }
   | { kind: "models" }
   | { kind: "model"; registryNo: string }
   | { kind: "benchmarks" }
@@ -136,9 +144,11 @@ export type RegistryRoute =
   | { kind: "terms" }
   | { kind: "not-found" };
 
-export type LoadedRegistryRoute =
+type LoadedRouteData =
   | { kind: "home"; payload: HomePageResponse }
+  | { kind: "recent"; payload: RecentRecord[] }
   | { kind: "compare"; payload: ComparisonResponse }
+  | { kind: "comparison"; payload: ComparisonResponse; name:string }
   | { kind: "models"; payload: ModelListResponse }
   | { kind: "model"; payload: ModelDetailResponse }
   | { kind: "benchmarks"; payload: BenchmarkListResponse }
@@ -151,6 +161,8 @@ export type LoadedRegistryRoute =
   | { kind: "terms" }
   | { kind: "not-found" };
 
+export type LoadedRegistryRoute = LoadedRouteData & { updated?: string };
+
 export class RegistryClientError extends Error {}
 
 export function resolveRegistryRoute(pathname: string): RegistryRoute {
@@ -159,6 +171,11 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 
   if (pathname === "/compare" || pathname === "/compare/") return { kind: "compare" };
+
+  if(pathname==="/recent" || pathname==="/recent/") return {kind:"recent"};
+
+  const comparisonMatch=/^\/compare\/([a-z0-9-]+)\/?$/u.exec(pathname);
+  if(comparisonMatch) return {kind:"comparison",slug:comparisonMatch[1]};
 
   for (const kind of ["legal", "privacy", "terms"] as const) {
     if (pathname === `/${kind}` || pathname === `/${kind}/`) return { kind };
@@ -207,7 +224,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "compare" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -314,6 +331,18 @@ export async function loadRegistryRoute(
 ): Promise<LoadedRegistryRoute> {
   if (route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
+  if(route.kind==="recent") {
+    const response=await fetcher("/api/recent"+search,{headers:{Accept:"application/json"},signal});
+    const body=await response.json();if(!response.ok) throw new RegistryClientError(errorMessage(body));
+    return {kind:"recent",payload:body as RecentRecord[]};
+  }
+  if (route.kind === "comparison") {
+    const response=await fetcher(`/api/comparisons/${route.slug}`,{headers:{Accept:"application/json"},signal});
+    if(response.status===404) return {kind:"not-found"};
+    const body=await response.json() as {payload:ComparisonResponse;name:string};
+    if(!response.ok) throw new RegistryClientError(errorMessage(body));
+    return {kind:"comparison",...body};
+  }
   if (route.kind === "compare") return { kind: "compare", payload: await loadComparison(search, fetcher, signal) };
 
   if (route.kind === "home") {
