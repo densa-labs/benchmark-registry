@@ -6,7 +6,7 @@ import worker from './index';
 import canonical from './canonical-reference';
 import {buildGeneration} from './materializer';
 import {garbageCandidates,protectedPublicationKeys,publishGeneration,readManifest,readPublication,rollbackBuild,verifyGeneration,type ProducerStore} from './publication';
-import {digest,type Publication} from './read-model';
+import {digest,validateManifest,type Publication} from './read-model';
 import {shadowGeneration} from './shadow';
 import {MaterializedRepository} from './materialized-repository';
 import {RegistryRepository} from './repository';
@@ -239,5 +239,19 @@ it('bootstraps homepage panels in older generations without a canonical data cha
   const next=(await buildGeneration(f.db,'local',previous))!;
   expect(next.rebuilt).toEqual(['seo','home-panels']);
   expect(next.manifest.objects['home-panels']).toBeTruthy();
+  expect(await buildGeneration(f.db,'local',next.manifest)).toBeNull();
+});
+
+it('adds SEO to an existing generation without changing canonical data', async () => {
+  const f=fixture(); const {build}=await bootstrap(f);
+  const previous={...build.manifest,objects:{...build.manifest.objects},inlineObjects:{...build.manifest.inlineObjects}};
+  delete previous.inlineObjects[previous.objects.seo]; delete previous.objects.seo;
+  expect(()=>validateManifest(previous,'local')).toThrow('Incomplete read manifest.');
+  const priorText=JSON.stringify(previous),priorHash=await digest(priorText);
+  f.store.entries.set('manifests/'+priorHash,priorText);
+  const legacy=await readManifest(f.store,priorHash,'local');
+  const next=(await buildGeneration(f.db,'local',legacy))!;
+  expect(next.manifest.canonicalRevision).toBe(previous.canonicalRevision);
+  expect(next.manifest.objects.seo).toBeTruthy();
   expect(await buildGeneration(f.db,'local',next.manifest)).toBeNull();
 });

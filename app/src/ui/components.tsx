@@ -1,4 +1,7 @@
+import { BreadcrumbContext } from "../breadcrumb-context";
+import { VisibleBreadcrumbs } from "../breadcrumbs";
 import {
+  useContext,
   useEffect,
   useRef,
   useState,
@@ -511,8 +514,10 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({ title, description, kicker }: PageHeaderProps) {
+  const breadcrumb=useContext(BreadcrumbContext);
   return (
     <header className="page-header">
+      {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
       {kicker ? <p className="kicker">{kicker}</p> : null}
       <h1 tabIndex={-1}>{title}</h1>
       {description ? <p className="page-header__description">{description}</p> : null}

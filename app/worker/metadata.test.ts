@@ -41,7 +41,7 @@ it("uses persisted data dates independent of release/founding/build time",async(
   expect((await new RegistryRepository(fixture.db).seoSnapshot()).pages["/companies/openai"].updated).toBe(company.updated);
 });
 it("escapes text rather than executing markup in head",async()=>{
-  fixture.sqlite.prepare("UPDATE models SET canonical_name=? WHERE registry_no='10001'").run(`O'Brien <script>& \"TEST\"`);
+  fixture.sqlite.prepare("UPDATE models SET canonical_name=? WHERE registry_no='10001'").run(`O'Brien <script>& "TEST"`);
   const {html}=await page("/models/10001");
   expect(title(html)).toContain("O&#39;Brien &lt;script&gt;&amp; &quot;TEST&quot;");
   expect(html).not.toContain("<script>&");

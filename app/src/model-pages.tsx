@@ -303,7 +303,6 @@ export function ModelDetailPage({
   return (
     <PageContainer className="registry-page">
       <PageHeader title={model.name} description={response.data.seo?.sentence} />
-      <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />
 
       <section className="entity-metadata" aria-label="Model metadata">
         <MetadataRows
@@ -378,6 +377,7 @@ export function ModelDetailPage({
           totalPages={page.total_pages}
         />
       </section>
+      <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />
       <RelatedLinks links={response.data.seo?.links} label="Benchmarks covered" />
     </PageContainer>
   );

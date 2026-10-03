@@ -27,7 +27,8 @@
     "materialize": "node scripts/materialize.mjs",
     "verify:lighthouse": "node scripts/verify-lighthouse.mjs",
     "test:accessibility": "vitest run src/accessibility.test.tsx worker/accessibility.test.ts",
-    "audit:accessibility": "node scripts/audit-accessibility.mjs"
+    "audit:accessibility": "node scripts/audit-accessibility.mjs",
+    "test:seo": "node ../scripts/seo_check.mjs"
   },
   "engines": {
     "node": "^22.12.0 || ^24.0.0 || >=26.0.0"

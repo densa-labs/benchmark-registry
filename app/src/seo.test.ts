@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { buildPageMetadata, cleanSeoText, seoDescription, seoTitle } from "./seo";
+import { buildPageMetadata, cleanSeoText, seoDescription, seoTitle, entityTitle } from "./seo";
 import type { SeoPage, SeoKind } from "../worker/seo-data";
 const fixture = (kind:SeoKind,name:string):SeoPage => ({kind,name,records:11,models:8,benchmarks:7,versions:3,organizations:2,updated:"2026-10-02T12:00:00Z",sources:[]});
 it("bounds metadata for every page type and retains unique factual templates", () => {
@@ -28,4 +28,11 @@ it("shortens long labels without removing the primary benchmark keywords first",
 });
 it("includes real homepage counts and a data date",()=>{
   expect(buildPageMetadata(fixture("home","Registry")).description).toBe("AI model benchmark results from primary sources: 8 models, 7 benchmarks, 11 records. Updated 2026-10-02.");
+});
+
+it("preserves result keywords and compacts repeated family names in long comparison titles",()=>{
+  const long=entityTitle("NVIDIA Nemotron 3 Super 120B-A12B","Benchmark Results & Scores","Benchmark Results");
+  expect(long).toContain("Benchmark Results | Benchmark Registry");expect(long.length).toBeLessThanOrEqual(70);
+  const comparison=buildPageMetadata(fixture("comparison","Claude Opus 5 vs Claude Opus 5.5"));
+  expect(comparison.title).toBe("Claude Opus 5 vs 5.5: Benchmark Comparison | Benchmark Registry");
 });

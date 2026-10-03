@@ -33,11 +33,14 @@ export const logicalKind=(key:string)=>key.startsWith('model:')?'model':key.star
 export const validKey=(key:string)=>['seo','models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'].includes(key) || /^(model:[0-9]+|company:[a-z0-9-]+|family:[a-z0-9-]+|version:[a-z0-9-]+:[a-z0-9._-]+)$/u.test(key);
 export async function digest(text:string) {return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)))].map(byte=>byte.toString(16).padStart(2,'0')).join('');}
 export class MaterializationFailure extends Error {}
-export function validateManifest(value:unknown,environment:ReadEnvironment):asserts value is ReadManifest {
+export function validateManifest(value:unknown,environment:ReadEnvironment,allowLegacySeo=false):asserts value is ReadManifest {
   const m=value as ReadManifest;
   if(!m || m.schema!==1 || m.environment!==environment || !/^[a-f0-9]{32}$/u.test(m.generation) || !/^[a-f0-9]{32}$/u.test(m.canonicalRevision) || !Number.isSafeInteger(m.watermark) || m.watermark<0 || !Number.isFinite(Date.parse(m.createdAt)) || !m.objects || Array.isArray(m.objects)) throw new MaterializationFailure('Invalid read manifest.');
   for(const [key,hash] of Object.entries(m.objects)) if(!validKey(key) || !/^[a-f0-9]{64}$/u.test(hash)) throw new MaterializationFailure('Invalid manifest reference.');
-  for(const key of ['seo','models','benchmarks','companies','stats','redirects','inventory','search-entities','search-relationships']) if(!m.objects[key]) throw new MaterializationFailure('Incomplete read manifest.');
+  for(const key of ['models','benchmarks','companies','stats','redirects','inventory','search-entities','search-relationships']) if(!m.objects[key]) throw new MaterializationFailure('Incomplete read manifest.');
+  // Maintenance can read pre-SEO generations to upgrade them; public reads and
+  // publication verification still require the complete new projection.
+  if(!allowLegacySeo && !m.objects.seo) throw new MaterializationFailure('Incomplete read manifest.');
   if(!m.inlineObjects || Array.isArray(m.inlineObjects)) throw new MaterializationFailure('Missing coherent update bundle.');
   for(const [hash,object] of Object.entries(m.inlineObjects)) {if(m.objects[object.key]!==hash) throw new MaterializationFailure('Wrong bundled object reference.');validateObject(object,object.key,environment);}
 }

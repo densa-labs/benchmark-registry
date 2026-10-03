@@ -1,5 +1,5 @@
 import { CANONICAL_ORIGIN } from "../src/seo-config";
-import { breadcrumbsForPath } from "../src/breadcrumbs";
+import { breadcrumbsForPath } from "../src/breadcrumb-data";
 import type { DocumentMetadata } from "./metadata";
 const publisher={"@type":"Organization",name:"Benchmark Registry",url:CANONICAL_ORIGIN};
 export function structuredData(metadata:DocumentMetadata):Record<string,unknown> {

@@ -19,6 +19,18 @@ export function seoTitle(primary: string, suffix = ` | ${SITE_NAME}`): string {
   if (text.length + suffix.length <= TITLE_LIMIT) return text + suffix;
   return clip(text, TITLE_LIMIT - suffix.length) + suffix;
 }
+/** Keep the result keywords intact when an entity name needs shortening. */
+export function entityTitle(name:string,keywords:string,compactKeywords=keywords):string {
+  const suffix=` ${keywords} | ${SITE_NAME}`;
+  if(cleanSeoText(name).length+suffix.length<=TITLE_LIMIT) return seoTitle(name,suffix);
+  return seoTitle(name,` ${compactKeywords} | ${SITE_NAME}`);
+}
+function comparisonName(name:string):string {
+  const sides=name.split(" vs ");if(sides.length!==2) return name;
+  const [a,b]=sides.map(side=>/^(.*?)(\d+(?:\.\d+)*)(.*)$/u.exec(side));
+  if(a && b && a[1]===b[1] && a[3]===b[3]) return `${a[1]}${a[2]} vs ${b[2]}${a[3]}`;
+  return name;
+}
 export function seoDescription(clauses: Array<string | undefined>): string {
   const valid = clauses.filter((clause): clause is string => Boolean(clause)).map(cleanSeoText).filter(Boolean);
   let text = valid.shift() ?? "AI model benchmark results from primary sources.";
@@ -37,23 +49,22 @@ export function buildPageMetadata(page: SeoPage): {title:string;description:stri
     case "benchmarks": return {title:seoTitle("AI Benchmarks: Results and Leaderboards"),description:seoDescription([`${page.benchmarks} AI benchmarks with ${page.records} reported results across ${page.models} models, from primary sources.`])};
     case "companies": return {title:seoTitle("AI Model Developers and Benchmark Results"),description:seoDescription([`${page.organizations} AI model developers with ${page.models} models and ${page.records} reported benchmark results, sourced from official publications.`])};
     case "model": {
-      const primary = `${name} Benchmark Results & Scores`;
-      return {title:primary.length + SITE_NAME.length + 3 <= TITLE_LIMIT ? seoTitle(primary) : seoTitle(`${name} Benchmark Results`),description:seoDescription([
+      return {title:entityTitle(name,"Benchmark Results & Scores","Benchmark Results"),description:seoDescription([
         `${name} benchmark results from primary sources: ${page.records} records across ${page.benchmarks} benchmarks.`,
         !isPlaceholder(page.provider) ? `Developer: ${page.provider}.` : undefined,
         released && `Released ${released}.`,page.registryNo && `Registry No. ${page.registryNo}.`])};
     }
-    case "benchmark": return {title:seoTitle(`${name} Benchmark Results & Scores`),description:seoDescription([
-      `${name} results for ${page.models} models across ${page.versions} versions, from primary sources.`,
+    case "benchmark": return {title:entityTitle(name,"Benchmark Results & Scores","Benchmark Results"),description:seoDescription([
+      `${name} results for ${page.models} ${page.models===1 ? "model" : "models"} across ${page.versions} ${page.versions===1 ? "version" : "versions"}, from primary sources.`,
       !isPlaceholder(page.latest) ? `Latest version: ${page.latest}.` : undefined])};
-    case "benchmark-version": return {title:seoTitle(`${name} Results & Scores`),description:seoDescription([
+    case "benchmark-version": return {title:entityTitle(name,"Results & Scores","Results"),description:seoDescription([
       `${name} scores for ${page.models} models.`,!isPlaceholder(page.metric) ? `Metric: ${page.metric}.` : undefined,
       released && `Released ${released}.`,`${page.records} reported results from primary sources.`])};
     case "recent": return {title:seoTitle("Recently Added AI Benchmark Results"),description:seoDescription([
       `${page.records} recently added benchmark records across ${page.models} AI models, with reported scores and primary source links.`,updated && `Updated ${updated}.`])};
-    case "comparison": return {title:seoTitle(`${name}: Benchmark Comparison`),description:seoDescription([
+    case "comparison": return {title:entityTitle((`${name}: Benchmark Comparison | ${SITE_NAME}`.length<=TITLE_LIMIT ? name : comparisonName(name))+":","Benchmark Comparison"),description:seoDescription([
       `${name}: compare scores across ${page.benchmarks} shared benchmarks, with reported results and primary source links.`])};
-    case "company": return {title:seoTitle(`${name} AI Models and Benchmark Results`),description:seoDescription([
+    case "company": return {title:entityTitle(name,"AI Models and Benchmark Results","Models & Benchmarks"),description:seoDescription([
       `Benchmark results for ${page.models} ${name} models${!isPlaceholder(page.latest) ? `, including ${page.latest}` : ""}.`,"Sourced from official publications."])};
   }
 }

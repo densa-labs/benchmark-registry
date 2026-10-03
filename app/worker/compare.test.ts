@@ -49,21 +49,21 @@ describe("materialized comparison documents", () => {
     expect(response.status).toBe(200);
     expect(initial?.loaded.kind).toBe("compare");
     expect(html).toContain("Choose two models to compare");
-    expect(html).toContain('<title>Compare models | Benchmark Registry</title>');
+    expect(html).toContain('<title>Compare AI Model Benchmark Results | Benchmark Registry</title>');
     expect(html).toContain('href="/compare" aria-current="page"');
     expect(html).not.toContain('name="robots" content="noindex');
     expect(response.headers.get("X-Registry-D1-Queries")).toBe("0");
     expect(forbiddenDb.prepare).not.toHaveBeenCalled();
   });
 
-  it("renders saved selections in initial HTML with source details and a selection-preserving canonical", async () => {
+  it("renders saved selections in initial HTML with source details and a clean builder canonical", async () => {
     const { response, html, initial } = await page("/compare?models=10001,20002");
     expect(response.status).toBe(200);
     expect(html).toContain("GPT-4.5 Preview vs Claude Opus 4");
     expect(html).toContain("Shared benchmarks");
     expect(html).toContain("Evaluator sets differ.");
     expect(html).toContain('name="robots" content="noindex, follow"');
-    expect(html).toContain('rel="canonical" href="https://benchmarkregistry.org/compare?models=10001%2C20002"');
+    expect(html).toContain('rel="canonical" href="https://benchmarkregistry.org/compare"');
     expect(initial?.loaded).toMatchObject({ kind: "compare", payload: { selected: [expect.objectContaining({ data: expect.objectContaining({ model: expect.objectContaining({ registry_no: "10001" }) }) }), expect.objectContaining({ data: expect.objectContaining({ model: expect.objectContaining({ registry_no: "20002" }) }) })] } });
     expect(forbiddenDb.prepare).not.toHaveBeenCalled();
   });

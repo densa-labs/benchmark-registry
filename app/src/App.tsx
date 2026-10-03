@@ -1,3 +1,4 @@
+import { BreadcrumbContext } from "./breadcrumb-context";
 import { RecentPage } from "./recent-page";
 import { StaticComparisonPage } from "./static-comparison-page";
 import { VisibleBreadcrumbs } from "./breadcrumbs";
@@ -172,7 +173,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
       ? undefined : (loaded.kind === "compare" || loaded.kind === "comparison") ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}
-      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{loaded.kind!=="home" && !pendingRoute ? <PageContainer><VisibleBreadcrumbs loaded={loaded} /></PageContainer> : null}{content}</Fragment>
+      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{loaded.kind==="not-found" && !pendingRoute ? <PageContainer><VisibleBreadcrumbs loaded={loaded} /></PageContainer> : null}<BreadcrumbContext.Provider value={pendingRoute ? undefined : loaded}>{content}</BreadcrumbContext.Provider></Fragment>
     </AppShell>
   );
 }

@@ -19,7 +19,7 @@ export interface DocumentMetadata {
 
 import { CANONICAL_ORIGIN, CANONICAL_HOST } from "../src/seo-config";
 
-import { buildPageMetadata, isIndexablePage, SITE_NAME, seoTitle, seoDescription } from "../src/seo";
+import { buildPageMetadata, isIndexablePage, SITE_NAME, seoTitle, seoDescription, entityTitle } from "../src/seo";
 import type { SeoPage } from "./seo-data";
 const missing: DocumentMetadata = {
   status: 404,
@@ -37,7 +37,7 @@ async function pageMetadata(url: URL, repository?: RegistryReader): Promise<Docu
     let models: string[] = [];
     try { models = parseComparisonState(url.search).models; } catch { /* UI handles malformed selection. */ }
     const selected = await Promise.all(models.map(number => number ? requireRepository(repository).metadataModel(number) : null));
-    return {title:seoTitle(selected.length===2 && selected.every(Boolean) ? `${selected[0]!.name} vs ${selected[1]!.name}: Benchmark Comparison` : "Compare AI Model Benchmark Results"),
+    return {title:selected.length===2 && selected.every(Boolean) ? entityTitle(`${selected[0]!.name} vs ${selected[1]!.name}:`,"Benchmark Comparison") : seoTitle("Compare AI Model Benchmark Results"),
       description:seoDescription([selected.every(Boolean) && selected.length===2 ? `${selected[0]!.name} vs ${selected[1]!.name}: compare reported benchmark scores and primary sources.` : "Compare AI model information, reasoning levels, and reported benchmark results from primary sources."])};
   }
   const snapshot = await requireRepository(repository).seoSnapshot();

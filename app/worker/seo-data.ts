@@ -97,5 +97,5 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
   }
   const recent=input.results.slice().sort((a,b)=>b.insertionId-a.insertionId).slice(0,100).map(({row,checked})=>({row,checked}));
   pages["/recent"]={...summarize("recent","Recently added benchmark results",input.results.slice().sort((a,b)=>b.insertionId-a.insertionId).slice(0,100),[])};
-  return { pages, comparisons, recent, models: input.models.map(({ checked: _checked, source: _source, ...model }) => model) };
+  return { pages, comparisons, recent, models: input.models.map(model => ({registry_no:model.registry_no,name:model.name,company:model.company,released_at:model.released_at,release_precision:model.release_precision,published_at:model.published_at,status:model.status})) };
 }

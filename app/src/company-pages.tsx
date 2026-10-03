@@ -333,7 +333,6 @@ export function CompanyDetailPage({
   return (
     <PageContainer className="registry-page">
       <PageHeader title={company.name} description={response.data.seo?.sentence} />
-      <RelatedModels models={response.data.seo?.related ?? []} label={`${company.name} models`} showDates />
       <section className="entity-metadata" aria-label="Organization metadata">
         <MetadataRows
           items={[
@@ -395,6 +394,7 @@ export function CompanyDetailPage({
           totalPages={page.total_pages}
         />
       </section>
+      <RelatedModels models={response.data.seo?.related ?? []} label={`${company.name} models`} showDates />
     </PageContainer>
   );
 }

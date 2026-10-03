@@ -1,4 +1,4 @@
-import { enrichSeoContent } from "../src/seo-content";
+import { enrichSeoContent } from "../src/seo-enrichment";
 import type { SeoSnapshot } from "./seo-data";
 import { renderToString } from "react-dom/server";
 import { serializeInitialDocument } from "../src/bootstrap";
@@ -20,7 +20,7 @@ export async function renderDocument(url: URL, readApi: (input: string) => Promi
     search = "";
     loaded = await loadRegistryRoute(route, search, fetcher);
   }
-  if(seo) loaded=enrichSeoContent(loaded,seo);
+  if(seo) loaded=enrichSeoContent(loaded,seo,decodeURI(url.pathname).replace(/\/$/u, "") || "/");
   return renderInitialDocument(loaded, search, revision);
 }
 

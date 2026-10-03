@@ -18,3 +18,9 @@ it("advances entity dates when a result citation is checked",async()=>{
  expect(snapshot.pages["/models/10001"].updated).toBe("2026-10-03T08:00:00Z");
  expect(snapshot.pages["/companies/openai"].updated).toBe("2026-10-03T08:00:00Z");
 });
+it("keeps the visible version update date scoped to its data",async()=>{
+ f.sqlite.exec("UPDATE companies SET source_checked_at='2026-10-03T08:00:00Z' WHERE slug='openai'; UPDATE benchmark_versions SET source_checked_at='2026-09-20T08:00:00Z' WHERE benchmark_id=(SELECT id FROM benchmarks WHERE slug='gpqa')");
+ const html=await (await worker.fetch(new Request("https://benchmarkregistry.org/benchmarks/gpqa/diamond"),f.env)).text();
+ expect(html).toContain("Last updated: 2026-09-20");
+ expect(html).not.toContain("Last updated: 2026-10-03");
+});
