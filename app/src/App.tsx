@@ -1,3 +1,4 @@
+import { VisibleBreadcrumbs } from "./breadcrumbs";
 import { LegalPage } from "./legal-pages";
 import { isLegalKind } from "./legal-content";
 import { Fragment, useEffect, useLayoutEffect, useMemo, useState } from "react";
@@ -165,7 +166,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
       ? undefined : loaded.kind === "compare" ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}
-      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{content}</Fragment>
+      <Fragment key={JSON.stringify([loaded.kind, currentSearch, loaded.kind === "model" ? loaded.payload.data.model.registry_no : loaded.kind === "company" ? loaded.payload.data.company.slug : loaded.kind === "benchmark" ? loaded.payload.data.benchmark.slug : loaded.kind === "benchmark-version" ? loaded.payload.data.version.benchmark.slug + loaded.payload.data.version.version_slug : ""])}>{loaded.kind!=="home" && !pendingRoute ? <PageContainer><VisibleBreadcrumbs loaded={loaded} /></PageContainer> : null}{content}</Fragment>
     </AppShell>
   );
 }

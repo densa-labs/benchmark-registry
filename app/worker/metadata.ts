@@ -1,3 +1,4 @@
+import { structuredDataScript } from "./structured-data";
 import { LEGAL_METADATA } from "../src/legal-content";
 import { resolveRegistryRoute } from "../src/registry";
 import type { RegistryReader } from "./materialized-repository";
@@ -88,13 +89,15 @@ export function metadataHead(metadata: DocumentMetadata, url: URL): string {
 <meta property="og:site_name" content="${SITE_NAME}">
 ${pageUrl}
 ${canonical}
-${robots}`;
+${robots}
+${structuredDataScript(metadata)}`;
 }
 
 export function rewriteMetadata(html: string, metadata: DocumentMetadata, url: URL, content?: string): string {
   // This is the app-owned Vite document template, not arbitrary external HTML.
   const rewritten = html.replace(/<head\b[^>]*>([\s\S]*?)<\/head>/iu, (head, contents: string) => {
     const cleaned = contents
+      .replace(/<script\b(?=[^>]*type=["']application\/ld\+json["'])[^>]*>[\s\S]*?<\/script>/giu, "")
       .replace(/<title\b[^>]*>[\s\S]*?<\/title>/giu, "")
       .replace(/<meta\b(?=[^>]*\b(?:name|property)\s*=\s*["'](?:description|robots|og:[^"']+|twitter:[^"']+)["'])[^>]*>/giu, "");
     const withoutCanonical = cleaned.replace(/<link\b(?=[^>]*\brel\s*=\s*["']canonical["'])[^>]*>/giu, "");

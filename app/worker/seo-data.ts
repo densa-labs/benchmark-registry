@@ -16,6 +16,7 @@ export interface SeoPage {
   provider?: string;
   registryNo?: string;
   version?: string;
+  familyName?: string;
   latest?: string;
   metric?: string;
   sources: string[];
@@ -75,7 +76,7 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
       }).slice(0,5);
     for (const version of versions) {
       const selected = rows.filter(({ row }) => row.benchmark_version_slug === version.version_slug);
-      pages[`/benchmarks/${family.slug}/${version.version_slug}`] = { ...summarize("benchmark-version", isPlaceholder(version.version) ? benchmarkDisplayName(family) : benchmarkVersionLabel(family, version.version), selected, [version.checked]), version: version.version,
+      pages[`/benchmarks/${family.slug}/${version.version_slug}`] = { ...summarize("benchmark-version", isPlaceholder(version.version) ? benchmarkDisplayName(family) : benchmarkVersionLabel(family, version.version), selected, [version.checked]), version: version.version, familyName:benchmarkDisplayName(family),
         released: version.released_at, metric: version.metric.name,
         sources: [...new Set([version.source, ...selected.map(({ row }) => row.primary_source_url)])].sort() };
     }
