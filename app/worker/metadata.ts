@@ -17,7 +17,7 @@ export interface DocumentMetadata {
 
 }
 
-export const PRODUCTION_ORIGIN = "https://benchmarkregistry.org";
+import { CANONICAL_ORIGIN, CANONICAL_HOST } from "../src/seo-config";
 
 const SITE_NAME = "Benchmark Registry";
 const missing: DocumentMetadata = {
@@ -110,18 +110,18 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
     : url.pathname === '/' ? '/' : url.pathname.replace(/\/$/u, '');
   metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0;
   if (metadata.status === 404) return metadata;
-  metadata.canonical = PRODUCTION_ORIGIN + path;
+  metadata.canonical = CANONICAL_ORIGIN + path;
   if (route.kind === "compare") {
     try {
       const state = parseComparisonState(url.search);
-      metadata.canonical = PRODUCTION_ORIGIN + comparisonHref({ ...state, query: "", sharedOnly: false, page: 1, limit: 50 });
+      metadata.canonical = CANONICAL_ORIGIN + comparisonHref({ ...state, query: "", sharedOnly: false, page: 1, limit: 50 });
     } catch { /* Keep the clean base canonical for malformed selection state. */ }
   }
   const keys = url.searchParams.getAll('result');
   if (route.kind === 'benchmark-version' && keys.length === 1 && /^[a-f0-9]{64}$/u.test(keys[0])) {
     const result = await requireRepository(repository).metadataResult(route.slug, route.version, keys[0]);
     if (result?.exact_result_indexable === 1) {
-      const exact = `${PRODUCTION_ORIGIN}${path}?view=history&result=${keys[0]}`;
+      const exact = `${CANONICAL_ORIGIN}${path}?view=history&result=${keys[0]}`;
       // Only the stable history/result state is indexable. Extra UI state still needs noindex.
       metadata.canonical = exact;
       metadata.noindex = url.searchParams.size !== 2
@@ -154,7 +154,7 @@ export function metadataHead(metadata: DocumentMetadata, url: URL): string {
   const pageUrl = metadata.canonical
     ? `<meta property="og:url" content="${escapeHtml(metadata.canonical)}">` : "";
   const canonical = metadata.canonical ? `<link rel="canonical" href="${escapeHtml(metadata.canonical)}">` : "";
-  const robots = metadata.noindex || url.hostname !== 'benchmarkregistry.org'
+  const robots = metadata.noindex || url.hostname !== CANONICAL_HOST
     ? '<meta name="robots" content="noindex, follow">' : '';
   return `<title>${documentTitle}</title>
 <meta name="description" content="${description}">

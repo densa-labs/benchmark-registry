@@ -1,3 +1,4 @@
+import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { diagnoseWorkerFailure } from "./diagnostics";
 import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
@@ -7,7 +8,7 @@ import { withRegistryCache, type CacheEnvironment } from "./cache";
 import type { RegistryReader } from "./materialized-repository";
 import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
 import { MaterializationFailure } from "./read-model";
-import { documentMetadata, rewriteMetadata, escapeHtml, PRODUCTION_ORIGIN } from "./metadata";
+import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
 export interface Env extends CacheEnvironment, ReadStoreEnvironment {
   ASSETS: Fetcher;
@@ -15,8 +16,8 @@ export interface Env extends CacheEnvironment, ReadStoreEnvironment {
 }
 
 const STAGING_HOSTNAME = "staging.benchmarkregistry.org";
-const WWW_HOSTNAME = "www.benchmarkregistry.org";
-const APEX_HOSTNAME = "benchmarkregistry.org";
+const WWW_HOSTNAME = ALTERNATE_HOST;
+const APEX_HOSTNAME = CANONICAL_HOST;
 const STAGING_ROBOTS = "User-agent: *\nDisallow: /\n";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
 
@@ -90,7 +91,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
 
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/robots.txt') {
     const body = url.hostname === APEX_HOSTNAME
-      ? `User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`
+      ? `User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`
       : STAGING_ROBOTS;
     return new Response(request.method === 'HEAD' ? null : body, {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' },
@@ -99,7 +100,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
       const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...LEGAL_PATHS])];
-      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(PRODUCTION_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
+      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc></url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
       });
@@ -151,7 +152,7 @@ const worker = {
     if (url.hostname === WWW_HOSTNAME || (url.hostname === APEX_HOSTNAME && url.protocol === "http:")) {
       url.hostname = APEX_HOSTNAME;
       url.protocol = "https:";
-      return Response.redirect(url.toString(), 308);
+      return Response.redirect(url.toString(), 301);
     }
     const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
       && url.hostname === STAGING_HOSTNAME;
@@ -161,7 +162,7 @@ const worker = {
     let response:Response;
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
     if(staticAsset) response=await env.ASSETS.fetch(request);
-    else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${PRODUCTION_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
+    else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
     else if (LEGAL_PATHS.some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {
