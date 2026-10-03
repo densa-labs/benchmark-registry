@@ -1,3 +1,4 @@
+import type { RecentRecord } from "../worker/seo-data";
 import type { SeoContent } from "./seo-content";
 import type { LegalKind } from "./legal-content";
 import type {
@@ -128,6 +129,7 @@ export interface SearchResponse {
 
 export type RegistryRoute =
   | { kind: "home" }
+  | { kind: "recent" }
   | { kind: "compare" }
   | { kind: "comparison"; slug:string }
   | { kind: "models" }
@@ -144,6 +146,7 @@ export type RegistryRoute =
 
 type LoadedRouteData =
   | { kind: "home"; payload: HomePageResponse }
+  | { kind: "recent"; payload: RecentRecord[] }
   | { kind: "compare"; payload: ComparisonResponse }
   | { kind: "comparison"; payload: ComparisonResponse; name:string }
   | { kind: "models"; payload: ModelListResponse }
@@ -168,6 +171,8 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 
   if (pathname === "/compare" || pathname === "/compare/") return { kind: "compare" };
+
+  if(pathname==="/recent" || pathname==="/recent/") return {kind:"recent"};
 
   const comparisonMatch=/^\/compare\/([a-z0-9-]+)\/?$/u.exec(pathname);
   if(comparisonMatch) return {kind:"comparison",slug:comparisonMatch[1]};
@@ -219,7 +224,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "compare" | "comparison" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -326,6 +331,11 @@ export async function loadRegistryRoute(
 ): Promise<LoadedRegistryRoute> {
   if (route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
+  if(route.kind==="recent") {
+    const response=await fetcher("/api/recent"+search,{headers:{Accept:"application/json"},signal});
+    const body=await response.json();if(!response.ok) throw new RegistryClientError(errorMessage(body));
+    return {kind:"recent",payload:body as RecentRecord[]};
+  }
   if (route.kind === "comparison") {
     const response=await fetcher(`/api/comparisons/${route.slug}`,{headers:{Accept:"application/json"},signal});
     if(response.status===404) return {kind:"not-found"};

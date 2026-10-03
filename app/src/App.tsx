@@ -1,3 +1,4 @@
+import { RecentPage } from "./recent-page";
 import { StaticComparisonPage } from "./static-comparison-page";
 import { VisibleBreadcrumbs } from "./breadcrumbs";
 import { LegalPage } from "./legal-pages";
@@ -147,6 +148,8 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
     );
   } else if (loaded.kind === "companies") {
     content = <CompaniesPage response={loaded.payload} currentSearch={currentSearch} />;
+  } else if(loaded.kind==="recent") {
+    content=<RecentPage records={loaded.payload} />;
   } else if (loaded.kind === "comparison") {
     content = <StaticComparisonPage response={loaded.payload} name={loaded.name} />;
   } else if (loaded.kind === "company") {

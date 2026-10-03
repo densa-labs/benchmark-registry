@@ -11,7 +11,7 @@ export function apiParameters(url: URL): {path: string[]; params: ParsedListPara
   let allowed: string[];
   let sorts: string[] | undefined;
   if (path.length === 3 && entity === "comparisons") allowed = [];
-  else if (path.length === 2 && ["stats", "revision", "home-panels"].includes(entity)) allowed = [];
+  else if (path.length === 2 && ["stats", "revision", "home-panels", "recent"].includes(entity)) allowed = [];
   else if (path.length === 2 && entity === "search") allowed = ["page", "limit", "q"];
   else if (path.length === 2 && entity === "models") {
     allowed = ["page", "limit", "q", "company", "sort", "order"];

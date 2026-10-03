@@ -418,7 +418,7 @@ export class RegistryRepository {
         FROM models m JOIN companies c ON c.id=m.company_id WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`),
       this.all<{name:string;slug:string;checked:string}>("SELECT name,slug,source_checked_at AS checked FROM companies"),
       this.all<{name:string;slug:string;aliases:string;checked:string}>(`SELECT b.canonical_name AS name,b.slug,${BENCHMARK_ALIASES} AS aliases,b.source_checked_at AS checked FROM benchmarks b`),
-      this.all<ResultDbRow & {checked:string}>(`SELECT ${RESULT_COLUMNS}, max(r.primary_source_checked_at, COALESCE((SELECT max(source_checked_at) FROM result_sources rs WHERE rs.result_id=r.id), r.primary_source_checked_at)) AS checked ${RESULT_JOINS}
+      this.all<ResultDbRow & {checked:string;insertionId:number}>(`SELECT ${RESULT_COLUMNS}, r.id AS insertionId, max(r.primary_source_checked_at, COALESCE((SELECT max(source_checked_at) FROM result_sources rs WHERE rs.result_id=r.id), r.primary_source_checked_at)) AS checked ${RESULT_JOINS}
         WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`),
       this.all<BenchmarkVersionRow & {checked:string}>(`SELECT bv.id,b.canonical_name AS benchmark_name,b.slug AS benchmark_slug,${BENCHMARK_ALIASES} AS benchmark_aliases,
         bv.version,bv.version_slug,bv.release_at,bv.release_precision,metric.name AS metric_name,metric.key AS metric_key,metric.unit AS metric_unit,metric.storage_kind,metric.display_precision,
@@ -431,7 +431,7 @@ export class RegistryRepository {
       companies: companies.map(company => ({...company,latest:providers.data.find(provider => provider.slug===company.slug)?.latest_model?.name})),
       families: families.map(row => ({...row,aliases:parseJsonArray(row.aliases)})),
       versions: versionRows.map(row => ({...versionFromRow(row),checked:row.checked,source:row.source_url})),
-      results: resultRows.map(row => ({row:resultFromRow(row),checked:row.checked})),
+      results: resultRows.map(row => ({row:resultFromRow(row),checked:row.checked,insertionId:row.insertionId})),
     };
     return buildSeoSnapshot(input);
   }

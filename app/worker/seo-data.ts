@@ -3,7 +3,7 @@ import type { BenchmarkRef, BenchmarkVersionSummary, ModelSummary, ResultRow } f
 import { isPlaceholder } from "../src/seo";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
 
-export type SeoKind = "home" | "models" | "benchmarks" | "companies" | "model" | "benchmark" | "benchmark-version" | "company" | "comparison";
+export type SeoKind = "home" | "models" | "benchmarks" | "companies" | "model" | "benchmark" | "benchmark-version" | "company" | "comparison" | "recent";
 export interface SeoPage {
   kind: SeoKind;
   name: string;
@@ -25,13 +25,14 @@ export interface SeoPage {
   latestVersion?: BenchmarkVersionSummary;
   coveredBenchmarks?: Array<{name:string;path:string}>;
 }
-export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[]; comparisons: ComparisonPair[] }
+export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[]; comparisons: ComparisonPair[]; recent: RecentRecord[] }
+export interface RecentRecord {row:ResultRow;checked:string}
 export interface SeoInputs {
   models: Array<ModelSummary & { checked: string; source: string }>;
   companies: Array<{ name: string; slug: string; checked: string; latest?: string }>;
   families: Array<BenchmarkRef & { checked: string }>;
   versions: Array<BenchmarkVersionSummary & { checked: string; source: string }>;
-  results: Array<{ row: ResultRow; checked: string }>;
+  results: Array<{ row: ResultRow; checked: string; insertionId:number }>;
 }
 export function latestDate(values: Array<string | undefined>): string | undefined {
   return values.filter((value): value is string => Boolean(value) && Number.isFinite(Date.parse(value!)))
@@ -94,5 +95,7 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
     const results=input.results.filter(({row})=>pair.models.includes(row.model.registry_no));
     pages[pair.path]={...summarize("comparison",`${a.name} vs ${b.name}`,results,[a.checked,b.checked]),benchmarks:pair.sharedBenchmarks};
   }
-  return { pages, comparisons, models: input.models.map(({ checked: _checked, source: _source, ...model }) => model) };
+  const recent=input.results.slice().sort((a,b)=>b.insertionId-a.insertionId).slice(0,100).map(({row,checked})=>({row,checked}));
+  pages["/recent"]={...summarize("recent","Recently added benchmark results",input.results.slice().sort((a,b)=>b.insertionId-a.insertionId).slice(0,100),[])};
+  return { pages, comparisons, recent, models: input.models.map(({ checked: _checked, source: _source, ...model }) => model) };
 }

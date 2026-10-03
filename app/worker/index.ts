@@ -49,6 +49,7 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
     return Response.json(await comparisonPayload(repository,pair,snapshot));
   }
   if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
+  if (path.length === 2 && path[1] === "recent") return Response.json((await repository.seoSnapshot()).recent);
   if (path.length === 2 && path[1] === "home-panels") return Response.json(await repository.homePanels());
   if (path.length === 2 && path[1] === "models") return Response.json(await repository.models(params));
   if (path.length === 3 && path[1] === "models") return Response.json(await repository.model(path[2],params));
@@ -112,7 +113,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
       const snapshot=await requireRepository(repository).seoSnapshot();
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS])]
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS])]
         .filter(path=>!path.includes("?") && (!snapshot.pages[path] || isIndexablePage(snapshot.pages[path])));
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc>${snapshot.pages[path]?.updated ? `<lastmod>${escapeHtml(snapshot.pages[path].updated!)}</lastmod>` : ""}</url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {

@@ -11,6 +11,7 @@ const columns = {
   companies: ["Organization", "Established", "Latest model"],
   company: ["Model", "Benchmark", "Score", "Source", "Registry No."],
   compare: ["Benchmark", "Model A", "Model B"],
+  recent: ["Model", "Benchmark", "Score", "Source"],
   comparison: ["Benchmark", "Model A", "Model B"],
 } as const;
 const metadata = {
