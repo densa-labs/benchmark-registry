@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "local_ingestor_tests_passed": 6,
+  "dry_run_records_valid": 35,
+  "model_number": "30011",
+  "source_supported_results": 19,
+  "new_families": 12,
+  "new_versions": 16,
+  "new_metrics": 12,
+  "new_evaluators": 6,
+  "candidate_sha256": "df04018a10dd9499814003488ea30fdb7d32ef5c69edeab985e457b30ba9fe0d",
+  "schema_changes": 0,
+  "frontend_changes": 0,
+  "worker_changes": 0
+}

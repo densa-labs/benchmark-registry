@@ -1,0 +1,216 @@
+{
+  "environment": "staging",
+  "mode": "commit",
+  "outcomes": [
+    {
+      "status": "VALID",
+      "operation": "model",
+      "identifier": "30011",
+      "message": "model is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "vals-index",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "finance-agent",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "harveys-legal-agent-benchmark",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "frontierswe",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "vibe-code-bench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "posttrainbench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "labbench2",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "riemann-bench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "graphwalks",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "agents-last-exam",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "chartography",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "cwe-bench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "terminal-bench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "osworld",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "benchmark",
+      "identifier": "lvbench",
+      "message": "benchmark family and versions are valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "375955bdb10b8da8b1eaa1072e1f50aa1af2473cc4b0bdf6cea7e0a9eebb8e0d",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "4d654b55de5811fb4575d76cab57d9956350092fa352f0f62f2fd6138acfc6c0",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "55a7c356efc62ca004d3232ed2142bb4333e1503d2947e46255770d38953bb35",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "40e6b51cdab5c4f515e40bcf9d8215d4ab8605d273386a11b043d43c483fed7b",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "1decceb85b196ca5b414edec7681bf381e53550ad4c91d4c686a8b4ceabd5919",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "5b9fbd3e1f2effe29a93d02b5e58648a61eacc5475c807634bbf5253bb06385d",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "966f5e5f88480cfc5e731a299554757c4c41163cda2c93a3cb29b7827ebe8579",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "131f79fe6e9e5fe608a19312a5d7534709d0be8d67ee8e4a567fa3dd56b9c7f7",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "67a2fe26343358a8cf05dda98164eeab8ce5b045b5598b2a14544bac188bbd22",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "2fece0a0b79016f54e290b7949138bea783f50a4f4a4985ba8a50aea990faf9e",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "d4639b01c9fa3dccddeb5559e37c8982e83ab545226c5986644e3be2e9e14de9",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "e6878e03307d91d02f2e3caa4738e238f34e3dc077bf934409a6954e238c1163",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "6f129bb4fee66c6b1c1f1b1ce1683befa3f3b7b02a1633bac96f8755fb551fbb",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "49185244b65701e922b8cf140f788d1bcc0b8c7ab2b8fa4a013c787a64954773",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "cf3d263314625350ee547ebd09e8c9e260c4419cb74bae6eb1e0c074f14be89f",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "9488604e655588768402341cdac4b93f1824c64ac736d93c1067f837a333b05c",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "7644aa47e14aa8d814da75a65c4a6eaa7341b16e05b003abfdc9969644a7aa64",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "01291a8c28a41e6e9a200b98726ba79073f58e9b57b0d79a4f6450b72709b0eb",
+      "message": "result is valid"
+    },
+    {
+      "status": "VALID",
+      "operation": "result",
+      "identifier": "f703e2b97bbcb8ef485e90789b889d5b31d1599b28832ad36cec2ff8575dea91",
+      "message": "result is valid"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "counts": {
+    "results": 946,
+    "models": 95,
+    "benchmarks": 85,
+    "versions": 149,
+    "metrics": 88,
+    "evaluators": 62
+  },
+  "model_results": [
+    {
+      "id": 935,
+      "result_key": "131f79fe6e9e5fe608a19312a5d7534709d0be8d67ee8e4a567fa3dd56b9c7f7",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "57.4",
+      "score_raw": "57.4%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "terminal-bench",
+      "version": "4.0",
+      "metric_key": "terminal-bench-accuracy"
+    },
+    {
+      "id": 932,
+      "result_key": "1decceb85b196ca5b414edec7681bf381e53550ad4c91d4c686a8b4ceabd5919",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "77.9",
+      "score_raw": "77.9%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "deep-swe",
+      "version": "1.1 \u2014 mini-swe-agent",
+      "metric_key": "deep-swe-pass-at-1"
+    },
+    {
+      "id": 929,
+      "result_key": "4d654b55de5811fb4575d76cab57d9956350092fa352f0f62f2fd6138acfc6c0",
+      "reasoning_level": "high",
+      "score_value": "51.3",
+      "score_raw": "51.3%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "automationbench",
+      "version": "1.0.6",
+      "metric_key": "automationbench-pass-rate"
+    },
+    {
+      "id": 928,
+      "result_key": "375955bdb10b8da8b1eaa1072e1f50aa1af2473cc4b0bdf6cea7e0a9eebb8e0d",
+      "reasoning_level": "high",
+      "score_value": "68.9",
+      "score_raw": "68.9%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "vals-index",
+      "version": "2.1",
+      "metric_key": "vals-index-accuracy"
+    },
+    {
+      "id": 930,
+      "result_key": "55a7c356efc62ca004d3232ed2142bb4333e1503d2947e46255770d38953bb35",
+      "reasoning_level": "high",
+      "score_value": "65.4",
+      "score_raw": "65.4%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "finance-agent",
+      "version": "2 \u2014 September 2026 evaluation",
+      "metric_key": "finance-agent-accuracy"
+    },
+    {
+      "id": 931,
+      "result_key": "40e6b51cdab5c4f515e40bcf9d8215d4ab8605d273386a11b043d43c483fed7b",
+      "reasoning_level": "high",
+      "score_value": "19.6",
+      "score_raw": "19.6%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "harveys-legal-agent-benchmark",
+      "version": "September 2026 evaluation",
+      "metric_key": "hlab-task-pass-rate"
+    },
+    {
+      "id": 933,
+      "result_key": "5b9fbd3e1f2effe29a93d02b5e58648a61eacc5475c807634bbf5253bb06385d",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "55",
+      "score_raw": "55.0%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "frontierswe",
+      "version": "2 \u2014 September 2026 evaluation",
+      "metric_key": "frontierswe-score"
+    },
+    {
+      "id": 934,
+      "result_key": "966f5e5f88480cfc5e731a299554757c4c41163cda2c93a3cb29b7827ebe8579",
+      "reasoning_level": "high",
+      "score_value": "91.9",
+      "score_raw": "91.9%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "vibe-code-bench",
+      "version": "1.1 \u2014 OpenHands, September 2026 evaluation",
+      "metric_key": "vibe-code-bench-score"
+    },
+    {
+      "id": 936,
+      "result_key": "67a2fe26343358a8cf05dda98164eeab8ce5b045b5598b2a14544bac188bbd22",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "45.3",
+      "score_raw": "45.3%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "posttrainbench",
+      "version": "1.1 \u2014 OpenCode",
+      "metric_key": "posttrainbench-weighted-score"
+    },
+    {
+      "id": 938,
+      "result_key": "d4639b01c9fa3dccddeb5559e37c8982e83ab545226c5986644e3be2e9e14de9",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "88.8",
+      "score_raw": "88.8%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "labbench2",
+      "version": "Terminal and internet \u2014 September 2026 evaluation",
+      "metric_key": "labbench2-accuracy"
+    },
+    {
+      "id": 939,
+      "result_key": "e6878e03307d91d02f2e3caa4738e238f34e3dc077bf934409a6954e238c1163",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "76",
+      "score_raw": "76.0%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "riemann-bench",
+      "version": "September 2026 leaderboard",
+      "metric_key": "riemann-bench-pass-at-1"
+    },
+    {
+      "id": 940,
+      "result_key": "6f129bb4fee66c6b1c1f1b1ce1683befa3f3b7b02a1633bac96f8755fb551fbb",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "99.7",
+      "score_raw": "99.7%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "graphwalks",
+      "version": "Up to 128k \u2014 BFS, 650 items",
+      "metric_key": "graphwalks-f1"
+    },
+    {
+      "id": 941,
+      "result_key": "49185244b65701e922b8cf140f788d1bcc0b8c7ab2b8fa4a013c787a64954773",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "84.2",
+      "score_raw": "84.2%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "graphwalks",
+      "version": "256k to 1M \u2014 BFS, 200 items",
+      "metric_key": "graphwalks-f1"
+    },
+    {
+      "id": 942,
+      "result_key": "cf3d263314625350ee547ebd09e8c9e260c4419cb74bae6eb1e0c074f14be89f",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "39.5",
+      "score_raw": "39.5%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "agents-last-exam",
+      "version": "ALE-V1 \u2014 ALE-Claw, 5h",
+      "metric_key": "agents-last-exam-pass-rate"
+    },
+    {
+      "id": 944,
+      "result_key": "7644aa47e14aa8d814da75a65c4a6eaa7341b16e05b003abfdc9969644a7aa64",
+      "reasoning_level": "high",
+      "score_value": "71.6",
+      "score_raw": "71.6%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "chartography",
+      "version": "No tools \u2014 September 2026 leaderboard",
+      "metric_key": "chartography-pass-at-1"
+    },
+    {
+      "id": 946,
+      "result_key": "f703e2b97bbcb8ef485e90789b889d5b31d1599b28832ad36cec2ff8575dea91",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "68",
+      "score_raw": "68.0%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "cwe-bench",
+      "version": "1",
+      "metric_key": "cwe-bench-programmatic-pass-at-1"
+    },
+    {
+      "id": 937,
+      "result_key": "2fece0a0b79016f54e290b7949138bea783f50a4f4a4985ba8a50aea990faf9e",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "57.6",
+      "score_raw": "57.6%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "terminal-bench",
+      "version": "Science 0.1 \u2014 6x verifier timeout",
+      "metric_key": "terminal-bench-accuracy"
+    },
+    {
+      "id": 943,
+      "result_key": "9488604e655588768402341cdac4b93f1824c64ac736d93c1067f837a333b05c",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "69.2",
+      "score_raw": "69.2%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "osworld",
+      "version": "2.0 v2026.08.08 Offline \u2014 Partial, max of 3 runs",
+      "metric_key": "osworld-partial-score"
+    },
+    {
+      "id": 945,
+      "result_key": "01291a8c28a41e6e9a200b98726ba79073f58e9b57b0d79a4f6450b72709b0eb",
+      "reasoning_level": "highest thinking settings",
+      "score_value": "91.7",
+      "score_raw": "91.7%",
+      "reported_at": "2026-09-30",
+      "primary_source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "slug": "lvbench",
+      "version": "1 FPS \u2014 No tools",
+      "metric_key": "lvbench-accuracy"
+    }
+  ],
+  "registry_revision": [
+    {
+      "id": 1,
+      "token": "92e1579bbd692a053225025175ba5211"
+    }
+  ]
+}

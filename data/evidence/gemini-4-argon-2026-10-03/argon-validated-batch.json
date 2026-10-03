@@ -1,0 +1,1109 @@
+{
+  "records": [
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Gemini 4 Argon",
+        "company_slug": "google-deepmind",
+        "namespace_prefix": "30",
+        "sequence": 11,
+        "registry_no": "30011",
+        "release_at": "2026-09-30",
+        "release_precision": "date",
+        "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "published_at": "2026-10-03T11:14:52Z",
+        "status": "preview",
+        "sequence_exception_reason": null,
+        "aliases": []
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Vals Index",
+        "slug": "vals-index",
+        "source_url": "https://www.vals.ai/benchmarks/vals_index",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Vals AI",
+            "key": "vals-ai",
+            "source_url": "https://www.vals.ai/benchmarks/vals_index",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Vals Index GDP-weighted Accuracy",
+            "key": "vals-index-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "2.1",
+            "version_slug": "2.1",
+            "release_at": "2026-09-25",
+            "release_precision": "date",
+            "metric_key": "vals-index-accuracy",
+            "source_url": "https://www.vals.ai/benchmarks/vals_index",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "vals-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Finance Agent Benchmark",
+        "slug": "finance-agent",
+        "source_url": "https://www.vals.ai/benchmarks/fabv2",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [
+          {
+            "name": "Vals Finance Agent",
+            "source_url": "https://www.vals.ai/benchmarks/fabv2",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Finance Agent Accuracy",
+            "key": "finance-agent-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "2 \u2014 September 2026 evaluation",
+            "version_slug": "2-september-2026",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "finance-agent-accuracy",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "vals-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Harvey's Legal Agent Benchmark",
+        "slug": "harveys-legal-agent-benchmark",
+        "source_url": "https://www.vals.ai/benchmarks/hlab",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [
+          {
+            "name": "HLAB",
+            "source_url": "https://www.vals.ai/benchmarks/hlab",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "HLAB Task Pass Rate",
+            "key": "hlab-task-pass-rate",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "September 2026 evaluation",
+            "version_slug": "september-2026",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "hlab-task-pass-rate",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "vals-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "FrontierSWE",
+        "slug": "frontierswe",
+        "source_url": "https://www.frontierswe.com/blog/v2",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Proximal",
+            "key": "proximal",
+            "source_url": "https://www.frontierswe.com/blog/v2",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "FrontierSWE Score",
+            "key": "frontierswe-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "2 \u2014 September 2026 evaluation",
+            "version_slug": "2-september-2026",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "frontierswe-score",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "proximal"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Vibe Code Bench",
+        "slug": "vibe-code-bench",
+        "source_url": "https://www.vals.ai/benchmarks/vibe-code",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Vibe Code Bench Score",
+            "key": "vibe-code-bench-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1.1 \u2014 OpenHands, September 2026 evaluation",
+            "version_slug": "1.1-openhands-september-2026",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "vibe-code-bench-score",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "vals-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "PostTrainBench",
+        "slug": "posttrainbench",
+        "source_url": "https://posttrainbench.com/?version=v1.1",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "PostTrainBench Team",
+            "key": "posttrainbench-team",
+            "source_url": "https://posttrainbench.com/?version=v1.1",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "PostTrainBench Weighted Aggregate",
+            "key": "posttrainbench-weighted-score",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1.1 \u2014 OpenCode",
+            "version_slug": "1.1-opencode",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "posttrainbench-weighted-score",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "posttrainbench-team"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "LABBench2",
+        "slug": "labbench2",
+        "source_url": "https://github.com/EdisonScientific/labbench2",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Edison Scientific",
+            "key": "edison-scientific",
+            "source_url": "https://github.com/EdisonScientific/labbench2",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "LABBench2 Accuracy",
+            "key": "labbench2-accuracy",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Terminal and internet \u2014 September 2026 evaluation",
+            "version_slug": "terminal-internet-september-2026",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "labbench2-accuracy",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "edison-scientific"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Riemann-bench",
+        "slug": "riemann-bench",
+        "source_url": "https://surgehq.ai/benchmarks/riemann-bench",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [
+          {
+            "name": "RiemannBench",
+            "source_url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "evaluators": [
+          {
+            "name": "Surge AI",
+            "key": "surge-ai",
+            "source_url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "Riemann-bench Pass@1",
+            "key": "riemann-bench-pass-at-1",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "September 2026 leaderboard",
+            "version_slug": "september-2026-leaderboard",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "riemann-bench-pass-at-1",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "surge-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "GraphWalks",
+        "slug": "graphwalks",
+        "source_url": "https://huggingface.co/datasets/openai/graphwalks",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "GraphWalks BFS F1",
+            "key": "graphwalks-f1",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "Up to 128k \u2014 BFS, 650 items",
+            "version_slug": "up-to-128k-bfs-650",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "graphwalks-f1",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          },
+          {
+            "version": "256k to 1M \u2014 BFS, 200 items",
+            "version_slug": "256k-to-1m-bfs-200",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "graphwalks-f1",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "openai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Agent's Last Exam",
+        "slug": "agents-last-exam",
+        "source_url": "https://github.com/MaxIntelligenceAgency/ALE-Benchmark",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [
+          {
+            "name": "ALE",
+            "source_url": "https://github.com/MaxIntelligenceAgency/ALE-Benchmark",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Agent's Last Exam Binary Pass Rate",
+            "key": "agents-last-exam-pass-rate",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "ALE-V1 \u2014 ALE-Claw, 5h",
+            "version_slug": "ale-v1-ale-claw-5h",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "agents-last-exam-pass-rate",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "uc-berkeley"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Chartography",
+        "slug": "chartography",
+        "source_url": "https://surgehq.ai/benchmarks/chartography",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [
+          {
+            "name": "Chartography Pass@1",
+            "key": "chartography-pass-at-1",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "No tools \u2014 September 2026 leaderboard",
+            "version_slug": "no-tools-september-2026",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "chartography-pass-at-1",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "surge-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "CWE-bench",
+        "slug": "cwe-bench",
+        "source_url": "https://cwe-bench.com/",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "Collinear AI",
+            "key": "collinear-ai",
+            "source_url": "https://cwe-bench.com/",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "metrics": [
+          {
+            "name": "CWE-bench Programmatic Pass@1",
+            "key": "cwe-bench-programmatic-pass-at-1",
+            "storage_kind": "decimal",
+            "unit": "percent",
+            "display_precision": 1,
+            "minimum_value": "0",
+            "maximum_value": "100",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1",
+            "version_slug": "1",
+            "release_at": "2026-09-25",
+            "release_precision": "date",
+            "metric_key": "cwe-bench-programmatic-pass-at-1",
+            "source_url": "https://cwe-bench.com/",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "collinear-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Terminal-Bench",
+        "slug": "terminal-bench",
+        "source_url": "https://www.tbench.ai/",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Science 0.1 \u2014 6x verifier timeout",
+            "version_slug": "science-0.1-6x-verifier-timeout",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "terminal-bench-accuracy",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "google-deepmind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "OSWorld",
+        "slug": "osworld",
+        "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "2.0 v2026.08.08 Offline \u2014 Partial, max of 3 runs",
+            "version_slug": "2.0-v2026.08.08-offline-partial-max-3",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "osworld-partial-score",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "google-deepmind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "LVBench",
+        "slug": "lvbench",
+        "source_url": "https://arxiv.org/abs/2406.08035",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "1 FPS \u2014 No tools",
+            "version_slug": "1-fps-no-tools",
+            "release_at": "2026-09-30",
+            "release_precision": "date",
+            "metric_key": "lvbench-accuracy",
+            "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "source_checked_at": "2026-10-03T11:14:52Z",
+            "evaluator_keys": [
+              "google-deepmind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "high",
+        "benchmark_slug": "vals-index",
+        "benchmark_version": "2.1",
+        "metric_key": "vals-index-accuracy",
+        "score_value": "68.9",
+        "score_raw": "68.9%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "score_value": "51.3",
+        "score_raw": "51.3%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "high",
+        "benchmark_slug": "finance-agent",
+        "benchmark_version": "2 \u2014 September 2026 evaluation",
+        "metric_key": "finance-agent-accuracy",
+        "score_value": "65.4",
+        "score_raw": "65.4%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "high",
+        "benchmark_slug": "harveys-legal-agent-benchmark",
+        "benchmark_version": "September 2026 evaluation",
+        "metric_key": "hlab-task-pass-rate",
+        "score_value": "19.6",
+        "score_raw": "19.6%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1 \u2014 mini-swe-agent",
+        "metric_key": "deep-swe-pass-at-1",
+        "score_value": "77.9",
+        "score_raw": "77.9%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 \u2014 September 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "score_value": "55.0",
+        "score_raw": "55.0%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "high",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 \u2014 OpenHands, September 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "score_value": "91.9",
+        "score_raw": "91.9%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "57.4",
+        "score_raw": "57.4%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "posttrainbench",
+        "benchmark_version": "1.1 \u2014 OpenCode",
+        "metric_key": "posttrainbench-weighted-score",
+        "score_value": "45.3",
+        "score_raw": "45.3%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1 \u2014 6x verifier timeout",
+        "metric_key": "terminal-bench-accuracy",
+        "score_value": "57.6",
+        "score_raw": "57.6%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "labbench2",
+        "benchmark_version": "Terminal and internet \u2014 September 2026 evaluation",
+        "metric_key": "labbench2-accuracy",
+        "score_value": "88.8",
+        "score_raw": "88.8%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "September 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "score_value": "76.0",
+        "score_raw": "76.0%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "graphwalks",
+        "benchmark_version": "Up to 128k \u2014 BFS, 650 items",
+        "metric_key": "graphwalks-f1",
+        "score_value": "99.7",
+        "score_raw": "99.7%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "graphwalks",
+        "benchmark_version": "256k to 1M \u2014 BFS, 200 items",
+        "metric_key": "graphwalks-f1",
+        "score_value": "84.2",
+        "score_raw": "84.2%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "agents-last-exam",
+        "benchmark_version": "ALE-V1 \u2014 ALE-Claw, 5h",
+        "metric_key": "agents-last-exam-pass-rate",
+        "score_value": "39.5",
+        "score_raw": "39.5%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "2.0 v2026.08.08 Offline \u2014 Partial, max of 3 runs",
+        "metric_key": "osworld-partial-score",
+        "score_value": "69.2",
+        "score_raw": "69.2%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "high",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "No tools \u2014 September 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "score_value": "71.6",
+        "score_raw": "71.6%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "lvbench",
+        "benchmark_version": "1 FPS \u2014 No tools",
+        "metric_key": "lvbench-accuracy",
+        "score_value": "91.7",
+        "score_raw": "91.7%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "google-deepmind"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "highest thinking settings",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "score_value": "68.0",
+        "score_raw": "68.0%",
+        "reported_at": "2026-09-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_has_single_run": true,
+        "sources": [
+          {
+            "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+            "checked_at": "2026-10-03T11:14:52Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
