@@ -49,3 +49,11 @@ Both production custom domains are configured in this repository. Deploy the Wor
 ## Date audit (Task 6)
 
 `source_checked_at` and result `primary_source_checked_at`/additional citation checks drive entity update dates. Model release and organization founding dates are not used as page dates. Organization founding metadata is retained for readers under `data-nosnippet`. The footer no longer treats its fixed data-date constant or build timestamp as a page update; its build toggle explicitly says “Application build” and is excluded from snippets. Model lists label release dates as “Released”. Legal policy effective dates remain explicit policy dates. No article publication-time tags are emitted. JSON-LD and sitemap consume the same page data timestamp in Tasks 7–8; missing timestamps are omitted, never filled with build time.
+
+## Category hubs and skipped data (Task 12)
+
+Category hubs are skipped: neither `benchmarks` nor `benchmark_versions` contains categories, and the tracked schema/contracts define no taxonomy. Proposed follow-up: add source-backed benchmark categories through an explicitly reviewed data-contract change, retain each category's primary-source citation, then build `/categories/{slug}` pages only from those recorded memberships. No categories are inferred from benchmark names.
+
+Flagship comparisons are also skipped because no authoritative flagship designation exists. The deterministic `app/src/comparison-pairs.ts` generator uses consecutive numbered names within the same provider and the same name prefix/suffix, requires three shared benchmark families with matching version/metric identities, and caps output at 100. Static pages preserve all latest reasoning/evaluator series through existing comparison components.
+
+`/recent` selects up to 100 newest records by persisted increasing result ID. There is no immutable result insertion timestamp in this schema; its date groups are explicitly labeled **Evidence checked**, using persisted source-check dates. Report dates and release dates do not determine Registry insertion order. No timestamp is invented for “added”.
