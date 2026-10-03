@@ -90,10 +90,10 @@ export function parseBrowserDocument(html: string, href: string, revision?: stri
 }
 
 export function readNavigationHead(document: Document): string {
-  return [...document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], link[rel="canonical"]')].map((element) => element.outerHTML).join("\n");
+  return [...document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], meta[name^="twitter:"], script[type="application/ld+json"], link[rel="canonical"]')].map((element) => element.outerHTML).join("\n");
 }
 export function applyNavigationHead(head: string) {
   const parsed = new DOMParser().parseFromString(`<head>${head}</head>`,"text/html");
-  document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], link[rel="canonical"]').forEach((element) => element.remove());
+  document.head.querySelectorAll('title, meta[name="description"], meta[name="robots"], meta[property^="og:"], meta[name^="twitter:"], script[type="application/ld+json"], link[rel="canonical"]').forEach((element) => element.remove());
   [...parsed.head.children].forEach((element) => document.head.appendChild(document.importNode(element,true)));
 }

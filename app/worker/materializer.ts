@@ -4,7 +4,7 @@ import type { ParsedListParams } from './params';
 import { RegistryRepository } from './repository';
 import { digest, logicalKind, validateManifest, validateObject, type ReadData, type ReadEnvironment, type ReadManifest, type ReadObject } from './read-model';
 const params:ParsedListParams={page:1,limit:500,view:'history'};
-const fixed=['models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'];
+const fixed=['seo','models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'];
 export async function canonicalState(db:D1Database) {
   const row=await db.prepare('SELECT token AS revision,(SELECT COALESCE(max(id),0) FROM registry_read_changes) AS watermark FROM registry_revision WHERE id=1').first<{revision:string;watermark:number}>();
   if(!row) throw new Error('Canonical materialization state is missing. Apply migrations first.');
@@ -23,7 +23,8 @@ async function wholeResults<T extends {data:{results:unknown[];result_page:{numb
 export async function produceObject(repository:RegistryRepository,key:string,environment:ReadEnvironment):Promise<ReadObject> {
   const kind=logicalKind(key),parts=key.split(':');
   let data:unknown;
-  if(kind==='models') data={response:await wholeList(p=>repository.models(p)),fields:await repository.materializedFields('models')};
+  if(kind==='seo') data=await repository.seoSnapshot();
+  else if(kind==='models') data={response:await wholeList(p=>repository.models(p)),fields:await repository.materializedFields('models')};
   else if(kind==='benchmarks') data={response:await wholeList(p=>repository.benchmarks(p)),fields:await repository.materializedFields('benchmarks')};
   else if(kind==='companies') data={response:await wholeList(p=>repository.companies(p)),fields:await repository.materializedFields('companies')};
   else if(kind==='model') data={response:await wholeResults(p=>repository.model(parts[1],p)),fields:await repository.materializedFields(key)};
@@ -43,12 +44,13 @@ export interface GenerationBuild {manifest:ReadManifest;manifestHash:string;obje
 export async function buildGeneration(db:D1Database,environment:ReadEnvironment,previous?:ReadManifest,readPrevious?:(key:string)=>Promise<ReadObject>):Promise<GenerationBuild|null> {
   if(previous) validateManifest(previous,environment);
   const state=await canonicalState(db);
-  if(previous?.canonicalRevision===state.revision && previous.watermark===state.watermark && previous.objects['home-panels']) return null;
+  if(previous?.canonicalRevision===state.revision && previous.watermark===state.watermark && previous.objects['home-panels'] && previous.objects.seo) return null;
   const keys=previous ? (await db.prepare('SELECT DISTINCT logical_key AS key FROM registry_read_changes WHERE id>? AND id<=? ORDER BY logical_key').bind(previous.watermark,state.watermark).all<{key:string}>()).results.map(row=>row.key) : [...fixed,...(await db.prepare(`SELECT 'model:'||registry_no AS key FROM models m WHERE NOT EXISTS(SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)
     UNION ALL SELECT 'company:'||slug FROM companies UNION ALL SELECT 'family:'||slug FROM benchmarks
     UNION ALL SELECT 'version:'||b.slug||':'||bv.version_slug FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id ORDER BY key`).all<{key:string}>()).results.map(row=>row.key)];
   // Refresh the small homepage projection with every canonical update. Also
   // bootstrap it for generations published before the panels were introduced.
+  if(!keys.includes('seo')) keys.push('seo');
   if(!keys.includes('home-panels')) keys.push('home-panels');
   const refs={...previous?.objects},objects=new Map<string,string>(),rebuilt:string[]=[],removed:string[]=[];
   // One repository per generation deduplicates canonical metadata reads.

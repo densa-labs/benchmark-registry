@@ -2,6 +2,7 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { execFileSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import { faviconAssets } from "./src/branding";
 
 const staging = process.env.CLOUDFLARE_ENV === "staging";
@@ -23,6 +24,7 @@ export default defineConfig({
     },
     generateBundle() {
       if (this.environment.name === "client") {
+        this.emitFile({ type:"asset",fileName:"assets/Benchmark-Registry-B-Logo-Dark.png",source:readFileSync(new URL("../assets/Benchmark-Registry-B-Logo-Dark.png",import.meta.url)) });
         for (const [fileName, source] of Object.entries(faviconAssets(staging))) this.emitFile({ type: "asset", fileName, source });
       }
     },

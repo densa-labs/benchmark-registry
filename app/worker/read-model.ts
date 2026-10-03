@@ -1,3 +1,4 @@
+import type { SeoSnapshot } from "./seo-data";
 import type { BenchmarkFamilyResponse, BenchmarkListResponse, BenchmarkVersionResponse, CompanyDetailResponse, CompanyListResponse, ModelDetailResponse, ModelListResponse } from '../src/registry';
 import type { ResultRow } from './api';
 import { HOME_PANEL_LIMIT, type HomePanels } from './home-panels';
@@ -5,6 +6,7 @@ import type { SearchEntity } from './search';
 import type { SearchRelationship } from './search-response';
 export type ReadEnvironment='staging'|'production'|'local';
 export type ReadData={
+  seo:SeoSnapshot;
   'home-panels':HomePanels;
   models:{response:ModelListResponse;fields:{identity:string;name:string;company:string;released:string;aliases:string}[]};
   benchmarks:{response:BenchmarkListResponse;fields:{identity:string;released:string}[]};
@@ -28,14 +30,14 @@ export interface ReadManifest {
 }
 export interface Publication {schema:1;environment:ReadEnvironment;current:GenerationRef;previous?:GenerationRef}
 export const logicalKind=(key:string)=>key.startsWith('model:')?'model':key.startsWith('family:')?'family':key.startsWith('version:')?'version':key.startsWith('company:')?'company':key;
-export const validKey=(key:string)=>['models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'].includes(key) || /^(model:[0-9]+|company:[a-z0-9-]+|family:[a-z0-9-]+|version:[a-z0-9-]+:[a-z0-9._-]+)$/u.test(key);
+export const validKey=(key:string)=>['seo','models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'].includes(key) || /^(model:[0-9]+|company:[a-z0-9-]+|family:[a-z0-9-]+|version:[a-z0-9-]+:[a-z0-9._-]+)$/u.test(key);
 export async function digest(text:string) {return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)))].map(byte=>byte.toString(16).padStart(2,'0')).join('');}
 export class MaterializationFailure extends Error {}
 export function validateManifest(value:unknown,environment:ReadEnvironment):asserts value is ReadManifest {
   const m=value as ReadManifest;
   if(!m || m.schema!==1 || m.environment!==environment || !/^[a-f0-9]{32}$/u.test(m.generation) || !/^[a-f0-9]{32}$/u.test(m.canonicalRevision) || !Number.isSafeInteger(m.watermark) || m.watermark<0 || !Number.isFinite(Date.parse(m.createdAt)) || !m.objects || Array.isArray(m.objects)) throw new MaterializationFailure('Invalid read manifest.');
   for(const [key,hash] of Object.entries(m.objects)) if(!validKey(key) || !/^[a-f0-9]{64}$/u.test(hash)) throw new MaterializationFailure('Invalid manifest reference.');
-  for(const key of ['models','benchmarks','companies','stats','redirects','inventory','search-entities','search-relationships']) if(!m.objects[key]) throw new MaterializationFailure('Incomplete read manifest.');
+  for(const key of ['seo','models','benchmarks','companies','stats','redirects','inventory','search-entities','search-relationships']) if(!m.objects[key]) throw new MaterializationFailure('Incomplete read manifest.');
   if(!m.inlineObjects || Array.isArray(m.inlineObjects)) throw new MaterializationFailure('Missing coherent update bundle.');
   for(const [hash,object] of Object.entries(m.inlineObjects)) {if(m.objects[object.key]!==hash) throw new MaterializationFailure('Wrong bundled object reference.');validateObject(object,object.key,environment);}
 }
@@ -56,6 +58,8 @@ export function validateObject(value:unknown,key:string,environment:ReadEnvironm
       const identities=new Set(fields.map(field=>field.identity));
       for(const row of data.results) if(!/^[a-f0-9]{64}$/u.test(row.result_key) || !identities.has(row.result_key) || row.exact_result_href!==null && !row.exact_result_href.endsWith(`result=${row.result_key}`)) throw new MaterializationFailure('Invalid result reference.');
     }
+  } else if(kind==='seo') {
+    if(!d.pages || !Array.isArray(d.models)) throw new MaterializationFailure('Invalid SEO projection.');
   } else if(kind==='home-panels') {
     const panels=o.data as HomePanels;
     if(!Array.isArray(panels.explore_benchmarks) || !Array.isArray(panels.latest_additions)

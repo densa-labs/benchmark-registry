@@ -108,7 +108,7 @@ it('new result regenerates only affected scopes and retires exact eligibility co
   f.sqlite.prepare('INSERT INTO result_evaluators SELECT ?,evaluator_organization_id FROM result_evaluators WHERE result_id=?').run(id,original.id);
   f.sqlite.exec('COMMIT');
   const next=(await buildGeneration(f.db,'local',build.manifest))!;
-  expect(next.rebuilt).toHaveLength(7);expect(next.rebuilt).toContain('home-panels');expect(next.rebuilt).toContain('search-relationships');expect(next.rebuilt).not.toContain('search-entities');expect(next.rebuilt).not.toContain('models');expect(next.rebuilt).not.toContain('benchmarks');
+  expect(next.rebuilt).toHaveLength(8);expect(next.rebuilt).toContain('home-panels');expect(next.rebuilt).toContain('search-relationships');expect(next.rebuilt).not.toContain('search-entities');expect(next.rebuilt).not.toContain('models');expect(next.rebuilt).not.toContain('benchmarks');
   const evidence=await publishGeneration(f.store,next,f.db,publication);
   expect(evidence.objectWrites).toBeLessThanOrEqual(7);expect(evidence.ambiguous).toBeGreaterThan(0);
   expect((await readPublication(f.store,'local'))?.previous).toEqual(publication.current);
@@ -237,7 +237,7 @@ it('bootstraps homepage panels in older generations without a canonical data cha
   const previous={...build.manifest,objects:{...build.manifest.objects},inlineObjects:{...build.manifest.inlineObjects}};
   delete previous.inlineObjects[previous.objects['home-panels']]; delete previous.objects['home-panels'];
   const next=(await buildGeneration(f.db,'local',previous))!;
-  expect(next.rebuilt).toEqual(['home-panels']);
+  expect(next.rebuilt).toEqual(['seo','home-panels']);
   expect(next.manifest.objects['home-panels']).toBeTruthy();
   expect(await buildGeneration(f.db,'local',next.manifest)).toBeNull();
 });
