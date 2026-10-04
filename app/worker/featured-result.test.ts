@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ResultRow } from "./api";
-import { highestRecordedResult } from "./featured-result";
+import { compareDecimal, latestReportedResult } from "./featured-result";
 
 const result = (value: string | null, key = "a".repeat(64), reasoning: string | null = "max"): ResultRow => ({
   result_key: key, exact_result_href: null,
@@ -14,30 +14,45 @@ const result = (value: string | null, key = "a".repeat(64), reasoning: string | 
   reported_at: "2026-01-01", reported_precision: "date",
 });
 
-describe("highest recorded benchmark result", () => {
-  it("chooses the numeric maximum across benchmarks, reasoning levels and retained runs", () => {
-    const highest = { ...result("94.2", "c".repeat(64), "high"),
-      benchmark: { name: "GPQA", slug: "gpqa", aliases: [] },
-      benchmark_version: "Diamond", benchmark_version_slug: "diamond",
-      reported_at: "2025-01-01", exact_result_href: "/benchmarks/gpqa/diamond?view=history&result=" + "c".repeat(64) };
-    const selected = highestRecordedResult([result("73.3"), highest, result("89", "b".repeat(64), null)]);
-    expect(selected).toMatchObject({ benchmark: { name: "GPQA" }, reasoning_level: "high", score: highest.score,
-      exact_result_href: highest.exact_result_href });
+const on = (reported_at: string, value: string | null, name: string, key: string, extra: Partial<ResultRow> = {}): ResultRow =>
+  ({ ...result(value, key), reported_at, benchmark: { name, slug: name.toLowerCase(), aliases: [] }, ...extra });
+
+describe("featured result: the latest reported result, never the highest score", () => {
+  it("picks the most recent report even when an older result scores higher", () => {
+    const older = on("2025-01-01", "99.9", "GPQA", "a".repeat(64));
+    const newer = on("2026-03-01", "12.5", "SWE-bench", "b".repeat(64), { exact_result_href: "/benchmarks/swe-bench/verified?view=history&result=" + "b".repeat(64) });
+    const selected = latestReportedResult([older, newer]);
+    expect(selected).toMatchObject({ result_key: newer.result_key, benchmark: { name: "SWE-bench" }, score: newer.score, exact_result_href: newer.exact_result_href });
     expect(selected).not.toHaveProperty("model");
   });
-  it("uses exact decimal values rather than display rounding, floats or string order", () => {
-    expect(highestRecordedResult([result("9"), result("100", "b".repeat(64))])?.score.value).toBe("100");
-    expect(highestRecordedResult([result("90.00000000000000001"), result("90.00000000000000002", "b".repeat(64))])?.result_key).toBe("b".repeat(64));
-    expect(highestRecordedResult([result("-0.2"), result("-0.1", "b".repeat(64))])?.score.value).toBe("-0.1");
+  it("breaks same-day ties by benchmark name, not by score or input order", () => {
+    const a = on("2026-03-01", "10", "AIME", "c".repeat(64));
+    const b = on("2026-03-01", "90", "Terminal-Bench", "a".repeat(64));
+    expect(latestReportedResult([b, a])?.benchmark.name).toBe("AIME");
+    expect(latestReportedResult([a, b])?.benchmark.name).toBe("AIME");
   });
-  it("breaks equal-score ties deterministically by result key", () => {
-    const a = result("73.3"), b = result("73.3", "b".repeat(64));
-    expect(highestRecordedResult([b, a])?.result_key).toBe(a.result_key);
-    expect(highestRecordedResult([a, b])?.result_key).toBe(a.result_key);
+  it("then by version, metric and reasoning level, and compares date and timestamp reports by day", () => {
+    const base = on("2026-03-01", "50", "HealthBench", "c".repeat(64));
+    const hard = { ...base, benchmark_version: "Hard", result_key: "d".repeat(64) };
+    const timestamped = { ...base, reported_at: "2026-03-01T18:00:00Z", reported_precision: "timestamp" as const, benchmark_version: "Consensus", result_key: "e".repeat(64) };
+    expect(latestReportedResult([hard, timestamped, base])?.result_key).toBe("e".repeat(64));
+    const low = { ...base, reasoning_level: "low", result_key: "f".repeat(64) };
+    expect(latestReportedResult([{ ...base, reasoning_level: "max" }, low])?.reasoning_level).toBe("low");
+    const rerun = { ...base, result_key: "0".repeat(64) };
+    expect(latestReportedResult([base, rerun])?.result_key).toBe(rerun.result_key);
   });
   it("ignores text scores and preserves valid zero scores", () => {
-    expect(highestRecordedResult([])).toBeNull();
-    expect(highestRecordedResult([result(null)])).toBeNull();
-    expect(highestRecordedResult([result(null), result("0")])?.score.value).toBe("0");
+    expect(latestReportedResult([])).toBeNull();
+    expect(latestReportedResult([result(null)])).toBeNull();
+    expect(latestReportedResult([on("2026-09-01", null, "A", "a".repeat(64)), on("2026-01-01", "0", "B", "b".repeat(64))])?.score.value).toBe("0");
+  });
+});
+
+describe("exact decimal comparison", () => {
+  it("uses exact decimal values rather than floats or string order", () => {
+    expect(compareDecimal("9", "100")).toBe(-1);
+    expect(compareDecimal("90.00000000000000001", "90.00000000000000002")).toBe(-1);
+    expect(compareDecimal("-0.1", "-0.2")).toBe(1);
+    expect(compareDecimal("73.30", "73.3")).toBe(0);
   });
 });

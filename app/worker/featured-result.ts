@@ -16,16 +16,30 @@ export function compareDecimal(left: string, right: string): number {
   return a > b ? 1 : a < b ? -1 : 0;
 }
 
-export function highestRecordedResult(results: ResultRow[]): FeaturedResult | null {
-  let highest: ResultRow | undefined;
-  for (const result of results) {
-    if (result.score.value === null) continue;
-    const comparison = highest ? compareDecimal(result.score.value, highest.score.value!) : 1;
-    if (comparison > 0 || (comparison === 0 && result.result_key < highest!.result_key)) highest = result;
+const text = (value: string | null | undefined) => value ?? "";
+/**
+ * Order for the featured result: the latest report day first, then benchmark
+ * name, version, metric and reasoning level, so a tie never depends on the score
+ * or on hash order. Same-day date and timestamp reports compare as peers.
+ */
+function latestFirst(a: ResultRow, b: ResultRow): number {
+  const day = b.reported_at.slice(0, 10).localeCompare(a.reported_at.slice(0, 10), "en");
+  if (day) return day;
+  for (const [left, right] of [[a.benchmark.name, b.benchmark.name], [a.benchmark_version, b.benchmark_version],
+    [a.metric.name, b.metric.name], [text(a.reasoning_level), text(b.reasoning_level)]] as const) {
+    const comparison = left.localeCompare(right, "en");
+    if (comparison) return comparison;
   }
-  if (!highest) return null;
+  // Identical descriptors (a retained rerun) still resolve the same way every build.
+  return a.result_key.localeCompare(b.result_key, "en");
+}
+
+/** The model's most recently reported numeric result. Never the highest score. */
+export function latestReportedResult(results: ResultRow[]): FeaturedResult | null {
+  const latest = results.filter((result) => result.score.value !== null).sort(latestFirst)[0];
+  if (!latest) return null;
   const { result_key, exact_result_href, benchmark, benchmark_version,
-    benchmark_version_slug, reasoning_level, score } = highest;
+    benchmark_version_slug, reasoning_level, score } = latest;
   return { result_key, exact_result_href, benchmark, benchmark_version,
     benchmark_version_slug, reasoning_level, score };
 }

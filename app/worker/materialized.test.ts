@@ -10,7 +10,7 @@ import {digest,validateManifest,type Publication} from './read-model';
 import {shadowGeneration} from './shadow';
 import {MaterializedRepository} from './materialized-repository';
 import {RegistryRepository} from './repository';
-import { highestRecordedResult } from './featured-result';
+import { latestReportedResult } from './featured-result';
 import {VerifiedReads,verifiedReads} from './read-store';
 import type { ModelListResponse } from '../src/registry';
 const databases:DatabaseSync[]=[];
@@ -95,9 +95,10 @@ it('refreshes featured scores from current model history even when the models in
   await publishGeneration(f.store,next,f.db,publication);
   const response=await worker.fetch(new Request('https://benchmarkregistry.org/api/models?q=10001'),f.env);
   const body=await response.json() as ModelListResponse;
-  expect(body.data[0].featured_result).toMatchObject({result_key:original.result_key,score:{value:'99',display:'99.0%'}});
+  // The newer, lower score is featured: the latest report, never the highest.
+  expect(body.data[0].featured_result).toMatchObject({result_key:'f'.repeat(64),score:{value:'1',display:'1.0%'}});
   const history=await new RegistryRepository(f.db).model('10001',{page:1,limit:500,view:'history'});
-  expect(body.data[0].featured_result).toEqual(highestRecordedResult(history.data.results));
+  expect(body.data[0].featured_result).toEqual(latestReportedResult(history.data.results));
   expect(response.headers.get('X-Registry-D1-Rows')).toBe('0');
   expect(f.env.DB.prepare).not.toHaveBeenCalled();
 });

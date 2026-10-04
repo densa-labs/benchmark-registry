@@ -2,7 +2,7 @@ import { generateScoreChart } from "../src/score-chart";
 import { buildSeoSnapshot, type SeoInputs } from "./seo-data";
 import { EXACT_RESULT_ELIGIBLE_SQL } from "./result-links";
 import { HOME_PANEL_LIMIT, type HomePanels } from "./home-panels";
-import { highestRecordedResult } from "./featured-result";
+import { latestReportedResult } from "./featured-result";
 import {
   ApiError,
   type BenchmarkVersionSummary,
@@ -592,7 +592,7 @@ export class RegistryRepository {
       byModel.set(result.model.registry_no, results);
     }
     return { data: rows.map(row => ({ ...modelFromRow(row),
-      featured_result: highestRecordedResult(byModel.get(row.registry_no) ?? []),
+      featured_result: latestReportedResult(byModel.get(row.registry_no) ?? []),
     })), page: pageMetadata(params.page, params.limit, total) };
   }
 

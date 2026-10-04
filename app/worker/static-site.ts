@@ -10,7 +10,7 @@ import { handleRequest, type Env } from "./index";
 import { buildGeneration } from "./materializer";
 import { MaterializedRepository } from "./materialized-repository";
 import { verifyGeneration } from "./publication";
-import { highestRecordedResult } from "./featured-result";
+import { latestReportedResult } from "./featured-result";
 import { LEGACY_ROOT_SLUGS } from "./legacy-root-slugs";
 import { digest, type ReadData, type ReadEnvironment, type ReadObject } from "./read-model";
 
@@ -238,7 +238,7 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   // read in the browser is one file, not one file per model.
   const featured: ReadData["featured"] = {};
   for (const [key, hash] of Object.entries(build.manifest.objects)) {
-    if (key.startsWith("model:")) featured[key.slice(6)] = highestRecordedResult((object(hash).data as ReadData["model"]).response.data.results);
+    if (key.startsWith("model:")) featured[key.slice(6)] = latestReportedResult((object(hash).data as ReadData["model"]).response.data.results);
   }
   const featuredObject = JSON.stringify({ schema: 1, key: "featured", environment: readEnvironment, data: featured } satisfies ReadObject);
   const featuredHash = await digest(featuredObject);
