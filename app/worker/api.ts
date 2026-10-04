@@ -31,6 +31,7 @@ export interface BenchmarkRef {
 }
 
 export interface MetricSummary {
+  direction?: "higher" | "lower" | null;
   name: string;
   key: string;
   unit: string;
@@ -188,6 +189,7 @@ export interface ResultDbRow extends ModelDbRow {
   benchmark_version: string;
   benchmark_version_slug: string;
   reasoning_level: string;
+  metric_direction?: MetricSummary["direction"];
   metric_name: string;
   metric_key: string;
   metric_unit: string;
@@ -209,6 +211,7 @@ export interface ResultDbRow extends ModelDbRow {
 
 export function resultFromRow(row: ResultDbRow): ResultRow {
   const metric: MetricSummary = {
+    direction: row.metric_direction ?? null,
     name: row.metric_name,
     key: row.metric_key,
     unit: row.metric_unit,

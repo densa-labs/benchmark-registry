@@ -63,3 +63,22 @@ class ProductMigrationTests(unittest.TestCase):
                 (ROOT / "migrations/0010_product_read_indexes.sql").read_text()
             )
 
+    def test_metric_direction_up_down_without_backfill(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            self.assertEqual(
+                db.execute(
+                    "SELECT count(*) FROM metrics WHERE direction IS NOT NULL"
+                ).fetchone()[0],
+                0,
+            )
+            db.executescript(
+                (ROOT / "migrations/rollback/0011_metric_direction.sql").read_text()
+            )
+            db.executescript(
+                (ROOT / "migrations/0011_metric_direction.sql").read_text()
+            )

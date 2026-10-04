@@ -103,7 +103,7 @@ export class MaterializedRepository implements RegistryReader {
     const o=await this.get<'version'>(`version:${slug}:${version}`),data=o.response.data;
     const result=page(this.results(data.results,o.fields,p,'version'),p);
     const available=new Map(this.results(data.results,o.fields,p,'version',true).map(row=>[row.model.company.slug,row.model.company]));
-    return {available_companies:[...available.values()].sort((a,b)=>binary(text(a.name),text(b.name)) || binary(a.slug,b.slug)),data:{...data,view:p.view ?? 'latest',company:p.company ?? null,results:result.data,result_page:result.page}};
+    return {available_companies:[...available.values()].sort((a,b)=>binary(text(a.name),text(b.name)) || binary(a.slug,b.slug)),data:{...data,chart:data.chart ?? null,view:p.view ?? 'latest',company:p.company ?? null,results:result.data,result_page:result.page}};
   }
   async company(slug:string,p:ParsedListParams) {
     const o=await this.get<'company'>(`company:${slug}`),result=page(this.results(o.response.data.results,o.fields,p,'company'),p);

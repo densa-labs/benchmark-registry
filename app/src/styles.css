@@ -1592,6 +1592,11 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .cite-body pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; font: inherit; background: var(--surface-strong); padding: .5rem; }
 .copy-control { font-size: inherit; }
 
+.score-chart svg { display: block; width: 100%; max-width: var(--score-chart-max-width); height: auto; color: var(--text-muted); }
+.score-chart text { fill: currentColor; font: .75rem -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.score-chart-axis { fill: none; stroke: var(--border-strong); }
+.score-chart-frontier { fill: none; stroke: var(--accent); stroke-width: 2; }
+.score-chart-point { fill: var(--accent); stroke: var(--background); }
 
 @media (max-width: 48rem) {
   .site-footer__inner { grid-template-columns: minmax(0, 1fr); }

@@ -1428,6 +1428,7 @@ class Ingestor:
                     "storage_kind",
                     "unit",
                     "display_precision",
+                    "direction",
                     "minimum_value",
                     "maximum_value",
                     "source_url",
@@ -1492,9 +1493,13 @@ class Ingestor:
                 "normalized_source_url": normalized_source_url,
                 "source_checked_at": checked_at,
             }
+            direction = metric.get("direction")
+            if direction not in {None, "higher", "lower"}:
+                raise ValueErrorDetail("metric.direction is invalid")
+            expected["direction"] = direction
             existing = plan.catalog.one("metrics", key=key)
             if existing:
-                if not _same(existing, expected, tuple(expected)):
+                if not _same(existing, expected, tuple(field for field in expected if field != "direction" or "direction" in metric)):
                     raise IngestionFailure(
                         "CONFLICT", identifier, f"metric {key} differs"
                     )
@@ -1506,8 +1511,8 @@ class Ingestor:
                     """INSERT INTO metrics (
                         id, name, key, storage_kind, unit, display_precision,
                         minimum_value, maximum_value, source_url,
-                        normalized_source_url, source_checked_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                        normalized_source_url, source_checked_at, direction
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                     tuple(row.values()),
                 )
             )

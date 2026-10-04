@@ -1,3 +1,4 @@
+import { generateScoreChart } from "../src/score-chart";
 import { buildSeoSnapshot, type SeoInputs } from "./seo-data";
 import { EXACT_RESULT_ELIGIBLE_SQL } from "./result-links";
 import { HOME_PANEL_LIMIT, type HomePanels } from "./home-panels";
@@ -61,6 +62,7 @@ interface BenchmarkVersionRow {
   version_slug: string;
   release_at: string;
   release_precision: DatePrecision;
+  metric_direction?: MetricSummary["direction"];
   metric_name: string;
   metric_key: string;
   metric_unit: string;
@@ -134,7 +136,7 @@ const RESULT_COLUMNS = `
   metric.key AS metric_key,
   metric.unit AS metric_unit,
   metric.storage_kind,
-  metric.display_precision,
+  metric.display_precision, metric.direction AS metric_direction,
   r.score_value,
   r.score_raw,
   COALESCE((
@@ -311,6 +313,7 @@ function resultFilters(
 
 function metricFromVersion(row: BenchmarkVersionRow): MetricSummary {
   return {
+    direction: row.metric_direction ?? null,
     name: row.metric_name,
     key: row.metric_key,
     unit: row.metric_unit,
@@ -422,7 +425,7 @@ export class RegistryRepository {
       this.all<ResultDbRow & {checked:string;insertionId:number}>(`SELECT ${RESULT_COLUMNS}, r.id AS insertionId, max(r.primary_source_checked_at, COALESCE((SELECT max(source_checked_at) FROM result_sources rs WHERE rs.result_id=r.id), r.primary_source_checked_at)) AS checked ${RESULT_JOINS}
         WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`),
       this.all<BenchmarkVersionRow & {checked:string}>(`SELECT bv.id,b.canonical_name AS benchmark_name,b.slug AS benchmark_slug,${BENCHMARK_ALIASES} AS benchmark_aliases,
-        bv.version,bv.version_slug,bv.release_at,bv.release_precision,metric.name AS metric_name,metric.key AS metric_key,metric.unit AS metric_unit,metric.storage_kind,metric.display_precision,
+        bv.version,bv.version_slug,bv.release_at,bv.release_precision,metric.name AS metric_name,metric.key AS metric_key,metric.unit AS metric_unit,metric.storage_kind,metric.display_precision, metric.direction AS metric_direction,
         bv.source_url,'[]' AS evaluator_names,bv.source_checked_at AS checked FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id JOIN metrics metric ON metric.id=bv.metric_id
         ORDER BY ${BENCHMARK_VERSION_KEY} DESC,bv.version ASC,bv.id ASC`),
     ]);
@@ -713,7 +716,7 @@ export class RegistryRepository {
         b.slug AS benchmark_slug, ${BENCHMARK_ALIASES} AS benchmark_aliases,
         bv.version, bv.version_slug, bv.release_at,
         bv.release_precision, metric.name AS metric_name, metric.key AS metric_key,
-        metric.unit AS metric_unit, metric.storage_kind, metric.display_precision,
+        metric.unit AS metric_unit, metric.storage_kind, metric.display_precision, metric.direction AS metric_direction,
         bv.source_url, '[]' AS evaluator_names
        FROM benchmark_versions bv
        JOIN benchmarks b ON b.id = bv.benchmark_id
@@ -741,7 +744,7 @@ export class RegistryRepository {
         ${BENCHMARK_ALIASES} AS benchmark_aliases,
         bv.version, bv.version_slug, bv.release_at, bv.release_precision,
         metric.name AS metric_name, metric.key AS metric_key,
-        metric.unit AS metric_unit, metric.storage_kind, metric.display_precision,
+        metric.unit AS metric_unit, metric.storage_kind, metric.display_precision, metric.direction AS metric_direction,
         bv.source_url,
         COALESCE((
           SELECT json_group_array(evaluator.name) FROM (
@@ -777,6 +780,7 @@ export class RegistryRepository {
     return {
       available_companies: availableCompanies,
       data: {
+        chart: version.metric_direction ? generateScoreChart((await this.all<ResultDbRow>(`/* benchmark-version:chart */ SELECT ${RESULT_COLUMNS} ${RESULT_JOINS} WHERE r.benchmark_version_id = ? AND NOT EXISTS(SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`,[version.id])).map(resultFromRow),metricFromVersion(version)) : null,
         version: versionFromRow(version),
         evaluator_names: parseJsonArray(version.evaluator_names),
         source_url: version.source_url,

@@ -6,7 +6,7 @@ export type FeaturedResult = Pick<ResultRow,
 >;
 
 // Compare the canonical decimal strings exactly, without rounding to floats.
-function compareDecimal(left: string, right: string): number {
+export function compareDecimal(left: string, right: string): number {
   const [leftWhole, leftFraction = ""] = left.split(".");
   const [rightWhole, rightFraction = ""] = right.split(".");
   const precision = Math.max(leftFraction.length, rightFraction.length);

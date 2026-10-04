@@ -1,3 +1,4 @@
+import { ScoreChart } from "./score-chart-view";
 import { Cite } from "./cite";
 import { recordAnchor } from "./citation";
 import { ReportIssue } from "./report-issue";
@@ -417,6 +418,7 @@ export function BenchmarkVersionPage({
         />
       </section>
 
+      <ScoreChart data={response.data.chart} />
       <LocalSearch
         action={pathname}
         currentSearch={currentSearch}

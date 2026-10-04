@@ -74,6 +74,7 @@ export interface BenchmarkFamilyResponse {
 export interface BenchmarkVersionResponse {
   available_companies?: CompanySummary[];
   data: {
+    chart?: import("./score-chart").ScoreChartData | null;
     version: BenchmarkVersionSummary;
     evaluator_names: string[];
     source_url: string;
