@@ -26,6 +26,7 @@
   --data-table-max-width: 64rem;
   --data-table-compact-width: 48rem;
   --table-shadow-width: 0.75rem;
+  --pivot-score-width: 7.5rem;
 }
 
 * {
@@ -926,6 +927,9 @@ h3 {
 
 .latest-indicator {
   color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.2rem 0.25rem;
+  font-size: 0.68rem;
   font-weight: 600;
 }
 
@@ -1561,3 +1565,10 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .compare-table a:hover, .compare-table a:focus-visible { color: var(--accent-strong); text-decoration: underline; }
 
 .model-compare { display: inline-flex; align-items: center; margin-top: 0.5rem; min-height: var(--control-height); font-size: 0.8rem; }
+
+.version-variants .data-table { min-width: 0; }
+.data-table th.pivot-score { white-space: normal; }
+.pivot-score { width: var(--pivot-score-width); }
+.pivot-score .pivot-observation { min-width: var(--pivot-score-width); }
+
+.pivot-observation .result-details time { white-space: nowrap; }

@@ -1,0 +1,245 @@
+{
+  "phase": "after",
+  "status": "passed",
+  "pages": [
+    {
+      "path": "/benchmarks/terminal-bench",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/models/20015",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench/2-1",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "colorScheme": "dark",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/models/20015",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "colorScheme": "dark",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench/2-1",
+      "width": 1440,
+      "javaScriptEnabled": true,
+      "colorScheme": "dark",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "path": "/models/20015",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench/2-1",
+      "width": 1440,
+      "javaScriptEnabled": false,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/models/20015",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench/2-1",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "colorScheme": "dark",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/models/20015",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "colorScheme": "dark",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench/2-1",
+      "width": 390,
+      "javaScriptEnabled": true,
+      "colorScheme": "dark",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "path": "/models/20015",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "path": "/benchmarks/terminal-bench/2-1",
+      "width": 390,
+      "javaScriptEnabled": false,
+      "colorScheme": "light",
+      "overflow": false,
+      "h1": 1,
+      "tables": true,
+      "skippedHeading": false,
+      "axeChecked": false,
+      "violations": []
+    }
+  ],
+  "interactions": [
+    {
+      "javaScriptEnabled": true,
+      "checks": [
+        "Native details Enter/Space and focus outline",
+        "Keyboard table scrolling",
+        "History tab",
+        "Benchmark/source sort and aria-sort",
+        "Compare preselection"
+      ]
+    },
+    {
+      "javaScriptEnabled": false,
+      "checks": [
+        "Native details Enter/Space and focus outline",
+        "Keyboard table scrolling",
+        "History tab",
+        "Benchmark/source sort and aria-sort",
+        "Compare preselection"
+      ]
+    }
+  ],
+  "errors": []
+}

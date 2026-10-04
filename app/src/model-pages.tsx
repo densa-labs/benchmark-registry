@@ -284,14 +284,15 @@ export function ModelDetailPage({
   const benchmarks = new Set(allResults.map(result => result.benchmark.slug)).size;
   const pivotColumns: TableColumn<PivotRow>[] = [
     { key: "benchmark", label: "Benchmark", className: "data-table__primary", sortHref: benchmarkSort.href, sortDirection: benchmarkSort.direction,
-      render: ({ result }) => <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} /> },
+      render: ({ result }) => <span className="table-cell-stack"><BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
+        {result.metric.name ? <span>{result.metric.name}</span> : null}</span> },
     ...pivot.variants.map(variant => ({
-      key: `effort-${variant}`, label: variant || "Not specified", className: "numeric",
+      key: `effort-${variant}`, label: variant || "Not specified", className: "numeric pivot-score",
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
         <span key={result.result_key} className="pivot-observation">
           <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
-          <ResultDetails result={result} showEvaluator={row.cells.get(variant)!.length > 1} />
-        </span>)} </div> : "—",
+          <ResultDetails result={result} compact showEvaluator={row.cells.get(variant)!.length > 1} />
+        </span>)} </div> : "–",
     })),
     { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
       render: row => <span className="table-cell-stack">{[...new Set([...row.cells.values()].flat().map(result => result.primary_source_url))].map(href => <SourceLink key={href} href={href} />)}</span> },
@@ -360,7 +361,7 @@ export function ModelDetailPage({
       <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
       </PageHeader>
 
-      {page.total_items > 25 || query ? <LocalSearch
+      {totalRows > 25 || query ? <LocalSearch
         action={pathname}
         currentSearch={currentSearch}
         label="Search benchmarks"

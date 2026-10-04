@@ -2,12 +2,12 @@ import type { ResultRow } from "../worker/api";
 import { formatRegistryDate } from "./registry";
 import { SourceLink } from "./ui/components";
 
-export function ResultDetails({ result, showEvaluator = false }: { result: ResultRow; showEvaluator?: boolean }) {
+export function ResultDetails({ result, showEvaluator = false, compact = false }: { result: ResultRow; showEvaluator?: boolean; compact?: boolean }) {
   const metric = result.metric.name?.trim();
   const hasDate = Boolean(result.reported_at) && Number.isFinite(Date.parse(result.reported_at));
   return <span className="result-details">
-    {metric && metric.toLowerCase() !== "unknown" ? <span>{metric}</span> : null}
-    {hasDate ? <span>Reported <time dateTime={result.reported_at}>{formatRegistryDate(result.reported_at, result.reported_precision)}</time></span> : null}
+    {!compact && metric && metric.toLowerCase() !== "unknown" ? <span>{metric}</span> : null}
+    {hasDate ? <span>Reported <time dateTime={result.reported_at}>{compact ? result.reported_at.slice(0, 10) : formatRegistryDate(result.reported_at, result.reported_precision)}</time></span> : null}
     {showEvaluator && result.evaluator_names.length ? <span>{result.evaluator_names.join(", ")}</span> : null}
   </span>;
 }
