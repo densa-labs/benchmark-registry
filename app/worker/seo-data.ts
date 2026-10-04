@@ -25,7 +25,7 @@ export interface SeoPage {
   latestVersion?: BenchmarkVersionSummary;
   coveredBenchmarks?: Array<{name:string;path:string}>;
 }
-export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[]; comparisons: ComparisonPair[]; recent: RecentRecord[] }
+export interface SeoSnapshot { pages: Record<string, SeoPage>; models: ModelSummary[]; comparisons: ComparisonPair[]; recent: RecentRecord[]; feed?: RecentRecord[] }
 export interface RecentRecord {row:ResultRow;checked:string}
 export interface SeoInputs {
   models: Array<ModelSummary & { checked: string; source: string }>;
@@ -97,5 +97,6 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
   }
   const recent=input.results.slice().sort((a,b)=>b.insertionId-a.insertionId).slice(0,100).map(({row,checked})=>({row,checked}));
   pages["/recent"]={...summarize("recent","Recently added benchmark results",input.results.slice().sort((a,b)=>b.insertionId-a.insertionId).slice(0,100),[])};
-  return { pages, comparisons, recent, models: input.models.map(model => ({registry_no:model.registry_no,name:model.name,company:model.company,released_at:model.released_at,release_precision:model.release_precision,published_at:model.published_at,status:model.status})) };
+  const feed=input.results.slice().sort((a,b)=>Date.parse(b.checked)-Date.parse(a.checked) || b.insertionId-a.insertionId).slice(0,50).map(({row,checked})=>({row,checked}));
+  return { pages, comparisons, recent, feed, models: input.models.map(model => ({registry_no:model.registry_no,name:model.name,company:model.company,released_at:model.released_at,release_precision:model.release_precision,published_at:model.published_at,status:model.status})) };
 }

@@ -35,7 +35,7 @@ describe("Registry foundation view", () => {
     expect(markup).toContain('id="main-content"');
     expect(markup).toContain('class="wordmark__logo"');
     expect(markup).toContain("© 2026");
-    expect(markup).toContain('href="https://densa-labs.github.io/">Densa Labs</a>');
+    expect(markup).toContain('href="https://densa-labs.github.io/" rel="noopener noreferrer">Densa Labs</a>');
     expect(markup).toContain('name="color-theme"');
     expect(markup).toContain('value="light"');
     expect(markup).toContain('value="dark"');
@@ -79,7 +79,7 @@ describe("Registry foundation view", () => {
     expect(markup).toContain("<dl");
     expect(markup).toContain("Registry No.");
     expect(markup).toContain('target="_blank"');
-    expect(markup).toContain('rel="noreferrer"');
+    expect(markup).toContain('rel="noopener noreferrer"');
     expect(markup).toContain("opens in a new tab");
   });
 

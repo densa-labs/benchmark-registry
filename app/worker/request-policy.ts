@@ -50,7 +50,7 @@ export function normalizedResource(request: Request): string | null {
     const api = new URL(url);
     api.pathname = "/api" + url.pathname.replace(/\/$/u, "");
     if (url.pathname === "/compare" || url.pathname === "/compare/") parseComparisonState(url.search);
-    else if (url.pathname !== "/" && !["/robots.txt", "/sitemap.xml"].includes(url.pathname)) apiParameters(api);
+    else if (url.pathname !== "/" && !["/robots.txt", "/sitemap.xml", "/feed.xml"].includes(url.pathname)) apiParameters(api);
     else if (url.searchParams.size) return null;
     if (url.searchParams.has("q")) return null;
   }

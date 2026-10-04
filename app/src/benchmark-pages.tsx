@@ -1,3 +1,7 @@
+import { ScoreChart } from "./score-chart-view";
+import { Cite } from "./cite";
+import { recordAnchor } from "./citation";
+import { ReportIssue } from "./report-issue";
 import { ResultSource } from "./result-source";
 import { groupVersions, type VersionGroup } from "./version-groups";
 import { FamilyResults } from "./seo-content";
@@ -292,6 +296,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
         title={displayName}
         description={response.data.seo?.sentence ?? (displayName === benchmark.name ? undefined : benchmark.name)}
       />
+      <ReportIssue page={`/benchmarks/${benchmark.slug}`} benchmark={benchmark.name} />
       <FamilyResults content={response.data.seo} />
       <section className="results-section" aria-labelledby="versions-heading">
         <div className="results-section__header">
@@ -396,6 +401,8 @@ export function BenchmarkVersionPage({
           ? undefined
           : version.benchmark.name}
       />
+      <Cite input={{title:`${version.benchmark.name} ${version.version} benchmark results`,path:pathname,benchmarkIdentifier:`${version.benchmark.slug}/${version.version_slug}`}} />
+      <ReportIssue page={pathname} benchmark={`${version.benchmark.name} ${version.version}`} source={response.data.source_url} />
       <section className="entity-metadata" aria-label="Benchmark version metadata">
         <MetadataRows
           items={[
@@ -411,6 +418,7 @@ export function BenchmarkVersionPage({
         />
       </section>
 
+      <ScoreChart data={response.data.chart} />
       <LocalSearch
         action={pathname}
         currentSearch={currentSearch}
@@ -480,6 +488,7 @@ export function BenchmarkVersionPage({
             columns={columns}
             rows={results}
             getRowKey={(result) => result.result_key}
+            getRowId={recordAnchor}
           />
         )}
         <PaginationFor

@@ -1,3 +1,7 @@
+import { RecordCite } from "./cite";
+import { recordAnchor } from "./citation";
+import { ReportIssue } from "./report-issue";
+import { resultPage } from "./issue-report";
 import { type ModelListEntry, type HomePageResponse } from "./registry";
 import { ModelBenchmarkScore } from "./model-benchmark-score";
 import { EmptyState, PageContainer, SourceLink } from "./ui/components";
@@ -51,13 +55,14 @@ function LatestAdditions({ results }: { results: HomePanels["latest_additions"] 
   return (
     <ol className="home-model-list home-additions-list" role="list">
       {results.slice(0, HOME_PANEL_LIMIT).map(result => (
-        <li key={result.result_key}>
+        <li key={result.result_key} id={recordAnchor(result)}>
           <span className="home-model-list__identity">
             <a href={`/models/${result.model.registry_no}`}>{result.model.name}{result.reasoning_level ? ` (${result.reasoning_level})` : ""}</a>
             <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
           </span>
           <span className="home-model-list__metadata">
             <span className="home-addition-score"><ResultScoreLink result={result} /></span>
+            <ReportIssue result={result} page={resultPage(result)} /><RecordCite result={result} />
             <SourceLink href={result.primary_source_url} context={`${result.model.name} on ${benchmarkVersionLabel(result.benchmark, result.benchmark_version)}`} />
           </span>
         </li>

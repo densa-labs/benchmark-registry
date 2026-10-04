@@ -1,0 +1,11 @@
+import { PageContainer, PageHeader } from "./ui/components";
+export function AboutPage() {
+  return <PageContainer className="registry-page legal-page"><PageHeader title="About" />
+    <p>Benchmark Registry is a project of Densa Labs. It tracks AI models, benchmark versions, reported scores, evaluators and primary source links.</p>
+    <p>The registry accepts results from primary sources only: benchmark or evaluator publications, followed by official model developer sources. Results retain their original metrics and evaluation context.</p>
+    <p><a href="https://github.com/densa-labs/benchmark-registry" rel="noopener noreferrer">Registry on GitHub</a> · <a href="https://densa-labs.github.io/" rel="noopener noreferrer">Densa Labs</a></p>
+    {/* TODO owner: add a verified "Neutrality and funding" heading and statement.
+        Funding and neutrality statement to be added by the owner.
+        This placeholder is intentionally absent from rendered HTML. */}
+  </PageContainer>;
+}

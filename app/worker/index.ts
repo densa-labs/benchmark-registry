@@ -1,7 +1,13 @@
+import { analyticsConfiguration, analyticsScript, type AnalyticsEnvironment } from "./analytics";
+import { renderAtomFeed } from "./feed";
+import { badgeResponse } from "./badge";
+import { measuredDatabase, type QueryMetrics } from "./query-metrics";
+import { coverageOptions, cachedCoverage, type CoverageEnvironment } from "./coverage";
+import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
-import { diagnoseWorkerFailure } from "./diagnostics";
+import { logServerError, logZeroSearch } from "./diagnostics";
 import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { apiParameters } from "./request-policy";
@@ -13,8 +19,9 @@ import { comparisonPayload } from "./seo-comparisons";
 import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
-export interface Env extends CacheEnvironment, ReadStoreEnvironment {
+export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnvironment, AnalyticsEnvironment {
   ASSETS: Fetcher;
+  D1_DIAGNOSTICS?: QueryMetrics;
   STAGING_CRAWLER_PROTECTION?: "enabled";
 }
 
@@ -58,13 +65,36 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
   if (path.length === 4 && path[1] === "benchmarks") return Response.json(await repository.benchmarkVersion(path[2],path[3],params));
   if (path.length === 2 && path[1] === "companies") return Response.json(await repository.companies(params));
   if (path.length === 3 && path[1] === "companies") return Response.json(await repository.company(path[2],params));
-  if (path.length === 2 && path[1] === "search") return Response.json(await repository.search(params));
+  if (path.length === 2 && path[1] === "search") {
+    const result=await repository.search(params);
+    if(result.page.total_items===0) logZeroSearch(new URL(request.url).searchParams.get("q") ?? "");
+    return Response.json(result);
+  }
   return jsonError(404, "not_found", "API route not found.");
 }
 
 export async function handleRequest(request: Request, env: Env, repository?: RegistryReader): Promise<Response> {
   const url = new URL(request.url);
   const { pathname } = url;
+  if (pathname === "/feed.xml" && ["GET","HEAD"].includes(request.method)) {
+    const snapshot=await requireRepository(repository).seoSnapshot();
+    // Older snapshots remain readable; rematerialize before release for the
+    // complete update projection, which includes updates to older records.
+    const feed=renderAtomFeed(snapshot.feed ?? snapshot.recent,snapshot.pages["/"]?.updated);
+    return new Response(request.method==="HEAD" ? null : feed,{headers:{"Content-Type":"application/atom+xml; charset=utf-8","Cache-Control":"public, max-age=60, stale-while-revalidate=300","X-Robots-Tag":"noindex"}});
+  }
+  if (pathname.startsWith("/badge/")) return badgeResponse(request,requireRepository(repository));
+  if (pathname === "/healthz") {
+    const headers={"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow"};
+    if (!["GET","HEAD"].includes(request.method)) return new Response(null,{status:405,headers});
+    try {
+      if(!env.DB || !(await measuredDatabase(env.DB,env.D1_DIAGNOSTICS).prepare("SELECT 1 AS ok").first<{ok:number}>())?.ok) throw new Error("Database unavailable");
+      return new Response(request.method === "HEAD" ? null : '{"ok":true}', {headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
+    } catch(error) {
+      logServerError("healthz",503,error,url.pathname);
+      return new Response(request.method === "HEAD" ? null : '{"ok":false}',{status:503,headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
+    }
+  }
 
   if (pathname === "/api" || pathname.startsWith("/api/")) {
     try {
@@ -74,7 +104,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if (error instanceof ApiError) {
         return jsonError(error.status, error.code, error.message);
       }
-      diagnoseWorkerFailure("read-api");
+      logServerError("read-api",500,error,url.pathname);
       return jsonError(500, "internal_error", "The request could not be completed.");
     }
   }
@@ -97,7 +127,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if (error instanceof ApiError) {
         return new Response("Invalid model route.", { status: error.status });
       }
-      diagnoseWorkerFailure("model-redirect");
+      logServerError("model-redirect",500,error,url.pathname);
       return new Response("The request could not be completed.", { status: 500 });
     }
   }
@@ -113,15 +143,15 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
       const snapshot=await requireRepository(repository).seoSnapshot();
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS])]
-        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS, ...CONTENT_PATHS.filter(path=>path!=="/search")])]
+        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS, ...CONTENT_PATHS.filter(path=>path!=="/search")].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc>${snapshot.pages[path]?.updated ? `<lastmod>${escapeHtml(snapshot.pages[path].updated!)}</lastmod>` : ""}</url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
       });
     } catch (error) {
       if (error instanceof MaterializationFailure) throw error;
-      diagnoseWorkerFailure("sitemap");
+      logServerError("sitemap",500,error,url.pathname);
       return new Response('The request could not be completed.', { status: 500 });
     }
   }
@@ -141,22 +171,36 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       url.pathname = new URL(metadata.canonical).pathname;
       return Response.redirect(url.toString(), 308);
     }
-    const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
+    if (pathname.replace(/\/$/u, "") === "/coverage" && !env.DB) return new Response("Coverage is temporarily unavailable.",{status:503,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
+    const analytics = url.hostname === STAGING_HOSTNAME && env.STAGING_CRAWLER_PROTECTION === "enabled" ? null : analyticsConfiguration(env);
+    const content = pathname.replace(/\/$/u, "") === "/privacy"
+      ? renderInitialDocument({kind:"privacy", ...(analytics ? {analyticsEnabled:true} : {})},url.search,env.REGISTRY_REVISION)
+      : pathname.replace(/\/$/u, "") === "/search"
+      ? renderInitialDocument({kind:"search",payload:url.searchParams.has("q") ? await (async()=>{
+          const response=await handleApi(new Request(new URL(`/api/search${url.search}`,url)),env,requireRepository(repository));
+          if(!response.ok) throw new ApiError(400,"invalid_query","Invalid search query.");
+          return await response.json() as import("../src/registry").SearchResponse;
+        })() : {data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}},url.search,env.REGISTRY_REVISION)
+      : pathname.replace(/\/$/u, "") === "/coverage" && env.DB
+      ? renderInitialDocument({kind:"coverage",payload:await cachedCoverage(env.DB,coverageOptions(url,env),env.D1_DIAGNOSTICS)},url.search,env.REGISTRY_REVISION)
+      : metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
       return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
     }, env.REGISTRY_REVISION, repository ? await repository.seoSnapshot() : undefined);
     const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
+      .replace("</head>", `${analyticsScript(analytics)}</head>`)
       .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
     const headers = new Headers(response.headers);
     // The static template's validators and length no longer describe this response.
     for (const header of ["ETag", "Content-Length", "Last-Modified", "Content-Encoding"]) headers.delete(header);
-    headers.set("Cache-Control", "no-store");
+    headers.set("Cache-Control", metadata.status === 404 ? "no-store" : "public, max-age=60, stale-while-revalidate=300");
     return new Response(request.method === "HEAD" ? null : html, {
       status: metadata.status ?? response.status, headers,
     });
   } catch (error) {
     if (error instanceof MaterializationFailure) throw error;
-    diagnoseWorkerFailure("document");
+    if (error instanceof ApiError) return new Response(error.message, {status:error.status,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
+    logServerError("document",500,error,url.pathname);
     return new Response("The request could not be completed.", { status: 500 });
   }
 }
@@ -172,13 +216,14 @@ const worker = {
     const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
       && url.hostname === STAGING_HOSTNAME;
 
-    env={...env,CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
+    env={...env,CACHE_VARIANT:JSON.stringify(analyticsConfiguration(env)),D1_DIAGNOSTICS:{queries:0,rows:0,ms:0},CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
     const store=new PublishedReadStore(env,url.origin);
     let response:Response;
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
     if(staticAsset) response=await env.ASSETS.fetch(request);
     else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
-    else if (LEGAL_PATHS.some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
+    else if(url.pathname==="/healthz") response=await handleRequest(request,env);
+    else if ([...LEGAL_PATHS,...CONTENT_PATHS.filter(path=>path!=="/search")].some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {
         const publication=await store.publication();
@@ -193,8 +238,8 @@ const worker = {
           } catch(error) {lastError=error;}
         }
         if(lastError) throw lastError;
-      } catch {
-        diagnoseWorkerFailure("materialized-read");
+      } catch(error) {
+        logServerError("materialized-read",500,error,url.pathname);
         if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
         else if (url.pathname === '/sitemap.xml') response=new Response('The materialized registry is temporarily unavailable.',{status:500});
         else {
@@ -208,10 +253,10 @@ const worker = {
 
     const diagnostics = new Headers(response.headers);
     diagnostics.set("X-Registry-Read-Store-Reads",String(store.reads));
-    diagnostics.set("X-Registry-D1-Queries", "0");
-    diagnostics.set("X-Registry-D1-Rows", "0");
-    diagnostics.set("Server-Timing", "d1;dur=0.00");
-    if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", "public, max-age=31536000, immutable");
+    diagnostics.set("X-Registry-D1-Queries", String(env.D1_DIAGNOSTICS?.queries ?? 0));
+    diagnostics.set("X-Registry-D1-Rows", String(env.D1_DIAGNOSTICS?.rows ?? 0));
+    diagnostics.set("Server-Timing", `d1;dur=${(env.D1_DIAGNOSTICS?.ms ?? 0).toFixed(2)}`);
+    if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", /[-.][a-zA-Z0-9_-]{8,}\.(?:js|css|woff2)$/u.test(url.pathname) ? "public, max-age=31536000, immutable" : "public, max-age=60, stale-while-revalidate=300");
     if (response.status >= 400) diagnostics.set("Cache-Control", "no-store");
     // Keep zone-injected analytics from executing in internal staging. Allow
     // same-origin application and Cloudflare security scripts, including inline checks.

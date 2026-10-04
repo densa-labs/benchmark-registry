@@ -1,3 +1,4 @@
+import { DATA_LICENSE } from "../data-license";
 import { sourceLabel } from "../source-label";
 import { BreadcrumbContext } from "../breadcrumb-context";
 import { VisibleBreadcrumbs } from "../breadcrumbs";
@@ -82,14 +83,14 @@ export function AppShell({
         <PageContainer className="site-footer__inner">
           <div className="site-footer__dates"><p>
             © 2026{" "}
-            <a className="site-footer__credit-link" href="https://densa-labs.github.io/">
+            <a className="site-footer__credit-link" href="https://densa-labs.github.io/" rel="noopener noreferrer">
               Densa Labs
             </a>
           </p>
           <button data-nosnippet className="last-updated" type="button" aria-pressed={showBuildTime} aria-describedby="last-updated-help" onClick={() => setShowBuildTime((shown) => !shown)}>
             {showBuildTime ? `Application build: ${buildTime}` : dataUpdated ? `Last updated: ${dataUpdated.slice(0,10)}` : "Application build details"}
-          </button><span id="last-updated-help" className="visually-hidden">Toggle between the data update date and the application build time.</span></div>
-          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/recent">Recently added</a><a href="/legal">Legal</a></nav>
+          </button><span id="last-updated-help" className="visually-hidden">Toggle between the data update date and the application build time.</span><p>Data licensed under <a href={DATA_LICENSE.url} rel="noopener noreferrer">{DATA_LICENSE.name}</a></p></div>
+          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/recent">Recently added</a><a href="/feed.xml">Atom feed</a><a href="/coverage">Coverage</a><a href="/corrections">Corrections</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/legal">Legal</a></nav>
           <div className="site-footer__controls">
             <ThemeToggle theme={preference} onSelectTheme={selectTheme} />
             <a className="github-link" href="https://github.com/densa-labs/benchmark-registry" aria-label="Benchmark Registry on GitHub"><GitHubIcon /></a>
@@ -462,6 +463,7 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
   return (
     <div className="global-search-shell" ref={shell} onKeyDown={handleKeyDown}>
       <form
+        action="/search" method="get"
         className="global-search"
         role="search"
         aria-label="Global registry search"
@@ -486,6 +488,7 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
         />
         <button type="submit" disabled={state.status === "loading"}>Search</button>
       </form>
+      <a className="search-hint" href="/search#search-operators">Try: model:opus benchmark:swe-bench</a>
       <p className="visually-hidden" role="status" aria-atomic="true">
         {state.status === "loading" ? "Searching the registry…" : state.status === "results" ? state.response.data.length === 0
           ? `No registry entries found for “${state.query}”.` : `${state.response.page.total_items} search results found.` : ""}
@@ -557,7 +560,7 @@ interface SourceLinkProps {
 
 export function SourceLink({ href, children, context }: SourceLinkProps) {
   return (
-    <a className="source-link" href={href} target="_blank" rel="noreferrer">
+    <a className="source-link" href={href} target="_blank" rel="noopener noreferrer">
       <span>{children ?? sourceLabel(href)}</span>
       <ExternalIcon />
       {context ? <span className="visually-hidden"> for {context}</span> : null}
@@ -607,6 +610,7 @@ interface DataTableProps<Row> {
   columns: TableColumn<Row>[];
   rows: Row[];
   getRowKey: (row: Row) => string;
+  getRowId?: (row: Row) => string;
 }
 
 export function DataTable<Row>({
@@ -614,6 +618,7 @@ export function DataTable<Row>({
   columns,
   rows,
   getRowKey,
+  getRowId,
 }: DataTableProps<Row>) {
   return (
     <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
@@ -649,7 +654,7 @@ export function DataTable<Row>({
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={getRowKey(row)}>
+            <tr key={getRowKey(row)} id={getRowId?.(row)}>
               {columns.map((column) => (
                 <td key={column.key} className={column.className}>
                   {column.render(row)}

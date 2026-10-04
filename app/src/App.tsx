@@ -1,3 +1,6 @@
+import { SearchPage } from "./search-page";
+import { CoveragePage } from "./coverage-page";
+import { CorrectionsPage } from "./corrections-page";
 import { BreadcrumbContext } from "./breadcrumb-context";
 import { RecentPage } from "./recent-page";
 import { StaticComparisonPage } from "./static-comparison-page";
@@ -112,7 +115,7 @@ export function App({ initial }: { initial?: InitialDocument }) {
   return (
     <AppShell
       navigation={navigation}
-      activeHref={state.status === "error" || route.kind === "home" || route.kind === "not-found" || isLegalKind(route.kind)
+      activeHref={state.status === "error" || route.kind === "home" || route.kind === "not-found" || isLegalKind(route.kind) || ["coverage","corrections","search","recent"].includes(route.kind)
         ? undefined
         : route.kind === "compare" ? "/compare" : route.kind.startsWith("benchmark")
         ? "/benchmarks"
@@ -128,7 +131,13 @@ export function App({ initial }: { initial?: InitialDocument }) {
 // Shared by the client and the Worker initial document; effects stay client-only.
 export function RegistryDocument({ loaded, currentSearch, enhanced = false, navigationError, pendingRoute, announcement }: { loaded: LoadedRegistryRoute; currentSearch: string; enhanced?: boolean; navigationError?: string; pendingRoute?: RegistryRoute; announcement?: string }) {
   let content;
-  if (loaded.kind === "home") {
+  if (loaded.kind === "search") {
+    content = <SearchPage response={loaded.payload} search={currentSearch} />;
+  } else if (loaded.kind === "coverage") {
+    content = <CoveragePage data={loaded.payload} />;
+  } else if (loaded.kind === "corrections") {
+    content = <CorrectionsPage />;
+  } else if (loaded.kind === "home") {
     content = <HomePage response={loaded.payload} />;
   } else if (loaded.kind === "compare") {
     content = <ComparePage response={loaded.payload} currentSearch={currentSearch} />;
@@ -158,7 +167,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
       <CompanyDetailPage response={loaded.payload} currentSearch={currentSearch} />
     );
   } else if (isLegalKind(loaded.kind)) {
-    content = <LegalPage kind={loaded.kind} />;
+    content = <LegalPage kind={loaded.kind} analyticsEnabled={loaded.kind === "privacy" && loaded.analyticsEnabled} />;
   } else {
     content = (
       <PageContainer className="registry-page">
@@ -169,7 +178,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
 
   if (pendingRoute) content=renderPendingRoute(pendingRoute);
   return (
-    <AppShell dataUpdated={loaded.updated} navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind)
+    <AppShell dataUpdated={loaded.updated} navigation={navigation} announcement={announcement} busy={Boolean(pendingRoute)} renderPending={enhanced ? undefined : renderPendingRoute} activeHref={loaded.kind === "home" || loaded.kind === "not-found" || isLegalKind(loaded.kind) || ["coverage","corrections","search","recent"].includes(loaded.kind)
       ? undefined : (loaded.kind === "compare" || loaded.kind === "comparison") ? "/compare" : loaded.kind.startsWith("benchmark") ? "/benchmarks"
       : loaded.kind === "companies" || loaded.kind === "company" ? "/companies" : "/models"}>
       {navigationError ? <PageContainer><ErrorState title="Unable to load registry data" description={navigationError} /></PageContainer> : null}

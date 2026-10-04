@@ -1,3 +1,4 @@
+import { recordAnchor } from "./citation";
 import { ResultSource } from "./result-source";
 import { RelatedModels } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
@@ -385,6 +386,7 @@ export function CompanyDetailPage({
             columns={columns}
             rows={results}
             getRowKey={(result) => result.result_key}
+            getRowId={recordAnchor}
           />
         )}
         <PaginationFor

@@ -1,3 +1,5 @@
+import provenance from "../../migrations/0009_result_provenance.sql?raw";
+import direction from "../../migrations/0011_metric_direction.sql?raw";
 import { DatabaseSync } from "node:sqlite";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import schema from "../../migrations/0001_initial.sql?raw";
@@ -27,7 +29,7 @@ describe("P11.7 initial document crawlability", () => {
   let env: Env;
   beforeEach(() => {
     db = new DatabaseSync(":memory:");
-    db.exec(schema + namespaces + attestations + units);
+    db.exec(schema + namespaces + attestations + units + provenance + direction);
     db.prepare(`INSERT INTO companies (id, name, normalized_name, slug, source_url, normalized_source_url, source_checked_at)
       VALUES (1, 'Example Company', 'example company', 'example-company', ?, ?, ?)`).run(source, source, checked);
     const namespace = (db.prepare("SELECT id FROM namespaces WHERE prefix = '10'").get() as { id: number }).id;
@@ -117,10 +119,10 @@ describe("P11.7 initial document crawlability", () => {
     expect(links(exact)).toEqual(expect.arrayContaining(["/models/10001", "/companies/example-company", "/benchmarks/example", versionPath]));
   });
 
-  it("never promotes retained ambiguous states, even on filtered model pages", async () => {
+  it("links retained records for sharing while keeping ambiguous result documents noindex", async () => {
     for (const path of [versionPath, versionPath + "?view=history", "/models/10002", "/companies/example-company"]) {
       const html = await page(path);
-      for (const key of ambiguousKeys) expect(links(html).some((href) => href.includes(`result=${key}`))).toBe(false);
+      for (const key of ambiguousKeys) expect(links(html).some((href) => href.includes(`result=${key}`))).toBe(true);
     }
     for (const key of ambiguousKeys) {
       const html = await page(`${versionPath}?view=history&result=${key}`);
@@ -137,7 +139,7 @@ describe("P11.7 initial document crawlability", () => {
       .run("e".repeat(64), "d".repeat(64), source, source, checked);
     const latest = await page("/models/10001");
     expect(latest).toContain("1 result");
-    expect(links(latest).some((href) => href.includes("result="))).toBe(false);
+    expect(links(latest).some((href) => href.includes("result="))).toBe(true);
     const selected = await page(exactPath);
     expect(selected).toContain('name="robots" content="noindex, follow"');
     expect(await page("/sitemap.xml")).not.toContain(exactKey);

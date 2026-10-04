@@ -62,16 +62,14 @@ it("exposes exactly the current primary sort, including benchmark name default",
   expect(container.querySelector("[aria-sort]")?.textContent).toBe("Benchmark");
 });
 
-it("keeps Support's name and icon semantic, and navigates legal documents with heading focus", async () => {
+it("keeps Contact's name semantic, and navigates legal documents with heading focus", async () => {
   history.replaceState(null, "", "/legal");
   const initial = { loaded: { kind: "legal" as const }, currentSearch: "" };
   const fetcher = vi.fn(async (input: RequestInfo | URL) => { expect(input).toBe("/privacy"); return new Response(`<html><head><title>Privacy Policy | Benchmark Registry</title></head><body><script id="registry-initial-document" type="application/json">${serializeInitialDocument({ loaded: { kind: "privacy" }, currentSearch: "" })}</script></body></html>`); });
   vi.stubGlobal("fetch", fetcher);
   await mount(<App initial={initial} />);
-  const support = container.querySelector('a[href="mailto:support@benchmarkregistry.org"]')!;
-  expect(support.textContent).toBe("Support");
-  expect(support.querySelector("svg")?.getAttribute("aria-hidden")).toBe("true");
-  expect(support.querySelector("svg")?.getAttribute("stroke")).toBe("currentColor");
+  const support = container.querySelector('footer a[href="/contact"]')!;
+  expect(support.textContent).toBe("Contact");
   expect(support.hasAttribute("target")).toBe(false);
   expect(container.querySelector('.primary-nav [aria-current]')).toBeNull();
   const privacy = container.querySelector<HTMLAnchorElement>('main a[href="/privacy"]')!;

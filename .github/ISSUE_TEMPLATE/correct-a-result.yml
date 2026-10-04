@@ -1,0 +1,44 @@
+name: Correct a result
+description: Provide primary evidence for a Registry result.
+title: "Correction: "
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model
+  - type: input
+    id: benchmark
+    attributes:
+      label: Benchmark
+  - type: input
+    id: version
+    attributes:
+      label: Version
+  - type: input
+    id: score
+    attributes:
+      label: Score
+  - type: input
+    id: metric
+    attributes:
+      label: Metric
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+  - type: input
+    id: source_type
+    attributes:
+      label: Source type
+  - type: input
+    id: evaluator
+    attributes:
+      label: Evaluator
+  - type: input
+    id: date
+    attributes:
+      label: Reported date
+  - type: textarea
+    id: details
+    attributes:
+      label: What should change and why

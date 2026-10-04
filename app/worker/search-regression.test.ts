@@ -77,7 +77,7 @@ describe("P8 fixed global search regression suite", () => {
 
   it("finds the 49 byte MMMU expansion under D1's 50 byte LIKE-pattern limit", async () => {
     database.function("like", { varargs: true }, (pattern) => {
-      if (new TextEncoder().encode(pattern).byteLength > 50) {
+      if (new TextEncoder().encode(String(pattern)).byteLength > 50) {
         throw new Error("LIKE or GLOB pattern too complex");
       }
       return 0;

@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { buildComparisonRows, comparisonHref, parseComparisonState, reasoningSelection } from "./compare";
+import { buildComparisonRows, filteredComparisonModels, comparisonHref, parseComparisonState, reasoningSelection } from "./compare";
 import { loadRegistryRoute, resolveRegistryRoute } from "./registry";
 import { modelA, modelB, detail, result } from "./compare-fixtures";
 
@@ -95,4 +95,13 @@ describe("comparison data loading", () => {
     fetcher.mockImplementation(async () => Response.json({ error: { message: "Unavailable" } }, { status: 500 }));
     await expect(loadRegistryRoute({ kind: "compare" }, "", fetcher)).rejects.toThrow("Unavailable");
   });
+});
+
+it("defaults to shared results and preserves provider/release filters in stable URLs",()=>{
+  const state=parseComparisonState("?provider=openai&released_from=2026-01-01&released_to=2026-12-31");
+  expect(state.sharedOnly).toBe(true);
+  expect(parseComparisonState(comparisonHref(state).split("?")[1])).toEqual(state);
+  expect(parseComparisonState("?benchmarks=all").sharedOnly).toBe(false);
+  expect(filteredComparisonModels([modelA,modelB],{...state,releasedFrom:undefined,releasedTo:undefined}).every(row=>row.company.slug==="openai")).toBe(true);
+  for(const query of ["?released_from=2026-02-30","?released_from=2026-02-02&released_to=2026-01-01","?provider=BAD"]) expect(()=>parseComparisonState(query)).toThrow();
 });
