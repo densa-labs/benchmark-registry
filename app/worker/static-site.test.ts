@@ -118,6 +118,11 @@ it("sends one set of security headers on every path, with hashed scripts and no 
   expect(contentSecurityPolicy("staging",{...security,analyticsScript:"https://stats.example/script.js"})).not.toContain("stats.example");
 });
 
+it("never serves diagnostics headers: static assets have no Worker to add them", async () => {
+  const site=await buildStaticSite({db:database(),environment:"production",template});
+  for(const environment of ["production","staging"] as const) expect(headerRules(site.files.map(file=>file.path),environment,site.security)).not.toMatch(/x-registry-|server-timing/iu);
+});
+
 it("hashes only executable inline scripts and refuses a second one", async () => {
   const theme='try { document.documentElement.dataset.theme = "dark"; } catch {}';
   const page=`<script>${theme}</script><script type="application/json">{"a":1}</script><script type="application/ld+json">{}</script><script type="module" src="/assets/a.js"></script>`;

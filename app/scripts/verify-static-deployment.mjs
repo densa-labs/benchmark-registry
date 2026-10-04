@@ -50,6 +50,7 @@ const csp = /Content-Security-Policy: ([^\n]+)/u.exec(headers)?.[1] ?? "";
 assert.match(csp, /script-src 'self' 'sha256-[A-Za-z0-9+/=]+'/u);
 for (const directive of ["frame-ancestors 'none'", "base-uri 'none'", "form-action 'self'"]) assert.ok(csp.includes(directive), directive);
 assert.ok(!/script-src[^;]*unsafe-inline/u.test(csp), "Scripts must be hashed, not unsafe-inline");
+assert.ok(!/x-registry-|server-timing/iu.test(headers), "Diagnostics headers must not be public");
 assert.match(headers, /\/assets\/\*\n {2}Cache-Control: public, max-age=31536000, immutable/u);
 assert.match(headers, /\/models\/\*\n {2}Cache-Control: public, max-age=300, must-revalidate/u);
 
