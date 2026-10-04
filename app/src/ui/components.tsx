@@ -1,3 +1,4 @@
+import { sourceLabel } from "../source-label";
 import { BreadcrumbContext } from "../breadcrumb-context";
 import { VisibleBreadcrumbs } from "../breadcrumbs";
 import {
@@ -551,10 +552,10 @@ interface SourceLinkProps {
   context?: string;
 }
 
-export function SourceLink({ href, children = "Source", context }: SourceLinkProps) {
+export function SourceLink({ href, children, context }: SourceLinkProps) {
   return (
     <a className="source-link" href={href} target="_blank" rel="noreferrer">
-      <span>{children}</span>
+      <span>{children ?? sourceLabel(href)}</span>
       <ExternalIcon />
       {context ? <span className="visually-hidden"> for {context}</span> : null}
       <span className="visually-hidden"> (opens in a new tab)</span>

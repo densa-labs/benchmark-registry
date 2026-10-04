@@ -1,3 +1,4 @@
+import { ResultSource } from "./result-source";
 import { groupVersions, type VersionGroup } from "./version-groups";
 import { FamilyResults } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
@@ -15,7 +16,6 @@ import {
   PageHeader,
   PageSizeSelector,
   Pagination,
-  SourceLink,
   Tabs,
   type SortDirection,
   type TableColumn,
@@ -374,7 +374,7 @@ export function BenchmarkVersionPage({
       label: "Source",
       sortHref: sourceSort.href,
       sortDirection: sourceSort.direction,
-      render: (result) => <SourceLink href={result.primary_source_url} context={`${result.model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`} />,
+      render: (result) => <ResultSource result={result} />,
     },
     {
       key: "registry-no",

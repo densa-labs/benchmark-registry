@@ -1,7 +1,8 @@
+import { ResultSource } from "./result-source";
 import type { BenchmarkVersionSummary, ModelSummary, ResultRow } from "../worker/api";
 import { formatRegistryDate } from "./registry";
 import { benchmarkVersionLabel } from "./benchmark-names";
-import { DataTable, SourceLink, type TableColumn } from "./ui/components";
+import { DataTable, type TableColumn } from "./ui/components";
 export interface SeoContent {
   sentence: string;
   updated?: string;
@@ -22,7 +23,7 @@ export function FamilyResults({content}:{content?:SeoContent}) {
   const columns:TableColumn<ResultRow>[]=[
     {key:"model",label:"Model",render:row=><a href={`/models/${row.model.registry_no}`}>{row.model.name}{row.reasoning_level ? ` (${row.reasoning_level})` : ""}</a>},
     {key:"score",label:"Score",className:"numeric",render:row=>row.score.display},
-    {key:"source",label:"Source",render:row=><SourceLink href={row.primary_source_url} context={`${row.model.name} on ${latest.benchmark.name}`} />},
+    {key:"source",label:"Source",render:row=><ResultSource result={row} />},
   ];
   return <section className="results-section" aria-labelledby="recent-results-heading">
     <div className="results-section__header"><h2 id="recent-results-heading">Recently reported results</h2></div>

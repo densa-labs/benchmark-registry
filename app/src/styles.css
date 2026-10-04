@@ -1551,3 +1551,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 
 .table-scroll--compact { max-width: min(100%, var(--data-table-compact-width)); }
 .data-table .benchmark-link { white-space: normal; overflow: visible; overflow-wrap: anywhere; }
+
+.result-details { display: flex; flex-direction: column; gap: 0.2rem; color: var(--text-muted); font-size: 0.72rem; font-weight: 400; white-space: normal; }
+.pivot-observation { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }
+.pivot-observation .result-details { text-align: right; }

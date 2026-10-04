@@ -1,3 +1,4 @@
+import { ResultSource, ResultDetails } from "./result-source";
 import { pivotResults, type PivotRow } from "./result-pivot";
 import { RelatedModels, RelatedLinks } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
@@ -286,9 +287,10 @@ export function ModelDetailPage({
     ...pivot.variants.map(variant => ({
       key: `effort-${variant}`, label: variant || "Not specified", className: "numeric",
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
-        <SourceLink key={result.result_key} href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>
-          {result.score.display}
-        </SourceLink>)} </div> : "—",
+        <span key={result.result_key} className="pivot-observation">
+          <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
+          <ResultDetails result={result} showEvaluator={row.cells.get(variant)!.length > 1} />
+        </span>)} </div> : "—",
     })),
     { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
       render: row => <span className="table-cell-stack">{[...new Set([...row.cells.values()].flat().map(result => result.primary_source_url))].map(href => <SourceLink key={href} href={href} />)}</span> },
@@ -320,7 +322,7 @@ export function ModelDetailPage({
       label: "Source",
       sortHref: sourceSort.href,
       sortDirection: sourceSort.direction,
-      render: (result) => <SourceLink href={result.primary_source_url} context={`${result.model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`} />,
+      render: (result) => <ResultSource result={result} />,
     },
   ];
 
@@ -342,7 +344,7 @@ export function ModelDetailPage({
             },
             {
               label: "Source",
-              value: <SourceLink href={model.source_url}>Release source</SourceLink>,
+              value: <SourceLink href={model.source_url} />,
             },
             {
               label: "Registry No.",
