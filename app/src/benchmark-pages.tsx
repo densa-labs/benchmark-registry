@@ -1,3 +1,4 @@
+import { ReportIssue } from "./report-issue";
 import { ResultSource } from "./result-source";
 import { groupVersions, type VersionGroup } from "./version-groups";
 import { FamilyResults } from "./seo-content";
@@ -292,6 +293,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
         title={displayName}
         description={response.data.seo?.sentence ?? (displayName === benchmark.name ? undefined : benchmark.name)}
       />
+      <ReportIssue page={`/benchmarks/${benchmark.slug}`} benchmark={benchmark.name} />
       <FamilyResults content={response.data.seo} />
       <section className="results-section" aria-labelledby="versions-heading">
         <div className="results-section__header">
@@ -396,6 +398,7 @@ export function BenchmarkVersionPage({
           ? undefined
           : version.benchmark.name}
       />
+      <ReportIssue page={pathname} benchmark={`${version.benchmark.name} ${version.version}`} source={response.data.source_url} />
       <section className="entity-metadata" aria-label="Benchmark version metadata">
         <MetadataRows
           items={[

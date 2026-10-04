@@ -1,3 +1,4 @@
+import { CONTENT_METADATA } from "../src/content-metadata";
 import { structuredDataScript } from "./structured-data";
 import { LEGAL_METADATA } from "../src/legal-content";
 import { resolveRegistryRoute } from "../src/registry";
@@ -29,6 +30,7 @@ const missing: DocumentMetadata = {
 
 async function pageMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
   const route = resolveRegistryRoute(url.pathname);
+  if (route.kind === "corrections") return {title:seoTitle(CONTENT_METADATA.corrections.title),description:seoDescription([CONTENT_METADATA.corrections.description])};
   if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return {
     title: seoTitle(LEGAL_METADATA[route.kind].title), description: seoDescription([LEGAL_METADATA[route.kind].description]),
   };

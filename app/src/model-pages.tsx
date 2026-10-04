@@ -1,3 +1,5 @@
+import { ReportIssue } from "./report-issue";
+import { resultPage } from "./issue-report";
 import { comparisonHref, parseComparisonState } from "./compare";
 import { ResultSource, ResultDetails } from "./result-source";
 import { pivotResults, type PivotRow } from "./result-pivot";
@@ -291,7 +293,8 @@ export function ModelDetailPage({
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
         <span key={result.result_key} className="pivot-observation">
           <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
-          <ResultDetails result={result} compact showEvaluator={row.cells.get(variant)!.length > 1} />
+          <ResultDetails result={result} compact showEvaluator />
+          <ReportIssue result={result} page={resultPage(result)} />
         </span>)} </div> : "–",
     })),
     { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
@@ -359,6 +362,7 @@ export function ModelDetailPage({
         />
       </section>
       <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+      <ReportIssue page={pathname} model={model.name} source={model.source_url} />
       </PageHeader>
 
       {totalRows > 25 || query ? <LocalSearch

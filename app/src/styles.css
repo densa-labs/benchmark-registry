@@ -1572,3 +1572,6 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .pivot-score .pivot-observation { min-width: var(--pivot-score-width); }
 
 .pivot-observation .result-details time { white-space: nowrap; }
+
+.report-issue { font-size: .75rem; color: var(--text-muted); display: inline-block; }
+.site-footer__links { flex-wrap: wrap; }

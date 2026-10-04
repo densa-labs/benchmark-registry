@@ -1,3 +1,4 @@
+import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
@@ -113,8 +114,8 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
       const snapshot=await requireRepository(repository).seoSnapshot();
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS])]
-        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS, ...CONTENT_PATHS])]
+        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS, ...CONTENT_PATHS].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc>${snapshot.pages[path]?.updated ? `<lastmod>${escapeHtml(snapshot.pages[path].updated!)}</lastmod>` : ""}</url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
@@ -178,7 +179,7 @@ const worker = {
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
     if(staticAsset) response=await env.ASSETS.fetch(request);
     else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
-    else if (LEGAL_PATHS.some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
+    else if ([...LEGAL_PATHS,...CONTENT_PATHS].some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {
         const publication=await store.publication();

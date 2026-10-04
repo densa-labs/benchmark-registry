@@ -1,3 +1,5 @@
+import { ReportIssue } from "./report-issue";
+import { resultPage } from "./issue-report";
 import type { RecentRecord } from "../worker/seo-data";
 import { BenchmarkLink } from "./benchmark-link";
 import { formatRegistryDate } from "./registry";
@@ -9,7 +11,7 @@ export function RecentPage({records}:{records:RecentRecord[]}) {
     {key:"model",label:"Model",render:({row})=><a href={`/models/${row.model.registry_no}`}>{row.model.name}</a>},
     {key:"benchmark",label:"Benchmark",render:({row})=><BenchmarkLink benchmark={row.benchmark} version={row.benchmark_version} versionSlug={row.benchmark_version_slug} />},
     {key:"score",label:"Score",render:({row})=>row.score.display},
-    {key:"source",label:"Source",render:({row})=><SourceLink href={row.primary_source_url} context={`${row.model.name} on ${row.benchmark.name}`} />},
+    {key:"source",label:"Source",render:({row})=><><ReportIssue result={row} page={resultPage(row)} /><SourceLink href={row.primary_source_url} context={`${row.model.name} on ${row.benchmark.name}`} /></>},
   ];
   return <PageContainer className="registry-page"><PageHeader title="Recently added benchmark results" description={`${records.length} recent records from primary sources. Dates show when evidence was checked.`} />
     {[...groups].map(([date,rows])=><section className="results-section" key={date}>

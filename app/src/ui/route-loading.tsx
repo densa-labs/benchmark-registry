@@ -1,3 +1,4 @@
+import { CorrectionsPage } from "../corrections-page";
 import { LegalPage } from "../legal-pages";
 import type { RegistryRoute } from "../registry";
 import { LoadingState, MetadataRows, PageContainer } from "./components";
@@ -21,6 +22,7 @@ const metadata = {
 } as const;
 
 export function RouteLoadingState({ route }: { route: RegistryRoute }) {
+  if (route.kind === "corrections") return <CorrectionsPage />;
   if (route.kind === "home" || route.kind === "not-found") return null;
   if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return <LegalPage kind={route.kind} />;
   const index = route.kind === "models" || route.kind === "benchmarks" || route.kind === "companies";

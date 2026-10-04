@@ -1,3 +1,4 @@
+import { CONTENT_METADATA } from "./content-metadata";
 import type { RecentRecord } from "../worker/seo-data";
 import type { SeoContent } from "./seo-content";
 import type { LegalKind } from "./legal-content";
@@ -144,6 +145,7 @@ export type RegistryRoute =
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
+  | { kind: "corrections" }
   | { kind: "not-found" };
 
 type LoadedRouteData =
@@ -161,6 +163,7 @@ type LoadedRouteData =
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
+  | { kind: "corrections" }
   | { kind: "not-found" };
 
 export type LoadedRegistryRoute = LoadedRouteData & { updated?: string };
@@ -168,6 +171,7 @@ export type LoadedRegistryRoute = LoadedRouteData & { updated?: string };
 export class RegistryClientError extends Error {}
 
 export function resolveRegistryRoute(pathname: string): RegistryRoute {
+  if (Object.keys(CONTENT_METADATA).some(kind=>pathname === `/${kind}` || pathname === `/${kind}/`)) return {kind:"corrections"};
   if (pathname === "/") {
     return { kind: "home" };
   }
@@ -226,7 +230,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "corrections" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -331,7 +335,7 @@ export async function loadRegistryRoute(
   fetcher: typeof fetch = fetch,
   signal?: AbortSignal,
 ): Promise<LoadedRegistryRoute> {
-  if (route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
+  if (route.kind === "corrections" || route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
   if(route.kind==="recent") {
     const response=await fetcher("/api/recent"+search,{headers:{Accept:"application/json"},signal});

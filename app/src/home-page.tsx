@@ -1,3 +1,5 @@
+import { ReportIssue } from "./report-issue";
+import { resultPage } from "./issue-report";
 import { type ModelListEntry, type HomePageResponse } from "./registry";
 import { ModelBenchmarkScore } from "./model-benchmark-score";
 import { EmptyState, PageContainer, SourceLink } from "./ui/components";
@@ -58,6 +60,7 @@ function LatestAdditions({ results }: { results: HomePanels["latest_additions"] 
           </span>
           <span className="home-model-list__metadata">
             <span className="home-addition-score"><ResultScoreLink result={result} /></span>
+            <ReportIssue result={result} page={resultPage(result)} />
             <SourceLink href={result.primary_source_url} context={`${result.model.name} on ${benchmarkVersionLabel(result.benchmark, result.benchmark_version)}`} />
           </span>
         </li>
