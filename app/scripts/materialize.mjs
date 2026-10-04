@@ -55,7 +55,8 @@ else if(values['gc-plan']) {
     if(!lease) throw new Error('Another producer holds the publication lease. Retry after it completes.');
     try {
       let canonical=db,snapshot;
-      if(values.bootstrap) {
+      // Projection upgrades rebuild all objects; reuse the existing verified local snapshot path.
+      if(values.bootstrap || previous?.projectionVersion!==producer.projectionVersion) {
         console.log(JSON.stringify({environment,phase:'canonical_snapshot'}));
         snapshot=new DatabaseSync(':memory:');
         const names=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','registry_revision','registry_read_changes'];
