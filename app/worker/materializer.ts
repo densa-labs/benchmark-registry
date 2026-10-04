@@ -3,7 +3,14 @@ import { ApiError } from './api';
 import type { ParsedListParams } from './params';
 import { RegistryRepository } from './repository';
 import { digest, logicalKind, validateManifest, validateObject, type ReadData, type ReadEnvironment, type ReadManifest, type ReadObject } from './read-model';
-export const projectionVersion=5;
+export const projectionVersion=6;
+export const INLINE_BUNDLE_LIMIT=512*1024;
+export function inlineBundle(objects:Map<string,string>):Record<string,ReadObject> {
+  const bytes=[...objects.values()].reduce((sum,value)=>sum+new TextEncoder().encode(value).length,0);
+  // Large rebuilds use verified immutable objects. Keep tiny critical reads inline;
+  // bounded incremental updates retain their coherent fallback bundle.
+  return Object.fromEntries([...objects].map(([hash,value])=>[hash,JSON.parse(value) as ReadObject] as const).filter(([,object])=>bytes<=INLINE_BUNDLE_LIMIT || ["stats","redirects"].includes(object.key)));
+}
 export function needsMaterialization(previous:ReadManifest|undefined,state:{revision:string;watermark:number}):boolean {
   return previous?.projectionVersion!==projectionVersion || previous.canonicalRevision!==state.revision || previous.watermark!==state.watermark || !previous.objects["home-panels"] || !previous.objects.seo;
 }
@@ -88,7 +95,7 @@ export async function buildGeneration(db:D1Database,environment:ReadEnvironment,
   }
   const after=await canonicalState(db);
   if(state.revision!==after.revision || state.watermark!==after.watermark) throw new Error('Canonical data changed during materialization; retry without publishing.');
-  const manifest:ReadManifest={schema:1,projectionVersion,environment,generation:crypto.randomUUID().replaceAll('-',''),canonicalRevision:state.revision,watermark:state.watermark,createdAt:new Date().toISOString(),objects:refs,inlineObjects:Object.fromEntries([...objects].map(([hash,text])=>[hash,JSON.parse(text)]))};
+  const manifest:ReadManifest={schema:1,projectionVersion,environment,generation:crypto.randomUUID().replaceAll('-',''),canonicalRevision:state.revision,watermark:state.watermark,createdAt:new Date().toISOString(),objects:refs,inlineObjects:inlineBundle(objects)};
   validateManifest(manifest,environment);
   return {manifest,manifestHash:await digest(JSON.stringify(manifest)),objects,rebuilt,removed};
 }

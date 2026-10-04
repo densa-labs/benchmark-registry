@@ -37,17 +37,21 @@ export class PublishedReadStore {
     if(manifest.generation!==ref.generation) throw new MaterializationFailure('Generation identity mismatch.');
     return new MaterializedRepository(manifest,async<K extends keyof ReadData>(key:string)=>{
       const hash=manifest.objects[key];
-      const inline=manifest.inlineObjects[hash];
-      if(inline) {
-        if(await digest(JSON.stringify(inline))!==hash) throw new MaterializationFailure('Corrupt coherent update bundle.');
-        return inline.data as ReadData[K];
-      }
-      const memoKey=manifest.generation+':'+key;
+      const memoKey=manifest.generation+':'+hash+':'+key;
       if(!this.memo.has(memoKey)) this.memo.set(memoKey,(async()=>{
-        const text=await this.get('objects/'+hash,true,async(text)=>{if(await digest(text)!==hash) throw new MaterializationFailure('Corrupt object.');validateObject(JSON.parse(text),key,manifest.environment);});
-        if(!text || await digest(text)!==hash) throw new MaterializationFailure('Read object is missing or corrupt.');
-        const object:unknown=JSON.parse(text);validateObject(object,key,manifest.environment);return (object as ReadObject).data;
-      })().catch(()=>{throw new MaterializationFailure("Invalid or unavailable read object.");}));
+        const inline=manifest.inlineObjects[hash];
+        if(inline) {
+          if(await digest(JSON.stringify(inline))!==hash) throw new MaterializationFailure('Corrupt coherent update bundle.');
+          return inline.data;
+        }
+        let parsed:ReadObject|undefined;
+        const text=await this.get('objects/'+hash,true,async(text)=>{
+          if(await digest(text)!==hash) throw new MaterializationFailure('Corrupt object.');
+          const object:unknown=JSON.parse(text);validateObject(object,key,manifest.environment);parsed=object;
+        });
+        if(!text || !parsed) throw new MaterializationFailure('Read object is missing or corrupt.');
+        return parsed.data;
+      })().catch(()=>{this.memo.delete(memoKey);throw new MaterializationFailure("Invalid or unavailable read object.");}));
       return this.memo.get(memoKey)! as Promise<ReadData[K]>;
     });
   }

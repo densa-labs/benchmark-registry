@@ -4,7 +4,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import template from '../index.html?raw';
 import worker from './index';
 import canonical from './canonical-reference';
-import {buildGeneration,needsMaterialization} from './materializer';
+import {buildGeneration,needsMaterialization,inlineBundle,INLINE_BUNDLE_LIMIT} from './materializer';
 import {garbageCandidates,protectedPublicationKeys,publishGeneration,readManifest,readPublication,rollbackBuild,verifyGeneration,type ProducerStore} from './publication';
 import {digest,validateManifest,type Publication} from './read-model';
 import {shadowGeneration} from './shadow';
@@ -265,4 +265,27 @@ it('manual publication preflight detects projection upgrades even with unchanged
   expect(needsMaterialization(undefined,state)).toBe(true);
   expect(needsMaterialization(build.manifest,{...state,revision:'changed'})).toBe(true);
   expect(needsMaterialization(build.manifest,{...state,watermark:state.watermark+1})).toBe(true);
+});
+
+it('keeps full rebuild manifests bounded while retaining verified small update bundles',()=>{
+  const stats={schema:1 as const,key:'stats',environment:'local' as const,data:{data:{models:1,benchmarks:1,versions:1,benchmark_results:1}}};
+  const tiny=new Map([['a'.repeat(64),JSON.stringify(stats)]]);
+  expect(inlineBundle(tiny)['a'.repeat(64)]).toEqual(stats);
+  const large={schema:1,key:'search-entities',environment:'local',data:['x'.repeat(INLINE_BUNDLE_LIMIT)]};
+  const bundle=inlineBundle(new Map([...tiny,['b'.repeat(64),JSON.stringify(large)]]));
+  expect(Object.keys(bundle)).toEqual(['a'.repeat(64)]);
+});
+
+it('serves compact full publications and falls back coherently when a required object is corrupt',async()=>{
+  const f=fixture();const {build,publication}=await bootstrap(f);
+  f.sqlite.exec("UPDATE models SET canonical_name='Compact corrected',normalized_name='compact corrected' WHERE registry_no='10001'");
+  const next=(await buildGeneration(f.db,'local',build.manifest))!;
+  next.manifest.inlineObjects={};next.manifestHash=await digest(JSON.stringify(next.manifest));
+  await publishGeneration(f.store,next,f.db,publication);
+  const ok=await worker.fetch(new Request('https://benchmarkregistry.org/models/10001'),f.env);
+  expect(ok.status).toBe(200);expect(await ok.text()).toContain('Compact corrected');
+  f.store.entries.set('objects/'+next.manifest.objects['model:10001'],'corrupt');
+  const fallback=await worker.fetch(new Request('https://benchmarkregistry.org/models/10001'),f.env);
+  expect(fallback.headers.get('X-Registry-Revision')).toBe(build.manifest.generation);
+  expect(await fallback.text()).not.toContain('Compact corrected');
 });
