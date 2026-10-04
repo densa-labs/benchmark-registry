@@ -81,8 +81,13 @@ keeps it out of analytics.
 ## Redirects (`_redirects`)
 
 Generated from the data: retired model numbers (308), legacy
-`/benchmarks/<family>/versions/<version>` URLs and old model name slugs (301),
-and trailing-slash variants to the canonical path (308).
+`/benchmarks/<family>/versions/<version>` URLs and `versions/default` for
+existing families (301), `/models/<name-slug>` (301), root-level model slugs
+from the frozen allow-list in `worker/legacy-root-slugs.ts` (301), and
+trailing-slash variants to the canonical path (308). Retired identities with no
+equivalent, such as an unknown version or an unlisted root slug, get the real
+404 page instead of a hub redirect. The build fails if an allow-listed slug
+points at a model that is not published.
 
 ## Cloudflare settings outside this repository
 

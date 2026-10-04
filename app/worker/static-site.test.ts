@@ -31,7 +31,7 @@ it("maps routes to the files Workers static assets serves without a Worker", () 
 
 it("prerenders every page byte-for-byte as the Worker rendered it, plus data, feeds and routing files", async () => {
   const db=database();
-  const site=await buildStaticSite({db,environment:"production",template});
+  const site=await buildStaticSite({db,environment:"production",template,legacyRootSlugs:{}});
   const output=files(site);
   for(const path of ["index.html","models.html","benchmarks.html","companies.html","compare.html","recent.html","search.html","coverage.html","about.html","404.html","sitemap.xml","feed.xml","robots.txt","_redirects",STATIC_MANIFEST_PATH.slice(1)]) expect(output.has(path),path).toBe(true);
   expect(output.get("robots.txt")).toBe(robotsFile("production"));
@@ -59,7 +59,7 @@ it("prerenders every page byte-for-byte as the Worker rendered it, plus data, fe
 });
 
 it("serves the former read API in the browser from static files only", async () => {
-  const site=files(await buildStaticSite({db:database(),environment:"production",template}));
+  const site=files(await buildStaticSite({db:database(),environment:"production",template,legacyRootSlugs:{}}));
   const requested:string[]=[];
   const network=(async(input:RequestInfo|URL)=>{
     const path=new URL(String(input),"https://registry.invalid").pathname;requested.push(path);
@@ -122,7 +122,7 @@ it("sends one set of security headers on every path, with hashed scripts and no 
 });
 
 it("never serves diagnostics headers: static assets have no Worker to add them", async () => {
-  const site=await buildStaticSite({db:database(),environment:"production",template});
+  const site=await buildStaticSite({db:database(),environment:"production",template,legacyRootSlugs:{}});
   for(const environment of ["production","staging"] as const) expect(headerRules(site.files.map(file=>file.path),environment,site.security)).not.toMatch(/x-registry-|server-timing/iu);
 });
 
@@ -135,20 +135,42 @@ it("hashes only executable inline scripts and refuses a second one", async () =>
 });
 
 it("allows exactly the inline scripts the build emitted", async () => {
-  const site=await buildStaticSite({db:database(),environment:"production",template});
+  const site=await buildStaticSite({db:database(),environment:"production",template,legacyRootSlugs:{}});
   expect(site.security.scriptHashes).toEqual(await inlineScriptHashes([template]));
   expect(site.security.scriptHashes).toHaveLength(1);
 });
 
 it("turns per-request Worker redirects into _redirects rules", () => {
-  const seo={models:[{registry_no:"10006",name:"GPT-5.3-Codex"},{registry_no:"20001",name:"Models"}]} as unknown as ReadData["seo"];
-  const {lines,dynamic}=redirectRules({redirects:[{source:"10099",target:"10006"}],seo},[{family:"gpqa",version:"diamond"}]);
+  const seo={models:[{registry_no:"10006",name:"GPT-5.3-Codex"},{registry_no:"10099",name:"Old Stealth"},{registry_no:"20001",name:"Models"}]} as unknown as ReadData["seo"];
+  const {lines,dynamic}=redirectRules({redirects:[{source:"10099",target:"10006"}],seo},[{family:"gpqa",version:"diamond"}],{"gpt-5-3-codex":"10006"});
   expect(lines).toContain("/models/10099 /models/10006 308");
   expect(lines).toContain("/benchmarks/gpqa/versions/diamond /benchmarks/gpqa/diamond 301");
+  expect(lines).toContain("/benchmarks/gpqa/versions/default /benchmarks/gpqa 301");
   expect(lines).toContain("/models/gpt53codex /models/10006 301");
+  // Root-level slugs come only from the allow-list, never from every model name.
   expect(lines).toContain("/gpt-5-3-codex /models/10006 301");
-  // Hub names never become model shortcuts.
-  expect(lines).not.toContain("/models /models/20001 301");
+  expect(lines).not.toContain("/gpt53codex /models/10006 301");
+  expect(lines.filter(line=>/^\/[^/ ]+ /u.test(line))).toEqual(["/gpt-5-3-codex /models/10006 301"]);
+  // Retired identities with no equivalent are not sent to a hub: they 404.
+  expect(lines.some(line=>line.includes("*"))).toBe(false);
+  expect(lines.some(line=>/ \/(models|benchmarks) 30[18]$/u.test(line))).toBe(false);
+  expect(lines.some(line=>line.startsWith("/incai-ringflash20"))).toBe(false);
   expect(lines).toContain("/:a/:b/ /:a/:b 308");
-  expect(dynamic).toBe(4);
+  expect(dynamic).toBe(3);
+});
+
+it("refuses an allow-listed root slug whose model is not published", () => {
+  const seo={models:[{registry_no:"10006",name:"GPT-5.3-Codex"},{registry_no:"10099",name:"Old Stealth"}]} as unknown as ReadData["seo"];
+  const data={redirects:[{source:"10099",target:"10006"}],seo};
+  expect(()=>redirectRules(data,[],{"old-stealth":"10099"})).toThrow("not a published model");
+  expect(()=>redirectRules(data,[],{"missing":"19999"})).toThrow("not a published model");
+});
+
+it("keeps the frozen root slug allow-list well formed (the build checks each target)", async () => {
+  const {LEGACY_ROOT_SLUGS}=await import("./legacy-root-slugs");
+  expect(Object.keys(LEGACY_ROOT_SLUGS)).toHaveLength(189);
+  for(const [slug,registryNo] of Object.entries(LEGACY_ROOT_SLUGS)) {
+    expect(slug).toMatch(/^[a-z0-9-]+$/u);
+    expect(registryNo).toMatch(/^[0-9]+$/u);
+  }
 });

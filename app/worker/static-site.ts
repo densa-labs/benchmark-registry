@@ -11,6 +11,7 @@ import { buildGeneration } from "./materializer";
 import { MaterializedRepository } from "./materialized-repository";
 import { verifyGeneration } from "./publication";
 import { highestRecordedResult } from "./featured-result";
+import { LEGACY_ROOT_SLUGS } from "./legacy-root-slugs";
 import { digest, type ReadData, type ReadEnvironment, type ReadObject } from "./read-model";
 
 export type SiteEnvironment = "staging" | "production";
@@ -21,6 +22,8 @@ export interface StaticSiteOptions {
   /** The Vite-built index.html every page is rendered into. */
   template: string;
   analytics?: AnalyticsEnvironment;
+  /** Root-level legacy model slugs; defaults to the frozen allow-list. Fixture databases pass `{}`. */
+  legacyRootSlugs?: Readonly<Record<string, string>>;
 }
 export interface StaticSite {
   files: StaticFile[];
@@ -45,7 +48,6 @@ export const CLOUDFLARE_WEB_ANALYTICS_SCRIPT = "https://static.cloudflareinsight
 /** Only the theme script may be inline; a second one must be reviewed, not silently allowed. */
 export const MAX_INLINE_SCRIPTS = 1;
 const EXECUTABLE_SCRIPT_TYPES = new Set(["", "module", "text/javascript", "application/javascript"]);
-const ROOT_HUBS = new Set(["models", "benchmarks", "companies", "compare", "legal", "privacy", "terms", "recent"]);
 
 /** `/models/10006` → `models/10006.html`; `/` → `index.html`; files keep their name. */
 export function pageFile(path: string): string {
@@ -58,8 +60,11 @@ export function pageFile(path: string): string {
 const nameSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/gu, "");
 const hyphenSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/gu, "-").replace(/^-|-$/gu, "");
 
-/** Redirects the Worker resolved per request, as `_redirects` rules. */
-export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, versions: Array<{ family: string; version: string }>): { lines: string[]; dynamic: number } {
+/**
+ * Redirects for identities that still exist. Retired identities with no
+ * equivalent (an unknown version, an unlisted root slug) get the real 404 page.
+ */
+export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, versions: Array<{ family: string; version: string }>, legacyRootSlugs: Readonly<Record<string, string>> = LEGACY_ROOT_SLUGS): { lines: string[]; dynamic: number } {
   const lines: string[] = [];
   const seen = new Set<string>();
   const add = (source: string, target: string, status: 301 | 308) => {
@@ -68,18 +73,22 @@ export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, version
   };
   for (const redirect of data.redirects) add(`/models/${redirect.source}`, `/models/${redirect.target}`, 308);
   for (const { family, version } of versions) add(`/benchmarks/${family}/versions/${version}`, `/benchmarks/${family}/${version}`, 301);
+  // v1 used a `default` version for the family as a whole; only existing families have one.
+  for (const family of [...new Set(versions.map(({ family }) => family))].sort()) add(`/benchmarks/${family}/versions/default`, `/benchmarks/${family}`, 301);
+  const retired = new Set(data.redirects.map((redirect) => redirect.source));
   for (const model of data.seo.models) {
-    if (data.redirects.some((redirect) => redirect.source === model.registry_no)) continue;
+    if (retired.has(model.registry_no)) continue;
     for (const slug of new Set([nameSlug(model.name), hyphenSlug(model.name)])) {
       if (!slug || /^[0-9]+$/u.test(slug)) continue;
       add(`/models/${slug}`, `/models/${model.registry_no}`, 301);
-      if (!ROOT_HUBS.has(slug) && !LEGAL_PATHS.includes(`/${slug}`) && !CONTENT_PATHS.includes(`/${slug}`)) add(`/${slug}`, `/models/${model.registry_no}`, 301);
     }
   }
-  add("/incai-ringflash20", "/models", 301);
+  const published = new Set(data.seo.models.map((model) => model.registry_no).filter((registryNo) => !retired.has(registryNo)));
+  for (const [slug, registryNo] of Object.entries(legacyRootSlugs)) {
+    if (!published.has(registryNo)) throw new Error(`Legacy root slug /${slug} points at ${registryNo}, which is not a published model.`);
+    add(`/${slug}`, `/models/${registryNo}`, 301);
+  }
   const dynamic = [
-    // Retired version URLs whose version no longer exists return to the family hub.
-    "/benchmarks/:family/versions/* /benchmarks/:family 301",
     // Trailing-slash variants redirect permanently to the canonical path, as the Worker did.
     "/:a/ /:a 308", "/:a/:b/ /:a/:b 308", "/:a/:b/:c/ /:a/:b/:c 308",
   ];
@@ -235,7 +244,7 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   for (const hash of new Set(Object.values(manifest.objects))) files.push({ path: `data/objects/${hash}.json`, body: serialized.get(hash)! });
   files.push({ path: "data/manifest.json", body: JSON.stringify(manifest) });
 
-  const redirects = redirectRules({ redirects: object(build.manifest.objects.redirects).data as ReadData["redirects"], seo: snapshot }, versions);
+  const redirects = redirectRules({ redirects: object(build.manifest.objects.redirects).data as ReadData["redirects"], seo: snapshot }, versions, options.legacyRootSlugs);
   for (const rule of redirects.lines) {
     const source = rule.split(" ")[0];
     if (files.some((file) => file.path === pageFile(source))) throw new Error(`Redirect source shadows a page: ${source}`);
