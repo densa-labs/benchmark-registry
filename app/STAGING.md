@@ -1,10 +1,9 @@
 # Staging (S1.1)
 
-Staging uses the existing Vite-built Worker and static assets. The Wrangler
-`staging` environment builds `benchmark-registry-staging`, binds `DB` to the
-separate `benchmark-registry-staging` D1 database, and assigns only
-`staging.benchmarkregistry.org` as a Custom Domain. The top-level configuration
-remains the local/future production configuration. Staging disables its
+Staging is deployed as static assets only (see [STATIC-SITE.md](STATIC-SITE.md)).
+The Wrangler `staging` environment deploys `benchmark-registry-staging`, built
+from the separate `benchmark-registry-staging` D1 database, and assigns only
+`staging.benchmarkregistry.org` as a Custom Domain. Staging disables its
 `workers.dev` and preview URLs so the custom hostname is its only public entry.
 
 The staging D1 binding resolves by **database name**; no account or database ID
@@ -25,7 +24,7 @@ npm run db:migrations:list:staging
 npm run db:migrate:staging
 npm run db:migrations:list:staging
 
-# Builds the staging environment, checks the generated Worker config, then deploys.
+# Reads staging D1 once, prerenders the site, checks the output, then deploys.
 npm run deploy:staging
 ```
 
@@ -49,24 +48,19 @@ For a private staging site, create a Cloudflare Access self-hosted application
 for the full `staging.benchmarkregistry.org` hostname and add the intended Allow
 policy and identity provider in Cloudflare Zero Trust. This is an account-side
 control; no application secret or in-app login is required. Check that both `/`
-and `/api/models` require Access authentication before treating staging as
+and `/data/manifest.json` require Access authentication before treating staging as
 private. The repository does not specify an authorized audience, so the policy
 must be chosen by the account owner.
 
-The staging environment sets `STAGING_CRAWLER_PROTECTION=enabled` and routes all
-static asset requests through the existing Worker. The Worker adds
-`X-Robots-Tag: noindex, nofollow, noarchive` to staging responses and serves
-`/robots.txt` with `User-agent: *` and `Disallow: /`. The top-level environment
-does not set this variable or change its asset routing. Cloudflare Access may
-redirect unauthenticated requests before they reach the Worker; inspect these
+The staging build adds `X-Robots-Tag: noindex, nofollow, noarchive` and a
+restrictive script CSP to every response through `_headers`, and its
+`/robots.txt` is `User-agent: *` and `Disallow: /`. Cloudflare Access may
+redirect unauthenticated requests before they reach the assets; inspect these
 responses after signing in to Access.
 
-After deployment, verify the hostname in a browser and check the read API:
+After deployment, verify the hostname in a browser and check that the data
+manifest is served:
 
 ```sh
-curl -i https://staging.benchmarkregistry.org/api/models
+curl -i https://staging.benchmarkregistry.org/data/manifest.json
 ```
-
-With an empty staging database, the API should return a successful response
-with an empty `data` array. With Access enabled, an unauthenticated request
-should instead be intercepted by Access. Do not load the launch dataset in S1.1.

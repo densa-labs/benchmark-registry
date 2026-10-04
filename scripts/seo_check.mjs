@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Build the public Worker locally and crawl its complete sitemap, or --base=http://localhost:PORT.
+/** Build the static site locally and crawl its complete sitemap, or --base=http://localhost:PORT (e.g. `npm run preview`).
  * --db=/absolute/path.sqlite uses an explicit read-only Registry database.
  * The default deterministic seed site also runs in CI without credentials or runtime network calls.
  * --serve=PORT leaves the local site available for browser checks after validation.
@@ -22,8 +22,7 @@ const temporary=mkdtempSync(join(tmpdir(),'registry-seo-'));
 let sqlite;
 try {
   const entry=join(temporary,'entry.ts');
-  writeFileSync(entry,`export {default as worker} from ${JSON.stringify(join(root,'app/worker/index.ts'))};
-export {buildGeneration} from ${JSON.stringify(join(root,'app/worker/materializer.ts'))};
+  writeFileSync(entry,`export {buildStaticSite,headerRules} from ${JSON.stringify(join(root,'app/worker/static-site.ts'))};
 export {RegistryRepository} from ${JSON.stringify(join(root,'app/worker/repository.ts'))};
 export {CANONICAL_ORIGIN} from ${JSON.stringify(join(root,'app/src/seo-config.ts'))};
 export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
@@ -31,7 +30,7 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
   await build({entryPoints:[entry],outfile:output,bundle:true,platform:'node',format:'esm',logLevel:'silent',banner:{js:"import { createRequire } from 'node:module'; const require=createRequire(import.meta.url);"},define:{__REGISTRY_STAGING__:'false',__REGISTRY_BUILD_ID__:'"seo-check"',__REGISTRY_BUILD_TIMESTAMP__:'"verification build"'}});
   const runtime=await import(pathToFileURL(output).href);
   const origin=runtime.CANONICAL_ORIGIN;
-  let localFetch,snapshot;
+  let localFetch,snapshot,headers='';
   if(values.base) {
     const base=new URL(values.base);assert.ok(['localhost','127.0.0.1','[::1]'].includes(base.hostname),'Only local crawl targets are supported.');
     localFetch=path=>fetch(new URL(path,base),{redirect:'manual'});
@@ -44,24 +43,26 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
     }
     const db={prepare(sql){let bindings=[];return {bind(...params){bindings=params;return this;},async all(){return {results:sqlite.prepare(sql).all(...bindings),meta:{rows_read:0,rows_written:0}};},async first(){return (await this.all()).results[0] ?? null;}};}};
     snapshot=await new runtime.RegistryRepository(db).seoSnapshot();
-    const generation=await runtime.buildGeneration(db,'local');
-    assert.ok(generation);
-    const entries=new Map([...generation.objects].map(([hash,value])=>['objects/'+hash,value]));
-    entries.set('manifests/'+generation.manifestHash,JSON.stringify(generation.manifest));
-    entries.set('publication',JSON.stringify({schema:1,environment:'local',current:{generation:generation.manifest.generation,hash:generation.manifestHash}}));
-    const clientDirectory=join(root,'app/dist/client');
-    const template=readFileSync(existsSync(join(clientDirectory,'index.html')) ? join(clientDirectory,'index.html') : join(root,'app/index.html'),'utf8');
-    const env={DB:db,READ_ENVIRONMENT:'local',READ_STORE:{get:async key=>entries.get(key) ?? null},ASSETS:{fetch:async request=>{
-      const path=new URL(request.url).pathname;
-      if(path.startsWith('/assets/') || path.startsWith('/favicon')) {
-        const file=resolve(clientDirectory,'.'+path);
-        if(!file.startsWith(clientDirectory+'/') || !existsSync(file)) return new Response('Missing asset',{status:404});
-        const types={'.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2'};
-        const extension=file.slice(file.lastIndexOf('.'));return new Response(readFileSync(file),{headers:{'Content-Type':types[extension] ?? 'application/octet-stream'}});
-      }
-      return new Response(template,{headers:{'Content-Type':'text/html; charset=utf-8'}});
-    }}};
-    localFetch=path=>runtime.worker.fetch(new Request(new URL(path,origin)),env);
+    const clientTemplate=join(root,'app/dist/client/index.html');
+    const pristine=existsSync(clientTemplate) && readFileSync(clientTemplate,'utf8').includes('<div id="root"></div>');
+    const template=readFileSync(pristine ? clientTemplate : join(root,'app/index.html'),'utf8');
+    // Serve the generated files the way Workers static assets does: exact file,
+    // then `.html`, `_redirects` rules, and 404.html for anything else. Query strings never select a file.
+    const site=await runtime.buildStaticSite({db,environment:'production',template});
+    const files=new Map(site.files.map(file=>[file.path,file.body]));
+    headers=runtime.headerRules(site.files.map(file=>file.path),'production');
+    const redirects=new Map(files.get('_redirects').trim().split('\n').filter(line=>!line.includes(':') && !line.includes('*')).map(line=>line.split(' ')).map(([from,to,status])=>[from,{to,status:Number(status)}]));
+    const types={'.html':'text/html; charset=utf-8','.xml':'application/xml','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8','.json':'application/json'};
+    const respond=(file,status=200)=>new Response(files.get(file),{status,headers:{'Content-Type':types[file.slice(file.lastIndexOf('.'))] ?? 'application/octet-stream'}});
+    localFetch=async path=>{
+      const url=new URL(path,origin);const pathname=decodeURIComponent(url.pathname);
+      const redirect=redirects.get(url.pathname);if(redirect) return new Response(null,{status:redirect.status,headers:{Location:redirect.to+url.search}});
+      if(pathname!=='/' && pathname.endsWith('/')) return new Response(null,{status:308,headers:{Location:pathname.slice(0,-1)+url.search}});
+      const file=pathname==='/' ? 'index.html' : pathname.slice(1);
+      if(!file.startsWith('_') && files.has(file)) return respond(file);
+      if(files.has(file+'.html')) return respond(file+'.html');
+      return respond('404.html',404);
+    };
   }
   const sitemapResponse=await localFetch('/sitemap.xml');assert.equal(sitemapResponse.status,200);
   const sitemap=new JSDOM(await sitemapResponse.text(),{contentType:'text/xml'}).window.document;
@@ -109,8 +110,10 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
   }
   for(const path of ['/about','/contact','/terms','/privacy','/corrections','/coverage']) assert.ok(urls.includes(origin+path),`New page absent from sitemap: ${path}`);
   for(const path of ['/feed.xml','/healthz','/search']) assert.ok(!urls.includes(origin+path),`Non-indexable route in sitemap: ${path}`);
-  const health=await localFetch('/healthz');assert.ok([200,503].includes(health.status));assert.match(health.headers.get('X-Robots-Tag'),/noindex/u);
-  const feed=await localFetch('/feed.xml');assert.equal(feed.status,200);assert.match(feed.headers.get('Content-Type'),/application\/atom\+xml/u);
+  const health=await localFetch('/healthz');assert.equal(health.status,404,'The static site has no health endpoint');
+  const feed=await localFetch('/feed.xml');assert.equal(feed.status,200);
+  if(values.base) assert.match(feed.headers.get('Content-Type'),/application\/atom\+xml/u);
+  else assert.match(headers,/\/feed\.xml\n {2}Cache-Control: [^\n]+\n {2}X-Robots-Tag: noindex\n {2}Content-Type: application\/atom\+xml/u);
   const atom=new JSDOM(await feed.text(),{contentType:'application/xml'}).window.document;assert.equal(atom.documentElement.namespaceURI,'http://www.w3.org/2005/Atom');
   const search=await read('/search');assert.equal(search.response.status,200);assert.match(search.document.querySelector('meta[name="robots"]').getAttribute('content'),/noindex/u);
   assert.equal(search.document.querySelectorAll('link[rel="canonical"]').length,1);
@@ -127,14 +130,15 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
   }
   for(const url of urls) assert.ok(depth.has(new URL(url).pathname) && depth.get(new URL(url).pathname)<=3,`More than three clicks: ${url}`);
   for(const path of ['/models?sort=name&order=desc','/models?limit=100','/models?page=2','/benchmarks?q=gpqa','/compare?models=10001,20002']) {
+    // Query variants are served the base page, whose canonical names the base URL;
+    // the client marks the applied variant noindex once it renders it.
     const {response,document}=await read(path);assert.equal(response.status,200,path);
-    assert.match(document.querySelector('meta[name="robots"]').getAttribute('content'),/noindex/iu,path);
     assert.equal(document.querySelector('link[rel="canonical"]').getAttribute('href'),origin+path.split('?')[0],path);
   }
   if(values.report) writeFileSync(resolve(values.report),JSON.stringify({origin,sitemapUrls:urls.length,comparisons:snapshot?.comparisons.length,documents:report},null,2)+'\n');
   console.log(`PASS: ${urls.length} sitemap URLs; canonical 200 HTML, one H1, unique metadata, valid JSON-LD, noindex exclusions and ≤3-click reachability.`);
   if(values.serve) {
-    assert.ok(!values.base,'Use --serve with a locally built Worker');
+    assert.ok(!values.base,'Use --serve with a locally built site');
     const port=Number(values.serve);assert.ok(Number.isSafeInteger(port) && port>0 && port<65536);
     createServer(async(request,response)=>{
       try {const result=await localFetch(request.url);response.writeHead(result.status,Object.fromEntries(result.headers));response.end(Buffer.from(await result.arrayBuffer()));}

@@ -1,8 +1,7 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { faviconAssets } from "./src/branding";
 
 const staging = process.env.CLOUDFLARE_ENV === "staging";
@@ -18,11 +17,18 @@ export default defineConfig({
     __REGISTRY_BUILD_TIMESTAMP__: JSON.stringify(timestamp),
     __REGISTRY_BUILD_ID__: JSON.stringify(commit + dirty),
   },
-  plugins: [react(), cloudflare(), {
+  // Client only: pages are prerendered by scripts/build-static.mjs and served as static assets.
+  build: { outDir: "dist/client" },
+  plugins: [react(), {
     name: "registry-environment-branding",
     transformIndexHtml(html) {
       return staging ? html.replace(/<link rel="icon"[^>]+>/gu, "")
         .replace("<title>Benchmark Registry</title>", '<link rel="icon" href="/favicon-staging.svg" type="image/svg+xml"><title>STAGING | Benchmark Registry</title>') : html;
+    },
+    closeBundle() {
+      // The static page renderer must embed the same build identity as the client.
+      mkdirSync("dist", { recursive: true });
+      writeFileSync("dist/build-info.json", JSON.stringify({ staging, timestamp, id: commit + dirty }));
     },
     generateBundle() {
       if (this.environment.name === "client") {

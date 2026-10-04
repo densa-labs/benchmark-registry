@@ -1,10 +1,15 @@
 import { IS_STAGING } from "./build";
 import { useEffect, useRef } from "react";
 import type { InitialDocument } from "./bootstrap";
-import { applyNavigationHead, DocumentCache, parseBrowserDocument, readNavigationHead, type BrowserDocument } from "./document-cache";
+import { applyNavigationHead, DocumentCache, parseBrowserDocument, pendsClientQuery, readNavigationHead, type BrowserDocument } from "./document-cache";
 import { locallySortedDocument } from "./local-sort";
-import { resolveRegistryRoute, type RegistryRoute } from "./registry";
+import { loadRegistryRoute, resolveRegistryRoute, type RegistryRoute } from "./registry";
+import { staticFetch } from "./static-api";
 import { navigationNotice, type NavigationNotice } from "./navigation-accessibility";
+
+function queryHead(head: string): string {
+  return head.replace(/<meta name="robots"[^>]*>\n?/gu,"")+'\n<meta name="robots" content="noindex, follow">';
+}
 
 export function navigateRegistry(href: string) {
   if (window.dispatchEvent(new CustomEvent("registry:navigate",{detail:href,cancelable:true}))) window.location.assign(href);
@@ -15,7 +20,8 @@ export function useDocumentNavigation(initial: InitialDocument | undefined, onLo
   useEffect(() => {callbacks.current={onLoad,onError,onPending};},[onLoad,onError,onPending]);
   useEffect(() => {
     const cache = new DocumentCache();
-    let current: BrowserDocument | undefined = initial ? {...initial,href:window.location.pathname+window.location.search,head:readNavigationHead(document),time:Date.now()} : undefined;
+    // A prerendered page served for a query URL is not that URL's document; App applies the query.
+    let current: BrowserDocument | undefined = initial && !pendsClientQuery(initial,window.location.search) ? {...initial,href:window.location.pathname+window.location.search,head:readNavigationHead(document),time:Date.now()} : undefined;
     if (current && !initial?.failure) cache.put(current);
     let controller: AbortController | undefined;
     let sequence = 0;
@@ -29,11 +35,12 @@ export function useDocumentNavigation(initial: InitialDocument | undefined, onLo
     const supported = (url: URL) => url.origin === window.location.origin && resolveRegistryRoute(url.pathname).kind !== "not-found";
     const prepare = (url: URL) => {
       const href=url.pathname+url.search;
-      if (!supported(url) || url.hash || url.searchParams.has("q") || cache.display(href) || attempted.has(href) || attempted.size >= 24 || preparing.size >= 3) return;
+      // Static pages ignore query strings, so only plain documents are worth prefetching.
+      if (!supported(url) || url.hash || url.search || cache.display(href) || attempted.has(href) || attempted.size >= 24 || preparing.size >= 3) return;
       attempted.add(href);
       const pending=fetch(href,{headers:{Accept:"text/html","X-Registry-Prefetch":"edge-only"},signal:prefetchController.signal,cache:"no-cache"})
         .then(async(response)=>{
-          if (response.status !== 200 || !["hit","miss"].includes(response.headers.get("X-Registry-Cache") ?? "")) return;
+          if (response.status !== 200) return;
           const next=parseBrowserDocument(await response.text(),response.url || href,response.headers.get("X-Registry-Revision") ?? undefined);
           if (!prefetchController.signal.aborted) cache.put(next);
         }).catch(()=>undefined).finally(()=>preparing.delete(href));
@@ -80,7 +87,17 @@ export function useDocumentNavigation(initial: InitialDocument | undefined, onLo
           const response=await fetch(href,{headers:{Accept:"text/html"},signal,cache:cached ? "no-cache" : "default"});
           if (response.headers.get("X-Registry-Cache") === "stale") throw new Error("The registry is temporarily unavailable. Showing previously loaded data.");
           if (!response.ok && response.status !== 404) throw new Error("The registry data could not be loaded.");
-          return parseBrowserDocument(await response.text(),response.url || href,response.headers.get("X-Registry-Revision") ?? undefined);
+          const parsed=parseBrowserDocument(await response.text(),response.url || href,response.headers.get("X-Registry-Revision") ?? undefined);
+          if (parsed.currentSearch === url.search || parsed.loaded.kind === "not-found") return parsed;
+          // The same static page serves every query variant; apply this one from static data.
+          try {
+            const loaded=await loadRegistryRoute(resolveRegistryRoute(url.pathname),url.search,staticFetch,signal);
+            return {...parsed,loaded,currentSearch:url.search,href,head:queryHead(parsed.head)};
+          } catch (error) {
+            // Unknown or malformed query state keeps the base page, noindexed, as the Worker did.
+            if (signal.aborted) throw error;
+            return {...parsed,href,head:queryHead(parsed.head)};
+          }
         };
         if (cached) {
           commit(cached);

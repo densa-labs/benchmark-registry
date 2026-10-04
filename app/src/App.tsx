@@ -7,11 +7,13 @@ import { StaticComparisonPage } from "./static-comparison-page";
 import { VisibleBreadcrumbs } from "./breadcrumbs";
 import { LegalPage } from "./legal-pages";
 import { isLegalKind } from "./legal-content";
-import { Fragment, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { InitialDocument } from "./bootstrap";
 import { useDocumentNavigation } from "./navigation";
 import { focusNavigation, type NavigationNotice } from "./navigation-accessibility";
 import { RouteLoadingState } from "./ui/route-loading";
+import { staticFetch } from "./static-api";
+import { pendsClientQuery } from "./document-cache";
 
 import {
   BenchmarkFamilyPage,
@@ -42,6 +44,13 @@ const navigation = [
   { href: "/companies", label: "Organizations" },
   { href: "/compare", label: "Compare" },
 ];
+
+/** Query variants share one static page; keep them out of the index as before. */
+function markQueryState() {
+  let robots = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
+  if (!robots) {robots = document.createElement("meta");robots.name = "robots";document.head.appendChild(robots);}
+  robots.content = "noindex, follow";
+}
 
 function renderPendingRoute(route: RegistryRoute) {
   return route.kind === "home" ? <HomeLoadingState /> : <RouteLoadingState route={route} />;
@@ -79,21 +88,40 @@ export function App({ initial }: { initial?: InitialDocument }) {
 
   useLayoutEffect(() => { if (notice) focusNavigation(notice); }, [notice]);
 
+  // Static pages are prerendered without query state; sorting, filters, search and
+  // exact-result links are applied here once, from the same static data.
+  const [queryPending] = useState(() => pendsClientQuery(initial, location.search));
+  const queryApplied = useRef(false);
   useEffect(() => {
-    if (initial || route.kind === "not-found") return;
+    const applyQuery = queryPending && !queryApplied.current;
+    if ((initial && !applyQuery) || route.kind === "not-found") return;
 
     const controller = new AbortController();
-    void loadRegistryRoute(route, location.search, fetch, controller.signal)
-      .then((loadedRoute) => setState({ status: "loaded", route: loadedRoute }))
+    const search = location.search;
+    void loadRegistryRoute(route, search, staticFetch, controller.signal)
+      .then((loadedRoute) => {
+        if (applyQuery) {
+          queryApplied.current = true;
+          markQueryState();
+          setCurrentSearch(search);
+        }
+        setState({ status: "loaded", route: loadedRoute });
+      })
       .catch((error: unknown) => {
         if (controller.signal.aborted) return;
+        if (applyQuery) {
+          // Like the Worker, an unknown or malformed query keeps the base page, noindexed.
+          queryApplied.current = true;
+          markQueryState();
+          return;
+        }
         const message = error instanceof RegistryClientError
           ? error.message
           : "The registry data could not be loaded.";
         setState({ status: "error", message });
       });
     return () => controller.abort();
-  }, [route, location.search, initial]);
+  }, [route, location.search, initial, queryPending]);
 
   let content;
   if (state.status === "error") {

@@ -146,3 +146,44 @@ describe("bounded document cache",()=>{
     expect(locallySortedDocument(full,new URL("https://benchmarkregistry.org/models?sort=score"))).toBeUndefined();
   });
 });
+
+describe("static pages served for query URLs",()=>{
+  const sorted={kind:"models" as const,payload:{data:[model("Beta","10002"),model("Alpha","10001")],page:{number:1,limit:50,total_items:2,total_pages:1}}};
+  it("hydrates the prerendered page, then applies the query from static data and stays out of the index",async()=>{
+    history.replaceState(null,"","/models?sort=name&order=desc");
+    const fetcher=vi.fn(async(href:string)=>href.startsWith("/api/models") ? Response.json(sorted.payload) : new Response(null,{status:204}));
+    vi.stubGlobal("fetch",fetcher);
+    container.innerHTML=renderToString(<App initial={initial}/>);
+    const errors=vi.fn();
+    await act(async()=>{root=hydrateRoot(container,<StrictMode><App initial={initial}/></StrictMode>,{onRecoverableError:errors});});
+    await act(async()=>{await Promise.resolve();});
+    expect(errors).not.toHaveBeenCalled();
+    expect(container.querySelector("tbody tr")?.textContent).toContain("Beta");
+    expect(document.head.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe("noindex, follow");
+    // StrictMode mounts effects twice; only the URL's own query is ever read.
+    expect(new Set(fetcher.mock.calls.map(([href])=>href).filter(href=>href.startsWith("/api/")))).toEqual(new Set(["/api/models?sort=name&order=desc"]));
+  });
+  it("keeps the prerendered base page, noindexed, for unknown query parameters",async()=>{
+    history.replaceState(null,"","/models?utm_source=newsletter");
+    vi.stubGlobal("fetch",vi.fn(async()=>Response.json({error:{code:"invalid_query",message:"Unknown parameter."}},{status:400})));
+    container.innerHTML=renderToString(<App initial={initial}/>);
+    await act(async()=>{root=hydrateRoot(container,<App initial={initial}/>);});
+    await act(async()=>{await Promise.resolve();});
+    expect(container.querySelector("tbody tr")?.textContent).toContain("Alpha");
+    expect(container.textContent).not.toContain("Unable to load");
+    expect(document.head.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe("noindex, follow");
+  });
+  it("applies a link's query when the static page returns the unqueried document",async()=>{
+    vi.useFakeTimers();
+    const fetcher=vi.fn(async(href:string)=>href==="/benchmarks?sort=name&order=desc"
+      ? new Response(doc({kind:"benchmarks",payload:{data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}}))
+      : href.startsWith("/api/benchmarks") ? Response.json({data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}) : new Response(null,{status:204}));
+    vi.stubGlobal("fetch",fetcher);await mount();
+    const link=document.createElement("a");link.href="/benchmarks?sort=name&order=desc";container.querySelector("main")!.appendChild(link);
+    await act(async()=>{link.dispatchEvent(new MouseEvent("click",{bubbles:true,cancelable:true}));});
+    await act(async()=>{await vi.runAllTimersAsync();});
+    expect(window.location.pathname+window.location.search).toBe("/benchmarks?sort=name&order=desc");
+    expect(fetcher.mock.calls.map(([href])=>href)).toContain("/api/benchmarks?sort=name&order=desc");
+    expect(document.head.querySelector('meta[name="robots"]')?.getAttribute("content")).toBe("noindex, follow");
+  });
+});

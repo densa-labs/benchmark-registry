@@ -8,10 +8,10 @@ import {parseArgs} from 'node:util';
 const {values}=parseArgs({options:{environment:{type:'string'},bootstrap:{type:'boolean'},status:{type:'boolean'},rollback:{type:'boolean'},'gc-plan':{type:'boolean'},output:{type:'string'}}});
 const environment=values.environment;
 if(!['staging','production'].includes(environment)) throw new Error('Explicit --environment staging|production is required.');
-const publicConfig=JSON.parse(readFileSync(new URL('../wrangler.jsonc',import.meta.url),'utf8'));
 const maintenance=JSON.parse(readFileSync(new URL('../wrangler.maintenance.jsonc',import.meta.url),'utf8'));
 const account=maintenance.env[environment].account_id;
-const namespace=publicConfig.env[environment].kv_namespaces[0].id;
+// The site no longer reads KV; it is kept current only so the previous Worker version stays a valid rollback.
+const namespace=maintenance.env[environment].kv_namespaces[0].id;
 const database=maintenance.env[environment].d1_databases[0].database_id;
 // Wrangler's official credential command is captured privately, never printed or written.
 const credential=JSON.parse(execFileSync(resolve('node_modules/.bin/wrangler'),['auth','token','--json'],{encoding:'utf8',stdio:['ignore','pipe','pipe']}));
