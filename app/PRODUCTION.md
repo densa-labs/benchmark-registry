@@ -2,9 +2,9 @@
 
 Production is the `production` Wrangler environment in `wrangler.jsonc`. It
 deploys `benchmark-registry-production` to `benchmarkregistry.org` and
-`www.benchmarkregistry.org` with the `DB` binding set to the separate
-`benchmark-registry-production` D1 database. The same Worker returns a permanent
-308 redirect from `www` to the apex, preserving the path and query string.
+`www.benchmarkregistry.org` as static assets only, built from the separate
+`benchmark-registry-production` D1 database. A zone Redirect Rule sends `www` to
+the apex. See [STATIC-SITE.md](STATIC-SITE.md).
 
 Cloudflare account: `1aed6fdb33b34b24c2914fcaaf48786b`.
 Production D1 ID: `a7b3e1d1-34d6-432b-bd31-8ec4636916ab`.
@@ -46,9 +46,10 @@ the manifest replay dry-run should report `SKIPPED` for every record. Re-running
 a single older batch with `batch` can report `CONFLICT` for records that a later
 correction superseded; `replay` checks those against the correction chain.
 `replay` commits only to a local database. The deploy
-script builds with `CLOUDFLARE_ENV=production` and checks the generated Worker
-name, both custom domains, absence of the staging crawler variable, and the
-exact production D1 binding before upload. Staging has a separate environment,
+script reads the production D1 database once, prerenders the site, and checks
+the assets-only configuration, both custom domains and the absence of staging
+crawler headers before upload. Run it after every ingestor commit so new data
+appears on the site. Staging has a separate environment,
 database, Worker, and custom domain; do not modify its Access policy or binding.
 
 The first production export was saved locally at

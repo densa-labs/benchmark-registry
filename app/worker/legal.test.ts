@@ -96,15 +96,17 @@ it("adds static legal sitemap paths exactly once to an existing materialized inv
   expect(xml).not.toMatch(/mailto:|staging\./u);
 });
 
-it("keeps privacy controls identical and explicit in both isolated deployments", () => {
+it("deploys static assets only, so no request runs code or is logged", () => {
   const config = JSON.parse(readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8"));
+  const maintenance = JSON.parse(readFileSync(new URL("../wrangler.maintenance.jsonc", import.meta.url), "utf8"));
+  expect(config.main).toBeUndefined();
   for (const environment of ["staging", "production"]) {
-    expect(config.env[environment].observability).toEqual({ enabled: true, redact_query_string: true,
-      logs: { enabled: true, invocation_logs: false, persist: false, head_sampling_rate: 1, destinations: [] },
-      traces: { enabled: false, persist: false, destinations: [] } });
-    expect(config.env[environment].d1_databases[0].binding).toBe("DB");
+    const deployment = { ...config, ...config.env[environment] };
+    expect(deployment.main).toBeUndefined();
+    expect(deployment.assets).toEqual({ directory: "./dist/client", html_handling: "auto-trailing-slash", not_found_handling: "404-page" });
+    for (const binding of ["d1_databases", "kv_namespaces", "vars", "observability"]) expect(deployment[binding]).toBeUndefined();
   }
-  expect(config.env.staging.kv_namespaces[0].id).not.toBe(config.env.production.kv_namespaces[0].id);
+  expect(maintenance.env.staging.kv_namespaces[0].id).not.toBe(maintenance.env.production.kv_namespaces[0].id);
   const source = readFileSync(new URL("./index.ts", import.meta.url), "utf8");
   expect(source).not.toMatch(/console\.|__p1111_probe|request\.cf/u);
 });
