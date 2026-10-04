@@ -1,4 +1,5 @@
-import { coverageOptions, queryCoverage, type CoverageEnvironment } from "./coverage";
+import { measuredDatabase, type QueryMetrics } from "./query-metrics";
+import { coverageOptions, cachedCoverage, type CoverageEnvironment } from "./coverage";
 import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
@@ -17,6 +18,7 @@ import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
 export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnvironment {
   ASSETS: Fetcher;
+  D1_DIAGNOSTICS?: QueryMetrics;
   STAGING_CRAWLER_PROTECTION?: "enabled";
 }
 
@@ -75,7 +77,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     const headers={"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow"};
     if (!["GET","HEAD"].includes(request.method)) return new Response(null,{status:405,headers});
     try {
-      if(!env.DB || !(await env.DB.prepare("SELECT 1 AS ok").first<{ok:number}>())?.ok) throw new Error("Database unavailable");
+      if(!env.DB || !(await measuredDatabase(env.DB,env.D1_DIAGNOSTICS).prepare("SELECT 1 AS ok").first<{ok:number}>())?.ok) throw new Error("Database unavailable");
       return new Response(request.method === "HEAD" ? null : '{"ok":true}', {headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
     } catch(error) {
       logServerError("healthz",503,error);
@@ -160,7 +162,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     }
     if (pathname.replace(/\/$/u, "") === "/coverage" && !env.DB) return new Response("Coverage is temporarily unavailable.",{status:503,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
     const content = pathname.replace(/\/$/u, "") === "/coverage" && env.DB
-      ? renderInitialDocument({kind:"coverage",payload:await queryCoverage(env.DB,coverageOptions(url,env))},url.search,env.REGISTRY_REVISION)
+      ? renderInitialDocument({kind:"coverage",payload:await cachedCoverage(env.DB,coverageOptions(url,env),env.D1_DIAGNOSTICS)},url.search,env.REGISTRY_REVISION)
       : metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
       return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
@@ -170,7 +172,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     const headers = new Headers(response.headers);
     // The static template's validators and length no longer describe this response.
     for (const header of ["ETag", "Content-Length", "Last-Modified", "Content-Encoding"]) headers.delete(header);
-    headers.set("Cache-Control", "no-store");
+    headers.set("Cache-Control", metadata.status === 404 ? "no-store" : "public, max-age=60, stale-while-revalidate=300");
     return new Response(request.method === "HEAD" ? null : html, {
       status: metadata.status ?? response.status, headers,
     });
@@ -193,7 +195,7 @@ const worker = {
     const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
       && url.hostname === STAGING_HOSTNAME;
 
-    env={...env,CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
+    env={...env,D1_DIAGNOSTICS:{queries:0,rows:0,ms:0},CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
     const store=new PublishedReadStore(env,url.origin);
     let response:Response;
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
@@ -230,10 +232,10 @@ const worker = {
 
     const diagnostics = new Headers(response.headers);
     diagnostics.set("X-Registry-Read-Store-Reads",String(store.reads));
-    diagnostics.set("X-Registry-D1-Queries", "0");
-    diagnostics.set("X-Registry-D1-Rows", "0");
-    diagnostics.set("Server-Timing", "d1;dur=0.00");
-    if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", "public, max-age=31536000, immutable");
+    diagnostics.set("X-Registry-D1-Queries", String(env.D1_DIAGNOSTICS?.queries ?? 0));
+    diagnostics.set("X-Registry-D1-Rows", String(env.D1_DIAGNOSTICS?.rows ?? 0));
+    diagnostics.set("Server-Timing", `d1;dur=${(env.D1_DIAGNOSTICS?.ms ?? 0).toFixed(2)}`);
+    if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", /[-.][a-zA-Z0-9_-]{8,}\.(?:js|css|woff2)$/u.test(url.pathname) ? "public, max-age=31536000, immutable" : "public, max-age=60, stale-while-revalidate=300");
     if (response.status >= 400) diagnostics.set("Cache-Control", "no-store");
     // Keep zone-injected analytics from executing in internal staging. Allow
     // same-origin application and Cloudflare security scripts, including inline checks.

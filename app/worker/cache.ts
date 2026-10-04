@@ -15,7 +15,7 @@ export async function withRegistryCache(request:Request,env:CacheEnvironment,loa
     const headers=new Headers(response.headers);
     headers.set('X-Registry-Cache',env.REGISTRY_DEGRADED?'stale':state);
     if(env.REGISTRY_REVISION) headers.set('X-Registry-Revision',env.REGISTRY_REVISION);
-    headers.set('Cache-Control',response.status===200 && !env.REGISTRY_DEGRADED && !response.headers.has('Set-Cookie') && !response.headers.get('Cache-Control')?.includes('private')?'public, max-age=60, must-revalidate':'no-store');
+    headers.set('Cache-Control',response.status===200 && !env.REGISTRY_DEGRADED && !response.headers.has('Set-Cookie') && !response.headers.get('Cache-Control')?.includes('private')?'public, max-age=60, stale-while-revalidate=300':'no-store');
     return new Response(request.method==='HEAD'?null:response.body,{status:response.status,statusText:response.statusText,headers});
   };
   if(key && cache) {try {const stored=await cache.match(key);if(stored?.status===200) return decorate(stored,'hit');} catch {/* Only materialized upstream reads follow a miss. */}}

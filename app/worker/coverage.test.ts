@@ -24,3 +24,13 @@ it("validates limits and configuration without interpolating user SQL",()=>{
   expect(coverageOptions(new URL("https://example.org/coverage"),{})).toEqual({models:25,benchmarks:15,days:90});
   for(const query of ["?models=101","?models=0","?models=1&models=2","?days=bad","?query=1"]) expect(()=>coverageOptions(new URL("https://example.org/coverage"+query),{})).toThrow();
 });
+it("caches expensive read queries briefly and refreshes after TTL",async()=>{
+  const {cachedCoverage}=await import("./coverage");
+  const {vi}=await import("vitest");
+  const prepare=vi.spyOn(f.db,"prepare");const options={models:25,benchmarks:15,days:90};
+  const first=await cachedCoverage(f.db,options);const count=prepare.mock.calls.length;
+  expect(await cachedCoverage(f.db,options)).toBe(first);expect(prepare).toHaveBeenCalledTimes(count);
+  vi.spyOn(Date,"now").mockReturnValue(Date.now()+61_000);
+  await cachedCoverage(f.db,options);expect(prepare.mock.calls.length).toBeGreaterThan(count);
+  vi.restoreAllMocks();
+});

@@ -1,5 +1,5 @@
 import { isLegalKind } from "./legal-content";
-import type { InitialDocument } from "./bootstrap";
+import { parseInitialDocument, type InitialDocument } from "./bootstrap";
 import { setSearchGeneration } from './registry';
 
 export interface BrowserDocument extends InitialDocument { href: string; head: string; time: number }
@@ -82,9 +82,9 @@ export function parseBrowserDocument(html: string, href: string, revision?: stri
   const parsed = new DOMParser().parseFromString(html,"text/html");
   const text = parsed.getElementById("registry-initial-document")?.textContent;
   if (!text) throw new Error("The registry data could not be loaded.");
-  const initial = JSON.parse(text) as InitialDocument;
-  if (!initial.loaded || typeof initial.currentSearch !== "string" || !["home","recent","compare","comparison","models","model","benchmarks","benchmark","benchmark-version","companies","company","not-found","legal","privacy","terms"].includes(initial.loaded.kind)) throw new Error("Invalid Registry document.");
-  if (initial.loaded.kind !== "not-found" && !isLegalKind(initial.loaded.kind) && !("payload" in initial.loaded)) throw new Error("Invalid Registry payload.");
+  const initial = parseInitialDocument(text);
+  if (!initial.loaded || typeof initial.currentSearch !== "string" || !["coverage","corrections","home","recent","compare","comparison","models","model","benchmarks","benchmark","benchmark-version","companies","company","not-found","legal","privacy","terms"].includes(initial.loaded.kind)) throw new Error("Invalid Registry document.");
+  if (initial.loaded.kind !== "not-found" && !isLegalKind(initial.loaded.kind) && initial.loaded.kind!=="corrections" && !("payload" in initial.loaded)) throw new Error("Invalid Registry payload.");
   const url=new URL(href,window.location.origin);
   return {...initial,revision:revision ?? initial.revision,href:url.pathname+url.search,head:readNavigationHead(parsed),time:Date.now()};
 }

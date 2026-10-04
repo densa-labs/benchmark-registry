@@ -1,3 +1,4 @@
+import { measuredDatabase, type QueryMetrics } from "./query-metrics";
 import { ApiError } from "./api";
 import type { CoverageData, CoverageOptions } from "../src/coverage-data";
 export interface CoverageEnvironment { DB?: D1Database; COVERAGE_MODELS?: string; COVERAGE_BENCHMARKS?: string; COVERAGE_STALE_DAYS?: string }
@@ -49,4 +50,17 @@ export async function queryCoverage(db: D1Database, options: CoverageOptions): P
     JOIN models m ON m.id=r.model_id WHERE NOT EXISTS(SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)
     GROUP BY b.id HAVING julianday(?) - julianday(newest) > ? ORDER BY newest,b.slug`).bind(updated,options.days).all<CoverageData["stale"][number]>()).results : [];
   return {options,updated,models:models.results,benchmarks:benchmarks.results,cells,providers:providers.results,stale};
+}
+
+const coverageCache=new WeakMap<D1Database,Map<string,{expires:number;data:Promise<CoverageData>}>>();
+/** Bounded isolate-local cache; failures are evicted, no durable/visitor state. */
+export async function cachedCoverage(db:D1Database,options:CoverageOptions,metrics?:QueryMetrics):Promise<CoverageData> {
+  let cache=coverageCache.get(db);if(!cache) {cache=new Map();coverageCache.set(db,cache);}
+  const key=JSON.stringify(options),now=Date.now(),cached=cache.get(key);
+  if(cached && cached.expires>now) return cached.data;
+  cache.delete(key);
+  const data=queryCoverage(measuredDatabase(db,metrics),options);
+  cache.set(key,{expires:now+60_000,data});
+  if(cache.size>32) cache.delete(cache.keys().next().value!);
+  try {return await data;} catch(error) {if(cache.get(key)?.data===data) cache.delete(key);throw error;}
 }
