@@ -34,7 +34,7 @@ describe("materialized comparison documents", () => {
       READ_ENVIRONMENT: "local",
       READ_STORE: { get: async (key: string) => entries.get(key) ?? null } as unknown as KVNamespace,
       ASSETS: { fetch: async () => new Response(template, { headers: { "Content-Type": "text/html" } }) } as unknown as Fetcher,
-    } as Env;
+    } as unknown as Env;
   });
   afterEach(() => sqlite.close());
   async function page(path: string, method = "GET") {

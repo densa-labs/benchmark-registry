@@ -1575,3 +1575,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 
 .report-issue { font-size: .75rem; color: var(--text-muted); display: inline-block; }
 .site-footer__links { flex-wrap: wrap; }
+
+.coverage-options { display: flex; flex-wrap: wrap; gap: .75rem; margin-block: 1rem; }
+.coverage-options label { display: flex; gap: .5rem; align-items: center; }
+.coverage-options input { width: 4rem; }

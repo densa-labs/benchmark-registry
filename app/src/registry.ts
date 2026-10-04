@@ -1,4 +1,5 @@
-import { CONTENT_METADATA } from "./content-metadata";
+import type { CoverageData } from "./coverage-data";
+import { contentKind } from "./content-metadata";
 import type { RecentRecord } from "../worker/seo-data";
 import type { SeoContent } from "./seo-content";
 import type { LegalKind } from "./legal-content";
@@ -145,6 +146,7 @@ export type RegistryRoute =
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
+  | { kind: "coverage" }
   | { kind: "corrections" }
   | { kind: "not-found" };
 
@@ -163,6 +165,7 @@ type LoadedRouteData =
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
+  | { kind: "coverage"; payload: CoverageData }
   | { kind: "corrections" }
   | { kind: "not-found" };
 
@@ -171,7 +174,8 @@ export type LoadedRegistryRoute = LoadedRouteData & { updated?: string };
 export class RegistryClientError extends Error {}
 
 export function resolveRegistryRoute(pathname: string): RegistryRoute {
-  if (Object.keys(CONTENT_METADATA).some(kind=>pathname === `/${kind}` || pathname === `/${kind}/`)) return {kind:"corrections"};
+  const content = contentKind(pathname);
+  if (content) return {kind:content};
   if (pathname === "/") {
     return { kind: "home" };
   }
@@ -230,7 +234,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "corrections" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "coverage" | "corrections" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -335,6 +339,13 @@ export async function loadRegistryRoute(
   fetcher: typeof fetch = fetch,
   signal?: AbortSignal,
 ): Promise<LoadedRegistryRoute> {
+  if (route.kind === "coverage") {
+    const response=await fetcher("/coverage"+search,{signal});
+    const html=await response.text();
+    const match=/<script id="registry-initial-document" type="application\/json">(.*?)<\/script>/su.exec(html);
+    if(!response.ok || !match) throw new RegistryClientError("Coverage could not be loaded.");
+    return JSON.parse(match[1]).loaded as LoadedRegistryRoute;
+  }
   if (route.kind === "corrections" || route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
   if(route.kind==="recent") {

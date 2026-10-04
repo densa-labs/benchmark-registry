@@ -1,3 +1,4 @@
+import { coverageOptions, queryCoverage, type CoverageEnvironment } from "./coverage";
 import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
@@ -14,7 +15,7 @@ import { comparisonPayload } from "./seo-comparisons";
 import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
-export interface Env extends CacheEnvironment, ReadStoreEnvironment {
+export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnvironment {
   ASSETS: Fetcher;
   STAGING_CRAWLER_PROTECTION?: "enabled";
 }
@@ -142,7 +143,10 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       url.pathname = new URL(metadata.canonical).pathname;
       return Response.redirect(url.toString(), 308);
     }
-    const content = metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
+    if (pathname.replace(/\/$/u, "") === "/coverage" && !env.DB) return new Response("Coverage is temporarily unavailable.",{status:503,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
+    const content = pathname.replace(/\/$/u, "") === "/coverage" && env.DB
+      ? renderInitialDocument({kind:"coverage",payload:await queryCoverage(env.DB,coverageOptions(url,env))},url.search,env.REGISTRY_REVISION)
+      : metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
       return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
     }, env.REGISTRY_REVISION, repository ? await repository.seoSnapshot() : undefined);
@@ -157,6 +161,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     });
   } catch (error) {
     if (error instanceof MaterializationFailure) throw error;
+    if (error instanceof ApiError) return new Response(error.message, {status:error.status,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
     diagnoseWorkerFailure("document");
     return new Response("The request could not be completed.", { status: 500 });
   }

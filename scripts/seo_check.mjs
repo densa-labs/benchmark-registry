@@ -51,7 +51,7 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
     entries.set('publication',JSON.stringify({schema:1,environment:'local',current:{generation:generation.manifest.generation,hash:generation.manifestHash}}));
     const clientDirectory=join(root,'app/dist/client');
     const template=readFileSync(existsSync(join(clientDirectory,'index.html')) ? join(clientDirectory,'index.html') : join(root,'app/index.html'),'utf8');
-    const env={READ_ENVIRONMENT:'local',READ_STORE:{get:async key=>entries.get(key) ?? null},ASSETS:{fetch:async request=>{
+    const env={DB:db,READ_ENVIRONMENT:'local',READ_STORE:{get:async key=>entries.get(key) ?? null},ASSETS:{fetch:async request=>{
       const path=new URL(request.url).pathname;
       if(path.startsWith('/assets/') || path.startsWith('/favicon')) {
         const file=resolve(clientDirectory,'.'+path);

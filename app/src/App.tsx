@@ -1,3 +1,4 @@
+import { CoveragePage } from "./coverage-page";
 import { CorrectionsPage } from "./corrections-page";
 import { BreadcrumbContext } from "./breadcrumb-context";
 import { RecentPage } from "./recent-page";
@@ -129,7 +130,9 @@ export function App({ initial }: { initial?: InitialDocument }) {
 // Shared by the client and the Worker initial document; effects stay client-only.
 export function RegistryDocument({ loaded, currentSearch, enhanced = false, navigationError, pendingRoute, announcement }: { loaded: LoadedRegistryRoute; currentSearch: string; enhanced?: boolean; navigationError?: string; pendingRoute?: RegistryRoute; announcement?: string }) {
   let content;
-  if (loaded.kind === "corrections") {
+  if (loaded.kind === "coverage") {
+    content = <CoveragePage data={loaded.payload} />;
+  } else if (loaded.kind === "corrections") {
     content = <CorrectionsPage />;
   } else if (loaded.kind === "home") {
     content = <HomePage response={loaded.payload} />;

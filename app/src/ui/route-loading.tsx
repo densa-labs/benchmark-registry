@@ -22,6 +22,7 @@ const metadata = {
 } as const;
 
 export function RouteLoadingState({ route }: { route: RegistryRoute }) {
+  if (route.kind === "coverage") return <PageContainer><LoadingState labels={["Model", "Coverage"]} rows={6} /></PageContainer>;
   if (route.kind === "corrections") return <CorrectionsPage />;
   if (route.kind === "home" || route.kind === "not-found") return null;
   if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return <LegalPage kind={route.kind} />;
