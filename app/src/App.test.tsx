@@ -324,8 +324,21 @@ describe("P7.1 model pages", () => {
     expect(markup).toContain('href="/benchmarks/swe-bench/verified"');
     expect(markup).toContain("54.6%");
     expect(markup).toContain('target="_blank"');
-    expect(markup).toContain('<option value="100" selected="">100</option>');
+    expect(markup).not.toContain("Rows per page");
     expect(markup).not.toContain("Sort by Score");
+  });
+
+  it("shows model search and paging only above their thresholds, retaining active search", () => {
+    const render = (count: number, search = "") => renderToStaticMarkup(<ModelDetailPage response={{
+      data: { ...modelDetailResponse.data, result_page: { ...modelDetailResponse.data.result_page, total_items: count } },
+    }} currentSearch={search} />);
+    expect(render(25)).not.toContain("Search benchmarks");
+    expect(render(26)).toContain("Search benchmarks");
+    expect(render(50)).not.toContain("Rows per page");
+    expect(render(51)).toContain('<noscript><button type="submit"');
+    expect(render(51)).toContain('<option value="100" selected="">100</option>');
+    expect(render(0, "?q=missing")).toContain("Clear search");
+    expect(render(1)).toContain('class="metadata-inline"');
   });
 
   it("renders a scoped empty state for a model benchmark search", () => {

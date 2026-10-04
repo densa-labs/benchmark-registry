@@ -511,15 +511,17 @@ interface PageHeaderProps {
   title: string;
   description?: string;
   kicker?: string;
+  children?: ReactNode;
 }
 
-export function PageHeader({ title, description, kicker }: PageHeaderProps) {
+export function PageHeader({ title, description, kicker, children }: PageHeaderProps) {
   const breadcrumb=useContext(BreadcrumbContext);
   return (
     <header className="page-header">
       {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
       {kicker ? <p className="kicker">{kicker}</p> : null}
       <h1 tabIndex={-1}>{title}</h1>
+      {children}
       {description ? <p className="page-header__description">{description}</p> : null}
     </header>
   );
@@ -530,9 +532,9 @@ export interface MetadataItem {
   value: ReactNode;
 }
 
-export function MetadataRows({ items, loading = false }: { items: MetadataItem[]; loading?: boolean }) {
+export function MetadataRows({ items, loading = false, inline = false }: { items: MetadataItem[]; loading?: boolean; inline?: boolean }) {
   return (
-    <dl className="metadata-rows">
+    <dl className={inline ? "metadata-inline" : "metadata-rows"}>
       {items.map((item) => (
         <div className="metadata-row" key={item.label}>
           <dt>{loading ? <span className="skeleton skeleton--label" /> : item.label}</dt>
@@ -693,13 +695,14 @@ export function Pagination({ page, totalPages, getHref }: PaginationProps) {
 interface PageSizeSelectorProps {
   value: 50 | 100 | 500;
   id?: string;
+  autoSubmit?: boolean;
 }
 
-export function PageSizeSelector({ value, id = "page-size" }: PageSizeSelectorProps) {
+export function PageSizeSelector({ value, id = "page-size", autoSubmit = false }: PageSizeSelectorProps) {
   return (
     <label className="page-size" htmlFor={id}>
       <span>Rows per page</span>
-      <select id={id} name="limit" defaultValue={value}>
+      <select id={id} name="limit" defaultValue={value} onChange={autoSubmit ? event => event.currentTarget.form?.requestSubmit() : undefined}>
         <option value="50">50</option>
         <option value="100">100</option>
         <option value="500">500</option>

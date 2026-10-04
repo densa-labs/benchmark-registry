@@ -110,8 +110,8 @@ function PageSizeForm({
   return (
     <form className="page-size-form" method="get" action={action}>
       <HiddenQueryFields search={currentSearch} exclude={["limit"]} />
-      <PageSizeSelector value={value} id="results-page-size" />
-      <button type="submit" data-focus-key="page-size-apply">Apply</button>
+      <PageSizeSelector value={value} id="results-page-size" autoSubmit />
+      <noscript><button type="submit" data-focus-key="page-size-apply">Apply</button></noscript>
     </form>
   );
 }
@@ -302,10 +302,11 @@ export function ModelDetailPage({
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={model.name} description={response.data.seo?.sentence} />
+      <PageHeader title={model.name} description={response.data.seo?.sentence}>
 
-      <section className="entity-metadata" aria-label="Model metadata">
+      <section className="model-metadata" aria-label="Model metadata">
         <MetadataRows
+          inline
           items={[
             {
               label: "Released",
@@ -326,13 +327,14 @@ export function ModelDetailPage({
           ]}
         />
       </section>
+      </PageHeader>
 
-      <LocalSearch
+      {page.total_items > 25 || query ? <LocalSearch
         action={pathname}
         currentSearch={currentSearch}
         label="Search benchmarks"
         placeholder="Search benchmark names or aliases"
-      />
+      /> : null}
 
       <section className="results-section" aria-labelledby="benchmarks-heading">
         <div className="results-section__header">
@@ -340,7 +342,7 @@ export function ModelDetailPage({
             <h2 id="benchmarks-heading">Benchmarks</h2>
             <p>{resultCount(page.total_items)}</p>
           </div>
-          <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
+          {page.total_items > 50 ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} /> : null}
         </div>
         <Tabs
           label="Result view"

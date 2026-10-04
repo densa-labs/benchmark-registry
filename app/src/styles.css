@@ -1529,3 +1529,12 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .version-variants { margin-top: 0.5rem; }
 .version-variants summary { cursor: pointer; color: var(--text-muted); font-size: 0.75rem; }
 .version-variants .table-scroll { margin-top: 0.5rem; margin-left: 0.75rem; width: calc(100% - 0.75rem); }
+
+.metadata-inline { display: flex; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin: 0.75rem 0 0; font-size: 0.8rem; }
+.metadata-inline .metadata-row { display: flex; flex-wrap: wrap; gap: 0.25rem; min-height: 0; padding: 0; border: 0; }
+.metadata-inline .metadata-row + .metadata-row::before { content: "·"; margin-right: 0.5rem; color: var(--text-muted); }
+.metadata-inline dt::after { content: ":"; }
+.metadata-inline dd { font-size: inherit; }
+@media (max-width: 639px) {
+  .metadata-inline .metadata-row + .metadata-row::before { content: none; }
+}
