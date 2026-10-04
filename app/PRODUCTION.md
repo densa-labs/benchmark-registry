@@ -30,17 +30,22 @@ npm run db:migrate:production
 npm run db:migrations:list:production
 cd ..
 
-PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor batch data/batches/p4-seed.json --target remote --dry-run
-PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor batch data/batches/p4-seed.json --target remote --commit
-PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor batch data/batches/launch-dataset.json --target remote --dry-run
-PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor batch data/batches/launch-dataset.json --target remote --commit
+# For each batch not yet applied, in data/batches/manifest.json order:
+PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor batch data/batches/<file> --target remote --dry-run
+PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor batch data/batches/<file> --target remote --commit
+
+# Afterwards, the whole manifest:
+PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor replay data/batches/manifest.json --target remote --dry-run
 
 cd app
 npm run deploy:production
 ```
 
-Both batches must have no `ERROR` or `CONFLICT` before a commit. Repeating each
-dry-run after ingestion should report `SKIPPED` for all records. The deploy
+Each batch must have no `ERROR` or `CONFLICT` before a commit. After ingestion,
+the manifest replay dry-run should report `SKIPPED` for every record. Re-running
+a single older batch with `batch` can report `CONFLICT` for records that a later
+correction superseded; `replay` checks those against the correction chain.
+`replay` commits only to a local database. The deploy
 script builds with `CLOUDFLARE_ENV=production` and checks the generated Worker
 name, both custom domains, absence of the staging crawler variable, and the
 exact production D1 binding before upload. Staging has a separate environment,

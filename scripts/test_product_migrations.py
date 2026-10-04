@@ -82,3 +82,47 @@ class ProductMigrationTests(unittest.TestCase):
             db.executescript(
                 (ROOT / "migrations/0011_metric_direction.sql").read_text()
             )
+
+    def test_registry_numbers_are_immutable_up_down_up(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            model = db.execute(
+                "SELECT id, registry_no, sequence FROM models ORDER BY id LIMIT 1"
+            ).fetchone()
+            renumber = (
+                "UPDATE models SET sequence = sequence + 900, "
+                "registry_no = substr(registry_no, 1, length(registry_no) - 3) "
+                "|| printf('%03d', sequence + 900) WHERE id = ?"
+            )
+            for statement in (renumber, "DELETE FROM models WHERE id = ?"):
+                with self.assertRaises(sqlite3.IntegrityError):
+                    db.execute(statement, (model[0],))
+            # Unrelated model facts and provider corrections still update.
+            db.execute(
+                "UPDATE models SET company_id = company_id, status = status WHERE id = ?",
+                (model[0],),
+            )
+            db.executescript(
+                (
+                    ROOT / "migrations/rollback/0012_registry_number_immutability.sql"
+                ).read_text()
+            )
+            db.execute("SAVEPOINT renumber")
+            db.execute(renumber, (model[0],))
+            db.execute("ROLLBACK TO renumber")
+            db.executescript(
+                (ROOT / "migrations/0012_registry_number_immutability.sql").read_text()
+            )
+            with self.assertRaises(sqlite3.IntegrityError):
+                db.execute(renumber, (model[0],))
+            self.assertEqual(
+                db.execute(
+                    "SELECT id, registry_no, sequence FROM models WHERE id = ?",
+                    (model[0],),
+                ).fetchone(),
+                model,
+            )

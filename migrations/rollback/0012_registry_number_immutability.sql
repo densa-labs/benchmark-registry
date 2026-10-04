@@ -1,0 +1,2 @@
+DROP TRIGGER models_prevent_delete;
+DROP TRIGGER models_preserve_registry_number;
