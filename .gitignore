@@ -1,11 +1,7 @@
 # Development files
 .env
-**/AGENTS.md
 CODEX_AUDIT.md
-data-contract.md
 development-roadmap.md
-product-contract.md
-registry-numbering.md
 phase-tree.md
 
 # JavaScript and Cloudflare build state
