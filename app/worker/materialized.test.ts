@@ -1,6 +1,6 @@
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync,readdirSync} from 'node:fs';
-import {afterEach,expect,it,vi} from 'vitest';
+import {afterEach,beforeEach,expect,it,vi} from 'vitest';
 import template from '../index.html?raw';
 import worker from './index';
 import canonical from './canonical-reference';
@@ -11,9 +11,12 @@ import {shadowGeneration} from './shadow';
 import {MaterializedRepository} from './materialized-repository';
 import {RegistryRepository} from './repository';
 import { highestRecordedResult } from './featured-result';
+import {VerifiedReads,verifiedReads} from './read-store';
 import type { ModelListResponse } from '../src/registry';
 const databases:DatabaseSync[]=[];
 afterEach(()=>{databases.splice(0).forEach(db=>db.close());});
+// Each test starts as a fresh isolate with no verified reads.
+beforeEach(()=>verifiedReads.clear());
 class Store implements ProducerStore {
   entries=new Map<string,string>();writes:string[]=[];reads=0;fail=false;
   async get(key:string) {this.reads++;return this.entries.get(key) ?? null;}
@@ -136,6 +139,7 @@ it('missing/corrupt new manifest falls back as a complete previous generation wi
   expect(response.status).toBe(200);expect(response.headers.get('X-Registry-Revision')).toBe(build.manifest.generation);expect(response.headers.get('X-Registry-Cache')).toBe('stale');expect(html).not.toContain('GPT fixture corrected');
   f.store.entries.set('manifests/'+next.manifestHash,JSON.stringify(next.manifest));
   f.store.entries.delete('objects/'+next.manifest.objects.redirects);
+  verifiedReads.clear();
   const missingObject=await worker.fetch(new Request('https://benchmarkregistry.org/models/10001'),f.env);
   expect(missingObject.headers.get('X-Registry-Revision')).toBe(build.manifest.generation);
   expect(await missingObject.text()).not.toContain('GPT fixture corrected');
@@ -286,6 +290,10 @@ it('serves compact full publications and falls back coherently when a required o
   const ok=await worker.fetch(new Request('https://benchmarkregistry.org/models/10001'),f.env);
   expect(ok.status).toBe(200);expect(await ok.text()).toContain('Compact corrected');
   f.store.entries.set('objects/'+next.manifest.objects['model:10001'],'corrupt');
+  // An isolate that already verified this content-addressed object keeps serving it.
+  const warm=await worker.fetch(new Request('https://benchmarkregistry.org/models/10001'),f.env);
+  expect(warm.headers.get('X-Registry-Revision')).toBe(next.manifest.generation);expect(await warm.text()).toContain('Compact corrected');
+  verifiedReads.clear();
   const fallback=await worker.fetch(new Request('https://benchmarkregistry.org/models/10001'),f.env);
   expect(fallback.headers.get('X-Registry-Revision')).toBe(build.manifest.generation);
   expect(await fallback.text()).not.toContain('Compact corrected');
@@ -296,4 +304,33 @@ it('retains full shadow inputs when projection upgrades preserve every object ha
   const next=(await buildGeneration(f.db,'local',{...build.manifest,projectionVersion:5}))!;
   expect(next.objects.size).toBe(Object.keys(next.manifest.objects).length);
   expect(await shadowGeneration(f.db,{...next,manifest:{...next.manifest,inlineObjects:{}}})).toMatchObject({equivalent:true});
+});
+
+it('verifies each published object once per isolate across cold page renders (Cloudflare 1102 regression)',async()=>{
+  const f=fixture();const {build}=await bootstrap(f);
+  build.manifest.inlineObjects={};build.manifestHash=await digest(JSON.stringify(build.manifest));
+  await publishGeneration(f.store,build,f.db,(await readPublication(f.store,'local'))!);
+  const objectReads:string[]=[];const get=f.store.get.bind(f.store);
+  f.store.get=async(key:string)=>{if(key.startsWith('objects/') || key.startsWith('manifests/')) objectReads.push(key);return get(key);};
+  const pages=['/models/10001','/benchmarks/gpqa','/benchmarks/gpqa/diamond','/search?q=gpt'];
+  for(const path of pages) expect((await worker.fetch(new Request('https://benchmarkregistry.org'+path),f.env)).status).toBe(200);
+  // Every render reads the large seo object; once verified it is never fetched, hashed or parsed again.
+  expect(objectReads.filter(key=>key==='objects/'+build.manifest.objects.seo)).toHaveLength(1);
+  expect(new Set(objectReads).size).toBe(objectReads.length);
+  const firstPass=new Set(objectReads);objectReads.length=0;
+  // New cold pages fetch only their own objects, never the manifest, seo or anything verified earlier.
+  for(const path of ['/models/10002','/models/10003','/companies/openai','/search?q=mmlu']) expect((await worker.fetch(new Request('https://benchmarkregistry.org'+path),f.env)).status).toBe(200);
+  expect(objectReads.filter(key=>firstPass.has(key) || key.startsWith('manifests/'))).toEqual([]);
+  expect(verifiedReads.bytes).toBeLessThanOrEqual(verifiedReads.budget);
+});
+it('keeps verified reads within a byte budget, least recently used first, and frozen',()=>{
+  const reads=new VerifiedReads(100);
+  reads.set('a',{n:1},40);reads.set('b',{n:2},40);reads.get('a');reads.set('c',{n:3},40);
+  expect([reads.get('a'),reads.get('b'),reads.get('c')]).toEqual([{n:1},undefined,{n:3}]);
+  expect(reads.bytes).toBe(80);expect(reads.size).toBe(2);
+  reads.set('huge',{},101);expect(reads.get('huge')).toBeUndefined();expect(reads.bytes).toBe(80);
+  const value={nested:{list:[1]}};reads.set('frozen',value,10);
+  expect(Object.isFrozen(value.nested.list)).toBe(true);
+  for(let i=0;i<1000;i++) reads.set('k'+i,{i},7);
+  expect(reads.bytes).toBeLessThanOrEqual(100);
 });
