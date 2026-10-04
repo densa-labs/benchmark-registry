@@ -4,7 +4,7 @@ export function SearchPage({response,search}:{response:SearchResponse;search:str
   const query=new URLSearchParams(search).get("q") ?? "";
   return <PageContainer className="registry-page"><PageHeader title="Search" description="Find recorded models, benchmarks, providers and individual results." />
     <form className="local-search" method="get" action="/search" role="search" aria-label="Search registry entries"><label htmlFor="registry-search-page">Search the registry</label><div className="local-search__controls"><input id="registry-search-page" type="search" name="q" maxLength={50} defaultValue={query} required /><button type="submit">Search</button></div></form>
-    <p className="compare-note" id="search-operators">Filters: {['model:opus','brand:claude','benchmark:swe-bench','record:','metric:accuracy','date:2026-09','org:anthropic'].map(value=><code key={value}>{value}{' '}</code>)}</p>
+    <p className="compare-note" id="search-operators">Filters: {['model:opus','brand:openai','benchmark:swe-bench','record:','metric:accuracy','date:2026-09','org:anthropic'].map(value=><code key={value}>{value}{' '}</code>)}</p>
     {query ? response.data.length ? <DataTable caption="Search results" rows={response.data} getRowKey={row=>row.href} columns={[
       {key:"type",label:"Type",render:row=>row.entity_type},
       {key:"name",label:"Result",render:row=><a href={row.href}>{row.canonical_name}</a>},

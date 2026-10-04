@@ -135,6 +135,23 @@ describe("P11.4 search quality against tracked Registry data", () => {
     db.prepare("INSERT INTO results VALUES (?, ?, ?, ?)").run(existing.model_id, existing.benchmark_version_id, existing.reasoning_level, "f".repeat(64));
     expect((await search("6 sol deepswe 1.1")).direct_href).toBeUndefined();
   });
+  describe("a benchmark name that also reads as another benchmark", () => {
+    const addResult = (benchmark: string, key: string) => {
+      const version = db.prepare("SELECT v.id FROM benchmark_versions v JOIN benchmarks b ON b.id = v.benchmark_id WHERE b.slug = ? ORDER BY v.id LIMIT 1").get(benchmark) as { id: number };
+      const model = db.prepare("SELECT id FROM models WHERE registry_no = '20015'").get() as { id: number };
+      db.prepare("INSERT INTO results VALUES (?, ?, ?, ?)").run(model.id, version.id, "max", key.repeat(64));
+    };
+    it.each(["opus 5.5 swe-bench", "swe-bench opus 5.5"])("jumps when %s has exactly one candidate result", async (q) => {
+      addResult("swe-bench", "a");
+      expect((await search(q)).direct_href).toMatch(/^\/benchmarks\/swe-bench\//u);
+    });
+    it.each(["opus 5.5 swe-bench", "swe-bench opus 5.5"])("does not jump when %s also matches a SWE-bench Pro result", async (q) => {
+      addResult("swe-bench", "a");addResult("swe-bench-pro", "b");
+      const response = await search(q);
+      expect(response.data.some((hit) => hit.entity_type === "result")).toBe(true);
+      expect(response.direct_href).toBeUndefined();
+    });
+  });
   it("withholds navigation when a benchmark family has several relevant versions", async () => {
     const response = await search("GPT-6 Astra terminal-bench");
     expect(new Set(response.data.filter((hit) => hit.entity_type === "result").map((hit) => hit.canonical_name)).size).toBeGreaterThan(1);
