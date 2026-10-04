@@ -290,3 +290,10 @@ it('serves compact full publications and falls back coherently when a required o
   expect(fallback.headers.get('X-Registry-Revision')).toBe(build.manifest.generation);
   expect(await fallback.text()).not.toContain('Compact corrected');
 });
+
+it('retains full shadow inputs when projection upgrades preserve every object hash',async()=>{
+  const f=fixture();const {build}=await bootstrap(f);
+  const next=(await buildGeneration(f.db,'local',{...build.manifest,projectionVersion:5}))!;
+  expect(next.objects.size).toBe(Object.keys(next.manifest.objects).length);
+  expect(await shadowGeneration(f.db,{...next,manifest:{...next.manifest,inlineObjects:{}}})).toMatchObject({equivalent:true});
+});

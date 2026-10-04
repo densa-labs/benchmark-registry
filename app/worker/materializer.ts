@@ -87,7 +87,7 @@ export async function buildGeneration(db:D1Database,environment:ReadEnvironment,
       } else object=await produceObject(repository,key,environment);
       const serialized=JSON.stringify(object),hash=await digest(serialized);
       rebuilt.push(key);
-      if(refs[key]!==hash) objects.set(hash,serialized);
+      if(refs[key]!==hash || previous?.projectionVersion!==projectionVersion) objects.set(hash,serialized);
       refs[key]=hash;
     } catch(error) {
       if(error instanceof ApiError && error.status===404) {delete refs[key];removed.push(key);} else throw error;
