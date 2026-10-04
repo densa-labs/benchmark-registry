@@ -313,6 +313,9 @@ describe("P7.1 model pages", () => {
 
     expect(markup).toContain("GPT-4.1");
     expect(markup).toContain('aria-label="Model metadata"');
+    expect(markup).toContain('href="/compare?models=10002%2C"');
+    expect(markup).toContain('title="Stable ID composed of a developer namespace');
+    expect(markup).toContain("docs/registry-numbering.md");
     expect(markup).toContain("Released");
     expect(markup).toContain("Provider");
     expect(markup).toContain("Source");

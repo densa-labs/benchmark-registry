@@ -1,3 +1,4 @@
+import { comparisonHref, parseComparisonState } from "./compare";
 import { ResultSource, ResultDetails } from "./result-source";
 import { pivotResults, type PivotRow } from "./result-pivot";
 import { RelatedModels, RelatedLinks } from "./seo-content";
@@ -348,11 +349,15 @@ export function ModelDetailPage({
             },
             {
               label: "Registry No.",
-              value: <span className="registry-number">{model.registry_no}</span>,
+              value: <a className="registry-number" href="https://github.com/densa-labs/benchmark-registry/blob/main/docs/registry-numbering.md"
+                title="Stable ID composed of a developer namespace and an assigned sequence.">
+                {model.registry_no}<span className="visually-hidden"> — Stable ID composed of a developer namespace and an assigned sequence. Read about Registry numbering.</span>
+              </a>,
             },
           ]}
         />
       </section>
+      <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
       </PageHeader>
 
       {page.total_items > 25 || query ? <LocalSearch

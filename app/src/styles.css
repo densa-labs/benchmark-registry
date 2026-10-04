@@ -1559,3 +1559,5 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .data-table a, .compare-table a { color: var(--accent); text-decoration: none; }
 .data-table a:hover, .data-table a:focus-visible,
 .compare-table a:hover, .compare-table a:focus-visible { color: var(--accent-strong); text-decoration: underline; }
+
+.model-compare { display: inline-flex; align-items: center; margin-top: 0.5rem; min-height: var(--control-height); font-size: 0.8rem; }

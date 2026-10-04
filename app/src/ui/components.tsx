@@ -517,6 +517,8 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, kicker, children }: PageHeaderProps) {
   const breadcrumb=useContext(BreadcrumbContext);
+  const updated = breadcrumb && ["model", "benchmark", "benchmark-version"].includes(breadcrumb.kind)
+    && breadcrumb.updated && Number.isFinite(Date.parse(breadcrumb.updated)) ? breadcrumb.updated : undefined;
   return (
     <header className="page-header">
       {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
@@ -524,6 +526,7 @@ export function PageHeader({ title, description, kicker, children }: PageHeaderP
       <h1 tabIndex={-1}>{title}</h1>
       {children}
       {description ? <p className="page-header__description">{description}</p> : null}
+      {updated && !description?.includes(`Updated ${updated.slice(0, 10)}`) ? <p className="page-header__description">Updated <time dateTime={updated}>{updated.slice(0, 10)}</time></p> : null}
     </header>
   );
 }
