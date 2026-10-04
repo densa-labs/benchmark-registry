@@ -1,5 +1,6 @@
 import unittest
-from crawl_graph import audit_graph, internal_links, discovery_state, result_link_errors
+
+from crawl_graph import audit_graph, discovery_state, internal_links, result_link_errors
 
 
 class CrawlGraphTests(unittest.TestCase):

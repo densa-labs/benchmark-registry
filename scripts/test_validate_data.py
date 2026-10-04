@@ -129,7 +129,7 @@ class ValidationTests(unittest.TestCase):
             "metric_key",
             "reporting_basis",
         ):
-            self.check_rule(lambda b, r, m: r.update({field: []}), "schema")
+            self.check_rule(lambda b, r, m, field=field: r.update({field: []}), "schema")
         self.check_rule(lambda b, r, m: r.update(evaluator_keys=[{}]), "schema")
         self.check_rule(
             lambda b, r, m: r["sources"][0].update(primary="true"), "schema"
@@ -173,7 +173,7 @@ class ValidationTests(unittest.TestCase):
 
     def test_bounds(self):
         for score in ("-1", "101"):
-            self.check_rule(lambda b, r, m: r.update(score_value=score), "score_range")
+            self.check_rule(lambda b, r, m, score=score: r.update(score_value=score), "score_range")
         self.check_rule(
             lambda b, r, m: (
                 m.update(unit="points", maximum_value="10"),
@@ -189,7 +189,7 @@ class ValidationTests(unittest.TestCase):
 
     def test_score_type(self):
         for score in (None, "NaN", "Infinity", {}, 5):
-            self.check_rule(lambda b, r, m: r.update(score_value=score), "score_type")
+            self.check_rule(lambda b, r, m, score=score: r.update(score_value=score), "score_type")
         self.check_rule(
             lambda b, r, m: (
                 m.update(storage_kind="integer"),
@@ -207,7 +207,7 @@ class ValidationTests(unittest.TestCase):
             "https://example.org/a b",
         ):
             self.check_rule(
-                lambda b, r, m: r["sources"][0].update(url=source), "source_url"
+                lambda b, r, m, source=source: r["sources"][0].update(url=source), "source_url"
             )
         self.check_rule(lambda b, r, m: r.update(sources=[]), "source_url")
 
@@ -222,7 +222,7 @@ class ValidationTests(unittest.TestCase):
 
     def test_dates(self):
         for date in ("2026-02-30", "2026-13-01", "yesterday"):
-            self.check_rule(lambda b, r, m: r.update(reported_at=date), "date")
+            self.check_rule(lambda b, r, m, date=date: r.update(reported_at=date), "date")
 
     def test_undefined(self):
         for field in (
@@ -232,7 +232,7 @@ class ValidationTests(unittest.TestCase):
             "metric_key",
         ):
             self.check_rule(
-                lambda b, r, m: r.update({field: "missing"}), "undefined_reference"
+                lambda b, r, m, field=field: r.update({field: "missing"}), "undefined_reference"
             )
         self.check_rule(
             lambda b, r, m: r.update(evaluator_keys=["missing"]), "undefined_reference"
@@ -340,7 +340,7 @@ class ManifestTests(unittest.TestCase):
         )
 
     def test_staging_only_is_schema_checked_but_not_listed(self):
-        batch, result, _ = fixture()
+        _, result, _ = fixture()
         held = {"records": [{"operation": "result", "record": result}]}
         status, report = self.run_main(staging=held)
         self.assertEqual((status, report["error"]), (0, []))

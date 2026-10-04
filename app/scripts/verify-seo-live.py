@@ -5,12 +5,12 @@ Staging uses the caller's existing Cloudflare Access login through cloudflared.
 """
 import concurrent.futures
 import json
-import re
 import sys
 from collections import Counter, defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
 from xml.etree import ElementTree
+
 from live_http import LiveClient
 
 HOST = sys.argv[1]

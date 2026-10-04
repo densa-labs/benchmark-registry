@@ -14,8 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "ingestor" / "src"))
-from benchmark_registry_ingestor.engine import RECORD_FIELDS  # noqa: E402
-from benchmark_registry_ingestor.values import (  # noqa: E402
+from benchmark_registry_ingestor.engine import RECORD_FIELDS
+from benchmark_registry_ingestor.values import (
     ValueErrorDetail,
     normalize_temporal,
     normalize_url,

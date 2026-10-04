@@ -7,7 +7,8 @@ import concurrent.futures
 import json
 import runpy
 from pathlib import Path
-from crawl_graph import audit_graph, internal_links, discovery_state, result_link_errors
+
+from crawl_graph import audit_graph, discovery_state, internal_links, result_link_errors
 
 seo = runpy.run_path(str(Path(__file__).with_name('verify-seo-live.py')))
 output = seo['OUTPUT']

@@ -2,7 +2,7 @@
 import re
 from collections import defaultdict, deque
 from html.parser import HTMLParser
-from urllib.parse import urljoin, urlsplit, parse_qsl
+from urllib.parse import parse_qsl, urljoin, urlsplit
 
 ORIGIN = 'https://benchmarkregistry.org'
 

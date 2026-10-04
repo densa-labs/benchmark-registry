@@ -11,6 +11,7 @@ import re
 import sys
 from pathlib import Path
 from xml.etree import ElementTree
+
 from crawl_graph import audit_graph, internal_links, result_link_errors
 from live_http import LiveClient
 

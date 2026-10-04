@@ -1,12 +1,9 @@
 """One-off assembly of the primary-source launch batch (no database writes)."""
 
 import json
-import re
 import subprocess
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data/batches/launch-dataset.json"
