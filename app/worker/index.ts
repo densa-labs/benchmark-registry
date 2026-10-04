@@ -1,3 +1,4 @@
+import { analyticsConfiguration, analyticsScript, type AnalyticsEnvironment } from "./analytics";
 import { renderAtomFeed } from "./feed";
 import { badgeResponse } from "./badge";
 import { measuredDatabase, type QueryMetrics } from "./query-metrics";
@@ -18,7 +19,7 @@ import { comparisonPayload } from "./seo-comparisons";
 import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
-export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnvironment {
+export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnvironment, AnalyticsEnvironment {
   ASSETS: Fetcher;
   D1_DIAGNOSTICS?: QueryMetrics;
   STAGING_CRAWLER_PROTECTION?: "enabled";
@@ -90,7 +91,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if(!env.DB || !(await measuredDatabase(env.DB,env.D1_DIAGNOSTICS).prepare("SELECT 1 AS ok").first<{ok:number}>())?.ok) throw new Error("Database unavailable");
       return new Response(request.method === "HEAD" ? null : '{"ok":true}', {headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
     } catch(error) {
-      logServerError("healthz",503,error);
+      logServerError("healthz",503,error,url.pathname);
       return new Response(request.method === "HEAD" ? null : '{"ok":false}',{status:503,headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
     }
   }
@@ -103,7 +104,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if (error instanceof ApiError) {
         return jsonError(error.status, error.code, error.message);
       }
-      logServerError("read-api",500,error);
+      logServerError("read-api",500,error,url.pathname);
       return jsonError(500, "internal_error", "The request could not be completed.");
     }
   }
@@ -126,7 +127,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if (error instanceof ApiError) {
         return new Response("Invalid model route.", { status: error.status });
       }
-      logServerError("model-redirect",500,error);
+      logServerError("model-redirect",500,error,url.pathname);
       return new Response("The request could not be completed.", { status: 500 });
     }
   }
@@ -150,7 +151,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       });
     } catch (error) {
       if (error instanceof MaterializationFailure) throw error;
-      logServerError("sitemap",500,error);
+      logServerError("sitemap",500,error,url.pathname);
       return new Response('The request could not be completed.', { status: 500 });
     }
   }
@@ -171,7 +172,10 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       return Response.redirect(url.toString(), 308);
     }
     if (pathname.replace(/\/$/u, "") === "/coverage" && !env.DB) return new Response("Coverage is temporarily unavailable.",{status:503,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
-    const content = pathname.replace(/\/$/u, "") === "/search"
+    const analytics = url.hostname === STAGING_HOSTNAME && env.STAGING_CRAWLER_PROTECTION === "enabled" ? null : analyticsConfiguration(env);
+    const content = pathname.replace(/\/$/u, "") === "/privacy"
+      ? renderInitialDocument({kind:"privacy", ...(analytics ? {analyticsEnabled:true} : {})},url.search,env.REGISTRY_REVISION)
+      : pathname.replace(/\/$/u, "") === "/search"
       ? renderInitialDocument({kind:"search",payload:url.searchParams.has("q") ? await (async()=>{
           const response=await handleApi(new Request(new URL(`/api/search${url.search}`,url)),env,requireRepository(repository));
           if(!response.ok) throw new ApiError(400,"invalid_query","Invalid search query.");
@@ -184,6 +188,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       return handleApi(new Request(new URL(String(input), url.origin)), env, requireRepository(repository));
     }, env.REGISTRY_REVISION, repository ? await repository.seoSnapshot() : undefined);
     const html = rewriteMetadata(await response.text(), metadata, url, content?.markup)
+      .replace("</head>", `${analyticsScript(analytics)}</head>`)
       .replace("</body>", `${content?.bootstrap ?? ""}</body>`);
     const headers = new Headers(response.headers);
     // The static template's validators and length no longer describe this response.
@@ -195,7 +200,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   } catch (error) {
     if (error instanceof MaterializationFailure) throw error;
     if (error instanceof ApiError) return new Response(error.message, {status:error.status,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
-    logServerError("document",500,error);
+    logServerError("document",500,error,url.pathname);
     return new Response("The request could not be completed.", { status: 500 });
   }
 }
@@ -211,7 +216,7 @@ const worker = {
     const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
       && url.hostname === STAGING_HOSTNAME;
 
-    env={...env,D1_DIAGNOSTICS:{queries:0,rows:0,ms:0},CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
+    env={...env,CACHE_VARIANT:JSON.stringify(analyticsConfiguration(env)),D1_DIAGNOSTICS:{queries:0,rows:0,ms:0},CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
     const store=new PublishedReadStore(env,url.origin);
     let response:Response;
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
@@ -234,7 +239,7 @@ const worker = {
         }
         if(lastError) throw lastError;
       } catch(error) {
-        logServerError("materialized-read",500,error);
+        logServerError("materialized-read",500,error,url.pathname);
         if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
         else if (url.pathname === '/sitemap.xml') response=new Response('The materialized registry is temporarily unavailable.',{status:500});
         else {

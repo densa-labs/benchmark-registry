@@ -169,7 +169,7 @@ type LoadedRouteData =
   | { kind: "about" }
   | { kind: "contact" }
   | { kind: "legal" }
-  | { kind: "privacy" }
+  | { kind: "privacy"; analyticsEnabled?:boolean }
   | { kind: "terms" }
   | { kind: "search"; payload: SearchResponse }
   | { kind: "coverage"; payload: CoverageData }

@@ -2,7 +2,7 @@ import { BUILD_ID, BUILD_TIMESTAMP } from '../src/build';
 import { normalizedResource } from './request-policy';
 export interface CacheEnvironment {
   CACHE_WAIT_UNTIL?:(promise:Promise<unknown>)=>void;REGISTRY_CACHE?:Cache;
-  REGISTRY_REVISION?:string;REGISTRY_DEGRADED?:boolean;
+  CACHE_VARIANT?:string;REGISTRY_REVISION?:string;REGISTRY_DEGRADED?:boolean;
 }
 export const OBJECT_SECONDS=86400;
 export async function withRegistryCache(request:Request,env:CacheEnvironment,load:(env:CacheEnvironment,request?:Request)=>Promise<Response>):Promise<Response> {
@@ -10,7 +10,7 @@ export async function withRegistryCache(request:Request,env:CacheEnvironment,loa
   let resource:string|null=null;
   try {resource=normalizedResource(request);} catch {/* Preserve handler validation and statuses. */}
   const origin=new URL(request.url).origin;
-  const key=resource && env.REGISTRY_REVISION ? new Request(new URL('/__registry_render__/'+encodeURIComponent(`${BUILD_ID}:${BUILD_TIMESTAMP}:${env.REGISTRY_REVISION}`)+'?resource='+encodeURIComponent(resource),origin)) : undefined;
+  const key=resource && env.REGISTRY_REVISION ? new Request(new URL('/__registry_render__/'+encodeURIComponent(`${BUILD_ID}:${BUILD_TIMESTAMP}:${env.REGISTRY_REVISION}:${env.CACHE_VARIANT ?? ""}`)+'?resource='+encodeURIComponent(resource),origin)) : undefined;
   const decorate=(response:Response,state:string)=>{
     const headers=new Headers(response.headers);
     headers.set('X-Registry-Cache',env.REGISTRY_DEGRADED?'stale':state);

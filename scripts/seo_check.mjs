@@ -107,6 +107,13 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
     assert.equal(document.querySelectorAll('link[rel="canonical"]').length,1,path);
     assert.equal(document.querySelector('link[rel="canonical"]').getAttribute('href'),origin+path,path);
   }
+  for(const path of ['/about','/contact','/terms','/privacy','/corrections','/coverage']) assert.ok(urls.includes(origin+path),`New page absent from sitemap: ${path}`);
+  for(const path of ['/feed.xml','/healthz','/search']) assert.ok(!urls.includes(origin+path),`Non-indexable route in sitemap: ${path}`);
+  const health=await localFetch('/healthz');assert.ok([200,503].includes(health.status));assert.match(health.headers.get('X-Robots-Tag'),/noindex/u);
+  const feed=await localFetch('/feed.xml');assert.equal(feed.status,200);assert.match(feed.headers.get('Content-Type'),/application\/atom\+xml/u);
+  const atom=new JSDOM(await feed.text(),{contentType:'application/xml'}).window.document;assert.equal(atom.documentElement.namespaceURI,'http://www.w3.org/2005/Atom');
+  const search=await read('/search');assert.equal(search.response.status,200);assert.match(search.document.querySelector('meta[name="robots"]').getAttribute('content'),/noindex/u);
+  assert.equal(search.document.querySelectorAll('link[rel="canonical"]').length,1);
   // Crawl ordinary clean anchors, including reachable thin entity pages. Never count sitemap edges.
   const depth=new Map([['/',0]]),queue=['/'];
   for(let index=0;index<queue.length;index++) {
@@ -114,7 +121,7 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
     const {response,document}=await read(path);assert.equal(response.status,200,path);
     for(const anchor of document.querySelectorAll('a[href]')) {
       const url=new URL(anchor.getAttribute('href'),origin);
-      if(url.origin!==origin || url.search || url.hash || url.pathname.startsWith('/api/') || depth.has(url.pathname)) continue;
+      if(url.origin!==origin || url.search || url.hash || url.pathname.startsWith('/api/') || url.pathname==='/feed.xml' || url.pathname==='/healthz' || url.pathname.startsWith('/badge/') || depth.has(url.pathname)) continue;
       depth.set(url.pathname,distance+1);queue.push(url.pathname);
     }
   }
