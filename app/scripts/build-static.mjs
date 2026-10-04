@@ -49,6 +49,7 @@ async function remoteSnapshot() {
   return snapshot;
 }
 
+const snapshotAt=new Date().toISOString();
 const sqlite=values.db ? new DatabaseSync(resolve(values.db),{readOnly:true}) : await remoteSnapshot();
 const db={prepare(sql){let params=[];return {bind(...values){params=values;return this;},async all(){return {results:sqlite.prepare(sql).all(...params),meta:{rows_read:0,rows_written:0}};},async first(){return (await this.all()).results[0]??null;},async raw(){return sqlite.prepare(sql).all(...params).map(row=>Object.values(row));}};}};
 
@@ -61,6 +62,8 @@ await build({entryPoints:['worker/static-site.ts'],bundle:true,platform:'node',f
 const site=await import(pathToFileURL(runtime).href+'?'+Date.now());
 const analytics=process.env.ANALYTICS_SCRIPT_URL ? {ANALYTICS_SCRIPT_URL:process.env.ANALYTICS_SCRIPT_URL,ANALYTICS_SITE_ID:process.env.ANALYTICS_SITE_ID} : undefined;
 const result=await site.buildStaticSite({db,environment,template,analytics});
+const count=(table)=>sqlite.prepare(`SELECT count(*) AS n FROM "${table}"`).get().n;
+const counts={models:count('models'),benchmarks:count('benchmarks'),benchmark_versions:count('benchmark_versions'),results:count('results')};
 sqlite.close();
 
 // Generated outputs are replaced as a whole; Vite's assets and favicons stay.
@@ -70,10 +73,13 @@ for(const file of result.files) {
   if(!target.startsWith(out+'/')) throw new Error(`Unsafe output path: ${file.path}`);
   mkdirSync(dirname(target),{recursive:true});writeFileSync(target,file.body);
 }
+// Which build is live: answers health and "which commit is deployed" without a Worker (audit I1, I2).
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
+writeFileSync(join(out,site.VERSION_FILE),JSON.stringify({commit:git('rev-parse','HEAD'),dirty:git('status','--porcelain','--untracked-files=no')!=='',commit_time:buildInfo.timestamp,built_at:new Date().toISOString(),data_snapshot_at:snapshotAt,data_generation:result.generation,environment,counts},null,2)+'\n');
 const all=[];
 const walk=(directory)=>{for(const entry of readdirSync(directory,{withFileTypes:true})) {const path=join(directory,entry.name);if(entry.isDirectory()) walk(path);else all.push(relative(out,path));}};
 walk(out);
-writeFileSync(join(out,'_headers'),site.headerRules(all,environment));
+writeFileSync(join(out,'_headers'),site.headerRules(all,environment,result.security));
 const deployed=all.filter(file=>!['_headers','_redirects'].includes(file)).length;
 if(deployed>site.FILE_COUNT_BUDGET) throw new Error(`${deployed} static files exceed the ${site.FILE_COUNT_BUDGET} budget (hard limit ${site.MAX_ASSET_FILES}).`);
 const largest=all.map(file=>({file,bytes:statSync(join(out,file)).size})).sort((a,b)=>b.bytes-a.bytes)[0];

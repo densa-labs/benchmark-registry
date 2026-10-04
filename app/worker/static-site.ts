@@ -5,12 +5,13 @@ import { CONTENT_PATHS } from "../src/content-metadata";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { CANONICAL_ORIGIN } from "../src/seo-config";
 import type { StaticDataManifest } from "../src/static-api";
-import type { AnalyticsEnvironment } from "./analytics";
+import { analyticsConfiguration, type AnalyticsEnvironment } from "./analytics";
 import { handleRequest, type Env } from "./index";
 import { buildGeneration } from "./materializer";
 import { MaterializedRepository } from "./materialized-repository";
 import { verifyGeneration } from "./publication";
-import { highestRecordedResult } from "./featured-result";
+import { latestReportedResult } from "./featured-result";
+import { LEGACY_ROOT_SLUGS } from "./legacy-root-slugs";
 import { digest, type ReadData, type ReadEnvironment, type ReadObject } from "./read-model";
 
 export type SiteEnvironment = "staging" | "production";
@@ -21,12 +22,17 @@ export interface StaticSiteOptions {
   /** The Vite-built index.html every page is rendered into. */
   template: string;
   analytics?: AnalyticsEnvironment;
+  /** Root-level legacy model slugs; defaults to the frozen allow-list. Fixture databases pass `{}`. */
+  legacyRootSlugs?: Readonly<Record<string, string>>;
 }
 export interface StaticSite {
   files: StaticFile[];
   generation: string;
+  security: SecurityPolicy;
   report: { pages: number; badges: number; dataFiles: number; redirects: number; dynamicRedirects: number };
 }
+/** What the CSP must allow: the hashed inline scripts the build emitted and any configured analytics script. */
+export interface SecurityPolicy { scriptHashes: string[]; analyticsScript?: string }
 
 /** Workers static assets limits (free plan) the build must stay inside. */
 export const MAX_ASSET_FILES = 20_000;
@@ -36,9 +42,14 @@ export const MAX_DYNAMIC_REDIRECTS = 100;
 export const MAX_HEADER_RULES = 100;
 export const HTML_CACHE_CONTROL = "public, max-age=300, must-revalidate";
 export const IMMUTABLE_CACHE_CONTROL = "public, max-age=31536000, immutable";
+/** Build identity written by scripts/build-static.mjs; never cached. */
+export const VERSION_FILE = "version.json";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
-const STAGING_CSP = "script-src-elem 'self' 'unsafe-inline'";
-const ROOT_HUBS = new Set(["models", "benchmarks", "companies", "compare", "legal", "privacy", "terms", "recent"]);
+/** Cloudflare Web Analytics is injected automatically on production only; staging must not load it. */
+export const CLOUDFLARE_WEB_ANALYTICS_SCRIPT = "https://static.cloudflareinsights.com/beacon.min.js";
+/** Only the theme script may be inline; a second one must be reviewed, not silently allowed. */
+export const MAX_INLINE_SCRIPTS = 1;
+const EXECUTABLE_SCRIPT_TYPES = new Set(["", "module", "text/javascript", "application/javascript"]);
 
 /** `/models/10006` → `models/10006.html`; `/` → `index.html`; files keep their name. */
 export function pageFile(path: string): string {
@@ -51,8 +62,11 @@ export function pageFile(path: string): string {
 const nameSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/gu, "");
 const hyphenSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/gu, "-").replace(/^-|-$/gu, "");
 
-/** Redirects the Worker resolved per request, as `_redirects` rules. */
-export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, versions: Array<{ family: string; version: string }>): { lines: string[]; dynamic: number } {
+/**
+ * Redirects for identities that still exist. Retired identities with no
+ * equivalent (an unknown version, an unlisted root slug) get the real 404 page.
+ */
+export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, versions: Array<{ family: string; version: string }>, legacyRootSlugs: Readonly<Record<string, string>> = LEGACY_ROOT_SLUGS): { lines: string[]; dynamic: number } {
   const lines: string[] = [];
   const seen = new Set<string>();
   const add = (source: string, target: string, status: 301 | 308) => {
@@ -61,18 +75,22 @@ export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, version
   };
   for (const redirect of data.redirects) add(`/models/${redirect.source}`, `/models/${redirect.target}`, 308);
   for (const { family, version } of versions) add(`/benchmarks/${family}/versions/${version}`, `/benchmarks/${family}/${version}`, 301);
+  // v1 used a `default` version for the family as a whole; only existing families have one.
+  for (const family of [...new Set(versions.map(({ family }) => family))].sort()) add(`/benchmarks/${family}/versions/default`, `/benchmarks/${family}`, 301);
+  const retired = new Set(data.redirects.map((redirect) => redirect.source));
   for (const model of data.seo.models) {
-    if (data.redirects.some((redirect) => redirect.source === model.registry_no)) continue;
+    if (retired.has(model.registry_no)) continue;
     for (const slug of new Set([nameSlug(model.name), hyphenSlug(model.name)])) {
       if (!slug || /^[0-9]+$/u.test(slug)) continue;
       add(`/models/${slug}`, `/models/${model.registry_no}`, 301);
-      if (!ROOT_HUBS.has(slug) && !LEGAL_PATHS.includes(`/${slug}`) && !CONTENT_PATHS.includes(`/${slug}`)) add(`/${slug}`, `/models/${model.registry_no}`, 301);
     }
   }
-  add("/incai-ringflash20", "/models", 301);
+  const published = new Set(data.seo.models.map((model) => model.registry_no).filter((registryNo) => !retired.has(registryNo)));
+  for (const [slug, registryNo] of Object.entries(legacyRootSlugs)) {
+    if (!published.has(registryNo)) throw new Error(`Legacy root slug /${slug} points at ${registryNo}, which is not a published model.`);
+    add(`/${slug}`, `/models/${registryNo}`, 301);
+  }
   const dynamic = [
-    // Retired version URLs whose version no longer exists return to the family hub.
-    "/benchmarks/:family/versions/* /benchmarks/:family 301",
     // Trailing-slash variants redirect permanently to the canonical path, as the Worker did.
     "/:a/ /:a 308", "/:a/:b/ /:a/:b 308", "/:a/:b/:c/ /:a/:b/:c 308",
   ];
@@ -84,16 +102,17 @@ export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, version
  * Cache rules. Patterns never overlap for Cache-Control, because overlapping
  * `_headers` rules append values instead of replacing them.
  */
-export function headerRules(files: string[], environment: SiteEnvironment): string {
+export function headerRules(files: string[], environment: SiteEnvironment, security: SecurityPolicy): string {
   const blocks: string[] = [];
   const rule = (pattern: string, headers: Record<string, string>) => blocks.push([pattern, ...Object.entries(headers).map(([name, value]) => `  ${name}: ${value}`)].join("\n"));
   rule("/assets/*", { "Cache-Control": IMMUTABLE_CACHE_CONTROL });
   rule("/data/objects/*", { "Cache-Control": IMMUTABLE_CACHE_CONTROL, "X-Robots-Tag": "noindex" });
   rule("/data/manifest.json", { "Cache-Control": HTML_CACHE_CONTROL, "X-Robots-Tag": "noindex" });
+  if (files.includes(VERSION_FILE)) rule(`/${VERSION_FILE}`, { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" });
   const top = new Map<string, "file" | "directory">();
   for (const file of files) {
     const [first, ...rest] = file.split("/");
-    if (["assets", "data", "_headers", "_redirects", "404.html"].includes(first)) continue;
+    if (["assets", "data", "_headers", "_redirects", "404.html", VERSION_FILE].includes(first)) continue;
     if (rest.length) top.set(first, "directory");
     else if (!top.has(first)) top.set(first, "file");
   }
@@ -109,9 +128,48 @@ export function headerRules(files: string[], environment: SiteEnvironment): stri
     else if (name.endsWith(".html")) rule(`/${name.slice(0, -5)}`, headers);
     else rule(`/${name}`, headers);
   }
-  if (environment === "staging") rule("/*", { "X-Robots-Tag": STAGING_ROBOTS_TAG, "Content-Security-Policy": STAGING_CSP });
+  rule("/*", { ...(environment === "staging" ? { "X-Robots-Tag": STAGING_ROBOTS_TAG } : {}), ...securityHeaders(environment, security) });
   if (blocks.length > MAX_HEADER_RULES) throw new Error(`${blocks.length} header rules exceed the ${MAX_HEADER_RULES} limit.`);
   return blocks.join("\n\n") + "\n";
+}
+
+/** CSP hashes of every executable inline script in the given HTML documents. */
+export async function inlineScriptHashes(documents: string[]): Promise<string[]> {
+  const hashes = new Set<string>();
+  for (const html of documents) {
+    for (const [, attributes, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/giu)) {
+      if (/\ssrc\s*=/iu.test(attributes)) continue;
+      const type = /\stype\s*=\s*["']?([^"'\s>]+)/iu.exec(attributes)?.[1].toLowerCase() ?? "";
+      if (!EXECUTABLE_SCRIPT_TYPES.has(type)) continue;
+      const bytes = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(body)));
+      hashes.add(`'sha256-${btoa(String.fromCharCode(...bytes))}'`);
+    }
+  }
+  if (hashes.size > MAX_INLINE_SCRIPTS) throw new Error(`${hashes.size} distinct inline scripts exceed the ${MAX_INLINE_SCRIPTS} the CSP allows.`);
+  return [...hashes].sort();
+}
+
+export function contentSecurityPolicy(environment: SiteEnvironment, policy: SecurityPolicy): string {
+  const scripts = ["'self'", ...policy.scriptHashes];
+  if (environment === "production") scripts.push(CLOUDFLARE_WEB_ANALYTICS_SCRIPT);
+  if (environment === "production" && policy.analyticsScript) scripts.push(policy.analyticsScript);
+  const connect = ["'self'"];
+  if (environment === "production" && policy.analyticsScript) connect.push(new URL(policy.analyticsScript).origin);
+  return [
+    "default-src 'self'", `script-src ${scripts.join(" ")}`, "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data:", "font-src 'self'", `connect-src ${connect.join(" ")}`, "object-src 'none'",
+    "frame-ancestors 'none'", "base-uri 'none'", "form-action 'self'",
+  ].join("; ");
+}
+
+/** Sent on every response. Each name appears in exactly one rule, so values never append. */
+export function securityHeaders(environment: SiteEnvironment, policy: SecurityPolicy): Record<string, string> {
+  return {
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Content-Security-Policy": contentSecurityPolicy(environment, policy),
+  };
 }
 
 export function robotsFile(environment: SiteEnvironment): string {
@@ -180,7 +238,7 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   // read in the browser is one file, not one file per model.
   const featured: ReadData["featured"] = {};
   for (const [key, hash] of Object.entries(build.manifest.objects)) {
-    if (key.startsWith("model:")) featured[key.slice(6)] = highestRecordedResult((object(hash).data as ReadData["model"]).response.data.results);
+    if (key.startsWith("model:")) featured[key.slice(6)] = latestReportedResult((object(hash).data as ReadData["model"]).response.data.results);
   }
   const featuredObject = JSON.stringify({ schema: 1, key: "featured", environment: readEnvironment, data: featured } satisfies ReadObject);
   const featuredHash = await digest(featuredObject);
@@ -189,14 +247,18 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   for (const hash of new Set(Object.values(manifest.objects))) files.push({ path: `data/objects/${hash}.json`, body: serialized.get(hash)! });
   files.push({ path: "data/manifest.json", body: JSON.stringify(manifest) });
 
-  const redirects = redirectRules({ redirects: object(build.manifest.objects.redirects).data as ReadData["redirects"], seo: snapshot }, versions);
+  const redirects = redirectRules({ redirects: object(build.manifest.objects.redirects).data as ReadData["redirects"], seo: snapshot }, versions, options.legacyRootSlugs);
   for (const rule of redirects.lines) {
     const source = rule.split(" ")[0];
     if (files.some((file) => file.path === pageFile(source))) throw new Error(`Redirect source shadows a page: ${source}`);
   }
   files.push({ path: "_redirects", body: redirects.lines.join("\n") + "\n" });
+  const security: SecurityPolicy = {
+    scriptHashes: await inlineScriptHashes(files.filter((file) => file.path.endsWith(".html")).map((file) => file.body)),
+    ...(options.environment === "production" && analyticsConfiguration(options.analytics ?? {}) ? { analyticsScript: analyticsConfiguration(options.analytics!)!.url } : {}),
+  };
   return {
-    files, generation,
+    files, generation, security,
     report: { pages: pages.length + standalone.size, badges: badgeCount, dataFiles: new Set(Object.values(manifest.objects)).size + 1, redirects: redirects.lines.length - redirects.dynamic, dynamicRedirects: redirects.dynamic },
   };
 }

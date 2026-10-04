@@ -15,7 +15,11 @@ it("canonicalizes selected compare-builder state to the clean builder",async()=>
  const html=await response.text();expect(html).toContain('name="robots" content="noindex, follow"');
  expect(html).toContain('rel="canonical" href="'+CANONICAL_ORIGIN+'/compare"');
 });
-it.each([["/benchmarks/gpqa/versions/diamond","/benchmarks/gpqa/diamond"],["/benchmarks/gpqa/versions/default","/benchmarks/gpqa"],["/benchmarks/itbench-sre/versions/default","/benchmarks"],["/incai-ringflash20","/models"]])("301 redirects legacy %s to an existing canonical parent %s",async(path,target)=>{
+it.each([["/benchmarks/gpqa/versions/diamond","/benchmarks/gpqa/diamond"],["/benchmarks/gpqa/versions/default","/benchmarks/gpqa"]])("301 redirects legacy %s to its equivalent %s",async(path,target)=>{
  const response=await worker.fetch(new Request(CANONICAL_ORIGIN+path+"?q=x"),f.env);
  expect(response.status).toBe(301);expect(response.headers.get("Location")).toBe(CANONICAL_ORIGIN+target+"?q=x");
+});
+it.each(["/benchmarks/itbench-sre/versions/default","/benchmarks/gpqa/versions/retired","/incai-ringflash20","/not-a-v1-slug"])("returns 404, not a hub redirect, for the retired identity %s",async path=>{
+ const response=await worker.fetch(new Request(CANONICAL_ORIGIN+path),f.env);
+ expect(response.status).toBe(404);expect(response.headers.get("Location")).toBeNull();
 });

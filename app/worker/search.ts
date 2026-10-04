@@ -153,7 +153,7 @@ function hit(candidate: Candidate, text: string): SearchHit {
 
 export function interpretSearch(query: string, entities: SearchEntity[]) {
   const tokens = lookupTokens(query);
-  if (tokens.length === 0) return { ranked: [], interpretations: [] };
+  if (tokens.length === 0) return { ranked: [], interpretations: [], readings: [] };
   const known = candidates(entities);
   const ranked = new Map<string, { hit: SearchHit; rank: number }>();
   const add = (candidate: Candidate, text: string, rank: number) => {
@@ -224,8 +224,16 @@ export function interpretSearch(query: string, entities: SearchEntity[]) {
     add(pair.model.candidate, pair.model.text, 4);
     add(pair.benchmark.candidate, pair.benchmark.text, 4);
   }
+  // Every model × benchmark reading of the query, including weaker ones, so a
+  // direct jump can require that the query names exactly one candidate.
+  const readings = new Map<string, Interpretation>();
+  for (const pair of pairs) {
+    const model = pair.model.candidate.entity, benchmark = pair.benchmark.candidate.entity;
+    const versionId = pair.benchmark.candidate.version?.id;
+    readings.set(`${model.id}:${benchmark.id}:${versionId ?? ""}`, { model, benchmark, versionId, high: pair.model.high && pair.benchmark.high });
+  }
   const hasExact = [...ranked.values()].some((entry) => entry.rank < 3);
-  return { ranked: [...ranked.values()].filter((entry) => !hasExact || entry.rank < 5), interpretations: [...interpretations.values()] };
+  return { ranked: [...ranked.values()].filter((entry) => !hasExact || entry.rank < 5), interpretations: [...interpretations.values()], readings: [...readings.values()] };
 }
 
 export function orderSearch(entries: { hit: SearchHit; rank: number }[]) {

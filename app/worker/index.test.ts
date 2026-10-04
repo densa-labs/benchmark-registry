@@ -208,10 +208,10 @@ describe("read API response contracts", () => {
     });
   });
 
-  it("includes the highest recorded result without altering model pagination or order", async () => {
+  it("includes the latest reported result, not the highest, without altering model pagination or order", async () => {
     const { body, calls } = await api("/api/models?sort=name", (tag) => tag === "models:featured-results"
-      ? [{ ...resultRow, score_value: "9", score_raw: "9%" },
-        { ...resultRow, result_key: "b".repeat(64), score_value: "73.3", score_raw: "73.3%", reasoning_level: "max" }]
+      ? [{ ...resultRow, score_value: "99", score_raw: "99%" },
+        { ...resultRow, result_key: "b".repeat(64), score_value: "73.3", score_raw: "73.3%", reasoning_level: "max", reported_at: "2025-06-01" }]
       : defaultResponder(tag));
     expect(body).toMatchObject({ data: [{ registry_no: "10002", featured_result: {
       reasoning_level: "max", score: { value: "73.3", display: "73.3%" },

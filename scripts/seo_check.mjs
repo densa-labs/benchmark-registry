@@ -48,9 +48,10 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
     const template=readFileSync(pristine ? clientTemplate : join(root,'app/index.html'),'utf8');
     // Serve the generated files the way Workers static assets does: exact file,
     // then `.html`, `_redirects` rules, and 404.html for anything else. Query strings never select a file.
-    const site=await runtime.buildStaticSite({db,environment:'production',template});
+    // The frozen root-slug allow-list names real models; the fixture seed has none of them.
+    const site=await runtime.buildStaticSite({db,environment:'production',template,...(values.db ? {} : {legacyRootSlugs:{}})});
     const files=new Map(site.files.map(file=>[file.path,file.body]));
-    headers=runtime.headerRules(site.files.map(file=>file.path),'production');
+    headers=runtime.headerRules(site.files.map(file=>file.path),'production',site.security);
     const redirects=new Map(files.get('_redirects').trim().split('\n').filter(line=>!line.includes(':') && !line.includes('*')).map(line=>line.split(' ')).map(([from,to,status])=>[from,{to,status:Number(status)}]));
     const types={'.html':'text/html; charset=utf-8','.xml':'application/xml','.svg':'image/svg+xml','.txt':'text/plain; charset=utf-8','.json':'application/json'};
     const respond=(file,status=200)=>new Response(files.get(file),{status,headers:{'Content-Type':types[file.slice(file.lastIndexOf('.'))] ?? 'application/octet-stream'}});

@@ -90,7 +90,9 @@ for(let i=0;i<queue.length;i++){
  }
 }
 for(const e of entries)assert.ok(depth.has(new URL(e.url).pathname)&&depth.get(new URL(e.url).pathname)<=3,e.url+' reachability');
-for(const [old,target] of [['/benchmarks/itbench-sre/versions/default','/benchmarks'],['/incai-ringflash20','/models'],['/models/claude-opus-5-5','/models/20015']]){const r=await response(old);assert.equal(r.status,301,old);assert.equal(r.headers.get('Location'),origin+target,old);}
+for(const [old,target] of [['/benchmarks/gpqa/versions/diamond','/benchmarks/gpqa/diamond'],['/claude-opus-5-5','/models/20015'],['/models/claude-opus-5-5','/models/20015']]){const r=await response(old);assert.equal(r.status,301,old);assert.equal(r.headers.get('Location'),origin+target,old);}
+// Retired identities with no equivalent are a real 404, never a hub redirect (audit C1).
+for(const old of ['/benchmarks/itbench-sre/versions/default','/incai-ringflash20']){const r=await response(old);assert.equal(r.status,404,old);}
 if(environment==='production')for(const url of ['https://www.benchmarkregistry.org/models/20015?limit=100','http://benchmarkregistry.org/models/20015?limit=100']){const r=await fetch(url,{redirect:'manual'});assert.equal(r.status,301,url);assert.equal(r.headers.get('Location'),canonical+'/models/20015?limit=100',url);}
 assert.equal((await response('/assets/Benchmark-Registry-B-Logo-Dark.png')).status,200);
 const output={environment,origin,commit:execFileSync('git',['rev-parse','--short=12','HEAD'],{encoding:'utf8'}).trim(),generation:manifest.generation,stats,sitemapUrls:entries.length,comparisons:seo.comparisons.length,noindexPages:Object.values(seo.pages).filter(p=>!isIndexable(p)).length,checkedAt:new Date().toISOString(),transientResponses,results};

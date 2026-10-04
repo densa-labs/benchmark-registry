@@ -1603,6 +1603,12 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 
 .search-hint { display: block; color: var(--text-muted); font-size: .65rem; line-height: 1.1; margin-top: .15rem; }
 
+/* WCAG 2.2 SC 2.5.8: small text links and disclosures get a 24px-tall target; the text itself is unchanged. */
+.search-hint { display: flex; align-items: center; width: fit-content; min-block-size: 24px; margin-top: 0; }
+.report-issue { display: inline-flex; align-items: center; min-block-size: 24px; }
+details > summary { min-block-size: 24px; line-height: 24px; }
+.home-addition-score > a { display: inline-flex; align-items: center; min-block-size: 24px; }
+
 @media (max-width: 48rem) {
   .site-footer__inner { grid-template-columns: minmax(0, 1fr); }
   .site-footer__dates { grid-column: 1; grid-row: 1; }

@@ -6,16 +6,24 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {parseArgs} from 'node:util';
 import {chromium} from 'playwright-core';
 
-const {values}=parseArgs({options:{host:{type:'string'},output:{type:'string'},cloudflared:{type:'string'},chrome:{type:'string'},quick:{type:'boolean'}}});
-assert.ok(['staging.benchmarkregistry.org','benchmarkregistry.org'].includes(values.host));
+const {values}=parseArgs({options:{host:{type:'string'},base:{type:'string'},output:{type:'string'},cloudflared:{type:'string'},chrome:{type:'string'},quick:{type:'boolean'}}});
+// --base serves a local production build (npm run preview), e.g. http://127.0.0.1:8787.
+const local=values.base ? new URL(values.base) : null;
+assert.ok(local ? ['127.0.0.1','localhost'].includes(local.hostname) : ['staging.benchmarkregistry.org','benchmarkregistry.org'].includes(values.host));
 assert.ok(values.output);
-const staging=values.host.startsWith('staging.');
-const origin=`https://${values.host}`;
+if(local) values.host=local.host;
+const staging=!local && values.host.startsWith('staging.');
+const origin=local ? local.origin : `https://${values.host}`;
 const extraHTTPHeaders=staging?{'CF-Access-Jwt-Assertion':execFileSync(values.cloudflared??'cloudflared',['access','token',`--app=${origin}`],{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim()}:{};
 const browser=await chromium.launch({executablePath:values.chrome??'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
 const exact='/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b';
-const paths=staging?['/','/models','/models/10005','/benchmarks','/benchmarks/gpqa','/benchmarks/gpqa/diamond','/companies','/companies/openai',exact,'/models/99999']:['/','/models/10005','/benchmarks/gpqa/diamond','/companies/openai',exact,'/models/99999'];
+const paths=staging?['/','/models','/models/10005','/benchmarks','/benchmarks/gpqa','/benchmarks/gpqa/diamond','/companies','/companies/openai',exact,'/models/99999']
+  // Locally, also the pages the October 2026 audit found target-size failures on.
+  :local?['/','/models','/models/10005','/models/20015','/recent','/benchmarks','/benchmarks/gpqa/diamond','/benchmarks/mmmu-pro/no-tools','/companies','/companies/anthropic',exact,'/models/99999']
+  :['/','/models/10005','/benchmarks/gpqa/diamond','/companies/openai',exact,'/models/99999'];
 const evidence={host:values.host,started:new Date().toISOString(),axeVersion:JSON.parse(readFileSync(new URL('../node_modules/axe-core/package.json',import.meta.url),'utf8')).version,routes:[],interactions:[],limits:['Automated Chrome keyboard and accessibility-tree checks; no physical screen reader or touch-device test.','200% text resize and constrained layout are automated separately from actual browser zoom.']};
+// axe is injected as an inline script, which the site's CSP correctly blocks.
+const bypassCSP=true;
 const errors=[];
 const axeSource=readFileSync(new URL('../node_modules/axe-core/axe.min.js',import.meta.url),'utf8');
 async function axeCheck(page,label) {
@@ -29,16 +37,16 @@ async function axeCheck(page,label) {
 }
 function check(condition,message) {assert.ok(condition,message);}
 try {
-  for(const width of values.quick?[]:staging?[1440,390]:[390]) {
-    const context=await browser.newContext({viewport:{width,height:900},extraHTTPHeaders});
+  for(const width of values.quick?[]:staging||local?[1440,390]:[390]) {
+    const context=await browser.newContext({viewport:{width,height:900},extraHTTPHeaders,bypassCSP});
     const page=await context.newPage();page.setDefaultTimeout(8000);page.on('pageerror',error=>errors.push(error.message));
     for(const theme of staging?['light','dark']:['light']) {
       await page.emulateMedia({colorScheme:theme});
       for(const path of paths) {
         const response=await page.goto(origin+path);await page.locator('main h1').waitFor();
         assert.equal(response.status(),path.endsWith('99999')?404:200,path);
-        assert.equal(response.headers()['x-registry-d1-rows'],'0',path);
-        assert.equal(response.headers()['x-registry-d1-queries'],'0',path);
+        // Static assets: no Worker, so no diagnostics headers.
+        assert.equal(Object.keys(response.headers()).some(name=>name.startsWith('x-registry-') || name==='server-timing'),false,path);
         assert.equal(await page.locator('main h1').count(),1,path);
         assert.equal(await page.locator('main').count(),1,path);
         assert.equal(await page.locator('.staging-banner').count(),staging?1:0);
@@ -49,7 +57,7 @@ try {
     }
     await context.close();
   }
-  const context=await browser.newContext({viewport:{width:390,height:844},extraHTTPHeaders});
+  const context=await browser.newContext({viewport:{width:390,height:844},extraHTTPHeaders,bypassCSP});
   const page=await context.newPage();page.setDefaultTimeout(8000);page.on('pageerror',error=>errors.push(error.message));
   await page.goto(origin+'/models');
   await page.keyboard.press('Tab');assert.equal(await page.locator('.skip-link').evaluate(el=>el===document.activeElement),true);
@@ -60,8 +68,11 @@ try {
   await page.keyboard.press('Space');assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'),'true');
   await page.keyboard.press('Tab');assert.equal(await page.locator('#global-search-input').evaluate(el=>el===document.activeElement),true);
   await page.locator('#global-search-input').fill('gpt');await page.keyboard.press('Enter');await page.locator('.global-search-results a').first().waitFor();
+  // Measure contrast after the menu's opacity transition, not mid-fade.
+  await page.waitForFunction(()=>getComputedStyle(document.querySelector('.header-menu')).opacity==='1');
   await axeCheck(page,'Mobile global search expanded');
-  await page.keyboard.press('Tab');await page.keyboard.press('Tab');
+  // Submit button, then the operator hint link, then the first result.
+  await page.keyboard.press('Tab');await page.keyboard.press('Tab');await page.keyboard.press('Tab');
   check(await page.locator('.global-search-results a').first().evaluate(el=>el===document.activeElement),'Search results reachable through Tab');
   await page.keyboard.press('Escape');assert.equal(await page.locator('#global-search-input').evaluate(el=>el===document.activeElement),true);
   assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'),'true');
@@ -86,7 +97,7 @@ try {
   await page.locator('.local-search__clear').focus();await page.keyboard.press('Enter');await page.locator('table').waitFor();
   await page.locator('.mobile-menu-toggle').press('Enter');await page.locator('.primary-nav a[href="/benchmarks"]').focus();await page.keyboard.press('Enter');await page.waitForURL('**/benchmarks');
   check(await page.locator('h1').evaluate(el=>el===document.activeElement),'Route identity gets focus');
-  check(await page.title().then(title=>staging?title==='STAGING | Benchmark Registry':title.startsWith('Benchmarks')),'Route title');
+  check(await page.title().then(title=>staging?title==='STAGING | Benchmark Registry':title.startsWith('AI Benchmarks')),'Route title');
   await page.locator('.mobile-menu-toggle').press('Enter');await page.locator('.primary-nav a[href="/models"]').press('Enter');await page.waitForURL('**/models');
   check(await page.locator('h1').evaluate(el=>el===document.activeElement),'Cached route still gets focus');
   evidence.interactions.push('Sort state and restored control focus; keyboard table scrolling; pagination announcement; local search/empty/clear; cold and cached route identity focus.');
@@ -102,7 +113,9 @@ try {
   check(contrast.text>=4.5 && contrast.muted>=4.5 && contrast.accent>=4.5 && contrast.focus>=3 && contrast.control>=3,'Dark contrast');evidence.interactions.push({darkContrast:contrast});
   await page.locator('label[for=theme-system]').click();check(await page.locator('input[name="color-theme"]:checked').count()===1,'One selected native radio');
   await page.locator('.last-updated').focus();await page.keyboard.press('Space');assert.equal(await page.locator('.last-updated').getAttribute('aria-pressed'),'true');await page.keyboard.press('Enter');assert.equal(await page.locator('.last-updated').getAttribute('aria-pressed'),'false');
-  await page.keyboard.press('Tab');assert.equal(await page.locator('.site-footer__links a').evaluate(el=>el===document.activeElement),true);
+  // The footer's links (license, then the link list) in order, then the theme control.
+  const footerOrder=[page.locator('.site-footer a[href*="creativecommons.org"]'),...await page.locator('.site-footer__links a').all()];
+  for(const link of footerOrder) {await page.keyboard.press('Tab');assert.equal(await link.evaluate(el=>el===document.activeElement),true);}
   await page.keyboard.press('Tab');assert.equal(await page.locator('#theme-system').evaluate(el=>el===document.activeElement),true);await page.keyboard.press('Tab');assert.equal(await page.locator('.github-link').evaluate(el=>el===document.activeElement),true);
   evidence.interactions.push('Native theme arrows, one selected radio, explicit theme persistence, System restoration; Last updated Space/Enter toggle; Legal/theme/GitHub keyboard order.');
 
@@ -134,4 +147,4 @@ try {
   await context.close();
 } catch(error) {evidence.result='FAIL';evidence.failure=String(error);throw error;}
 finally {writeFileSync(values.output,JSON.stringify(evidence,null,2)+'\n');await browser.close();}
-console.log(`PASS: bounded ${values.host} accessibility and keyboard audit`);
+console.log(`PASS: bounded ${origin} accessibility and keyboard audit`);

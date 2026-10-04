@@ -67,14 +67,32 @@ There is no public `/api` anymore.
 
 Static assets send `ETag` and answer conditional requests with 304. Cache rules
 never overlap, because overlapping `_headers` rules append values. Staging adds
-`X-Robots-Tag: noindex, nofollow, noarchive` and its CSP to every response, and
-its robots.txt disallows everything.
+`X-Robots-Tag: noindex, nofollow, noarchive` to every response, and its
+robots.txt disallows everything.
+
+One `/*` rule sends the security headers on every response: HSTS (one year,
+`includeSubDomains`, no preload), `nosniff`, `strict-origin-when-cross-origin`
+and a CSP. The build hashes the only inline script (the theme script) into
+`script-src` and fails if a second inline script appears. Production also allows
+the Cloudflare Web Analytics beacon, which the zone injects automatically, and
+the `ANALYTICS_SCRIPT_URL` script when it is set. Staging allows neither, which
+keeps it out of analytics.
+
+`/version.json` names the live build: full git commit, whether the tree was
+dirty, commit and build times, when the build read D1, the data generation, and
+model, benchmark, version and result counts. It is served with
+`Cache-Control: no-store`. It replaces the Worker's `/healthz`.
 
 ## Redirects (`_redirects`)
 
 Generated from the data: retired model numbers (308), legacy
-`/benchmarks/<family>/versions/<version>` URLs and old model name slugs (301),
-and trailing-slash variants to the canonical path (308).
+`/benchmarks/<family>/versions/<version>` URLs and `versions/default` for
+existing families (301), `/models/<name-slug>` (301), root-level model slugs
+from the frozen allow-list in `worker/legacy-root-slugs.ts` (301), and
+trailing-slash variants to the canonical path (308). Retired identities with no
+equivalent, such as an unknown version or an unlisted root slug, get the real
+404 page instead of a hub redirect. The build fails if an allow-listed slug
+points at a model that is not published.
 
 ## Cloudflare settings outside this repository
 

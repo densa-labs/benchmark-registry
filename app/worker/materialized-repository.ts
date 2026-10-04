@@ -3,7 +3,7 @@ import { normalizeSearch, type ParsedListParams } from './params';
 import type { RegistryRepository } from './repository';
 import { searchResponse } from './search-response';
 import type { ReadData, ReadManifest, ResultFields } from './read-model';
-import { highestRecordedResult, type FeaturedResult } from './featured-result';
+import { latestReportedResult, type FeaturedResult } from './featured-result';
 export type RegistryReader=Pick<RegistryRepository,'seoSnapshot'|'modelRedirectTarget'|'metadataModel'|'metadataCompany'|'metadataBenchmark'|'metadataResult'|'sitemapPaths'|'stats'|'homePanels'|'models'|'model'|'benchmarks'|'benchmark'|'benchmarkVersion'|'companies'|'company'|'search'>;
 const binary=(a:string|null,b:string|null)=>{
   if(a===b) return 0;if(a===null) return -1;if(b===null) return 1;
@@ -64,7 +64,7 @@ export class MaterializedRepository implements RegistryReader {
     const data = await Promise.all(response.data.map(async row => {
       if (!this.featuredResults.has(row.registry_no)) this.featuredResults.set(row.registry_no, featured && row.registry_no in featured
         ? Promise.resolve(featured[row.registry_no])
-        : this.get<'model'>(`model:${row.registry_no}`).then(model => highestRecordedResult(model.response.data.results)));
+        : this.get<'model'>(`model:${row.registry_no}`).then(model => latestReportedResult(model.response.data.results)));
       return { ...row, featured_result: await this.featuredResults.get(row.registry_no)! };
     }));
     return { ...response, data };
