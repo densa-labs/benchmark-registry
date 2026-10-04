@@ -259,5 +259,98 @@ class ValidationTests(unittest.TestCase):
             self.assertTrue(json.loads(output.getvalue())["error"])
 
 
+class ManifestTests(unittest.TestCase):
+    def run_main(self, mutate=None, staging=None):
+        import contextlib
+        import hashlib
+        import io
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            batches, only = root / "batches", root / "staging-only"
+            batches.mkdir()
+            only.mkdir()
+            batch, _, _ = fixture()
+            (batches / "a.json").write_text(json.dumps(batch))
+            entries = [{
+                "order": 1,
+                "file": "a.json",
+                "sha256": hashlib.sha256((batches / "a.json").read_bytes()).hexdigest(),
+                "applied": {"staging": None, "production": "2026-10-04T11:12:00Z"},
+            }]
+            if staging is not None:
+                (only / "held.json").write_text(json.dumps(staging))
+            if mutate:
+                mutate(batches, entries)
+            (batches / "manifest.json").write_text(json.dumps({"batches": entries}))
+            with contextlib.redirect_stdout(io.StringIO()) as output:
+                status = main(["--batches", str(batches), "--staging-only", str(only), "--json"])
+            return status, json.loads(output.getvalue())
+
+    def assert_manifest_error(self, mutate, location):
+        status, report = self.run_main(mutate)
+        self.assertEqual(status, 1)
+        self.assertIn(
+            ("manifest", location),
+            [(entry["rule"], entry["location"]) for entry in report["error"]],
+        )
+
+    def test_valid_manifest_passes(self):
+        status, report = self.run_main()
+        self.assertEqual((status, report["error"]), (0, []))
+
+    def test_unlisted_batch_file(self):
+        def mutate(batches, entries):
+            (batches / "b.json").write_text((batches / "a.json").read_text())
+
+        self.assert_manifest_error(mutate, "b.json")
+
+    def test_entry_for_missing_file(self):
+        self.assert_manifest_error(
+            lambda batches, entries: (batches / "a.json").unlink(), "a.json"
+        )
+
+    def test_sha256_mismatch(self):
+        self.assert_manifest_error(
+            lambda batches, entries: entries[0].update(sha256="0" * 64), "a.json"
+        )
+
+    def test_duplicate_order(self):
+        def mutate(batches, entries):
+            (batches / "b.json").write_text((batches / "a.json").read_text())
+            entries.append({**entries[0], "file": "b.json"})
+
+        self.assert_manifest_error(mutate, "manifest.json")
+
+    def test_non_contiguous_order(self):
+        self.assert_manifest_error(
+            lambda batches, entries: entries[0].update(order=2), "manifest.json"
+        )
+
+    def test_applied_must_be_timestamp_or_null(self):
+        self.assert_manifest_error(
+            lambda batches, entries: entries[0]["applied"].update(staging="soon"),
+            "a.json",
+        )
+
+    def test_authorization_must_be_tracked(self):
+        self.assert_manifest_error(
+            lambda batches, entries: entries[0].update(authorization="data/nowhere.md"),
+            "a.json",
+        )
+
+    def test_staging_only_is_schema_checked_but_not_listed(self):
+        batch, result, _ = fixture()
+        held = {"records": [{"operation": "result", "record": result}]}
+        status, report = self.run_main(staging=held)
+        self.assertEqual((status, report["error"]), (0, []))
+        held["records"][0]["record"]["score_value"] = "101"
+        status, report = self.run_main(staging=held)
+        self.assertEqual(status, 1)
+        self.assertTrue(
+            any(entry["location"].startswith("staging-only/held.json") for entry in report["error"])
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
