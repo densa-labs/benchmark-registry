@@ -119,15 +119,6 @@
     },
     {
       "order": 14,
-      "file": "expansion-2026-09-30-cohort-07.json",
-      "sha256": "cf1d0c0cd471014a80cc42c9b7ca17011c68343597913537bf394fb9ab0f3a49",
-      "applied": {
-        "staging": null,
-        "production": null
-      }
-    },
-    {
-      "order": 15,
       "file": "expansion-2026-09-30-cohort-08.json",
       "sha256": "6ae2ffd64ed7364b8b20dac3828d00627941ad997bd48f03d1cac202bf166ac6",
       "applied": {
@@ -136,7 +127,7 @@
       }
     },
     {
-      "order": 16,
+      "order": 15,
       "file": "expansion-2026-09-30-cohort-09.json",
       "sha256": "189f731a4ac706c52b58558b7f469adbd47c650ba27f4d952b9be9c6ceb00ccd",
       "applied": {
@@ -145,7 +136,7 @@
       }
     },
     {
-      "order": 17,
+      "order": 16,
       "file": "expansion-2026-09-30-cohort-10.json",
       "sha256": "c26d07127d440a34c9b6e50caf236d8c716adc1fbb4b88a381e03e4c6182f4bf",
       "applied": {
@@ -154,7 +145,7 @@
       }
     },
     {
-      "order": 18,
+      "order": 17,
       "file": "expansion-2026-09-30-cohort-11.json",
       "sha256": "daf2189a3a9cac68b6dcdc9a0edb931667f27bc4e659d64873801b3fbb3ccd26",
       "applied": {
@@ -163,7 +154,7 @@
       }
     },
     {
-      "order": 19,
+      "order": 18,
       "file": "expansion-2026-09-30-cohort-12.json",
       "sha256": "9a5ee72d05be12d381c0729a04f097a94ec92c27c3ea2e83d4822a7feceae05c",
       "applied": {
@@ -172,7 +163,7 @@
       }
     },
     {
-      "order": 20,
+      "order": 19,
       "file": "expansion-2026-09-30-cohort-13.json",
       "sha256": "1bc2b7e770addb9da4291509a6d91580eb6d2e77d2c76a06a7b4e2ad7b46b560",
       "applied": {
@@ -181,7 +172,7 @@
       }
     },
     {
-      "order": 21,
+      "order": 20,
       "file": "expansion-2026-09-30-cohort-14.json",
       "sha256": "9bac7912758ace4d9a6d0e2b0b7318150f240aa1803229b0ec1ee978bc7c9f47",
       "applied": {
@@ -190,7 +181,7 @@
       }
     },
     {
-      "order": 22,
+      "order": 21,
       "file": "expansion-2026-09-30-cohort-15.json",
       "sha256": "0c57a4eb109f8b8487d521c0c0a88b95fdc72855e114bb9b57aec6f261ac1812",
       "applied": {
@@ -199,7 +190,7 @@
       }
     },
     {
-      "order": 23,
+      "order": 22,
       "file": "expansion-2026-09-30-cohort-16.json",
       "sha256": "8f78ea3a9e1a68e5cc996232ef11cf67ee93917c11f3d4e386fb493bd4a127da",
       "applied": {
@@ -208,7 +199,7 @@
       }
     },
     {
-      "order": 24,
+      "order": 23,
       "file": "expansion-2026-09-30-cohort-17.json",
       "sha256": "6f3584fc99c662e5568dbbc29a839626a4832d0a3693a4e02c03ce3de58bc0a1",
       "applied": {
@@ -217,7 +208,7 @@
       }
     },
     {
-      "order": 25,
+      "order": 24,
       "file": "expansion-2026-09-30-cohort-18.json",
       "sha256": "1dbb8572ac797b7687d7e6870912d34fd48d6348be3d3473ba425b06d6bb9429",
       "applied": {
@@ -226,7 +217,7 @@
       }
     },
     {
-      "order": 26,
+      "order": 25,
       "file": "expansion-2026-09-30-cohort-19.json",
       "sha256": "7b803530b16faf9718e19fa21e822905bd938edf012b8bc0dcc6cb34c94a9e9a",
       "applied": {
@@ -235,7 +226,7 @@
       }
     },
     {
-      "order": 27,
+      "order": 26,
       "file": "expansion-2026-09-30-cohort-20.json",
       "sha256": "f1a19e6adb22b1ae85aa64fff46f928fb24bf31da6cfa3758fd4ab29e47b07b7",
       "applied": {
@@ -244,7 +235,7 @@
       }
     },
     {
-      "order": 28,
+      "order": 27,
       "file": "expansion-2026-09-30-cohort-21.json",
       "sha256": "24c17c283ea09a355314bd6d50e1f3768a3379134f73a3a59a7bd66c4c3e7fd1",
       "applied": {
@@ -253,7 +244,7 @@
       }
     },
     {
-      "order": 29,
+      "order": 28,
       "file": "expansion-2026-09-30-cohort-22.json",
       "sha256": "a765bc34db98a9d3488b4d35d9736cd969000483f0fc0c465c1c8b2358afded6",
       "applied": {
@@ -262,7 +253,7 @@
       }
     },
     {
-      "order": 30,
+      "order": 29,
       "file": "expansion-2026-09-30-cohort-23.json",
       "sha256": "7327cd99405ce1d4b5ad978462acbbfe8cd242b9040175996e1dfcb8910a20ba",
       "applied": {
@@ -271,7 +262,7 @@
       }
     },
     {
-      "order": 31,
+      "order": 30,
       "file": "expansion-2026-09-30-cohort-24.json",
       "sha256": "4e0844504e33a62daf6f1b3249216ae95051591af29bccc8fd791160be37a173",
       "applied": {
@@ -280,7 +271,7 @@
       }
     },
     {
-      "order": 32,
+      "order": 31,
       "file": "expansion-2026-09-30-cohort-25.json",
       "sha256": "159b2a5225a818189495a7cf685e811c86c25d86ce45150bf67786765c2423a6",
       "applied": {
@@ -289,7 +280,7 @@
       }
     },
     {
-      "order": 33,
+      "order": 32,
       "file": "gemini-4-argon-2026-10-03.json",
       "sha256": "df04018a10dd9499814003488ea30fdb7d32ef5c69edeab985e457b30ba9fe0d",
       "applied": {
