@@ -53,6 +53,9 @@ it("prerenders every page byte-for-byte as the Worker rendered it, plus data, fe
   }
   const notFound=output.get("404.html")!;
   expect(notFound).toContain("Page Not Found");
+  expect(notFound).toContain('<meta name="robots" content="noindex, follow">');
+  expect(notFound).not.toContain('rel="canonical"');
+  expect(notFound).not.toContain("__registry_static_not_found__");
 });
 
 it("serves the former read API in the browser from static files only", async () => {

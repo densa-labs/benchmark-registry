@@ -12,6 +12,8 @@ export interface DocumentMetadata {
   description: string;
   status?: number;
   canonical?: string;
+  /** Requested path in canonical form, set even when the page has no canonical URL. */
+  path?: string;
   noindex?: boolean;
   facts?: string[];
   links?: Array<{ href: string; label: string }>;
@@ -58,7 +60,9 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
     : route.kind === 'benchmark-version' ? `/benchmarks/${segment(route.slug)}/${segment(route.version)}`
     : url.pathname === '/' ? '/' : url.pathname.replace(/\/$/u, '');
   metadata.noindex = route.kind === "search" || (metadata.status ?? 200) !== 200 || url.searchParams.size > 0 || Boolean(metadata.page && !isIndexablePage(metadata.page));
-  metadata.canonical = CANONICAL_ORIGIN + path;
+  metadata.path = path;
+  // Only a page that exists has a canonical URL; a 404 names no URL to index.
+  if ((metadata.status ?? 200) === 200) metadata.canonical = CANONICAL_ORIGIN + path;
   return metadata;
 }
 

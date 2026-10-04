@@ -3,14 +3,16 @@ import { breadcrumbsForPath } from "../src/breadcrumb-data";
 import type { DocumentMetadata } from "./metadata";
 const publisher={"@type":"Organization",name:"Benchmark Registry",url:CANONICAL_ORIGIN};
 export function structuredData(metadata:DocumentMetadata):Record<string,unknown> {
-  const path=metadata.canonical ? new URL(metadata.canonical).pathname : "/";
+  const path=metadata.path ?? (metadata.canonical ? new URL(metadata.canonical).pathname : "/");
   const graph:Record<string,unknown>[]=[];
   if(path==="/") {
     graph.push({...publisher,"@id":`${CANONICAL_ORIGIN}/#organization`,logo:`${CANONICAL_ORIGIN}/assets/Benchmark-Registry-B-Logo-Dark.png`,
       parentOrganization:{"@type":"Organization",name:"Densa Labs",url:"https://densa-labs.github.io/"},
       sameAs:["https://densa-labs.github.io/","https://github.com/densa-labs/benchmark-registry"]});
     graph.push({"@type":"WebSite",name:"Benchmark Registry",url:CANONICAL_ORIGIN,publisher:{"@id":`${CANONICAL_ORIGIN}/#organization`}});
-  } else graph.push({"@type":"BreadcrumbList",itemListElement:breadcrumbsForPath(path,metadata.page?.name,metadata.page?.familyName).map((crumb,index)=>({
+  } else graph.push({"@type":"BreadcrumbList",itemListElement:breadcrumbsForPath(path,metadata.page?.name,metadata.page?.familyName)
+    // A missing page lists only the crumbs that exist, never its own URL.
+    .filter(crumb=>(metadata.status ?? 200)===200 || crumb.path==="/").map((crumb,index)=>({
     "@type":"ListItem",position:index+1,name:crumb.name,item:CANONICAL_ORIGIN+crumb.path,
   }))});
   if(path!=="/") graph.push({"@type":"WebPage",name:metadata.title,description:metadata.description,url:metadata.canonical,

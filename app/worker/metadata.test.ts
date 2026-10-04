@@ -48,5 +48,7 @@ it("escapes text rather than executing markup in head",async()=>{
 });
 it("renders real noindex 404 responses and keeps assets and HEAD working",async()=>{
   const missing=await page("/models/missing");expect(missing.response.status).toBe(404);expect(missing.html).toContain("noindex, follow");
+  // A missing page names no canonical or og:url: there is no URL to index.
+  expect(missing.html).not.toContain('rel="canonical"');expect(missing.html).not.toContain('property="og:url"');
   const head=await worker.fetch(new Request(CANONICAL_ORIGIN+"/models/10001",{method:"HEAD"}),fixture.env);expect(await head.text()).toBe("");
 });
