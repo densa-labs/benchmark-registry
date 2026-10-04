@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Set up Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24
           cache: npm
@@ -38,6 +38,9 @@ jobs:
       - name: Run frontend and API tests
         run: npm test
 
+      - name: Build app
+        run: npm run build
+
       - name: Verify initial HTML SEO and sitemap
         run: npm run test:seo
 
@@ -53,10 +56,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version-file: ingestor/.python-version
 
@@ -69,5 +72,23 @@ jobs:
       - name: Install Python dependencies
         run: uv sync --locked --all-groups
 
+      - name: Lint Python
+        working-directory: .
+        # From the root, ingestor/ uses its pyproject rules; scripts use ruff defaults.
+        run: uv run --project ingestor ruff check ingestor scripts app/scripts
+
       - name: Run Python tests
         run: uv run pytest
+
+      - name: Run script tests
+        run: uv run pytest ../scripts
+
+      - name: Run app script tests
+        working-directory: app
+        run: uv run --project ../ingestor python -m unittest discover -s scripts -p 'test_*.py'
+
+      - name: Validate tracked data
+        run: uv run python ../scripts/validate_data.py
+
+      - name: Replay the batch manifest twice
+        run: uv run python ../scripts/check_replay.py

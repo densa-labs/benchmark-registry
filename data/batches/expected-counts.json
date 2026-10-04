@@ -1,0 +1,13 @@
+{
+  "source": "data/evidence/gemini-4-argon-2026-10-03/production-argon-canonical-after.json",
+  "counts": {
+    "models": 95,
+    "benchmarks": 84,
+    "versions": 148,
+    "results": 945
+  },
+  "result_keys": [
+    "data/evidence/gemini-4-argon-2026-10-03/production-argon-before.json",
+    "data/evidence/gemini-4-argon-2026-10-03/production-argon-canonical-after.json"
+  ]
+}
