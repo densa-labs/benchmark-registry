@@ -1,0 +1,292 @@
+{
+  "batches": [
+    {
+      "order": 1,
+      "file": "p4-seed.json",
+      "sha256": "48a5255b25ae24889b76bf4cc0d8926b79685ee29f29930b032ca4f929256544",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 2,
+      "file": "launch-dataset.json",
+      "sha256": "fbb8ea24d31f63c3a307c46bd8ab56fb6a7f9e308bb19c8c1b1fe678bfc1772a",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 3,
+      "file": "p11-company-corrections.json",
+      "sha256": "97d5621153ca75da127f97ec01a4f52629b43cdd7afb7601dd14ee9f8aa52f24",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 4,
+      "file": "p11-user-attested-dates.json",
+      "sha256": "04789018c81ef1b9bdd1796f62cb6ec978781c1573b12f8492d34fd87165559d",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 5,
+      "file": "p11-staging-provider-consolidation.json",
+      "sha256": "ebdade199448840059b47d243c7c6ca38203390d1458286612ea344bda3a3e42",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 6,
+      "file": "post-launch-models-2026-09-30.json",
+      "sha256": "41c9065131980b72bfd5634758d27be1a8168b18d79cb22cd93429fe878d50a3",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 7,
+      "file": "post-launch-benchmarks-2026-09-30.json",
+      "sha256": "8edc9b60a01bdab1dacb78d30a9d6e35d5340a428091647f17f294efbf52fc88",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 8,
+      "file": "expansion-2026-09-30.json",
+      "sha256": "805e02fb3f142d1cb7ed8e37d94b06a45226deb5f599e13308ec957e93f03d09",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 9,
+      "file": "expansion-2026-09-30-cohort-02.json",
+      "sha256": "dd5950e4a0534bda0b36cb5ae95f3833aa22a33f48ec0996eeeae6e6ed2eacf3",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 10,
+      "file": "expansion-2026-09-30-cohort-03.json",
+      "sha256": "4aae13d0a6386982473dffd2551f9c10fe48bf3ed4c5184290a7a099d0a209b2",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 11,
+      "file": "expansion-2026-09-30-cohort-04.json",
+      "sha256": "eec151720009a0f23dbb2374817fbe3cb8edc0a8c2d7b4ad0fc91183a99ef219",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 12,
+      "file": "expansion-2026-09-30-cohort-05.json",
+      "sha256": "8502063d590247fb15aee30f1210e9803ce934fef82e7376ab137cbee88f3d99",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 13,
+      "file": "expansion-2026-09-30-cohort-06.json",
+      "sha256": "9521e1b50665bb12cfe472c6c63d0bbedd26d1416f8b3de7ba868a8dd627753f",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 14,
+      "file": "expansion-2026-09-30-cohort-07.json",
+      "sha256": "cf1d0c0cd471014a80cc42c9b7ca17011c68343597913537bf394fb9ab0f3a49",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 15,
+      "file": "expansion-2026-09-30-cohort-08.json",
+      "sha256": "6ae2ffd64ed7364b8b20dac3828d00627941ad997bd48f03d1cac202bf166ac6",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 16,
+      "file": "expansion-2026-09-30-cohort-09.json",
+      "sha256": "189f731a4ac706c52b58558b7f469adbd47c650ba27f4d952b9be9c6ceb00ccd",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 17,
+      "file": "expansion-2026-09-30-cohort-10.json",
+      "sha256": "c26d07127d440a34c9b6e50caf236d8c716adc1fbb4b88a381e03e4c6182f4bf",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 18,
+      "file": "expansion-2026-09-30-cohort-11.json",
+      "sha256": "daf2189a3a9cac68b6dcdc9a0edb931667f27bc4e659d64873801b3fbb3ccd26",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 19,
+      "file": "expansion-2026-09-30-cohort-12.json",
+      "sha256": "9a5ee72d05be12d381c0729a04f097a94ec92c27c3ea2e83d4822a7feceae05c",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 20,
+      "file": "expansion-2026-09-30-cohort-13.json",
+      "sha256": "1bc2b7e770addb9da4291509a6d91580eb6d2e77d2c76a06a7b4e2ad7b46b560",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 21,
+      "file": "expansion-2026-09-30-cohort-14.json",
+      "sha256": "9bac7912758ace4d9a6d0e2b0b7318150f240aa1803229b0ec1ee978bc7c9f47",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 22,
+      "file": "expansion-2026-09-30-cohort-15.json",
+      "sha256": "0c57a4eb109f8b8487d521c0c0a88b95fdc72855e114bb9b57aec6f261ac1812",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 23,
+      "file": "expansion-2026-09-30-cohort-16.json",
+      "sha256": "8f78ea3a9e1a68e5cc996232ef11cf67ee93917c11f3d4e386fb493bd4a127da",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 24,
+      "file": "expansion-2026-09-30-cohort-17.json",
+      "sha256": "6f3584fc99c662e5568dbbc29a839626a4832d0a3693a4e02c03ce3de58bc0a1",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 25,
+      "file": "expansion-2026-09-30-cohort-18.json",
+      "sha256": "1dbb8572ac797b7687d7e6870912d34fd48d6348be3d3473ba425b06d6bb9429",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 26,
+      "file": "expansion-2026-09-30-cohort-19.json",
+      "sha256": "7b803530b16faf9718e19fa21e822905bd938edf012b8bc0dcc6cb34c94a9e9a",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 27,
+      "file": "expansion-2026-09-30-cohort-20.json",
+      "sha256": "f1a19e6adb22b1ae85aa64fff46f928fb24bf31da6cfa3758fd4ab29e47b07b7",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 28,
+      "file": "expansion-2026-09-30-cohort-21.json",
+      "sha256": "24c17c283ea09a355314bd6d50e1f3768a3379134f73a3a59a7bd66c4c3e7fd1",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 29,
+      "file": "expansion-2026-09-30-cohort-22.json",
+      "sha256": "a765bc34db98a9d3488b4d35d9736cd969000483f0fc0c465c1c8b2358afded6",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 30,
+      "file": "expansion-2026-09-30-cohort-23.json",
+      "sha256": "7327cd99405ce1d4b5ad978462acbbfe8cd242b9040175996e1dfcb8910a20ba",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 31,
+      "file": "expansion-2026-09-30-cohort-24.json",
+      "sha256": "4e0844504e33a62daf6f1b3249216ae95051591af29bccc8fd791160be37a173",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 32,
+      "file": "expansion-2026-09-30-cohort-25.json",
+      "sha256": "159b2a5225a818189495a7cf685e811c86c25d86ce45150bf67786765c2423a6",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    }
+  ]
+}
