@@ -39,7 +39,7 @@ function selectControl(selector: string) {
 
 describe("Compare page", () => {
   it("renders aligned metadata, shared/other scores, provenance, and the active header link", async () => {
-    await mount(<RegistryDocument loaded={{ kind: "compare", payload }} currentSearch={search} />);
+    await mount(<RegistryDocument loaded={{ kind: "compare", payload }} currentSearch={search+"&benchmarks=all"} />);
     expect(container.querySelector('a[href="/compare"][aria-current="page"]')?.textContent).toBe("Compare");
     expect(container.querySelectorAll("h1")).toHaveLength(1);
     expect(container.querySelector("#shared-benchmarks")?.textContent).toBe("Shared benchmarks");
@@ -59,7 +59,7 @@ describe("Compare page", () => {
     await mount(<ComparePage response={variant} currentSearch={search} />);
     expect(container.querySelector(".compare-context-warning")?.textContent).toContain("Potentially non-equivalent");
     expect(container.querySelectorAll(".compare-evaluation")).toHaveLength(3);
-    expect(container.querySelectorAll("details summary")).toHaveLength(1);
+    expect(container.querySelectorAll(".compare-details > summary")).toHaveLength(1);
     expect(container.querySelector("summary")?.textContent).toContain("Evaluation details");
     expect(container.textContent).toContain("Benchmark versions differ.");
     expect(container.textContent).toContain("Evaluator sets differ.");
@@ -90,10 +90,10 @@ describe("Compare page", () => {
 
   it("searches aliases and paginates the union after shared-only filtering", () => {
     const rows = buildComparisonRows(payload.selected[0]!.data.results, payload.selected[1]!.data.results);
-    expect(comparisonPage(rows, parseComparisonState("?q=TB"))).toMatchObject({ shared: [], other: [expect.objectContaining({ shared: false })], total: 1 });
+    expect(comparisonPage(rows, parseComparisonState("?q=TB&benchmarks=all"))).toMatchObject({ shared: [], other: [expect.objectContaining({ shared: false })], total: 1 });
     expect(comparisonPage(rows, parseComparisonState("?benchmarks=shared"))).toMatchObject({ other: [], total: 1 });
     const many = Array.from({ length: 70 }, (_, index) => result({ result_key: String(index), benchmark: { name: `Benchmark ${index}`, slug: `benchmark-${index}`, aliases: [] } }));
-    const page = comparisonPage(buildComparisonRows(many, []), parseComparisonState("?page=2"));
+    const page = comparisonPage(buildComparisonRows(many, []), parseComparisonState("?page=2&benchmarks=all"));
     expect(page.other).toHaveLength(20);
     expect(page.totalPages).toBe(2);
   });

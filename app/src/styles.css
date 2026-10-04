@@ -1598,6 +1598,9 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .score-chart-frontier { fill: none; stroke: var(--accent); stroke-width: 2; }
 .score-chart-point { fill: var(--accent); stroke: var(--background); }
 
+.coverage-options input[type="date"] { width: auto; max-width: 100%; }
+.coverage-options select { max-width: var(--coverage-provider-width); }
+
 @media (max-width: 48rem) {
   .site-footer__inner { grid-template-columns: minmax(0, 1fr); }
   .site-footer__dates { grid-column: 1; grid-row: 1; }

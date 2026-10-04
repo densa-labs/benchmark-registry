@@ -5,7 +5,7 @@ import { Fragment, type FormEvent, type ReactNode } from "react";
 import type { ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "./benchmark-names";
-import { buildComparisonRows, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
+import { buildComparisonRows, filteredComparisonModels, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
 import { formatRegistryDate, type ModelDetailResponse } from "./registry";
 import { navigateRegistry } from "./navigation";
 import { EmptyState, MetadataRows, PageContainer, PageHeader, PageSizeSelector, Pagination, SourceLink, Tabs } from "./ui/components";
@@ -96,6 +96,8 @@ function Information({ selected, names }: { selected: ComparisonResponse["select
 export function ComparePage({ response, currentSearch }: { response: ComparisonResponse; currentSearch: string }) {
   let state: ComparisonState;
   try { state = parseComparisonState(currentSearch); } catch { state = parseComparisonState(""); }
+  const availableModels=filteredComparisonModels(response.models,state);
+  const providers=[...new Map(response.models.map(model=>[model.company.slug,model.company])).values()].sort((a,b)=>a.name.localeCompare(b.name,"en"));
   const selections = response.selected.map((model, index) => reasoningSelection(model, state.reasoning[index]));
   const effective: ComparisonState = { ...state, models: response.selected.map((model, index) => model?.data.model.registry_no ?? state.models[index]) as ComparisonState["models"], reasoning: selections.map((selection, index) => response.selected[index] ? selection.value : undefined) as ComparisonState["reasoning"] };
   const names: [string, string] = [response.selected[0]?.data.model.name ?? "Model A", response.selected[1]?.data.model.name ?? "Model B"];
@@ -121,6 +123,13 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
   return <PageContainer className="registry-page compare-page">
     <PageHeader title="Compare models" description="Model information and benchmark results, side by side." />
     {response.issues.length ? <div className="compare-query-error" role="alert">{response.issues.map(issue => <p key={issue}>{issue}</p>)}<a href="/compare">Reset comparison</a></div> : null}
+    <p><a href={comparisonHref(effective)}>Share this comparison</a></p>
+    <form className="coverage-options" method="get" action="/compare" aria-label="Filter available models">
+      {queryFields(["provider","released_from","released_to","page"])}
+      <label>Provider <select name="provider" defaultValue={state.provider ?? ""}><option value="">All providers</option>{providers.map(provider=><option key={provider.slug} value={provider.slug}>{provider.name}</option>)}</select></label>
+      <label>Released from <input type="date" name="released_from" defaultValue={state.releasedFrom} /></label>
+      <label>Released to <input type="date" name="released_to" defaultValue={state.releasedTo} /></label><button type="submit">Filter models</button>
+    </form>
     <form className="compare-selectors" method="get" action="/compare" onSubmit={submitSelection} aria-label="Select models to compare">
       {queryFields(["models", "reasoning", "page"])}
       <div className="compare-selector-intro"><span>Models</span><p>Latest reported results</p></div>
@@ -128,13 +137,13 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
         const label = side === 0 ? "A" : "B";
         const model = response.selected[side]?.data.model;
         const selection = selections[side];
-        const groups = [...new Set(response.models.map(model => model.company.name))].sort((a, b) => a.localeCompare(b, "en"));
+        const groups = [...new Set(availableModels.map(model => model.company.name))].sort((a, b) => a.localeCompare(b, "en"));
         return <div className="compare-selector" key={side}>
           <label htmlFor={`compare-model-${side}`}>Model {label}</label>
           <select id={`compare-model-${side}`} name={`model_${side === 0 ? "a" : "b"}`} value={effective.models[side]} onChange={event => chooseModel(side, event.target.value)}>
             <option value="">Select a model</option>
-            {effective.models[side] && !response.models.some(item => item.registry_no === effective.models[side]) ? <option value={effective.models[side]}>{model?.name ?? `Unavailable model (${effective.models[side]})`}</option> : null}
-            {groups.map(group => <optgroup label={group} key={group}>{response.models.filter(item => item.company.name === group).map(item => <option value={item.registry_no} key={item.registry_no}>{item.name}</option>)}</optgroup>)}
+            {effective.models[side] && !availableModels.some(item => item.registry_no === effective.models[side]) ? <option value={effective.models[side]}>{model?.name ?? `Unavailable model (${effective.models[side]})`}</option> : null}
+            {groups.map(group => <optgroup label={group} key={group}>{availableModels.filter(item => item.company.name === group).map(item => <option value={item.registry_no} key={item.registry_no}>{item.name}</option>)}</optgroup>)}
           </select>
           <div className="compare-reasoning"><label htmlFor={`compare-reasoning-${side}`}>Reasoning level<span className="visually-hidden"> for Model {label}</span></label>
             <select id={`compare-reasoning-${side}`} name={`reasoning_${side === 0 ? "a" : "b"}`} value={selection.value} disabled={!model || !selection.available.length} onChange={event => chooseReasoning(side, event.target.value)}>
@@ -160,7 +169,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
           {state.query ? <a href={comparisonHref({ ...effective, query: "", page: 1 })}>Clear</a> : null}
         </form>
         <Tabs label="Benchmarks to compare" items={[
-          { label: "All", href: comparisonHref({ ...effective, sharedOnly: false, page: 1 }), active: !state.sharedOnly },
+          { label: "Show all", href: comparisonHref({ ...effective, sharedOnly: false, page: 1 }), active: !state.sharedOnly },
           { label: "Shared only", href: comparisonHref({ ...effective, sharedOnly: true, page: 1 }), active: state.sharedOnly },
         ]} />
       </div>
