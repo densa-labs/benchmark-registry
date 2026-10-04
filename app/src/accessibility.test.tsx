@@ -8,7 +8,7 @@ import { App, RegistryDocument } from "./App";
 import { accessibilityRoutes } from "./accessibility-fixtures";
 import { AppShell, GlobalSearch, LoadingState, NotFoundState } from "./ui/components";
 import { serializeInitialDocument } from "./bootstrap";
-import { Header, Pagination } from "./ui/components";
+import { Header, Pagination, PageSizeSelector } from "./ui/components";
 import { HomeLoadingState } from "./home-page";
 import { RouteLoadingState } from "./ui/route-loading";
 import { readFileSync } from "node:fs";
@@ -207,4 +207,25 @@ it("keeps reduced motion and forced-color focus/selected cues explicit", () => {
   expect(css).toContain("scroll-behavior: auto");
   expect(css).toContain("@media (forced-colors: active)");
   expect(css).toContain("outline-color: Highlight");
+});
+
+it("submits the native GET page-size form when the enhanced select changes", async () => {
+  await mount(<form method="get" action="/models/10001"><PageSizeSelector value={50} autoSubmit /></form>);
+  const form = container.querySelector("form")!;
+  const submit = vi.fn((event: Event) => event.preventDefault());
+  form.addEventListener("submit", submit);
+  const select = container.querySelector("select")!;
+  await act(() => { select.value = "100"; select.dispatchEvent(new Event("change", { bubbles: true })); });
+  expect(submit).toHaveBeenCalledTimes(1);
+  expect(new FormData(form).get("limit")).toBe("100");
+});
+
+it("announces result and family counts with pagination after the effort pivot", () => {
+  const seed = accessibilityRoutes.find(route => route.loaded.kind === "model")!.loaded;
+  if (seed.kind !== "model") throw new Error("Missing fixture");
+  const row = seed.payload.data.results[0];
+  const rows = Array.from({ length: 51 }, (_, index) => ({ ...row, result_key: `run-${index}`, reasoning_level: index % 2 ? "medium" : "max" }));
+  const loaded = { ...seed, payload: { data: { ...seed.payload.data, all_results: rows, result_page: { number: 1, limit: 50 as const, total_items: 51, total_pages: 2 } } } };
+  const notice = navigationNotice({ loaded, href: "/models/10001", currentSearch: "", head: "<title>Model</title>", time: 0 }, true, false, null);
+  expect(notice.message).toContain("51 results across 1 benchmark. Page 1 of 1.");
 });

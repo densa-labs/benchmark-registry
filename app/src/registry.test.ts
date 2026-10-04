@@ -9,6 +9,7 @@ import {
   resolveRegistryRoute,
   searchRegistry,
 } from "./registry";
+import { accessibilityRoutes } from "./accessibility-fixtures";
 
 describe("registry route data loading", () => {
   it("recognizes the implemented model, benchmark, and company routes", () => {
@@ -195,6 +196,41 @@ describe("model URL state and date presentation", () => {
     expect(formatRegistryDate("2025-04-14T16:30:00Z", "timestamp")).toContain("UTC");
     expect(formatRegistryDate("2015", "year")).toBe("2015");
     expect(formatRegistryMonthYear("2025-04-14")).toBe("April 2025");
+  });
+});
+
+describe("complete model observations for HTML", () => {
+  const route = accessibilityRoutes.find(entry => entry.loaded.kind === "model")!.loaded;
+  if (route.kind !== "model") throw new Error("Missing model fixture");
+  const seed = route.payload;
+  it("collects all API pages before grouping, preserves query state and defaults to benchmark name", async () => {
+    const calls: string[] = [];
+    const a = { ...seed.data.results[0], result_key: "a", reasoning_level: "medium", benchmark: { ...seed.data.results[0].benchmark, name: "Alpha" } };
+    const b = { ...a, result_key: "b", reasoning_level: "max", benchmark: { ...a.benchmark, name: "Beta" } };
+    const c = { ...a, result_key: "c", reasoning_level: "max" };
+    const fetcher = (async (input: string) => {
+      calls.push(input);
+      const params = new URL(input, "https://registry.test").searchParams;
+      const rows = params.get("limit") !== "500" ? [a] : params.get("page") === "1" ? [b, a] : [c];
+      return Response.json({ data: { ...seed.data, results: rows, result_page: { number: Number(params.get("page") ?? 1), limit: Number(params.get("limit") ?? 50), total_items: 3, total_pages: 2 } } });
+    }) as typeof fetch;
+    const loaded = await loadRegistryRoute({ kind: "model", registryNo: "10001" }, "?q=alpha&view=latest&page=2", fetcher);
+    expect(loaded.kind).toBe("model");
+    if (loaded.kind !== "model") throw new Error("Expected model");
+    expect(loaded.payload.data.all_results).toEqual([a, c, b]);
+    expect(calls).toEqual(["/api/models/10001?q=alpha&view=latest&page=2", "/api/models/10001?q=alpha&view=latest&page=1&limit=500", "/api/models/10001?q=alpha&view=latest&page=2&limit=500"]);
+  });
+  it("retains explicit source order and avoids extra requests for a complete page", async () => {
+    const fetcher = vi.fn().mockImplementation(() => Promise.resolve(Response.json(seed)));
+    const loaded = await loadRegistryRoute({ kind: "model", registryNo: "10001" }, "?sort=source&order=desc", fetcher);
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    if (loaded.kind !== "model") throw new Error("Expected model");
+    expect(loaded.payload.data.all_results).toEqual(seed.data.results);
+  });
+  it("surfaces failures when a remaining API page is unavailable", async () => {
+    const fetcher = vi.fn().mockImplementationOnce(() => Promise.resolve(Response.json({ data: { ...seed.data, result_page: { ...seed.data.result_page, total_items: 501 } } })))
+      .mockImplementationOnce(() => Promise.resolve(Response.json({ error: { message: "Unavailable" } }, { status: 503 })));
+    await expect(loadRegistryRoute({ kind: "model", registryNo: "10001" }, "", fetcher)).rejects.toThrow("Unavailable");
   });
 });
 

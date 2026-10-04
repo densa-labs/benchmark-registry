@@ -1,3 +1,4 @@
+import { sourceLabel } from "../source-label";
 import { BreadcrumbContext } from "../breadcrumb-context";
 import { VisibleBreadcrumbs } from "../breadcrumbs";
 import {
@@ -511,16 +512,21 @@ interface PageHeaderProps {
   title: string;
   description?: string;
   kicker?: string;
+  children?: ReactNode;
 }
 
-export function PageHeader({ title, description, kicker }: PageHeaderProps) {
+export function PageHeader({ title, description, kicker, children }: PageHeaderProps) {
   const breadcrumb=useContext(BreadcrumbContext);
+  const updated = breadcrumb && ["model", "benchmark", "benchmark-version"].includes(breadcrumb.kind)
+    && breadcrumb.updated && Number.isFinite(Date.parse(breadcrumb.updated)) ? breadcrumb.updated : undefined;
   return (
     <header className="page-header">
       {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
       {kicker ? <p className="kicker">{kicker}</p> : null}
       <h1 tabIndex={-1}>{title}</h1>
+      {children}
       {description ? <p className="page-header__description">{description}</p> : null}
+      {updated && !description?.includes(`Updated ${updated.slice(0, 10)}`) ? <p className="page-header__description">Updated <time dateTime={updated}>{updated.slice(0, 10)}</time></p> : null}
     </header>
   );
 }
@@ -530,9 +536,9 @@ export interface MetadataItem {
   value: ReactNode;
 }
 
-export function MetadataRows({ items, loading = false }: { items: MetadataItem[]; loading?: boolean }) {
+export function MetadataRows({ items, loading = false, inline = false }: { items: MetadataItem[]; loading?: boolean; inline?: boolean }) {
   return (
-    <dl className="metadata-rows">
+    <dl className={inline ? "metadata-inline" : "metadata-rows"}>
       {items.map((item) => (
         <div className="metadata-row" key={item.label}>
           <dt>{loading ? <span className="skeleton skeleton--label" /> : item.label}</dt>
@@ -549,10 +555,10 @@ interface SourceLinkProps {
   context?: string;
 }
 
-export function SourceLink({ href, children = "Source", context }: SourceLinkProps) {
+export function SourceLink({ href, children, context }: SourceLinkProps) {
   return (
     <a className="source-link" href={href} target="_blank" rel="noreferrer">
-      <span>{children}</span>
+      <span>{children ?? sourceLabel(href)}</span>
       <ExternalIcon />
       {context ? <span className="visually-hidden"> for {context}</span> : null}
       <span className="visually-hidden"> (opens in a new tab)</span>
@@ -610,7 +616,7 @@ export function DataTable<Row>({
   getRowKey,
 }: DataTableProps<Row>) {
   return (
-    <div className="table-scroll" role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
+    <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
       <table className="data-table" data-columns={columns.length}>
         <caption className="visually-hidden">{caption}</caption>
         <thead>
@@ -693,13 +699,14 @@ export function Pagination({ page, totalPages, getHref }: PaginationProps) {
 interface PageSizeSelectorProps {
   value: 50 | 100 | 500;
   id?: string;
+  autoSubmit?: boolean;
 }
 
-export function PageSizeSelector({ value, id = "page-size" }: PageSizeSelectorProps) {
+export function PageSizeSelector({ value, id = "page-size", autoSubmit = false }: PageSizeSelectorProps) {
   return (
     <label className="page-size" htmlFor={id}>
       <span>Rows per page</span>
-      <select id={id} name="limit" defaultValue={value}>
+      <select id={id} name="limit" defaultValue={value} onChange={autoSubmit ? event => event.currentTarget.form?.requestSubmit() : undefined}>
         <option value="50">50</option>
         <option value="100">100</option>
         <option value="500">500</option>

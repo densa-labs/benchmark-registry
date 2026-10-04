@@ -313,6 +313,9 @@ describe("P7.1 model pages", () => {
 
     expect(markup).toContain("GPT-4.1");
     expect(markup).toContain('aria-label="Model metadata"');
+    expect(markup).toContain('href="/compare?models=10002%2C"');
+    expect(markup).toContain('title="Stable ID composed of a developer namespace');
+    expect(markup).toContain("docs/registry-numbering.md");
     expect(markup).toContain("Released");
     expect(markup).toContain("Provider");
     expect(markup).toContain("Source");
@@ -324,8 +327,37 @@ describe("P7.1 model pages", () => {
     expect(markup).toContain('href="/benchmarks/swe-bench/verified"');
     expect(markup).toContain("54.6%");
     expect(markup).toContain('target="_blank"');
-    expect(markup).toContain('<option value="100" selected="">100</option>');
+    expect(markup).not.toContain("Rows per page");
     expect(markup).not.toContain("Sort by Score");
+  });
+
+  it("shows model search and paging only above their thresholds, retaining active search", () => {
+    const render = (count: number, search = "") => renderToStaticMarkup(<ModelDetailPage response={{
+      data: { ...modelDetailResponse.data, result_page: { ...modelDetailResponse.data.result_page, total_items: count } },
+    }} currentSearch={search} />);
+    expect(render(25)).not.toContain("Search benchmarks");
+    expect(render(26)).toContain("Search benchmarks");
+    expect(render(50)).not.toContain("Rows per page");
+    expect(render(51)).toContain('<noscript><button type="submit"');
+    expect(render(51)).toContain('<option value="100" selected="">100</option>');
+    expect(render(0, "?q=missing")).toContain("Clear search");
+    expect(render(1)).toContain('class="metadata-inline"');
+  });
+
+  it("paginates after the effort pivot and counts distinct benchmark families", () => {
+    const first = modelDetailResponse.data.results[0];
+    const paired = [{ ...first, reasoning_level: "medium" }, { ...first, result_key: "max", reasoning_level: "max", primary_source_url: "https://example.com/max" }];
+    const markup = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data,
+      all_results: paired, results: [paired[0]], result_page: { number: 1, limit: 50, total_items: 2, total_pages: 1 },
+    } }} currentSearch="" />);
+    expect(markup).toContain("2 results across 1 benchmark");
+    expect(markup.match(/<tbody><tr>/g)).toHaveLength(1);
+    expect(markup).toContain(">medium</th>");
+    expect(markup).toContain(">max</th>");
+    expect(markup).toContain('href="https://example.com/max"');
+    expect(markup).toContain('aria-sort="ascending"');
+    const history = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data, results: paired } }} currentSearch="?view=history" />);
+    expect(history).not.toContain(">medium</th>");
   });
 
   it("renders a scoped empty state for a model benchmark search", () => {

@@ -1,3 +1,6 @@
+import { comparisonHref, parseComparisonState } from "./compare";
+import { ResultSource, ResultDetails } from "./result-source";
+import { pivotResults, type PivotRow } from "./result-pivot";
 import { RelatedModels, RelatedLinks } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type { ResultRow } from "../worker/api";
@@ -110,8 +113,8 @@ function PageSizeForm({
   return (
     <form className="page-size-form" method="get" action={action}>
       <HiddenQueryFields search={currentSearch} exclude={["limit"]} />
-      <PageSizeSelector value={value} id="results-page-size" />
-      <button type="submit" data-focus-key="page-size-apply">Apply</button>
+      <PageSizeSelector value={value} id="results-page-size" autoSubmit />
+      <noscript><button type="submit" data-focus-key="page-size-apply">Apply</button></noscript>
     </form>
   );
 }
@@ -262,13 +265,38 @@ export function ModelDetailPage({
   response: ModelDetailResponse;
   currentSearch: string;
 }) {
-  const { model, results, result_page: page } = response.data;
+  const { model, result_page: page } = response.data;
+  const allResults = response.data.all_results ?? response.data.results;
   const pathname = `/models/${model.registry_no}`;
-  const benchmarkSort = sortLink(pathname, currentSearch, "benchmark");
+  const benchmarkSort = sortLink(pathname, currentSearch, "benchmark", "asc");
   const sourceSort = sortLink(pathname, currentSearch, "source");
   const params = new URLSearchParams(currentSearch);
   const view = params.get("view") === "history" ? "history" : "latest";
   const query = params.get("q");
+  const pivot = pivotResults(allResults);
+  const usePivot = view === "latest" && pivot.multiple;
+  const offset = (page.number - 1) * page.limit;
+  const fullSet = response.data.all_results !== undefined;
+  const results = fullSet ? allResults.slice(offset, offset + page.limit) : allResults;
+  const pivotRows = fullSet ? pivot.rows.slice(offset, offset + page.limit) : pivot.rows;
+  const totalRows = usePivot ? pivot.rows.length : page.total_items;
+  const totalPages = Math.ceil(totalRows / page.limit);
+  const benchmarks = new Set(allResults.map(result => result.benchmark.slug)).size;
+  const pivotColumns: TableColumn<PivotRow>[] = [
+    { key: "benchmark", label: "Benchmark", className: "data-table__primary", sortHref: benchmarkSort.href, sortDirection: benchmarkSort.direction,
+      render: ({ result }) => <span className="table-cell-stack"><BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
+        {result.metric.name ? <span>{result.metric.name}</span> : null}</span> },
+    ...pivot.variants.map(variant => ({
+      key: `effort-${variant}`, label: variant || "Not specified", className: "numeric pivot-score",
+      render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
+        <span key={result.result_key} className="pivot-observation">
+          <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
+          <ResultDetails result={result} compact showEvaluator={row.cells.get(variant)!.length > 1} />
+        </span>)} </div> : "–",
+    })),
+    { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
+      render: row => <span className="table-cell-stack">{[...new Set([...row.cells.values()].flat().map(result => result.primary_source_url))].map(href => <SourceLink key={href} href={href} />)}</span> },
+  ];
   const columns: TableColumn<ResultRow>[] = [
     {
       key: "benchmark",
@@ -296,16 +324,17 @@ export function ModelDetailPage({
       label: "Source",
       sortHref: sourceSort.href,
       sortDirection: sourceSort.direction,
-      render: (result) => <SourceLink href={result.primary_source_url} context={`${result.model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`} />,
+      render: (result) => <ResultSource result={result} />,
     },
   ];
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={model.name} description={response.data.seo?.sentence} />
+      <PageHeader title={model.name} description={response.data.seo?.sentence}>
 
-      <section className="entity-metadata" aria-label="Model metadata">
+      <section className="model-metadata" aria-label="Model metadata">
         <MetadataRows
+          inline
           items={[
             {
               label: "Released",
@@ -317,30 +346,35 @@ export function ModelDetailPage({
             },
             {
               label: "Source",
-              value: <SourceLink href={model.source_url}>Release source</SourceLink>,
+              value: <SourceLink href={model.source_url} />,
             },
             {
               label: "Registry No.",
-              value: <span className="registry-number">{model.registry_no}</span>,
+              value: <a className="registry-number" href="https://github.com/densa-labs/benchmark-registry/blob/main/docs/registry-numbering.md"
+                title="Stable ID composed of a developer namespace and an assigned sequence.">
+                {model.registry_no}<span className="visually-hidden"> — Stable ID composed of a developer namespace and an assigned sequence. Read about Registry numbering.</span>
+              </a>,
             },
           ]}
         />
       </section>
+      <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+      </PageHeader>
 
-      <LocalSearch
+      {totalRows > 25 || query ? <LocalSearch
         action={pathname}
         currentSearch={currentSearch}
         label="Search benchmarks"
         placeholder="Search benchmark names or aliases"
-      />
+      /> : null}
 
       <section className="results-section" aria-labelledby="benchmarks-heading">
         <div className="results-section__header">
           <div>
             <h2 id="benchmarks-heading">Benchmarks</h2>
-            <p>{resultCount(page.total_items)}</p>
+            <p>{resultCount(page.total_items)} across {benchmarks.toLocaleString("en-US")} {benchmarks === 1 ? "benchmark" : "benchmarks"}</p>
           </div>
-          <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
+          {page.total_items > 50 ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} /> : null}
         </div>
         <Tabs
           label="Result view"
@@ -363,18 +397,19 @@ export function ModelDetailPage({
             description={query ? "Try a different benchmark name or alias." : "No results are available in this view."}
           />
         ) : (
-          <DataTable
+          usePivot ? <DataTable
+            caption={`Benchmark results by reasoning level for ${model.name}`}
+            columns={pivotColumns} rows={pivotRows} getRowKey={row => row.key}
+          /> : <DataTable
             caption={`Benchmark results for ${model.name}`}
-            columns={columns}
-            rows={results}
-            getRowKey={(result) => result.result_key}
+            columns={columns} rows={results} getRowKey={result => result.result_key}
           />
         )}
         <PaginationFor
           pathname={pathname}
           currentSearch={currentSearch}
           page={page.number}
-          totalPages={page.total_pages}
+          totalPages={totalPages}
         />
       </section>
       <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />

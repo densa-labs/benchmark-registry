@@ -1,3 +1,4 @@
+import { pivotResults } from "./result-pivot";
 import type { BrowserDocument } from "./document-cache";
 
 export interface NavigationNotice {
@@ -16,13 +17,23 @@ export function navigationNotice(next: BrowserDocument, samePage: boolean, pop: 
     ? next.loaded.payload.page
     : next.loaded.kind === "model" || next.loaded.kind === "benchmark-version" || next.loaded.kind === "company"
       ? next.loaded.payload.data.result_page : undefined;
+  let pageCount = page?.total_pages;
+  let modelCount = "";
+  if (next.loaded.kind === "model" && page) {
+    const rows = next.loaded.payload.data.all_results ?? next.loaded.payload.data.results;
+    const pivot = pivotResults(rows);
+    const rowCount = params.get("view") !== "history" && pivot.multiple ? pivot.rows.length : page.total_items;
+    pageCount = Math.ceil(rowCount / page.limit);
+    const benchmarks = new Set(rows.map(row => row.benchmark.slug)).size;
+    modelCount = `${page.total_items} results across ${benchmarks} ${benchmarks === 1 ? "benchmark" : "benchmarks"}`;
+  }
   const title = new DOMParser().parseFromString(`<head>${next.head}</head>`, "text/html").title;
   return {
     focus: moved ? "none" : samePage && !pop ? "restore" : "heading",
     element: origin,
     id: origin?.id,
     key: origin?.closest("[data-focus-key]")?.getAttribute("data-focus-key"),
-    message: [title, page ? `${page.total_items} ${next.loaded.kind === "models" ? "models" : next.loaded.kind === "benchmarks" ? "benchmark families" : next.loaded.kind === "companies" ? "organizations" : "results"}. Page ${page.number} of ${Math.max(1, page.total_pages)}.` : "",
+    message: [title, page ? `${modelCount || `${page.total_items} ${next.loaded.kind === "models" ? "models" : next.loaded.kind === "benchmarks" ? "benchmark families" : next.loaded.kind === "companies" ? "organizations" : "results"}`}. Page ${page.number} of ${Math.max(1, pageCount ?? 0)}.` : "",
       params.has("sort") ? `Sorted by ${params.get("sort")?.replaceAll("_", " ")}, ${params.get("order") === "desc" ? "descending" : "ascending"}.` : "",
       params.has("view") ? `${params.get("view")} view.` : "",
       params.has("company") ? `Provider: ${params.get("company")}.` : "",

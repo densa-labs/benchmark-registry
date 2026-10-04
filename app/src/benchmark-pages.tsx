@@ -1,3 +1,5 @@
+import { ResultSource } from "./result-source";
+import { groupVersions, type VersionGroup } from "./version-groups";
 import { FamilyResults } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type {
@@ -14,7 +16,6 @@ import {
   PageHeader,
   PageSizeSelector,
   Pagination,
-  SourceLink,
   Tabs,
   type SortDirection,
   type TableColumn,
@@ -255,34 +256,34 @@ export function BenchmarksPage({
 export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyResponse }) {
   const { benchmark, versions } = response.data;
   const displayName = benchmarkDisplayName(benchmark);
-  const columns: TableColumn<BenchmarkVersionSummary>[] = [
+  const sharedMetric = versions.length > 0 && versions.every(version => version.metric.key === versions[0].metric.key);
+  const versionLink = (version: BenchmarkVersionSummary) => (
+    <span className="version-label">
+      <a href={`/benchmarks/${benchmark.slug}/${version.version_slug}`}>
+        {benchmarkVersionLabel(benchmark, version.version)}
+      </a>
+      {version.version_slug === versions[0]?.version_slug ? <span className="latest-indicator">Latest</span> : null}
+    </span>
+  );
+  const variantColumns: TableColumn<BenchmarkVersionSummary>[] = [
+    { key: "version", label: "Variant", render: versionLink },
+    { key: "released", label: "Released", render: version => formatRegistryDate(version.released_at, version.release_precision) },
+    ...(!sharedMetric ? [{ key: "metric", label: "Metric", render: metricLabel }] : []),
+  ];
+  const columns: TableColumn<VersionGroup>[] = [
     {
-      key: "version",
-      label: "Version",
-      className: "data-table__primary",
-      render: (version) => (
-        <a href={`/benchmarks/${benchmark.slug}/${version.version_slug}`}>
-          {benchmarkVersionLabel(benchmark, version.version)}
-        </a>
-      ),
+      key: "version", label: "Version", className: "data-table__primary",
+      render: ({ base, variants }) => <>
+        {versionLink(base)}
+        {variants.length ? <details className="version-variants" open={variants.length <= 4}>
+          <summary>{variants.length} {variants.length === 1 ? "variant" : "variants"} of {base.version}</summary>
+          <DataTable caption={`Variants of ${benchmarkVersionLabel(benchmark, base.version)}`}
+            columns={variantColumns} rows={variants} getRowKey={version => version.version_slug} />
+        </details> : null}
+      </>,
     },
-    {
-      key: "released",
-      label: "Released",
-      render: (version) => formatRegistryDate(version.released_at, version.release_precision),
-    },
-    {
-      key: "metric",
-      label: "Metric",
-      render: metricLabel,
-    },
-    {
-      key: "status",
-      label: "Status",
-      render: (version) => version.version_slug === versions[0]?.version_slug
-        ? <span className="latest-indicator">Latest</span>
-        : null,
-    },
+    { key: "released", label: "Released", render: ({ base }) => formatRegistryDate(base.released_at, base.release_precision) },
+    ...(!sharedMetric ? [{ key: "metric", label: "Metric", render: ({ base }: VersionGroup) => metricLabel(base) }] : []),
   ];
 
   return (
@@ -296,7 +297,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
         <div className="results-section__header">
           <div>
             <h2 id="versions-heading">Versions</h2>
-            <p>{countLabel(versions.length, "version")}</p>
+            <p>{countLabel(versions.length, "version")}{sharedMetric ? ` · Metric: ${versions[0].metric.name}` : ""}</p>
           </div>
         </div>
         {versions.length === 0 ? (
@@ -308,8 +309,8 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
           <DataTable
             caption={`Versions of ${benchmark.name}`}
             columns={columns}
-            rows={versions}
-            getRowKey={(version) => version.version_slug}
+            rows={groupVersions(versions)}
+            getRowKey={({ base }) => base.version_slug}
           />
         )}
       </section>
@@ -373,7 +374,7 @@ export function BenchmarkVersionPage({
       label: "Source",
       sortHref: sourceSort.href,
       sortDirection: sourceSort.direction,
-      render: (result) => <SourceLink href={result.primary_source_url} context={`${result.model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`} />,
+      render: (result) => <ResultSource result={result} />,
     },
     {
       key: "registry-no",
