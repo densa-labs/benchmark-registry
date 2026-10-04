@@ -70,3 +70,8 @@ A disposable replay of the existing tracked ingestion batches and Argon evidence
 Deployment order is essential: use this branch's producer to publish the SEO projection on staging, verify it, deploy staging, and repeat after approval for production. The producer recognizes a pre-SEO generation as pending even without a data revision change; maintenance can read that legacy manifest to upgrade it, while public reads and publication checks require the new projection. Existing generations use incremental `npm run materialize -- --environment staging|production`, never `--bootstrap`. Follow with `--status` and the corresponding `deploy:staging` or `deploy:production`. No deployment or external-host rule was applied by this task. Rollbacks must use a Worker-compatible published generation.
 
 The complete review description, before/after examples, route policies, conservative skips and exact hosting settings are in `docs/seo-pr-description.md`.
+
+
+## Approved deployment — 2026-10-04
+
+The user subsequently approved merging, staging and production. PR #1 is merged; both environments are published and deployed in that order. Full live checks passed for 288 staging and 287 production sitemap URLs, with 29 comparisons in each. Production retains 945 records and its canonical data revision. See `docs/seo-deployment.md` and `docs/seo-deployment.json` for Worker/generation IDs, checks and transient-response evidence. Search Console submission/indexing and the 1–2 week recheck remain the post-deploy steps.
