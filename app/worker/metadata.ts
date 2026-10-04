@@ -92,6 +92,7 @@ export function metadataHead(metadata: DocumentMetadata, url: URL): string {
 ${pageUrl}
 ${canonical}
 ${robots}
+${url.pathname === "/" ? `<link rel="alternate" type="application/atom+xml" title="Benchmark Registry results" href="${CANONICAL_ORIGIN}/feed.xml">` : ""}
 ${structuredDataScript(metadata)}`;
 }
 

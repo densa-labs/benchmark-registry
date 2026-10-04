@@ -1,3 +1,4 @@
+import { renderAtomFeed } from "./feed";
 import { badgeResponse } from "./badge";
 import { measuredDatabase, type QueryMetrics } from "./query-metrics";
 import { coverageOptions, cachedCoverage, type CoverageEnvironment } from "./coverage";
@@ -74,6 +75,13 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
 export async function handleRequest(request: Request, env: Env, repository?: RegistryReader): Promise<Response> {
   const url = new URL(request.url);
   const { pathname } = url;
+  if (pathname === "/feed.xml" && ["GET","HEAD"].includes(request.method)) {
+    const snapshot=await requireRepository(repository).seoSnapshot();
+    // Older snapshots remain readable; rematerialize before release for the
+    // complete update projection, which includes updates to older records.
+    const feed=renderAtomFeed(snapshot.feed ?? snapshot.recent,snapshot.pages["/"]?.updated);
+    return new Response(request.method==="HEAD" ? null : feed,{headers:{"Content-Type":"application/atom+xml; charset=utf-8","Cache-Control":"public, max-age=60, stale-while-revalidate=300","X-Robots-Tag":"noindex"}});
+  }
   if (pathname.startsWith("/badge/")) return badgeResponse(request,requireRepository(repository));
   if (pathname === "/healthz") {
     const headers={"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow"};
