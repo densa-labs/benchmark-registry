@@ -119,7 +119,7 @@ it("sends one set of security headers on every path, with hashed scripts and no 
   // Staging stays out of Web Analytics, as before.
   expect(contentSecurityPolicy("staging",security)).not.toContain("cloudflareinsights");
   const configured=contentSecurityPolicy("production",{...security,analyticsScript:"https://stats.example/script.js"});
-  expect(configured).toContain("script-src 'self' 'sha256-theme' https://static.cloudflareinsights.com/beacon.min.js https://stats.example/script.js;");
+  expect(configured).toContain("script-src 'self' 'sha256-theme' https://static.cloudflareinsights.com https://stats.example/script.js;");
   expect(configured).toContain("connect-src 'self' https://stats.example;");
   expect(contentSecurityPolicy("staging",{...security,analyticsScript:"https://stats.example/script.js"})).not.toContain("stats.example");
 });

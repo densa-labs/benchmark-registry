@@ -74,7 +74,7 @@ One `/*` rule sends the security headers on every response: HSTS (one year,
 `includeSubDomains`, no preload), `nosniff`, `strict-origin-when-cross-origin`
 and a CSP. The build hashes the only inline script (the theme script) into
 `script-src` and fails if a second inline script appears. Production also allows
-the Cloudflare Web Analytics beacon, which the zone injects automatically, and
+the Cloudflare Web Analytics beacon origin (`https://static.cloudflareinsights.com`), which the zone injects automatically, and
 the `ANALYTICS_SCRIPT_URL` script when it is set. Staging allows neither, which
 keeps it out of analytics.
 

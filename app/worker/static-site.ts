@@ -45,8 +45,11 @@ export const IMMUTABLE_CACHE_CONTROL = "public, max-age=31536000, immutable";
 /** Build identity written by scripts/build-static.mjs; never cached. */
 export const VERSION_FILE = "version.json";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
-/** Cloudflare Web Analytics is injected automatically on production only; staging must not load it. */
-export const CLOUDFLARE_WEB_ANALYTICS_SCRIPT = "https://static.cloudflareinsights.com/beacon.min.js";
+/**
+ * Cloudflare Web Analytics is injected automatically on production only; staging must not load it.
+ * An origin, not a file: the injected URL carries a version path (`beacon.min.js/v31…`).
+ */
+export const CLOUDFLARE_WEB_ANALYTICS_SCRIPT = "https://static.cloudflareinsights.com";
 /** Only the theme script may be inline; a second one must be reviewed, not silently allowed. */
 export const MAX_INLINE_SCRIPTS = 1;
 const EXECUTABLE_SCRIPT_TYPES = new Set(["", "module", "text/javascript", "application/javascript"]);
