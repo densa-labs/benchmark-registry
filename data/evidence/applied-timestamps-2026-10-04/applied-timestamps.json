@@ -1,0 +1,725 @@
+{
+  "method": "Each batch is committed as one D1 batch, so its write burst issues exactly the planned statements (plus 1 when the materializer's lease write falls in the same minute). Planned counts come from replaying data/batches/manifest.json into an empty SQLite database. D1 per-minute write analytics (Cloudflare GraphQL d1AnalyticsAdaptiveGroups, sum.writeQueries and sum.rowsWritten, read 2026-10-04) were matched in manifest order. Where a local commit output exists it was written 0-6 minutes after the matched burst (commit, then publication, then report).",
+  "precision": "minute (UTC): analytics are aggregated per minute, so a timestamp T means the batch committed during [T, T+60s).",
+  "databases": {
+    "staging": "59a384d9-5fba-45e4-97be-3bd1e047def1",
+    "production": "a7b3e1d1-34d6-432b-bd31-8ec4636916ab"
+  },
+  "batches": {
+    "p4-seed.json": {
+      "staging": {
+        "applied": "2026-09-24T09:38:00Z",
+        "d1_write_queries": 183,
+        "d1_rows_written": 668,
+        "planned_statements": 183,
+        "applied_with": null,
+        "commit_output": null
+      },
+      "production": {
+        "applied": "2026-09-25T07:31:00Z",
+        "d1_write_queries": 183,
+        "d1_rows_written": 668,
+        "planned_statements": 183,
+        "applied_with": null,
+        "commit_output": null
+      }
+    },
+    "launch-dataset.json": {
+      "staging": {
+        "applied": "2026-09-24T09:39:00Z",
+        "d1_write_queries": 1586,
+        "d1_rows_written": 5978,
+        "planned_statements": 1586,
+        "applied_with": null,
+        "commit_output": null
+      },
+      "production": {
+        "applied": "2026-09-25T07:32:00Z",
+        "d1_write_queries": 1586,
+        "d1_rows_written": 5978,
+        "planned_statements": 1586,
+        "applied_with": null,
+        "commit_output": null
+      }
+    },
+    "p11-company-corrections.json": {
+      "staging": {
+        "applied": null,
+        "reason": "no D1 write burst matches the planned statement count; earlier versions of this batch may have been run"
+      },
+      "production": {
+        "applied": null,
+        "reason": "no D1 write burst matches the planned statement count; earlier versions of this batch may have been run"
+      }
+    },
+    "p11-user-attested-dates.json": {
+      "staging": {
+        "applied": null,
+        "reason": "no D1 write burst matches the planned statement count; earlier versions of this batch may have been run"
+      },
+      "production": {
+        "applied": null,
+        "reason": "no D1 write burst matches the planned statement count; earlier versions of this batch may have been run"
+      }
+    },
+    "p11-staging-provider-consolidation.json": {
+      "staging": {
+        "applied": null,
+        "reason": "no D1 write burst matches the planned statement count; earlier versions of this batch may have been run"
+      },
+      "production": {
+        "applied": null,
+        "reason": "no D1 write burst matches the planned statement count; earlier versions of this batch may have been run"
+      }
+    },
+    "post-launch-models-2026-09-30.json": {
+      "staging": {
+        "applied": "2026-09-30T07:45:00Z",
+        "d1_write_queries": 4,
+        "d1_rows_written": 48,
+        "planned_statements": 3,
+        "applied_with": null,
+        "commit_output": null
+      },
+      "production": {
+        "applied": "2026-09-30T08:13:00Z",
+        "d1_write_queries": 93,
+        "d1_rows_written": 2384,
+        "planned_statements": 92,
+        "applied_with": [
+          "post-launch-benchmarks-2026-09-30.json"
+        ],
+        "commit_output": null
+      }
+    },
+    "post-launch-benchmarks-2026-09-30.json": {
+      "staging": {
+        "applied": "2026-09-30T08:09:00Z",
+        "d1_write_queries": 90,
+        "d1_rows_written": 2337,
+        "planned_statements": 89,
+        "applied_with": null,
+        "commit_output": null
+      },
+      "production": {
+        "applied": "2026-09-30T08:13:00Z",
+        "d1_write_queries": 93,
+        "d1_rows_written": 2384,
+        "planned_statements": 92,
+        "applied_with": [
+          "post-launch-models-2026-09-30.json"
+        ],
+        "commit_output": null
+      }
+    },
+    "expansion-2026-09-30.json": {
+      "staging": {
+        "applied": "2026-09-30T12:53:00Z",
+        "d1_write_queries": 235,
+        "d1_rows_written": 20527,
+        "planned_statements": 234,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-commit.json",
+          "modified_utc": "2026-09-30T12:57:18Z"
+        }
+      },
+      "production": {
+        "applied": "2026-09-30T13:04:00Z",
+        "d1_write_queries": 235,
+        "d1_rows_written": 20527,
+        "planned_statements": 234,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-commit.json",
+          "modified_utc": "2026-09-30T13:07:33Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-02.json": {
+      "staging": {
+        "applied": "2026-10-01T03:32:00Z",
+        "d1_write_queries": 20,
+        "d1_rows_written": 362,
+        "planned_statements": 19,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-02-commit.json",
+          "modified_utc": "2026-10-01T03:35:26Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T03:38:00Z",
+        "d1_write_queries": 20,
+        "d1_rows_written": 362,
+        "planned_statements": 19,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-02-commit.json",
+          "modified_utc": "2026-10-01T03:40:31Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-03.json": {
+      "staging": {
+        "applied": "2026-10-01T03:45:00Z",
+        "d1_write_queries": 10,
+        "d1_rows_written": 97,
+        "planned_statements": 9,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-03-commit.json",
+          "modified_utc": "2026-10-01T03:47:31Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T04:21:00Z",
+        "d1_write_queries": 10,
+        "d1_rows_written": 97,
+        "planned_statements": 9,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-03-commit.json",
+          "modified_utc": "2026-10-01T04:23:01Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-04.json": {
+      "staging": {
+        "applied": "2026-10-01T04:38:00Z",
+        "d1_write_queries": 40,
+        "d1_rows_written": 1404,
+        "planned_statements": 39,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-04-commit.json",
+          "modified_utc": "2026-10-01T04:39:53Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T04:41:00Z",
+        "d1_write_queries": 40,
+        "d1_rows_written": 1404,
+        "planned_statements": 39,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-04-commit.json",
+          "modified_utc": "2026-10-01T04:43:29Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-05.json": {
+      "staging": {
+        "applied": "2026-10-01T05:11:00Z",
+        "d1_write_queries": 22,
+        "d1_rows_written": 244,
+        "planned_statements": 21,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-05-commit.json",
+          "modified_utc": "2026-10-01T05:12:30Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T05:21:00Z",
+        "d1_write_queries": 22,
+        "d1_rows_written": 244,
+        "planned_statements": 21,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-05-commit.json",
+          "modified_utc": "2026-10-01T05:22:37Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-06.json": {
+      "staging": {
+        "applied": "2026-10-01T10:55:00Z",
+        "d1_write_queries": 20,
+        "d1_rows_written": 239,
+        "planned_statements": 19,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-06-commit.json",
+          "modified_utc": "2026-10-01T10:57:00Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T10:58:00Z",
+        "d1_write_queries": 20,
+        "d1_rows_written": 239,
+        "planned_statements": 19,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-06-commit.json",
+          "modified_utc": "2026-10-01T10:59:31Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-08.json": {
+      "staging": {
+        "applied": "2026-10-01T11:47:00Z",
+        "d1_write_queries": 19,
+        "d1_rows_written": 424,
+        "planned_statements": 18,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-08-commit.json",
+          "modified_utc": "2026-10-01T11:49:51Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T11:51:00Z",
+        "d1_write_queries": 19,
+        "d1_rows_written": 415,
+        "planned_statements": 18,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-08-commit.json",
+          "modified_utc": "2026-10-01T11:53:18Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-09.json": {
+      "staging": {
+        "applied": "2026-10-01T12:11:00Z",
+        "d1_write_queries": 40,
+        "d1_rows_written": 1530,
+        "planned_statements": 40,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-09-commit.json",
+          "modified_utc": "2026-10-01T12:13:39Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-01T12:16:00Z",
+        "d1_write_queries": 41,
+        "d1_rows_written": 1531,
+        "planned_statements": 40,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-09-commit.json",
+          "modified_utc": "2026-10-01T12:17:40Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-10.json": {
+      "staging": {
+        "applied": "2026-10-02T00:13:00Z",
+        "d1_write_queries": 61,
+        "d1_rows_written": 5716,
+        "planned_statements": 60,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-10-commit.json",
+          "modified_utc": "2026-10-02T00:15:16Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T00:19:00Z",
+        "d1_write_queries": 61,
+        "d1_rows_written": 5716,
+        "planned_statements": 60,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-10-commit.json",
+          "modified_utc": "2026-10-02T00:21:17Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-11.json": {
+      "staging": {
+        "applied": "2026-10-02T00:52:00Z",
+        "d1_write_queries": 78,
+        "d1_rows_written": 1839,
+        "planned_statements": 77,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-11-commit.json",
+          "modified_utc": "2026-10-02T00:56:00Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T01:01:00Z",
+        "d1_write_queries": 78,
+        "d1_rows_written": 1839,
+        "planned_statements": 77,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-11-commit.json",
+          "modified_utc": "2026-10-02T01:04:52Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-12.json": {
+      "staging": {
+        "applied": "2026-10-02T01:10:00Z",
+        "d1_write_queries": 9,
+        "d1_rows_written": 605,
+        "planned_statements": 8,
+        "applied_with": null,
+        "commit_output": null
+      },
+      "production": {
+        "applied": "2026-10-02T04:51:00Z",
+        "d1_write_queries": 9,
+        "d1_rows_written": 605,
+        "planned_statements": 8,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-12-commit.json",
+          "modified_utc": "2026-10-02T04:54:14Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-13.json": {
+      "staging": {
+        "applied": "2026-10-02T04:53:00Z",
+        "d1_write_queries": 137,
+        "d1_rows_written": 4710,
+        "planned_statements": 136,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-13-commit.json",
+          "modified_utc": "2026-10-02T04:54:59Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T05:03:00Z",
+        "d1_write_queries": 137,
+        "d1_rows_written": 4710,
+        "planned_statements": 136,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-13-commit.json",
+          "modified_utc": "2026-10-02T05:05:10Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-14.json": {
+      "staging": {
+        "applied": "2026-10-02T05:25:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 91,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-14-commit.json",
+          "modified_utc": "2026-10-02T05:26:54Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T05:31:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 91,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-14-commit.json",
+          "modified_utc": "2026-10-02T05:33:13Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-15.json": {
+      "staging": {
+        "applied": "2026-10-02T05:52:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 154,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-15-commit.json",
+          "modified_utc": "2026-10-02T05:54:19Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T06:03:00Z",
+        "d1_write_queries": 6,
+        "d1_rows_written": 153,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-15-commit.json",
+          "modified_utc": "2026-10-02T06:05:31Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-16.json": {
+      "staging": {
+        "applied": "2026-10-02T06:26:00Z",
+        "d1_write_queries": 6,
+        "d1_rows_written": 90,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-16-commit.json",
+          "modified_utc": "2026-10-02T06:28:45Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T06:33:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 91,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-16-commit.json",
+          "modified_utc": "2026-10-02T06:34:55Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-17.json": {
+      "staging": {
+        "applied": "2026-10-02T13:47:00Z",
+        "d1_write_queries": 22,
+        "d1_rows_written": 620,
+        "planned_statements": 21,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-17-commit.json",
+          "modified_utc": "2026-10-02T13:49:44Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T13:53:00Z",
+        "d1_write_queries": 22,
+        "d1_rows_written": 620,
+        "planned_statements": 21,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-17-commit.json",
+          "modified_utc": "2026-10-02T13:54:49Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-18.json": {
+      "staging": {
+        "applied": "2026-10-02T14:20:00Z",
+        "d1_write_queries": 5,
+        "d1_rows_written": 58,
+        "planned_statements": 4,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-18-commit.json",
+          "modified_utc": "2026-10-02T14:21:55Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T14:26:00Z",
+        "d1_write_queries": 5,
+        "d1_rows_written": 58,
+        "planned_statements": 4,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-18-commit.json",
+          "modified_utc": "2026-10-02T14:27:27Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-19.json": {
+      "staging": {
+        "applied": "2026-10-02T14:39:00Z",
+        "d1_write_queries": 5,
+        "d1_rows_written": 88,
+        "planned_statements": 4,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-19-commit.json",
+          "modified_utc": "2026-10-02T14:41:04Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-02T14:54:00Z",
+        "d1_write_queries": 5,
+        "d1_rows_written": 88,
+        "planned_statements": 4,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-19-commit.json",
+          "modified_utc": "2026-10-02T14:55:59Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-20.json": {
+      "staging": {
+        "applied": "2026-10-02T15:32:00Z",
+        "d1_write_queries": 11,
+        "d1_rows_written": 145,
+        "planned_statements": 11,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-20-commit.json",
+          "modified_utc": "2026-10-02T15:34:44Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T04:36:00Z",
+        "d1_write_queries": 12,
+        "d1_rows_written": 146,
+        "planned_statements": 11,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-20-commit.json",
+          "modified_utc": "2026-10-03T04:37:37Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-21.json": {
+      "staging": {
+        "applied": "2026-10-03T05:19:00Z",
+        "d1_write_queries": 3,
+        "d1_rows_written": 28,
+        "planned_statements": 2,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-21-commit.json",
+          "modified_utc": "2026-10-03T05:21:13Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T05:26:00Z",
+        "d1_write_queries": 3,
+        "d1_rows_written": 28,
+        "planned_statements": 2,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-21-commit.json",
+          "modified_utc": "2026-10-03T05:27:42Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-22.json": {
+      "staging": {
+        "applied": "2026-10-03T05:51:00Z",
+        "d1_write_queries": 3,
+        "d1_rows_written": 238,
+        "planned_statements": 2,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-22-commit.json",
+          "modified_utc": "2026-10-03T05:53:48Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T05:58:00Z",
+        "d1_write_queries": 3,
+        "d1_rows_written": 238,
+        "planned_statements": 2,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-22-commit.json",
+          "modified_utc": "2026-10-03T06:00:12Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-23.json": {
+      "staging": {
+        "applied": "2026-10-03T09:47:00Z",
+        "d1_write_queries": 21,
+        "d1_rows_written": 281,
+        "planned_statements": 20,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-23-commit.json",
+          "modified_utc": "2026-10-03T09:49:07Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T09:51:00Z",
+        "d1_write_queries": 21,
+        "d1_rows_written": 281,
+        "planned_statements": 20,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-23-commit.json",
+          "modified_utc": "2026-10-03T09:53:36Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-24.json": {
+      "staging": {
+        "applied": "2026-10-03T10:17:00Z",
+        "d1_write_queries": 18,
+        "d1_rows_written": 330,
+        "planned_statements": 17,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-24-commit.json",
+          "modified_utc": "2026-10-03T10:19:40Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T10:26:00Z",
+        "d1_write_queries": 18,
+        "d1_rows_written": 330,
+        "planned_statements": 17,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-24-commit.json",
+          "modified_utc": "2026-10-03T10:28:06Z"
+        }
+      }
+    },
+    "expansion-2026-09-30-cohort-25.json": {
+      "staging": {
+        "applied": "2026-10-03T10:38:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 114,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/staging-cohort-25-commit.json",
+          "modified_utc": "2026-10-03T10:40:17Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T10:49:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 114,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/expansion-2026-09-30/production-cohort-25-commit.json",
+          "modified_utc": "2026-10-03T10:51:10Z"
+        }
+      }
+    },
+    "gemini-4-argon-2026-10-03.json": {
+      "staging": {
+        "applied": "2026-10-03T11:21:00Z",
+        "d1_write_queries": 105,
+        "d1_rows_written": 2037,
+        "planned_statements": 105,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/gemini-4-argon-2026-10-03/staging-argon-commit.json",
+          "modified_utc": "2026-10-03T11:26:37Z"
+        }
+      },
+      "production": {
+        "applied": "2026-10-03T11:28:00Z",
+        "d1_write_queries": 106,
+        "d1_rows_written": 2038,
+        "planned_statements": 105,
+        "applied_with": null,
+        "commit_output": {
+          "file": "data/evidence/gemini-4-argon-2026-10-03/production-argon-commit.json",
+          "modified_utc": "2026-10-03T11:32:42Z"
+        }
+      }
+    }
+  },
+  "staging_only": {
+    "expansion-2026-09-30-cohort-07.json": {
+      "staging": {
+        "applied": "2026-10-01T11:30:00Z",
+        "d1_write_queries": 7,
+        "d1_rows_written": 136,
+        "planned_statements": 6,
+        "applied_with": null,
+        "commit_output": null
+      }
+    }
+  }
+}
