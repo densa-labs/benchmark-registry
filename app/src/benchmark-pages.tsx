@@ -1,3 +1,4 @@
+import { FamilyResults } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type {
   BenchmarkVersionSummary,
@@ -288,8 +289,9 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
     <PageContainer className="registry-page">
       <PageHeader
         title={displayName}
-        description={displayName === benchmark.name ? undefined : benchmark.name}
+        description={response.data.seo?.sentence ?? (displayName === benchmark.name ? undefined : benchmark.name)}
       />
+      <FamilyResults content={response.data.seo} />
       <section className="results-section" aria-labelledby="versions-heading">
         <div className="results-section__header">
           <div>

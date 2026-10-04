@@ -1,4 +1,7 @@
+import { BreadcrumbContext } from "../breadcrumb-context";
+import { VisibleBreadcrumbs } from "../breadcrumbs";
 import {
+  useContext,
   useEffect,
   useRef,
   useState,
@@ -9,7 +12,7 @@ import {
 } from "react";
 
 import { navigateRegistry } from "../navigation";
-import { BUILD_TIMESTAMP, IS_STAGING, REGISTRY_DATA_DATE } from "../build";
+import { BUILD_TIMESTAMP, IS_STAGING } from "../build";
 import { formatBuildTime, viewerTimeZone } from "../build-time";
 import { advanceHeaderScroll, initialHeaderScroll } from "./header-scroll";
 import { useNavigationLoading } from "./navigation-loading";
@@ -39,6 +42,7 @@ export interface NavigationItem {
 
 export interface AppShellProps {
   children: ReactNode;
+  dataUpdated?: string;
   navigation: NavigationItem[];
   activeHref?: string;
   busy?: boolean;
@@ -48,6 +52,7 @@ export interface AppShellProps {
 
 export function AppShell({
   children,
+  dataUpdated,
   navigation,
   activeHref,
   renderPending,
@@ -80,10 +85,10 @@ export function AppShell({
               Densa Labs
             </a>
           </p>
-          <button className="last-updated" type="button" aria-pressed={showBuildTime} aria-describedby="last-updated-help" onClick={() => setShowBuildTime((shown) => !shown)}>
-            Last updated: {showBuildTime ? buildTime : REGISTRY_DATA_DATE}
+          <button data-nosnippet className="last-updated" type="button" aria-pressed={showBuildTime} aria-describedby="last-updated-help" onClick={() => setShowBuildTime((shown) => !shown)}>
+            {showBuildTime ? `Application build: ${buildTime}` : dataUpdated ? `Last updated: ${dataUpdated.slice(0,10)}` : "Application build details"}
           </button><span id="last-updated-help" className="visually-hidden">Toggle between the data update date and the application build time.</span></div>
-          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/legal">Legal</a></nav>
+          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/recent">Recently added</a><a href="/legal">Legal</a></nav>
           <div className="site-footer__controls">
             <ThemeToggle theme={preference} onSelectTheme={selectTheme} />
             <a className="github-link" href="https://github.com/densa-labs/benchmark-registry" aria-label="Benchmark Registry on GitHub"><GitHubIcon /></a>
@@ -509,8 +514,10 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({ title, description, kicker }: PageHeaderProps) {
+  const breadcrumb=useContext(BreadcrumbContext);
   return (
     <header className="page-header">
+      {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
       {kicker ? <p className="kicker">{kicker}</p> : null}
       <h1 tabIndex={-1}>{title}</h1>
       {description ? <p className="page-header__description">{description}</p> : null}

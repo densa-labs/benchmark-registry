@@ -1,10 +1,12 @@
+import { enrichSeoContent } from "../src/seo-enrichment";
+import type { SeoSnapshot } from "./seo-data";
 import { renderToString } from "react-dom/server";
 import { serializeInitialDocument } from "../src/bootstrap";
 import { App, RegistryDocument } from "../src/App";
 import { loadRegistryRoute, resolveRegistryRoute } from "../src/registry";
 import { ApiError } from "./api";
 
-export async function renderDocument(url: URL, readApi: (input: string) => Promise<Response>, revision?: string) {
+export async function renderDocument(url: URL, readApi: (input: string) => Promise<Response>, revision?: string, seo?: SeoSnapshot) {
   const route = resolveRegistryRoute(url.pathname);
   let search = url.search;
   const fetcher = (async (input: RequestInfo | URL) => readApi(String(input))) as typeof fetch;
@@ -18,6 +20,7 @@ export async function renderDocument(url: URL, readApi: (input: string) => Promi
     search = "";
     loaded = await loadRegistryRoute(route, search, fetcher);
   }
+  if(seo) loaded=enrichSeoContent(loaded,seo,decodeURI(url.pathname).replace(/\/$/u, "") || "/");
   return renderInitialDocument(loaded, search, revision);
 }
 

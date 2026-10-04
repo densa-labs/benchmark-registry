@@ -8,7 +8,7 @@ export async function readPublication(store:ProducerStore,environment:ReadEnviro
 }
 export async function readManifest(store:ProducerStore,hash:string,environment:ReadEnvironment) {
   const text=await store.get('manifests/'+hash);if(!text || await digest(text)!==hash) throw new Error('Published manifest is missing or corrupt.');
-  const value:unknown=JSON.parse(text);validateManifest(value,environment);return value;
+  const value:unknown=JSON.parse(text);validateManifest(value,environment,true);return value;
 }
 export async function verifyGeneration(store:ProducerStore,manifest:ReadManifest) {
   validateManifest(manifest,manifest.environment);

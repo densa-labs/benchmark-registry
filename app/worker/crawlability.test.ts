@@ -157,11 +157,11 @@ describe("P11.7 initial document crawlability", () => {
     for (const path of ["/", "/models", "/benchmarks", "/companies", "/models/10001", "/companies/example-company", "/benchmarks/example", versionPath, exactPath]) {
       const html = await page(path);
       for (const href of links(html)) expect(href).not.toMatch(/staging\.|www\.|workers\.dev/u);
-      expect(html).toContain(`rel="canonical" href="https://benchmarkregistry.org${path.replaceAll("&", "&amp;")}"`);
+      expect(html).toContain(`rel="canonical" href="https://benchmarkregistry.org${path.split("?")[0].replaceAll("&", "&amp;")}"`);
     }
   });
 
-  it("uses the same SQL eligibility for API links, canonical policy, and sitemap", async () => {
+  it("keeps exact result UI links while excluding all parameterized URLs from the sitemap", async () => {
     const response = await worker.fetch(new Request(`https://benchmarkregistry.org/api${versionPath}?view=history`), env);
     const payload = await response.json() as { data: { results: Array<{ result_key: string; exact_result_href: string | null; benchmark_version_slug: string }> } };
     for (const row of payload.data.results) {
@@ -169,7 +169,7 @@ describe("P11.7 initial document crawlability", () => {
       expect(row.exact_result_href).toBe(row.result_key === exactKey ? exactPath : null);
     }
     const xml = await page("/sitemap.xml");
-    expect(xml).toContain(exactKey);
+    expect(xml).not.toContain(exactKey);
     for (const key of ambiguousKeys) expect(xml).not.toContain(key);
   });
 

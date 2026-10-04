@@ -38,6 +38,9 @@ jobs:
       - name: Run frontend and API tests
         run: npm test
 
+      - name: Verify initial HTML SEO and sitemap
+        run: npm run test:seo
+
       - name: Validate migrations
         run: npm run db:migrate:local
 

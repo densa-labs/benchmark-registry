@@ -94,20 +94,20 @@ describe("P11.8 visible interactions", () => {
     expect(errors).not.toHaveBeenCalled();
     expect(container.querySelector<HTMLInputElement>("#theme-dark")?.checked).toBe(true);
   });
-  it("renders Legal and icon-only GitHub and toggles the fixed build timestamp", async () => {
-    await mount(<AppShell navigation={navigation}><p>Registry</p></AppShell>);
-    expect(container.querySelector('.site-footer__links a')?.getAttribute("href")).toBe("/legal");
+  it("renders footer links and distinguishes a persisted data date from the fixed build timestamp", async () => {
+    await mount(<AppShell navigation={navigation} dataUpdated="2026-10-02T00:00:00Z"><p>Registry</p></AppShell>);
+    expect(container.querySelector('.site-footer__links a[href="/legal"]')?.getAttribute("href")).toBe("/legal");
     const github = container.querySelector(".github-link")!;
     expect(github.getAttribute("href")).toBe("https://github.com/densa-labs/benchmark-registry");
     expect(github.getAttribute("aria-label")).toBeTruthy();
     expect(github.textContent).toBe("");
     expect(github.querySelector("svg")).toBeTruthy();
     const updated = container.querySelector(".last-updated")!;
-    expect(updated.textContent).toBe("Last updated: September 26, 2026");
+    expect(updated.textContent).toBe("Last updated: 2026-10-02");
     await click(updated);
-    expect(updated.textContent).toBe(`Last updated: ${formatBuildTime(BUILD_TIMESTAMP)}`);
+    expect(updated.textContent).toBe(`Application build: ${formatBuildTime(BUILD_TIMESTAMP)}`);
     await click(updated);
-    expect(updated.textContent).toBe("Last updated: September 26, 2026");
+    expect(updated.textContent).toBe("Last updated: 2026-10-02");
     expect(updated.tagName).toBe("BUTTON");
     expect(styles).toContain("cursor: default");
   });

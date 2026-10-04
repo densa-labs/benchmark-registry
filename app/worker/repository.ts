@@ -1,3 +1,4 @@
+import { buildSeoSnapshot, type SeoInputs } from "./seo-data";
 import { EXACT_RESULT_ELIGIBLE_SQL } from "./result-links";
 import { HOME_PANEL_LIMIT, type HomePanels } from "./home-panels";
 import { highestRecordedResult } from "./featured-result";
@@ -409,6 +410,30 @@ export class RegistryRepository {
     const row = await this.first<CountRow>(sql, bindings);
     if (row === null) throw new Error("Count query returned no row.");
     return Number(row.total);
+  }
+
+  async seoSnapshot() {
+    const [models, companies, families, resultRows, versionRows] = await Promise.all([
+      this.all<ModelDbRow & { checked: string; source: string }>(`SELECT ${MODEL_COLUMNS}, m.source_checked_at AS checked, m.release_source_url AS source
+        FROM models m JOIN companies c ON c.id=m.company_id WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`),
+      this.all<{name:string;slug:string;checked:string}>("SELECT name,slug,source_checked_at AS checked FROM companies"),
+      this.all<{name:string;slug:string;aliases:string;checked:string}>(`SELECT b.canonical_name AS name,b.slug,${BENCHMARK_ALIASES} AS aliases,b.source_checked_at AS checked FROM benchmarks b`),
+      this.all<ResultDbRow & {checked:string;insertionId:number}>(`SELECT ${RESULT_COLUMNS}, r.id AS insertionId, max(r.primary_source_checked_at, COALESCE((SELECT max(source_checked_at) FROM result_sources rs WHERE rs.result_id=r.id), r.primary_source_checked_at)) AS checked ${RESULT_JOINS}
+        WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`),
+      this.all<BenchmarkVersionRow & {checked:string}>(`SELECT bv.id,b.canonical_name AS benchmark_name,b.slug AS benchmark_slug,${BENCHMARK_ALIASES} AS benchmark_aliases,
+        bv.version,bv.version_slug,bv.release_at,bv.release_precision,metric.name AS metric_name,metric.key AS metric_key,metric.unit AS metric_unit,metric.storage_kind,metric.display_precision,
+        bv.source_url,'[]' AS evaluator_names,bv.source_checked_at AS checked FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id JOIN metrics metric ON metric.id=bv.metric_id
+        ORDER BY ${BENCHMARK_VERSION_KEY} DESC,bv.version ASC,bv.id ASC`),
+    ]);
+    const providers = await this.companies({page:1,limit:500});
+    const input: SeoInputs = {
+      models: models.map(row => ({...modelFromRow(row),checked:row.checked,source:row.source})),
+      companies: companies.map(company => ({...company,latest:providers.data.find(provider => provider.slug===company.slug)?.latest_model?.name})),
+      families: families.map(row => ({...row,aliases:parseJsonArray(row.aliases)})),
+      versions: versionRows.map(row => ({...versionFromRow(row),checked:row.checked,source:row.source_url})),
+      results: resultRows.map(row => ({row:resultFromRow(row),checked:row.checked,insertionId:row.insertionId})),
+    };
+    return buildSeoSnapshot(input);
   }
 
   async metadataModel(registryNo: string) {
