@@ -149,6 +149,7 @@ export type RegistryRoute =
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
+  | { kind: "search" }
   | { kind: "coverage" }
   | { kind: "corrections" }
   | { kind: "not-found" };
@@ -170,6 +171,7 @@ type LoadedRouteData =
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
+  | { kind: "search"; payload: SearchResponse }
   | { kind: "coverage"; payload: CoverageData }
   | { kind: "corrections" }
   | { kind: "not-found" };
@@ -239,7 +241,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   }
 }
 
-function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "coverage" | "corrections" | "not-found" | LegalKind }>): string {
+function apiPath(route: Exclude<RegistryRoute, { kind: "home" | "recent" | "compare" | "comparison" | "search" | "coverage" | "corrections" | "not-found" | LegalKind }>): string {
   switch (route.kind) {
     case "models":
       return "/api/models";
@@ -344,8 +346,8 @@ export async function loadRegistryRoute(
   fetcher: typeof fetch = fetch,
   signal?: AbortSignal,
 ): Promise<LoadedRegistryRoute> {
-  if (route.kind === "coverage") {
-    const response=await fetcher("/coverage"+search,{signal});
+  if (route.kind === "coverage" || route.kind === "search") {
+    const response=await fetcher(`/${route.kind}`+search,{signal});
     const html=await response.text();
     const match=/<script id="registry-initial-document" type="application\/json">(.*?)<\/script>/su.exec(html);
     if(!response.ok || !match) throw new RegistryClientError("Coverage could not be loaded.");

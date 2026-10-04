@@ -44,8 +44,8 @@ export interface GenerationBuild {manifest:ReadManifest;manifestHash:string;obje
 export async function buildGeneration(db:D1Database,environment:ReadEnvironment,previous?:ReadManifest,readPrevious?:(key:string)=>Promise<ReadObject>):Promise<GenerationBuild|null> {
   if(previous) validateManifest(previous,environment,true);
   const state=await canonicalState(db);
-  if(previous?.projectionVersion===3 && previous?.canonicalRevision===state.revision && previous.watermark===state.watermark && previous.objects['home-panels'] && previous.objects.seo) return null;
-  const keys=previous?.projectionVersion===3 ? (await db.prepare('SELECT DISTINCT logical_key AS key FROM registry_read_changes WHERE id>? AND id<=? ORDER BY logical_key').bind(previous.watermark,state.watermark).all<{key:string}>()).results.map(row=>row.key) : [...fixed,...(await db.prepare(`SELECT 'model:'||registry_no AS key FROM models m WHERE NOT EXISTS(SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)
+  if(previous?.projectionVersion===4 && previous?.canonicalRevision===state.revision && previous.watermark===state.watermark && previous.objects['home-panels'] && previous.objects.seo) return null;
+  const keys=previous?.projectionVersion===4 ? (await db.prepare('SELECT DISTINCT logical_key AS key FROM registry_read_changes WHERE id>? AND id<=? ORDER BY logical_key').bind(previous.watermark,state.watermark).all<{key:string}>()).results.map(row=>row.key) : [...fixed,...(await db.prepare(`SELECT 'model:'||registry_no AS key FROM models m WHERE NOT EXISTS(SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)
     UNION ALL SELECT 'company:'||slug FROM companies UNION ALL SELECT 'family:'||slug FROM benchmarks
     UNION ALL SELECT 'version:'||b.slug||':'||bv.version_slug FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id ORDER BY key`).all<{key:string}>()).results.map(row=>row.key)];
   // Refresh the small homepage projection with every canonical update. Also
@@ -84,7 +84,7 @@ export async function buildGeneration(db:D1Database,environment:ReadEnvironment,
   }
   const after=await canonicalState(db);
   if(state.revision!==after.revision || state.watermark!==after.watermark) throw new Error('Canonical data changed during materialization; retry without publishing.');
-  const manifest:ReadManifest={schema:1,projectionVersion:3,environment,generation:crypto.randomUUID().replaceAll('-',''),canonicalRevision:state.revision,watermark:state.watermark,createdAt:new Date().toISOString(),objects:refs,inlineObjects:Object.fromEntries([...objects].map(([hash,text])=>[hash,JSON.parse(text)]))};
+  const manifest:ReadManifest={schema:1,projectionVersion:4,environment,generation:crypto.randomUUID().replaceAll('-',''),canonicalRevision:state.revision,watermark:state.watermark,createdAt:new Date().toISOString(),objects:refs,inlineObjects:Object.fromEntries([...objects].map(([hash,text])=>[hash,JSON.parse(text)]))};
   validateManifest(manifest,environment);
   return {manifest,manifestHash:await digest(JSON.stringify(manifest)),objects,rebuilt,removed};
 }

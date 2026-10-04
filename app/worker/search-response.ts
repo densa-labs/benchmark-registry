@@ -1,12 +1,15 @@
+import { operatorSearch } from "./search-operators";
 import { pageMetadata } from './api';
 import { interpretSearch, orderSearch, type SearchEntity } from './search';
 import type { ParsedListParams } from './params';
 
 export interface SearchRelationship {
+  metric_key?:string; metric_name?:string; reported_at?:string; provider_name?:string; provider_slug?:string;
   model_id:number; benchmark_id:number; version_id:number; version:string;
   version_slug:string; reasoning_level:string; result_key:string;
 }
 export async function searchResponse(params:ParsedListParams, entities:SearchEntity[], relationships:(models:number[],benchmarks:number[])=>Promise<SearchRelationship[]>) {
+  const operated=await operatorSearch(params,entities,relationships);if(operated) return operated;
   const {ranked,interpretations}=interpretSearch(params.q!,entities);
   let directHref:string|undefined;
   if(interpretations.length) {

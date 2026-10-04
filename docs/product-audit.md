@@ -30,8 +30,8 @@ available. Existing untracked launch reports are outside this task.
   license the dataset. Privacy makes vendor/security/retention claims whose live
   settings cannot be established from app code alone.
 - **Search:** global search uses `/api/search?q=`; operators `brand:`,
-  `benchmark:`, `record:`, `model:`, `metric:`, `date:`, `org:` are implemented in
-  `worker/search.ts`. There is no `/search` page/operator list. Home search is
+  `benchmark:`, `record:`, `model:`, `metric:`, `date:`, `org:` are requested but absent from
+  the existing parser in `worker/search.ts`. There is no `/search` page/operator list. Home search is
   enhanced; add a server-rendered search destination for graceful fallback.
 - **Compare:** exists at `/compare?models=10001,20001&reasoning=high,max`,
   legacy A/B parameters work. Search, benchmark mode, page and limit are URL

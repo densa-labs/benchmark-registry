@@ -96,6 +96,7 @@ interface SearchCatalogueRow extends Omit<SearchEntity, "aliases" | "normalized_
   versions: string;
 }
 interface SearchRelationshipRow {
+  metric_key?:string; metric_name?:string; reported_at?:string; provider_name?:string; provider_slug?:string;
   model_id: number;
   benchmark_id: number;
   version_id: number;
@@ -956,16 +957,17 @@ export class RegistryRepository {
     return entities;
   }
 
-  async materializedSearchRelationships(models?: number[], benchmarks?: number[]) {
+  async materializedSearchRelationships(models?: number[], benchmarks?: number[], facets=true) {
     return this.all<SearchRelationshipRow>(`/* search:relationships */
         SELECT r.model_id, bv.benchmark_id, bv.id AS version_id,
-          bv.version, bv.version_slug, r.reasoning_level, r.result_key
+          bv.version, bv.version_slug, r.reasoning_level, r.result_key ${facets ? ",metric.key AS metric_key,metric.name AS metric_name,r.reported_at,c.name AS provider_name,c.slug AS provider_slug" : ""}
         FROM results r JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
+        ${facets ? "JOIN metrics metric ON metric.id=r.metric_id JOIN models m ON m.id=r.model_id JOIN companies c ON c.id=m.company_id" : ""}
         ${models ? "WHERE r.model_id IN (SELECT value FROM json_each(?)) AND bv.benchmark_id IN (SELECT value FROM json_each(?))" : ""}
         ORDER BY r.result_key`, models ? [JSON.stringify(models), JSON.stringify(benchmarks)] : []);
   }
 
   async search(params: ParsedListParams) {
-    return searchResponse(params,await this.materializedSearchEntities(),(models,benchmarks)=>this.materializedSearchRelationships(models,benchmarks));
+    return searchResponse(params,await this.materializedSearchEntities(),(models,benchmarks)=>this.materializedSearchRelationships(models,benchmarks, /\b(?:brand|benchmark|record|model|metric|date|org):/iu.test(params.q ?? "")));
   }
 }

@@ -132,8 +132,8 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   if (['GET', 'HEAD'].includes(request.method) && pathname === '/sitemap.xml') {
     try {
       const snapshot=await requireRepository(repository).seoSnapshot();
-      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS, ...CONTENT_PATHS])]
-        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS, ...CONTENT_PATHS].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
+      const paths = [...new Set([...await requireRepository(repository).sitemapPaths(), "/compare", "/recent", ...snapshot.comparisons.map(pair=>pair.path), ...LEGAL_PATHS, ...CONTENT_PATHS.filter(path=>path!=="/search")])]
+        .filter(path=>!path.includes("?") && (["/", "/models", "/benchmarks", "/companies", "/compare", ...LEGAL_PATHS, ...CONTENT_PATHS.filter(path=>path!=="/search")].includes(path) || snapshot.pages[path] && isIndexablePage(snapshot.pages[path])));
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) => `<url><loc>${escapeHtml(CANONICAL_ORIGIN + path)}</loc>${snapshot.pages[path]?.updated ? `<lastmod>${escapeHtml(snapshot.pages[path].updated!)}</lastmod>` : ""}</url>`).join('')}</urlset>\n`;
       return new Response(request.method === 'HEAD' ? null : body, {
         headers: { 'Content-Type': 'application/xml; charset=utf-8' },
@@ -161,7 +161,13 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       return Response.redirect(url.toString(), 308);
     }
     if (pathname.replace(/\/$/u, "") === "/coverage" && !env.DB) return new Response("Coverage is temporarily unavailable.",{status:503,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
-    const content = pathname.replace(/\/$/u, "") === "/coverage" && env.DB
+    const content = pathname.replace(/\/$/u, "") === "/search"
+      ? renderInitialDocument({kind:"search",payload:url.searchParams.has("q") ? await (async()=>{
+          const response=await handleApi(new Request(new URL(`/api/search${url.search}`,url)),env,requireRepository(repository));
+          if(!response.ok) throw new ApiError(400,"invalid_query","Invalid search query.");
+          return await response.json() as import("../src/registry").SearchResponse;
+        })() : {data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}},url.search,env.REGISTRY_REVISION)
+      : pathname.replace(/\/$/u, "") === "/coverage" && env.DB
       ? renderInitialDocument({kind:"coverage",payload:await cachedCoverage(env.DB,coverageOptions(url,env),env.D1_DIAGNOSTICS)},url.search,env.REGISTRY_REVISION)
       : metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {
       // SSR and public API share one pinned materialized generation.
@@ -202,7 +208,7 @@ const worker = {
     if(staticAsset) response=await env.ASSETS.fetch(request);
     else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
     else if(url.pathname==="/healthz") response=await handleRequest(request,env);
-    else if ([...LEGAL_PATHS,...CONTENT_PATHS].some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
+    else if ([...LEGAL_PATHS,...CONTENT_PATHS.filter(path=>path!=="/search")].some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {
         const publication=await store.publication();

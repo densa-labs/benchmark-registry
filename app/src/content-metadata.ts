@@ -1,4 +1,5 @@
 export const CONTENT_METADATA = {
+  search: {title:"Search",description:"Search Benchmark Registry model names, benchmark versions, providers and recorded results."},
   coverage: {title:"Coverage",description:"Coverage gaps across recent AI models, benchmark families and providers, with stale result dates."},
   corrections: {title:"Corrections", description:"Recorded corrections to Benchmark Registry results, with changes and reasons."},
 } as const;

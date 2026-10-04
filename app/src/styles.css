@@ -1601,6 +1601,9 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .coverage-options input[type="date"] { width: auto; max-width: 100%; }
 .coverage-options select { max-width: var(--coverage-provider-width); }
 
+.search-hint { display: block; color: var(--text-muted); font-size: .65rem; line-height: 1.1; margin-top: .15rem; }
+
+
 @media (max-width: 48rem) {
   .site-footer__inner { grid-template-columns: minmax(0, 1fr); }
   .site-footer__dates { grid-column: 1; grid-row: 1; }

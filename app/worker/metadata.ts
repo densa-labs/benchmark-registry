@@ -30,7 +30,7 @@ const missing: DocumentMetadata = {
 
 async function pageMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
   const route = resolveRegistryRoute(url.pathname);
-  if (route.kind === "corrections" || route.kind === "coverage") return {title:seoTitle(CONTENT_METADATA[route.kind].title),description:seoDescription([CONTENT_METADATA[route.kind].description])};
+  if (route.kind === "corrections" || route.kind === "coverage" || route.kind === "search") return {title:seoTitle(CONTENT_METADATA[route.kind].title),description:seoDescription([CONTENT_METADATA[route.kind].description])};
   if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms" || route.kind === "about" || route.kind === "contact") return {
     title: seoTitle(LEGAL_METADATA[route.kind].title), description: seoDescription([LEGAL_METADATA[route.kind].description]),
   };
@@ -57,7 +57,7 @@ export async function documentMetadata(url: URL, repository?: RegistryReader): P
     : route.kind === 'benchmark' ? `/benchmarks/${segment(route.slug)}`
     : route.kind === 'benchmark-version' ? `/benchmarks/${segment(route.slug)}/${segment(route.version)}`
     : url.pathname === '/' ? '/' : url.pathname.replace(/\/$/u, '');
-  metadata.noindex = (metadata.status ?? 200) !== 200 || url.searchParams.size > 0 || Boolean(metadata.page && !isIndexablePage(metadata.page));
+  metadata.noindex = route.kind === "search" || (metadata.status ?? 200) !== 200 || url.searchParams.size > 0 || Boolean(metadata.page && !isIndexablePage(metadata.page));
   metadata.canonical = CANONICAL_ORIGIN + path;
   return metadata;
 }
