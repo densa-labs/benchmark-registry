@@ -2,6 +2,7 @@ import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
+
 from backup_db import backup
 
 
@@ -27,6 +28,5 @@ class BackupTests(unittest.TestCase):
                 )
 
     def test_requires_explicit_existing_database(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            with self.assertRaises(ValueError):
-                backup(Path(temporary) / "missing", temporary)
+        with tempfile.TemporaryDirectory() as temporary, self.assertRaises(ValueError):
+            backup(Path(temporary) / "missing", temporary)

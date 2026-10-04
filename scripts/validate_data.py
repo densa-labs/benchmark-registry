@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sqlite3
 import sys
@@ -13,8 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "ingestor" / "src"))
-from benchmark_registry_ingestor.engine import RECORD_FIELDS  # noqa: E402
-from benchmark_registry_ingestor.values import (  # noqa: E402
+from benchmark_registry_ingestor.engine import RECORD_FIELDS
+from benchmark_registry_ingestor.values import (
     ValueErrorDetail,
     normalize_temporal,
     normalize_url,
@@ -658,6 +659,81 @@ def validate(batches: list[tuple[str, object]], database: Path | None = None) ->
     return report
 
 
+MANIFEST_FILES = {"manifest.json", "expected-counts.json"}
+
+
+def _applied_timestamp(value) -> bool:
+    if value is None:
+        return True
+    try:
+        normalize_temporal(value, "timestamp", "applied")
+    except (ValueErrorDetail, TypeError):
+        return False
+    return True
+
+
+def check_manifest(directory: Path, manifest: Path) -> tuple[list[dict], list[dict], list[str]]:
+    """Check the manifest against the batch files; return (errors, info, ordered files)."""
+    errors, info = [], []
+
+    def error(location, message):
+        errors.append({"rule": "manifest", "location": location, "message": message})
+
+    try:
+        entries = json.loads(manifest.read_text())["batches"]
+        if not isinstance(entries, list) or not all(isinstance(e, dict) for e in entries):
+            raise TypeError("batches must be a list of objects")
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        error(str(manifest), f"Unreadable manifest: {exc}")
+        return errors, info, []
+    orders = [entry.get("order") for entry in entries]
+    if not all(isinstance(order, int) and not isinstance(order, bool) for order in orders):
+        error(manifest.name, "Every order must be an integer.")
+    else:
+        if len(set(orders)) != len(orders):
+            error(manifest.name, "Duplicate order values.")
+        if sorted(set(orders)) != list(range(1, len(entries) + 1)):
+            error(manifest.name, "Order values must run 1..N without gaps.")
+    files = [entry.get("file") for entry in entries]
+    for name, count in Counter(files).items():
+        if count > 1:
+            error(str(name), "Listed more than once.")
+    for entry in sorted(entries, key=lambda e: e.get("order") if isinstance(e.get("order"), int) else 0):
+        name = entry.get("file")
+        if not isinstance(name, str) or "/" in name or name in MANIFEST_FILES:
+            error(manifest.name, f"Invalid file entry {name!r}.")
+            continue
+        path = directory / name
+        if not path.is_file():
+            error(name, "Manifest entry points to a missing file.")
+        elif hashlib.sha256(path.read_bytes()).hexdigest() != entry.get("sha256"):
+            error(name, "sha256 does not match the manifest.")
+        applied = entry.get("applied")
+        if (
+            not isinstance(applied, dict)
+            or set(applied) != {"staging", "production"}
+            or not all(_applied_timestamp(applied[key]) for key in applied)
+        ):
+            error(name, "applied must hold staging and production timestamps or null.")
+        authorization = entry.get("authorization")
+        if authorization is not None:
+            if not isinstance(authorization, str) or not (ROOT / authorization).is_file():
+                error(name, f"Authorization {authorization!r} is not a tracked file.")
+            else:
+                info.append({"rule": "authorization", "location": name,
+                             "message": f"Applied under {authorization}."})
+    listed = {name for name in files if isinstance(name, str)}
+    for path in sorted(directory.glob("*.json")):
+        if path.name not in MANIFEST_FILES and path.name not in listed:
+            error(path.name, "Batch file is missing from the manifest.")
+    ordered = [
+        entry["file"]
+        for entry in sorted(entries, key=lambda e: e.get("order") if isinstance(e.get("order"), int) else 0)
+        if isinstance(entry.get("file"), str) and (directory / entry["file"]).is_file()
+    ]
+    return errors, info, ordered
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -670,6 +746,17 @@ def main(argv=None):
         help="Batch directory (default: data/batches)",
     )
     parser.add_argument(
+        "--manifest",
+        type=Path,
+        help="Batch manifest (default: <batches>/manifest.json)",
+    )
+    parser.add_argument(
+        "--staging-only",
+        type=Path,
+        default=ROOT / "data" / "staging-only",
+        help="Records kept off production: schema-checked, never replayed",
+    )
+    parser.add_argument(
         "--db",
         type=Path,
         help="Optional explicit existing SQLite database, opened read-only",
@@ -678,16 +765,25 @@ def main(argv=None):
         "--json", action="store_true", help="Emit machine-readable JSON"
     )
     args = parser.parse_args(argv)
+    manifest_errors, manifest_info, ordered = check_manifest(
+        args.batches, args.manifest or args.batches / "manifest.json"
+    )
+    unlisted = sorted(
+        path.name for path in args.batches.glob("*.json")
+        if path.name not in MANIFEST_FILES and path.name not in ordered
+    )
+    staging_only = sorted(args.staging_only.glob("*.json")) if args.staging_only.is_dir() else []
+    paths = [args.batches / name for name in ordered + unlisted] + staging_only
     batches, failures = [], []
-    for path in sorted(args.batches.glob("*.json")):
+    for path in paths:
+        label = path.name if path.parent == args.batches else f"staging-only/{path.name}"
         try:
-            batches.append((path.name, json.loads(path.read_text())))
+            batches.append((label, json.loads(path.read_text())))
         except (ValueError, OSError) as exc:
-            failures.append(
-                {"rule": "schema", "location": path.name, "message": str(exc)}
-            )
+            failures.append({"rule": "schema", "location": label, "message": str(exc)})
     report = validate(batches, args.db)
-    report["error"].extend(failures)
+    report["error"].extend(failures + manifest_errors)
+    report["info"].extend(manifest_info)
     if not batches and not args.db:
         report["error"].append(
             {

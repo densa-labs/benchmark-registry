@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import hashlib
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Any
@@ -151,6 +151,10 @@ ESTABLISHMENT_INPUT_FIELDS = set(ESTABLISHMENT_CORRECTION_FIELDS) - {
 }
 
 
+class CatalogInvariantError(RuntimeError):
+    """The loaded database breaks a uniqueness the planner relies on."""
+
+
 @dataclass
 class Catalog:
     rows: dict[str, list[Record]]
@@ -191,7 +195,9 @@ class Catalog:
             if all(row.get(key) == value for key, value in criteria.items())
         ]
         if len(matches) > 1:
-            raise RuntimeError(f"database invariant violated for {table}: {criteria}")
+            raise CatalogInvariantError(
+                f"database invariant violated for {table}: {criteria}"
+            )
         return matches[0] if matches else None
 
     def many(self, table: str, **criteria: object) -> list[Record]:
@@ -205,6 +211,24 @@ class Catalog:
         self.rows[table].append(row)
 
 
+@dataclass(frozen=True)
+class LaterRecord:
+    """A record from a batch applied after the one being planned (manifest order)."""
+
+    source: str
+    operation: str
+    record: Record
+
+
+@dataclass(frozen=True)
+class Supersession:
+    """The state a later correction chain leaves; `state` None means retired."""
+
+    state: Record | None
+    source: str
+    replacement_slug: str | None = None
+
+
 @dataclass
 class Plan:
     catalog: Catalog
@@ -212,6 +236,7 @@ class Plan:
     outcomes: list[Outcome] = field(default_factory=list)
     corrected_company_slugs: set[str] = field(default_factory=set)
     corrected_model_registry_nos: set[str] = field(default_factory=set)
+    later: tuple[LaterRecord, ...] = ()
 
     def valid(self, operation: str, identifier: str, message: str) -> None:
         self.outcomes.append(Outcome("VALID", operation, identifier, message))
@@ -280,7 +305,8 @@ class Ingestor:
             except Exception as exc:
                 raise PublicationPending(
                     "Canonical data committed; materialization is pending. "
-                    "The previous published generation remains live. Retry the materializer."
+                    "The previous published generation remains live. Retry the materializer. "
+                    f"Cause: {exc}"
                 ) from exc
 
     def run(
@@ -289,17 +315,24 @@ class Ingestor:
         payload: object,
         *,
         commit: bool,
+        later: Sequence[LaterRecord] = (),
     ) -> list[Outcome]:
+        """Plan and optionally commit one unit.
+
+        `later` holds the records of batches applied after this one. An earlier
+        record that a later, already-applied correction chain explains is SKIPPED
+        instead of reported as a conflict.
+        """
         try:
             records = self._records(operation, payload)
         except ValueErrorDetail as exc:
             raise IngestionFailure("ERROR", operation, str(exc)) from exc
-        plan = self._build(records)
+        plan = self._build(records, later)
         if commit and plan.statements:
             try:
                 self.database.execute_batch(plan.statements)
             except AmbiguousWriteFailure:
-                verification = self._build(records)
+                verification = self._build(records, later)
                 if verification.statements or any(
                     outcome.status != "SKIPPED" for outcome in verification.outcomes
                 ):
@@ -325,7 +358,7 @@ class Ingestor:
                     for item_operation, _ in records
                 ):
                     try:
-                        self._build(records)
+                        self._build(records, later)
                     except IngestionFailure as current:
                         if current.status == "CONFLICT":
                             raise current from exc
@@ -362,15 +395,17 @@ class Ingestor:
             raise IngestionFailure("ERROR", operation, "unsupported operation")
         return [(operation, _mapping(payload, operation))]
 
-    def _build(self, records: list[tuple[str, Record]]) -> Plan:
-        plan = Plan(Catalog.load(self.database))
+    def _build(
+        self, records: list[tuple[str, Record]], later: Sequence[LaterRecord] = ()
+    ) -> Plan:
+        plan = Plan(Catalog.load(self.database), later=tuple(later))
         for operation, record in records:
             try:
                 _reject_unknown_fields(record, RECORD_FIELDS[operation], operation)
                 getattr(self, f"_plan_{operation}")(plan, record)
             except IngestionFailure:
                 raise
-            except ValueErrorDetail as exc:
+            except (ValueErrorDetail, CatalogInvariantError) as exc:
                 raise IngestionFailure(
                     "ERROR", self._identifier(operation, record), str(exc)
                 ) from exc
@@ -431,6 +466,137 @@ class Ingestor:
             ),
         }
 
+    def _company_chain(
+        self, plan: Plan, slug: str, state: Record
+    ) -> Supersession | None:
+        """Apply later corrections of `slug` to the state an earlier record wrote.
+
+        Each link must find exactly the state its `expected` names, otherwise the
+        earlier record is not explained by the chain and None is returned.
+        """
+        state: Record | None = dict(state)
+        source = replacement = None
+        for later in plan.later:
+            record = later.record
+            if record.get("slug") != slug or later.operation not in {
+                "company_correction",
+                "company_attestation",
+                "provider_name_correction",
+                "provider_retirement",
+            }:
+                continue
+            if state is None:
+                if later.operation == "provider_retirement":
+                    continue  # Repeating a retirement is a no-op, as its planner skips it.
+                return None  # Nothing else may follow a retirement.
+            if later.operation in {"company_correction", "company_attestation"}:
+                expected = self._establishment_correction_state(
+                    record.get("expected"), "expected", corrected=False
+                )
+                corrected_input = _mapping(record.get("corrected"), "corrected")
+                if later.operation == "company_attestation":
+                    # Mirrors _plan_company_attestation: basis fields are parsed apart.
+                    establishment = {
+                        key: corrected_input.get(key) for key in ESTABLISHMENT_INPUT_FIELDS
+                    }
+                else:
+                    establishment = corrected_input
+                corrected = self._establishment_correction_state(
+                    establishment, "corrected", corrected=True
+                )
+                if not _same(state, expected, ESTABLISHMENT_CORRECTION_FIELDS):
+                    return None
+                if later.operation == "company_attestation":
+                    if state.get("established_basis", "source") != "source" or any(
+                        state.get(key) is not None
+                        for key in ("established_attestation_ref", "established_attested_at")
+                    ):
+                        return None
+                    corrected.update(self._attestation_metadata(corrected_input))
+                state.update(corrected)
+            elif later.operation == "provider_name_correction":
+                old = normalize_name(record.get("expected_name"), "expected_name")
+                new = normalize_name(record.get("corrected_name"), "corrected_name")
+                if "name" in state and (state["name"], state["normalized_name"]) != old:
+                    return None
+                state.update(name=new[0], normalized_name=new[1])
+            else:
+                expected = _mapping(record.get("expected"), "expected")
+                name = normalize_name(expected.get("name"), "expected.name")
+                source_url = normalize_url(expected.get("source_url"), "expected.source_url")
+                establishment = self._establishment_correction_state(
+                    {key: expected.get(key) for key in ESTABLISHMENT_INPUT_FIELDS},
+                    "expected",
+                    corrected=False,
+                )
+                if (
+                    ("name" in state and (state["name"], state["normalized_name"]) != name)
+                    or (
+                        "source_url" in state
+                        and (state["source_url"], state["normalized_source_url"]) != source_url
+                    )
+                    or not _same(state, establishment, ESTABLISHMENT_CORRECTION_FIELDS)
+                ):
+                    return None
+                state = None
+                replacement = require_slug(record.get("replacement_slug"), "replacement_slug")
+                source = f"{later.source} {later.operation}"
+                continue
+            source = f"{later.source} {later.operation}"
+        if source is None:
+            return None
+        if state is None:
+            return Supersession(None, source, replacement)
+        return Supersession(state, source)
+
+    def _superseded_company(
+        self, plan: Plan, slug: str, state: Record, existing: Record | None
+    ) -> str | None:
+        """Return the superseding source when the database holds the chain's end state."""
+        chain = self._company_chain(plan, slug, state)
+        if chain is None:
+            return None
+        if chain.state is None:
+            replacement = plan.catalog.one("companies", slug=chain.replacement_slug)
+            retired = (
+                existing is None
+                and replacement is not None
+                and replacement["provider_kind"] == "ai_unit"
+                and replacement["parent_company_id"] is None
+            )
+            return chain.source if retired else None
+        if existing is not None and _same(existing, chain.state, tuple(chain.state)):
+            return chain.source
+        return None
+
+    @staticmethod
+    def _retirement_applied(plan: Plan, slug: str) -> bool:
+        """True when a later retirement of `slug` has visibly taken effect."""
+        for later in plan.later:
+            if later.operation == "provider_retirement" and later.record.get("slug") == slug:
+                replacement = plan.catalog.one(
+                    "companies", slug=later.record.get("replacement_slug")
+                )
+                if replacement is not None:
+                    return True
+        return False
+
+    def _superseded_model_company(
+        self, plan: Plan, registry_no: str, company_slug: str
+    ) -> tuple[str, str] | None:
+        """Follow later provider corrections of one model; return (slug, source)."""
+        source = None
+        for later in plan.later:
+            record = later.record
+            if (
+                later.operation == "model_provider_correction"
+                and record.get("from_company_slug") == company_slug
+                and registry_no in _list(record.get("registry_nos"), "registry_nos")
+            ):
+                company_slug = require_slug(record.get("to_company_slug"), "to_company_slug")
+                source = f"{later.source} {later.operation}"
+        return (company_slug, source) if source else None
+
     def _plan_company_correction(self, plan: Plan, record: Record) -> None:
         slug = require_slug(record.get("slug"))
         if slug in plan.corrected_company_slugs:
@@ -455,9 +621,16 @@ class Ingestor:
                 "correction must change an establishment fact or source"
             )
         company = plan.catalog.one("companies", slug=slug)
+        fields = ESTABLISHMENT_CORRECTION_FIELDS
+        if company is None or not (
+            _same(company, corrected, fields) or _same(company, expected, fields)
+        ):
+            source = self._superseded_company(plan, slug, corrected, company)
+            if source is not None:
+                plan.skipped("company_correction", slug, f"superseded by {source}")
+                return
         if company is None:
             raise IngestionFailure("ERROR", slug, "company does not exist")
-        fields = ESTABLISHMENT_CORRECTION_FIELDS
         if _same(company, corrected, fields):
             plan.skipped("company_correction", slug, "correction already applied")
             return
@@ -842,16 +1015,30 @@ class Ingestor:
             **attestation,
         }
         existing = plan.catalog.one("companies", slug=slug)
+        superseded_by = None
+        if existing is None or not _same(existing, expected, tuple(expected)):
+            superseded_by = self._superseded_company(plan, slug, expected, existing)
+            if superseded_by is not None and existing is None:
+                plan.skipped("company", slug, f"superseded by {superseded_by}")
+                return
+            if existing is None and self._retirement_applied(plan, slug):
+                raise IngestionFailure(
+                    "CONFLICT", slug, "retired provider record differs from its retirement"
+                )
         normalized_existing = plan.catalog.one(
             "companies", normalized_name=normalized_name
         )
-        if normalized_existing and normalized_existing is not existing:
+        if (
+            superseded_by is None
+            and normalized_existing
+            and normalized_existing is not existing
+        ):
             raise IngestionFailure(
                 "CONFLICT", slug, "company canonical name already uses another slug"
             )
         changed = False
         if existing:
-            if not _same(existing, expected, tuple(expected)):
+            if superseded_by is None and not _same(existing, expected, tuple(expected)):
                 raise IngestionFailure(
                     "CONFLICT", slug, "company already exists with different facts"
                 )
@@ -940,6 +1127,8 @@ class Ingestor:
             changed = True
         if changed:
             plan.valid("company", slug, "company and authorizations are valid")
+        elif superseded_by is not None:
+            plan.skipped("company", slug, f"superseded by {superseded_by}")
         else:
             plan.skipped("company", slug, "exact company duplicate")
 
@@ -957,6 +1146,13 @@ class Ingestor:
             raise ValueErrorDetail("sequence must be between 1 and 999")
         namespace = plan.catalog.one("namespaces", prefix=prefix)
         company = plan.catalog.one("companies", slug=company_slug)
+        existing = plan.catalog.one("models", registry_no=registry_no)
+        superseded_by = None
+        if existing is not None and (company is None or existing["company_id"] != company["id"]):
+            moved = self._superseded_model_company(plan, registry_no, company_slug)
+            current = plan.catalog.one("companies", slug=moved[0]) if moved else None
+            if current is not None and existing["company_id"] == current["id"]:
+                company, superseded_by = current, moved[1]
         if not namespace:
             raise IngestionFailure(
                 "ERROR", registry_no, f"unknown namespace prefix {prefix}"
@@ -1017,7 +1213,6 @@ class Ingestor:
             "status": status,
             "sequence_exception_reason": exception,
         }
-        existing = plan.catalog.one("models", registry_no=registry_no)
         if existing:
             if not _same(existing, expected, tuple(expected)):
                 raise IngestionFailure(
@@ -1181,6 +1376,8 @@ class Ingestor:
                 changed = True
         if changed:
             plan.valid("model", registry_no, "model is valid")
+        elif superseded_by is not None:
+            plan.skipped("model", registry_no, f"superseded by {superseded_by}")
         else:
             plan.skipped("model", registry_no, "exact model duplicate")
 

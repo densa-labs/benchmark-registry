@@ -20,7 +20,7 @@ class LiveClient:
             args = ['--silent', '--show-error', '--compressed', '--max-time', '30', '--dump-header', headers_file.name]
             if method == 'HEAD':
                 args.append('--head')
-            result = subprocess.run(command + args, text=True, capture_output=True, timeout=45)
+            result = subprocess.run(command + args, text=True, capture_output=True, timeout=45, check=False)
             assert result.returncode == 0, f'Request failed: {path}'
             header_text = Path(headers_file.name).read_text()
             status = int(re.findall(r'HTTP/[\d.]+ (\d+)', header_text)[-1])
