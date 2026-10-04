@@ -25,6 +25,7 @@ export interface ResultFields {identity:string;latest:number;reported:string;sou
 export interface ReadObject {schema:1;key:string;environment:ReadEnvironment;data:unknown}
 export interface GenerationRef {generation:string;hash:string}
 export interface ReadManifest {
+  projectionVersion?:number;
   schema:1;environment:ReadEnvironment;generation:string;canonicalRevision:string;
   watermark:number;createdAt:string;objects:Record<string,string>;inlineObjects:Record<string,ReadObject>;
 }

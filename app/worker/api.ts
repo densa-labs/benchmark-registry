@@ -62,6 +62,12 @@ export interface ResultRow {
     display: string;
   };
   evaluator_names: string[];
+  evaluated_at?: string | null;
+  evaluated_precision?: DatePrecision | null;
+  source_type?: string | null;
+  source_archive_url?: string | null;
+  publisher?: string | null;
+  reporting_basis?: "self-reported" | "independent" | null;
   primary_source_url: string;
   reported_at: string;
   reported_precision: DatePrecision;
@@ -190,6 +196,12 @@ export interface ResultDbRow extends ModelDbRow {
   score_value: string | null;
   score_raw: string;
   evaluator_names: string;
+  evaluated_at?: string | null;
+  evaluated_precision?: DatePrecision | null;
+  source_type?: string | null;
+  source_archive_url?: string | null;
+  publisher?: string | null;
+  reporting_basis?: "self-reported" | "independent" | null;
   primary_source_url: string;
   reported_at: string;
   reported_precision: DatePrecision;
@@ -229,6 +241,12 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
       ),
     },
     evaluator_names: parseJsonArray(row.evaluator_names),
+    evaluated_at: row.evaluated_at ?? null,
+    evaluated_precision: row.evaluated_precision ?? null,
+    source_type: row.source_type ?? null,
+    source_archive_url: row.source_archive_url ?? null,
+    publisher: row.publisher ?? null,
+    reporting_basis: row.reporting_basis ?? null,
     primary_source_url: row.primary_source_url,
     reported_at: row.reported_at,
     reported_precision: row.reported_precision,

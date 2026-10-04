@@ -557,7 +557,7 @@ interface SourceLinkProps {
 
 export function SourceLink({ href, children, context }: SourceLinkProps) {
   return (
-    <a className="source-link" href={href} target="_blank" rel="noreferrer">
+    <a className="source-link" href={href} target="_blank" rel="noopener noreferrer">
       <span>{children ?? sourceLabel(href)}</span>
       <ExternalIcon />
       {context ? <span className="visually-hidden"> for {context}</span> : null}

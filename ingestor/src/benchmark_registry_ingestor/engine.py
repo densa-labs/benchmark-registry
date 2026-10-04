@@ -129,6 +129,7 @@ RECORD_FIELDS = {
         "metric_key",
         "run_ref",
         "source_has_single_run",
+        "source_type", "source_archive_url", "publisher", "reporting_basis", "evaluated_at", "evaluated_precision",
         "score_value",
         "score_raw",
         "reported_at",
@@ -1742,9 +1743,25 @@ class Ingestor:
             "primary_source_normalized_url": primary["normalized_url"],
             "primary_source_checked_at": primary["checked_at"],
         }
+        for provenance_field in ("source_type", "publisher", "reporting_basis"):
+            value = record.get(provenance_field)
+            if value is not None:
+                value = require_string(value, provenance_field)
+            expected[provenance_field] = value
+        if expected["reporting_basis"] not in {None, "self-reported", "independent"}:
+            raise ValueErrorDetail("reporting_basis is invalid")
+        archive = record.get("source_archive_url")
+        expected["source_archive_url"] = normalize_url(archive, "source_archive_url")[0] if archive is not None else None
+        if record.get("evaluated_at") is not None or record.get("evaluated_precision") is not None:
+            evaluated_at, evaluated_precision = normalize_temporal(record.get("evaluated_at"), record.get("evaluated_precision"), "evaluated_at")
+            if evaluated_precision == "year":
+                raise ValueErrorDetail("evaluated_precision must be date or timestamp")
+        else:
+            evaluated_at, evaluated_precision = None, None
+        expected["evaluated_at"], expected["evaluated_precision"] = evaluated_at, evaluated_precision
         existing = plan.catalog.one("results", **identity)
         if existing:
-            core_fields = tuple(expected)
+            core_fields = tuple(key for key in expected if key not in {"source_type", "source_archive_url", "publisher", "reporting_basis", "evaluated_at", "evaluated_precision"} or key in record)
             if not _same(existing, expected, core_fields):
                 raise IngestionFailure(
                     "CONFLICT",
@@ -1800,8 +1817,8 @@ class Ingestor:
                     metric_id, run_ref, result_key, score_value, score_raw,
                     reported_at, reported_precision, evaluator_set_key,
                     primary_source_url, primary_source_normalized_url,
-                    primary_source_checked_at
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    primary_source_checked_at, source_type, publisher, reporting_basis, source_archive_url, evaluated_at, evaluated_precision
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                 tuple(result.values()),
             )
         )

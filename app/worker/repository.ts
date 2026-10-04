@@ -147,6 +147,7 @@ const RESULT_COLUMNS = `
       ORDER BY eo.normalized_name, eo.id
     ) evaluator
   ), '[]') AS evaluator_names,
+  r.source_type, r.source_archive_url, r.publisher, r.reporting_basis, r.evaluated_at, r.evaluated_precision,
   r.primary_source_url,
   r.reported_at,
   r.reported_precision`;
