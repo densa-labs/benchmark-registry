@@ -4,7 +4,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import template from '../index.html?raw';
 import worker from './index';
 import canonical from './canonical-reference';
-import {buildGeneration} from './materializer';
+import {buildGeneration,needsMaterialization} from './materializer';
 import {garbageCandidates,protectedPublicationKeys,publishGeneration,readManifest,readPublication,rollbackBuild,verifyGeneration,type ProducerStore} from './publication';
 import {digest,validateManifest,type Publication} from './read-model';
 import {shadowGeneration} from './shadow';
@@ -254,4 +254,15 @@ it('adds SEO to an existing generation without changing canonical data', async (
   expect(next.manifest.canonicalRevision).toBe(previous.canonicalRevision);
   expect(next.manifest.objects.seo).toBeTruthy();
   expect(await buildGeneration(f.db,'local',next.manifest)).toBeNull();
+});
+
+it('manual publication preflight detects projection upgrades even with unchanged canonical data',async()=>{
+  const f=await fixture();
+  const build=(await buildGeneration(f.db,'local'))!;
+  const state={revision:build.manifest.canonicalRevision,watermark:build.manifest.watermark};
+  expect(needsMaterialization(build.manifest,state)).toBe(false);
+  expect(needsMaterialization({...build.manifest,projectionVersion:4},state)).toBe(true);
+  expect(needsMaterialization(undefined,state)).toBe(true);
+  expect(needsMaterialization(build.manifest,{...state,revision:'changed'})).toBe(true);
+  expect(needsMaterialization(build.manifest,{...state,watermark:state.watermark+1})).toBe(true);
 });

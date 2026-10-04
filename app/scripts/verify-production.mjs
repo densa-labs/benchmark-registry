@@ -14,6 +14,7 @@ const routes = [
 ];
 
 const source = JSON.parse(readFileSync("wrangler.jsonc", "utf8"));
+const maintenance = JSON.parse(readFileSync("wrangler.maintenance.jsonc", "utf8"));
 const production = source.env?.production;
 const staging = source.env?.staging;
 assert.equal(source.name, "benchmark-registry");
@@ -27,8 +28,8 @@ assert.deepEqual(production?.assets, {
   not_found_handling: "single-page-application",
   run_worker_first: true,
 });
-assert.equal(production?.d1_databases, undefined);
-assert.equal(staging?.d1_databases, undefined);
+assert.deepEqual(production?.d1_databases, maintenance.env.production.d1_databases);
+assert.deepEqual(staging?.d1_databases, maintenance.env.staging.d1_databases);
 assert.deepEqual(staging?.routes, [
   { pattern: "staging.benchmarkregistry.org", custom_domain: true },
 ]);
@@ -49,14 +50,17 @@ assert.equal(deployment.vars?.STAGING_CRAWLER_PROTECTION, undefined);
 assert.equal(deployment.vars?.READ_ENVIRONMENT,"production");
 assert.equal(deployment.assets?.binding, "ASSETS");
 assert.equal(deployment.assets?.run_worker_first, true);
-assert.equal(deployment.d1_databases?.length ?? 0,0);
+assert.equal(deployment.d1_databases?.length, 1);
+assert.equal(deployment.d1_databases[0].binding, "DB");
+assert.equal(deployment.d1_databases[0].database_id, maintenance.env.production.d1_databases[0].database_id);
+assert.notEqual(maintenance.env.staging.d1_databases[0].database_id, maintenance.env.production.d1_databases[0].database_id);
 assert.equal(deployment.kv_namespaces.length,1);
 assert.equal(deployment.kv_namespaces[0].binding,"READ_STORE");
 assert.equal(deployment.kv_namespaces[0].id,source.env.production.kv_namespaces[0].id);
 assert.notEqual(source.env.staging.kv_namespaces[0].id,source.env.production.kv_namespaces[0].id);
 assert.ok(existsSync(join(configs[0], "..", deployment.main)));
 
-stdout.write(`Verified ${workerName}, apex and www, and isolated KV binding without D1.\n`);
+stdout.write(`Verified ${workerName}, apex and www, and isolated KV and D1 bindings for published reads, Coverage and Health.\n`);
 verifyUiBuild(false, join(configs[0], "..", deployment.main));
 
 // Validate the privacy controls in the actual generated deployment config.

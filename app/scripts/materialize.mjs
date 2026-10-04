@@ -39,7 +39,7 @@ const publication=await producer.readPublication(store,environment);
 const previous=publication?await producer.readManifest(store,publication.current.hash,environment):undefined;
 const state=await producer.canonicalState(db);
 let evidence;
-if(values.status) evidence={environment,canonicalRevision:state.revision,publishedRevision:previous?.canonicalRevision??null,pending:state.revision!==previous?.canonicalRevision || state.watermark!==previous?.watermark || !previous?.objects['home-panels'] || !previous?.objects.seo,...metrics};
+if(values.status) evidence={environment,canonicalRevision:state.revision,publishedRevision:previous?.canonicalRevision??null,pending:producer.needsMaterialization(previous,state),...metrics};
 else if(values['gc-plan']) {
   const protectedKeys=await producer.protectedPublicationKeys(store,environment);
   const entries=[];let cursor;
@@ -48,7 +48,7 @@ else if(values['gc-plan']) {
 } else {
   if(!publication && !values.bootstrap) throw new Error('No published generation. Initial materialization requires explicit --bootstrap.');
   if(values.bootstrap && publication) throw new Error('Bootstrap already completed. Use incremental materialization or --status.');
-  if(!values.rollback && previous?.canonicalRevision===state.revision && previous.watermark===state.watermark && previous.objects['home-panels'] && previous.objects.seo) evidence={environment,status:'NO_CHANGE',objectsRebuilt:0,...metrics};
+  if(!values.rollback && !producer.needsMaterialization(previous,state)) evidence={environment,status:'NO_CHANGE',objectsRebuilt:0,...metrics};
   else {
     const owner=crypto.randomUUID();
     const lease=await db.prepare("UPDATE registry_materialization_lease SET owner=?,expires_at=unixepoch()+1800 WHERE id=1 AND (owner IS NULL OR expires_at<unixepoch()) RETURNING owner").bind(owner).first();
