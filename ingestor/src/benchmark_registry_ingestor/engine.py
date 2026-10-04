@@ -151,6 +151,10 @@ ESTABLISHMENT_INPUT_FIELDS = set(ESTABLISHMENT_CORRECTION_FIELDS) - {
 }
 
 
+class CatalogInvariantError(RuntimeError):
+    """The loaded database breaks a uniqueness the planner relies on."""
+
+
 @dataclass
 class Catalog:
     rows: dict[str, list[Record]]
@@ -191,7 +195,9 @@ class Catalog:
             if all(row.get(key) == value for key, value in criteria.items())
         ]
         if len(matches) > 1:
-            raise RuntimeError(f"database invariant violated for {table}: {criteria}")
+            raise CatalogInvariantError(
+                f"database invariant violated for {table}: {criteria}"
+            )
         return matches[0] if matches else None
 
     def many(self, table: str, **criteria: object) -> list[Record]:
@@ -299,7 +305,8 @@ class Ingestor:
             except Exception as exc:
                 raise PublicationPending(
                     "Canonical data committed; materialization is pending. "
-                    "The previous published generation remains live. Retry the materializer."
+                    "The previous published generation remains live. Retry the materializer. "
+                    f"Cause: {exc}"
                 ) from exc
 
     def run(
@@ -398,7 +405,7 @@ class Ingestor:
                 getattr(self, f"_plan_{operation}")(plan, record)
             except IngestionFailure:
                 raise
-            except ValueErrorDetail as exc:
+            except (ValueErrorDetail, CatalogInvariantError) as exc:
                 raise IngestionFailure(
                     "ERROR", self._identifier(operation, record), str(exc)
                 ) from exc

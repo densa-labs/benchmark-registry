@@ -83,10 +83,15 @@ def publication_callback(target: str):
     app = Path(__file__).parents[3] / "app"
 
     def publish():
-        subprocess.run(
+        result = subprocess.run(
             ["node", "scripts/materialize.mjs", "--environment", environment],
-            cwd=app, check=True, capture_output=True, text=True,
+            cwd=app, capture_output=True, text=True, check=False,
         )
+        if result.returncode:
+            raise RuntimeError(
+                f"materializer exited {result.returncode}: "
+                f"{(result.stderr or result.stdout)[-2000:].strip()}"
+            )
 
     return publish
 
@@ -192,6 +197,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 {
                     "status": exc.status,
                     "operation": args.operation,
+                    "input": str(args.input),
                     "identifier": exc.identifier,
                     "message": exc.message,
                 },
