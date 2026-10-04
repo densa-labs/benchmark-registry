@@ -143,6 +143,8 @@ export type RegistryRoute =
   | { kind: "benchmark-version"; slug: string; version: string }
   | { kind: "companies" }
   | { kind: "company"; slug: string }
+  | { kind: "about" }
+  | { kind: "contact" }
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
@@ -162,6 +164,8 @@ type LoadedRouteData =
   | { kind: "benchmark-version"; payload: BenchmarkVersionPageResponse }
   | { kind: "companies"; payload: CompanyListResponse }
   | { kind: "company"; payload: CompanyDetailResponse }
+  | { kind: "about" }
+  | { kind: "contact" }
   | { kind: "legal" }
   | { kind: "privacy" }
   | { kind: "terms" }
@@ -187,7 +191,7 @@ export function resolveRegistryRoute(pathname: string): RegistryRoute {
   const comparisonMatch=/^\/compare\/([a-z0-9-]+)\/?$/u.exec(pathname);
   if(comparisonMatch) return {kind:"comparison",slug:comparisonMatch[1]};
 
-  for (const kind of ["legal", "privacy", "terms"] as const) {
+  for (const kind of ["legal", "privacy", "terms", "about", "contact"] as const) {
     if (pathname === `/${kind}` || pathname === `/${kind}/`) return { kind };
   }
 
@@ -346,7 +350,7 @@ export async function loadRegistryRoute(
     if(!response.ok || !match) throw new RegistryClientError("Coverage could not be loaded.");
     return JSON.parse(match[1]).loaded as LoadedRegistryRoute;
   }
-  if (route.kind === "corrections" || route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
+  if (route.kind === "about" || route.kind === "contact" || route.kind === "corrections" || route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
   if(route.kind==="recent") {
     const response=await fetcher("/api/recent"+search,{headers:{Accept:"application/json"},signal});

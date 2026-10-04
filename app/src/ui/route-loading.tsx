@@ -25,7 +25,7 @@ export function RouteLoadingState({ route }: { route: RegistryRoute }) {
   if (route.kind === "coverage") return <PageContainer><LoadingState labels={["Model", "Coverage"]} rows={6} /></PageContainer>;
   if (route.kind === "corrections") return <CorrectionsPage />;
   if (route.kind === "home" || route.kind === "not-found") return null;
-  if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return <LegalPage kind={route.kind} />;
+  if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms" || route.kind === "about" || route.kind === "contact") return <LegalPage kind={route.kind} />;
   const index = route.kind === "models" || route.kind === "benchmarks" || route.kind === "companies";
   const family = route.kind === "benchmark";
   const labels = route.kind in metadata ? metadata[route.kind as keyof typeof metadata] : [];

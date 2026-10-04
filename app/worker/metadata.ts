@@ -31,7 +31,7 @@ const missing: DocumentMetadata = {
 async function pageMetadata(url: URL, repository?: RegistryReader): Promise<DocumentMetadata> {
   const route = resolveRegistryRoute(url.pathname);
   if (route.kind === "corrections" || route.kind === "coverage") return {title:seoTitle(CONTENT_METADATA[route.kind].title),description:seoDescription([CONTENT_METADATA[route.kind].description])};
-  if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return {
+  if (route.kind === "legal" || route.kind === "privacy" || route.kind === "terms" || route.kind === "about" || route.kind === "contact") return {
     title: seoTitle(LEGAL_METADATA[route.kind].title), description: seoDescription([LEGAL_METADATA[route.kind].description]),
   };
   if (route.kind === "not-found") return missing;

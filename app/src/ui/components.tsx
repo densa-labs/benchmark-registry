@@ -1,3 +1,4 @@
+import { DATA_LICENSE } from "../data-license";
 import { sourceLabel } from "../source-label";
 import { BreadcrumbContext } from "../breadcrumb-context";
 import { VisibleBreadcrumbs } from "../breadcrumbs";
@@ -82,14 +83,14 @@ export function AppShell({
         <PageContainer className="site-footer__inner">
           <div className="site-footer__dates"><p>
             © 2026{" "}
-            <a className="site-footer__credit-link" href="https://densa-labs.github.io/">
+            <a className="site-footer__credit-link" href="https://densa-labs.github.io/" rel="noopener noreferrer">
               Densa Labs
             </a>
           </p>
           <button data-nosnippet className="last-updated" type="button" aria-pressed={showBuildTime} aria-describedby="last-updated-help" onClick={() => setShowBuildTime((shown) => !shown)}>
             {showBuildTime ? `Application build: ${buildTime}` : dataUpdated ? `Last updated: ${dataUpdated.slice(0,10)}` : "Application build details"}
-          </button><span id="last-updated-help" className="visually-hidden">Toggle between the data update date and the application build time.</span></div>
-          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/recent">Recently added</a><a href="/coverage">Coverage</a><a href="/corrections">Corrections</a><a href="/legal">Legal</a></nav>
+          </button><span id="last-updated-help" className="visually-hidden">Toggle between the data update date and the application build time.</span><p>Data licensed under <a href={DATA_LICENSE.url} rel="noopener noreferrer">{DATA_LICENSE.name}</a></p></div>
+          <nav className="site-footer__links" aria-label="Footer navigation"><a href="/recent">Recently added</a><a href="/coverage">Coverage</a><a href="/corrections">Corrections</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/legal">Legal</a></nav>
           <div className="site-footer__controls">
             <ThemeToggle theme={preference} onSelectTheme={selectTheme} />
             <a className="github-link" href="https://github.com/densa-labs/benchmark-registry" aria-label="Benchmark Registry on GitHub"><GitHubIcon /></a>
