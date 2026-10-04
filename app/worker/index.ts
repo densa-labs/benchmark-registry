@@ -7,15 +7,14 @@ import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
-import { logServerError, logZeroSearch } from "./diagnostics";
+import { logServerError } from "./diagnostics";
 import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
-import { apiParameters } from "./request-policy";
+import { handleApi as routeApi } from "./api-router";
 import { withRegistryCache, type CacheEnvironment } from "./cache";
 import type { RegistryReader } from "./materialized-repository";
 import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
 import { MaterializationFailure } from "./read-model";
-import { comparisonPayload } from "./seo-comparisons";
 import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
@@ -24,6 +23,8 @@ export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnv
   D1_DIAGNOSTICS?: QueryMetrics;
   STAGING_CRAWLER_PROTECTION?: "enabled";
 }
+
+const handleApi=(request:Request,env:Env,repository:RegistryReader)=>routeApi(request,env.REGISTRY_REVISION,repository);
 
 const STAGING_HOSTNAME = "staging.benchmarkregistry.org";
 const WWW_HOSTNAME = ALTERNATE_HOST;
@@ -43,34 +44,6 @@ function decodeSegment(value: string): string {
   } catch {
     throw new ApiError(400, "invalid_query", "Route contains invalid encoding.");
   }
-}
-
-async function handleApi(request: Request, env: Env, repository: RegistryReader): Promise<Response> {
-  if (request.method !== "GET") return jsonError(404, "not_found", "API route not found.");
-  const {path, params} = apiParameters(new URL(request.url));
-  if (path.length === 2 && path[1] === "revision") return Response.json({revision:env.REGISTRY_REVISION});
-  if (path.length === 3 && path[1] === "comparisons") {
-    const snapshot=await repository.seoSnapshot();
-    const pair=snapshot.comparisons.find(pair=>pair.path===`/compare/${path[2]}`);
-    if(!pair) return jsonError(404,"not_found","Comparison not found.");
-    return Response.json(await comparisonPayload(repository,pair,snapshot));
-  }
-  if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
-  if (path.length === 2 && path[1] === "recent") return Response.json((await repository.seoSnapshot()).recent);
-  if (path.length === 2 && path[1] === "home-panels") return Response.json(await repository.homePanels());
-  if (path.length === 2 && path[1] === "models") return Response.json(await repository.models(params));
-  if (path.length === 3 && path[1] === "models") return Response.json(await repository.model(path[2],params));
-  if (path.length === 2 && path[1] === "benchmarks") return Response.json(await repository.benchmarks(params));
-  if (path.length === 3 && path[1] === "benchmarks") return Response.json(await repository.benchmark(path[2]));
-  if (path.length === 4 && path[1] === "benchmarks") return Response.json(await repository.benchmarkVersion(path[2],path[3],params));
-  if (path.length === 2 && path[1] === "companies") return Response.json(await repository.companies(params));
-  if (path.length === 3 && path[1] === "companies") return Response.json(await repository.company(path[2],params));
-  if (path.length === 2 && path[1] === "search") {
-    const result=await repository.search(params);
-    if(result.page.total_items===0) logZeroSearch(new URL(request.url).searchParams.get("q") ?? "");
-    return Response.json(result);
-  }
-  return jsonError(404, "not_found", "API route not found.");
 }
 
 export async function handleRequest(request: Request, env: Env, repository?: RegistryReader): Promise<Response> {

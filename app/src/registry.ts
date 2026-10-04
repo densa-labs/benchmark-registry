@@ -346,7 +346,14 @@ export async function loadRegistryRoute(
   fetcher: typeof fetch = fetch,
   signal?: AbortSignal,
 ): Promise<LoadedRegistryRoute> {
-  if (route.kind === "coverage" || route.kind === "search") {
+  if (route.kind === "search") {
+    if (!new URLSearchParams(search).has("q")) return {kind:"search",payload:{data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}};
+    const response=await fetcher(`/api/search${search}`,{headers:{Accept:"application/json"},signal});
+    const body: unknown=await response.json();
+    if(!response.ok) throw new RegistryClientError(errorMessage(body));
+    return {kind:"search",payload:body as SearchResponse};
+  }
+  if (route.kind === "coverage") {
     const response=await fetcher(`/${route.kind}`+search,{signal});
     const html=await response.text();
     const match=/<script id="registry-initial-document" type="application\/json">(.*?)<\/script>/su.exec(html);

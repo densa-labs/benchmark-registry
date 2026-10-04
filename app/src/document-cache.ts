@@ -1,6 +1,7 @@
 import { isLegalKind } from "./legal-content";
 import { parseInitialDocument, type InitialDocument } from "./bootstrap";
 import { setSearchGeneration } from './registry';
+import { staticFetch } from './static-api';
 
 export interface BrowserDocument extends InitialDocument { href: string; head: string; time: number }
 export const DOCUMENT_TTL = 60_000;
@@ -52,7 +53,7 @@ export class DocumentCache {
     return entry && now - entry.time < DOCUMENT_STALE_LIMIT ? entry : undefined;
   }
 
-  async get(href: string, fetcher: typeof fetch = fetch, now = Date.now()) {
+  async get(href: string, fetcher: typeof fetch = staticFetch, now = Date.now()) {
     const fresh = this.peek(href,now);
     if (fresh) return fresh;
     const entry = this.entries.get(documentKey(href));
@@ -76,6 +77,11 @@ export class DocumentCache {
     this.put(renewed);
     return renewed;
   }
+}
+
+/** True when a prerendered page was served for a URL whose query it does not reflect. */
+export function pendsClientQuery(initial: Pick<InitialDocument, "currentSearch" | "failure" | "loaded"> | undefined, search: string): boolean {
+  return Boolean(initial && !initial.failure && initial.loaded.kind !== "not-found" && initial.currentSearch !== search);
 }
 
 export function parseBrowserDocument(html: string, href: string, revision?: string): BrowserDocument {

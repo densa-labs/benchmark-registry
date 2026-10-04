@@ -60,9 +60,11 @@ export class MaterializedRepository implements RegistryReader {
     const response = page(rows,p);
     // Derive from the complete, current model projections, including history.
     // This also supports existing published generations without a data migration.
+    const featured = this.manifest.objects.featured ? await this.read<'featured'>('featured') : undefined;
     const data = await Promise.all(response.data.map(async row => {
-      if (!this.featuredResults.has(row.registry_no)) this.featuredResults.set(row.registry_no,
-        this.get<'model'>(`model:${row.registry_no}`).then(model => highestRecordedResult(model.response.data.results)));
+      if (!this.featuredResults.has(row.registry_no)) this.featuredResults.set(row.registry_no, featured && row.registry_no in featured
+        ? Promise.resolve(featured[row.registry_no])
+        : this.get<'model'>(`model:${row.registry_no}`).then(model => highestRecordedResult(model.response.data.results)));
       return { ...row, featured_result: await this.featuredResults.get(row.registry_no)! };
     }));
     return { ...response, data };

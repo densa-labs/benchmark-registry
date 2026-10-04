@@ -27,6 +27,7 @@ import {
   type SearchResponse,
   type RegistryRoute,
 } from "../registry";
+import { staticFetch } from "../static-api";
 import {
   readStoredTheme,
   resolveTheme,
@@ -421,7 +422,7 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
     request.current = controller;
     setActiveIndex(-1);
     setState({ status: "loading", query });
-    void searchRegistry(query, fetch, controller.signal)
+    void searchRegistry(query, staticFetch, controller.signal)
       .then((response) => {
         if (controller.signal.aborted) return;
         if (response.direct_href) {

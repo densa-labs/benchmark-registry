@@ -1,60 +1,25 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "benchmark-registry",
-  "main": "./worker/index.ts",
   "compatibility_date": "2026-09-17",
   "assets": {
-    "binding": "ASSETS",
-    "not_found_handling": "single-page-application",
-    "run_worker_first": true
+    "directory": "./dist/client",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
   },
   "env": {
     "staging": {
       "workers_dev": false,
       "preview_urls": false,
-      "vars": {
-        "STAGING_CRAWLER_PROTECTION": "enabled",
-        "READ_ENVIRONMENT": "staging"
-      },
       "assets": {
-        "binding": "ASSETS",
-        "not_found_handling": "single-page-application",
-        "run_worker_first": true
+        "directory": "./dist/client",
+        "html_handling": "auto-trailing-slash",
+        "not_found_handling": "404-page"
       },
       "routes": [
         {
           "pattern": "staging.benchmarkregistry.org",
           "custom_domain": true
-        }
-      ],
-      "kv_namespaces": [
-        {
-          "binding": "READ_STORE",
-          "id": "0bc4e56c19ab4a95966f0c81fe13a579"
-        }
-      ],
-      "observability": {
-        "enabled": true,
-        "redact_query_string": true,
-        "logs": {
-          "enabled": true,
-          "invocation_logs": false,
-          "persist": false,
-          "head_sampling_rate": 1,
-          "destinations": []
-        },
-        "traces": {
-          "enabled": false,
-          "persist": false,
-          "destinations": []
-        }
-      },
-      "d1_databases": [
-        {
-          "binding": "DB",
-          "database_name": "benchmark-registry-staging",
-          "database_id": "59a384d9-5fba-45e4-97be-3bd1e047def1",
-          "migrations_dir": "../migrations"
         }
       ]
     },
@@ -63,9 +28,9 @@
       "workers_dev": false,
       "preview_urls": false,
       "assets": {
-        "binding": "ASSETS",
-        "not_found_handling": "single-page-application",
-        "run_worker_first": true
+        "directory": "./dist/client",
+        "html_handling": "auto-trailing-slash",
+        "not_found_handling": "404-page"
       },
       "routes": [
         {
@@ -76,58 +41,7 @@
           "pattern": "www.benchmarkregistry.org",
           "custom_domain": true
         }
-      ],
-      "observability": {
-        "enabled": true,
-        "redact_query_string": true,
-        "logs": {
-          "enabled": true,
-          "invocation_logs": false,
-          "persist": false,
-          "head_sampling_rate": 1,
-          "destinations": []
-        },
-        "traces": {
-          "enabled": false,
-          "persist": false,
-          "destinations": []
-        }
-      },
-      "kv_namespaces": [
-        {
-          "binding": "READ_STORE",
-          "id": "6063f8ffd85d416a9bc56c75ddf5ea12"
-        }
-      ],
-      "vars": {
-        "READ_ENVIRONMENT": "production"
-      },
-      "d1_databases": [
-        {
-          "binding": "DB",
-          "database_name": "benchmark-registry-production",
-          "database_id": "a7b3e1d1-34d6-432b-bd31-8ec4636916ab",
-          "migrations_dir": "../migrations"
-        }
       ]
     }
-  },
-  "kv_namespaces": [
-    {
-      "binding": "READ_STORE",
-      "id": "00000000000000000000000000000000"
-    }
-  ],
-  "vars": {
-    "READ_ENVIRONMENT": "local"
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "benchmark-registry",
-      "database_id": "00000000-0000-0000-0000-000000000000",
-      "preview_database_id": "benchmark-registry-local",
-      "migrations_dir": "../migrations"
-    }
-  ]
+  }
 }

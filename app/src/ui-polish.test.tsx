@@ -195,10 +195,15 @@ describe("P11.8 presentation contracts", () => {
     const fetcher = vi.fn();
     vi.stubGlobal("fetch", fetcher);
     const errors = vi.fn();
-    await act(() => { root = hydrateRoot(container, <App initial={initial} />, { onRecoverableError: errors }); });
+    history.replaceState(null, "", "/models?q=%3C/script%3E");
+    const served = { ...initial, currentSearch: window.location.search };
+    container.innerHTML = renderToString(<RegistryDocument {...served} />);
+    const servedHeading = container.querySelector("h1");
+    await act(() => { root = hydrateRoot(container, <App initial={served} />, { onRecoverableError: errors }); });
     expect(errors).not.toHaveBeenCalled();
     expect(fetcher).not.toHaveBeenCalled();
-    expect(container.querySelector("h1")).toBe(heading);
+    expect(heading).not.toBeNull();
+    expect(container.querySelector("h1")).toBe(servedHeading);
     expect(container.querySelector(".loading-state")).toBeNull();
   });
 });
