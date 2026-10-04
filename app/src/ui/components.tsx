@@ -608,6 +608,7 @@ interface DataTableProps<Row> {
   columns: TableColumn<Row>[];
   rows: Row[];
   getRowKey: (row: Row) => string;
+  getRowId?: (row: Row) => string;
 }
 
 export function DataTable<Row>({
@@ -615,6 +616,7 @@ export function DataTable<Row>({
   columns,
   rows,
   getRowKey,
+  getRowId,
 }: DataTableProps<Row>) {
   return (
     <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
@@ -650,7 +652,7 @@ export function DataTable<Row>({
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={getRowKey(row)}>
+            <tr key={getRowKey(row)} id={getRowId?.(row)}>
               {columns.map((column) => (
                 <td key={column.key} className={column.className}>
                   {column.render(row)}

@@ -1,3 +1,5 @@
+import { Cite, RecordCite } from "./cite";
+import { recordAnchor } from "./citation";
 import { ReportIssue } from "./report-issue";
 import { resultPage } from "./issue-report";
 import { comparisonHref, parseComparisonState } from "./compare";
@@ -291,10 +293,10 @@ export function ModelDetailPage({
     ...pivot.variants.map(variant => ({
       key: `effort-${variant}`, label: variant || "Not specified", className: "numeric pivot-score",
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
-        <span key={result.result_key} className="pivot-observation">
+        <span key={result.result_key} className="pivot-observation" id={recordAnchor(result)}>
           <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
           <ResultDetails result={result} compact showEvaluator />
-          <ReportIssue result={result} page={resultPage(result)} />
+          <ReportIssue result={result} page={resultPage(result)} /><RecordCite result={result} />
         </span>)} </div> : "–",
     })),
     { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
@@ -362,6 +364,7 @@ export function ModelDetailPage({
         />
       </section>
       <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+      <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
       <ReportIssue page={pathname} model={model.name} source={model.source_url} />
       </PageHeader>
 
@@ -406,7 +409,7 @@ export function ModelDetailPage({
             columns={pivotColumns} rows={pivotRows} getRowKey={row => row.key}
           /> : <DataTable
             caption={`Benchmark results for ${model.name}`}
-            columns={columns} rows={results} getRowKey={result => result.result_key}
+            columns={columns} rows={results} getRowKey={result => result.result_key} getRowId={recordAnchor}
           />
         )}
         <PaginationFor

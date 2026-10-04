@@ -1,3 +1,4 @@
+import { RecordCite } from "./cite";
 import { ReportIssue } from "./report-issue";
 import { resultPage } from "./issue-report";
 import type { ResultRow } from "../worker/api";
@@ -24,5 +25,6 @@ export function ResultSource({ result }: { result: ResultRow }) {
     {result.source_archive_url ? <SourceLink href={result.source_archive_url}>Archived copy</SourceLink> : null}
     <ResultDetails result={result} showEvaluator />
     <ReportIssue result={result} page={resultPage(result)} />
+    <RecordCite result={result} />
   </span>;
 }

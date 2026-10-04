@@ -1,3 +1,5 @@
+import { Cite } from "./cite";
+import { recordAnchor } from "./citation";
 import { ReportIssue } from "./report-issue";
 import { ResultSource } from "./result-source";
 import { groupVersions, type VersionGroup } from "./version-groups";
@@ -398,6 +400,7 @@ export function BenchmarkVersionPage({
           ? undefined
           : version.benchmark.name}
       />
+      <Cite input={{title:`${version.benchmark.name} ${version.version} benchmark results`,path:pathname,benchmarkIdentifier:`${version.benchmark.slug}/${version.version_slug}`}} />
       <ReportIssue page={pathname} benchmark={`${version.benchmark.name} ${version.version}`} source={response.data.source_url} />
       <section className="entity-metadata" aria-label="Benchmark version metadata">
         <MetadataRows
@@ -483,6 +486,7 @@ export function BenchmarkVersionPage({
             columns={columns}
             rows={results}
             getRowKey={(result) => result.result_key}
+            getRowId={recordAnchor}
           />
         )}
         <PaginationFor

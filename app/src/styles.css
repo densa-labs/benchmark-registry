@@ -1585,6 +1585,14 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .coverage-options label { display: flex; gap: .5rem; align-items: center; }
 .coverage-options input { width: var(--coverage-option-width); }
 
+:target { background-color: var(--accent-soft); scroll-margin-top: var(--header-height); }
+.cite-details { font-size: .75rem; color: var(--text-muted); }
+.cite-details summary { cursor: pointer; width: fit-content; }
+.cite-body { width: min(var(--citation-max-width), 100%); min-width: 0; color: var(--text); }
+.cite-body pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; font: inherit; background: var(--surface-strong); padding: .5rem; }
+.copy-control { font-size: inherit; }
+
+
 @media (max-width: 48rem) {
   .site-footer__inner { grid-template-columns: minmax(0, 1fr); }
   .site-footer__dates { grid-column: 1; grid-row: 1; }
