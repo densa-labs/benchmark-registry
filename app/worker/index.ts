@@ -1,3 +1,4 @@
+import { badgeResponse } from "./badge";
 import { measuredDatabase, type QueryMetrics } from "./query-metrics";
 import { coverageOptions, cachedCoverage, type CoverageEnvironment } from "./coverage";
 import { CONTENT_PATHS } from "../src/content-metadata";
@@ -73,6 +74,7 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
 export async function handleRequest(request: Request, env: Env, repository?: RegistryReader): Promise<Response> {
   const url = new URL(request.url);
   const { pathname } = url;
+  if (pathname.startsWith("/badge/")) return badgeResponse(request,requireRepository(repository));
   if (pathname === "/healthz") {
     const headers={"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow"};
     if (!["GET","HEAD"].includes(request.method)) return new Response(null,{status:405,headers});

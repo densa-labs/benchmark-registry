@@ -1,3 +1,4 @@
+import { BadgeSnippet } from "./badge-snippet";
 import { useSyncExternalStore, useState } from "react";
 import { generateCitation, recordCitation, recordPermalink, type CitationInput } from "./citation";
 import type { ResultRow } from "../worker/api";
@@ -22,5 +23,5 @@ export function Cite({input,children}:{input:CitationInput;children?:React.React
   </details>;
 }
 export function RecordCite({result}:{result:ResultRow}) {
-  return <Cite input={recordCitation(result)}><p><a href={recordPermalink(result)}>Permalink to this record</a></p></Cite>;
+  return <Cite input={recordCitation(result)}><p><a href={recordPermalink(result)}>Permalink to this record</a></p><BadgeSnippet result={result} /></Cite>;
 }
