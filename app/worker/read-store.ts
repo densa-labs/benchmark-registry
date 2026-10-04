@@ -1,6 +1,28 @@
 import { digest, MaterializationFailure, validateManifest, validateObject, validatePublication, type GenerationRef, type Publication, type ReadData, type ReadEnvironment, type ReadManifest, type ReadObject } from './read-model';
 import { MaterializedRepository } from './materialized-repository';
 export interface ReadStoreEnvironment {READ_STORE?:KVNamespace;READ_ENVIRONMENT?:ReadEnvironment;REGISTRY_CACHE?:Cache;CACHE_WAIT_UNTIL?:(promise:Promise<unknown>)=>void}
+// Verified reads are content-addressed and immutable, so one isolate may reuse them
+// across requests instead of re-hashing and re-parsing them on every cold render.
+export const VERIFIED_READ_BUDGET=8*1024*1024;
+const deepFreeze=<T>(value:T):T=>{if(value && typeof value==='object' && !Object.isFrozen(value)) {Object.freeze(value);for(const child of Object.values(value)) deepFreeze(child);}return value;};
+export class VerifiedReads {
+  bytes=0;
+  private entries=new Map<string,{value:unknown;size:number}>();
+  constructor(readonly budget:number) {}
+  get size() {return this.entries.size;}
+  get(key:string):unknown {
+    const entry=this.entries.get(key);if(!entry) return undefined;
+    this.entries.delete(key);this.entries.set(key,entry);
+    return entry.value;
+  }
+  set(key:string,value:unknown,size:number) {
+    if(size>this.budget || this.entries.has(key)) return;
+    for(const [oldest,entry] of this.entries) {if(this.bytes+size<=this.budget) break;this.entries.delete(oldest);this.bytes-=entry.size;}
+    this.entries.set(key,{value:deepFreeze(value),size});this.bytes+=size;
+  }
+  clear() {this.entries.clear();this.bytes=0;}
+}
+export const verifiedReads=new VerifiedReads(VERIFIED_READ_BUDGET);
 export class PublishedReadStore {
   reads=0;
   private memo=new Map<string,Promise<unknown>>();
@@ -27,29 +49,38 @@ export class PublishedReadStore {
     throw new MaterializationFailure('No valid published materialization.');
   }
   async repository(ref:GenerationRef):Promise<MaterializedRepository> {
-    let parsed:ReadManifest|undefined;
-    const text=await this.get('manifests/'+ref.hash,true,async(text)=>{
-      if(await digest(text)!==ref.hash) throw new MaterializationFailure('Corrupt manifest.');
-      const value:unknown=JSON.parse(text);validateManifest(value,this.env.READ_ENVIRONMENT ?? 'local');parsed=value;
-    });
-    if(!text || !parsed) throw new MaterializationFailure('Read manifest is missing or corrupt.');
-    const manifest=parsed;
+    const environment=this.env.READ_ENVIRONMENT ?? 'local';
+    const manifestKey='manifest:'+environment+':'+ref.hash;
+    let manifest=verifiedReads.get(manifestKey) as ReadManifest|undefined;
+    if(!manifest) {
+      let parsed:ReadManifest|undefined;
+      const text=await this.get('manifests/'+ref.hash,true,async(text)=>{
+        if(await digest(text)!==ref.hash) throw new MaterializationFailure('Corrupt manifest.');
+        const value:unknown=JSON.parse(text);validateManifest(value,environment);
+        // Bundled objects are checked with their manifest, so a cached manifest never needs rechecking.
+        for(const [hash,object] of Object.entries(value.inlineObjects)) if(await digest(JSON.stringify(object))!==hash) throw new MaterializationFailure('Corrupt coherent update bundle.');
+        parsed=value;
+      });
+      if(!text || !parsed) throw new MaterializationFailure('Read manifest is missing or corrupt.');
+      manifest=parsed;verifiedReads.set(manifestKey,manifest,text.length);
+    }
     if(manifest.generation!==ref.generation) throw new MaterializationFailure('Generation identity mismatch.');
     return new MaterializedRepository(manifest,async<K extends keyof ReadData>(key:string)=>{
       const hash=manifest.objects[key];
       const memoKey=manifest.generation+':'+hash+':'+key;
       if(!this.memo.has(memoKey)) this.memo.set(memoKey,(async()=>{
+        const verifiedKey='object:'+manifest.environment+':'+hash+':'+key;
+        const verified=verifiedReads.get(verifiedKey);
+        if(verified!==undefined) return verified;
         const inline=manifest.inlineObjects[hash];
-        if(inline) {
-          if(await digest(JSON.stringify(inline))!==hash) throw new MaterializationFailure('Corrupt coherent update bundle.');
-          return inline.data;
-        }
+        if(inline) return inline.data;
         let parsed:ReadObject|undefined;
         const text=await this.get('objects/'+hash,true,async(text)=>{
           if(await digest(text)!==hash) throw new MaterializationFailure('Corrupt object.');
           const object:unknown=JSON.parse(text);validateObject(object,key,manifest.environment);parsed=object;
         });
         if(!text || !parsed) throw new MaterializationFailure('Read object is missing or corrupt.');
+        verifiedReads.set(verifiedKey,parsed.data,text.length);
         return parsed.data;
       })().catch(()=>{this.memo.delete(memoKey);throw new MaterializationFailure("Invalid or unavailable read object.");}));
       return this.memo.get(memoKey)! as Promise<ReadData[K]>;
