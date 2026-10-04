@@ -3,7 +3,7 @@ import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
-import { diagnoseWorkerFailure } from "./diagnostics";
+import { logServerError, logZeroSearch } from "./diagnostics";
 import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { apiParameters } from "./request-policy";
@@ -60,13 +60,28 @@ async function handleApi(request: Request, env: Env, repository: RegistryReader)
   if (path.length === 4 && path[1] === "benchmarks") return Response.json(await repository.benchmarkVersion(path[2],path[3],params));
   if (path.length === 2 && path[1] === "companies") return Response.json(await repository.companies(params));
   if (path.length === 3 && path[1] === "companies") return Response.json(await repository.company(path[2],params));
-  if (path.length === 2 && path[1] === "search") return Response.json(await repository.search(params));
+  if (path.length === 2 && path[1] === "search") {
+    const result=await repository.search(params);
+    if(result.page.total_items===0) logZeroSearch(new URL(request.url).searchParams.get("q") ?? "");
+    return Response.json(result);
+  }
   return jsonError(404, "not_found", "API route not found.");
 }
 
 export async function handleRequest(request: Request, env: Env, repository?: RegistryReader): Promise<Response> {
   const url = new URL(request.url);
   const { pathname } = url;
+  if (pathname === "/healthz") {
+    const headers={"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow"};
+    if (!["GET","HEAD"].includes(request.method)) return new Response(null,{status:405,headers});
+    try {
+      if(!env.DB || !(await env.DB.prepare("SELECT 1 AS ok").first<{ok:number}>())?.ok) throw new Error("Database unavailable");
+      return new Response(request.method === "HEAD" ? null : '{"ok":true}', {headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
+    } catch(error) {
+      logServerError("healthz",503,error);
+      return new Response(request.method === "HEAD" ? null : '{"ok":false}',{status:503,headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
+    }
+  }
 
   if (pathname === "/api" || pathname.startsWith("/api/")) {
     try {
@@ -76,7 +91,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if (error instanceof ApiError) {
         return jsonError(error.status, error.code, error.message);
       }
-      diagnoseWorkerFailure("read-api");
+      logServerError("read-api",500,error);
       return jsonError(500, "internal_error", "The request could not be completed.");
     }
   }
@@ -99,7 +114,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       if (error instanceof ApiError) {
         return new Response("Invalid model route.", { status: error.status });
       }
-      diagnoseWorkerFailure("model-redirect");
+      logServerError("model-redirect",500,error);
       return new Response("The request could not be completed.", { status: 500 });
     }
   }
@@ -123,7 +138,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
       });
     } catch (error) {
       if (error instanceof MaterializationFailure) throw error;
-      diagnoseWorkerFailure("sitemap");
+      logServerError("sitemap",500,error);
       return new Response('The request could not be completed.', { status: 500 });
     }
   }
@@ -162,7 +177,7 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
   } catch (error) {
     if (error instanceof MaterializationFailure) throw error;
     if (error instanceof ApiError) return new Response(error.message, {status:error.status,headers:{"X-Robots-Tag":"noindex","Cache-Control":"no-store"}});
-    diagnoseWorkerFailure("document");
+    logServerError("document",500,error);
     return new Response("The request could not be completed.", { status: 500 });
   }
 }
@@ -184,6 +199,7 @@ const worker = {
     const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
     if(staticAsset) response=await env.ASSETS.fetch(request);
     else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
+    else if(url.pathname==="/healthz") response=await handleRequest(request,env);
     else if ([...LEGAL_PATHS,...CONTENT_PATHS].some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
     else {
       try {
@@ -199,8 +215,8 @@ const worker = {
           } catch(error) {lastError=error;}
         }
         if(lastError) throw lastError;
-      } catch {
-        diagnoseWorkerFailure("materialized-read");
+      } catch(error) {
+        logServerError("materialized-read",500,error);
         if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
         else if (url.pathname === '/sitemap.xml') response=new Response('The materialized registry is temporarily unavailable.',{status:500});
         else {
