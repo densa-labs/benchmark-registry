@@ -174,6 +174,7 @@ it('manifest references are validated before an active pointer can be written',a
 it('bootstrap shadow checks all supported read projections before cutover',async()=>{
   const f=fixture();const {build}=await bootstrap(f);
   expect(await shadowGeneration(f.db,build)).toMatchObject({equivalent:true});
+  expect(await shadowGeneration(f.db,{...build,manifest:{...build.manifest,inlineObjects:{}}})).toMatchObject({equivalent:true});
 });
 it('malformed inline payloads cannot replace or serve a valid generation',async()=>{
   const f=fixture();const {build,publication}=await bootstrap(f);

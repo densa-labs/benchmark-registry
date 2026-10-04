@@ -3,7 +3,7 @@ import {RegistryRepository} from './repository';
 import {MaterializedRepository,type RegistryReader} from './materialized-repository';
 import {apiParameters} from './request-policy';
 import type {GenerationBuild} from './materializer';
-import type {ReadData} from './read-model';
+import {validateObject,type ReadData} from './read-model';
 function stable(value:unknown):string {if(Array.isArray(value)) return '['+value.map(stable).join(',')+']';if(value && typeof value==='object') return '{'+Object.entries(value).sort(([a],[b])=>a.localeCompare(b)).map(([key,v])=>JSON.stringify(key)+':'+stable(v)).join(',')+'}';return JSON.stringify(value);}
 async function request(reader:RegistryReader,path:string) {
   const {path:parts,params}=apiParameters(new URL('https://registry.invalid/api'+path));
@@ -15,7 +15,13 @@ async function request(reader:RegistryReader,path:string) {
   return reader.stats();
 }
 export async function shadowGeneration(db:D1Database,build:GenerationBuild) {
-  const materialized=new MaterializedRepository(build.manifest,async<K extends keyof ReadData>(key:string)=>build.manifest.inlineObjects[build.manifest.objects[key]].data as ReadData[K]);
+  const objectData=<K extends keyof ReadData>(key:string):ReadData[K]=>{
+    const hash=build.manifest.objects[key],inline=build.manifest.inlineObjects[hash],text=build.objects.get(hash);
+    if(!inline && !text) throw new Error('Full shadow projection is unavailable.');
+    const object:unknown=inline ?? JSON.parse(text!);validateObject(object,key,build.manifest.environment);
+    return object.data as ReadData[K];
+  };
+  const materialized=new MaterializedRepository(build.manifest,async<K extends keyof ReadData>(key:string)=>objectData<K>(key));
   const canonical=new RegistryRepository(db);
   const keys=Object.keys(build.manifest.objects),model=keys.includes('model:10005')?'10005':keys.find(k=>k.startsWith('model:'))!.slice(6),company=keys.includes('company:openai')?'openai':keys.find(k=>k.startsWith('company:'))!.slice(8),family=keys.includes('family:gpqa')?'gpqa':keys.find(k=>k.startsWith('family:'))!.slice(7),versionKey=keys.includes('version:gpqa:diamond')?'version:gpqa:diamond':keys.find(k=>k.startsWith('version:'))!,version=versionKey.split(':').slice(1).join('/');
   const paths=['/stats','/home-panels',`/models/${model}`,`/companies/${company}`,`/benchmarks/${family}`,`/benchmarks/${version}`];
@@ -29,7 +35,7 @@ export async function shadowGeneration(db:D1Database,build:GenerationBuild) {
   }
   paths.push(`/models?company=${company}`,`/benchmarks/${version}?company=${company}`,`/benchmarks/${version}?view=history&company=${company}&q=g`);
   for(const query of ['gpt','GPQA','10001','GPT-6 Astra GPQA','gpt 6','%','healthbench','openai']) paths.push('/search?q='+encodeURIComponent(query));
-  const versionObject=build.manifest.inlineObjects[build.manifest.objects[versionKey]].data as ReadData['version'];
+  const versionObject=objectData<'version'>(versionKey);
   const unique=versionObject.response.data.results.find(r=>r.exact_result_href!==null),ambiguous=versionObject.response.data.results.find(r=>r.exact_result_href===null);
   for(const row of [unique,ambiguous].filter(Boolean)) if(row) paths.push(`/benchmarks/${version}?view=history&result=${row.result_key}`);
   for(const path of paths) {
