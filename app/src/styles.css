@@ -1538,3 +1538,5 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 @media (max-width: 639px) {
   .metadata-inline .metadata-row + .metadata-row::before { content: none; }
 }
+
+.pivot-cell { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }

@@ -341,6 +341,22 @@ describe("P7.1 model pages", () => {
     expect(render(1)).toContain('class="metadata-inline"');
   });
 
+  it("paginates after the effort pivot and counts distinct benchmark families", () => {
+    const first = modelDetailResponse.data.results[0];
+    const paired = [{ ...first, reasoning_level: "medium" }, { ...first, result_key: "max", reasoning_level: "max", primary_source_url: "https://example.com/max" }];
+    const markup = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data,
+      all_results: paired, results: [paired[0]], result_page: { number: 1, limit: 50, total_items: 2, total_pages: 1 },
+    } }} currentSearch="" />);
+    expect(markup).toContain("2 results across 1 benchmark");
+    expect(markup.match(/<tbody><tr>/g)).toHaveLength(1);
+    expect(markup).toContain(">medium</th>");
+    expect(markup).toContain(">max</th>");
+    expect(markup).toContain('href="https://example.com/max"');
+    expect(markup).toContain('aria-sort="ascending"');
+    const history = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data, results: paired } }} currentSearch="?view=history" />);
+    expect(history).not.toContain(">medium</th>");
+  });
+
   it("renders a scoped empty state for a model benchmark search", () => {
     const response = {
       data: {

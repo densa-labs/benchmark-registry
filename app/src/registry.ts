@@ -44,6 +44,8 @@ export interface ModelDetailResponse {
       aliases: string[];
     };
     redirected_from: string | null;
+    /** Complete filtered observations for server-rendered pivoting before pagination. */
+    all_results?: ResultRow[];
     results: ResultRow[];
     result_page: Page;
   };
@@ -396,8 +398,31 @@ export async function loadRegistryRoute(
   switch (route.kind) {
     case "models":
       return { kind: "models", payload: body as ModelListResponse };
-    case "model":
-      return { kind: "model", payload: body as ModelDetailResponse };
+    case "model": {
+      const payload = body as ModelDetailResponse;
+      const first = payload.data;
+      let allResults = first.results;
+      if (first.result_page.number !== 1 || first.results.length !== first.result_page.total_items) {
+        const completeParams = new URLSearchParams(search);
+        completeParams.set("limit", "500");
+        completeParams.set("page", "1");
+        allResults = [];
+        let totalPages = 1;
+        for (let number = 1; number <= totalPages; number++) {
+          completeParams.set("page", String(number));
+          const next = await fetcher(`${apiPath(route)}?${completeParams}`, { headers: { Accept: "application/json" }, signal });
+          const value = await next.json();
+          if (!next.ok) throw new RegistryClientError(errorMessage(value));
+          const data = (value as ModelDetailResponse).data;
+          totalPages = data.result_page.total_pages;
+          allResults.push(...data.results);
+        }
+      }
+      if (!new URLSearchParams(search).has("sort")) {
+        allResults = [...allResults].sort((a, b) => a.benchmark.name.localeCompare(b.benchmark.name, "en", { sensitivity: "base" }) || a.result_key.localeCompare(b.result_key, "en"));
+      }
+      return { kind: "model", payload: { data: { ...first, all_results: allResults } } };
+    }
     case "benchmarks":
       return { kind: "benchmarks", payload: body as BenchmarkListResponse };
     case "benchmark":

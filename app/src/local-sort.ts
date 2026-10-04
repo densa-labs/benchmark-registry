@@ -72,6 +72,8 @@ export function locallySortedDocument(current: BrowserDocument, destination: URL
     });
     result={...loaded,payload:{...payload,data:rows.slice((number-1)*limit,number*limit),page:{...payload.page,number,limit,total_pages:Math.ceil(payload.page.total_items/limit)}}};
   } else if (loaded.kind === "model" || loaded.kind === "benchmark-version" || loaded.kind === "company") {
+    // Model HTML paginates grouped observations; fetch its server document for sort changes.
+    if (loaded.kind === "model" && loaded.payload.data.all_results) return undefined;
     const data = loaded.payload.data;
     if (data.result_page.number !== 1 || data.results.length !== data.result_page.total_items) return undefined;
     const allowed = loaded.kind === "model" ? ["benchmark","source"] : loaded.kind === "company" ? ["benchmark","model","registry_no","source"] : ["company","model","registry_no","source"];
