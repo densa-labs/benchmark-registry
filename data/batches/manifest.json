@@ -287,6 +287,16 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 33,
+      "file": "gemini-4-argon-2026-10-03.json",
+      "sha256": "df04018a10dd9499814003488ea30fdb7d32ef5c69edeab985e457b30ba9fe0d",
+      "applied": {
+        "staging": null,
+        "production": null
+      },
+      "authorization": "data/evidence/gemini-4-argon-2026-10-03/AUTHORIZATION.md"
     }
   ]
 }
