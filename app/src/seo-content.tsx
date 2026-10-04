@@ -21,7 +21,7 @@ export function FamilyResults({content}:{content?:SeoContent}) {
   const latest=content.latest;
   const columns:TableColumn<ResultRow>[]=[
     {key:"model",label:"Model",render:row=><a href={`/models/${row.model.registry_no}`}>{row.model.name}{row.reasoning_level ? ` (${row.reasoning_level})` : ""}</a>},
-    {key:"score",label:"Score",render:row=>row.score.display},
+    {key:"score",label:"Score",className:"numeric",render:row=>row.score.display},
     {key:"source",label:"Source",render:row=><SourceLink href={row.primary_source_url} context={`${row.model.name} on ${latest.benchmark.name}`} />},
   ];
   return <section className="results-section" aria-labelledby="recent-results-heading">

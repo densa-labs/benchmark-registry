@@ -612,7 +612,7 @@ export function DataTable<Row>({
   getRowKey,
 }: DataTableProps<Row>) {
   return (
-    <div className="table-scroll" role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
+    <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
       <table className="data-table" data-columns={columns.length}>
         <caption className="visually-hidden">{caption}</caption>
         <thead>

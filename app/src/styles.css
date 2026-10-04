@@ -23,6 +23,9 @@
   --theme-control-hover: #18181b;
   --header-height: 3.75rem;
   --control-height: 2.125rem;
+  --data-table-max-width: 64rem;
+  --data-table-compact-width: 48rem;
+  --table-shadow-width: 0.75rem;
 }
 
 * {
@@ -959,7 +962,12 @@ h3 {
 
 .table-scroll {
   width: 100%;
-  max-width: 100%;
+  max-width: min(100%, var(--data-table-max-width));
+  background:
+    linear-gradient(to right, var(--surface), var(--surface)) left / var(--table-shadow-width) 100% no-repeat local,
+    linear-gradient(to left, var(--surface), var(--surface)) right / var(--table-shadow-width) 100% no-repeat local,
+    linear-gradient(to right, var(--border-strong), transparent) left / var(--table-shadow-width) 100% no-repeat scroll,
+    linear-gradient(to left, var(--border-strong), transparent) right / var(--table-shadow-width) 100% no-repeat scroll;
   overflow-x: auto;
   contain: inline-size paint;
   border-top: 1px solid var(--border-strong);
@@ -1540,3 +1548,6 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 }
 
 .pivot-cell { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+
+.table-scroll--compact { max-width: min(100%, var(--data-table-compact-width)); }
+.data-table .benchmark-link { white-space: normal; overflow: visible; overflow-wrap: anywhere; }
