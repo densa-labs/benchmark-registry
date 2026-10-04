@@ -29,7 +29,7 @@ assert.deepEqual(target?.routes, staging
 if (!staging) assert.equal(target.account_id, "1aed6fdb33b34b24c2914fcaaf48786b");
 
 const out = "dist/client";
-for (const file of ["index.html", "404.html", "sitemap.xml", "feed.xml", "robots.txt", "_headers", "_redirects", "data/manifest.json"]) assert.ok(existsSync(join(out, file)), `Missing ${file}; run scripts/build-static.mjs`);
+for (const file of ["index.html", "404.html", "sitemap.xml", "feed.xml", "robots.txt", "_headers", "_redirects", "data/manifest.json", "version.json"]) assert.ok(existsSync(join(out, file)), `Missing ${file}; run scripts/build-static.mjs`);
 assert.ok(!readFileSync(join(out, "index.html"), "utf8").includes('<div id="root"></div>'), "Home page was not prerendered");
 const robots = readFileSync(join(out, "robots.txt"), "utf8");
 const headers = readFileSync(join(out, "_headers"), "utf8");
@@ -53,6 +53,11 @@ assert.ok(!/script-src[^;]*unsafe-inline/u.test(csp), "Scripts must be hashed, n
 assert.ok(!/x-registry-|server-timing/iu.test(headers), "Diagnostics headers must not be public");
 assert.match(headers, /\/assets\/\*\n {2}Cache-Control: public, max-age=31536000, immutable/u);
 assert.match(headers, /\/models\/\*\n {2}Cache-Control: public, max-age=300, must-revalidate/u);
+assert.match(headers, /\/version\.json\n {2}Cache-Control: no-store\n/u);
+const version = JSON.parse(readFileSync(join(out, "version.json"), "utf8"));
+assert.match(version.commit, /^[0-9a-f]{40}$/u, "version.json must name the built commit");
+assert.equal(version.environment, environment);
+for (const key of ["models", "benchmarks", "benchmark_versions", "results"]) assert.ok(Number.isInteger(version.counts[key]) && version.counts[key] > 0, `version.json ${key}`);
 
 let files = 0;
 const walk = (directory) => {

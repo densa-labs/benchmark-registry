@@ -42,6 +42,8 @@ export const MAX_DYNAMIC_REDIRECTS = 100;
 export const MAX_HEADER_RULES = 100;
 export const HTML_CACHE_CONTROL = "public, max-age=300, must-revalidate";
 export const IMMUTABLE_CACHE_CONTROL = "public, max-age=31536000, immutable";
+/** Build identity written by scripts/build-static.mjs; never cached. */
+export const VERSION_FILE = "version.json";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
 /** Cloudflare Web Analytics is injected automatically on production only; staging must not load it. */
 export const CLOUDFLARE_WEB_ANALYTICS_SCRIPT = "https://static.cloudflareinsights.com/beacon.min.js";
@@ -106,10 +108,11 @@ export function headerRules(files: string[], environment: SiteEnvironment, secur
   rule("/assets/*", { "Cache-Control": IMMUTABLE_CACHE_CONTROL });
   rule("/data/objects/*", { "Cache-Control": IMMUTABLE_CACHE_CONTROL, "X-Robots-Tag": "noindex" });
   rule("/data/manifest.json", { "Cache-Control": HTML_CACHE_CONTROL, "X-Robots-Tag": "noindex" });
+  if (files.includes(VERSION_FILE)) rule(`/${VERSION_FILE}`, { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" });
   const top = new Map<string, "file" | "directory">();
   for (const file of files) {
     const [first, ...rest] = file.split("/");
-    if (["assets", "data", "_headers", "_redirects", "404.html"].includes(first)) continue;
+    if (["assets", "data", "_headers", "_redirects", "404.html", VERSION_FILE].includes(first)) continue;
     if (rest.length) top.set(first, "directory");
     else if (!top.has(first)) top.set(first, "file");
   }

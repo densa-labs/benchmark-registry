@@ -78,6 +78,11 @@ the Cloudflare Web Analytics beacon, which the zone injects automatically, and
 the `ANALYTICS_SCRIPT_URL` script when it is set. Staging allows neither, which
 keeps it out of analytics.
 
+`/version.json` names the live build: full git commit, whether the tree was
+dirty, commit and build times, when the build read D1, the data generation, and
+model, benchmark, version and result counts. It is served with
+`Cache-Control: no-store`. It replaces the Worker's `/healthz`.
+
 ## Redirects (`_redirects`)
 
 Generated from the data: retired model numbers (308), legacy

@@ -100,6 +100,9 @@ it("keeps Cache-Control rules disjoint, so values are never appended", () => {
   expect(staging).toContain("/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n  Strict-Transport-Security: max-age=31536000; includeSubDomains\n");
   expect(staging.trim().split("\n\n").at(-1)).not.toContain("Cache-Control");
   expect(robotsFile("staging")).toBe("User-agent: *\nDisallow: /\n");
+  const withVersion=headerRules(["index.html","version.json"],"production",security);
+  expect(withVersion).toContain("/version.json\n  Cache-Control: no-store\n  X-Robots-Tag: noindex\n");
+  expect(withVersion.split("Cache-Control:").length-1).toBe(5);
 });
 
 it("sends one set of security headers on every path, with hashed scripts and no unsafe-inline", () => {
