@@ -61,3 +61,5 @@ Models receive stable Registry numbers based on their provider namespace and the
 ## License
 
 Code is licensed under [Apache License 2.0](LICENSE).
+
+Data is licensed under CC BY 4.0 (see LICENSE-DATA); code is licensed under Apache-2.0.
