@@ -67,8 +67,16 @@ There is no public `/api` anymore.
 
 Static assets send `ETag` and answer conditional requests with 304. Cache rules
 never overlap, because overlapping `_headers` rules append values. Staging adds
-`X-Robots-Tag: noindex, nofollow, noarchive` and its CSP to every response, and
-its robots.txt disallows everything.
+`X-Robots-Tag: noindex, nofollow, noarchive` to every response, and its
+robots.txt disallows everything.
+
+One `/*` rule sends the security headers on every response: HSTS (one year,
+`includeSubDomains`, no preload), `nosniff`, `strict-origin-when-cross-origin`
+and a CSP. The build hashes the only inline script (the theme script) into
+`script-src` and fails if a second inline script appears. Production also allows
+the Cloudflare Web Analytics beacon, which the zone injects automatically, and
+the `ANALYTICS_SCRIPT_URL` script when it is set. Staging allows neither, which
+keeps it out of analytics.
 
 ## Redirects (`_redirects`)
 

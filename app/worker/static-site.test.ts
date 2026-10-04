@@ -5,7 +5,7 @@ import template from '../index.html?raw';
 import {handleRequest,type Env} from './index';
 import {MaterializedRepository} from './materialized-repository';
 import type {ReadData} from './read-model';
-import {buildStaticSite,FILE_COUNT_BUDGET,headerRules,HTML_CACHE_CONTROL,IMMUTABLE_CACHE_CONTROL,pageFile,redirectRules,robotsFile} from './static-site';
+import {buildStaticSite,CLOUDFLARE_WEB_ANALYTICS_SCRIPT,contentSecurityPolicy,FILE_COUNT_BUDGET,headerRules,HTML_CACHE_CONTROL,IMMUTABLE_CACHE_CONTROL,inlineScriptHashes,pageFile,redirectRules,robotsFile,type SecurityPolicy} from './static-site';
 import {createStaticFetch,STATIC_MANIFEST_PATH,type StaticDataManifest} from '../src/static-api';
 
 const databases:DatabaseSync[]=[];
@@ -83,19 +83,53 @@ it("serves the former read API in the browser from static files only", async () 
   expect(requested.at(-1)).toBe("/models");
 });
 
+const security:SecurityPolicy={scriptHashes:["'sha256-theme'"]};
 it("keeps Cache-Control rules disjoint, so values are never appended", () => {
-  const rules=headerRules(["index.html","models.html","models/10006.html","assets/index-abc12345.js","data/manifest.json","data/objects/a.json","feed.xml","badge/1/x.svg","robots.txt","_redirects","404.html"],"production");
+  const rules=headerRules(["index.html","models.html","models/10006.html","assets/index-abc12345.js","data/manifest.json","data/objects/a.json","feed.xml","badge/1/x.svg","robots.txt","_redirects","404.html"],"production",security);
   const blocks=rules.trim().split("\n\n").map(block=>block.split("\n"));
   const patterns=blocks.map(([pattern])=>pattern);
-  expect(patterns).toEqual(["/assets/*","/data/objects/*","/data/manifest.json","/badge/*","/feed.xml","/","/models/*","/models","/robots.txt"]);
-  for(const block of blocks) expect(block.filter(line=>line.includes("Cache-Control"))).toHaveLength(1);
+  expect(patterns).toEqual(["/assets/*","/data/objects/*","/data/manifest.json","/badge/*","/feed.xml","/","/models/*","/models","/robots.txt","/*"]);
+  for(const block of blocks.slice(0,-1)) expect(block.filter(line=>line.includes("Cache-Control"))).toHaveLength(1);
   expect(rules).toContain(`/assets/*\n  Cache-Control: ${IMMUTABLE_CACHE_CONTROL}`);
   expect(rules).toContain(`/models/*\n  Cache-Control: ${HTML_CACHE_CONTROL}`);
   expect(rules).not.toContain("nofollow");
-  const staging=headerRules(["index.html"],"staging");
-  expect(staging).toContain("/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n  Content-Security-Policy: script-src-elem 'self' 'unsafe-inline'");
+  const staging=headerRules(["index.html"],"staging",security);
+  expect(staging).toContain("/*\n  X-Robots-Tag: noindex, nofollow, noarchive\n  Strict-Transport-Security: max-age=31536000; includeSubDomains\n");
   expect(staging.trim().split("\n\n").at(-1)).not.toContain("Cache-Control");
   expect(robotsFile("staging")).toBe("User-agent: *\nDisallow: /\n");
+});
+
+it("sends one set of security headers on every path, with hashed scripts and no unsafe-inline", () => {
+  for(const environment of ["production","staging"] as const) {
+    const rules=headerRules(["index.html","models/10006.html","assets/a.js"],environment,security);
+    for(const name of ["Strict-Transport-Security","X-Content-Type-Options","Referrer-Policy","Content-Security-Policy"]) expect(rules.split(`${name}:`).length-1,name).toBe(1);
+    expect(rules).toContain("  Strict-Transport-Security: max-age=31536000; includeSubDomains\n");
+    expect(rules).not.toContain("preload");
+    expect(rules).toContain("  X-Content-Type-Options: nosniff\n");
+    expect(rules).toContain("  Referrer-Policy: strict-origin-when-cross-origin\n");
+  }
+  const production=contentSecurityPolicy("production",security);
+  expect(production).toBe(`default-src 'self'; script-src 'self' 'sha256-theme' ${CLOUDFLARE_WEB_ANALYTICS_SCRIPT}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'`);
+  // Staging stays out of Web Analytics, as before.
+  expect(contentSecurityPolicy("staging",security)).not.toContain("cloudflareinsights");
+  const configured=contentSecurityPolicy("production",{...security,analyticsScript:"https://stats.example/script.js"});
+  expect(configured).toContain("script-src 'self' 'sha256-theme' https://static.cloudflareinsights.com/beacon.min.js https://stats.example/script.js;");
+  expect(configured).toContain("connect-src 'self' https://stats.example;");
+  expect(contentSecurityPolicy("staging",{...security,analyticsScript:"https://stats.example/script.js"})).not.toContain("stats.example");
+});
+
+it("hashes only executable inline scripts and refuses a second one", async () => {
+  const theme='try { document.documentElement.dataset.theme = "dark"; } catch {}';
+  const page=`<script>${theme}</script><script type="application/json">{"a":1}</script><script type="application/ld+json">{}</script><script type="module" src="/assets/a.js"></script>`;
+  const expected=Buffer.from(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(theme))).toString("base64");
+  expect(await inlineScriptHashes([page,page])).toEqual([`'sha256-${expected}'`]);
+  await expect(inlineScriptHashes([page,"<script>alert(1)</script>"])).rejects.toThrow("inline scripts");
+});
+
+it("allows exactly the inline scripts the build emitted", async () => {
+  const site=await buildStaticSite({db:database(),environment:"production",template});
+  expect(site.security.scriptHashes).toEqual(await inlineScriptHashes([template]));
+  expect(site.security.scriptHashes).toHaveLength(1);
 });
 
 it("turns per-request Worker redirects into _redirects rules", () => {

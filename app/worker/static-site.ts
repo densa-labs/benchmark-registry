@@ -5,7 +5,7 @@ import { CONTENT_PATHS } from "../src/content-metadata";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { CANONICAL_ORIGIN } from "../src/seo-config";
 import type { StaticDataManifest } from "../src/static-api";
-import type { AnalyticsEnvironment } from "./analytics";
+import { analyticsConfiguration, type AnalyticsEnvironment } from "./analytics";
 import { handleRequest, type Env } from "./index";
 import { buildGeneration } from "./materializer";
 import { MaterializedRepository } from "./materialized-repository";
@@ -25,8 +25,11 @@ export interface StaticSiteOptions {
 export interface StaticSite {
   files: StaticFile[];
   generation: string;
+  security: SecurityPolicy;
   report: { pages: number; badges: number; dataFiles: number; redirects: number; dynamicRedirects: number };
 }
+/** What the CSP must allow: the hashed inline scripts the build emitted and any configured analytics script. */
+export interface SecurityPolicy { scriptHashes: string[]; analyticsScript?: string }
 
 /** Workers static assets limits (free plan) the build must stay inside. */
 export const MAX_ASSET_FILES = 20_000;
@@ -37,7 +40,11 @@ export const MAX_HEADER_RULES = 100;
 export const HTML_CACHE_CONTROL = "public, max-age=300, must-revalidate";
 export const IMMUTABLE_CACHE_CONTROL = "public, max-age=31536000, immutable";
 const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
-const STAGING_CSP = "script-src-elem 'self' 'unsafe-inline'";
+/** Cloudflare Web Analytics is injected automatically on production only; staging must not load it. */
+export const CLOUDFLARE_WEB_ANALYTICS_SCRIPT = "https://static.cloudflareinsights.com/beacon.min.js";
+/** Only the theme script may be inline; a second one must be reviewed, not silently allowed. */
+export const MAX_INLINE_SCRIPTS = 1;
+const EXECUTABLE_SCRIPT_TYPES = new Set(["", "module", "text/javascript", "application/javascript"]);
 const ROOT_HUBS = new Set(["models", "benchmarks", "companies", "compare", "legal", "privacy", "terms", "recent"]);
 
 /** `/models/10006` → `models/10006.html`; `/` → `index.html`; files keep their name. */
@@ -84,7 +91,7 @@ export function redirectRules(data: Pick<ReadData, "redirects" | "seo">, version
  * Cache rules. Patterns never overlap for Cache-Control, because overlapping
  * `_headers` rules append values instead of replacing them.
  */
-export function headerRules(files: string[], environment: SiteEnvironment): string {
+export function headerRules(files: string[], environment: SiteEnvironment, security: SecurityPolicy): string {
   const blocks: string[] = [];
   const rule = (pattern: string, headers: Record<string, string>) => blocks.push([pattern, ...Object.entries(headers).map(([name, value]) => `  ${name}: ${value}`)].join("\n"));
   rule("/assets/*", { "Cache-Control": IMMUTABLE_CACHE_CONTROL });
@@ -109,9 +116,48 @@ export function headerRules(files: string[], environment: SiteEnvironment): stri
     else if (name.endsWith(".html")) rule(`/${name.slice(0, -5)}`, headers);
     else rule(`/${name}`, headers);
   }
-  if (environment === "staging") rule("/*", { "X-Robots-Tag": STAGING_ROBOTS_TAG, "Content-Security-Policy": STAGING_CSP });
+  rule("/*", { ...(environment === "staging" ? { "X-Robots-Tag": STAGING_ROBOTS_TAG } : {}), ...securityHeaders(environment, security) });
   if (blocks.length > MAX_HEADER_RULES) throw new Error(`${blocks.length} header rules exceed the ${MAX_HEADER_RULES} limit.`);
   return blocks.join("\n\n") + "\n";
+}
+
+/** CSP hashes of every executable inline script in the given HTML documents. */
+export async function inlineScriptHashes(documents: string[]): Promise<string[]> {
+  const hashes = new Set<string>();
+  for (const html of documents) {
+    for (const [, attributes, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/giu)) {
+      if (/\ssrc\s*=/iu.test(attributes)) continue;
+      const type = /\stype\s*=\s*["']?([^"'\s>]+)/iu.exec(attributes)?.[1].toLowerCase() ?? "";
+      if (!EXECUTABLE_SCRIPT_TYPES.has(type)) continue;
+      const bytes = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(body)));
+      hashes.add(`'sha256-${btoa(String.fromCharCode(...bytes))}'`);
+    }
+  }
+  if (hashes.size > MAX_INLINE_SCRIPTS) throw new Error(`${hashes.size} distinct inline scripts exceed the ${MAX_INLINE_SCRIPTS} the CSP allows.`);
+  return [...hashes].sort();
+}
+
+export function contentSecurityPolicy(environment: SiteEnvironment, policy: SecurityPolicy): string {
+  const scripts = ["'self'", ...policy.scriptHashes];
+  if (environment === "production") scripts.push(CLOUDFLARE_WEB_ANALYTICS_SCRIPT);
+  if (environment === "production" && policy.analyticsScript) scripts.push(policy.analyticsScript);
+  const connect = ["'self'"];
+  if (environment === "production" && policy.analyticsScript) connect.push(new URL(policy.analyticsScript).origin);
+  return [
+    "default-src 'self'", `script-src ${scripts.join(" ")}`, "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data:", "font-src 'self'", `connect-src ${connect.join(" ")}`, "object-src 'none'",
+    "frame-ancestors 'none'", "base-uri 'none'", "form-action 'self'",
+  ].join("; ");
+}
+
+/** Sent on every response. Each name appears in exactly one rule, so values never append. */
+export function securityHeaders(environment: SiteEnvironment, policy: SecurityPolicy): Record<string, string> {
+  return {
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Content-Security-Policy": contentSecurityPolicy(environment, policy),
+  };
 }
 
 export function robotsFile(environment: SiteEnvironment): string {
@@ -195,8 +241,12 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
     if (files.some((file) => file.path === pageFile(source))) throw new Error(`Redirect source shadows a page: ${source}`);
   }
   files.push({ path: "_redirects", body: redirects.lines.join("\n") + "\n" });
+  const security: SecurityPolicy = {
+    scriptHashes: await inlineScriptHashes(files.filter((file) => file.path.endsWith(".html")).map((file) => file.body)),
+    ...(options.environment === "production" && analyticsConfiguration(options.analytics ?? {}) ? { analyticsScript: analyticsConfiguration(options.analytics!)!.url } : {}),
+  };
   return {
-    files, generation,
+    files, generation, security,
     report: { pages: pages.length + standalone.size, badges: badgeCount, dataFiles: new Set(Object.values(manifest.objects)).size + 1, redirects: redirects.lines.length - redirects.dynamic, dynamicRedirects: redirects.dynamic },
   };
 }

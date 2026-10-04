@@ -37,11 +37,19 @@ const sitemap = readFileSync(join(out, "sitemap.xml"), "utf8");
 assert.ok(!sitemap.includes("staging."), "Sitemap must list canonical production URLs only");
 if (staging) {
   assert.equal(robots, "User-agent: *\nDisallow: /\n");
-  assert.match(headers, /\/\*\n {2}X-Robots-Tag: noindex, nofollow, noarchive\n {2}Content-Security-Policy: script-src-elem 'self' 'unsafe-inline'/u);
+  assert.match(headers, /\/\*\n {2}X-Robots-Tag: noindex, nofollow, noarchive\n {2}Strict-Transport-Security: /u);
+  assert.ok(!headers.includes("cloudflareinsights"), "Staging must not allow the Web Analytics beacon");
 } else {
   assert.match(robots, /^User-agent: \*\nAllow: \/\n\nSitemap: https:\/\/benchmarkregistry\.org\/sitemap\.xml\n$/u);
   assert.ok(!headers.includes("nofollow"), "Production must not carry staging crawler headers");
+  assert.ok(headers.includes("https://static.cloudflareinsights.com/beacon.min.js"), "Production CSP must allow the Web Analytics beacon");
 }
+// One security block for every path; scripts are hashed, never 'unsafe-inline'.
+for (const name of ["Strict-Transport-Security: max-age=31536000; includeSubDomains", "X-Content-Type-Options: nosniff", "Referrer-Policy: strict-origin-when-cross-origin"]) assert.equal(headers.split(name).length, 2, name);
+const csp = /Content-Security-Policy: ([^\n]+)/u.exec(headers)?.[1] ?? "";
+assert.match(csp, /script-src 'self' 'sha256-[A-Za-z0-9+/=]+'/u);
+for (const directive of ["frame-ancestors 'none'", "base-uri 'none'", "form-action 'self'"]) assert.ok(csp.includes(directive), directive);
+assert.ok(!/script-src[^;]*unsafe-inline/u.test(csp), "Scripts must be hashed, not unsafe-inline");
 assert.match(headers, /\/assets\/\*\n {2}Cache-Control: public, max-age=31536000, immutable/u);
 assert.match(headers, /\/models\/\*\n {2}Cache-Control: public, max-age=300, must-revalidate/u);
 

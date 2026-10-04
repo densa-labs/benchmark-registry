@@ -73,7 +73,7 @@ for(const file of result.files) {
 const all=[];
 const walk=(directory)=>{for(const entry of readdirSync(directory,{withFileTypes:true})) {const path=join(directory,entry.name);if(entry.isDirectory()) walk(path);else all.push(relative(out,path));}};
 walk(out);
-writeFileSync(join(out,'_headers'),site.headerRules(all,environment));
+writeFileSync(join(out,'_headers'),site.headerRules(all,environment,result.security));
 const deployed=all.filter(file=>!['_headers','_redirects'].includes(file)).length;
 if(deployed>site.FILE_COUNT_BUDGET) throw new Error(`${deployed} static files exceed the ${site.FILE_COUNT_BUDGET} budget (hard limit ${site.MAX_ASSET_FILES}).`);
 const largest=all.map(file=>({file,bytes:statSync(join(out,file)).size})).sort((a,b)=>b.bytes-a.bytes)[0];
