@@ -1555,3 +1555,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .result-details { display: flex; flex-direction: column; gap: 0.2rem; color: var(--text-muted); font-size: 0.72rem; font-weight: 400; white-space: normal; }
 .pivot-observation { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }
 .pivot-observation .result-details { text-align: right; }
+
+.data-table a, .compare-table a { color: var(--accent); text-decoration: none; }
+.data-table a:hover, .data-table a:focus-visible,
+.compare-table a:hover, .compare-table a:focus-visible { color: var(--accent-strong); text-decoration: underline; }

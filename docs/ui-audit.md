@@ -29,3 +29,9 @@
 - `npm test`: 417 passed; one existing skipped test (38 files). Existing offline tooling includes Playwright Core, Chrome and axe-core.
 - Existing `scripts/seo_check.mjs` can serve a locally materialized, read-only database snapshot with `--db=... --serve=...`; use the saved `/private/tmp/benchmark-seo-full.sqlite` snapshot for representative pages. No ingestion or canonical writes needed.
 - Planned commits correspond to tasks 1–8: version grouping; compact model metadata/controls; effort pivot; table layout; provenance labels; link consistency/contrast; orientation; accessibility verification. This audit accompanies task 1.
+
+## Score-link investigation (task 6)
+
+The saved full database has exactly one Claude Opus 5.5 result for SWE-bench Pro Public: max effort, score 89.9, with the Anthropic system-card PDF as primary evidence. `worker/result-links.ts` intentionally gives a sole retained model/version evaluation an exact result URL. `ResultScoreLink` therefore renders 89.9 as an anchor while multi-run neighbors are text. This is legitimate navigation, not corrupt data. Shared table link styling now removes the default underline from every link, adds it on hover/focus, and keeps the existing accent and focus tokens. Pivot score anchors cite their own primary evidence; unpivoted scores retain exact result navigation.
+
+The existing muted and accent tokens already meet AA against the table bar, normal surface, and hover surface in both themes. Retain those palette values; verify numeric contrast and real rendered text with offline tests and axe rather than darkening passing colors gratuitously.
