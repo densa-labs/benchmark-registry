@@ -1,7 +1,6 @@
 import { Cite, RecordCite } from "./cite";
 import { recordAnchor } from "./citation";
 import { ReportIssue } from "./report-issue";
-import { resultPage } from "./issue-report";
 import { comparisonHref, parseComparisonState } from "./compare";
 import { ResultSource, ResultDetails } from "./result-source";
 import { pivotResults, type PivotRow } from "./result-pivot";
@@ -302,7 +301,7 @@ export function ModelDetailPage({
         <span key={result.result_key} className="pivot-observation" id={recordAnchor(result)}>
           <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
           <ResultDetails result={result} compact showEvaluator />
-          <ReportIssue result={result} page={resultPage(result)} /><RecordCite result={result} />
+          <RecordCite result={result} />
         </span>)} </div> : "–",
     })),
     { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
