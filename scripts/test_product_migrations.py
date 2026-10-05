@@ -162,6 +162,22 @@ class ProductMigrationTests(unittest.TestCase):
                 db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall(),
             )
 
+    def test_owner_effort_labels_roll_back_to_pending(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            query = "SELECT label, effort, status, note FROM reasoning_labels ORDER BY label"
+            after = db.execute(query).fetchall()
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM reasoning_labels WHERE status = 'pending_owner'").fetchone()[0], 1
+            )
+            db.executescript((ROOT / "migrations/rollback/0018_owner_effort_labels.sql").read_text())
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM reasoning_labels WHERE status = 'pending_owner'").fetchone()[0], 16
+            )
+            db.executescript((ROOT / "migrations/0018_owner_effort_labels.sql").read_text())
+            self.assertEqual(after, db.execute(query).fetchall())
+
     def test_result_corrections_up_down_and_records_unchanged(self):
         with sqlite3.connect(":memory:") as db:
             for migration in sorted((ROOT / "migrations").glob("*.sql")):
