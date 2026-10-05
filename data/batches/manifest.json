@@ -306,6 +306,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 35,
+      "file": "owner-decision-5-retractions-2026-10-06.json",
+      "sha256": "bd0b5baf5b901c219e01f499065807d857a2f613baae6d75a3541edc9f34a7b7",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
