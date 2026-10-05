@@ -380,10 +380,13 @@ describe("P7.1 model pages", () => {
     expect(markup).not.toContain(">Other settings</th>");
   });
 
-  it("places the model citation and report controls after the results table", () => {
+  it("places the model compare, citation and report controls in the title block, before the results table", () => {
     const markup = renderToStaticMarkup(<ModelDetailPage response={modelDetailResponse} currentSearch="" />);
-    expect(markup.indexOf("model-page-actions")).toBeGreaterThan(markup.indexOf("</table>"));
-    expect(markup.indexOf('class="cite-details"')).toBeGreaterThan(markup.indexOf("</table>"));
+    for (const control of ['class="model-compare"', 'class="cite-details"', 'class="report-issue"']) {
+      expect(markup.indexOf(control)).toBeGreaterThan(markup.indexOf("</h1>"));
+      expect(markup.indexOf(control)).toBeLessThan(markup.indexOf("</header>"));
+      expect(markup.indexOf("</header>")).toBeLessThan(markup.indexOf("<table"));
+    }
   });
 
   it("renders a scoped empty state for a model benchmark search", () => {

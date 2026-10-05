@@ -218,12 +218,6 @@ export function ModelsPage({
   return (
     <PageContainer className="registry-page">
       <PageHeader title="Models" description={modelCount(response.page.total_items)} />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search models"
-        placeholder="Search model names, aliases, or Registry Nos."
-      />
 
       <section className="results-section" aria-labelledby="models-heading">
         <div className="results-section__header">
@@ -237,6 +231,12 @@ export function ModelsPage({
             value={response.page.limit}
           />
         </div>
+          <LocalSearch
+            action={pathname}
+            currentSearch={currentSearch}
+            label="Search models"
+            placeholder="Search model names, aliases, or Registry Nos."
+          />
         {response.data.length === 0 ? (
           <EmptyState
             title={query ? "No matching models" : "No models found"}
@@ -291,7 +291,7 @@ export function ModelDetailPage({
         {result.metric.name ? <span>{result.metric.name}</span> : null}
         {result.configuration ? <span>Configuration: {result.configuration.label}</span> : null}</span> },
     ...pivot.variants.map(variant => ({
-      key: `effort-${variant}`, label: variant === OTHER_SETTINGS ? "Other settings" : effortDisplay(variant), className: "numeric pivot-score",
+      key: `effort-${variant}`, label: variant === OTHER_SETTINGS ? "Other settings" : effortDisplay(variant), className: "numeric pivot-score", phoneLabel: true,
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
         <span key={result.result_key} className="pivot-observation" id={recordAnchor(result)}>
           <SourceLink href={result.primary_source_url} context={`${model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
@@ -364,15 +364,10 @@ export function ModelDetailPage({
           ]}
         />
       </section>
-      <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+        <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+        <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
+        <ReportIssue page={pathname} model={model.name} source={model.source_url} />
       </PageHeader>
-
-      {totalRows > 25 || query ? <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search benchmarks"
-        placeholder="Search benchmark names or aliases"
-      /> : null}
 
       <section className="results-section" aria-labelledby="benchmarks-heading">
         <div className="results-section__header">
@@ -382,6 +377,12 @@ export function ModelDetailPage({
           </div>
           {page.total_items > 50 ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} /> : null}
         </div>
+        {totalRows > 25 || query ? <LocalSearch
+          action={pathname}
+          currentSearch={currentSearch}
+          label="Search benchmarks"
+          placeholder="Search benchmark names or aliases"
+        /> : null}
         <Tabs
           label="Result view"
           items={[
@@ -425,10 +426,6 @@ export function ModelDetailPage({
           totalPages={totalPages}
         />
       </section>
-      <div className="model-page-actions">
-        <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
-        <ReportIssue page={pathname} model={model.name} source={model.source_url} />
-      </div>
       <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />
       <RelatedLinks links={response.data.seo?.links} label="Benchmarks covered" />
     </PageContainer>

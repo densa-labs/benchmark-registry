@@ -212,12 +212,6 @@ export function CompaniesPage({
         title="Organizations"
         description={countLabel(response.page.total_items, "organization")}
       />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search organizations"
-        placeholder="Search organization names"
-      />
 
       <section className="results-section" aria-labelledby="company-index-heading">
         <div className="results-section__header">
@@ -231,6 +225,12 @@ export function CompaniesPage({
             value={response.page.limit}
           />
         </div>
+          <LocalSearch
+            action={pathname}
+            currentSearch={currentSearch}
+            label="Search organizations"
+            placeholder="Search organization names"
+          />
         {response.data.length === 0 ? (
           <EmptyState
             title={query ? "No matching organizations" : "No organizations found"}
@@ -333,7 +333,7 @@ export function CompanyDetailPage({
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={company.name} description={response.data.seo?.sentence} />
+      <PageHeader title={company.name} description={response.data.seo?.sentence}>
       <section className="entity-metadata" aria-label="Organization metadata">
         <MetadataRows
           items={[
@@ -342,13 +342,7 @@ export function CompanyDetailPage({
           ]}
         />
       </section>
-
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search benchmarks or models"
-        placeholder="Search benchmark or model names"
-      />
+      </PageHeader>
 
       <section className="results-section" aria-labelledby="company-results-heading">
         <div className="results-section__header">
@@ -358,6 +352,12 @@ export function CompanyDetailPage({
           </div>
           <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
         </div>
+        <LocalSearch
+          action={pathname}
+          currentSearch={currentSearch}
+          label="Search benchmarks or models"
+          placeholder="Search benchmark or model names"
+        />
         <Tabs
           label="Result view"
           items={[

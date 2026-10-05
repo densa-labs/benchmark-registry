@@ -213,12 +213,6 @@ export function BenchmarksPage({
         title="Benchmarks"
         description={countLabel(response.page.total_items, "benchmark family", "benchmark families")}
       />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search benchmarks"
-        placeholder="Search benchmark names or aliases"
-      />
 
       <section className="results-section" aria-labelledby="benchmark-index-heading">
         <div className="results-section__header">
@@ -232,6 +226,12 @@ export function BenchmarksPage({
             value={response.page.limit}
           />
         </div>
+          <LocalSearch
+            action={pathname}
+            currentSearch={currentSearch}
+            label="Search benchmarks"
+            placeholder="Search benchmark names or aliases"
+          />
         {response.data.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks" : "No benchmarks found"}
@@ -313,9 +313,9 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
       <PageHeader
         title={displayName}
         description={response.data.seo?.sentence ?? (displayName === benchmark.name ? undefined : benchmark.name)}
-      />
-      <ReportIssue page={`/benchmarks/${benchmark.slug}`} benchmark={benchmark.name} />
-      <FamilyResults content={response.data.seo} />
+      >
+        <ReportIssue page={`/benchmarks/${benchmark.slug}`} benchmark={benchmark.name} />
+      </PageHeader>
       <section className="results-section" aria-labelledby="versions-heading">
         <div className="results-section__header">
           <div>
@@ -337,6 +337,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
           />
         )}
       </section>
+      <FamilyResults content={response.data.seo} />
     </PageContainer>
   );
 }
@@ -418,9 +419,7 @@ export function BenchmarkVersionPage({
         description={benchmarkDisplayName(version.benchmark) === version.benchmark.name
           ? undefined
           : version.benchmark.name}
-      />
-      <Cite input={{title:`${version.benchmark.name} ${version.version} benchmark results`,path:pathname,benchmarkIdentifier:`${version.benchmark.slug}/${version.version_slug}`}} />
-      <ReportIssue page={pathname} benchmark={`${version.benchmark.name} ${version.version}`} source={response.data.source_url} />
+      >
       <section className="entity-metadata" aria-label="Benchmark version metadata">
         <MetadataRows
           items={[
@@ -436,20 +435,11 @@ export function BenchmarkVersionPage({
           ]}
         />
       </section>
+        <Cite input={{title:`${version.benchmark.name} ${version.version} benchmark results`,path:pathname,benchmarkIdentifier:`${version.benchmark.slug}/${version.version_slug}`}} />
+        <ReportIssue page={pathname} benchmark={`${version.benchmark.name} ${version.version}`} source={response.data.source_url} />
+      </PageHeader>
 
       <ScoreChart data={response.data.chart} />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search models"
-        placeholder="Search model names, aliases, or Registry Nos."
-      />
-
-      {params.has("result") ? (
-        <p className="local-search__clear" data-focus-key="clear-search">
-          Showing the selected evaluation. <a href={queryHref(pathname, currentSearch, { result: null, page: null })}>Show all results</a>
-        </p>
-      ) : null}
 
       <section className="results-section" aria-labelledby="benchmark-results-heading">
         <div className="results-section__header">
@@ -459,6 +449,12 @@ export function BenchmarkVersionPage({
           </div>
           <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
         </div>
+        <LocalSearch
+          action={pathname}
+          currentSearch={currentSearch}
+          label="Search models"
+          placeholder="Search model names, aliases, or Registry Nos."
+        />
         <div className="result-tabs">
           <Tabs
             label="Result view"
@@ -494,6 +490,11 @@ export function BenchmarkVersionPage({
             ]}
           />
         </div>
+        {params.has("result") ? (
+          <p className="local-search__clear" data-focus-key="clear-search">
+            Showing the selected evaluation. <a href={queryHref(pathname, currentSearch, { result: null, page: null })}>Show all results</a>
+          </p>
+        ) : null}
         {results.length === 0 ? (
           <EmptyState
             title={query ? "No matching models" : "No benchmark results"}

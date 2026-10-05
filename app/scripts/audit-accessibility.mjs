@@ -5,6 +5,7 @@ import {execFileSync} from 'node:child_process';
 import {readFileSync,writeFileSync} from 'node:fs';
 import {parseArgs} from 'node:util';
 import {chromium} from 'playwright-core';
+import {cloudflareTimingOnly} from './cloudflare-timing.mjs';
 
 const {values}=parseArgs({options:{host:{type:'string'},base:{type:'string'},output:{type:'string'},cloudflared:{type:'string'},chrome:{type:'string'},quick:{type:'boolean'}}});
 // --base serves a local production build (npm run preview), e.g. http://127.0.0.1:8787.
@@ -45,8 +46,9 @@ try {
       for(const path of paths) {
         const response=await page.goto(origin+path);await page.locator('main h1').waitFor();
         assert.equal(response.status(),path.endsWith('99999')?404:200,path);
-        // Static assets: no Worker, so no diagnostics headers.
-        assert.equal(Object.keys(response.headers()).some(name=>name.startsWith('x-registry-') || name==='server-timing'),false,path);
+        // Static assets: no Worker, so no diagnostics headers. Cloudflare's edge adds its own
+        // cf* Server-Timing metrics (cache status, edge and origin time); any other metric still fails.
+        assert.equal(Object.entries(response.headers()).some(([name,value])=>name.startsWith('x-registry-') || (name==='server-timing' && !cloudflareTimingOnly(value))),false,path);
         assert.equal(await page.locator('main h1').count(),1,path);
         assert.equal(await page.locator('main').count(),1,path);
         assert.equal(await page.locator('.staging-banner').count(),staging?1:0);
@@ -71,8 +73,8 @@ try {
   // Measure contrast after the menu's opacity transition, not mid-fade.
   await page.waitForFunction(()=>getComputedStyle(document.querySelector('.header-menu')).opacity==='1');
   await axeCheck(page,'Mobile global search expanded');
-  // Submit button, then the operator hint link, then the first result.
-  await page.keyboard.press('Tab');await page.keyboard.press('Tab');await page.keyboard.press('Tab');
+  // Submit button, then the first result.
+  await page.keyboard.press('Tab');await page.keyboard.press('Tab');
   check(await page.locator('.global-search-results a').first().evaluate(el=>el===document.activeElement),'Search results reachable through Tab');
   await page.keyboard.press('Escape');assert.equal(await page.locator('#global-search-input').evaluate(el=>el===document.activeElement),true);
   assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'),'true');
@@ -86,8 +88,13 @@ try {
   assert.equal(await page.locator('[aria-sort]').count(),1);
   assert.equal(await page.locator('[aria-sort]').getAttribute('aria-sort'),'ascending');
   assert.equal(await page.evaluate(()=>document.activeElement.getAttribute('data-focus-key')),'sort-Model');
-  await page.locator('.table-scroll').focus();await page.keyboard.press('ArrowRight');
-  await page.waitForFunction(()=>document.querySelector('.table-scroll').scrollLeft>0);
+  // At phone width each result row is a two-line block, so the table fits without sideways scrolling.
+  check(await page.evaluate(()=>[...document.querySelectorAll('.table-scroll')].every(el=>el.scrollWidth<=el.clientWidth)),'Phone table rows fit the viewport');
+  // Chrome's own accessibility tree still exposes the flex rows as table rows and cells.
+  const rows=await page.locator('.data-table tbody tr').count();
+  const tree=(await (await page.context().newCDPSession(page)).send('Accessibility.getFullAXTree')).nodes.map(node=>node.role?.value);
+  check(await page.locator('.data-table tbody tr').first().evaluate(row=>getComputedStyle(row).display==='flex'),'Phone rows use the two-line layout');
+  check(tree.filter(role=>role==='row').length>rows && tree.includes('cell') && tree.includes('columnheader') && tree.includes('table'),'Phone rows keep table semantics');
   await page.locator('.pagination a[rel=next]').focus();await page.keyboard.press('Enter');await page.waitForURL('**page=2*');
   check(await page.locator('[data-route-status]').textContent().then(x=>x.includes('Page 2')),'Pagination announcement');
   check(await page.evaluate(()=>document.activeElement!==document.body),'Pagination retains logical focus');
@@ -100,7 +107,7 @@ try {
   check(await page.title().then(title=>staging?title==='STAGING | Benchmark Registry':title.startsWith('AI Benchmarks')),'Route title');
   await page.locator('.mobile-menu-toggle').press('Enter');await page.locator('.primary-nav a[href="/models"]').press('Enter');await page.waitForURL('**/models');
   check(await page.locator('h1').evaluate(el=>el===document.activeElement),'Cached route still gets focus');
-  evidence.interactions.push('Sort state and restored control focus; keyboard table scrolling; pagination announcement; local search/empty/clear; cold and cached route identity focus.');
+  evidence.interactions.push('Sort state and restored control focus; phone rows fit and keep table roles; pagination announcement; local search/empty/clear; cold and cached route identity focus.');
 
   await page.locator('#theme-system').focus();await page.keyboard.press('ArrowLeft');
   check(await page.locator('#theme-dark').isChecked(),'Native theme arrow keys');await page.keyboard.press('ArrowLeft');check(await page.locator('#theme-light').isChecked(),'Native theme arrow keys light');

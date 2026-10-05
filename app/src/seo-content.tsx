@@ -14,11 +14,15 @@ export interface SeoContent {
   /** Family pages: models and retained results per version slug, from the version pages' own counts. */
   versionCounts?: Record<string,{models:number;results:number}>;
 }
+/** Secondary internal links after the primary content, under their own heading. */
+function RelatedSection({label,children}:{label:string;children:React.ReactNode}) {
+  return <section className="related-links"><h2>{label}</h2><nav aria-label={label}><ul>{children}</ul></nav></section>;
+}
 export function RelatedModels({models,label,showDates=false}:{models:ModelSummary[];label:string;showDates?:boolean}) {
   if(!models.length) return null;
-  return <nav className="home-directory__group" aria-label={label}><p className="page-header__description">{label}</p><ul>{models.map(model=><li key={model.registry_no}>
+  return <RelatedSection label={label}>{models.map(model=><li key={model.registry_no}>
     <a href={`/models/${model.registry_no}`}>{model.name}</a>{showDates ? <> — Released <time dateTime={model.released_at}>{formatRegistryDate(model.released_at,model.release_precision)}</time></> : null}
-  </li>)}</ul></nav>;
+  </li>)}</RelatedSection>;
 }
 export function FamilyResults({content}:{content?:SeoContent}) {
   if(!content?.latest) return null;
@@ -40,5 +44,5 @@ export function FamilyResults({content}:{content?:SeoContent}) {
 
 export function RelatedLinks({links,label}:{links?:Array<{name:string;path:string}>;label:string}) {
   if(!links?.length) return null;
-  return <nav className="home-directory__group" aria-label={label}><p className="page-header__description">{label}</p><ul>{links.map(link=><li key={link.path}><a href={link.path}>{link.name}</a></li>)}</ul></nav>;
+  return <RelatedSection label={label}>{links.map(link=><li key={link.path}><a href={link.path}>{link.name}</a></li>)}</RelatedSection>;
 }

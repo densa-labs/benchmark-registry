@@ -489,7 +489,6 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
         />
         <button type="submit" disabled={state.status === "loading"}>Search</button>
       </form>
-      <a className="search-hint" href="/search#search-operators">Try: model:opus benchmark:swe-bench</a>
       <p className="visually-hidden" role="status" aria-atomic="true">
         {state.status === "loading" ? "Searching the registry…" : state.status === "results" ? state.response.data.length === 0
           ? `No registry entries found for “${state.query}”.` : `${state.response.page.total_items} search results found.` : ""}
@@ -528,9 +527,9 @@ export function PageHeader({ title, description, kicker, children }: PageHeaderP
       {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
       {kicker ? <p className="kicker">{kicker}</p> : null}
       <h1 tabIndex={-1}>{title}</h1>
-      {children}
       {description ? <p className="page-header__description">{description}</p> : null}
       {updated && !description?.includes(`Updated ${updated.slice(0, 10)}`) ? <p className="page-header__description">Updated <time dateTime={updated}>{updated.slice(0, 10)}</time></p> : null}
+      {children}
     </header>
   );
 }
@@ -604,6 +603,8 @@ export interface TableColumn<Row> {
   className?: string;
   sortHref?: string;
   sortDirection?: SortDirection;
+  /** Show the column label beside the value when phone rows drop the header. */
+  phoneLabel?: boolean;
 }
 
 interface DataTableProps<Row> {
@@ -622,7 +623,7 @@ export function DataTable<Row>({
   getRowId,
 }: DataTableProps<Row>) {
   return (
-    <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
+    <div className="table-scroll" role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
       <table className="data-table" data-columns={columns.length}>
         <caption className="visually-hidden">{caption}</caption>
         <thead>
@@ -657,7 +658,7 @@ export function DataTable<Row>({
           {rows.map((row) => (
             <tr key={getRowKey(row)} id={getRowId?.(row)}>
               {columns.map((column) => (
-                <td key={column.key} className={column.className}>
+                <td key={column.key} className={column.className} data-label={column.phoneLabel ? column.label : undefined}>
                   {column.render(row)}
                 </td>
               ))}
