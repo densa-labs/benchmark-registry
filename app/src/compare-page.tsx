@@ -1,6 +1,4 @@
 import { RecordCite } from "./cite";
-import { ReportIssue } from "./report-issue";
-import { resultPage } from "./issue-report";
 import { Fragment, type FormEvent, type ReactNode } from "react";
 import type { ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
@@ -30,7 +28,7 @@ function EvaluationDetails({ results, name }: { results: ResultRow[]; name: stri
         { label: "Configuration", value: result.configuration?.label ?? "Not specified" },
         { label: "Reported", value: formatRegistryDate(result.reported_at, result.reported_precision) },
         { label: "Source", value: <SourceLink href={result.primary_source_url} context={`${name} on ${benchmarkVersionLabel(result.benchmark, result.benchmark_version)}`}>Evaluation source</SourceLink> },
-      ]} /><ReportIssue result={result} page={resultPage(result)} /><RecordCite result={result} />
+      ]} /><RecordCite result={result} />
     </div>) : <p className="compare-note">No result is available for this selection.</p>}
   </div>;
 }

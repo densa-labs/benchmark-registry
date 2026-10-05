@@ -1,6 +1,4 @@
 import { RecordCite } from "./cite";
-import { ReportIssue } from "./report-issue";
-import { resultPage } from "./issue-report";
 import type { ResultRow } from "../worker/api";
 import { formatRegistryDate } from "./registry";
 import { SourceLink } from "./ui/components";
@@ -24,7 +22,6 @@ export function ResultSource({ result }: { result: ResultRow }) {
     <SourceLink href={result.primary_source_url} context={`${result.model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`} />
     {result.source_archive_url ? <SourceLink href={result.source_archive_url}>Archived copy</SourceLink> : null}
     <ResultDetails result={result} showEvaluator />
-    <ReportIssue result={result} page={resultPage(result)} />
     <RecordCite result={result} />
   </span>;
 }

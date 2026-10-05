@@ -1,4 +1,4 @@
-import { pivotResults } from "./result-pivot";
+import { pivotResults, usesEffortLayout } from "./result-pivot";
 import type { BrowserDocument } from "./document-cache";
 
 export interface NavigationNotice {
@@ -22,7 +22,7 @@ export function navigationNotice(next: BrowserDocument, samePage: boolean, pop: 
   if (next.loaded.kind === "model" && page) {
     const rows = next.loaded.payload.data.all_results ?? next.loaded.payload.data.results;
     const pivot = pivotResults(rows);
-    const rowCount = params.get("view") !== "history" && pivot.multiple ? pivot.rows.length : page.total_items;
+    const rowCount = usesEffortLayout(next.currentSearch, pivot) ? pivot.rows.length : page.total_items;
     pageCount = Math.ceil(rowCount / page.limit);
     const benchmarks = new Set(rows.map(row => row.benchmark.slug)).size;
     modelCount = `${page.total_items} results across ${benchmarks} ${benchmarks === 1 ? "benchmark" : "benchmarks"}`;

@@ -205,9 +205,9 @@ describe("complete model observations for HTML", () => {
   const seed = route.payload;
   it("collects all API pages before grouping, preserves query state and defaults to benchmark name", async () => {
     const calls: string[] = [];
-    const a = { ...seed.data.results[0], result_key: "a", reasoning_level: "medium", benchmark: { ...seed.data.results[0].benchmark, name: "Alpha" } };
-    const b = { ...a, result_key: "b", reasoning_level: "max", benchmark: { ...a.benchmark, name: "Beta" } };
-    const c = { ...a, result_key: "c", reasoning_level: "max" };
+    const a = { ...seed.data.results[0], result_key: "a", reasoning_level: "medium", effort: "medium" as const, benchmark: { ...seed.data.results[0].benchmark, name: "Alpha" } };
+    const b = { ...a, result_key: "b", reasoning_level: "max", effort: "max" as const, benchmark: { ...a.benchmark, name: "Beta" } };
+    const c = { ...a, result_key: "c", reasoning_level: "max", effort: "max" as const };
     const fetcher = (async (input: string) => {
       calls.push(input);
       const params = new URL(input, "https://registry.test").searchParams;
@@ -219,6 +219,24 @@ describe("complete model observations for HTML", () => {
     if (loaded.kind !== "model") throw new Error("Expected model");
     expect(loaded.payload.data.all_results).toEqual([a, c, b]);
     expect(calls).toEqual(["/api/models/10001?q=alpha&view=latest&page=2", "/api/models/10001?q=alpha&view=latest&page=1&limit=500", "/api/models/10001?q=alpha&view=latest&page=2&limit=500"]);
+  });
+  it("orders a benchmark's results by effort, unreviewed labels last, and keeps the layout out of data requests", async () => {
+    const calls: string[] = [];
+    const base = { ...seed.data.results[0], benchmark: { ...seed.data.results[0].benchmark, name: "Alpha" } };
+    const rows = [
+      { ...base, result_key: "1", reasoning_level: "thinking", effort: null },
+      { ...base, result_key: "2", reasoning_level: "adaptive thinking, max", effort: "max" as const },
+      { ...base, result_key: "3", reasoning_level: "low", effort: "low" as const },
+    ];
+    const fetcher = (async (input: string) => {
+      calls.push(input);
+      return Response.json({ data: { ...seed.data, results: rows, result_page: { number: 1, limit: 50, total_items: 3, total_pages: 1 } } });
+    }) as typeof fetch;
+    const loaded = await loadRegistryRoute({ kind: "model", registryNo: "10001" }, "?layout=effort", fetcher);
+    if (loaded.kind !== "model") throw new Error("Expected model");
+    expect(loaded.payload.data.all_results?.map(row => row.result_key)).toEqual(["3", "2", "1"]);
+    await loadRegistryRoute({ kind: "model", registryNo: "10001" }, "?layout=grid", fetcher);
+    expect(calls).toEqual(["/api/models/10001", "/api/models/10001?layout=grid"]);
   });
   it("retains explicit source order and avoids extra requests for a complete page", async () => {
     const fetcher = vi.fn().mockImplementation(() => Promise.resolve(Response.json(seed)));

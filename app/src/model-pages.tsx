@@ -1,10 +1,9 @@
 import { Cite, RecordCite } from "./cite";
 import { recordAnchor } from "./citation";
 import { ReportIssue } from "./report-issue";
-import { resultPage } from "./issue-report";
 import { comparisonHref, parseComparisonState } from "./compare";
 import { ResultSource, ResultDetails } from "./result-source";
-import { pivotResults, type PivotRow } from "./result-pivot";
+import { effortDisplay, OTHER_SETTINGS, pivotResults, providerLabel, usesEffortLayout, type PivotRow } from "./result-pivot";
 import { RelatedModels, RelatedLinks } from "./seo-content";
 import { ResultScoreLink } from "./result-score-link";
 import type { ResultRow } from "../worker/api";
@@ -31,7 +30,7 @@ import {
   type ModelListEntry,
 } from "./registry";
 
-const PRESERVED_QUERY_KEYS = ["q", "company", "sort", "order", "view", "limit"];
+const PRESERVED_QUERY_KEYS = ["q", "company", "sort", "order", "view", "limit", "layout"];
 
 function resultCount(count: number): string {
   return `${count.toLocaleString("en-US")} ${count === 1 ? "result" : "results"}`;
@@ -278,7 +277,7 @@ export function ModelDetailPage({
   const view = params.get("view") === "history" ? "history" : "latest";
   const query = params.get("q");
   const pivot = pivotResults(allResults);
-  const usePivot = view === "latest" && pivot.multiple;
+  const usePivot = view === "latest" && usesEffortLayout(currentSearch, pivot);
   const offset = (page.number - 1) * page.limit;
   const fullSet = response.data.all_results !== undefined;
   const results = fullSet ? allResults.slice(offset, offset + page.limit) : allResults;
@@ -288,21 +287,17 @@ export function ModelDetailPage({
   const benchmarks = new Set(allResults.map(result => result.benchmark.slug)).size;
   const pivotColumns: TableColumn<PivotRow>[] = [
     { key: "benchmark", label: "Benchmark", className: "data-table__primary", sortHref: benchmarkSort.href, sortDirection: benchmarkSort.direction,
-      render: ({ result, cells }) => {
-        // A row label only when every observation in the row shares one configuration.
-        const configurations = new Set([...cells.values()].flat().map(item => item.configuration?.label ?? ""));
-        const configuration = configurations.size === 1 ? [...configurations][0] : "";
-        return <span className="table-cell-stack"><BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
-          {result.metric.name ? <span>{result.metric.name}</span> : null}
-          {configuration ? <span>Configuration: {configuration}</span> : null}</span>;
-      } },
+      render: ({ result }) => <span className="table-cell-stack"><BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
+        {result.metric.name ? <span>{result.metric.name}</span> : null}
+        {result.configuration ? <span>Configuration: {result.configuration.label}</span> : null}</span> },
     ...pivot.variants.map(variant => ({
-      key: `effort-${variant}`, label: variant || "Not specified", className: "numeric pivot-score",
+      key: `effort-${variant}`, label: variant === OTHER_SETTINGS ? "Other settings" : effortDisplay(variant), className: "numeric pivot-score",
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
         <span key={result.result_key} className="pivot-observation" id={recordAnchor(result)}>
-          <SourceLink href={result.primary_source_url} context={`${model.name}${variant ? ` (${variant})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
+          <SourceLink href={result.primary_source_url} context={`${model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
+          {providerLabel(result) ? <span className="result-details"><span>Reported as: {providerLabel(result)}</span></span> : null}
           <ResultDetails result={result} compact showEvaluator />
-          <ReportIssue result={result} page={resultPage(result)} /><RecordCite result={result} />
+          <RecordCite result={result} />
         </span>)} </div> : "–",
     })),
     { key: "source", label: "Source", sortHref: sourceSort.href, sortDirection: sourceSort.direction,
@@ -318,9 +313,8 @@ export function ModelDetailPage({
       render: (result) => (
         <span className="table-cell-stack">
           <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
-          {result.reasoning_level ? (
-            <span>{model.name} ({result.reasoning_level})</span>
-          ) : null}
+          {result.effort ? <span>Effort: {effortDisplay(result.effort)}</span> : null}
+          {providerLabel(result) ? <span>Reported as: {providerLabel(result)}</span> : null}
           {result.configuration ? <span>Configuration: {result.configuration.label}</span> : null}
         </span>
       ),
@@ -371,8 +365,6 @@ export function ModelDetailPage({
         />
       </section>
       <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
-      <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
-      <ReportIssue page={pathname} model={model.name} source={model.source_url} />
       </PageHeader>
 
       {totalRows > 25 || query ? <LocalSearch
@@ -405,6 +397,13 @@ export function ModelDetailPage({
             },
           ]}
         />
+        {view === "latest" && pivot.multiple ? <Tabs
+          label="Table layout"
+          items={[
+            { href: queryHref(pathname, currentSearch, { layout: null, page: null }), label: "List", active: !usePivot },
+            { href: queryHref(pathname, currentSearch, { layout: "effort", page: null }), label: "By effort", active: usePivot },
+          ]}
+        /> : null}
         {results.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks" : "No benchmark results"}
@@ -412,7 +411,7 @@ export function ModelDetailPage({
           />
         ) : (
           usePivot ? <DataTable
-            caption={`Benchmark results by reasoning level for ${model.name}`}
+            caption={`Benchmark results by effort for ${model.name}`}
             columns={pivotColumns} rows={pivotRows} getRowKey={row => row.key}
           /> : <DataTable
             caption={`Benchmark results for ${model.name}`}
@@ -426,6 +425,10 @@ export function ModelDetailPage({
           totalPages={totalPages}
         />
       </section>
+      <div className="model-page-actions">
+        <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
+        <ReportIssue page={pathname} model={model.name} source={model.source_url} />
+      </div>
       <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />
       <RelatedLinks links={response.data.seo?.links} label="Benchmarks covered" />
     </PageContainer>

@@ -344,20 +344,46 @@ describe("P7.1 model pages", () => {
     expect(render(1)).toContain('class="metadata-inline"');
   });
 
-  it("paginates after the effort pivot and counts distinct benchmark families", () => {
+  it("defaults to one row per result and offers the effort layout for two reviewed efforts", () => {
     const first = modelDetailResponse.data.results[0];
-    const paired = [{ ...first, reasoning_level: "medium" }, { ...first, result_key: "max", reasoning_level: "max", primary_source_url: "https://example.com/max" }];
-    const markup = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data,
+    const paired = [{ ...first, reasoning_level: "medium", effort: "medium" as const }, { ...first, result_key: "max", reasoning_level: "adaptive thinking, max", effort: "max" as const, primary_source_url: "https://example.com/max" }];
+    const render = (search: string) => renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data,
       all_results: paired, results: [paired[0]], result_page: { number: 1, limit: 50, total_items: 2, total_pages: 1 },
-    } }} currentSearch="" />);
-    expect(markup).toContain("2 results across 1 benchmark");
-    expect(markup.match(/<tbody><tr>/g)).toHaveLength(1);
-    expect(markup).toContain(">medium</th>");
-    expect(markup).toContain(">max</th>");
-    expect(markup).toContain('href="https://example.com/max"');
-    expect(markup).toContain('aria-sort="ascending"');
-    const history = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data, results: paired } }} currentSearch="?view=history" />);
-    expect(history).not.toContain(">medium</th>");
+    } }} currentSearch={search} />);
+    const list = render("");
+    expect(list).toContain("2 results across 1 benchmark");
+    expect(list.match(/<tr id="BR-/g)).toHaveLength(2);
+    expect(list).toContain("Effort: Max");
+    expect(list).toContain("Reported as: adaptive thinking, max");
+    expect(list).not.toContain("Reported as: medium");
+    expect(list).toContain(`href="/models/${modelDetailResponse.data.model.registry_no}?layout=effort"`);
+    expect(list).toContain('aria-label="Table layout"');
+    const pivot = render("?layout=effort");
+    expect(pivot.match(/<tbody><tr>/g)).toHaveLength(1);
+    expect(pivot).toContain(">Medium</th>");
+    expect(pivot).toContain(">Max</th>");
+    expect(pivot).toContain('href="https://example.com/max"');
+    expect(pivot).toContain('aria-sort="ascending"');
+    const history = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data, results: paired } }} currentSearch="?view=history&layout=effort" />);
+    expect(history).not.toContain(">Medium</th>");
+    expect(history).not.toContain('aria-label="Table layout"');
+  });
+
+  it("shows unreviewed labels as reported, without an effort, and offers no effort layout for them", () => {
+    const first = modelDetailResponse.data.results[0];
+    const rows = [{ ...first, reasoning_level: "thinking", effort: null }, { ...first, result_key: "b", reasoning_level: "high", effort: "high" as const }];
+    const markup = renderToStaticMarkup(<ModelDetailPage response={{ data: { ...modelDetailResponse.data, all_results: rows, results: rows,
+      result_page: { number: 1, limit: 50, total_items: 2, total_pages: 1 } } }} currentSearch="?layout=effort" />);
+    expect(markup).toContain("Reported as: thinking");
+    expect(markup.match(/Effort: /g)).toHaveLength(1);
+    expect(markup).not.toContain('aria-label="Table layout"');
+    expect(markup).not.toContain(">Other settings</th>");
+  });
+
+  it("places the model citation and report controls after the results table", () => {
+    const markup = renderToStaticMarkup(<ModelDetailPage response={modelDetailResponse} currentSearch="" />);
+    expect(markup.indexOf("model-page-actions")).toBeGreaterThan(markup.indexOf("</table>"));
+    expect(markup.indexOf('class="cite-details"')).toBeGreaterThan(markup.indexOf("</table>"));
   });
 
   it("renders a scoped empty state for a model benchmark search", () => {

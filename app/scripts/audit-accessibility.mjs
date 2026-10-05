@@ -1,5 +1,5 @@
 // Fixed representative sample, never a crawl. No production runtime dependency.
-/* global window, document, getComputedStyle, innerWidth */
+/* global window, document, getComputedStyle, innerWidth, innerHeight */
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {readFileSync,writeFileSync} from 'node:fs';
@@ -141,6 +141,22 @@ try {
     await page.locator('[role=alert]').waitFor();
     assert.equal(await page.locator('main h1').count(),1);await axeCheck(page,'Navigation failure retains page and alert');
     evidence.interactions.push('Injected staging-browser navigation failure: static reduced-motion skeleton, retained page, accessible error alert.');
+  }
+  {
+    const phone=await browser.newContext({viewport:{width:390,height:844},extraHTTPHeaders,bypassCSP});
+    const view=await phone.newPage();view.setDefaultTimeout(8000);view.on('pageerror',error=>errors.push(error.message));
+    // Audit D1: the first model score is above the fold on a 390x844 phone.
+    await view.goto(origin+'/models/20015');
+    check(await view.locator('#benchmarks-heading').evaluate(heading=>{const cell=heading.closest('section').querySelector('tbody td.numeric');return Boolean(cell)&&cell.getBoundingClientRect().bottom<=innerHeight;}),'First model score above the fold at 390x844');
+    // Audit D2: the record citation dialog opens from the keyboard, passes axe, and returns focus on Escape.
+    await view.goto(origin+'/recent');
+    const cite=view.locator('button.record-cite').first();await cite.focus();await view.keyboard.press('Enter');
+    await view.locator('dialog.record-dialog[open]').waitFor();
+    await axeCheck(view,'Record citation dialog');
+    await view.keyboard.press('Escape');await view.locator('dialog.record-dialog').waitFor({state:'detached'});
+    check(await cite.evaluate(el=>el===document.activeElement),'Citation dialog returns focus on Escape');
+    evidence.interactions.push('390x844: first model score above the fold; record citation dialog by keyboard, axe, Escape and focus return.');
+    await phone.close();
   }
   assert.deepEqual(errors,[],'Client exceptions');
   evidence.result='PASS';
