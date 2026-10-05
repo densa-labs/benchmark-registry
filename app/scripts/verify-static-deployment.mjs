@@ -42,7 +42,7 @@ if (staging) {
 } else {
   assert.match(robots, /^User-agent: \*\nAllow: \/\n\nSitemap: https:\/\/benchmarkregistry\.org\/sitemap\.xml\n$/u);
   assert.ok(!headers.includes("nofollow"), "Production must not carry staging crawler headers");
-  assert.ok(headers.includes("https://static.cloudflareinsights.com/beacon.min.js"), "Production CSP must allow the Web Analytics beacon");
+  assert.match(headers, /script-src [^;]*https:\/\/static\.cloudflareinsights\.com[ ;]/u, "Production CSP must allow the Web Analytics beacon origin");
 }
 // One security block for every path; scripts are hashed, never 'unsafe-inline'.
 for (const name of ["Strict-Transport-Security: max-age=31536000; includeSubDomains", "X-Content-Type-Options: nosniff", "Referrer-Policy: strict-origin-when-cross-origin"]) assert.equal(headers.split(name).length, 2, name);
