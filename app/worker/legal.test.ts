@@ -53,16 +53,20 @@ it.each(pages)("preserves staging noindex, canonical and query-state treatment o
   expect(html).toContain('name="robots" content="noindex, follow"');
 });
 
-it("uses verified minimal drafts and keeps funding placeholders out of public HTML", async () => {
+it("serves final legal text with the official contact and keeps funding placeholders out of public HTML", async () => {
   const {env}=fixture();
   const about=await (await worker.fetch(new Request("https://benchmarkregistry.org/about"),env)).text();
   expect(about).toContain("a project of Densa Labs");expect(about).not.toContain("Funding and neutrality statement");
   const privacy=await (await worker.fetch(new Request("https://benchmarkregistry.org/privacy"),env)).text();
-  expect(privacy).toContain("Optional application analytics is disabled");
-  expect(privacy).toContain("without IP addresses or user identifiers");
-  expect(privacy).not.toMatch(/support@|GDPR compliant|retention period/u);
+  expect(privacy).toContain("Cloudflare Web Analytics");
+  expect(privacy).toContain("does not keep search logs");
+  expect(privacy).toContain('href="mailto:support@benchmarkregistry.org"');
+  expect(privacy).not.toMatch(/draft|owner review|GDPR compliant|retention period/iu);
   const terms=await (await worker.fetch(new Request("https://benchmarkregistry.org/terms"),env)).text();
   expect(terms).toContain("provided as-is");expect(terms).toContain("CC BY 4.0");expect(terms).toContain('href="/corrections"');
+  expect(terms).toContain('href="mailto:support@benchmarkregistry.org"');expect(terms).not.toMatch(/draft|owner review/iu);
+  const contact=await (await worker.fetch(new Request("https://benchmarkregistry.org/contact"),env)).text();
+  expect(contact).toContain('href="mailto:support@benchmarkregistry.org"');
   env.STAGING_CRAWLER_PROTECTION="enabled";
   const staging=await worker.fetch(new Request("https://staging.benchmarkregistry.org/privacy"),env);
   expect(staging.headers.get("Content-Security-Policy")).toBe("script-src-elem 'self' 'unsafe-inline'");

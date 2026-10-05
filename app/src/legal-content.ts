@@ -1,3 +1,6 @@
+/** The official contact address. */
+export const SUPPORT_EMAIL = "support@benchmarkregistry.org";
+
 export const LEGAL_KINDS = ["legal", "privacy", "terms", "about", "contact"] as const;
 export type LegalKind = typeof LEGAL_KINDS[number];
 export const LEGAL_PATHS = LEGAL_KINDS.map((kind) => `/${kind}`);
