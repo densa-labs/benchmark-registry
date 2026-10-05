@@ -50,7 +50,7 @@ def test_revision_rolls_back_with_invalid_batch(database):
 
 def test_all_dependency_tables_have_revision_triggers(database):
     rows = database.query("SELECT name, tbl_name FROM sqlite_schema WHERE type='trigger' AND name LIKE 'revision_%'")
-    tables = {"companies", "namespaces", "namespace_companies", "models", "model_aliases", "benchmarks", "benchmark_aliases", "benchmark_versions", "metrics", "evaluator_organizations", "benchmark_version_evaluators", "results", "result_evaluators", "result_sources", "registry_redirects"}
+    tables = {"companies", "namespaces", "namespace_companies", "models", "model_aliases", "benchmarks", "benchmark_aliases", "benchmark_versions", "metrics", "evaluator_organizations", "benchmark_version_evaluators", "results", "result_evaluators", "result_sources", "registry_redirects", "configurations", "benchmark_version_configurations"}
     assert {row["tbl_name"] for row in rows} == tables
     assert len(rows) == len(tables) * 3
     assert "USING INTEGER PRIMARY KEY" in database.query("EXPLAIN QUERY PLAN SELECT token FROM registry_revision WHERE id=1")[0]["detail"]

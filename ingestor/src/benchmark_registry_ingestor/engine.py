@@ -71,6 +71,8 @@ TABLES = (
     "result_sources",
     "registry_redirects",
     "reasoning_labels",
+    "configurations",
+    "benchmark_version_configurations",
 )
 
 RECORD_FIELDS = {
@@ -121,6 +123,15 @@ RECORD_FIELDS = {
         "evaluators",
         "metrics",
         "versions",
+    },
+    "benchmark_version_configuration": {
+        "benchmark_slug",
+        "version",
+        "version_slug",
+        "dataset_label",
+        "configuration",
+        "source_url",
+        "source_checked_at",
     },
     "result": {
         "model_registry_no",
@@ -423,6 +434,7 @@ class Ingestor:
             "provider_retirement": "slug",
             "model": "registry_no",
             "benchmark": "slug",
+            "benchmark_version_configuration": "version_slug",
             "result": "run_ref",
         }
         value = record.get(fields[operation])
@@ -1847,6 +1859,96 @@ class Ingestor:
             changed = True
         return changed
 
+    def _plan_benchmark_version_configuration(self, plan: Plan, record: Record) -> None:
+        benchmark_slug = require_slug(record.get("benchmark_slug"), "benchmark_slug")
+        version_text = require_string(record.get("version"), "version")
+        version_slug = require_version_slug(record.get("version_slug"))
+        identifier = f"{benchmark_slug}/{version_slug}"
+        benchmark = plan.catalog.one("benchmarks", slug=benchmark_slug)
+        if not benchmark:
+            raise IngestionFailure("ERROR", identifier, "unknown benchmark family")
+        version = plan.catalog.one(
+            "benchmark_versions", benchmark_id=benchmark["id"], version_slug=version_slug
+        )
+        if not version or version["version"] != version_text:
+            raise IngestionFailure(
+                "ERROR", identifier, "version label and slug do not name one version"
+            )
+        dataset_label = record.get("dataset_label")
+        if dataset_label is not None:
+            dataset_label = require_string(dataset_label, "dataset_label")
+            # Never invent a dataset name: it must be the start of the published label.
+            if not version_text.startswith(dataset_label) or dataset_label == version_text:
+                raise ValueErrorDetail("dataset_label must be a leading part of the version label")
+        configuration_record = _mapping(record.get("configuration"), "configuration")
+        _reject_unknown_fields(configuration_record, {"key", "label", "kind"}, "configuration")
+        configuration = {
+            "key": require_key(configuration_record.get("key"), "configuration.key"),
+            "label": require_string(configuration_record.get("label"), "configuration.label"),
+            "kind": require_string(configuration_record.get("kind"), "configuration.kind"),
+        }
+        if configuration["kind"] not in {"tools", "harness", "context"}:
+            raise ValueErrorDetail("configuration.kind must be tools, harness or context")
+        source = _source(record)
+        expected = {
+            "benchmark_version_id": version["id"],
+            "configuration_key": configuration["key"],
+            "dataset_label": dataset_label,
+            "source_url": source["source_url"],
+            "normalized_source_url": source["normalized_source_url"],
+            "source_checked_at": source["source_checked_at"],
+        }
+
+        existing_configuration = plan.catalog.one("configurations", key=configuration["key"])
+        if existing_configuration is None:
+            if plan.catalog.one("configurations", label=configuration["label"]):
+                raise IngestionFailure(
+                    "CONFLICT", identifier, "configuration label belongs to another key"
+                )
+            plan.catalog.add("configurations", configuration)
+            plan.statements.append(
+                Statement(
+                    "INSERT INTO configurations (key, label, kind) VALUES (?, ?, ?)",
+                    tuple(configuration.values()),
+                )
+            )
+        elif not _same(existing_configuration, configuration, ("key", "label", "kind")):
+            raise IngestionFailure(
+                "CONFLICT", identifier, f"configuration {configuration['key']} differs"
+            )
+
+        existing = plan.catalog.one(
+            "benchmark_version_configurations", benchmark_version_id=version["id"]
+        )
+        if existing:
+            if not _same(existing, expected, tuple(expected)):
+                raise IngestionFailure(
+                    "CONFLICT", identifier, "version already has a different configuration"
+                )
+            plan.skipped(
+                "benchmark_version_configuration", identifier, "configuration already applied"
+            )
+            return
+        for result in plan.catalog.many("results", benchmark_version_id=version["id"]):
+            label = plan.catalog.one("reasoning_labels", label=result["reasoning_level"])
+            if label and label["configuration_key"] not in {None, configuration["key"]}:
+                raise IngestionFailure(
+                    "CONFLICT",
+                    identifier,
+                    f"result {result['result_key']} has a different label configuration",
+                )
+        plan.catalog.add("benchmark_version_configurations", expected)
+        plan.statements.append(
+            Statement(
+                """INSERT INTO benchmark_version_configurations (
+                    benchmark_version_id, configuration_key, dataset_label,
+                    source_url, normalized_source_url, source_checked_at
+                ) VALUES (?, ?, ?, ?, ?, ?)""",
+                tuple(expected.values()),
+            )
+        )
+        plan.valid("benchmark_version_configuration", identifier, "configuration is valid")
+
     @staticmethod
     def _evaluator_keys(value: object, field_name: str) -> list[str]:
         keys = [
@@ -1887,11 +1989,25 @@ class Ingestor:
             record.get("reasoning_level", ""), "reasoning_level", allow_empty=True
         )
         # The raw label stays as published; it must have a reviewed effort mapping.
-        if plan.catalog.one("reasoning_labels", label=reasoning_level) is None:
+        label = plan.catalog.one("reasoning_labels", label=reasoning_level)
+        if label is None:
             raise IngestionFailure(
                 "ERROR",
                 registry_no,
                 f"reasoning level {reasoning_level!r} has no reviewed effort mapping",
+            )
+        version_configuration = plan.catalog.one(
+            "benchmark_version_configurations", benchmark_version_id=version["id"]
+        )
+        if (
+            version_configuration is not None
+            and label["configuration_key"] is not None
+            and label["configuration_key"] != version_configuration["configuration_key"]
+        ):
+            raise IngestionFailure(
+                "ERROR",
+                registry_no,
+                "reasoning label configuration differs from the version configuration",
             )
         reported_at, reported_precision = normalize_temporal(
             record.get("reported_at"), record.get("reported_precision"), "reported_at"

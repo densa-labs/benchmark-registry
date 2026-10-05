@@ -1,0 +1,9 @@
+DROP TRIGGER revision_benchmark_version_configurations_delete;
+DROP TRIGGER revision_benchmark_version_configurations_update;
+DROP TRIGGER revision_benchmark_version_configurations_insert;
+DROP TABLE benchmark_version_configurations;
+ALTER TABLE reasoning_labels DROP COLUMN configuration_key;
+DROP TRIGGER revision_configurations_delete;
+DROP TRIGGER revision_configurations_update;
+DROP TRIGGER revision_configurations_insert;
+DROP TABLE configurations;

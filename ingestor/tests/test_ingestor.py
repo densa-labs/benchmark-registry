@@ -1082,3 +1082,127 @@ def test_database_rejects_unmapped_reasoning_label(database_path: Path) -> None:
                 VALUES (1, 'High ', 1, 1, 'r', 'k', '1', '2026-01-01', 'date', 'e',
                 'https://x.test', 'https://x.test', '2026-01-01T00:00:00Z')"""
             )
+
+
+def configuration_record(**overrides: object) -> dict:
+    record = {
+        "benchmark_slug": "example-benchmark",
+        "version": "1.0 — Example harness",
+        "version_slug": "1.0-example-harness",
+        "dataset_label": "1.0",
+        "configuration": {"key": "example-harness", "label": "Example harness", "kind": "harness"},
+        "source_url": "https://example.com/benchmark/1.0-example-harness",
+        "source_checked_at": CHECKED_AT,
+    }
+    record.update(overrides)
+    return record
+
+
+def seed_harness_version(ingestor: Ingestor) -> None:
+    seed_dependencies(ingestor)
+    benchmark = benchmark_record()
+    benchmark["versions"].append(
+        version_record(version="1.0 — Example harness", version_slug="1.0-example-harness")
+    )
+    ingestor.run("benchmark", benchmark, commit=True)
+
+
+def test_version_configuration_is_attached_without_touching_the_version(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_harness_version(ingestor)
+    before = database.query("SELECT * FROM benchmark_versions ORDER BY id")
+
+    first = ingestor.run("benchmark_version_configuration", configuration_record(), commit=True)
+    second = ingestor.run("benchmark_version_configuration", configuration_record(), commit=True)
+
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    assert database.query("SELECT * FROM benchmark_versions ORDER BY id") == before
+    assert database.query(
+        """SELECT bv.version, bvc.dataset_label, c.label, c.kind
+        FROM benchmark_version_configurations bvc
+        JOIN benchmark_versions bv ON bv.id = bvc.benchmark_version_id
+        JOIN configurations c ON c.key = bvc.configuration_key"""
+    ) == [
+        {
+            "version": "1.0 — Example harness",
+            "dataset_label": "1.0",
+            "label": "Example harness",
+            "kind": "harness",
+        }
+    ]
+
+
+def test_version_configuration_conflicts_and_errors(ingestor: Ingestor) -> None:
+    seed_harness_version(ingestor)
+    ingestor.run("benchmark_version_configuration", configuration_record(), commit=True)
+
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(dataset_label=None),
+        status="CONFLICT",
+    )
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(
+            configuration={"key": "example-harness", "label": "Renamed", "kind": "harness"}
+        ),
+        status="CONFLICT",
+        match="differs",
+    )
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(version_slug="1.0-other", dataset_label="1.0"),
+        match="do not name one version",
+    )
+
+
+def test_version_configuration_rejects_an_invented_dataset_label(ingestor: Ingestor) -> None:
+    seed_harness_version(ingestor)
+
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(dataset_label="Verified"),
+        match="leading part",
+    )
+
+
+def test_label_and_version_configurations_must_agree(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_harness_version(ingestor)
+    ingestor.run(
+        "benchmark_version_configuration",
+        configuration_record(
+            version="1.0",
+            version_slug="1.0",
+            dataset_label=None,
+            configuration={"key": "with-tools", "label": "With tools", "kind": "tools"},
+        ),
+        commit=True,
+    )
+    record = result_record()
+    record["reasoning_level"] = "no-tools"
+    assert_failure(ingestor, "result", record, match="differs from the version configuration")
+
+    record["reasoning_level"] = "tools enabled"
+    assert ingestor.run("result", record, commit=True)[0].status == "VALID"
+
+    harness = result_record(run_ref="run-2")
+    harness["benchmark_version"] = "1.0 — Example harness"
+    harness["reasoning_level"] = "no-tools"
+    ingestor.run("result", harness, commit=True)
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(),
+        status="CONFLICT",
+        match="different label configuration",
+    )
+    assert database.query("SELECT count(*) AS n FROM benchmark_version_configurations") == [
+        {"n": 1}
+    ]

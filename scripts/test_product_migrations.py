@@ -139,10 +139,11 @@ class ProductMigrationTests(unittest.TestCase):
             )
             self.assertEqual(
                 db.execute(
-                    "SELECT label, effort, status, note FROM reasoning_labels ORDER BY label"
+                    "SELECT label, effort, configuration_key, status, note"
+                    " FROM reasoning_labels ORDER BY label"
                 ).fetchall(),
                 sorted(
-                    (row["label"], row["effort"], row["status"], row["note"])
+                    (row["label"], row["effort"], row["configuration"], row["status"], row["note"])
                     for row in mapping["labels"]
                 ),
             )
@@ -152,8 +153,10 @@ class ProductMigrationTests(unittest.TestCase):
                 (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
             )
             before = db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall()
-            db.executescript((ROOT / "migrations/rollback/0013_effort_vocabulary.sql").read_text())
-            db.executescript((ROOT / "migrations/0013_effort_vocabulary.sql").read_text())
+            for number in ("0014_benchmark_configurations", "0013_effort_vocabulary"):
+                db.executescript((ROOT / f"migrations/rollback/{number}.sql").read_text())
+            for number in ("0013_effort_vocabulary", "0014_benchmark_configurations"):
+                db.executescript((ROOT / f"migrations/{number}.sql").read_text())
             self.assertEqual(
                 before,
                 db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall(),

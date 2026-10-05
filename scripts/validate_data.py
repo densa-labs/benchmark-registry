@@ -60,6 +60,14 @@ REQUIRED = {
         "source_checked_at",
         "versions",
     },
+    "benchmark_version_configuration": {
+        "benchmark_slug",
+        "version",
+        "version_slug",
+        "configuration",
+        "source_url",
+        "source_checked_at",
+    },
     "result": {
         "model_registry_no",
         "benchmark_slug",
@@ -158,7 +166,7 @@ def validate(batches: list[tuple[str, object]], database: Path | None = None) ->
         "registry_nos",
         "authorized_prefixes",
     }
-    mapping_fields = {"expected", "corrected", "redirect"}
+    mapping_fields = {"expected", "corrected", "redirect", "configuration"}
     boolean_fields = {
         "source_has_single_run",
         "establishment_gap_documented",
@@ -414,6 +422,25 @@ def validate(batches: list[tuple[str, object]], database: Path | None = None) ->
                         loc,
                         "Version references an undefined metric.",
                     )
+    for loc, op, r in records:
+        if op != "benchmark_version_configuration":
+            continue
+        configuration = r.get("configuration")
+        if (r.get("benchmark_slug"), r.get("version")) not in versions:
+            add("error", "undefined_reference", loc, "Configuration names an undefined benchmark version.")
+        if (
+            not isinstance(configuration, dict)
+            or set(configuration) != {"key", "label", "kind"}
+            or configuration.get("kind") not in {"tools", "harness", "context"}
+        ):
+            add("error", "schema", loc, "Configuration needs key, label and kind (tools, harness or context).")
+        dataset = r.get("dataset_label")
+        if dataset is not None and not (
+            isinstance(r.get("version"), str)
+            and r["version"].startswith(dataset)
+            and r["version"] != dataset
+        ):
+            add("error", "schema", loc, "dataset_label must be a leading part of the version label.")
     mapping = json.loads(REASONING_LABELS.read_text())
     reasoning_labels = {row["label"] for row in mapping["labels"]}
     for row in mapping["labels"]:
