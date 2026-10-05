@@ -31,10 +31,3 @@ export function renderInitialDocument(loaded: import("../src/registry").LoadedRe
   };
 }
 
-export function renderFailureDocument(currentSearch: string) {
-  const initial = { loaded: { kind: "not-found" as const }, currentSearch, failure: "The materialized registry is temporarily unavailable. Try again shortly." };
-  return {
-    markup: renderToString(<App initial={initial} />),
-    bootstrap: `<script id="registry-initial-document" type="application/json">${serializeInitialDocument(initial)}</script>`,
-  };
-}

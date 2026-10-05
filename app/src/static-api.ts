@@ -16,7 +16,7 @@ export function createStaticFetch(network: typeof fetch = (...args) => fetch(...
   let current: Promise<{ manifest: StaticDataManifest; repository: MaterializedRepository }> | undefined;
   const objects = new Map<string, Promise<unknown>>();
   const load = (manifest: StaticDataManifest) => new MaterializedRepository(
-    { schema: 1, environment: "local", generation: manifest.generation, canonicalRevision: manifest.generation, watermark: 0, createdAt: "", objects: manifest.objects, inlineObjects: {} } satisfies ReadManifest,
+    { schema: 1, environment: "local", generation: manifest.generation, canonicalRevision: manifest.generation, watermark: 0, createdAt: "", objects: manifest.objects } satisfies ReadManifest,
     async <K extends keyof ReadData>(key: string) => {
       const hash = manifest.objects[key];
       if (!objects.has(hash)) objects.set(hash, network(staticObjectPath(hash), { headers: { Accept: "application/json" } }).then(async (response) => {

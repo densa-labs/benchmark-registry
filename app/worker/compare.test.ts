@@ -2,7 +2,9 @@ import { DatabaseSync } from "node:sqlite";
 import { readFileSync, readdirSync } from "node:fs";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import template from "../index.html?raw";
-import worker, { type Env } from "./index";
+import { handleRequest, type Env } from "./index";
+import { MaterializedRepository } from "./materialized-repository";
+import type { ReadData } from "./read-model";
 import { buildGeneration } from "./materializer";
 import { normalizedResource } from "./request-policy";
 import type { InitialDocument } from "../src/bootstrap";
@@ -10,6 +12,7 @@ import type { InitialDocument } from "../src/bootstrap";
 describe("materialized comparison documents", () => {
   let sqlite: DatabaseSync;
   let env: Env;
+  let repository: MaterializedRepository;
   let forbiddenDb: { prepare: ReturnType<typeof vi.fn> };
   beforeEach(async () => {
     sqlite = new DatabaseSync(":memory:");
@@ -24,21 +27,17 @@ describe("materialized comparison documents", () => {
         async first() { return (await this.all()).results[0] ?? null; },
       };
     } } as unknown as D1Database;
-    const generation = (await buildGeneration(db, "local"))!;
-    const entries = new Map([...generation.objects].map(([hash, value]) => ["objects/" + hash, value]));
-    entries.set("manifests/" + generation.manifestHash, JSON.stringify(generation.manifest));
-    entries.set("publication", JSON.stringify({ schema: 1, environment: "local", current: { generation: generation.manifest.generation, hash: generation.manifestHash } }));
-    forbiddenDb = { prepare: vi.fn(() => { throw new Error("Public reads must not use D1"); }) };
+    const generation = await buildGeneration(db, "local");
+    repository = new MaterializedRepository(generation.manifest, async <K extends keyof ReadData>(key: string) => (JSON.parse(generation.objects.get(generation.manifest.objects[key])!) as { data: ReadData[K] }).data);
+    forbiddenDb = { prepare: vi.fn(() => { throw new Error("Page renders must not query D1"); }) };
     env = {
       DB: forbiddenDb,
-      READ_ENVIRONMENT: "local",
-      READ_STORE: { get: async (key: string) => entries.get(key) ?? null } as unknown as KVNamespace,
       ASSETS: { fetch: async () => new Response(template, { headers: { "Content-Type": "text/html" } }) } as unknown as Fetcher,
     } as unknown as Env;
   });
   afterEach(() => sqlite.close());
   async function page(path: string, method = "GET") {
-    const response = await worker.fetch(new Request("https://benchmarkregistry.org" + path, { method }), env);
+    const response = await handleRequest(new Request("https://benchmarkregistry.org" + path, { method }), env, repository);
     const html = await response.text();
     const serialized = /<script id="registry-initial-document" type="application\/json">([\s\S]*?)<\/script>/u.exec(html)?.[1];
     return { response, html, initial: serialized ? JSON.parse(serialized) as InitialDocument : undefined };
@@ -52,7 +51,6 @@ describe("materialized comparison documents", () => {
     expect(html).toContain('<title>Compare AI Model Benchmark Results | Benchmark Registry</title>');
     expect(html).toContain('href="/compare" aria-current="page"');
     expect(html).not.toContain('name="robots" content="noindex');
-    expect(response.headers.get("X-Registry-D1-Queries")).toBe("0");
     expect(forbiddenDb.prepare).not.toHaveBeenCalled();
   });
 
@@ -89,7 +87,7 @@ describe("materialized comparison documents", () => {
     const redirect = await page("/compare/?models=10001,20002&reasoning=,extended");
     expect(redirect.response.status).toBe(308);
     expect(redirect.response.headers.get("Location")).toBe("https://benchmarkregistry.org/compare?models=10001,20002&reasoning=,extended");
-    const api = await worker.fetch(new Request("https://benchmarkregistry.org/api/models?models=10001,20002"), env);
+    const api = await handleRequest(new Request("https://benchmarkregistry.org/api/models?models=10001,20002"), env, repository);
     expect(api.status).toBe(400);
     expect(await api.json()).toMatchObject({ error: { code: "unsupported_parameter" } });
   });
