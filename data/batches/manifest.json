@@ -294,8 +294,8 @@
       "file": "benchmark-configurations-2026-10-05.json",
       "sha256": "1cf80820fd572498ed455257f009f0dd1818689b778aa99ff2ec20548c66e3ee",
       "applied": {
-        "staging": null,
-        "production": null
+        "staging": "2026-10-05T08:57:00Z",
+        "production": "2026-10-05T09:05:00Z"
       }
     }
   ]

@@ -3,7 +3,7 @@ import { ApiError } from './api';
 import type { ParsedListParams } from './params';
 import { RegistryRepository } from './repository';
 import { digest, logicalKind, validateManifest, validateObject, type ReadData, type ReadEnvironment, type ReadManifest, type ReadObject } from './read-model';
-export const projectionVersion=6;
+export const projectionVersion=7;
 export const INLINE_BUNDLE_LIMIT=512*1024;
 export function inlineBundle(objects:Map<string,string>):Record<string,ReadObject> {
   const bytes=[...objects.values()].reduce((sum,value)=>sum+new TextEncoder().encode(value).length,0);
