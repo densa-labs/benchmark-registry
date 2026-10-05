@@ -90,7 +90,11 @@ try {
   assert.equal(await page.evaluate(()=>document.activeElement.getAttribute('data-focus-key')),'sort-Model');
   // At phone width each result row is a two-line block, so the table fits without sideways scrolling.
   check(await page.evaluate(()=>[...document.querySelectorAll('.table-scroll')].every(el=>el.scrollWidth<=el.clientWidth)),'Phone table rows fit the viewport');
-  check(await page.evaluate(()=>[...document.querySelectorAll('.data-table tbody tr')].every(row=>getComputedStyle(row).display==='flex' && row.getAttribute('role')==='row')),'Phone rows keep their row role');
+  // Chrome's own accessibility tree still exposes the flex rows as table rows and cells.
+  const rows=await page.locator('.data-table tbody tr').count();
+  const tree=(await (await page.context().newCDPSession(page)).send('Accessibility.getFullAXTree')).nodes.map(node=>node.role?.value);
+  check(await page.locator('.data-table tbody tr').first().evaluate(row=>getComputedStyle(row).display==='flex'),'Phone rows use the two-line layout');
+  check(tree.filter(role=>role==='row').length>rows && tree.includes('cell') && tree.includes('columnheader') && tree.includes('table'),'Phone rows keep table semantics');
   await page.locator('.pagination a[rel=next]').focus();await page.keyboard.press('Enter');await page.waitForURL('**page=2*');
   check(await page.locator('[data-route-status]').textContent().then(x=>x.includes('Page 2')),'Pagination announcement');
   check(await page.evaluate(()=>document.activeElement!==document.body),'Pagination retains logical focus');

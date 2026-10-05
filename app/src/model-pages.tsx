@@ -14,7 +14,6 @@ import {
   EmptyState,
   MetadataRows,
   PageContainer,
-  PageActions,
   PageHeader,
   PageSizeSelector,
   Pagination,
@@ -232,14 +231,12 @@ export function ModelsPage({
             value={response.page.limit}
           />
         </div>
-        <div className="results-toolbar">
           <LocalSearch
             action={pathname}
             currentSearch={currentSearch}
             label="Search models"
             placeholder="Search model names, aliases, or Registry Nos."
           />
-        </div>
         {response.data.length === 0 ? (
           <EmptyState
             title={query ? "No matching models" : "No models found"}
@@ -294,7 +291,7 @@ export function ModelDetailPage({
         {result.metric.name ? <span>{result.metric.name}</span> : null}
         {result.configuration ? <span>Configuration: {result.configuration.label}</span> : null}</span> },
     ...pivot.variants.map(variant => ({
-      key: `effort-${variant}`, label: variant === OTHER_SETTINGS ? "Other settings" : effortDisplay(variant), className: "numeric pivot-score",
+      key: `effort-${variant}`, label: variant === OTHER_SETTINGS ? "Other settings" : effortDisplay(variant), className: "numeric pivot-score", phoneLabel: true,
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
         <span key={result.result_key} className="pivot-observation" id={recordAnchor(result)}>
           <SourceLink href={result.primary_source_url} context={`${model.name}${result.reasoning_level ? ` (${result.reasoning_level})` : ""} on ${result.benchmark.name} ${result.benchmark_version}`}>{result.score.display}</SourceLink>
@@ -325,7 +322,7 @@ export function ModelDetailPage({
     {
       key: "score",
       label: "Score",
-      className: "numeric score",
+      className: "numeric",
       render: (result) => <ResultScoreLink result={result} />,
     },
     {
@@ -367,11 +364,9 @@ export function ModelDetailPage({
           ]}
         />
       </section>
-      <PageActions>
         <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
         <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
         <ReportIssue page={pathname} model={model.name} source={model.source_url} />
-      </PageActions>
       </PageHeader>
 
       <section className="results-section" aria-labelledby="benchmarks-heading">
@@ -382,7 +377,6 @@ export function ModelDetailPage({
           </div>
           {page.total_items > 50 ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} /> : null}
         </div>
-        <div className="results-toolbar">
         {totalRows > 25 || query ? <LocalSearch
           action={pathname}
           currentSearch={currentSearch}
@@ -411,7 +405,6 @@ export function ModelDetailPage({
             { href: queryHref(pathname, currentSearch, { layout: "effort", page: null }), label: "By effort", active: usePivot },
           ]}
         /> : null}
-        </div>
         {results.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks" : "No benchmark results"}

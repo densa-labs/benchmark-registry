@@ -14,10 +14,9 @@ export interface SeoContent {
   /** Family pages: models and retained results per version slug, from the version pages' own counts. */
   versionCounts?: Record<string,{models:number;results:number}>;
 }
-const headingId=(label:string)=>`related-${label.toLowerCase().replace(/[^a-z0-9]+/gu,"-")}`;
 /** Secondary internal links after the primary content, under their own heading. */
 function RelatedSection({label,children}:{label:string;children:React.ReactNode}) {
-  return <section className="related-links" aria-labelledby={headingId(label)}><h2 id={headingId(label)}>{label}</h2><nav aria-label={label}><ul>{children}</ul></nav></section>;
+  return <section className="related-links"><h2>{label}</h2><nav aria-label={label}><ul>{children}</ul></nav></section>;
 }
 export function RelatedModels({models,label,showDates=false}:{models:ModelSummary[];label:string;showDates?:boolean}) {
   if(!models.length) return null;
@@ -32,13 +31,13 @@ export function FamilyResults({content}:{content?:SeoContent}) {
   // Name the configuration unless the version label already does.
   const configuration=latest.configuration && !label.toLowerCase().includes(latest.configuration.label.toLowerCase()) ? latest.configuration.label : "";
   const columns:TableColumn<ResultRow>[]=[
-    {key:"model",label:"Model",className:"data-table__primary",render:row=><a href={`/models/${row.model.registry_no}`}>{row.model.name}{row.reasoning_level ? ` (${row.reasoning_level})` : ""}</a>},
-    {key:"score",label:"Score",className:"numeric score",render:row=>row.score.display},
+    {key:"model",label:"Model",render:row=><a href={`/models/${row.model.registry_no}`}>{row.model.name}{row.reasoning_level ? ` (${row.reasoning_level})` : ""}</a>},
+    {key:"score",label:"Score",className:"numeric",render:row=>row.score.display},
     {key:"source",label:"Source",render:row=><ResultSource result={row} />},
   ];
   return <section className="results-section" aria-labelledby="recent-results-heading">
     <div className="results-section__header"><h2 id="recent-results-heading">{`Recently reported results: ${label}${configuration ? `, ${configuration}` : ""}`}</h2></div>
-    <p className="results-section__note">{latest.configuration ? "Most recent configuration" : "Latest version"}: <a href={`/benchmarks/${latest.benchmark.slug}/${latest.version_slug}`}>{benchmarkVersionLabel(latest.benchmark,latest.version)}</a></p>
+    <p>{latest.configuration ? "Most recent configuration" : "Latest version"}: <a href={`/benchmarks/${latest.benchmark.slug}/${latest.version_slug}`}>{benchmarkVersionLabel(latest.benchmark,latest.version)}</a></p>
     {content.top?.length ? <DataTable caption={`Recently reported results for ${benchmarkVersionLabel(latest.benchmark,latest.version)}`} rows={content.top} columns={columns} getRowKey={row=>row.result_key} getRowId={recordAnchor} /> : null}
   </section>;
 }

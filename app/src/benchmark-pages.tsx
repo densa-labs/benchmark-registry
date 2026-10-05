@@ -16,7 +16,6 @@ import {
   DataTable,
   EmptyState,
   MetadataRows,
-  PageActions,
   PageContainer,
   PageHeader,
   PageSizeSelector,
@@ -227,14 +226,12 @@ export function BenchmarksPage({
             value={response.page.limit}
           />
         </div>
-        <div className="results-toolbar">
           <LocalSearch
             action={pathname}
             currentSearch={currentSearch}
             label="Search benchmarks"
             placeholder="Search benchmark names or aliases"
           />
-        </div>
         {response.data.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks" : "No benchmarks found"}
@@ -317,7 +314,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
         title={displayName}
         description={response.data.seo?.sentence ?? (displayName === benchmark.name ? undefined : benchmark.name)}
       >
-        <PageActions><ReportIssue page={`/benchmarks/${benchmark.slug}`} benchmark={benchmark.name} /></PageActions>
+        <ReportIssue page={`/benchmarks/${benchmark.slug}`} benchmark={benchmark.name} />
       </PageHeader>
       <section className="results-section" aria-labelledby="versions-heading">
         <div className="results-section__header">
@@ -393,7 +390,7 @@ export function BenchmarkVersionPage({
     {
       key: "score",
       label: "Score",
-      className: "numeric score",
+      className: "numeric",
       render: (result) => <ResultScoreLink result={result} />,
     },
     {
@@ -438,10 +435,8 @@ export function BenchmarkVersionPage({
           ]}
         />
       </section>
-      <PageActions>
         <Cite input={{title:`${version.benchmark.name} ${version.version} benchmark results`,path:pathname,benchmarkIdentifier:`${version.benchmark.slug}/${version.version_slug}`}} />
         <ReportIssue page={pathname} benchmark={`${version.benchmark.name} ${version.version}`} source={response.data.source_url} />
-      </PageActions>
       </PageHeader>
 
       <ScoreChart data={response.data.chart} />
@@ -454,7 +449,6 @@ export function BenchmarkVersionPage({
           </div>
           <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
         </div>
-        <div className="results-toolbar">
         <LocalSearch
           action={pathname}
           currentSearch={currentSearch}
@@ -478,7 +472,6 @@ export function BenchmarkVersionPage({
             ]}
           />
           <Tabs
-            className="tabs--scroll"
             label="Provider filter"
             items={[
               {
@@ -496,7 +489,6 @@ export function BenchmarkVersionPage({
               })),
             ]}
           />
-        </div>
         </div>
         {params.has("result") ? (
           <p className="local-search__clear" data-focus-key="clear-search">

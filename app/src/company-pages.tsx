@@ -1,7 +1,6 @@
 import { recordAnchor } from "./citation";
 import { ResultSource } from "./result-source";
 import { RelatedModels } from "./seo-content";
-import { ReportIssue } from "./report-issue";
 import { ResultScoreLink } from "./result-score-link";
 import type { ModelSummary, ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
@@ -9,7 +8,6 @@ import {
   DataTable,
   EmptyState,
   MetadataRows,
-  PageActions,
   PageContainer,
   PageHeader,
   PageSizeSelector,
@@ -227,14 +225,12 @@ export function CompaniesPage({
             value={response.page.limit}
           />
         </div>
-        <div className="results-toolbar">
           <LocalSearch
             action={pathname}
             currentSearch={currentSearch}
             label="Search organizations"
             placeholder="Search organization names"
           />
-        </div>
         {response.data.length === 0 ? (
           <EmptyState
             title={query ? "No matching organizations" : "No organizations found"}
@@ -305,7 +301,7 @@ export function CompanyDetailPage({
     {
       key: "score",
       label: "Score",
-      className: "numeric score",
+      className: "numeric",
       render: (result) => <ResultScoreLink result={result} />,
     },
     {
@@ -346,7 +342,6 @@ export function CompanyDetailPage({
           ]}
         />
       </section>
-      <PageActions><ReportIssue page={pathname} /></PageActions>
       </PageHeader>
 
       <section className="results-section" aria-labelledby="company-results-heading">
@@ -357,7 +352,6 @@ export function CompanyDetailPage({
           </div>
           <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
         </div>
-        <div className="results-toolbar">
         <LocalSearch
           action={pathname}
           currentSearch={currentSearch}
@@ -379,7 +373,6 @@ export function CompanyDetailPage({
             },
           ]}
         />
-        </div>
         {results.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks or models" : "No benchmark results"}

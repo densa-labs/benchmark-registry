@@ -359,7 +359,7 @@ describe("P7.1 model pages", () => {
     expect(list).toContain(`href="/models/${modelDetailResponse.data.model.registry_no}?layout=effort"`);
     expect(list).toContain('aria-label="Table layout"');
     const pivot = render("?layout=effort");
-    expect(pivot.match(/<tbody[^>]*><tr[\s>]/g)).toHaveLength(1);
+    expect(pivot.match(/<tbody><tr>/g)).toHaveLength(1);
     expect(pivot).toContain(">Medium</th>");
     expect(pivot).toContain(">Max</th>");
     expect(pivot).toContain('href="https://example.com/max"');
@@ -382,12 +382,10 @@ describe("P7.1 model pages", () => {
 
   it("places the model compare, citation and report controls in the title block, before the results table", () => {
     const markup = renderToStaticMarkup(<ModelDetailPage response={modelDetailResponse} currentSearch="" />);
-    const actions = markup.indexOf('class="page-actions"');
-    expect(actions).toBeGreaterThan(markup.indexOf("</h1>"));
-    expect(actions).toBeLessThan(markup.indexOf("</header>"));
     for (const control of ['class="model-compare"', 'class="cite-details"', 'class="report-issue"']) {
-      expect(markup.indexOf(control)).toBeGreaterThan(actions);
-      expect(markup.indexOf(control)).toBeLessThan(markup.indexOf("<table"));
+      expect(markup.indexOf(control)).toBeGreaterThan(markup.indexOf("</h1>"));
+      expect(markup.indexOf(control)).toBeLessThan(markup.indexOf("</header>"));
+      expect(markup.indexOf("</header>")).toBeLessThan(markup.indexOf("<table"));
     }
   });
 

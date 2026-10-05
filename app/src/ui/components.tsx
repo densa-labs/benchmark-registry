@@ -604,6 +604,8 @@ export interface TableColumn<Row> {
   className?: string;
   sortHref?: string;
   sortDirection?: SortDirection;
+  /** Show the column label beside the value when phone rows drop the header. */
+  phoneLabel?: boolean;
 }
 
 interface DataTableProps<Row> {
@@ -622,17 +624,15 @@ export function DataTable<Row>({
   getRowId,
 }: DataTableProps<Row>) {
   return (
-    <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
-      {/* Explicit roles keep table semantics when phone rows change the display. */}
-      <table className="data-table" data-columns={columns.length} role="table">
+    <div className="table-scroll" role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
+      <table className="data-table" data-columns={columns.length}>
         <caption className="visually-hidden">{caption}</caption>
-        <thead role="rowgroup">
-          <tr role="row">
+        <thead>
+          <tr>
             {columns.map((column) => (
               <th
                 key={column.key}
                 scope="col"
-                role="columnheader"
                 className={[column.className, column.sortHref ? "data-table__sortable" : undefined].filter(Boolean).join(" ")}
                 aria-sort={
                   column.sortDirection
@@ -655,11 +655,11 @@ export function DataTable<Row>({
             ))}
           </tr>
         </thead>
-        <tbody role="rowgroup">
+        <tbody>
           {rows.map((row) => (
-            <tr key={getRowKey(row)} id={getRowId?.(row)} role="row">
+            <tr key={getRowKey(row)} id={getRowId?.(row)}>
               {columns.map((column) => (
-                <td key={column.key} className={column.className} role="cell" data-label={column.label} data-column={column.key}>
+                <td key={column.key} className={column.className} data-label={column.phoneLabel ? column.label : undefined}>
                   {column.render(row)}
                 </td>
               ))}
@@ -729,9 +729,9 @@ export interface TabItem {
   active?: boolean;
 }
 
-export function Tabs({ label, items, className }: { label: string; items: TabItem[]; className?: string }) {
+export function Tabs({ label, items }: { label: string; items: TabItem[] }) {
   return (
-    <nav className={["tabs", className].filter(Boolean).join(" ")} aria-label={label}>
+    <nav className="tabs" aria-label={label}>
       {items.map((item) => (
         <a
           key={item.href}
@@ -801,9 +801,4 @@ export function NotFoundState() {
       </div>
     </section>
   );
-}
-
-/** The actions row under an entity's facts: Compare, Cite, Report an issue. */
-export function PageActions({ children }: { children: ReactNode }) {
-  return <div className="page-actions">{children}</div>;
 }
