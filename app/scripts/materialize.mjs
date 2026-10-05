@@ -59,7 +59,7 @@ else if(values['gc-plan']) {
       if(values.bootstrap || previous?.projectionVersion!==producer.projectionVersion) {
         console.log(JSON.stringify({environment,phase:'canonical_snapshot'}));
         snapshot=new DatabaseSync(':memory:');
-        const names=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','registry_revision','registry_read_changes'];
+        const names=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','effort_levels','reasoning_labels','configurations','benchmark_version_configurations','result_corrections','registry_revision','registry_read_changes'];
         const schema=(await db.prepare("SELECT type,name,sql,tbl_name FROM sqlite_schema WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' AND tbl_name IN(SELECT value FROM json_each(?))").bind(JSON.stringify(names)).all()).results;
         for(const item of schema.filter(item=>item.type==='table')) snapshot.exec(item.sql);
         snapshot.exec('BEGIN; PRAGMA defer_foreign_keys=ON');
