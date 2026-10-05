@@ -12,6 +12,7 @@ import {
   type ModelDbRow,
   type ModelSummary,
   pageMetadata,
+  parseConfiguration,
   parseJsonArray,
   type ResultDbRow,
   resultFromRow,
@@ -44,6 +45,7 @@ interface BenchmarkListRow {
   latest_version: string;
   latest_released_at: string;
   latest_release_precision: DatePrecision;
+  latest_configuration?: string | null;
 }
 
 interface BenchmarkFamilyRow {
@@ -70,6 +72,8 @@ interface BenchmarkVersionRow {
   display_precision: number;
   source_url: string;
   evaluator_names: string;
+  configuration?: string | null;
+  dataset_label?: string | null;
 }
 
 interface CompanyListRow {
@@ -104,6 +108,7 @@ interface SearchRelationshipRow {
   version_slug: string;
   reasoning_level: string;
   result_key: string;
+  configuration_label?: string | null;
 }
 
 const MODEL_COLUMNS = `
@@ -123,6 +128,20 @@ const BENCHMARK_ALIASES = `COALESCE((
   ) alias
 ), '[]')`;
 
+// Configuration is attached to existing rows (migration 0014): a version row's
+// configuration, else the raw reasoning label's. Labels and keys never change.
+const CONFIGURATION_JSON = "json_object('key', c.key, 'label', c.label, 'kind', c.kind)";
+const VERSION_CONFIGURATION = (version: string) => `(SELECT ${CONFIGURATION_JSON}
+  FROM benchmark_version_configurations bvc JOIN configurations c ON c.key = bvc.configuration_key
+  WHERE bvc.benchmark_version_id = ${version})`;
+const VERSION_CONFIGURATION_COLUMNS = (version: string) => `${VERSION_CONFIGURATION(version)} AS configuration,
+  (SELECT bvc.dataset_label FROM benchmark_version_configurations bvc
+    WHERE bvc.benchmark_version_id = ${version}) AS dataset_label`;
+// "Latest version" is chosen among true versions first; configured rows only
+// stand in for a family that has no unconfigured version.
+const CONFIGURED_VERSION = (version: string) =>
+  `EXISTS (SELECT 1 FROM benchmark_version_configurations bvc WHERE bvc.benchmark_version_id = ${version})`;
+
 const RESULT_COLUMNS = `
   r.result_key,
   ${MODEL_COLUMNS},
@@ -133,6 +152,10 @@ const RESULT_COLUMNS = `
   bv.version_slug AS benchmark_version_slug,
   ${EXACT_RESULT_ELIGIBLE_SQL} AS exact_result_indexable,
   r.reasoning_level,
+  (SELECT rl.effort FROM reasoning_labels rl WHERE rl.label = r.reasoning_level) AS effort,
+  COALESCE(${VERSION_CONFIGURATION("r.benchmark_version_id")}, (SELECT ${CONFIGURATION_JSON}
+    FROM reasoning_labels rl JOIN configurations c ON c.key = rl.configuration_key
+    WHERE rl.label = r.reasoning_level)) AS configuration,
   metric.name AS metric_name,
   metric.key AS metric_key,
   metric.unit AS metric_unit,
@@ -335,6 +358,8 @@ function versionFromRow(row: BenchmarkVersionRow): BenchmarkVersionSummary {
     released_at: row.release_at,
     release_precision: row.release_precision,
     metric: metricFromVersion(row),
+    configuration: parseConfiguration(row.configuration),
+    dataset_label: row.dataset_label ?? null,
   };
 }
 
@@ -371,7 +396,7 @@ export class RegistryRepository {
   async materializedFields(key: string) {
     if(key === "models") return this.all<{identity:string; name:string; company:string; released:string; aliases:string}>(`SELECT m.registry_no AS identity,m.normalized_name AS name,c.normalized_name AS company,${MODEL_RELEASE_KEY} AS released,
       COALESCE((SELECT json_group_array(normalized_name) FROM model_aliases WHERE model_id=m.id),'[]') AS aliases FROM models m JOIN companies c ON c.id=m.company_id`);
-    if(key === "benchmarks") return this.all<{identity:string; released:string}>(`WITH ranked AS (SELECT bv.*,${BENCHMARK_VERSION_KEY} AS released,row_number() OVER(PARTITION BY bv.benchmark_id ORDER BY ${BENCHMARK_VERSION_KEY} DESC,bv.version ASC,bv.id ASC) AS position FROM benchmark_versions bv)
+    if(key === "benchmarks") return this.all<{identity:string; released:string}>(`WITH ranked AS (SELECT bv.*,${BENCHMARK_VERSION_KEY} AS released,row_number() OVER(PARTITION BY bv.benchmark_id ORDER BY ${CONFIGURED_VERSION("bv.id")} ASC,${BENCHMARK_VERSION_KEY} DESC,bv.version ASC,bv.id ASC) AS position FROM benchmark_versions bv)
       SELECT b.slug AS identity,ranked.released FROM benchmarks b JOIN ranked ON ranked.benchmark_id=b.id AND ranked.position=1`);
     if(key === "companies") return this.all<{identity:string; established:string|null}>(`SELECT c.slug AS identity,${COMPANY_ESTABLISHED_KEY} AS established FROM companies c`);
     const [kind,...parts]=key.split(":");
@@ -427,7 +452,7 @@ export class RegistryRepository {
         WHERE NOT EXISTS (SELECT 1 FROM registry_redirects rr WHERE rr.source_model_id=m.id)`),
       this.all<BenchmarkVersionRow & {checked:string}>(`SELECT bv.id,b.canonical_name AS benchmark_name,b.slug AS benchmark_slug,${BENCHMARK_ALIASES} AS benchmark_aliases,
         bv.version,bv.version_slug,bv.release_at,bv.release_precision,metric.name AS metric_name,metric.key AS metric_key,metric.unit AS metric_unit,metric.storage_kind,metric.display_precision, metric.direction AS metric_direction,
-        bv.source_url,'[]' AS evaluator_names,bv.source_checked_at AS checked FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id JOIN metrics metric ON metric.id=bv.metric_id
+        bv.source_url,'[]' AS evaluator_names,${VERSION_CONFIGURATION_COLUMNS("bv.id")},bv.source_checked_at AS checked FROM benchmark_versions bv JOIN benchmarks b ON b.id=bv.benchmark_id JOIN metrics metric ON metric.id=bv.metric_id
         ORDER BY ${BENCHMARK_VERSION_KEY} DESC,bv.version ASC,bv.id ASC`),
     ]);
     const providers = await this.companies({page:1,limit:500});
@@ -671,7 +696,7 @@ export class RegistryRepository {
           ${BENCHMARK_VERSION_KEY} AS release_key,
           row_number() OVER (
             PARTITION BY bv.benchmark_id
-            ORDER BY ${BENCHMARK_VERSION_KEY} DESC, bv.version ASC, bv.id ASC
+            ORDER BY ${CONFIGURED_VERSION("bv.id")} ASC, ${BENCHMARK_VERSION_KEY} DESC, bv.version ASC, bv.id ASC
           ) AS position
         FROM benchmark_versions bv
       )
@@ -680,7 +705,9 @@ export class RegistryRepository {
         b.normalized_name, rv.version AS latest_version,
         rv.release_at AS latest_released_at,
         rv.release_precision AS latest_release_precision,
-        rv.release_key AS latest_release_key
+        rv.release_key AS latest_release_key,
+        (SELECT c.label FROM benchmark_version_configurations bvc JOIN configurations c ON c.key = bvc.configuration_key
+          WHERE bvc.benchmark_version_id = rv.id) AS latest_configuration
       FROM benchmarks b
       JOIN ranked_versions rv ON rv.benchmark_id = b.id AND rv.position = 1
       ${where}
@@ -698,6 +725,7 @@ export class RegistryRepository {
         latest_version: row.latest_version,
         latest_released_at: row.latest_released_at,
         latest_release_precision: row.latest_release_precision,
+        ...(row.latest_configuration === undefined ? {} : { latest_configuration: row.latest_configuration }),
       })),
       page: pageMetadata(params.page, params.limit, total),
     };
@@ -718,7 +746,7 @@ export class RegistryRepository {
         bv.version, bv.version_slug, bv.release_at,
         bv.release_precision, metric.name AS metric_name, metric.key AS metric_key,
         metric.unit AS metric_unit, metric.storage_kind, metric.display_precision, metric.direction AS metric_direction,
-        bv.source_url, '[]' AS evaluator_names
+        bv.source_url, '[]' AS evaluator_names, ${VERSION_CONFIGURATION_COLUMNS("bv.id")}
        FROM benchmark_versions bv
        JOIN benchmarks b ON b.id = bv.benchmark_id
        JOIN metrics metric ON metric.id = bv.metric_id
@@ -746,7 +774,7 @@ export class RegistryRepository {
         bv.version, bv.version_slug, bv.release_at, bv.release_precision,
         metric.name AS metric_name, metric.key AS metric_key,
         metric.unit AS metric_unit, metric.storage_kind, metric.display_precision, metric.direction AS metric_direction,
-        bv.source_url,
+        bv.source_url, ${VERSION_CONFIGURATION_COLUMNS("bv.id")},
         COALESCE((
           SELECT json_group_array(evaluator.name) FROM (
             SELECT eo.name
@@ -960,7 +988,10 @@ export class RegistryRepository {
   async materializedSearchRelationships(models?: number[], benchmarks?: number[], facets=true) {
     return this.all<SearchRelationshipRow>(`/* search:relationships */
         SELECT r.model_id, bv.benchmark_id, bv.id AS version_id,
-          bv.version, bv.version_slug, r.reasoning_level, r.result_key ${facets ? ",metric.key AS metric_key,metric.name AS metric_name,r.reported_at,c.name AS provider_name,c.slug AS provider_slug" : ""}
+          bv.version, bv.version_slug, r.reasoning_level, r.result_key,
+          COALESCE((SELECT c.label FROM benchmark_version_configurations bvc JOIN configurations c ON c.key = bvc.configuration_key
+            WHERE bvc.benchmark_version_id = bv.id), (SELECT c.label FROM reasoning_labels rl JOIN configurations c ON c.key = rl.configuration_key
+            WHERE rl.label = r.reasoning_level)) AS configuration_label ${facets ? ",metric.key AS metric_key,metric.name AS metric_name,r.reported_at,c.name AS provider_name,c.slug AS provider_slug" : ""}
         FROM results r JOIN benchmark_versions bv ON bv.id = r.benchmark_version_id
         ${facets ? "JOIN metrics metric ON metric.id=r.metric_id JOIN models m ON m.id=r.model_id JOIN companies c ON c.id=m.company_id" : ""}
         ${models ? "WHERE r.model_id IN (SELECT value FROM json_each(?)) AND bv.benchmark_id IN (SELECT value FROM json_each(?))" : ""}

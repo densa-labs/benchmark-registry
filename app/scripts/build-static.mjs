@@ -22,10 +22,34 @@ if(buildInfo.staging!==(environment==='staging')) throw new Error(`The client bu
 const template=readFileSync(templatePath,'utf8');
 if(!template.includes('<div id="root"></div>')) throw new Error('dist/client/index.html is not the unrendered Vite template. Rebuild the client first.');
 
-const TABLES=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','registry_revision','registry_read_changes'];
+const TABLES=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','effort_levels','reasoning_labels','configurations','benchmark_version_configurations','result_corrections','registry_revision','registry_read_changes'];
 const metrics={d1Queries:0,d1RowsRead:0};
 
-async function remoteSnapshot() {
+// Builds always read from a private in-memory snapshot, so retracted results
+// can be filtered out without touching the canonical database.
+async function snapshotFrom(schemaRows,tableRows,filter) {
+  const snapshot=new DatabaseSync(':memory:');
+  const schema=await schemaRows();
+  for(const item of schema.filter(item=>item.type==='table')) snapshot.exec(item.sql);
+  snapshot.exec('BEGIN; PRAGMA defer_foreign_keys=ON');
+  for(const name of TABLES) {
+    for(const row of await tableRows(name)) snapshot.prepare(`INSERT INTO "${name}"(${Object.keys(row).map(key=>'"'+key+'"').join(',')}) VALUES(${Object.keys(row).map(()=>'?').join(',')})`).run(...Object.values(row));
+  }
+  snapshot.exec('COMMIT'); // Validates the complete snapshot, including self-references.
+  // The correction log keeps referencing retracted results; only this copy drops them.
+  snapshot.exec('PRAGMA foreign_keys=OFF');
+  for(const statement of filter) snapshot.exec(statement);
+  for(const item of schema.filter(item=>item.type!=='table')) snapshot.exec(item.sql);
+  return snapshot;
+}
+
+function localSnapshot(path,filter) {
+  const source=new DatabaseSync(path,{readOnly:true});
+  const schemaSql="SELECT type,name,sql,tbl_name FROM sqlite_schema WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' AND tbl_name IN(SELECT value FROM json_each(?))";
+  return snapshotFrom(async()=>source.prepare(schemaSql).all(JSON.stringify(TABLES)),async(name)=>source.prepare(`SELECT * FROM "${name}"`).all(),filter).finally(()=>source.close());
+}
+
+async function remoteSnapshot(filter) {
   const maintenance=JSON.parse(readFileSync('wrangler.maintenance.jsonc','utf8'));
   const account=maintenance.env[environment].account_id;
   const database=maintenance.env[environment].d1_databases[0].database_id;
@@ -37,20 +61,10 @@ async function remoteSnapshot() {
     const payload=await response.json();if(!payload.success || !payload.result?.[0]?.success) throw new Error('D1 snapshot query failed.');
     metrics.d1Queries++;metrics.d1RowsRead+=payload.result[0].meta?.rows_read??0;return payload.result[0].results;
   };
-  const snapshot=new DatabaseSync(':memory:');
-  const schema=await query("SELECT type,name,sql,tbl_name FROM sqlite_schema WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' AND tbl_name IN(SELECT value FROM json_each(?))",[JSON.stringify(TABLES)]);
-  for(const item of schema.filter(item=>item.type==='table')) snapshot.exec(item.sql);
-  snapshot.exec('BEGIN; PRAGMA defer_foreign_keys=ON');
-  for(const name of TABLES) {
-    for(const row of await query(`SELECT * FROM "${name}"`)) snapshot.prepare(`INSERT INTO "${name}"(${Object.keys(row).map(key=>'"'+key+'"').join(',')}) VALUES(${Object.keys(row).map(()=>'?').join(',')})`).run(...Object.values(row));
-  }
-  snapshot.exec('COMMIT'); // Validates the complete snapshot, including self-references.
-  for(const item of schema.filter(item=>item.type!=='table')) snapshot.exec(item.sql);
-  return snapshot;
+  return snapshotFrom(()=>query("SELECT type,name,sql,tbl_name FROM sqlite_schema WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%' AND tbl_name IN(SELECT value FROM json_each(?))",[JSON.stringify(TABLES)]),(name)=>query(`SELECT * FROM "${name}"`),filter);
 }
 
 const snapshotAt=new Date().toISOString();
-const sqlite=values.db ? new DatabaseSync(resolve(values.db),{readOnly:true}) : await remoteSnapshot();
 const db={prepare(sql){let params=[];return {bind(...values){params=values;return this;},async all(){return {results:sqlite.prepare(sql).all(...params),meta:{rows_read:0,rows_written:0}};},async first(){return (await this.all()).results[0]??null;},async raw(){return sqlite.prepare(sql).all(...params).map(row=>Object.values(row));}};}};
 
 const runtimeDirectory=resolve('.wrangler/static-build');
@@ -60,6 +74,7 @@ await build({entryPoints:['worker/static-site.ts'],bundle:true,platform:'node',f
   banner:{js:"import { createRequire } from 'node:module'; const require=createRequire(import.meta.url);"},
   define:{__REGISTRY_STAGING__:JSON.stringify(buildInfo.staging),__REGISTRY_BUILD_ID__:JSON.stringify(buildInfo.id),__REGISTRY_BUILD_TIMESTAMP__:JSON.stringify(buildInfo.timestamp)}});
 const site=await import(pathToFileURL(runtime).href+'?'+Date.now());
+const sqlite=values.db ? await localSnapshot(resolve(values.db),site.RETRACTED_RESULT_FILTER) : await remoteSnapshot(site.RETRACTED_RESULT_FILTER);
 const analytics=process.env.ANALYTICS_SCRIPT_URL ? {ANALYTICS_SCRIPT_URL:process.env.ANALYTICS_SCRIPT_URL,ANALYTICS_SITE_ID:process.env.ANALYTICS_SITE_ID} : undefined;
 const result=await site.buildStaticSite({db,environment,template,analytics});
 const count=(table)=>sqlite.prepare(`SELECT count(*) AS n FROM "${table}"`).get().n;

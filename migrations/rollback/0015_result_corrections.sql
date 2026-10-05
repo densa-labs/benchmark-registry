@@ -1,0 +1,11 @@
+DROP TRIGGER revision_result_corrections_delete;
+DROP TRIGGER revision_result_corrections_update;
+DROP TRIGGER revision_result_corrections_insert;
+DROP TRIGGER result_corrections_append_only_delete;
+DROP TRIGGER result_corrections_append_only_update;
+DROP INDEX idx_result_corrections_result_key;
+DROP TABLE result_corrections;
+DROP TRIGGER results_retraction_is_final;
+DROP TRIGGER results_retraction_complete;
+ALTER TABLE results DROP COLUMN retraction_reason;
+ALTER TABLE results DROP COLUMN retracted_at;

@@ -288,8 +288,14 @@ export function ModelDetailPage({
   const benchmarks = new Set(allResults.map(result => result.benchmark.slug)).size;
   const pivotColumns: TableColumn<PivotRow>[] = [
     { key: "benchmark", label: "Benchmark", className: "data-table__primary", sortHref: benchmarkSort.href, sortDirection: benchmarkSort.direction,
-      render: ({ result }) => <span className="table-cell-stack"><BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
-        {result.metric.name ? <span>{result.metric.name}</span> : null}</span> },
+      render: ({ result, cells }) => {
+        // A row label only when every observation in the row shares one configuration.
+        const configurations = new Set([...cells.values()].flat().map(item => item.configuration?.label ?? ""));
+        const configuration = configurations.size === 1 ? [...configurations][0] : "";
+        return <span className="table-cell-stack"><BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} />
+          {result.metric.name ? <span>{result.metric.name}</span> : null}
+          {configuration ? <span>Configuration: {configuration}</span> : null}</span>;
+      } },
     ...pivot.variants.map(variant => ({
       key: `effort-${variant}`, label: variant || "Not specified", className: "numeric pivot-score",
       render: (row: PivotRow) => row.cells.has(variant) ? <div className="pivot-cell">{row.cells.get(variant)!.map(result =>
@@ -315,6 +321,7 @@ export function ModelDetailPage({
           {result.reasoning_level ? (
             <span>{model.name} ({result.reasoning_level})</span>
           ) : null}
+          {result.configuration ? <span>Configuration: {result.configuration.label}</span> : null}
         </span>
       ),
     },

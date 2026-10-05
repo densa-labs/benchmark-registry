@@ -14,7 +14,7 @@ function ScoreCell({ results, showContext }: { results: ResultRow[]; showContext
   if (!results.length) return <span className="compare-unavailable" aria-label="Not available">—</span>;
   return <div className="compare-scores">{results.map(result => <div key={result.result_key}>
     <span className="compare-score">{result.score.display}</span>
-    {showContext || results.length > 1 ? <span className="compare-score-context">{result.benchmark_version} · {result.metric.name}<br />{result.evaluator_names.join(", ") || "Evaluator not recorded"}</span> : null}
+    {showContext || results.length > 1 ? <span className="compare-score-context">{result.benchmark_version} · {result.metric.name}{result.configuration ? ` · ${result.configuration.label}` : ""}<br />{result.evaluator_names.join(", ") || "Evaluator not recorded"}</span> : null}
   </div>)}</div>;
 }
 
@@ -27,6 +27,7 @@ function EvaluationDetails({ results, name }: { results: ResultRow[]; name: stri
         { label: "Version", value: <BenchmarkLink benchmark={result.benchmark} version={result.benchmark_version} versionSlug={result.benchmark_version_slug} /> },
         { label: "Metric", value: `${result.metric.name} (${result.metric.unit})` },
         { label: "Reasoning", value: result.reasoning_level ?? "Not specified" },
+        { label: "Configuration", value: result.configuration?.label ?? "Not specified" },
         { label: "Reported", value: formatRegistryDate(result.reported_at, result.reported_precision) },
         { label: "Source", value: <SourceLink href={result.primary_source_url} context={`${name} on ${benchmarkVersionLabel(result.benchmark, result.benchmark_version)}`}>Evaluation source</SourceLink> },
       ]} /><ReportIssue result={result} page={resultPage(result)} /><RecordCite result={result} />

@@ -14,7 +14,7 @@ from benchmark_registry_ingestor.database import (
     Statement,
     database_from_environment,
 )
-from benchmark_registry_ingestor.engine import IngestionFailure, Ingestor
+from benchmark_registry_ingestor.engine import IngestionFailure, Ingestor, LaterRecord
 
 MIGRATIONS = Path(__file__).parents[2] / "migrations"
 CHECKED_AT = "2026-09-17T00:00:00Z"
@@ -1044,3 +1044,323 @@ def test_disposable_remote_d1_batch_rolls_back_atomically() -> None:
         database.execute_batch(statements)
 
     assert database.query("SELECT id FROM companies WHERE slug = ?", (marker,)) == []
+
+
+def test_result_rejects_reasoning_label_without_reviewed_mapping(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_dependencies(ingestor)
+    record = result_record()
+    record["reasoning_level"] = "MAX"
+
+    assert_failure(ingestor, "result", record, match="no reviewed effort mapping")
+    assert database.query("SELECT count(*) AS n FROM results") == [{"n": 0}]
+
+
+def test_mapped_reasoning_label_keeps_raw_text_and_joins_to_effort(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_dependencies(ingestor)
+    record = result_record()
+    record["reasoning_level"] = "adaptive thinking, max"
+
+    assert ingestor.run("result", record, commit=True)[0].status == "VALID"
+    assert database.query(
+        """SELECT r.reasoning_level, l.effort FROM results r
+        JOIN reasoning_labels l ON l.label = r.reasoning_level"""
+    ) == [{"reasoning_level": "adaptive thinking, max", "effort": "max"}]
+
+
+def test_database_rejects_unmapped_reasoning_label(database_path: Path) -> None:
+    with sqlite3.connect(database_path) as connection:
+        with pytest.raises(sqlite3.IntegrityError, match="no reviewed effort mapping"):
+            connection.execute(
+                """INSERT INTO results (model_id, reasoning_level, benchmark_version_id,
+                metric_id, run_ref, result_key, score_raw, reported_at,
+                reported_precision, evaluator_set_key, primary_source_url,
+                primary_source_normalized_url, primary_source_checked_at)
+                VALUES (1, 'High ', 1, 1, 'r', 'k', '1', '2026-01-01', 'date', 'e',
+                'https://x.test', 'https://x.test', '2026-01-01T00:00:00Z')"""
+            )
+
+
+def configuration_record(**overrides: object) -> dict:
+    record = {
+        "benchmark_slug": "example-benchmark",
+        "version": "1.0 — Example harness",
+        "version_slug": "1.0-example-harness",
+        "dataset_label": "1.0",
+        "configuration": {"key": "example-harness", "label": "Example harness", "kind": "harness"},
+        "source_url": "https://example.com/benchmark/1.0-example-harness",
+        "source_checked_at": CHECKED_AT,
+    }
+    record.update(overrides)
+    return record
+
+
+def seed_harness_version(ingestor: Ingestor) -> None:
+    seed_dependencies(ingestor)
+    benchmark = benchmark_record()
+    benchmark["versions"].append(
+        version_record(version="1.0 — Example harness", version_slug="1.0-example-harness")
+    )
+    ingestor.run("benchmark", benchmark, commit=True)
+
+
+def test_version_configuration_is_attached_without_touching_the_version(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_harness_version(ingestor)
+    before = database.query("SELECT * FROM benchmark_versions ORDER BY id")
+
+    first = ingestor.run("benchmark_version_configuration", configuration_record(), commit=True)
+    second = ingestor.run("benchmark_version_configuration", configuration_record(), commit=True)
+
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    assert database.query("SELECT * FROM benchmark_versions ORDER BY id") == before
+    assert database.query(
+        """SELECT bv.version, bvc.dataset_label, c.label, c.kind
+        FROM benchmark_version_configurations bvc
+        JOIN benchmark_versions bv ON bv.id = bvc.benchmark_version_id
+        JOIN configurations c ON c.key = bvc.configuration_key"""
+    ) == [
+        {
+            "version": "1.0 — Example harness",
+            "dataset_label": "1.0",
+            "label": "Example harness",
+            "kind": "harness",
+        }
+    ]
+
+
+def test_version_configuration_conflicts_and_errors(ingestor: Ingestor) -> None:
+    seed_harness_version(ingestor)
+    ingestor.run("benchmark_version_configuration", configuration_record(), commit=True)
+
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(dataset_label=None),
+        status="CONFLICT",
+    )
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(
+            configuration={"key": "example-harness", "label": "Renamed", "kind": "harness"}
+        ),
+        status="CONFLICT",
+        match="differs",
+    )
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(version_slug="1.0-other", dataset_label="1.0"),
+        match="do not name one version",
+    )
+
+
+def test_version_configuration_rejects_an_invented_dataset_label(ingestor: Ingestor) -> None:
+    seed_harness_version(ingestor)
+
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(dataset_label="Verified"),
+        match="leading part",
+    )
+
+
+def test_label_and_version_configurations_must_agree(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_harness_version(ingestor)
+    ingestor.run(
+        "benchmark_version_configuration",
+        configuration_record(
+            version="1.0",
+            version_slug="1.0",
+            dataset_label=None,
+            configuration={"key": "with-tools", "label": "With tools", "kind": "tools"},
+        ),
+        commit=True,
+    )
+    record = result_record()
+    record["reasoning_level"] = "no-tools"
+    assert_failure(ingestor, "result", record, match="differs from the version configuration")
+
+    record["reasoning_level"] = "tools enabled"
+    assert ingestor.run("result", record, commit=True)[0].status == "VALID"
+
+    harness = result_record(run_ref="run-2")
+    harness["benchmark_version"] = "1.0 — Example harness"
+    harness["reasoning_level"] = "no-tools"
+    ingestor.run("result", harness, commit=True)
+    assert_failure(
+        ingestor,
+        "benchmark_version_configuration",
+        configuration_record(),
+        status="CONFLICT",
+        match="different label configuration",
+    )
+    assert database.query("SELECT count(*) AS n FROM benchmark_version_configurations") == [
+        {"n": 1}
+    ]
+
+
+def committed_result_key(ingestor: Ingestor, database: LocalDatabase) -> str:
+    seed_dependencies(ingestor)
+    ingestor.run("result", result_record(), commit=True)
+    return database.query("SELECT result_key FROM results")[0]["result_key"]
+
+
+def correction_record(result_key: str, **overrides: object) -> dict:
+    record = {
+        "result_key": result_key,
+        "expected": {"score_value": "91.2", "score_raw": "91.200%"},
+        "corrected": {"score_value": "92.1", "score_raw": "92.1%"},
+        "reason": "The source table was transcribed with two digits swapped.",
+        "source_url": "https://example.com/results/run-1",
+        "source_checked_at": CHECKED_AT,
+        "recorded_at": "2026-10-05T00:00:00Z",
+    }
+    record.update(overrides)
+    return record
+
+
+def test_result_correction_changes_only_the_score_and_logs_it(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    before = database.query("SELECT * FROM results")[0]
+
+    first = ingestor.run("result_correction", correction_record(key), commit=True)
+    second = ingestor.run("result_correction", correction_record(key), commit=True)
+
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    after = database.query("SELECT * FROM results")[0]
+    assert {k: v for k, v in after.items() if before[k] != v} == {
+        "score_value": "92.1",
+        "score_raw": "92.1%",
+    }
+    log = database.query("SELECT result_key, kind, expected, corrected FROM result_corrections")
+    assert log == [
+        {
+            "result_key": key,
+            "kind": "correction",
+            "expected": '{"score_raw":"91.200%","score_value":"91.2"}',
+            "corrected": '{"score_raw":"92.1%","score_value":"92.1"}',
+        }
+    ]
+
+
+def test_result_correction_with_stale_expected_is_a_conflict(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    stale = correction_record(key, expected={"score_value": "90", "score_raw": "90%"})
+
+    assert_failure(ingestor, "result_correction", stale, status="CONFLICT")
+    assert_failure(
+        ingestor,
+        "result_correction",
+        correction_record(key, corrected={"score_value": "91.2", "score_raw": "91.200%"}),
+        match="must change the score",
+    )
+    assert_failure(ingestor, "result_correction", correction_record("0" * 64), match="does not exist")
+    assert database.query("SELECT count(*) AS n FROM result_corrections") == [{"n": 0}]
+
+
+def test_replaying_the_original_result_after_a_correction_is_skipped(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    ingestor.run("result_correction", correction_record(key), commit=True)
+    later = [LaterRecord("fix.json", "result_correction", correction_record(key))]
+
+    outcomes = ingestor.run("result", result_record(), commit=True, later=later)
+
+    assert [(o.status, o.message) for o in outcomes] == [
+        ("SKIPPED", "superseded by fix.json result_correction")
+    ]
+    assert_failure(ingestor, "result", result_record(), status="CONFLICT")
+
+
+def test_result_retraction_keeps_the_row_and_is_final(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    retraction = {
+        "result_key": key,
+        "reason": "The evaluator withdrew this run.",
+        "source_url": "https://example.com/results/run-1",
+        "source_checked_at": CHECKED_AT,
+        "retracted_at": "2026-10-05T00:00:00Z",
+    }
+
+    first = ingestor.run("result_retraction", retraction, commit=True)
+    second = ingestor.run("result_retraction", retraction, commit=True)
+
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    assert database.query("SELECT retracted_at, retraction_reason, score_value FROM results") == [
+        {
+            "retracted_at": "2026-10-05T00:00:00Z",
+            "retraction_reason": "The evaluator withdrew this run.",
+            "score_value": "91.2",
+        }
+    ]
+    assert_failure(
+        ingestor, "result_retraction", {**retraction, "reason": "Another reason."}, status="CONFLICT"
+    )
+    assert_failure(ingestor, "result_correction", correction_record(key), status="CONFLICT")
+    assert ingestor.run("result", result_record(), commit=True)[0].status == "SKIPPED"
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("UPDATE results SET retracted_at = NULL, retraction_reason = NULL")
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("DELETE FROM result_corrections")
+
+
+def revised_result_record(**overrides: object) -> dict:
+    record = result_record(run_ref=None, score="92.0")
+    record.update(
+        source_has_single_run=True,
+        score_raw="92.0%",
+        reported_at="2026-09-20",
+        sources=[
+            {"url": "https://example.com/results/revised", "checked_at": CHECKED_AT, "primary": True}
+        ],
+    )
+    record.update(overrides)
+    return record
+
+
+def test_derived_run_ref_in_an_existing_series_needs_a_curator_decision(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+
+    assert_failure(ingestor, "result", revised_result_record(), status="CONFLICT", match="distinct_run")
+    assert_failure(ingestor, "result", revised_result_record(supersedes="0" * 64), match="same series")
+    assert_failure(
+        ingestor, "result", revised_result_record(distinct_run=True, supersedes=key), match="not both"
+    )
+
+    outcomes = ingestor.run("result", revised_result_record(supersedes=key), commit=True)
+    assert outcomes[0].status == "VALID"
+    assert ingestor.run("result", revised_result_record(supersedes=key), commit=True)[0].status == "SKIPPED"
+    assert database.query(
+        "SELECT run_relation, supersedes_result_key FROM results ORDER BY id"
+    ) == [
+        {"run_relation": None, "supersedes_result_key": None},
+        {"run_relation": "supersedes", "supersedes_result_key": key},
+    ]
+
+
+def test_distinct_run_flag_and_other_evaluators_are_accepted(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    committed_result_key(ingestor, database)
+    assert ingestor.run("result", revised_result_record(distinct_run=True), commit=True)[0].status == "VALID"
+
+    lonely = revised_result_record(distinct_run=True, reasoning_level="high")
+    assert_failure(ingestor, "result", lonely, match="only when the series has another result")

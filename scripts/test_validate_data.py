@@ -238,6 +238,12 @@ class ValidationTests(unittest.TestCase):
             lambda b, r, m: r.update(evaluator_keys=["missing"]), "undefined_reference"
         )
 
+    def test_reasoning_label_needs_reviewed_mapping(self):
+        self.check_rule(lambda b, r, m: r.update(reasoning_level="MAX"), "reasoning_label")
+        batch, result, _ = fixture()
+        result["reasoning_level"] = "adaptive thinking, max"
+        self.assertEqual(validate([("fixture.json", batch)])["error"], [])
+
     def test_metric_mismatch(self):
         self.check_rule(
             lambda b, r, m: b["records"][2]["record"]["versions"][0].update(

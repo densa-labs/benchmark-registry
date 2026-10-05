@@ -1,3 +1,4 @@
+import json
 import sqlite3
 import unittest
 from pathlib import Path
@@ -125,4 +126,74 @@ class ProductMigrationTests(unittest.TestCase):
                     (model[0],),
                 ).fetchone(),
                 model,
+            )
+
+    def test_effort_vocabulary_matches_mapping_and_rolls_back(self):
+        mapping = json.loads((ROOT / "data/reasoning-labels.json").read_text())
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            self.assertEqual(
+                [row[0] for row in db.execute("SELECT key FROM effort_levels ORDER BY rank")],
+                mapping["vocabulary"],
+            )
+            self.assertEqual(
+                db.execute(
+                    "SELECT label, effort, configuration_key, status, note"
+                    " FROM reasoning_labels ORDER BY label"
+                ).fetchall(),
+                sorted(
+                    (row["label"], row["effort"], row["configuration"], row["status"], row["note"])
+                    for row in mapping["labels"]
+                ),
+            )
+            for row in mapping["labels"]:
+                self.assertIn(row["effort"], [None, *mapping["vocabulary"]])
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            before = db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall()
+            for number in ("0014_benchmark_configurations", "0013_effort_vocabulary"):
+                db.executescript((ROOT / f"migrations/rollback/{number}.sql").read_text())
+            for number in ("0013_effort_vocabulary", "0014_benchmark_configurations"):
+                db.executescript((ROOT / f"migrations/{number}.sql").read_text())
+            self.assertEqual(
+                before,
+                db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall(),
+            )
+
+    def test_result_corrections_up_down_and_records_unchanged(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            before = db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM results WHERE retracted_at IS NOT NULL").fetchone()[0], 0
+            )
+            with self.assertRaises(sqlite3.IntegrityError):
+                db.execute("UPDATE results SET retracted_at = '2026-10-05T00:00:00Z' WHERE id = 1")
+            db.executescript((ROOT / "migrations/rollback/0015_result_corrections.sql").read_text())
+            db.executescript((ROOT / "migrations/0015_result_corrections.sql").read_text())
+            self.assertEqual(
+                before, db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            )
+
+    def test_run_relation_up_down_and_records_unchanged(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            before = db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM results WHERE run_relation IS NOT NULL").fetchone()[0], 0
+            )
+            db.executescript((ROOT / "migrations/rollback/0016_result_run_relation.sql").read_text())
+            db.executescript((ROOT / "migrations/0016_result_run_relation.sql").read_text())
+            self.assertEqual(
+                before, db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
             )

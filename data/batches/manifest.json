@@ -288,6 +288,15 @@
         "production": "2026-10-03T11:28:00Z"
       },
       "authorization": "data/evidence/gemini-4-argon-2026-10-03/AUTHORIZATION.md"
+    },
+    {
+      "order": 33,
+      "file": "benchmark-configurations-2026-10-05.json",
+      "sha256": "1cf80820fd572498ed455257f009f0dd1818689b778aa99ff2ec20548c66e3ee",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

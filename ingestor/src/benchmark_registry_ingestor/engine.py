@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
@@ -70,6 +71,10 @@ TABLES = (
     "result_evaluators",
     "result_sources",
     "registry_redirects",
+    "reasoning_labels",
+    "configurations",
+    "benchmark_version_configurations",
+    "result_corrections",
 )
 
 RECORD_FIELDS = {
@@ -121,6 +126,22 @@ RECORD_FIELDS = {
         "metrics",
         "versions",
     },
+    "benchmark_version_configuration": {
+        "benchmark_slug",
+        "version",
+        "version_slug",
+        "dataset_label",
+        "configuration",
+        "source_url",
+        "source_checked_at",
+    },
+    "result_correction": {
+        "result_key", "expected", "corrected", "reason", "source_url",
+        "source_checked_at", "recorded_at",
+    },
+    "result_retraction": {
+        "result_key", "reason", "source_url", "source_checked_at", "retracted_at",
+    },
     "result": {
         "model_registry_no",
         "reasoning_level",
@@ -136,8 +157,14 @@ RECORD_FIELDS = {
         "reported_precision",
         "evaluator_keys",
         "sources",
+        "distinct_run",
+        "supersedes",
     },
 }
+
+# A correction changes only the score; identity, dates and sources stay, so a
+# derived run_ref keeps matching its primary source and report date.
+RESULT_CORRECTION_FIELDS = ("score_value", "score_raw")
 
 ESTABLISHMENT_CORRECTION_FIELDS = (
     "established_at",
@@ -179,6 +206,7 @@ class Catalog:
             "benchmark_versions",
             "results",
             "result_sources",
+            "result_corrections",
         ):
             next_ids.setdefault(table, 1)
         return cls(rows, next_ids)
@@ -354,7 +382,7 @@ class Ingestor:
                 ]
             except DatabaseFailure as exc:
                 if any(
-                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement"}
+                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement", "result_correction", "result_retraction"}
                     for item_operation, _ in records
                 ):
                     try:
@@ -422,6 +450,9 @@ class Ingestor:
             "provider_retirement": "slug",
             "model": "registry_no",
             "benchmark": "slug",
+            "benchmark_version_configuration": "version_slug",
+            "result_correction": "result_key",
+            "result_retraction": "result_key",
             "result": "run_ref",
         }
         value = record.get(fields[operation])
@@ -1846,6 +1877,96 @@ class Ingestor:
             changed = True
         return changed
 
+    def _plan_benchmark_version_configuration(self, plan: Plan, record: Record) -> None:
+        benchmark_slug = require_slug(record.get("benchmark_slug"), "benchmark_slug")
+        version_text = require_string(record.get("version"), "version")
+        version_slug = require_version_slug(record.get("version_slug"))
+        identifier = f"{benchmark_slug}/{version_slug}"
+        benchmark = plan.catalog.one("benchmarks", slug=benchmark_slug)
+        if not benchmark:
+            raise IngestionFailure("ERROR", identifier, "unknown benchmark family")
+        version = plan.catalog.one(
+            "benchmark_versions", benchmark_id=benchmark["id"], version_slug=version_slug
+        )
+        if not version or version["version"] != version_text:
+            raise IngestionFailure(
+                "ERROR", identifier, "version label and slug do not name one version"
+            )
+        dataset_label = record.get("dataset_label")
+        if dataset_label is not None:
+            dataset_label = require_string(dataset_label, "dataset_label")
+            # Never invent a dataset name: it must be the start of the published label.
+            if not version_text.startswith(dataset_label) or dataset_label == version_text:
+                raise ValueErrorDetail("dataset_label must be a leading part of the version label")
+        configuration_record = _mapping(record.get("configuration"), "configuration")
+        _reject_unknown_fields(configuration_record, {"key", "label", "kind"}, "configuration")
+        configuration = {
+            "key": require_key(configuration_record.get("key"), "configuration.key"),
+            "label": require_string(configuration_record.get("label"), "configuration.label"),
+            "kind": require_string(configuration_record.get("kind"), "configuration.kind"),
+        }
+        if configuration["kind"] not in {"tools", "harness", "context"}:
+            raise ValueErrorDetail("configuration.kind must be tools, harness or context")
+        source = _source(record)
+        expected = {
+            "benchmark_version_id": version["id"],
+            "configuration_key": configuration["key"],
+            "dataset_label": dataset_label,
+            "source_url": source["source_url"],
+            "normalized_source_url": source["normalized_source_url"],
+            "source_checked_at": source["source_checked_at"],
+        }
+
+        existing_configuration = plan.catalog.one("configurations", key=configuration["key"])
+        if existing_configuration is None:
+            if plan.catalog.one("configurations", label=configuration["label"]):
+                raise IngestionFailure(
+                    "CONFLICT", identifier, "configuration label belongs to another key"
+                )
+            plan.catalog.add("configurations", configuration)
+            plan.statements.append(
+                Statement(
+                    "INSERT INTO configurations (key, label, kind) VALUES (?, ?, ?)",
+                    tuple(configuration.values()),
+                )
+            )
+        elif not _same(existing_configuration, configuration, ("key", "label", "kind")):
+            raise IngestionFailure(
+                "CONFLICT", identifier, f"configuration {configuration['key']} differs"
+            )
+
+        existing = plan.catalog.one(
+            "benchmark_version_configurations", benchmark_version_id=version["id"]
+        )
+        if existing:
+            if not _same(existing, expected, tuple(expected)):
+                raise IngestionFailure(
+                    "CONFLICT", identifier, "version already has a different configuration"
+                )
+            plan.skipped(
+                "benchmark_version_configuration", identifier, "configuration already applied"
+            )
+            return
+        for result in plan.catalog.many("results", benchmark_version_id=version["id"]):
+            label = plan.catalog.one("reasoning_labels", label=result["reasoning_level"])
+            if label and label["configuration_key"] not in {None, configuration["key"]}:
+                raise IngestionFailure(
+                    "CONFLICT",
+                    identifier,
+                    f"result {result['result_key']} has a different label configuration",
+                )
+        plan.catalog.add("benchmark_version_configurations", expected)
+        plan.statements.append(
+            Statement(
+                """INSERT INTO benchmark_version_configurations (
+                    benchmark_version_id, configuration_key, dataset_label,
+                    source_url, normalized_source_url, source_checked_at
+                ) VALUES (?, ?, ?, ?, ?, ?)""",
+                tuple(expected.values()),
+            )
+        )
+        plan.valid("benchmark_version_configuration", identifier, "configuration is valid")
+
     @staticmethod
     def _evaluator_keys(value: object, field_name: str) -> list[str]:
         keys = [
@@ -1885,6 +2006,27 @@ class Ingestor:
         reasoning_level = require_string(
             record.get("reasoning_level", ""), "reasoning_level", allow_empty=True
         )
+        # The raw label stays as published; it must have a reviewed effort mapping.
+        label = plan.catalog.one("reasoning_labels", label=reasoning_level)
+        if label is None:
+            raise IngestionFailure(
+                "ERROR",
+                registry_no,
+                f"reasoning level {reasoning_level!r} has no reviewed effort mapping",
+            )
+        version_configuration = plan.catalog.one(
+            "benchmark_version_configurations", benchmark_version_id=version["id"]
+        )
+        if (
+            version_configuration is not None
+            and label["configuration_key"] is not None
+            and label["configuration_key"] != version_configuration["configuration_key"]
+        ):
+            raise IngestionFailure(
+                "ERROR",
+                registry_no,
+                "reasoning label configuration differs from the version configuration",
+            )
         reported_at, reported_precision = normalize_temporal(
             record.get("reported_at"), record.get("reported_precision"), "reported_at"
         )
@@ -1961,9 +2103,19 @@ class Ingestor:
         else:
             evaluated_at, evaluated_precision = None, None
         expected["evaluated_at"], expected["evaluated_precision"] = evaluated_at, evaluated_precision
+        expected["run_relation"], expected["supersedes_result_key"] = self._run_relation(record)
         existing = plan.catalog.one("results", **identity)
         if existing:
             core_fields = tuple(key for key in expected if key not in {"source_type", "source_archive_url", "publisher", "reporting_basis", "evaluated_at", "evaluated_precision"} or key in record)
+            other_fields = tuple(key for key in core_fields if key not in RESULT_CORRECTION_FIELDS)
+            if (
+                not _same(existing, expected, core_fields)
+                and _same(existing, expected, other_fields)
+            ):
+                source = self._superseded_score(plan, result_key, expected, existing)
+                if source is not None:
+                    plan.skipped("result", result_key, f"superseded by {source}")
+                    return
             if not _same(existing, expected, core_fields):
                 raise IngestionFailure(
                     "CONFLICT",
@@ -2010,6 +2162,9 @@ class Ingestor:
                 plan.skipped("result", result_key, "exact result duplicate")
             return
 
+        self._check_possible_rerun(
+            plan, expected, derived_run_ref=run_ref_value is None, identifier=result_key
+        )
         result = {"id": plan.catalog.allocate("results"), **expected}
         plan.catalog.add("results", result)
         plan.statements.append(
@@ -2019,8 +2174,9 @@ class Ingestor:
                     metric_id, run_ref, result_key, score_value, score_raw,
                     reported_at, reported_precision, evaluator_set_key,
                     primary_source_url, primary_source_normalized_url,
-                    primary_source_checked_at, source_type, publisher, reporting_basis, source_archive_url, evaluated_at, evaluated_precision
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    primary_source_checked_at, source_type, publisher, reporting_basis, source_archive_url, evaluated_at, evaluated_precision,
+                    run_relation, supersedes_result_key
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                 tuple(result.values()),
             )
         )
@@ -2039,6 +2195,205 @@ class Ingestor:
             if not source["primary"]:
                 self._append_result_source(plan, result, source)
         plan.valid("result", result_key, "result is valid")
+
+    @staticmethod
+    def _run_relation(record: Record) -> tuple[str | None, str | None]:
+        distinct = record.get("distinct_run")
+        supersedes = record.get("supersedes")
+        if distinct is not None and distinct is not True:
+            raise ValueErrorDetail("distinct_run must be true when present")
+        if distinct and supersedes is not None:
+            raise ValueErrorDetail("a result is either a distinct run or supersedes one, not both")
+        if supersedes is not None:
+            return "supersedes", require_string(supersedes, "supersedes")
+        return ("distinct_run", None) if distinct else (None, None)
+
+    @staticmethod
+    def _check_possible_rerun(
+        plan: Plan, result: Record, *, derived_run_ref: bool, identifier: str
+    ) -> None:
+        """A derived run_ref cannot tell a revised number from a new run (data
+        contract), so a new result sharing a series needs a curator decision."""
+        series = ("model_id", "reasoning_level", "benchmark_version_id", "metric_id", "evaluator_set_key")
+        peers = [
+            row for row in plan.catalog.rows["results"]
+            if _same(row, result, series) and row["run_ref"] != result["run_ref"]
+        ]
+        relation, superseded = result["run_relation"], result["supersedes_result_key"]
+        if relation == "supersedes" and superseded not in {row["result_key"] for row in peers}:
+            raise IngestionFailure(
+                "ERROR", identifier, "supersedes must name an existing result in the same series"
+            )
+        if relation == "distinct_run" and not peers:
+            raise IngestionFailure(
+                "ERROR", identifier, "distinct_run applies only when the series has another result"
+            )
+        if derived_run_ref and peers and relation is None:
+            raise IngestionFailure(
+                "CONFLICT",
+                identifier,
+                "derived run_ref shares a series with "
+                f"{peers[0]['result_key']}; set distinct_run=true or supersedes",
+            )
+
+    @staticmethod
+    def _superseded_score(
+        plan: Plan, result_key: str, state: Record, existing: Record
+    ) -> str | None:
+        """Follow later result corrections from `state`; return the source when the
+        database holds the chain's end state."""
+        current = {field: state.get(field) for field in RESULT_CORRECTION_FIELDS}
+        source = None
+        for later in plan.later:
+            if later.operation != "result_correction" or later.record.get("result_key") != result_key:
+                continue
+            metric = Ingestor._result_metric(plan, existing)
+            expected = Ingestor._score_state(metric, later.record.get("expected"), "expected")
+            if expected == current:
+                current = Ingestor._score_state(metric, later.record.get("corrected"), "corrected")
+                source = f"{later.source} result_correction"
+        if source is not None and _same(existing, current, RESULT_CORRECTION_FIELDS):
+            return source
+        return None
+
+    @staticmethod
+    def _result_metric(plan: Plan, result: Record) -> Record:
+        metric = plan.catalog.one("metrics", id=result["metric_id"])
+        if metric is None:
+            raise CatalogInvariantError("result metric is missing")
+        return metric
+
+    @staticmethod
+    def _score_state(metric: Record, value: object, field: str) -> Record:
+        state = _mapping(value, field)
+        _reject_unknown_fields(state, set(RESULT_CORRECTION_FIELDS), field)
+        if set(state) != set(RESULT_CORRECTION_FIELDS):
+            raise ValueErrorDetail(f"{field} must include score_value and score_raw")
+        return {
+            "score_value": Ingestor._score(metric, state["score_value"]),
+            "score_raw": require_string(state["score_raw"], f"{field}.score_raw"),
+        }
+
+    def _correction_log(
+        self, plan: Plan, result_key: str, kind: str, expected: Record,
+        corrected: Record, reason: str, record: Record, recorded_at: str,
+    ) -> None:
+        source = _source(record)
+        row = {
+            "id": plan.catalog.allocate("result_corrections"),
+            "result_key": result_key,
+            "kind": kind,
+            "expected": json.dumps(expected, sort_keys=True, separators=(",", ":")),
+            "corrected": json.dumps(corrected, sort_keys=True, separators=(",", ":")),
+            "reason": reason,
+            "source_url": source["source_url"],
+            "normalized_source_url": source["normalized_source_url"],
+            "source_checked_at": source["source_checked_at"],
+            "recorded_at": recorded_at,
+        }
+        plan.catalog.add("result_corrections", row)
+        plan.statements.append(
+            Statement(
+                """INSERT INTO result_corrections (id, result_key, kind, expected,
+                corrected, reason, source_url, normalized_source_url,
+                source_checked_at, recorded_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                tuple(row.values()),
+            )
+        )
+
+    @staticmethod
+    def _reason(record: Record) -> str:
+        reason = require_string(record.get("reason"), "reason")
+        if not reason.strip():
+            raise ValueErrorDetail("reason must explain the change")
+        return reason
+
+    def _plan_result_correction(self, plan: Plan, record: Record) -> None:
+        result_key = require_string(record.get("result_key"), "result_key")
+        result = plan.catalog.one("results", result_key=result_key)
+        if result is None:
+            raise IngestionFailure("ERROR", result_key, "result does not exist")
+        metric = self._result_metric(plan, result)
+        expected = self._score_state(metric, record.get("expected"), "expected")
+        corrected = self._score_state(metric, record.get("corrected"), "corrected")
+        if expected == corrected:
+            raise ValueErrorDetail("correction must change the score")
+        reason = self._reason(record)
+        recorded_at = normalize_checked_at(record.get("recorded_at"), "recorded_at")
+        _source(record)
+        if result["retracted_at"] is not None:
+            raise IngestionFailure("CONFLICT", result_key, "result is retracted")
+        if _same(result, corrected, RESULT_CORRECTION_FIELDS):
+            plan.skipped("result_correction", result_key, "correction already applied")
+            return
+        if not _same(result, expected, RESULT_CORRECTION_FIELDS):
+            source = self._superseded_score(plan, result_key, corrected, result)
+            if source is not None:
+                plan.skipped("result_correction", result_key, f"superseded by {source}")
+                return
+            raise IngestionFailure(
+                "CONFLICT", result_key, "result score no longer matches expected state"
+            )
+        plan.statements.append(
+            Statement(
+                """UPDATE results SET score_value = ?, score_raw = ?
+                WHERE result_key = ? AND score_value IS ? AND score_raw = ?
+                AND retracted_at IS NULL""",
+                (corrected["score_value"], corrected["score_raw"], result_key,
+                 expected["score_value"], expected["score_raw"]),
+            )
+        )
+        # The NOT NULL guard aborts the whole batch if the score changed after planning.
+        plan.statements.append(
+            Statement(
+                """INSERT INTO result_corrections (result_key) SELECT NULL
+                WHERE NOT EXISTS (SELECT 1 FROM results WHERE result_key = ?
+                    AND score_value IS ? AND score_raw = ?)""",
+                (result_key, corrected["score_value"], corrected["score_raw"]),
+            )
+        )
+        self._correction_log(
+            plan, result_key, "correction", expected, corrected, reason, record, recorded_at
+        )
+        result.update(corrected)
+        plan.valid("result_correction", result_key, "score correction validated")
+
+    def _plan_result_retraction(self, plan: Plan, record: Record) -> None:
+        result_key = require_string(record.get("result_key"), "result_key")
+        result = plan.catalog.one("results", result_key=result_key)
+        if result is None:
+            raise IngestionFailure("ERROR", result_key, "result does not exist")
+        reason = self._reason(record)
+        retracted_at = normalize_checked_at(record.get("retracted_at"), "retracted_at")
+        _source(record)
+        if result["retracted_at"] is not None:
+            if result["retracted_at"] == retracted_at and result["retraction_reason"] == reason:
+                plan.skipped("result_retraction", result_key, "retraction already applied")
+                return
+            raise IngestionFailure(
+                "CONFLICT", result_key, "result was already retracted differently"
+            )
+        plan.statements.append(
+            Statement(
+                """UPDATE results SET retracted_at = ?, retraction_reason = ?
+                WHERE result_key = ? AND retracted_at IS NULL""",
+                (retracted_at, reason, result_key),
+            )
+        )
+        plan.statements.append(
+            Statement(
+                """INSERT INTO result_corrections (result_key) SELECT NULL
+                WHERE NOT EXISTS (SELECT 1 FROM results WHERE result_key = ?
+                    AND retracted_at = ? AND retraction_reason = ?)""",
+                (result_key, retracted_at, reason),
+            )
+        )
+        self._correction_log(
+            plan, result_key, "retraction", {"retracted_at": None},
+            {"retracted_at": retracted_at}, reason, record, retracted_at,
+        )
+        result.update({"retracted_at": retracted_at, "retraction_reason": reason})
+        plan.valid("result_retraction", result_key, "retraction validated")
 
     @staticmethod
     def _score(metric: Record, value: object) -> str | None:

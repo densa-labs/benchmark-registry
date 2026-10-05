@@ -1,4 +1,5 @@
 import type { CoverageData } from "./coverage-data";
+import type { Correction } from "./corrections";
 import { contentKind } from "./content-metadata";
 import type { RecentRecord } from "../worker/seo-data";
 import type { SeoContent } from "./seo-content";
@@ -59,6 +60,7 @@ export interface BenchmarkListResponse {
     latest_version: string;
     latest_released_at: string;
     latest_release_precision: "date" | "timestamp";
+    latest_configuration?: string | null;
   }>;
   page: Page;
 }
@@ -173,7 +175,7 @@ type LoadedRouteData =
   | { kind: "terms" }
   | { kind: "search"; payload: SearchResponse }
   | { kind: "coverage"; payload: CoverageData }
-  | { kind: "corrections" }
+  | { kind: "corrections"; payload?: Correction[] }
   | { kind: "not-found" };
 
 export type LoadedRegistryRoute = LoadedRouteData & { updated?: string };
@@ -353,14 +355,14 @@ export async function loadRegistryRoute(
     if(!response.ok) throw new RegistryClientError(errorMessage(body));
     return {kind:"search",payload:body as SearchResponse};
   }
-  if (route.kind === "coverage") {
+  if (route.kind === "coverage" || route.kind === "corrections") {
     const response=await fetcher(`/${route.kind}`+search,{signal});
     const html=await response.text();
     const match=/<script id="registry-initial-document" type="application\/json">(.*?)<\/script>/su.exec(html);
-    if(!response.ok || !match) throw new RegistryClientError("Coverage could not be loaded.");
+    if(!response.ok || !match) throw new RegistryClientError(route.kind === "coverage" ? "Coverage could not be loaded." : "Corrections could not be loaded.");
     return JSON.parse(match[1]).loaded as LoadedRegistryRoute;
   }
-  if (route.kind === "about" || route.kind === "contact" || route.kind === "corrections" || route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
+  if (route.kind === "about" || route.kind === "contact" || route.kind === "not-found" || route.kind === "legal" || route.kind === "privacy" || route.kind === "terms") return route;
 
   if(route.kind==="recent") {
     const response=await fetcher("/api/recent"+search,{headers:{Accept:"application/json"},signal});

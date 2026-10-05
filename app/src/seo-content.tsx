@@ -28,7 +28,7 @@ export function FamilyResults({content}:{content?:SeoContent}) {
   ];
   return <section className="results-section" aria-labelledby="recent-results-heading">
     <div className="results-section__header"><h2 id="recent-results-heading">Recently reported results</h2></div>
-    <p>Latest version: <a href={`/benchmarks/${latest.benchmark.slug}/${latest.version_slug}`}>{benchmarkVersionLabel(latest.benchmark,latest.version)}</a></p>
+    <p>{latest.configuration ? "Most recent configuration" : "Latest version"}: <a href={`/benchmarks/${latest.benchmark.slug}/${latest.version_slug}`}>{benchmarkVersionLabel(latest.benchmark,latest.version)}</a></p>
     {content.top?.length ? <DataTable caption={`Recently reported results for ${benchmarkVersionLabel(latest.benchmark,latest.version)}`} rows={content.top} columns={columns} getRowKey={row=>row.result_key} getRowId={recordAnchor} /> : null}
   </section>;
 }
