@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Verified \u2014 Muse Spark corrected tests",
+        "version_slug": "verified-muse-spark-corrected-tests",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "muse-spark-corrected-tests",
+          "label": "Muse Spark corrected tests",
+          "kind": "harness"
+        },
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-02T00:49:35Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Public \u2014 Qwen refined tasks",
+        "version_slug": "public-qwen-refined",
+        "dataset_label": "Public",
+        "configuration": {
+          "key": "qwen-refined-tasks",
+          "label": "Qwen refined tasks",
+          "kind": "harness"
+        },
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Public \u2014 Qwen3.6 refined tasks",
+        "version_slug": "public-qwen3-6-refined",
+        "dataset_label": "Public",
+        "configuration": {
+          "key": "qwen3-6-refined-tasks",
+          "label": "Qwen3.6 refined tasks",
+          "kind": "harness"
+        },
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    }
+  ]
+}
