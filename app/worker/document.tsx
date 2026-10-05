@@ -2,7 +2,7 @@ import { enrichSeoContent } from "../src/seo-enrichment";
 import type { SeoSnapshot } from "./seo-data";
 import { renderToString } from "react-dom/server";
 import { serializeInitialDocument } from "../src/bootstrap";
-import { App, RegistryDocument } from "../src/App";
+import { RegistryDocument } from "../src/App";
 import { loadRegistryRoute, resolveRegistryRoute } from "../src/registry";
 import { ApiError } from "./api";
 

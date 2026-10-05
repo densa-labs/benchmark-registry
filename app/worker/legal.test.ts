@@ -101,7 +101,8 @@ it("deploys static assets only, so no request runs code or is logged", () => {
     expect(deployment.assets).toEqual({ directory: "./dist/client", html_handling: "auto-trailing-slash", not_found_handling: "404-page" });
     for (const binding of ["d1_databases", "kv_namespaces", "vars", "observability"]) expect(deployment[binding]).toBeUndefined();
   }
-  expect(maintenance.env.staging.kv_namespaces[0].id).not.toBe(maintenance.env.production.kv_namespaces[0].id);
+  for (const environment of ["staging", "production"]) expect(maintenance.env[environment].kv_namespaces).toBeUndefined();
+  expect(maintenance.env.staging.d1_databases[0].database_id).not.toBe(maintenance.env.production.d1_databases[0].database_id);
   const source = readFileSync(new URL("./index.ts", import.meta.url), "utf8");
   expect(source).not.toMatch(/console\.|__p1111_probe|request\.cf/u);
 });
