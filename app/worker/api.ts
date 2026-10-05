@@ -48,6 +48,9 @@ export interface BenchmarkVersionSummary {
   metric: MetricSummary;
 }
 
+// Fixed effort vocabulary (data/reasoning-labels.json). reasoning_level stays the provider's raw label.
+export type Effort = "none" | "low" | "medium" | "high" | "xhigh" | "max";
+
 export interface ResultRow {
   result_key: string;
   exact_result_href: string | null;
@@ -56,6 +59,7 @@ export interface ResultRow {
   benchmark_version: string;
   benchmark_version_slug: string;
   reasoning_level: string | null;
+  effort?: Effort | null;
   metric: MetricSummary;
   score: {
     raw: string;
@@ -189,6 +193,7 @@ export interface ResultDbRow extends ModelDbRow {
   benchmark_version: string;
   benchmark_version_slug: string;
   reasoning_level: string;
+  effort?: Effort | null;
   metric_direction?: MetricSummary["direction"];
   metric_name: string;
   metric_key: string;
@@ -231,6 +236,7 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
     benchmark_version: row.benchmark_version,
     benchmark_version_slug: row.benchmark_version_slug,
     reasoning_level: row.reasoning_level === "" ? null : row.reasoning_level,
+    effort: row.effort ?? null,
     metric,
     score: {
       raw: row.score_raw,

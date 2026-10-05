@@ -1,0 +1,4 @@
+DROP TRIGGER results_require_reasoning_label_update;
+DROP TRIGGER results_require_reasoning_label_insert;
+DROP TABLE reasoning_labels;
+DROP TABLE effort_levels;

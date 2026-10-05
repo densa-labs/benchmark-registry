@@ -1,0 +1,295 @@
+{
+  "description": "Reviewed mapping from each provider reasoning label (results.reasoning_level, kept unchanged) to the fixed effort vocabulary. Migration 0013 seeds this table; a test keeps them equal. A new label needs a reviewed row here and in a migration before a result can use it.",
+  "vocabulary": [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max"
+  ],
+  "labels": [
+    {
+      "label": "",
+      "effort": null,
+      "status": "not_reported",
+      "note": "The source does not state a reasoning setting."
+    },
+    {
+      "label": "max",
+      "effort": "max",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "high",
+      "effort": "high",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "xhigh",
+      "effort": "xhigh",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "medium",
+      "effort": "medium",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "low",
+      "effort": "low",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "none",
+      "effort": "none",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "High",
+      "effort": "high",
+      "status": "mapped",
+      "note": "Case variant of high."
+    },
+    {
+      "label": "xHigh",
+      "effort": "xhigh",
+      "status": "mapped",
+      "note": "Case variant of xhigh."
+    },
+    {
+      "label": "non-thinking",
+      "effort": "none",
+      "status": "mapped",
+      "note": "Reasoning switched off."
+    },
+    {
+      "label": "no thinking",
+      "effort": "none",
+      "status": "mapped",
+      "note": "Reasoning switched off."
+    },
+    {
+      "label": "No extended thinking",
+      "effort": "none",
+      "status": "mapped",
+      "note": "Reasoning switched off."
+    },
+    {
+      "label": "standard (no extended thinking)",
+      "effort": "none",
+      "status": "mapped",
+      "note": "Reasoning switched off."
+    },
+    {
+      "label": "enable_thinking=False",
+      "effort": "none",
+      "status": "mapped",
+      "note": "Reasoning switched off."
+    },
+    {
+      "label": "adaptive thinking, max",
+      "effort": "max",
+      "status": "mapped",
+      "note": "Adaptive thinking at the stated effort."
+    },
+    {
+      "label": "adaptive thinking, high",
+      "effort": "high",
+      "status": "mapped",
+      "note": "Adaptive thinking at the stated effort."
+    },
+    {
+      "label": "adaptive thinking, medium",
+      "effort": "medium",
+      "status": "mapped",
+      "note": "Adaptive thinking at the stated effort."
+    },
+    {
+      "label": "adaptive thinking, low",
+      "effort": "low",
+      "status": "mapped",
+      "note": "Adaptive thinking at the stated effort."
+    },
+    {
+      "label": "adaptive thinking, xhigh",
+      "effort": "xhigh",
+      "status": "mapped",
+      "note": "Adaptive thinking at the stated effort."
+    },
+    {
+      "label": "adaptive thinking, max; with tools",
+      "effort": "max",
+      "status": "mapped",
+      "note": "Adaptive thinking at max effort, with tools."
+    },
+    {
+      "label": "low (no tools)",
+      "effort": "low",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "medium (no tools)",
+      "effort": "medium",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "high (no tools)",
+      "effort": "high",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "low (with tools)",
+      "effort": "low",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "medium (with tools)",
+      "effort": "medium",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "high (with tools)",
+      "effort": "high",
+      "status": "mapped",
+      "note": null
+    },
+    {
+      "label": "no-tools",
+      "effort": null,
+      "status": "configuration_only",
+      "note": "Tool setting, not a reasoning setting."
+    },
+    {
+      "label": "no tools",
+      "effort": null,
+      "status": "configuration_only",
+      "note": "Tool setting, not a reasoning setting."
+    },
+    {
+      "label": "with tools",
+      "effort": null,
+      "status": "configuration_only",
+      "note": "Tool setting, not a reasoning setting."
+    },
+    {
+      "label": "tools enabled",
+      "effort": null,
+      "status": "configuration_only",
+      "note": "Tool setting, not a reasoning setting."
+    },
+    {
+      "label": "OpenHands",
+      "effort": null,
+      "status": "configuration_only",
+      "note": "Harness, not a reasoning setting."
+    },
+    {
+      "label": "thinking",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "On/off switch with no stated level."
+    },
+    {
+      "label": "thinking mode",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "On/off switch with no stated level."
+    },
+    {
+      "label": "effort=0.99",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Numeric provider scale."
+    },
+    {
+      "label": "highest thinking settings",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Provider wording; no level named."
+    },
+    {
+      "label": "automatic think/nothink",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "The model decides whether to reason."
+    },
+    {
+      "label": "adaptive thinking",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "No effort stated."
+    },
+    {
+      "label": "pro xhigh",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "xhigh, but \"pro\" may name a different model."
+    },
+    {
+      "label": "contemplating",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Provider mode name."
+    },
+    {
+      "label": "extended thinking",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "On, with no stated level."
+    },
+    {
+      "label": "extended thinking (32K)",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Token budget, not a level."
+    },
+    {
+      "label": "extended thinking (128K)",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Token budget, not a level."
+    },
+    {
+      "label": "extended thinking (200K)",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Token budget, not a level."
+    },
+    {
+      "label": "64K extended thinking",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Token budget, not a level."
+    },
+    {
+      "label": "heavy",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Provider mode name."
+    },
+    {
+      "label": "sol",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Looks like the model name."
+    },
+    {
+      "label": "no thinking, max effort",
+      "effort": null,
+      "status": "pending_owner",
+      "note": "Contradictory wording."
+    }
+  ]
+}

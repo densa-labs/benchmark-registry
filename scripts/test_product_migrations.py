@@ -1,3 +1,4 @@
+import json
 import sqlite3
 import unittest
 from pathlib import Path
@@ -125,4 +126,35 @@ class ProductMigrationTests(unittest.TestCase):
                     (model[0],),
                 ).fetchone(),
                 model,
+            )
+
+    def test_effort_vocabulary_matches_mapping_and_rolls_back(self):
+        mapping = json.loads((ROOT / "data/reasoning-labels.json").read_text())
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            self.assertEqual(
+                [row[0] for row in db.execute("SELECT key FROM effort_levels ORDER BY rank")],
+                mapping["vocabulary"],
+            )
+            self.assertEqual(
+                db.execute(
+                    "SELECT label, effort, status, note FROM reasoning_labels ORDER BY label"
+                ).fetchall(),
+                sorted(
+                    (row["label"], row["effort"], row["status"], row["note"])
+                    for row in mapping["labels"]
+                ),
+            )
+            for row in mapping["labels"]:
+                self.assertIn(row["effort"], [None, *mapping["vocabulary"]])
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            before = db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall()
+            db.executescript((ROOT / "migrations/rollback/0013_effort_vocabulary.sql").read_text())
+            db.executescript((ROOT / "migrations/0013_effort_vocabulary.sql").read_text())
+            self.assertEqual(
+                before,
+                db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall(),
             )

@@ -133,6 +133,7 @@ const RESULT_COLUMNS = `
   bv.version_slug AS benchmark_version_slug,
   ${EXACT_RESULT_ELIGIBLE_SQL} AS exact_result_indexable,
   r.reasoning_level,
+  (SELECT rl.effort FROM reasoning_labels rl WHERE rl.label = r.reasoning_level) AS effort,
   metric.name AS metric_name,
   metric.key AS metric_key,
   metric.unit AS metric_unit,

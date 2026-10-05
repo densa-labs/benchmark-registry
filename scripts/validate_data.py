@@ -13,6 +13,7 @@ from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+REASONING_LABELS = ROOT / "data" / "reasoning-labels.json"
 sys.path.insert(0, str(ROOT / "ingestor" / "src"))
 from benchmark_registry_ingestor.engine import RECORD_FIELDS
 from benchmark_registry_ingestor.values import (
@@ -413,6 +414,16 @@ def validate(batches: list[tuple[str, object]], database: Path | None = None) ->
                         loc,
                         "Version references an undefined metric.",
                     )
+    mapping = json.loads(REASONING_LABELS.read_text())
+    reasoning_labels = {row["label"] for row in mapping["labels"]}
+    for row in mapping["labels"]:
+        if row["effort"] not in {None, *mapping["vocabulary"]}:
+            add(
+                "error",
+                "reasoning_label",
+                f"reasoning-labels:{row['label']!r}",
+                "Effort is outside the fixed vocabulary.",
+            )
     result_records = [(loc, r) for loc, op, r in records if op == "result"]
     counts = Counter()
     seen = {}
@@ -496,6 +507,13 @@ def validate(batches: list[tuple[str, object]], database: Path | None = None) ->
             )
         if r.get("reporting_basis") not in {None, "self-reported", "independent"}:
             add("error", "schema", loc, "Invalid reporting_basis.")
+        if r.get("reasoning_level", "") not in reasoning_labels:
+            add(
+                "error",
+                "reasoning_label",
+                loc,
+                "Reasoning level has no reviewed effort mapping in data/reasoning-labels.json.",
+            )
         metric = metrics.get(r.get("metric_key"), {})
         if metric.get("storage_kind") not in {"decimal", "integer", "text"}:
             add("error", "schema", loc, "Invalid metric storage kind.")

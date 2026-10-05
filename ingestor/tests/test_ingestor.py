@@ -1044,3 +1044,41 @@ def test_disposable_remote_d1_batch_rolls_back_atomically() -> None:
         database.execute_batch(statements)
 
     assert database.query("SELECT id FROM companies WHERE slug = ?", (marker,)) == []
+
+
+def test_result_rejects_reasoning_label_without_reviewed_mapping(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_dependencies(ingestor)
+    record = result_record()
+    record["reasoning_level"] = "MAX"
+
+    assert_failure(ingestor, "result", record, match="no reviewed effort mapping")
+    assert database.query("SELECT count(*) AS n FROM results") == [{"n": 0}]
+
+
+def test_mapped_reasoning_label_keeps_raw_text_and_joins_to_effort(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_dependencies(ingestor)
+    record = result_record()
+    record["reasoning_level"] = "adaptive thinking, max"
+
+    assert ingestor.run("result", record, commit=True)[0].status == "VALID"
+    assert database.query(
+        """SELECT r.reasoning_level, l.effort FROM results r
+        JOIN reasoning_labels l ON l.label = r.reasoning_level"""
+    ) == [{"reasoning_level": "adaptive thinking, max", "effort": "max"}]
+
+
+def test_database_rejects_unmapped_reasoning_label(database_path: Path) -> None:
+    with sqlite3.connect(database_path) as connection:
+        with pytest.raises(sqlite3.IntegrityError, match="no reviewed effort mapping"):
+            connection.execute(
+                """INSERT INTO results (model_id, reasoning_level, benchmark_version_id,
+                metric_id, run_ref, result_key, score_raw, reported_at,
+                reported_precision, evaluator_set_key, primary_source_url,
+                primary_source_normalized_url, primary_source_checked_at)
+                VALUES (1, 'High ', 1, 1, 'r', 'k', '1', '2026-01-01', 'date', 'e',
+                'https://x.test', 'https://x.test', '2026-01-01T00:00:00Z')"""
+            )

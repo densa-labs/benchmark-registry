@@ -70,6 +70,7 @@ TABLES = (
     "result_evaluators",
     "result_sources",
     "registry_redirects",
+    "reasoning_labels",
 )
 
 RECORD_FIELDS = {
@@ -1885,6 +1886,13 @@ class Ingestor:
         reasoning_level = require_string(
             record.get("reasoning_level", ""), "reasoning_level", allow_empty=True
         )
+        # The raw label stays as published; it must have a reviewed effort mapping.
+        if plan.catalog.one("reasoning_labels", label=reasoning_level) is None:
+            raise IngestionFailure(
+                "ERROR",
+                registry_no,
+                f"reasoning level {reasoning_level!r} has no reviewed effort mapping",
+            )
         reported_at, reported_precision = normalize_temporal(
             record.get("reported_at"), record.get("reported_precision"), "reported_at"
         )
