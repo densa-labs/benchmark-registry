@@ -1,0 +1,3 @@
+DROP TRIGGER read_changes_benchmark_version_configurations_delete;
+DROP TRIGGER read_changes_benchmark_version_configurations_update;
+DROP TRIGGER read_changes_benchmark_version_configurations_insert;

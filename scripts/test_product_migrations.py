@@ -197,3 +197,20 @@ class ProductMigrationTests(unittest.TestCase):
             self.assertEqual(
                 before, db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
             )
+
+    def test_configuration_changes_are_journaled_up_down(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            db.execute("DELETE FROM registry_read_changes")
+            db.execute(
+                "INSERT INTO benchmark_version_configurations VALUES "
+                "(6, 'with-tools', 'HealthBench', 'https://x.test', 'https://x.test', '2026-10-05T00:00:00Z')"
+            )
+            keys = {row[0] for row in db.execute("SELECT logical_key FROM registry_read_changes")}
+            self.assertTrue({"family:healthbench", "version:healthbench:hard", "benchmarks"} <= keys)
+            db.executescript((ROOT / "migrations/rollback/0017_configuration_read_journal.sql").read_text())
+            db.executescript((ROOT / "migrations/0017_configuration_read_journal.sql").read_text())
