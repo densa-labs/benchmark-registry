@@ -990,7 +990,7 @@ p.local-search__clear { white-space: normal; }
   gap: 0.125rem 0.5rem;
 }
 
-.table-cell-stack > :first-child { flex: 1 0 100%; }
+.table-cell-stack > :first-child { flex: 1 0 100%; max-width: 100%; }
 
 .table-cell-stack > span {
   color: var(--text-muted);
