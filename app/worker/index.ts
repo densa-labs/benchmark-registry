@@ -3,6 +3,7 @@ import { renderAtomFeed } from "./feed";
 import { badgeResponse } from "./badge";
 import { measuredDatabase, type QueryMetrics } from "./query-metrics";
 import { coverageOptions, cachedCoverage, type CoverageEnvironment } from "./coverage";
+import { recordedCorrections } from "./corrections-data";
 import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
 import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
@@ -154,6 +155,8 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
           if(!response.ok) throw new ApiError(400,"invalid_query","Invalid search query.");
           return await response.json() as import("../src/registry").SearchResponse;
         })() : {data:[],page:{number:1,limit:50,total_items:0,total_pages:0}}},url.search,env.REGISTRY_REVISION)
+      : pathname.replace(/\/$/u, "") === "/corrections" && env.DB
+      ? renderInitialDocument({kind:"corrections",payload:await recordedCorrections(env.DB)},url.search,env.REGISTRY_REVISION)
       : pathname.replace(/\/$/u, "") === "/coverage" && env.DB
       ? renderInitialDocument({kind:"coverage",payload:await cachedCoverage(env.DB,coverageOptions(url,env),env.D1_DIAGNOSTICS)},url.search,env.REGISTRY_REVISION)
       : metadata.status === 404 ? renderInitialDocument({ kind: "not-found" }, url.search) : await renderDocument(url, async (input) => {

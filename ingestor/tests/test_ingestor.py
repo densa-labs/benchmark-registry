@@ -14,7 +14,7 @@ from benchmark_registry_ingestor.database import (
     Statement,
     database_from_environment,
 )
-from benchmark_registry_ingestor.engine import IngestionFailure, Ingestor
+from benchmark_registry_ingestor.engine import IngestionFailure, Ingestor, LaterRecord
 
 MIGRATIONS = Path(__file__).parents[2] / "migrations"
 CHECKED_AT = "2026-09-17T00:00:00Z"
@@ -1206,3 +1206,115 @@ def test_label_and_version_configurations_must_agree(
     assert database.query("SELECT count(*) AS n FROM benchmark_version_configurations") == [
         {"n": 1}
     ]
+
+
+def committed_result_key(ingestor: Ingestor, database: LocalDatabase) -> str:
+    seed_dependencies(ingestor)
+    ingestor.run("result", result_record(), commit=True)
+    return database.query("SELECT result_key FROM results")[0]["result_key"]
+
+
+def correction_record(result_key: str, **overrides: object) -> dict:
+    record = {
+        "result_key": result_key,
+        "expected": {"score_value": "91.2", "score_raw": "91.200%"},
+        "corrected": {"score_value": "92.1", "score_raw": "92.1%"},
+        "reason": "The source table was transcribed with two digits swapped.",
+        "source_url": "https://example.com/results/run-1",
+        "source_checked_at": CHECKED_AT,
+        "recorded_at": "2026-10-05T00:00:00Z",
+    }
+    record.update(overrides)
+    return record
+
+
+def test_result_correction_changes_only_the_score_and_logs_it(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    before = database.query("SELECT * FROM results")[0]
+
+    first = ingestor.run("result_correction", correction_record(key), commit=True)
+    second = ingestor.run("result_correction", correction_record(key), commit=True)
+
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    after = database.query("SELECT * FROM results")[0]
+    assert {k: v for k, v in after.items() if before[k] != v} == {
+        "score_value": "92.1",
+        "score_raw": "92.1%",
+    }
+    log = database.query("SELECT result_key, kind, expected, corrected FROM result_corrections")
+    assert log == [
+        {
+            "result_key": key,
+            "kind": "correction",
+            "expected": '{"score_raw":"91.200%","score_value":"91.2"}',
+            "corrected": '{"score_raw":"92.1%","score_value":"92.1"}',
+        }
+    ]
+
+
+def test_result_correction_with_stale_expected_is_a_conflict(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    stale = correction_record(key, expected={"score_value": "90", "score_raw": "90%"})
+
+    assert_failure(ingestor, "result_correction", stale, status="CONFLICT")
+    assert_failure(
+        ingestor,
+        "result_correction",
+        correction_record(key, corrected={"score_value": "91.2", "score_raw": "91.200%"}),
+        match="must change the score",
+    )
+    assert_failure(ingestor, "result_correction", correction_record("0" * 64), match="does not exist")
+    assert database.query("SELECT count(*) AS n FROM result_corrections") == [{"n": 0}]
+
+
+def test_replaying_the_original_result_after_a_correction_is_skipped(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    ingestor.run("result_correction", correction_record(key), commit=True)
+    later = [LaterRecord("fix.json", "result_correction", correction_record(key))]
+
+    outcomes = ingestor.run("result", result_record(), commit=True, later=later)
+
+    assert [(o.status, o.message) for o in outcomes] == [
+        ("SKIPPED", "superseded by fix.json result_correction")
+    ]
+    assert_failure(ingestor, "result", result_record(), status="CONFLICT")
+
+
+def test_result_retraction_keeps_the_row_and_is_final(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    retraction = {
+        "result_key": key,
+        "reason": "The evaluator withdrew this run.",
+        "source_url": "https://example.com/results/run-1",
+        "source_checked_at": CHECKED_AT,
+        "retracted_at": "2026-10-05T00:00:00Z",
+    }
+
+    first = ingestor.run("result_retraction", retraction, commit=True)
+    second = ingestor.run("result_retraction", retraction, commit=True)
+
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    assert database.query("SELECT retracted_at, retraction_reason, score_value FROM results") == [
+        {
+            "retracted_at": "2026-10-05T00:00:00Z",
+            "retraction_reason": "The evaluator withdrew this run.",
+            "score_value": "91.2",
+        }
+    ]
+    assert_failure(
+        ingestor, "result_retraction", {**retraction, "reason": "Another reason."}, status="CONFLICT"
+    )
+    assert_failure(ingestor, "result_correction", correction_record(key), status="CONFLICT")
+    assert ingestor.run("result", result_record(), commit=True)[0].status == "SKIPPED"
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("UPDATE results SET retracted_at = NULL, retraction_reason = NULL")
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("DELETE FROM result_corrections")

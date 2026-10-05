@@ -60,6 +60,16 @@ REQUIRED = {
         "source_checked_at",
         "versions",
     },
+    "result_correction": {
+        "result_key",
+        "expected",
+        "corrected",
+        "reason",
+        "source_url",
+        "source_checked_at",
+        "recorded_at",
+    },
+    "result_retraction": {"result_key", "reason", "source_url", "source_checked_at", "retracted_at"},
     "benchmark_version_configuration": {
         "benchmark_slug",
         "version",

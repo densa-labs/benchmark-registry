@@ -2,6 +2,8 @@ import { DatabaseSync } from "node:sqlite";
 import { readFileSync, readdirSync } from "node:fs";
 import { afterEach, expect, it } from "vitest";
 import { RegistryRepository } from "./repository";
+import { recordedCorrections } from "./corrections-data";
+import { RETRACTED_RESULT_FILTER } from "./static-site";
 import type { ParsedListParams } from "./params";
 
 // Real migrations and the P4 fixture: the read path labels results with the
@@ -28,7 +30,7 @@ function semanticsFixture() {
       };
     },
   } as unknown as D1Database;
-  return { sqlite, repository: new RegistryRepository(db) };
+  return { sqlite, db, repository: new RegistryRepository(db) };
 }
 
 it("adds the normalized effort beside the unchanged raw label", async () => {
@@ -71,4 +73,29 @@ it("labels results and versions by configuration without changing identity", asy
   expect(healthbench.latest_configuration).toBeNull();
 
   expect(sqlite.prepare("SELECT result_key, score_value, benchmark_version_id FROM results ORDER BY id").all()).toEqual(before);
+});
+
+it("drops retracted results from the public snapshot and lists them on /corrections", async () => {
+  const { sqlite, db, repository } = semanticsFixture();
+  const { result_key: retracted } = sqlite.prepare("SELECT result_key FROM results WHERE id = 1").get() as { result_key: string };
+  const { result_key: corrected } = sqlite.prepare("SELECT result_key FROM results WHERE id = 2").get() as { result_key: string };
+  sqlite.exec(`UPDATE results SET retracted_at = '2026-10-05T00:00:00Z', retraction_reason = 'Withdrawn by the evaluator.' WHERE id = 1`);
+  sqlite.prepare(`INSERT INTO result_corrections (result_key, kind, expected, corrected, reason, source_url, normalized_source_url, source_checked_at, recorded_at)
+    VALUES (?, 'retraction', '{"retracted_at":null}', '{"retracted_at":"2026-10-05T00:00:00Z"}', 'Withdrawn by the evaluator.', 'https://example.com/a', 'https://example.com/a', '2026-10-05T00:00:00Z', '2026-10-05T00:00:00Z'),
+    (?, 'correction', '{"score_raw":"73.1%","score_value":"73.1"}', '{"score_raw":"73.4%","score_value":"73.4"}', 'Transcription error.', 'https://example.com/b', 'https://example.com/b', '2026-10-05T00:00:00Z', '2026-10-04T00:00:00Z')`).run(retracted, corrected);
+
+  sqlite.exec("PRAGMA foreign_keys=OFF");
+  for (const statement of RETRACTED_RESULT_FILTER) sqlite.exec(statement);
+
+  const { registry_no } = sqlite.prepare("SELECT registry_no FROM models WHERE id = 5").get() as { registry_no: string };
+  const model = await repository.model(registry_no, params);
+  expect(model.data.results.some((row) => row.result_key === retracted)).toBe(false);
+  expect(model.data.results.some((row) => row.result_key === corrected)).toBe(true);
+  expect((sqlite.prepare("SELECT count(*) AS n FROM result_evaluators WHERE result_id = 1").get() as { n: number }).n).toBe(0);
+
+  const entries = await recordedCorrections(db);
+  expect(entries).toEqual([
+    { date: "2026-10-05", record_number: `BR-${retracted}`, what_changed: "Result retracted", reason: "Withdrawn by the evaluator." },
+    { date: "2026-10-04", record_number: `BR-${corrected}`, what_changed: "Score 73.1% → 73.4%", reason: "Transcription error." },
+  ]);
 });

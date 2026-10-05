@@ -161,3 +161,22 @@ class ProductMigrationTests(unittest.TestCase):
                 before,
                 db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall(),
             )
+
+    def test_result_corrections_up_down_and_records_unchanged(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            before = db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM results WHERE retracted_at IS NOT NULL").fetchone()[0], 0
+            )
+            with self.assertRaises(sqlite3.IntegrityError):
+                db.execute("UPDATE results SET retracted_at = '2026-10-05T00:00:00Z' WHERE id = 1")
+            db.executescript((ROOT / "migrations/rollback/0015_result_corrections.sql").read_text())
+            db.executescript((ROOT / "migrations/0015_result_corrections.sql").read_text())
+            self.assertEqual(
+                before, db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            )

@@ -55,6 +55,16 @@ export const MAX_INLINE_SCRIPTS = 1;
 const EXECUTABLE_SCRIPT_TYPES = new Set(["", "module", "text/javascript", "application/javascript"]);
 
 /** `/models/10006` → `models/10006.html`; `/` → `index.html`; files keep their name. */
+// Retracted results stay stored in D1 but never reach a public page, data file,
+// search index, badge, sitemap or feed. The build removes them (with their
+// evaluator and source joins) from its private in-memory snapshot only; their
+// correction log entries remain and feed /corrections.
+export const RETRACTED_RESULT_FILTER = [
+  "DELETE FROM result_evaluators WHERE result_id IN (SELECT id FROM results WHERE retracted_at IS NOT NULL)",
+  "DELETE FROM result_sources WHERE result_id IN (SELECT id FROM results WHERE retracted_at IS NOT NULL)",
+  "DELETE FROM results WHERE retracted_at IS NOT NULL",
+] as const;
+
 export function pageFile(path: string): string {
   if (path === "/") return "index.html";
   const decoded = decodeURIComponent(path).replace(/^\//u, "").replace(/\/$/u, "");

@@ -164,7 +164,7 @@ export function RegistryDocument({ loaded, currentSearch, enhanced = false, navi
   } else if (loaded.kind === "coverage") {
     content = <CoveragePage data={loaded.payload} />;
   } else if (loaded.kind === "corrections") {
-    content = <CorrectionsPage />;
+    content = <CorrectionsPage entries={loaded.payload} />;
   } else if (loaded.kind === "home") {
     content = <HomePage response={loaded.payload} />;
   } else if (loaded.kind === "compare") {
