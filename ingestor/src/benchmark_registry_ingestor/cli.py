@@ -117,7 +117,10 @@ def build_parser() -> argparse.ArgumentParser:
         "provider_retirement",
         "model",
         "benchmark",
+        "benchmark_version_configuration",
         "result",
+        "result_correction",
+        "result_retraction",
         "batch",
         "replay",
     ):
