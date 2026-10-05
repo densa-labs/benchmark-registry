@@ -1,8 +1,0 @@
-{
-  "fixture": "Sep25 export plus migrations 4/5/6; no network requests",
-  "latest_reference_equivalence": true,
-  "latest_retained_rows": 594,
-  "canonical_urls": 805,
-  "approved_exact_urls": 537,
-  "ambiguous_states": 57
-}

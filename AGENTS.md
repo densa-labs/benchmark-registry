@@ -19,8 +19,8 @@ This is **not** a leaderboard, community submission platform, ranking engine, so
 When working in this repository, use this authority order:
 
 1. Explicit task/user instructions
-2. Frozen root project contracts (`product-contract.md`, `data-contract.md`, and
-   `registry-numbering.md`)
+2. Frozen project contracts (`docs/product-contract.md`, `docs/data-contract.md`, and
+   `docs/registry-numbering.md`)
 3. This root `AGENTS.md`
 4. Any deeper `AGENTS.md` applying to the files being changed
 5. Existing tests and code behavior
@@ -34,10 +34,10 @@ If two higher-priority sources conflict, **stop and report the conflict**. Do no
 
 Before making architectural or cross-cutting changes, read:
 
-- `development-roadmap.md`
-- `product-contract.md`
-- `data-contract.md`
-- `registry-numbering.md`
+- `development-roadmap.md` (local and gitignored; read it when present)
+- `docs/product-contract.md`
+- `docs/data-contract.md`
+- `docs/registry-numbering.md`
 
 Do not duplicate those documents into code comments or additional specs unless explicitly requested.
 
@@ -47,9 +47,9 @@ Do not duplicate those documents into code comments or additional specs unless e
 
 The complete, canonical frozen contracts are:
 
-- `product-contract.md` for product behavior and routes,
-- `data-contract.md` for entities, provenance, result identity, and write boundaries,
-- `registry-numbering.md` for namespace and Registry No. assignment.
+- `docs/product-contract.md` for product behavior and routes,
+- `docs/data-contract.md` for entities, provenance, result identity, and write boundaries,
+- `docs/registry-numbering.md` for namespace and Registry No. assignment.
 
 Treat them as hard constraints unless explicitly revised. Summaries in the roadmap
 and scoped instructions are operational guidance; they do not override the
@@ -62,7 +62,7 @@ If a requested change would violate one of these, stop and surface it.
 ## 4. Frozen routes
 
 The canonical route families and redirect behavior are defined only in
-`product-contract.md`. Do not invent alternate canonical routes without explicit
+`docs/product-contract.md`. Do not invent alternate canonical routes without explicit
 approval.
 
 ---
@@ -73,7 +73,7 @@ Expected structure:
 
 ```text
 /
-├── app/                    # frontend + read-only Worker/API
+├── app/                    # frontend + build-time static page renderer
 ├── ingestor/               # Python ingestion CLI
 ├── data/                   # tracked ingestion/source data
 ├── migrations/             # D1 migrations
@@ -304,7 +304,9 @@ Optimize for correctness and bounded completion, not activity volume.
 
 ## 16. Owner decisions
 
-Approved by the owner on 2026-10-04 in response to `docs/audit/audit-2026-10.md`.
+Approved by the owner on 2026-10-04 in response to the October 2026 audit
+(`docs/audit/audit-2026-10.md`, no longer in the repository; the decisions below
+are complete).
 Treat these as explicit task instructions; do not reopen them.
 
 1. The GPT-6.1 Sol × exploitbench-internal-port record in

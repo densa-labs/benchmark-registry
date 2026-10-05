@@ -1,26 +1,27 @@
 import { analyticsConfiguration, analyticsScript, type AnalyticsEnvironment } from "./analytics";
 import { renderAtomFeed } from "./feed";
 import { badgeResponse } from "./badge";
-import { measuredDatabase, type QueryMetrics } from "./query-metrics";
+import type { QueryMetrics } from "./query-metrics";
 import { coverageOptions, cachedCoverage, type CoverageEnvironment } from "./coverage";
 import { recordedCorrections } from "./corrections-data";
 import { CONTENT_PATHS } from "../src/content-metadata";
 import { isIndexablePage } from "../src/seo";
-import { CANONICAL_ORIGIN, CANONICAL_HOST, ALTERNATE_HOST } from "../src/seo-config";
+import { CANONICAL_ORIGIN, CANONICAL_HOST } from "../src/seo-config";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { logServerError } from "./diagnostics";
-import { renderDocument, renderFailureDocument, renderInitialDocument } from "./document";
+import { renderDocument, renderInitialDocument } from "./document";
 import { ApiError, jsonError } from "./api";
 import { handleApi as routeApi } from "./api-router";
-import { withRegistryCache, type CacheEnvironment } from "./cache";
 import type { RegistryReader } from "./materialized-repository";
-import { PublishedReadStore, type ReadStoreEnvironment } from "./read-store";
 import { MaterializationFailure } from "./read-model";
 import { legacyRedirect } from "./seo-redirects";
 import { documentMetadata, rewriteMetadata, escapeHtml } from "./metadata";
 
-export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnvironment, AnalyticsEnvironment {
+/** What the static build hands the page renderer; see worker/static-site.ts. */
+export interface Env extends CoverageEnvironment, AnalyticsEnvironment {
   ASSETS: Fetcher;
+  /** The data generation the pages embed. */
+  REGISTRY_REVISION?: string;
   D1_DIAGNOSTICS?: QueryMetrics;
   STAGING_CRAWLER_PROTECTION?: "enabled";
 }
@@ -28,10 +29,8 @@ export interface Env extends CacheEnvironment, ReadStoreEnvironment, CoverageEnv
 const handleApi=(request:Request,env:Env,repository:RegistryReader)=>routeApi(request,env.REGISTRY_REVISION,repository);
 
 const STAGING_HOSTNAME = "staging.benchmarkregistry.org";
-const WWW_HOSTNAME = ALTERNATE_HOST;
 const APEX_HOSTNAME = CANONICAL_HOST;
 const STAGING_ROBOTS = "User-agent: *\nDisallow: /\n";
-const STAGING_ROBOTS_TAG = "noindex, nofollow, noarchive";
 
 function modelPageRegistryNo(pathname: string): string | null {
   const match = /^\/models\/([^/]+)\/?$/u.exec(pathname);
@@ -58,18 +57,6 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     return new Response(request.method==="HEAD" ? null : feed,{headers:{"Content-Type":"application/atom+xml; charset=utf-8","Cache-Control":"public, max-age=60, stale-while-revalidate=300","X-Robots-Tag":"noindex"}});
   }
   if (pathname.startsWith("/badge/")) return badgeResponse(request,requireRepository(repository));
-  if (pathname === "/healthz") {
-    const headers={"Cache-Control":"no-store","X-Robots-Tag":"noindex, nofollow"};
-    if (!["GET","HEAD"].includes(request.method)) return new Response(null,{status:405,headers});
-    try {
-      if(!env.DB || !(await measuredDatabase(env.DB,env.D1_DIAGNOSTICS).prepare("SELECT 1 AS ok").first<{ok:number}>())?.ok) throw new Error("Database unavailable");
-      return new Response(request.method === "HEAD" ? null : '{"ok":true}', {headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
-    } catch(error) {
-      logServerError("healthz",503,error,url.pathname);
-      return new Response(request.method === "HEAD" ? null : '{"ok":false}',{status:503,headers:{...headers,"Content-Type":"application/json; charset=utf-8"}});
-    }
-  }
-
   if (pathname === "/api" || pathname.startsWith("/api/")) {
     try {
       return await handleApi(request, env, requireRepository(repository));
@@ -180,81 +167,6 @@ export async function handleRequest(request: Request, env: Env, repository?: Reg
     return new Response("The request could not be completed.", { status: 500 });
   }
 }
-
-const worker = {
-  async fetch(request: Request, env: Env, ctx?: ExecutionContext): Promise<Response> {
-    const url = new URL(request.url);
-    if (url.hostname === WWW_HOSTNAME || (url.hostname === APEX_HOSTNAME && url.protocol === "http:")) {
-      url.hostname = APEX_HOSTNAME;
-      url.protocol = "https:";
-      return Response.redirect(url.toString(), 301);
-    }
-    const protectStaging = env.STAGING_CRAWLER_PROTECTION === "enabled"
-      && url.hostname === STAGING_HOSTNAME;
-
-    env={...env,CACHE_VARIANT:JSON.stringify(analyticsConfiguration(env)),D1_DIAGNOSTICS:{queries:0,rows:0,ms:0},CACHE_WAIT_UNTIL:ctx?(promise)=>ctx.waitUntil(promise):undefined};
-    const store=new PublishedReadStore(env,url.origin);
-    let response:Response;
-    const staticAsset=url.pathname.startsWith('/assets/') || url.pathname.startsWith('/favicon');
-    if(staticAsset) response=await env.ASSETS.fetch(request);
-    else if(url.pathname==='/robots.txt') response=new Response(request.method==='HEAD'?null:protectStaging?STAGING_ROBOTS:`User-agent: *\nAllow: /\n\nSitemap: ${CANONICAL_ORIGIN}/sitemap.xml\n`,{headers:{'Content-Type':'text/plain; charset=utf-8'}});
-    else if(url.pathname==="/healthz") response=await handleRequest(request,env);
-    else if ([...LEGAL_PATHS,...CONTENT_PATHS.filter(path=>path!=="/search")].some((path) => url.pathname === path || url.pathname.startsWith(`${path}/`))) response=await handleRequest(request,env);
-    else {
-      try {
-        const publication=await store.publication();
-        let lastError:unknown;
-        response=new Response('The materialized registry is temporarily unavailable.',{status:500});
-        for(const [index,ref] of [publication.current,publication.previous].entries()) {
-          if(!ref) continue;
-          try {
-            const readEnv={...env,REGISTRY_REVISION:ref.generation,REGISTRY_DEGRADED:index>0};
-            response=await withRegistryCache(request,readEnv,async(cachedEnv,cacheRequest=request)=>handleRequest(cacheRequest,{...readEnv,...cachedEnv},await store.repository(ref)));
-            lastError=undefined;break;
-          } catch(error) {lastError=error;}
-        }
-        if(lastError) throw lastError;
-      } catch(error) {
-        logServerError("materialized-read",500,error,url.pathname);
-        if (url.pathname === '/api' || url.pathname.startsWith('/api/')) response=jsonError(500,'internal_error','The request could not be completed.');
-        else if (url.pathname === '/sitemap.xml') response=new Response('The materialized registry is temporarily unavailable.',{status:500});
-        else {
-          const template = await env.ASSETS.fetch(new Request(new URL('/',url),{method:'GET'}));
-          const failure = renderFailureDocument(url.search);
-          const html = rewriteMetadata(await template.text(), { title: 'Registry temporarily unavailable | Benchmark Registry', description: 'The registry data could not be loaded. Try again shortly.', noindex: true }, url, failure.markup).replace('</body>',`${failure.bootstrap}</body>`);
-          response=new Response(request.method === 'HEAD' ? null : html,{status:500,headers:{'Content-Type':'text/html; charset=utf-8'}});
-        }
-      }
-    }
-
-    const diagnostics = new Headers(response.headers);
-    diagnostics.set("X-Registry-Read-Store-Reads",String(store.reads));
-    diagnostics.set("X-Registry-D1-Queries", String(env.D1_DIAGNOSTICS?.queries ?? 0));
-    diagnostics.set("X-Registry-D1-Rows", String(env.D1_DIAGNOSTICS?.rows ?? 0));
-    diagnostics.set("Server-Timing", `d1;dur=${(env.D1_DIAGNOSTICS?.ms ?? 0).toFixed(2)}`);
-    if (url.pathname.startsWith("/assets/") && response.ok) diagnostics.set("Cache-Control", /[-.][a-zA-Z0-9_-]{8,}\.(?:js|css|woff2)$/u.test(url.pathname) ? "public, max-age=31536000, immutable" : "public, max-age=60, stale-while-revalidate=300");
-    if (response.status >= 400) diagnostics.set("Cache-Control", "no-store");
-    // Keep zone-injected analytics from executing in internal staging. Allow
-    // same-origin application and Cloudflare security scripts, including inline checks.
-    if (protectStaging && diagnostics.get("Content-Type")?.includes("text/html")) {
-      diagnostics.set("Content-Security-Policy", "script-src-elem 'self' 'unsafe-inline'");
-    }
-    response = new Response(response.body,{status:response.status,statusText:response.statusText,headers:diagnostics});
-    const nonProduction = url.hostname !== APEX_HOSTNAME;
-    const apiDocument = url.pathname === '/api' || url.pathname.startsWith('/api/');
-    if (!protectStaging && !nonProduction && !apiDocument) return response;
-
-    const headers = new Headers(response.headers);
-    headers.set("X-Robots-Tag", protectStaging || nonProduction ? STAGING_ROBOTS_TAG : "noindex, follow");
-    return new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers,
-    });
-  },
-} satisfies ExportedHandler<Env>;
-
-export default worker;
 
 function requireRepository(repository?: RegistryReader): RegistryReader {
   if (!repository) throw new Error("Registry reader required for data route.");

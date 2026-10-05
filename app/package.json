@@ -21,10 +21,8 @@
     "deploy:production": "npm run build:production && node scripts/verify-static-deployment.mjs --environment production && wrangler deploy --env production",
     "test:links": "python3 -m unittest discover -s scripts -p 'test_*.py'",
     "audit:links": "python3 scripts/verify-links-live.py",
-    "audit:performance": "node scripts/audit-performance.mjs",
-    "materialize": "node scripts/materialize.mjs",
     "verify:lighthouse": "node scripts/verify-lighthouse.mjs",
-    "test:accessibility": "vitest run src/accessibility.test.tsx worker/accessibility.test.ts",
+    "test:accessibility": "vitest run src/accessibility.test.tsx",
     "audit:accessibility": "node scripts/audit-accessibility.mjs",
     "test:seo": "node ../scripts/seo_check.mjs"
   },

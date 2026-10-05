@@ -2,7 +2,7 @@
 
 Applies to D1 schema migrations.
 
-Read the root `AGENTS.md`, `data-contract.md`, and `registry-numbering.md` first.
+Read the root `AGENTS.md`, `docs/data-contract.md`, and `docs/registry-numbering.md` first.
 
 ---
 
@@ -56,7 +56,7 @@ Prefer database-enforced correctness for stable invariants such as:
 - unique logical result identities,
 - foreign-key integrity.
 
-Also enforce the cross-table invariants required by `data-contract.md`, including
+Also enforce the cross-table invariants required by `docs/data-contract.md`, including
 benchmark-version/metric consistency, namespace/company authorization, source
 cardinality, and redirect integrity.
 

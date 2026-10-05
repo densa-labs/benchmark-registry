@@ -44,7 +44,7 @@ it("prerenders every page byte-for-byte as the Worker rendered it, plus data, fe
 
   // The same renderer over the same projection produces the same document.
   const objects=new Map(Object.entries(manifest.objects).map(([key,hash])=>[key,JSON.parse(output.get(`data/objects/${hash}.json`)!).data]));
-  const repository=new MaterializedRepository({schema:1,environment:"production",generation:site.generation,canonicalRevision:site.generation,watermark:0,createdAt:"",objects:manifest.objects,inlineObjects:{}},async <K extends keyof ReadData>(key:string)=>objects.get(key) as ReadData[K]);
+  const repository=new MaterializedRepository({schema:1,environment:"production",generation:site.generation,canonicalRevision:site.generation,watermark:0,createdAt:"",objects:manifest.objects},async <K extends keyof ReadData>(key:string)=>objects.get(key) as ReadData[K]);
   const env={DB:db,REGISTRY_REVISION:site.generation,ASSETS:{fetch:async()=>new Response(template,{headers:{"Content-Type":"text/html"}})}} as unknown as Env;
   const model=[...output.keys()].find(path=>/^models\/\d+\.html$/u.test(path))!;
   for(const path of ["/","/models","/"+model.slice(0,-5),"/sitemap.xml"]) {

@@ -1,6 +1,8 @@
 # app/AGENTS.md
 
-Applies to the frontend and read-only Worker/API.
+Applies to the frontend and the build-time page renderer in `worker/`. The site
+is static assets only (see `STATIC-SITE.md`); the `/api` routes below run at
+build time and in the browser from static data, not on a deployed Worker.
 
 Read the root `AGENTS.md` first.
 
@@ -204,7 +206,7 @@ Company   Model   Score   Source   Registry No.
 Rules:
 
 - company tabs are dynamic,
-- Latest/History semantics come from `data-contract.md`,
+- Latest/History semantics come from `docs/data-contract.md`,
 - Score is not sortable,
 - page-size selector is exactly 50 / 100 / 500,
 - default is 50,
@@ -233,7 +235,7 @@ Latest model links to its model page.
 
 The result table exposes the shared Latest/History switch.
 
-Use the eligibility and tie-break rules in `product-contract.md`; do not infer a
+Use the eligibility and tie-break rules in `docs/product-contract.md`; do not infer a
 different meaning of “latest” in presentation code.
 
 ---

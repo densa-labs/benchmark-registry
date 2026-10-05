@@ -26,27 +26,21 @@ export type ReadData={
 };
 export interface ResultFields {identity:string;latest:number;reported:string;source:string;aliases:string}
 export interface ReadObject {schema:1;key:string;environment:ReadEnvironment;data:unknown}
-export interface GenerationRef {generation:string;hash:string}
 export interface ReadManifest {
   projectionVersion?:number;
   schema:1;environment:ReadEnvironment;generation:string;canonicalRevision:string;
-  watermark:number;createdAt:string;objects:Record<string,string>;inlineObjects:Record<string,ReadObject>;
+  watermark:number;createdAt:string;objects:Record<string,string>;
 }
-export interface Publication {schema:1;environment:ReadEnvironment;current:GenerationRef;previous?:GenerationRef}
 export const logicalKind=(key:string)=>key.startsWith('model:')?'model':key.startsWith('family:')?'family':key.startsWith('version:')?'version':key.startsWith('company:')?'company':key;
 export const validKey=(key:string)=>['seo','models','benchmarks','companies','stats','home-panels','redirects','inventory','search-entities','search-relationships'].includes(key) || /^(model:[0-9]+|company:[a-z0-9-]+|family:[a-z0-9-]+|version:[a-z0-9-]+:[a-z0-9._-]+)$/u.test(key);
 export async function digest(text:string) {return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)))].map(byte=>byte.toString(16).padStart(2,'0')).join('');}
 export class MaterializationFailure extends Error {}
-export function validateManifest(value:unknown,environment:ReadEnvironment,allowLegacySeo=false):asserts value is ReadManifest {
+export function validateManifest(value:unknown,environment:ReadEnvironment):asserts value is ReadManifest {
   const m=value as ReadManifest;
   if(!m || m.schema!==1 || m.environment!==environment || !/^[a-f0-9]{32}$/u.test(m.generation) || !/^[a-f0-9]{32}$/u.test(m.canonicalRevision) || !Number.isSafeInteger(m.watermark) || m.watermark<0 || !Number.isFinite(Date.parse(m.createdAt)) || !m.objects || Array.isArray(m.objects)) throw new MaterializationFailure('Invalid read manifest.');
   for(const [key,hash] of Object.entries(m.objects)) if(!validKey(key) || !/^[a-f0-9]{64}$/u.test(hash)) throw new MaterializationFailure('Invalid manifest reference.');
   for(const key of ['models','benchmarks','companies','stats','redirects','inventory','search-entities','search-relationships']) if(!m.objects[key]) throw new MaterializationFailure('Incomplete read manifest.');
-  // Maintenance can read pre-SEO generations to upgrade them; public reads and
-  // publication verification still require the complete new projection.
-  if(!allowLegacySeo && !m.objects.seo) throw new MaterializationFailure('Incomplete read manifest.');
-  if(!m.inlineObjects || Array.isArray(m.inlineObjects)) throw new MaterializationFailure('Missing coherent update bundle.');
-  for(const [hash,object] of Object.entries(m.inlineObjects)) {if(m.objects[object.key]!==hash) throw new MaterializationFailure('Wrong bundled object reference.');validateObject(object,object.key,environment);}
+  if(!m.objects.seo) throw new MaterializationFailure('Incomplete read manifest.');
 }
 export function validateObject(value:unknown,key:string,environment:ReadEnvironment):asserts value is ReadObject {
   const o=value as ReadObject;
@@ -78,9 +72,4 @@ export function validateObject(value:unknown,key:string,environment:ReadEnvironm
     if(data?.benchmark?.slug!==key.slice(7) || !Array.isArray(data.versions)) throw new MaterializationFailure('Invalid benchmark family.');
   } else if(['redirects','inventory','search-entities','search-relationships'].includes(kind) && !Array.isArray(o.data)) throw new MaterializationFailure('Invalid read collection.');
   else if(kind==='stats' && (!(d.data as Record<string,unknown>) || Object.values(d.data as Record<string,unknown>).some(v=>!Number.isSafeInteger(v) || Number(v)<0))) throw new MaterializationFailure('Invalid stats.');
-}
-export function validatePublication(value:unknown,environment:ReadEnvironment):asserts value is Publication {
-  const p=value as Publication;
-  if(!p || p.schema!==1 || p.environment!==environment || !p.current) throw new MaterializationFailure('Invalid publication.');
-  for(const ref of [p.current,p.previous].filter(Boolean) as GenerationRef[]) if(!/^[a-f0-9]{32}$/u.test(ref.generation) || !/^[a-f0-9]{64}$/u.test(ref.hash)) throw new MaterializationFailure('Invalid generation identity.');
 }

@@ -2,7 +2,7 @@ import { enrichSeoContent } from "../src/seo-enrichment";
 import type { SeoSnapshot } from "./seo-data";
 import { renderToString } from "react-dom/server";
 import { serializeInitialDocument } from "../src/bootstrap";
-import { App, RegistryDocument } from "../src/App";
+import { RegistryDocument } from "../src/App";
 import { loadRegistryRoute, resolveRegistryRoute } from "../src/registry";
 import { ApiError } from "./api";
 
@@ -31,10 +31,3 @@ export function renderInitialDocument(loaded: import("../src/registry").LoadedRe
   };
 }
 
-export function renderFailureDocument(currentSearch: string) {
-  const initial = { loaded: { kind: "not-found" as const }, currentSearch, failure: "The materialized registry is temporarily unavailable. Try again shortly." };
-  return {
-    markup: renderToString(<App initial={initial} />),
-    bootstrap: `<script id="registry-initial-document" type="application/json">${serializeInitialDocument(initial)}</script>`,
-  };
-}

@@ -81,31 +81,3 @@ def test_controlled_ingestion_revision_dry_run_commit_and_duplicates(database):
     duplicate = ingestor.run("batch", payload, commit=True)
     assert all(outcome.status == "SKIPPED" for outcome in duplicate)
     assert token(database) == committed
-
-
-def test_materialization_runs_only_after_actual_commit_and_failure_remains_pending(database):
-    from benchmark_registry_ingestor.engine import PublicationPending
-
-    payload = json.loads((ROOT / "data/batches/p4-seed.json").read_text())
-    calls = []
-    ingestor = Ingestor(database, lambda: calls.append(token(database)))
-    ingestor.run("batch", payload, commit=False)
-    assert calls == []
-    ingestor.run("batch", payload, commit=True)
-    assert len(calls) == 1
-    ingestor.run("batch", payload, commit=True)
-    assert len(calls) == 1
-    before = token(database)
-    # Provider correction uses the existing controlled compare-and-set operation.
-    company = database.query("SELECT name FROM companies WHERE slug='openai'")[0]
-    correction = {"slug": "openai", "expected_name": company["name"],
-                  "corrected_name": "OpenAI test correction", "reason": "fixture"}
-
-    def failure():
-        raise RuntimeError("materialized store unavailable")
-
-    with pytest.raises(PublicationPending):
-        Ingestor(database, failure).run("provider_name_correction", correction, commit=True)
-    assert token(database) != before
-    assert database.query("SELECT name FROM companies WHERE slug='openai'")[0]["name"] == correction["corrected_name"]
-    assert database.query("SELECT count(*) AS n FROM registry_read_changes")[0]["n"] > 0

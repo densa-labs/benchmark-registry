@@ -2,7 +2,7 @@
 
 Applies to tracked Registry data and ingestion source files.
 
-Read the root `AGENTS.md`, `data-contract.md`, and `registry-numbering.md` first.
+Read the root `AGENTS.md`, `docs/data-contract.md`, and `docs/registry-numbering.md` first.
 
 This directory is evidence-backed project data, not scratch space.
 
@@ -49,7 +49,7 @@ Do not simplify tracked source files in ways that make provenance unrecoverable.
 
 Never assign a Registry No. until namespace and release order are verified.
 
-Registry number assignment follows `registry-numbering.md`, including release
+Registry number assignment follows `docs/registry-numbering.md`, including release
 precision, immutable published numbers, append-only late backfills, and namespace
 exhaustion.
 

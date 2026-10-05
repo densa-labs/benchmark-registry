@@ -20,12 +20,6 @@
           "database_id": "59a384d9-5fba-45e4-97be-3bd1e047def1",
           "migrations_dir": "../migrations"
         }
-      ],
-      "kv_namespaces": [
-        {
-          "binding": "READ_STORE",
-          "id": "0bc4e56c19ab4a95966f0c81fe13a579"
-        }
       ]
     },
     "production": {
@@ -36,12 +30,6 @@
           "database_name": "benchmark-registry-production",
           "database_id": "a7b3e1d1-34d6-432b-bd31-8ec4636916ab",
           "migrations_dir": "../migrations"
-        }
-      ],
-      "kv_namespaces": [
-        {
-          "binding": "READ_STORE",
-          "id": "6063f8ffd85d416a9bc56c75ddf5ea12"
         }
       ]
     }

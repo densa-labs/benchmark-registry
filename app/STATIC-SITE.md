@@ -107,8 +107,6 @@ production deploy:
 
 ## Rollback
 
-`npx wrangler rollback --env production` restores the previous version,
-including the last Worker-rendered version. The ingestor still refreshes the
-retired KV read store through `npm run materialize` (namespace IDs are now in
-`wrangler.maintenance.jsonc`), so that version keeps serving current data. Remove
-KV and the materializer's publish path once rollback is no longer needed.
+`npx wrangler rollback --env production` restores a previous static version.
+Versions from before the static migration rendered from a KV read store that is
+no longer refreshed, so do not roll back that far.
