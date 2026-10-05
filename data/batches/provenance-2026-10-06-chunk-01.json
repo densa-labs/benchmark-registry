@@ -1,0 +1,4063 @@
+{
+  "records": [
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1402024b04794e1aa19355a4e9c2c3ce8dd3c16a40e3af97f1c0f123456fa600",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "68b8992cb297e1aee5aca8073a9af5e4ea7cb17f6ec18fb86051aff950a930df",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a521134620ebd10011134f3f9d2f4985b66626f1b54f30312d74cbd467d7becc",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eb012ae001229dcfcf2b41e839a6d7e5c5743faa87d23e9fbcebe46ab914517f",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "01e65d639d77332018d51ea4e671718faa1acb93fd76e3009cb8ae9575ec7b5c",
+        "source_type": "Evaluation report",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1421534eabb88eb1fe44dd205a73e950f0e38165700f7e4f05782b422ec74834",
+        "source_type": "Evaluation report",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "03e62b17c9b6fb6bde0a3dafb2abcb1536416aafd06586ecf55d97c08d26b715",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "06bb9bc5a4a78754e58624b5dd724774743e0f8f165ea17919f0aedbc9fd303e",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "08367bb09b5ccee9c10c33ec0f8ae06c3b285dfad0a1ac30607c2d9adf521540",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0b9a9b51b35b1c459760bd6da8a26e209bfbe89bab59a53a0721f021231ce0aa",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "22b058b425f881197c796de2ea05d5d1e21b0cb5ad84c12ef8e3046b5a549233",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "44b864e3382efbf6728eec615703ca8b1b3770e29bf577609725e17ce3eb22f5",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "489560ea95e02079ad7801a180b9fc2b6cc50ad575b418ac978e38a8bad699e8",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7743e455db018b42253337041cf741956ccd3c1adb6185524a7b83b2fd5d70a6",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7d9f144653911ca11229ccae76881b05b621e180087e97254be3dda04b7fab15",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "80e6b048bff2661acb5f7a1b7dd9b8a0070216f04464bf25d7077207a308db26",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "870d5a89e530a380738de4e1b4dc2ea30ac7579c519e5cebcc126675745e4ffc",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9c29e862724ba3a2d44a0ee8f8c5fe77de3a4c06b3b4c06c064f7dbe002ed4f0",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a06be555fdcf5613ae14ffaf84045668c0e467ab8536cbdd22a67e26f9767794",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ae8d01ceb9cd84ab1df371c2f6c6f1b324042aebd0e3bd817e0d6e1394562c93",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b59979832396f8d55b62bd94b0d13d6536c7d4009614381cfad85c8d49e33922",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c3362075fd86afb1b8e12622a40fe63ea7aa035938ca8b5f434bbc2904e9ba43",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d655d2feab06bcf2ba2ecc1900ba9f7dd36ab0e7d5be1f7248b57247791b9927",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dab949cbc8ec6f665f17946844937810e4f47450c2feaaf4938445b90d21379e",
+        "source_type": "Evaluation methodology",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3547c17af898e74f764078c256a695a0a8c2db0b19f42bc21e2d91c75c59d8a2",
+        "source_type": "Safety report",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0e213b1889c14530bb4966ec7d13f2cc3c7a36d31924f69a7debd443f2c8ee6f",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1b574c50fd1c6085db7f1245aeae62a714850121f5feb077b297d02987e46c77",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2d83f88dd96d270c96c142616e062c7252155409a6ef68a6fa4d674266ab3550",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "385f9f372337a93943da043ef98ce4c98ca5cdefeb51ac4567cf4fcd5495b3e1",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3d96bacf7019860079b1f414d498696e7fcbadc2bc12aa9509b8d086c593f1d3",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b240f64f9c3427298fe24d938af541bf83215bfcc72d578f3276d77c48c9e7c",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b19cc99f8581a76a68e66516fdb16618bd1d1d3352a643ba868371b86f0faff4",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fe6f5d5b7af3c48e5b3a051be8cf2ec27b9b93b741b5e0a29cc393c5d850fc0e",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/cursorbench",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0aaba5e202d8db0095e354fa9cb394811174bc583444c6976affc3bc1b9a031e",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/evals",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4543f7e02affd5f93e0ca4b4b1f53d6269033baaeb228828d70cf367269afb9b",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/evals",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "54650f9cc9dce85b11ab88bbf260aa487a42892d28c2c233617fb6cc697bade3",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/evals",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "579666bf10a4b6962e9b7e84c3a62c62c531218e4276e570841cbe6b5406c155",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/evals",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "877d9f7b30f6a84d890199415706b9d08e5f6ef6705d42bf65276a9c1c0264af",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_url": "https://cursor.com/evals",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "00345482e38f5491404406972f9b54afe1effbe1d87e7850fe9e65aa26940782",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "08ad750b46f6afc1ab42e3e9fa240d38cebad8688364bb2f19187f5f9f51cca9",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1286b2e0b2ee33e4258a0c9faacc3c3251a231ca109afd0d3b00b3ee07af6106",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "17f499de865069819a5c3cfcf536303ead2ac609dd183866a1e0bcb4dcc39535",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1c63991153518a478eb1f18f4bf12e20818d2199a3b73e7ebcb8fcb687fcba50",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "21a523440fc8bd3c3fba546e741f31b5e47158f59ea4e68f909170b07e692f9c",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3038ca6ff670a26758cf55c19be9a7877b6993a57f8dbf007432669eefd63299",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3199d683ad756cd30fe401d1a8cc8f724920b7b651ebdef346e864102df3e34f",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3be3d3420441e722c6c0e1a42d2e3a2a9c204d4baaa9fab2bd893efbefe8a20f",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "42fe0f16a2536a4a47b21310bf2fdbba1ccdab90ad7806818555e9d53b5b8e3d",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "486340afa38a52d5403554fa8ed2f5d1bb6b0938b1cd908493273c9748961a2d",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "64b8006ee7087a593679afbad34377d2dc140db970c7b2cc3826f1a7e452dc11",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "72c35f806c041d1ecde9aba87a46d87b868b3618a47a60d12dc8b2e3d1e71b45",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "76109f8250c0d324e17c896040ecd17f34f1383e9dbcb929b5eb7d4c653b7979",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "85704fe2b47d7898fa5689edd2c12b9317f9a7f247edb4e2484d84415f6160db",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7aaab56f9868f3a9b3bf3902542fa6668853a4220027c14c258ffe002807debd",
+        "source_type": "System card addendum",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c7f7f6bca8132e0e6ad25185b8cab9565f93b3b40a35a927b96c79ec153e50a0",
+        "source_type": "System card addendum",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f648032ae249386d2ff50cc05432a40b45fb46469e911d80352a74c10fda5a88",
+        "source_type": "System card addendum",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0075580953c78501bcbd23dc6efdc197c84436446882a666ebff6d086ea825b6",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "19a9eafdfe17b08c6c1dd51daa8ea3786a59208076ca52b310704cc9627f54cb",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "277663227761917c87be41aec6bac5de53b53f14ab342ae36259b1f0442bee9a",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2a799ca5cb5cdb1d706de5d474bef556f9b03be0f972343da292a38fa3cc3353",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3a3e74b7939c1bdfe21d5e595520341742b239eb12af1810ccf4065fd00a8f7d",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "48caa5cc3efb422b4d9423521af3237a8871fcf904cf74a72611dd571fff9d9e",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4d84b46456508a033fdded4bc18c3650065c0db4e79e08954a0902cb7236324a",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6b3e3a8588e4514a6f3c18a3274f53c10f5553e907b94c342d2104630183bde6",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6cb7cad0900aaee63820d9683fc373f6fa3b4024bb5145d128122db3ebfcd998",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "729f4d612ceb66667ec7669acbf179ba19598d805f14f73423b750ae81ebb34e",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "76c111e07e5b2d04b45f9de447222180a320ff63c0adf101479c28541ff123c3",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7f2d3cb442596fc2c4c68af95514a7552a2a3b34069d6476c5d5b2aaf5deea8f",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8249e76fc6ded2f14b21daddd5f9e653ea88d067b304f2957b4a5cbb0255187c",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "84236a0943b794298d393dbd23cab16c943fb0c3a767db2bc76a7dd5894ee410",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "947c1108ac2ded853b62416c901315fd58a928341b35edea0e31d535286cc0dc",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9ee808ca6841c102d9808eb12e3e7eeec30570226b4af1603d5a23008548da29",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "abdb1a46c1d68db9f9019d7af921779703b05f730f629259752583102c1214ed",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b8949a7771d539aa42251f42dddddb5075cc28eb392fa8b7cca1ae3ff5dc6ffe",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b949e220907b72c55679f91c6b87af2b1c619a46202fd4ec74885a50d0379034",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bc442da079e4490125e599ef07fbf686c7844c3afa7ab55741fdadec12de522c",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bcd52a9d46763ba5096051e95550297db07d060517aa3e5530ab6d58c8d68df2",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bd6ac6208e834a732246524808c72fad401396fef9b8f73f50dc5d66e2653dd8",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c52c96f8ea8c56624c42cb38ea690f1440a416dfce44c5d3b3d788172b83071a",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c9c328e2eef49f8ac6123287e11e5e6ef4501888b45b272922ea5949f35b5863",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cca8cb5e942612d4d9469b57873e6589006a1d9410771e4c63879e1ce41593f2",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cead249e76e0fe0dd027fac3d2914570a2c7b4d344158bdb698a910b2df03067",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e634ad7af34db0d83d37a56c0b06f686f2e4d7f8f979bdfea5f92e9263d977a2",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ea0cd1d1a91589e6579885ed8030ccd6a149496d7ec1fa5b7cbb2b00825d0513",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ed1a1457af653ac863fb8440bc7a5045fdecc554af207f56cb0eec9ac430fdb0",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f220c9443a5a6cbc7d950350771892c09e6ba0671ca89177a25c5d1f7ec2643a",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f3be80a40282f4eb0de4a6de49e514d7699974516ae333eb4e877c88f6f7ffb4",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f898cb89493b73ec78ac04fed65765d2038d4a571e6c2feea7943a47e2b685e8",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fbaac61957531b7451abad4605739f1b19d2bcce12df641a4035a46d57e3b1ae",
+        "source_type": "Model card",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "132c955a3ba2007f1dbb6bcb22ad1ba6fed2c4586985ae8c4c8c525fde6366a4",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2b14b7ca9cf8d2c10f80d601a6713eda8ff279e930cbe78f4df554c2177963a5",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2ca04b32be1b4ef4932b8693e312d85dbf1817a64c61cd265203af519eb799f4",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2ffd1d9e1ad1f58528f55b8274c82b1a1ffdee368763fc56e269b46444297c8a",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3c1eab50dbbafb641be1c2c855054167dfa4d80e4c8a100c55d9b2a496c9b9c8",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "42259d306578ead02badb9fb9676309aa375be0505103d65a1abcfd579f7a1c2",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4c1468d3920e704b04fd00cb889498b717add09d9bc9c9ba7ca41df8a55bf4bc",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "50db30c1b738c75f88cf3c438f11bc075f1320ef4915849ac41851260c78f267",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "51782dacdce6ea5c36317d0e92e9ebbde891318ab045552913f04bf084246d27",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7a20fd3bea39d8bffe2c1d86e70ddfcc43a0a113ab07b67fb67d64e0889909b2",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "81cba28fcc71642189aacca4b6669b1dbfeea8a594d64e1396e8de9f8cd74c17",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "868e071821ef3953c4520a4bf22b5c967e41ec23d73dfd320cc7a162e08e380e",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8b53114bbef0dfc66b2d0d4a3794ca2fcb151558408c3e3bd0ac6f4cc251b007",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8c2247105651fab2072b44efc72439de7edbb07d35a4762142dbb35bb13bcba0",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8c3cbb4605e79759cf71a5fa439f41bc6585b44d3417ed47db802d12c1d2c2a7",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "97ddbd41aceb651500a2ec8a60aba47d3e9470082de3f048a00a520a32b5e753",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a4a340dbc952fed43cf42df4f69f8f32e2ba6fa2a186b558541b60fcf62a4713",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aac54846ecd65902b4e01a732a80639e5306e219f0c82045e2c4d132555206e6",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b46a2aa052dfb203bab4af7ddea7501fa5650716d26048131f1012d275a932b4",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b9a38e205935784ebfdfebdd023dd452fbd8f95bef77c7336f8ebac2df1c659c",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cc5da57509f7cb139b844f3b62cb9582d6fdb863e520775a76f0a97a16511e76",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e8bf22e39842e74c6c566e467a2af2dce0e4ef7df467607a89f634cea21fd2a4",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f32d07bb3e935147b002bfbe5deddfa00475fbc7a09aafe605aae8e6295ad921",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f474f9ed7c1037033c63c8b71894051ae56cbb39ae654277b9f748c60707f1d3",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fc4bcf64b2a1f22e7a63d14a72bb107c97806de8a053f38b27f9411229566c1b",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fc746279eab8455f0fd07ef4e1131711cb5db668bf00b0623a7d95e07ebe97f9",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "02179d64fdcf127231b5d1907400466d90843089823585d51769e2a183aa8f62",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "030bdda19326916c462bac5fe67420fd6efb47e27daffc89505c56bb81f07514",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "04a3d4c59560ad06cefa23b192073d31e847a13651d5bdaea605762dc047a155",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "14f5a255f79e0760e2f980ab2924fe94dfa1fc07a260a3840cf05f0479b6c678",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1698095624759a8ba4d72646491a7b81515ffbd154fc4ce60400b3e972c3c15a",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "194785d78bb06429b97beb490dca1770240e9733a55e96248545d5d31cdafb36",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1b235b86e7ab54abd1e893f66ceac37d26549ae46673ad8e85e765be7c98dadb",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2248e77b6c51bb289db62f9be33aa0b046854bd1e2275e15ede0a5ceff96f4ba",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "27280b631fda0d088494d3a4f149e48803cd8ac2ae84b1b1838a09a59774870d",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3c2c585a6c1c71232e36fd87a2a6f20effa87bedf0bf67410f24a07fe0f0bca9",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "457c4bbe9d5c64bfaf703281b6fb89e0a01ad44ca0710073bcd06166843d4d89",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "523763a3772118d29ce0ae0ee82885776b28c5d142b00eb86886cd06cfb1b3cc",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "59359c08349b3251f218317bd7d235461241737d48f1831faff07da8cf51bea4",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7c11d3952099221b64530a92867b8fcba68c583ff9ab68e86529f44c85f1c82c",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7f7ee2b62a41f351cb30249d135a51e353cfacb3c88c7ee91d826038eb07afe9",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "81674dc0d61a33770688302c89835eefd8e7fe5affb8a0c590af4db0a88fb434",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8227a20c4cc3fa0086d67251a11fb817a086997ead9e03e5e9ef2174b54f0e09",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "85a945930fe928937c3334c4d7468f25c236d533af2c039e5748a3949919b88e",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8df63e592f4d5720d818e3952c15e78db220aff56ef053900410a3c0985857fa",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9240b65bf6314f156ac0f78e33ccace3b1f76a0be72f751441034672d05b62f1",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b4175a3eca1ff696c4c8fde0b1b18b6513b8a0ca6e3bb3ceccefd9eca58e5472",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c77887cade54c47a0d4e39db5bbb4c7675b0b0f38b3d92bd4dc219bfe2c57877",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e1083219a870396556b5cfdea9194bf525c3c98087564e146affd60013fb4b65",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f238c4fa66672fe74cadf17ff125e6d3e4080223f884d1ff2c0d025892e832f0",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f85465d2020e30def856dc3d5c0c721f61a42bca6afd04362ac7aec9a4392620",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fbcf9396c66dc207bec7796566f5b1de332d0c4e2eb40f5be954e7f39cfd3d2d",
+        "source_type": "Model card",
+        "publisher": "DeepSeek",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "040c4a2b8b0f8524f26ed23c4d085170d338839560f7318db6f92534d29bfbf4",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0d767e922c106e0f12a3310f5bb759fa0d2eefda557de262c26770c0b61e845a",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "11acbf398644ffbb6313ee3407d4f54c0e68868e5c9dd272784a79f71d850182",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "33a4c35d33eb3513a5091f0612b4706d6f7dcf9090466221b56d94dcee14daa8",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "371996bbc4c8c220a7fae5a477a44bfc63dc01a2dd4b839193d70d0b2ab4875d",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3d0580d327105021504da9290e87d5346a61ccf8e51c05dd93d28a7374c5c84e",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "444a2c85e2fbeada68d02aeec887f9b0419fdabf14f583ccde9fcbc42ef6ed83",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4456fc2a19f7cc32215db6f4d9178eb32380a6cdb04f32a2ab8be3e4912ed7c0",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "509bd5787987f812de2d680c754d5d71864ced36beee4bffbebcf7a640566bcc",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "53b84c2643a21d3e9cb0424bd0956e6560b6b566b9aa2f48d8dabbdaa50346c2",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5d96b33cea625d0a6d725d63f4f9d56dde8f076091054a1d03d64b386cf8e507",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6f47f675a75a9655359827540789c55de4f25f9696c87a32f35758a428a05970",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6f5855a830828c6d1bcb08a7b27a0b1ff4d4dfdaac0d4fdbdbf6ba06a76d1ad2",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "71af89571aafb9b2454f7f4d921441885aa84494a60cfd3a1986082c914d87f6",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "72474cf80f87730041c470a7ce2b3148ecfd9006f9f23baeff6fb826f32bd25f",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "75c210e7273770adb693e52660a3cdadd345cb8e1b2fd5f2e30155692aec5f29",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "95d32a013513de05fb47f154a96a8b24d81e8adc732a9df776e0fc04164e8051",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "99fb5fe2775f597fa4df481491f9f4486ea807374f6298ddf4c28b4f03f3746b",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a200c9807f7198b9d99dc70e8a9d975708d10756917feecbdcd4bef63d6b03a4",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a6333b33dcb11edf6f393e0b484e29055d2bf84ae457b60daf778e3e1fdfdb04",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ab9729fe417733277d7310e850bf8fb51579c293494f22114c87a9e579f58771",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b4f088fa8ea92e5ba6c18a09edd4900527bb27ba6b2b3754c3dba101fabf970d",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bab81259a168fe63855648f04ba056706705ac94350298aafe7939323315a719",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d1c7cec8e7bf26ae9bc3e9f65c9f2508a6f41c44c98fe00b501e029837cebb62",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f178c08b9ba441f82dd8ec78c541e40a5d063bce9e81e620e42b4d50104a84d6",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f22da7c77f1a16998b98b8588dcd69cd05a1c8117831df3811d18feecfa8340a",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f6d9d674671389beb6c09a27092e39da11972870063b8c8f9ab48ce9ef8da711",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fbcd87496cecdf44e85263f948479daa6635f72654b0e726d111fd5cd2384e2f",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_url": "https://labs.scale.com/leaderboard/mcp_atlas",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "00b145b9b0435c1f316d29abb6ac5c1849252b17762e22377c12c6f905be5161",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "12c4a1329c7a37dbcc9c1ac334de8dd8f8bc4e1e40dbcbec707f4fd1796a1733",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "196b6a72ed7dafa02cde3b61ff1668444799cd43b214a58fcfc5898e80b2db44",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "614dc9391ce79fd3b1db93668b31ae5d147bfaf95ec237801797133448b1e9bb",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "723b4a8291aa7647c855ab92f2ea71a79227643997694c38df135bd72aa1fbec",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "734372ed21dbd9483ba7738c96f6c873a056414acab2cf469d630de2cccd8df8",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "795f202e254c1ced613127f1c8ef395584989a484857aba20a5b8d260e965945",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7aaa80c53bc007c77a33e77ea3bc28c8117f1f7440293cba2fa2f603e65f1575",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8640cbc3f709c8e37617a4b71f34db45db9761bde4fbdfc91f4d4306be31cb33",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "92f086f214c8716b7f5bf86b25664d03a01ca53f4b68c7e48d265856b9ef7984",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "988c013bcec3f1f4e5b96eec8395eb810c4d4216b4f365c974a9a26d685228a0",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9fb788b8938318f874b1d7a8f730cfda5fbd48c75bbdb1cbd9a704cc105ec8f3",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a85c34c03a16b28db549f5b34ff45929f080dbcd9e68a7a2f9af5139420f55f4",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b1c14889aacab853164aaf9e850f147f0616152f11c8b93cb77a25bf4e1be643",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bd80caee652790cd23d4a537390e4932575bcf9c74977356af975d2700c012c0",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c34e5942f9b7f024d52b2440b297841e61e1ccb8a42335c02cf8a4c80d5695a8",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cb0325992f1794385ce6b39f78e34831aae904e1dd8140d7b3336606406bcc16",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d9489d91e78e24bb1bcc46529bde655d698a578b64f38be7e7a866aa03da7407",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "df9370d941ba4614abc27f775b4ad02166c1c7b4236fb8c93a1e7869d0d7f770",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e20186b67f444da8cf3a669de85cca6f445f87481c85772f2911e7a8dab2679a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f43a5c95bb026979c6536eaac96c114b86d3f3b26d3b326543027272526b3e48",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "03a81754ab5785d2d9e05fd85f48517c8edfd6b8377bd8341e5986fd4e4ea2f4",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0bff3294cc9bd43f90a648f91749beae5421bae99832831ecaa40e7038e0361a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "152e6067c28f3d8dacedbc35474b4550ed85b13602abca8ac04d4bb0620cc0ee",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "15b4bd8e1a80f4a2d69e06620a645e96fc3716c233aae14e8a67766341669883",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2215597f026b50c96bb03c63ac6c4c0ab43740599c2c4dc9204142b69a723156",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c9b86e5100802c009c6360167ed8e614f88c82703c33594a9edce5d7fc2c7f6",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4477d4c7b8631f266ac0d95e6fb98af710bf2293f1f0ff24fc4583eb1a59e4fd",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "45a86a2c6cfbac0c6115981fa239d55a1ac95e264606a725a29e70e9ce63c638",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "51ea47b10eb98b07073d51661c57585f983f0bf4c536bee66b7f90bd925fa9ba",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5294ebde5932cb7a21acaaabd04f412c688f565aa95dc033bcec64826ffa3efb",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "56f90bc29cb636d83dbc9a37ee2d878cfce14aaf4ced53e1d1bcfa2da45a03e7",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "574d6d4407ca8af2c9e2cb615f8cde9c0cb1ef80f66c0cf2b9f1cb603d0b6a60",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5751fc77cef5e5a5a0cec236a6ccb4501b66912d79783bb31c72cffea858ec0d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7d3a38873a8d9f9ab7698d36837fe538992a3208be131c6de685248a49a8425c",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7e599f88f399adf589143013a59430e90f0974bb572a5e413278a5a500a2d1b5",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8f891b441775e88910fb6f46fade310577e9e069274bfa0783848d4cf1537c01",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "98691cadedf2dd4ece5569a3ef7c69a91ac685059059303f7602306020ce4086",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9d72832b5e6891857172def6e008f33b1a507ac49b71ac07d234ca1fec117d26",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a8169dd01d977745bd836103e13d82db44ad506645e770996e952350525b8533",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bc7e045ffb95cd6c0c976398bf9705489a14e99ef8f3275bab4ed3239c5f1e81",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ef9dbb7e3eba8949bac498cf058a33ff3981dae27caadcc0d52dbd4b2c9c3fd1",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f59364972e99f382feb1cd0b05f1b410b6dd593f286413468d6880f48f7cf602",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f67cc37faf6bf0c796bf19e14c564f6d6002d323e00f0972a5c569cd1cf82d2e",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f977e57ee33a052c04145360f49a86a748d944a0b0f7d23f16b86bed291113d3",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fc3c65d41ed577ba10d48125be5ccfff8ef12cbc72a7e3c4dc1333e7040a2049",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "00df6f50a1c91f72aa834124c2a508c4f0f68e98648c70e8eeab43caa655e2b6",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0168392e77f695041245efbc05061b2a5292a0e859ac7ba0c34388efcd00f444",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0203103cabe2f6a8c719f94d2ccf7dcfc4d071af5032b6916d65abe9632600ae",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "084853d18842d036477ecfa9f0139df0c95883e5839e0b733122aaa33cfe18b2",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0f84481e714ae6eb69c53ae13ff6ad4933bc93d9c738bd6b86c5f9e8ffaf4f02",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "10eb344a4b609fd1ffa521d2e4398a7b76fcf8be89efb0db92cb966ed667e219",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "11e9a8d71386a02ad3db37912bbbade20ebe73cfb832b89bfeeaa2fd3d773bcf",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "13b2d76a08b0b69a049c6adc7f5371d9f70730070fee8eb1c54db27ec3d0fc0f",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "13d99b1abc3177225b9290ee92101e8aa59f6dc167061153f3e8a4d617b62eef",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "16c9eeff018618514287cac58cd73564cfb8a51a6265a519e471ad5647122719",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "19edc871fdb966ed6cb8b609bb8cd9f94eb1eee797e3a523cfb8020714c99370",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1af2166f4bc4d9daa3144310e87965cca1ac33e46b5021398cc4cbb720d74a6c",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1cd6a0c5263d07e7833db0362b818371772a42366941b6ff9f842ce9541f808b",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "20cc3e27e8543d1c909cfe07da8830b44b5324b4f8267752b980ee6d2c759f52",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2290ab5ea3cd948dd704b97e1c5dddbe2086124992dda84046b6bee3d3f9fa69",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2685217081677c60c57f22d19dfe29695fa8ae0230eb35a26745f50956190f02",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2a1097f5e682cc8db8e9b038f356ee22c9b1825c15aa1a6aad879c2a16a95444",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c06378e9dcffdf7cc2908597740bd6f9efaf65a44930cdab8e09ccfa2e4b4c4",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2d92645f205aa044b3cffb18516cf1bac4936510bcc961850b4a481d327332d6",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2dc6b935c44b1e3f3c848117c3935104dc108a5d6be3ab4056670f4a32e1c158",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "337cca1c116121690017c2272ea1e264956f43ec2139f2f58145d1412ffe8b1d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3735ecba0eaef4bf27cdf4892fd95ae6aaccafb6ff3528f27f713d34f9746a21",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "386201e066843c6945beb1e8f81f5b3c4e684e599c0fc9ae8b924450bf5b6bac",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3d38a19a99fec7bf4f9edd6f0a0094505f0726531caea651e689bf0b289e3ded",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3da19cb937a8d0094a6cb54535a4cbefd99b3a07d05f5927a00fca72123bff6b",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3e395a9053d3beaa754c7ac226af85c8eb38dc6b402b6846eac414e67c2603b1",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "493083de6115a7e72b8bfaaf45a9c346cf68f4e2ac8a0d33d4ecad353dec2b0f",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4975541820ae239825ad2a70a96719be91caf239781eb4fea824616a7fc2e1ea",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4e17f0725d38a7b7181221fdaa266c481d0390c717a300b07df2d0a723801a80",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4f95d0849d3619b4814a5ba29a587bb4176ef973edf642f9ee9703b89cb2f4bd",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "50b11901bf31d76ba8f9594d26748b4e401734120738124b5187dd2ad1767142",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5142833a039e05c580831dd02a9624c8d5de76732d3302e706c66b1e6763a5e8",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "57f5bdb033ab19aa188816ece50706c593d56784cbf502de083bcca8acddfa49",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58b28ff179ff150725c688063b781aa7cf6c4d2248ad2111642ff194bfebf7d7",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5a923131f54cd5ef55039d5ab5f475650dd2d3e9b4c8155c6ecfe1cb225e054d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5c65a86fbbe0f74113d90e9d98c64e64dd6be446de3e5f77972de512c526ac0f",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5fa36af9356678e81559e014b3fdaeca87ee116c99a12fa8fff641f67431d6cc",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "692b0bdf6f1fec63cc6bc6fa70c689361bee1462130c3a8e6fdc0b7d3b6d846b",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6dea9ba99f825e39631abc73b2f62219d48472e9015fddd0b9249d0d2e7b252d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6e4df0ceabe0b0c5f39182cf01deec3f29b478235086a21df0fbe2e045d4a0fc",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "77a58a1e02d67cbd48df78334e3df7e946d1cbf101456bc24c3e772114fd1f5d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7b6d23f9d2ee090e37189b924c21ff6e9d0472fb46244be435751bfd84cadf03",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7f1f66f9b55f35d10dc051ef0950806d2825c332ca450f3d3bfa2348e028317d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "80e4d73ad29047376f97e617a4d18b54fa51814ab690f9066623d7f7128b71da",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8235bc7380cce0ab80c1339fbcbe34bcdca5293a43a5524ac2677d4108072cad",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "83f915579f627af7687a6cdb2b84ece0b74b4bcd13b38dd46cf952bcdf42a23f",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "979eec1f44f50270038117c3a6366fa24d9b6f636f6fbe7f7d35bf6297c94747",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9f847ba0151761fdf2fbe50662e813550788c3c7e10bf5832ec0580598cf7b02",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a0cea2d08be3a983cb9ecb311fe68f7bced8e6f29c20570f87e7d022cbae4838",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a83a860812d7843d995937d86e43cb71c14ef695a03e538d5c16e00b5522dbe2",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "afed329686822673f5193521e7a900d4429737ddecc7178d16023cf6f638572e",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b4a712ecb28613be82fb390cd699ef4dda35879fe27e57316e3fde73116bd79f",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b4ee852135a36d2597a86abf5146261fe8c188ca6e002f8617a656ab34bac513",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b5675ee7a6b3717ee2567c62241fdfa958105d3f6bf68d61ede6c8432eeea20a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c1557b86d88d98b536f82adfe2f6bb19c5c97cb1051fcba50e2add6b09be74fd",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c24a7c5b0bce76cda35f6a373082ca6feb0a8f294f7785446ef632bfc1395213",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c605ae83f7632c686c70ef0055b8e0ac60cc76a27cf5cdddfdef294dca4a0c3e",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c610ef8581ea0a202a53e2e029a10c10df0ab284a0643b07be14f5b3853b48f9",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cc1a44dcf3c184c533970838b9df24a2370ae3bc26ef35375d714b7c0ce769d3",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d56504af11c80703620b5b6731d4b07bb34fdc07a43173089bdf3a2d659aff67",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d80e64e07b5773076bfe282d1334947fb27ba23dd494140d6651a8b42720e2a4",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d987eaf38f5eea8295d184988c6e411394dfbb3fba9261a128f3d12ebd42dcb4",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "daf075785674cd7c406e839e8987c0fc9404b9c0986d087a05cca7ad40fa9561",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dec2e0ae89a2e1333ab48c14d40c2af07d8a2ccc338726328f5c85db63352471",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e05126b5b0ce24a8e6f9febd801202c67ccefd8ff00493523a412e00504f1315",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e1144234ab41c394cc1e0dd69ac7ef789ff867f4ca76ef5b439400021c8aa5ce",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ec7e4cb28a2d50fb611148e4a08f836646187b125d1c86b4e82c1ab7a2f4aa22",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ecc4e5402fc7b1c96f13f9385ee5455d40a870de2d5d66cfac86a21854fd8313",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f22509c547cffbea5aaae7ba3b90ce14cf96d9af8b6116afcae24026e3c28430",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f4bfa5223f461705f378f31a55339f699e0846dcb126b747e2d07e7d7677040a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f5c0eb4e3fc8091fb5c21bb2d4f1f9c14bbac0b1ecec622d0f657ef0b732b61e",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f65ed41757a1775b7fb655fe17dc99865b509b8988608c7f2f410b7d3257f2bf",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fbcdbf1d841ad0268fa1bcd2084a592a4e281d72f085f96381b86b87bb03ab3a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0897ff6cec9fa3d229a844a1a7fd03389437626324b89e95dca20c99af73c63e",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5ae2a2399a570d376c5c92366078c224650584801abcfa0c6c51851c375f2a09",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7e59c7b5b331f0ce2cea869f891ff15d5890a918f08786aba7854c60f8767f23",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d531272181ee047cd6645a4b158fa2074264aea6842c54ed261e443c794a7294",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0615b5b34c69a24b7b92c54353918e12410c234ad3d3687fb59be342952957c7",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0af50c995b961b96b2353c04a266fe8bdbbe937938cc55396f15839edf0c54ba",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "12a85ead1d48b334652faa0ba9766fcfba73434180d203b9aeae8c76045a62ad",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1e25ba44531ba0155d6ab6df671c94e991dd80a9332a13154e0d6a2a01fb2775",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "20e59c3f1dd7e15b33febfce79429e6aab2e40ce3d51e8e3e6ee32e371c84c92",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "215f23626e887905cdbbb284c2e204920e06f4ea34600d4ed993a075998d8d4f",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "23e3d0997c49e5e33ea9624dd773e14627404e6b5b0de5de26196e70963933db",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3c5469cdce8c2c99e5a8504fc52812cce52f3881eb86eb5a91cba5b5afab1106",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3c9d3cb399736bb1dc68f2b633e808f2c7419cfcb34da6da22d26417d0ded2e5",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3ce5980e07d45e3faede8af4cb7dc297c1211935d97e02c8df957222ef4b157b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4106993d7e81cd5114dcc3e1c77281f9a1408f44c74636540a7019ccfc09ad2c",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5399ff91ab436cf38fc72325c3f5900b1e5484409cd3da03d42df26f9f8475e3",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5bf374ef3c61649b405844019f067baff240a677a19036bcf66ed9f95973d289",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "69c9b9750b7f9c3be9b80246ad1d79f6ed587a1412cf89db928991668e72da54",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6b751915e9bcff151bde80407b38a7a4cc52fff2017e57869c10ba485e8cd755",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7d5cb813305fa2c0d88a2e4c3caa4d6b4c35da1de92f89ae81a70f9d31038773",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "87a0bb1afcdb02c83de40db05a3ad7dcf024745d0c9543de7f40cc301bacce75",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "927ea4ca97d849207dc5af42156119b93262dc2db5cc1fea803ac076aa98f723",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "93aaa1afac83148c4336bb22a97db55cd70038a0a0ad3860ec9641f0279ef619",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "99f00c03941da421fc360218fa38bcd2db447fef5069c159c84beee360b79079",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9e37f1b1477650add8af392b948c882c8250611fbdc76075d2d9c196c0b9b9b2",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a741cdd27df13b4bfa667a9799b32f8b51c61450b70a16fbebfafee8018f0358",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "adc927571729b84466abe25a0ee3b1abd5acac38cdf2c4e3e1e42e263c610068",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "adf6f88aad62bcb0bf6d090bfbe310e4a7ce0dab099fea12adb96057e05f0291",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b14c3be937cf8c9265e58fd5fd2905b4a0bed24dc671ce5d892e2c4d981e76f1",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c1edbd95992eacc912b45f56cd46e186fcaca751a33e5c8c755242ae6af7e78c",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c76e22faa2e3920e2db6b60eb09b081be0a35f3de5b394f4056a513022a49269",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d32c0ca57be0f5e34c4c4a412cc3e3546abdddbc9cc380035d8a7be9a1084470",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d41db2ceef6bde07a71bf85bcafcdb05f8adb4399897d8e53a2a5bfde18a9ace",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ef6950670d4768d1e729755417812647cf1576892457f326dd5cbabc0d33f3c1",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "039594aecfd117dcabe589588307919bbdf17e18d96cb333605cfc6828f477bc",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "24d94dac21269b0728116e10c7bb9c609f6fc385fafc19c6f928587f313c2d64",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "386aa74c1e5d6797af43597a91ab207f013efd1ba6dcf4d29b66ed8d45b5e576",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3ba369f2a37e42785bcf865c48e1200c2b40e287f1cd39d588a22d0e602df2cb",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "40e37bc59a065cae992f7d643fa2a2331cda4d57007b835b5491e0dc4548845c",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "458f524db32ad0557718882006d3853d3ac4c56e7029fa9f43e9673b56dedae7",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5702b2246348d8dc502aa6dd0a082b78cf377655d41877fbdb0483fb24caaf9b",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6afc8cc003d80d5244dcff78b24e09cea295b0201f2f18325d15baba90bbddb0",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6e1dbc464ea44bb95bce0915d36edd6d24b4ccda4bb4f8cbbd86786dfc729365",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "70ee09f22352db0b544a4ee14ab50b50b64aa27fd831814efcca85819b382bce",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7cff7f463bf992077e0af44ee8885c52a7be24196c3356476b8fdcf4ed180358",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "98545df113a0548211164f51b55c4e516f7e1e2a87ed0e0251aadc3f7a8ccd93",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a16cc68171bc4e7678d6b3e098af7474d4821733827928e988b377b6ed6a781b",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a870f752384016f25153cac2aecd22b24ec9b97819ca3e24c36686728cc55626",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b543dc10d768a717ab81ebfe4e02ae39e7aa5815044c8bc4e1f6325062d4b1b4",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b82b71be93822347be8807b7f7a7d76d7a8fe1af43b80da5657990cff3ad5a2e",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ba52869d4855dc50102b4ab7fc4cb33eae65a298c09eff751a4943eacaf45a2a",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bba1ba925ac8b206102bf1de1ac67a9937c1e10e26770fbbf381a026007f0d33",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cff136a01eae94de246f207f87650d503885aec513a7d18b720e659140d7931e",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "da9e77e74c33c472b4a1e21d70a28608c28bba7fdb0e376407da408f96bec166",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e28078ec2d41bc1de6cb5b9d673e13ec5324f941f2e36bf73f9ba8b5d58fa4c2",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f5b0e0292461dca64f7a017ac0d55947e29df5357af479d649ccfac9f396fcfc",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f85de763e157ddb98dc0ed34070974ccfb5568ef91d7c77ff5740d628c2c1bad",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "871b7103976b4cf63f321aee4af7599adc82b4f229730a40b326f03e1e3c71ac",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d071b6563a9cde32f7a7542e6f12ceb104446e24da75f9cc0a316d96d49fd978",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d336a982a43089491727d002db4663bc16a8e20b9c3888e36d749af77c8707cc",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "decdfc0a19d286e7584a4e99349e847b0adb692b57c66ffaaf939b24195b07c6",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1083aebc04d655ad9b93b657e5e0a0648b73bffe840fd66ff7f9ec3950025bfa",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "126750022018feb6f7a5598926c68e9b360c40d0ac63cc22eefc6a46d6d659bd",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "13c3a6f7f875e20f59be3509669fecfa08bda220a8183cc5d451943496f0eefb",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1bddcd836524374631779f3c5719bbb1e28938882e5d64269706642d47b4e34b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "20854ebe7ab1b6efaedb9b635d7d99e6eedfb6cf5e1dc8027c915c536baa5d92",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "40fb958a05ca12813269f7dcfd438651b0a406c5d1078121b40317d3823edb31",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "49c17613615a46b01b0cfc3d5de7a9239a6947040c5035f0fb65287cb309a0a7",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5223a52de27b660a35088fd0cf2324cca8908388cf832370cb79a7310ae8de68",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "59a9ac04248c4c20929e5a97c54046db34c7481a8d27477017aea7d367d7dbc0",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5f14fa25e518c461a6a537c4b3657ef1a124ea575b689cb1db6065fbaa57ab82",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "929e2c1c9459eb1652a3e47e958f0b691ec5945b1208908ca427c2e20b0e6a64",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "93b63b08130096b7b869e03115098f7a981a22baafe5f1a1c832394e534fbe8a",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "96dfbd7f2151517fb6f9d4b128b8c428aaa812785aba46cc9593a3a2d0c27b77",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9ae34c4e15f50d45a0417759b10d57e261f3135bfeef5bcfa7bacab888c2cac7",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c63c08eb63d1553ca0b5d3ff70d32c9e5836f55976d627c1031e9059a6c563f9",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d342258dc9630265b05a24c83c16d0ad72b8ed75274b93f66773851425923782",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d89486a8ca1ad7f59e6b90270fe3612a3a5d10994d4064239e3091d0a2d47336",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "df15b2cfffbc97d5fdbfa4dbc9e1dfd39d34530bfbc547157ad4097c0cc3293b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e50681d4d38e31532ff3ddf9c6b2e06cbf34caa4aae679d524c008b64d028575",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ff12698bb132dab0732573b1aa5d319b9d218dd623e87f2ca58a185a727ec410",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+        "source_checked_at": "2026-10-05T23:51:06Z"
+      }
+    }
+  ]
+}

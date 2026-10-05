@@ -1,0 +1,148 @@
+{
+  "chunk": 1,
+  "selection": "Every published result whose primary source is a source of one of the 10 models with the most results (Registry Nos. 20014, 20004, 20016, 10015, 15001, 110001, 110002, 80001, 10010, 10009).",
+  "reporting_basis_rule": "self-reported when the source's publisher is the model's developer; independent otherwise. Evaluators stay recorded separately.",
+  "checked_at": "2026-10-05T23:51:06Z",
+  "sources": [
+    {
+      "url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+      "observed_title": "Claude Opus 5 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+      "observed_title": "gpt-oss-120b & gpt-oss-20b Model Card - OpenAI Deployment Safety Hub",
+      "source_type": "Model card",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI Deployment Safety Hub"
+    },
+    {
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "observed_title": "deepseek-ai/DeepSeek-V4-Pro · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "DeepSeek",
+      "publisher_evidence": "Hugging Face repository owned by the deepseek-ai organization (DeepSeek)"
+    },
+    {
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "observed_title": "deepseek-ai/DeepSeek-V4-Flash · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "DeepSeek",
+      "publisher_evidence": "Hugging Face repository owned by the deepseek-ai organization (DeepSeek)"
+    },
+    {
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "observed_title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+      "observed_title": "Claude Sonnet 5.5 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from anthropic.com"
+    },
+    {
+      "url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+      "observed_title": "Muse Spark Eval Methodology",
+      "source_type": "Evaluation methodology",
+      "publisher": "Meta",
+      "publisher_evidence": "PDF title; served from ai.meta.com"
+    },
+    {
+      "url": "https://cursor.com/evals",
+      "observed_title": "Cursor · CursorBench",
+      "source_type": "Benchmark leaderboard",
+      "publisher": "Cursor",
+      "publisher_evidence": "og:site_name Cursor"
+    },
+    {
+      "url": "https://cursor.com/cursorbench",
+      "observed_title": "Cursor · CursorBench",
+      "source_type": "Benchmark leaderboard",
+      "publisher": "Cursor",
+      "publisher_evidence": "og:site_name Cursor"
+    },
+    {
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "observed_title": "Introducing Claude Sonnet 5.5 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+      "observed_title": "Claude Fable 5.1 & Claude Mythos 5.1 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+      "observed_title": "Scale Labs Leaderboard: MCP Atlas",
+      "source_type": "Benchmark leaderboard",
+      "publisher": "Scale AI",
+      "publisher_evidence": "Page footer: 2026 Scale AI. All rights reserved."
+    },
+    {
+      "url": "https://deepswe.datacurve.ai/",
+      "observed_title": "DeepSWE",
+      "source_type": "Benchmark leaderboard",
+      "publisher": "Datacurve",
+      "publisher_evidence": "Page footer: © 2026 Datacurve"
+    },
+    {
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+      "observed_title": "Introducing Muse Spark: Scaling Towards Personal Superintelligence",
+      "source_type": "Launch post",
+      "publisher": "Meta",
+      "publisher_evidence": "Meta AI blog"
+    },
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "observed_title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol - OpenAI Deployment Safety Hub",
+      "source_type": "System card addendum",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI Deployment Safety Hub"
+    },
+    {
+      "url": "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/",
+      "observed_title": "Muse Spark Safety & Preparedness Report",
+      "source_type": "Safety report",
+      "publisher": "Meta",
+      "publisher_evidence": "First page: developed by Meta; served from ai.meta.com"
+    },
+    {
+      "url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report/",
+      "observed_title": "Muse Spark 1.1 Evaluation Report",
+      "source_type": "Evaluation report",
+      "publisher": "Meta",
+      "publisher_evidence": "First page: developed by Meta; served from ai.meta.com"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "observed_title": "Introducing GPT-6 Sol and Luna | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-6/",
+      "observed_title": "GPT-5.6: Frontier intelligence that scales with your ambition | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "observed_title": "Introducing GPT-6.1 Sol | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    }
+  ]
+}
