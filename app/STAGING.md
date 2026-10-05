@@ -6,8 +6,8 @@ from the separate `benchmark-registry-staging` D1 database, and assigns only
 `staging.benchmarkregistry.org` as a Custom Domain. Staging disables its
 `workers.dev` and preview URLs so the custom hostname is its only public entry.
 
-The staging D1 binding resolves by **database name**; no account or database ID
-is stored in this repository. The Cloudflare account used below must own the
+The staging D1 binding (`env.staging` in `wrangler.maintenance.jsonc`) names the
+staging account and database ID. The Cloudflare account used below must own the
 `benchmarkregistry.org` zone. Do not use a production D1 database for staging.
 
 From the repository root, after authenticating Wrangler to the correct
