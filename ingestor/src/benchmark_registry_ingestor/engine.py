@@ -138,6 +138,12 @@ RECORD_FIELDS = {
     "result_retraction": {
         "result_key", "reason", "source_url", "source_checked_at", "retracted_at",
     },
+    "result_provenance": {
+        "result_key", "source_type", "publisher", "reporting_basis",
+        "source_archive_url", "evaluated_at", "evaluated_precision",
+        "source_url", "source_checked_at",
+    },
+    "metric_direction": {"metric_key", "direction", "source_url", "source_checked_at"},
     "result": {
         "model_registry_no",
         "reasoning_level",
@@ -365,7 +371,7 @@ class Ingestor:
                 ]
             except DatabaseFailure as exc:
                 if any(
-                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement", "result_correction", "result_retraction"}
+                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement", "result_correction", "result_retraction", "result_provenance", "metric_direction"}
                     for item_operation, _ in records
                 ):
                     try:
@@ -435,6 +441,8 @@ class Ingestor:
             "benchmark_version_configuration": "version_slug",
             "result_correction": "result_key",
             "result_retraction": "result_key",
+            "result_provenance": "result_key",
+            "metric_direction": "metric_key",
             "result": "run_ref",
         }
         value = record.get(fields[operation])
@@ -1704,8 +1712,9 @@ class Ingestor:
                 "source_checked_at": checked_at,
             }
             direction = metric.get("direction")
-            if direction not in {None, "higher", "lower"}:
-                raise ValueErrorDetail("metric.direction is invalid")
+            if direction is not None:
+                # A direction keeps its own evidence (migration 0019).
+                raise ValueErrorDetail("metric.direction needs its own source; use metric_direction")
             expected["direction"] = direction
             existing = plan.catalog.one("metrics", key=key)
             if existing:
@@ -2339,6 +2348,101 @@ class Ingestor:
         )
         result.update(corrected)
         plan.valid("result_correction", result_key, "score correction validated")
+
+    def _plan_result_provenance(self, plan: Plan, record: Record) -> None:
+        """Fill empty provenance fields of a published result, read from its own primary source."""
+        result_key = require_string(record.get("result_key"), "result_key")
+        result = plan.catalog.one("results", result_key=result_key)
+        if result is None:
+            raise IngestionFailure("ERROR", result_key, "result does not exist")
+        source = _source(record)
+        if source["normalized_source_url"] != result["primary_source_normalized_url"]:
+            raise ValueErrorDetail("source_url must be the result's primary source")
+        values: Record = {}
+        for name in ("source_type", "publisher", "reporting_basis"):
+            if record.get(name) is not None:
+                values[name] = require_string(record.get(name), name)
+        if values.get("reporting_basis") not in {None, "self-reported", "independent"}:
+            raise ValueErrorDetail("reporting_basis is invalid")
+        if record.get("source_archive_url") is not None:
+            values["source_archive_url"] = normalize_url(record.get("source_archive_url"), "source_archive_url")[0]
+        if record.get("evaluated_at") is not None or record.get("evaluated_precision") is not None:
+            evaluated_at, evaluated_precision = normalize_temporal(
+                record.get("evaluated_at"), record.get("evaluated_precision"), "evaluated_at"
+            )
+            if evaluated_precision == "year":
+                raise ValueErrorDetail("evaluated_precision must be date or timestamp")
+            values.update(evaluated_at=evaluated_at, evaluated_precision=evaluated_precision)
+        if not values:
+            raise ValueErrorDetail("record at least one provenance field")
+        conflicting = [name for name, value in values.items() if result[name] not in {None, value}]
+        if conflicting:
+            raise IngestionFailure(
+                "CONFLICT", result_key, f"recorded provenance differs: {', '.join(conflicting)}"
+            )
+        missing = {name: value for name, value in values.items() if result[name] is None}
+        if not missing:
+            plan.skipped("result_provenance", result_key, "provenance already recorded")
+            return
+        assignments = ", ".join(f"{name} = ?" for name in missing)
+        guards = " AND ".join(f"{name} IS NULL" for name in missing)
+        plan.statements.append(
+            Statement(
+                f"UPDATE results SET {assignments} WHERE result_key = ? AND {guards}",
+                (*missing.values(), result_key),
+            )
+        )
+        # Fail the transaction if a concurrent write filled a field differently.
+        plan.statements.append(
+            Statement(
+                f"""INSERT INTO result_corrections (result_key) SELECT NULL
+                WHERE NOT EXISTS (SELECT 1 FROM results WHERE result_key = ?
+                    AND {" AND ".join(f"{name} IS ?" for name in missing)})""",
+                (result_key, *missing.values()),
+            )
+        )
+        result.update(missing)
+        plan.valid("result_provenance", result_key, f"provenance recorded: {', '.join(missing)}")
+
+    def _plan_metric_direction(self, plan: Plan, record: Record) -> None:
+        """Record whether a higher or lower score is better, with the source that says so."""
+        key = require_key(record.get("metric_key"), "metric_key")
+        metric = plan.catalog.one("metrics", key=key)
+        if metric is None:
+            raise IngestionFailure("ERROR", key, "unknown metric")
+        direction = require_string(record.get("direction"), "direction")
+        if direction not in {"higher", "lower"}:
+            raise ValueErrorDetail("direction must be higher or lower")
+        source = _source(record)
+        expected = {
+            "direction": direction,
+            "direction_source_url": source["source_url"],
+            "direction_normalized_source_url": source["normalized_source_url"],
+            "direction_source_checked_at": source["source_checked_at"],
+        }
+        if metric.get("direction") is not None:
+            if _same(metric, expected, tuple(expected)):
+                plan.skipped("metric_direction", key, "direction already recorded")
+                return
+            raise IngestionFailure("CONFLICT", key, "metric already has a different direction")
+        plan.statements.append(
+            Statement(
+                """UPDATE metrics SET direction = ?, direction_source_url = ?,
+                direction_normalized_source_url = ?, direction_source_checked_at = ?
+                WHERE key = ? AND direction IS NULL""",
+                (*expected.values(), key),
+            )
+        )
+        plan.statements.append(
+            Statement(
+                """INSERT INTO result_corrections (result_key) SELECT NULL
+                WHERE NOT EXISTS (SELECT 1 FROM metrics WHERE key = ? AND direction = ?
+                    AND direction_source_url = ?)""",
+                (key, direction, source["source_url"]),
+            )
+        )
+        metric.update(expected)
+        plan.valid("metric_direction", key, "direction recorded")
 
     def _plan_result_retraction(self, plan: Plan, record: Record) -> None:
         result_key = require_string(record.get("result_key"), "result_key")

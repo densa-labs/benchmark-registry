@@ -92,6 +92,8 @@ def build_parser() -> argparse.ArgumentParser:
         "result",
         "result_correction",
         "result_retraction",
+        "result_provenance",
+        "metric_direction",
         "batch",
         "replay",
     ):

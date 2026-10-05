@@ -1364,3 +1364,65 @@ def test_distinct_run_flag_and_other_evaluators_are_accepted(
 
     lonely = revised_result_record(distinct_run=True, reasoning_level="high")
     assert_failure(ingestor, "result", lonely, match="only when the series has another result")
+
+
+def provenance_record(result_key: str, **overrides: object) -> dict:
+    record = {
+        "result_key": result_key,
+        "source_type": "Developer model card",
+        "publisher": "Example Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://example.com/results/run-1#row",
+        "source_checked_at": CHECKED_AT,
+    }
+    record.update(overrides)
+    return record
+
+
+def test_result_provenance_fills_empty_fields_only(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    before = database.query("SELECT result_key, score_value, primary_source_url FROM results")
+    first = ingestor.run("result_provenance", provenance_record(key), commit=True)
+    second = ingestor.run("result_provenance", provenance_record(key), commit=True)
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    assert database.query("SELECT source_type, publisher, reporting_basis FROM results") == [
+        {"source_type": "Developer model card", "publisher": "Example Lab", "reporting_basis": "self-reported"}
+    ]
+    assert database.query("SELECT result_key, score_value, primary_source_url FROM results") == before
+    # A later chunk can add a field that is still empty.
+    added = ingestor.run("result_provenance", provenance_record(key, evaluated_at="2026-09-01", evaluated_precision="date"), commit=True)
+    assert [outcome.status for outcome in added] == ["VALID"]
+    assert_failure(ingestor, "result_provenance", provenance_record(key, reporting_basis="independent"), status="CONFLICT")
+    assert_failure(ingestor, "result_provenance", provenance_record(key, reporting_basis="secondary"), match="reporting_basis")
+    assert_failure(ingestor, "result_provenance", provenance_record(key, source_url="https://example.com/other"), match="primary source")
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("UPDATE results SET publisher = 'Someone else'")
+    # Replaying the original result after a backfill still skips.
+    assert ingestor.run("result", result_record(), commit=True)[0].status == "SKIPPED"
+
+
+def test_metric_direction_needs_a_source_and_is_final(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    seed_dependencies(ingestor)
+    direction = {
+        "metric_key": "accuracy",
+        "direction": "higher",
+        "source_url": "https://example.com/benchmark#scoring",
+        "source_checked_at": CHECKED_AT,
+    }
+    first = ingestor.run("metric_direction", direction, commit=True)
+    second = ingestor.run("metric_direction", direction, commit=True)
+    assert [outcome.status for outcome in first + second] == ["VALID", "SKIPPED"]
+    assert database.query("SELECT direction, direction_source_url FROM metrics") == [
+        {"direction": "higher", "direction_source_url": "https://example.com/benchmark#scoring"}
+    ]
+    assert_failure(ingestor, "metric_direction", {**direction, "direction": "lower"}, status="CONFLICT")
+    assert_failure(ingestor, "metric_direction", {**direction, "direction": "up"}, match="higher or lower")
+    assert ingestor.run("benchmark", benchmark_record(), commit=True)[0].status == "SKIPPED"
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("UPDATE metrics SET direction = 'lower'")
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("UPDATE metrics SET direction_source_url = NULL")
