@@ -81,7 +81,7 @@ export {isIndexablePage} from ${JSON.stringify(join(root,'app/src/seo.ts'))};`);
     const {response,document}=await read(parsed.pathname);assert.equal(response.status,200,url);
     assert.equal(document.querySelectorAll('link[rel="canonical"]').length,1,url);
     assert.equal(document.querySelector('link[rel="canonical"]').getAttribute('href'),url,url);
-    assert.equal(document.querySelectorAll('h1').length,1,url);assert.equal(document.querySelectorAll('title').length,1,url);
+    assert.equal(document.querySelectorAll('h1').length,1,url);assert.equal(document.querySelectorAll('head > title').length,1,url);
     const title=document.title;assert.ok(title.trim(),url);assert.ok(title.length<=70,`${url}: title length ${title.length}`);assert.ok(!titles.has(title),`${url}: duplicate title ${title}`);titles.add(title);
     const tags=document.querySelectorAll('meta[name="description"]');assert.equal(tags.length,1,url);
     const description=tags[0].getAttribute('content');assert.ok(description?.trim(),url);assert.ok(description.length<=160,`${url}: description length`);assert.ok(!descriptions.has(description),`${url}: duplicate description ${description}`);descriptions.add(description);
