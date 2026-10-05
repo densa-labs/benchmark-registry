@@ -182,6 +182,7 @@ def validate(batches: list[tuple[str, object]], database: Path | None = None) ->
         "establishment_gap_documented",
         "primary",
         "same_run",
+        "distinct_run",
     }
     integer_fields = {"sequence", "display_precision"}
     nested_fields = {

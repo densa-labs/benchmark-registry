@@ -1318,3 +1318,49 @@ def test_result_retraction_keeps_the_row_and_is_final(
         connection.execute("UPDATE results SET retracted_at = NULL, retraction_reason = NULL")
     with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
         connection.execute("DELETE FROM result_corrections")
+
+
+def revised_result_record(**overrides: object) -> dict:
+    record = result_record(run_ref=None, score="92.0")
+    record.update(
+        source_has_single_run=True,
+        score_raw="92.0%",
+        reported_at="2026-09-20",
+        sources=[
+            {"url": "https://example.com/results/revised", "checked_at": CHECKED_AT, "primary": True}
+        ],
+    )
+    record.update(overrides)
+    return record
+
+
+def test_derived_run_ref_in_an_existing_series_needs_a_curator_decision(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+
+    assert_failure(ingestor, "result", revised_result_record(), status="CONFLICT", match="distinct_run")
+    assert_failure(ingestor, "result", revised_result_record(supersedes="0" * 64), match="same series")
+    assert_failure(
+        ingestor, "result", revised_result_record(distinct_run=True, supersedes=key), match="not both"
+    )
+
+    outcomes = ingestor.run("result", revised_result_record(supersedes=key), commit=True)
+    assert outcomes[0].status == "VALID"
+    assert ingestor.run("result", revised_result_record(supersedes=key), commit=True)[0].status == "SKIPPED"
+    assert database.query(
+        "SELECT run_relation, supersedes_result_key FROM results ORDER BY id"
+    ) == [
+        {"run_relation": None, "supersedes_result_key": None},
+        {"run_relation": "supersedes", "supersedes_result_key": key},
+    ]
+
+
+def test_distinct_run_flag_and_other_evaluators_are_accepted(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    committed_result_key(ingestor, database)
+    assert ingestor.run("result", revised_result_record(distinct_run=True), commit=True)[0].status == "VALID"
+
+    lonely = revised_result_record(distinct_run=True, reasoning_level="high")
+    assert_failure(ingestor, "result", lonely, match="only when the series has another result")

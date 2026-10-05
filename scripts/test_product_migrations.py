@@ -180,3 +180,20 @@ class ProductMigrationTests(unittest.TestCase):
             self.assertEqual(
                 before, db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
             )
+
+    def test_run_relation_up_down_and_records_unchanged(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript(
+                (ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text()
+            )
+            before = db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM results WHERE run_relation IS NOT NULL").fetchone()[0], 0
+            )
+            db.executescript((ROOT / "migrations/rollback/0016_result_run_relation.sql").read_text())
+            db.executescript((ROOT / "migrations/0016_result_run_relation.sql").read_text())
+            self.assertEqual(
+                before, db.execute("SELECT result_key, score_value FROM results ORDER BY id").fetchall()
+            )

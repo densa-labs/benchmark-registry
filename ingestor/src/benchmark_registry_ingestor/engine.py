@@ -157,6 +157,8 @@ RECORD_FIELDS = {
         "reported_precision",
         "evaluator_keys",
         "sources",
+        "distinct_run",
+        "supersedes",
     },
 }
 
@@ -2101,6 +2103,7 @@ class Ingestor:
         else:
             evaluated_at, evaluated_precision = None, None
         expected["evaluated_at"], expected["evaluated_precision"] = evaluated_at, evaluated_precision
+        expected["run_relation"], expected["supersedes_result_key"] = self._run_relation(record)
         existing = plan.catalog.one("results", **identity)
         if existing:
             core_fields = tuple(key for key in expected if key not in {"source_type", "source_archive_url", "publisher", "reporting_basis", "evaluated_at", "evaluated_precision"} or key in record)
@@ -2159,6 +2162,9 @@ class Ingestor:
                 plan.skipped("result", result_key, "exact result duplicate")
             return
 
+        self._check_possible_rerun(
+            plan, expected, derived_run_ref=run_ref_value is None, identifier=result_key
+        )
         result = {"id": plan.catalog.allocate("results"), **expected}
         plan.catalog.add("results", result)
         plan.statements.append(
@@ -2168,8 +2174,9 @@ class Ingestor:
                     metric_id, run_ref, result_key, score_value, score_raw,
                     reported_at, reported_precision, evaluator_set_key,
                     primary_source_url, primary_source_normalized_url,
-                    primary_source_checked_at, source_type, publisher, reporting_basis, source_archive_url, evaluated_at, evaluated_precision
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    primary_source_checked_at, source_type, publisher, reporting_basis, source_archive_url, evaluated_at, evaluated_precision,
+                    run_relation, supersedes_result_key
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
                 tuple(result.values()),
             )
         )
@@ -2188,6 +2195,46 @@ class Ingestor:
             if not source["primary"]:
                 self._append_result_source(plan, result, source)
         plan.valid("result", result_key, "result is valid")
+
+    @staticmethod
+    def _run_relation(record: Record) -> tuple[str | None, str | None]:
+        distinct = record.get("distinct_run")
+        supersedes = record.get("supersedes")
+        if distinct is not None and distinct is not True:
+            raise ValueErrorDetail("distinct_run must be true when present")
+        if distinct and supersedes is not None:
+            raise ValueErrorDetail("a result is either a distinct run or supersedes one, not both")
+        if supersedes is not None:
+            return "supersedes", require_string(supersedes, "supersedes")
+        return ("distinct_run", None) if distinct else (None, None)
+
+    @staticmethod
+    def _check_possible_rerun(
+        plan: Plan, result: Record, *, derived_run_ref: bool, identifier: str
+    ) -> None:
+        """A derived run_ref cannot tell a revised number from a new run (data
+        contract), so a new result sharing a series needs a curator decision."""
+        series = ("model_id", "reasoning_level", "benchmark_version_id", "metric_id", "evaluator_set_key")
+        peers = [
+            row for row in plan.catalog.rows["results"]
+            if _same(row, result, series) and row["run_ref"] != result["run_ref"]
+        ]
+        relation, superseded = result["run_relation"], result["supersedes_result_key"]
+        if relation == "supersedes" and superseded not in {row["result_key"] for row in peers}:
+            raise IngestionFailure(
+                "ERROR", identifier, "supersedes must name an existing result in the same series"
+            )
+        if relation == "distinct_run" and not peers:
+            raise IngestionFailure(
+                "ERROR", identifier, "distinct_run applies only when the series has another result"
+            )
+        if derived_run_ref and peers and relation is None:
+            raise IngestionFailure(
+                "CONFLICT",
+                identifier,
+                "derived run_ref shares a series with "
+                f"{peers[0]['result_key']}; set distinct_run=true or supersedes",
+            )
 
     @staticmethod
     def _superseded_score(
