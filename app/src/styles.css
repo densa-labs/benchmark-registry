@@ -1624,6 +1624,13 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .coverage-options input[type="date"] { width: auto; max-width: 100%; }
 .coverage-options select { max-width: var(--coverage-provider-width); }
 
+/* Recent: every day group shares one set of column widths. */
+.recent-page .data-table { table-layout: fixed; }
+.recent-page .data-table th:nth-child(1) { width: 24%; }
+.recent-page .data-table th:nth-child(2) { width: 42%; }
+.recent-page .data-table th:nth-child(3) { width: 10%; }
+.recent-page .data-table td { overflow-wrap: anywhere; }
+
 /* ---------- Text pages: one left edge, a reading measure ---------- */
 
 .legal-page > * { max-width: var(--measure); }
@@ -1753,6 +1760,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .data-table tbody td[data-label]:not(.data-table__primary):not(.score):not(:first-child):not([data-column="source"]):not(.search-type)::before,
   .data-table tbody td:first-child:not(.data-table__primary):has(~ td.data-table__primary)::before { content: attr(data-label) " "; color: var(--text-muted); font-weight: 400; }
   .data-table tbody td.data-table__primary ~ td.data-table__primary::before { content: none; }
+  .data-table tbody td.search-type::before { content: none; }
   .data-table tbody td.numeric:not(.score) { text-align: left; font-weight: 500; }
   .data-table tbody td .table-cell-stack > :first-child { flex: 1 0 100%; }
   .data-table tbody td .table-cell-stack:has(> .source-link:first-child) > :first-child { flex: 0 1 auto; }

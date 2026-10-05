@@ -122,7 +122,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
   return <PageContainer className="registry-page compare-page">
     <PageHeader title="Compare models" description="Model information and benchmark results, side by side." />
     {response.issues.length ? <div className="compare-query-error" role="alert">{response.issues.map(issue => <p key={issue}>{issue}</p>)}<a href="/compare">Reset comparison</a></div> : null}
-    <p><a href={comparisonHref(effective)}>Share this comparison</a></p>
+    <p className="compare-share"><a href={comparisonHref(effective)}>Share this comparison</a></p>
     <form className="coverage-options" method="get" action="/compare" aria-label="Filter available models">
       {queryFields(["provider","released_from","released_to","page"])}
       <label>Provider <select name="provider" defaultValue={state.provider ?? ""}><option value="">All providers</option>{providers.map(provider=><option key={provider.slug} value={provider.slug}>{provider.name}</option>)}</select></label>
