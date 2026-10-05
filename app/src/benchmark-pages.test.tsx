@@ -176,6 +176,21 @@ describe("P7.2 benchmark pages", () => {
     expect(markup).toContain("Accuracy");
   });
 
+  it("counts the version groups it lists and shows each version's model and result counts", () => {
+    const [base] = benchmarkFamilyResponse.data.versions;
+    const tools = { ...base, version: "Diamond — with tools", version_slug: "diamond-tools", dataset_label: "Diamond",
+      configuration: { key: "with-tools", label: "With tools", kind: "tools" as const } };
+    const response: BenchmarkFamilyResponse = { data: { ...benchmarkFamilyResponse.data, versions: [...benchmarkFamilyResponse.data.versions, tools],
+      seo: { sentence: "", versionCounts: { diamond: { models: 12, results: 30 }, "diamond-tools": { models: 3, results: 4 } } } } };
+    const markup = renderToStaticMarkup(<BenchmarkFamilyPage response={response} />);
+    expect(markup).toContain("2 versions, plus 1 variant or configuration");
+    expect(markup).toContain(">Models</th>");
+    expect(markup).toContain(">Results</th>");
+    expect(markup).toContain('<td class="numeric">12</td><td class="numeric">30</td>');
+    expect(markup).toContain('<td class="numeric">3</td><td class="numeric">4</td>');
+    expect(markup).not.toMatch(/rank|top models|leaderboard/iu);
+  });
+
   it("renders benchmark metadata, scoped controls, dynamic company tabs, and results", () => {
     const markup = renderToStaticMarkup(
       <BenchmarkVersionPage

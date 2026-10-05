@@ -20,6 +20,11 @@ export function enrichSeoContent(loaded:LoadedRegistryRoute,snapshot:SeoSnapshot
     content.related=snapshot.models.filter(peer=>peer.company.slug===model.company.slug && peer.registry_no!==model.registry_no)
       .sort((a,b)=>Math.abs(Date.parse(a.released_at)-Date.parse(model.released_at))-Math.abs(Date.parse(b.released_at)-Date.parse(model.released_at)) || a.registry_no.localeCompare(b.registry_no,"en")).slice(0,6);
   } else if(kind==="company") content.related=snapshot.models.filter(model=>model.company.slug===loaded.payload.data.company.slug);
-  else {content.top=page.topResults;content.latest=page.latestVersion;}
+  else {
+    content.top=page.topResults;content.latest=page.latestVersion;
+    const family=`/benchmarks/${loaded.payload.data.benchmark.slug}/`;
+    content.versionCounts=Object.fromEntries(Object.entries(snapshot.pages).filter(([key])=>key.startsWith(family) && !key.slice(family.length).includes("/"))
+      .map(([key,version])=>[key.slice(family.length),{models:version.models,results:version.records}]));
+  }
   return {...loaded,updated:page.updated,payload:{...loaded.payload,data:{...loaded.payload.data,seo:content}}} as LoadedRegistryRoute;
 }

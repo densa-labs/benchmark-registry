@@ -10,7 +10,8 @@ it.each(["/models/10001","/benchmarks/gpqa","/companies/openai"])("adds factual 
  expect(html).toContain('href="/models/');
  expect(html.match(/<h1[ >]/gu)).toHaveLength(1);
  if(path.startsWith("/benchmarks")) {
-  expect(html).toContain("Recently reported results");expect(html).toContain('href="/benchmarks/gpqa/diamond"');
+  expect(html).toContain("Recently reported results: GPQA Diamond");expect(html).toContain('href="/benchmarks/gpqa/diamond"');
+  expect(html).toContain(">Models</th>");expect(html).toContain('"versionCounts":{');
   expect(html).toContain('href="https://');expect(html).not.toContain("Leaderboard");
  }
 });

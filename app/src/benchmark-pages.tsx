@@ -264,6 +264,15 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
   const sharedMetric = versions.length > 0 && versions.every(version => version.metric.key === versions[0].metric.key);
   // "Latest" marks only true versions; tool and harness configurations never are.
   const latest = versions.find(version => !version.configuration);
+  const counts = response.data.seo?.versionCounts;
+  // Counts per version, shown only when the build supplied them.
+  function countColumns<Row>(version: (row: Row) => BenchmarkVersionSummary): TableColumn<Row>[] {
+    if (!counts) return [];
+    return [
+      { key: "models", label: "Models", className: "numeric", render: row => (counts[version(row).version_slug]?.models ?? 0).toLocaleString("en-US") },
+      { key: "results", label: "Results", className: "numeric", render: row => (counts[version(row).version_slug]?.results ?? 0).toLocaleString("en-US") },
+    ];
+  }
   const versionLink = (version: BenchmarkVersionSummary) => (
     <span className="version-label">
       <a href={`/benchmarks/${benchmark.slug}/${version.version_slug}`}>
@@ -277,6 +286,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
     { key: "configuration", label: "Configuration", render: version => version.configuration?.label ?? "—" },
     { key: "released", label: "Released", render: version => formatRegistryDate(version.released_at, version.release_precision) },
     ...(!sharedMetric ? [{ key: "metric", label: "Metric", render: metricLabel }] : []),
+    ...countColumns<BenchmarkVersionSummary>(version => version),
   ];
   const columns: TableColumn<VersionGroup>[] = [
     {
@@ -293,7 +303,10 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
     },
     { key: "released", label: "Released", render: ({ base }) => formatRegistryDate(base.released_at, base.release_precision) },
     ...(!sharedMetric ? [{ key: "metric", label: "Metric", render: ({ base }: VersionGroup) => metricLabel(base) }] : []),
+    ...countColumns<VersionGroup>(({ base }) => base),
   ];
+  const groups = groupVersions(versions);
+  const variantCount = versions.length - groups.length;
 
   return (
     <PageContainer className="registry-page">
@@ -307,7 +320,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
         <div className="results-section__header">
           <div>
             <h2 id="versions-heading">Versions</h2>
-            <p>{countLabel(versions.length, "version")}{sharedMetric ? ` · Metric: ${versions[0].metric.name}` : ""}</p>
+            <p>{countLabel(groups.length, "version")}{variantCount ? `, plus ${countLabel(variantCount, "variant or configuration", "variants and configurations")}` : ""}{sharedMetric ? ` · Metric: ${versions[0].metric.name}` : ""}</p>
           </div>
         </div>
         {versions.length === 0 ? (
@@ -319,7 +332,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
           <DataTable
             caption={`Versions of ${benchmark.name}`}
             columns={columns}
-            rows={groupVersions(versions)}
+            rows={groups}
             getRowKey={({ base }) => base.version_slug}
           />
         )}
