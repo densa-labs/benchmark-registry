@@ -247,19 +247,13 @@ code, pre { font-family: var(--font-mono); font-size: 0.75rem; }
   box-shadow: inset 0 -0.125rem 0 var(--accent);
 }
 
-/* The operator hint sits beside the field on wide screens, under it elsewhere. */
 .global-search-shell {
   position: relative;
   justify-self: end;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 0.75rem;
-  width: min(100%, 36rem);
+  width: min(100%, 24rem);
 }
 
 .global-search {
-  flex: 1 1 18rem;
   min-width: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -320,19 +314,6 @@ code, pre { font-family: var(--font-mono); font-size: 0.75rem; }
 .global-search button:active,
 .button-link:active {
   transform: translateY(1px);
-}
-
-.search-hint {
-  flex: 0 1 auto;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  min-block-size: 24px;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  line-height: 1.2;
-  white-space: nowrap;
 }
 
 .global-search-panel {
@@ -977,6 +958,10 @@ p.local-search__clear { white-space: normal; }
 }
 
 .data-table td.registry-number { font-weight: 500; }
+/* The score leads each row; the source is supporting detail. */
+.data-table:not(:has(.version-label)) td.numeric:not(.registry-number):not(.pivot-score) { font-size: 1rem; font-weight: 650; }
+.data-table td.numeric > a { font-weight: inherit; }
+.table-cell-stack > .source-link { font-size: 0.75rem; }
 
 .data-table a, .compare-table a { color: var(--accent); text-decoration: none; }
 .data-table td.numeric > a { color: var(--text); }
@@ -1606,6 +1591,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .legal-page section p { margin-top: 0.75rem; }
 .legal-page h2 { margin-top: 0.75rem; }
 .legal-page a { overflow-wrap: anywhere; }
+.legal-updated { color: var(--text-muted); font-size: 0.875rem; }
 .legal-page.registry-page { gap: 1rem; }
 .legal-page.registry-page > .page-header { margin-bottom: 0.75rem; }
 
@@ -1613,13 +1599,6 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 
 @media (min-width: 48rem) {
   :root { --gutter: 2rem; }
-}
-
-@media (min-width: 62.0625rem) and (max-width: 80rem) {
-  /* Not enough room beside the field: the hint moves under it. */
-  .global-search-shell { flex-direction: column; align-items: stretch; gap: 0; width: min(100%, 24rem); }
-  .global-search { flex: 0 0 auto; }
-  .search-hint { min-block-size: 1rem; font-size: 0.6875rem; }
 }
 
 /* ---------- Tablet and phone ---------- */
@@ -1640,10 +1619,11 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .header-menu__content { display: block; min-height: 0; overflow: hidden; }
   .header-menu__body { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; border-bottom: 1px solid var(--border-strong); max-height: calc(100dvh - 6rem); overflow-y: auto; transform: translateY(-0.35rem); transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1); }
   .header-menu--open { grid-template-rows: 1fr; opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
-  .header-menu--open .header-menu__body { transform: translateY(0); }
+  /* The open menu covers the page below it, so no page control sits half hidden under its edge. */
+  .header-menu--open .header-menu__body { transform: translateY(0); min-height: calc(100dvh - 3.5rem); }
   .mobile-menu-toggle svg { transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1); }
   .mobile-menu-toggle[aria-expanded="true"] svg { transform: rotate(90deg); }
-  .header-menu .global-search-shell { width: 100%; flex-direction: column; align-items: stretch; gap: 0.25rem; }
+  .header-menu .global-search-shell { width: 100%; }
   .primary-nav { align-items: stretch; flex-direction: column; gap: 0; }
   .primary-nav a { display: flex; align-items: center; min-height: 2.75rem; padding: 0 0.75rem; border-radius: var(--radius); font-size: 0.875rem; }
   .primary-nav a[aria-current="page"] { background: var(--surface-strong); box-shadow: none; }
@@ -1686,7 +1666,6 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .site-footer__inner { grid-template-columns: minmax(0, 1fr); grid-template-areas: "dates" "links" "controls"; }
   .site-footer__controls { justify-self: stretch; justify-content: space-between; }
   .theme-toggle__options { flex-wrap: wrap; }
-  .search-hint { white-space: normal; overflow-wrap: anywhere; }
   .site-footer__links { gap: 0 1rem; }
   .site-footer__links a { min-height: 2.75rem; }
   .theme-toggle label, .github-link { min-height: 2.75rem; }
@@ -1722,7 +1701,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .results-section .data-table td:first-child:not(.numeric):not(:has(~ td.data-table__primary)) { order: 0; flex: 1 1 60%; font-size: 0.875rem; color: var(--text); }
   .results-section .data-table td.data-table__primary ~ td.data-table__primary { order: 2; flex: 0 1 auto; font-size: 0.75rem; }
   .results-section .data-table:not(:has(.version-label)) tbody td.numeric:not(.registry-number):not(.pivot-score):not([data-label]),
-  .results-section:has(> .results-section__header time) table tbody td:nth-child(3) { order: 0; flex: 0 0 auto; margin-left: auto; font-size: 0.875rem; font-weight: 600; color: var(--text); }
+  .results-section:has(> .results-section__header time) table tbody td:nth-child(3) { order: 0; flex: 0 0 auto; margin-left: auto; font-size: 1rem; font-weight: 650; color: var(--text); }
   /* Index and version tables label their plain values on phones (labels live in CSS, not the HTML). */
   .data-table:has(th a[href^="/models?"]) tbody td:nth-child(3)::before { content: "Released "; }
   .data-table:has(th a[href^="/models?"]) tbody td:nth-child(4)::before { content: "Status "; }
@@ -1743,7 +1722,8 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .results-section .data-table td.pivot-score { text-align: left; font-weight: 500; }
   .results-section .data-table td .table-cell-stack > :first-child { flex: 1 0 100%; }
   .results-section .data-table td .table-cell-stack:has(> .source-link:first-child) > :first-child { flex: 0 1 auto; }
-  .results-section .data-table td .result-details { flex: 1 0 100%; }
+  .results-section .data-table td .result-details { flex: 1 1 auto; }
+  .results-section .data-table td .table-cell-stack > .result-details::before { content: none; }
   .results-section .data-table td .record-cite { margin-left: 0; }
   .results-section .data-table td.pivot-score { width: auto; }
   .results-section .data-table td.pivot-score .pivot-cell,

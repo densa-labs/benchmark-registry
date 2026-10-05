@@ -73,8 +73,8 @@ try {
   // Measure contrast after the menu's opacity transition, not mid-fade.
   await page.waitForFunction(()=>getComputedStyle(document.querySelector('.header-menu')).opacity==='1');
   await axeCheck(page,'Mobile global search expanded');
-  // Submit button, then the operator hint link, then the first result.
-  await page.keyboard.press('Tab');await page.keyboard.press('Tab');await page.keyboard.press('Tab');
+  // Submit button, then the first result.
+  await page.keyboard.press('Tab');await page.keyboard.press('Tab');
   check(await page.locator('.global-search-results a').first().evaluate(el=>el===document.activeElement),'Search results reachable through Tab');
   await page.keyboard.press('Escape');assert.equal(await page.locator('#global-search-input').evaluate(el=>el===document.activeElement),true);
   assert.equal(await page.locator('.mobile-menu-toggle').getAttribute('aria-expanded'),'true');

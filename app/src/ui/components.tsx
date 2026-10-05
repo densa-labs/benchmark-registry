@@ -489,7 +489,6 @@ export function GlobalSearch({ defaultValue }: GlobalSearchProps) {
         />
         <button type="submit" disabled={state.status === "loading"}>Search</button>
       </form>
-      <a className="search-hint" href="/search#search-operators">Try: model:opus benchmark:swe-bench</a>
       <p className="visually-hidden" role="status" aria-atomic="true">
         {state.status === "loading" ? "Searching the registry…" : state.status === "results" ? state.response.data.length === 0
           ? `No registry entries found for “${state.query}”.` : `${state.response.page.total_items} search results found.` : ""}
