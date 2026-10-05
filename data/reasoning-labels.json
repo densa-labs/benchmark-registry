@@ -270,10 +270,10 @@
     },
     {
       "label": "pro xhigh",
-      "effort": null,
+      "effort": "xhigh",
       "configuration": null,
-      "status": "pending_owner",
-      "note": "xhigh, but \"pro\" may name a different model."
+      "status": "mapped",
+      "note": "xhigh effort as labelled (owner decision, 2026-10-05)."
     },
     {
       "label": "contemplating",

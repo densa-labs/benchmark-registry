@@ -14,3 +14,4 @@ UPDATE reasoning_labels SET effort = NULL, status = 'pending_owner', note = 'Tok
 UPDATE reasoning_labels SET effort = NULL, status = 'pending_owner', note = 'Provider mode name.' WHERE label = 'heavy';
 UPDATE reasoning_labels SET effort = NULL, status = 'pending_owner', note = 'Looks like the model name.' WHERE label = 'sol';
 UPDATE reasoning_labels SET effort = NULL, status = 'pending_owner', note = 'Contradictory wording.' WHERE label = 'no thinking, max effort';
+UPDATE reasoning_labels SET effort = NULL, status = 'pending_owner', note = 'xhigh, but "pro" may name a different model.' WHERE label = 'pro xhigh';

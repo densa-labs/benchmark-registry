@@ -16,3 +16,4 @@ UPDATE reasoning_labels SET effort = NULL, status = 'not_reported', note = 'Toke
 UPDATE reasoning_labels SET effort = NULL, status = 'not_reported', note = 'Provider mode name; no level stated. Owner decision, 2026-10-05.' WHERE label = 'heavy';
 UPDATE reasoning_labels SET effort = NULL, status = 'not_reported', note = 'Looks like the model name; no level stated. Owner decision, 2026-10-05.' WHERE label = 'sol';
 UPDATE reasoning_labels SET effort = 'max', status = 'mapped', note = 'Effort set to max with thinking off (owner decision, 2026-10-05).' WHERE label = 'no thinking, max effort';
+UPDATE reasoning_labels SET effort = 'xhigh', status = 'mapped', note = 'xhigh effort as labelled (owner decision, 2026-10-05).' WHERE label = 'pro xhigh';

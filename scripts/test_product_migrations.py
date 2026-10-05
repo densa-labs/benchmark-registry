@@ -169,7 +169,7 @@ class ProductMigrationTests(unittest.TestCase):
             query = "SELECT label, effort, status, note FROM reasoning_labels ORDER BY label"
             after = db.execute(query).fetchall()
             self.assertEqual(
-                db.execute("SELECT count(*) FROM reasoning_labels WHERE status = 'pending_owner'").fetchone()[0], 1
+                db.execute("SELECT count(*) FROM reasoning_labels WHERE status = 'pending_owner'").fetchone()[0], 0
             )
             db.executescript((ROOT / "migrations/rollback/0018_owner_effort_labels.sql").read_text())
             self.assertEqual(
