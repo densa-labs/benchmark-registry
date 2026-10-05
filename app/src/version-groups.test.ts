@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { groupVersions } from "./version-groups";
 import type { BenchmarkVersionSummary } from "../worker/api";
+import { buildSeoSnapshot } from "../worker/seo-data";
+import { buildPageMetadata } from "./seo";
 
 const version = (name: string, slug = name): BenchmarkVersionSummary => ({
   benchmark: { name: "Terminal-Bench", slug: "terminal-bench", aliases: [] },
@@ -36,5 +38,16 @@ describe("version grouping", () => {
     const groups = groupVersions([timeout, science, orphan]);
     expect(groups.map(group => group.base.version_slug)).toEqual(["science-0.1", "reasoning-no-tools"]);
     expect(groups[0].variants).toEqual([timeout]);
+  });
+});
+
+describe("family SEO version count", () => {
+  it("counts versions as the page does, not variants and configurations", () => {
+    const checked = { checked: "2026-10-01T00:00:00Z", source: "https://example.com/" };
+    const versions = [version("4.0"), version("2.1"), version("2.1 — Claude Code", "2-1-claude-code")].map(row => ({ ...row, ...checked }));
+    const family = { name: "Terminal-Bench", slug: "terminal-bench", aliases: [], checked: checked.checked };
+    const page = buildSeoSnapshot({ models: [], companies: [], families: [family], versions, results: [] }).pages["/benchmarks/terminal-bench"];
+    expect(page.versions).toBe(2);
+    expect(buildPageMetadata(page).description).toContain("across 2 versions");
   });
 });
