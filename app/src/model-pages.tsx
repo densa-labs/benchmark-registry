@@ -219,12 +219,6 @@ export function ModelsPage({
   return (
     <PageContainer className="registry-page">
       <PageHeader title="Models" description={modelCount(response.page.total_items)} />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search models"
-        placeholder="Search model names, aliases, or Registry Nos."
-      />
 
       <section className="results-section" aria-labelledby="models-heading">
         <div className="results-section__header">
@@ -236,6 +230,14 @@ export function ModelsPage({
             action={pathname}
             currentSearch={currentSearch}
             value={response.page.limit}
+          />
+        </div>
+        <div className="results-toolbar">
+          <LocalSearch
+            action={pathname}
+            currentSearch={currentSearch}
+            label="Search models"
+            placeholder="Search model names, aliases, or Registry Nos."
           />
         </div>
         {response.data.length === 0 ? (

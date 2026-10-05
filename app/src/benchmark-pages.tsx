@@ -214,12 +214,6 @@ export function BenchmarksPage({
         title="Benchmarks"
         description={countLabel(response.page.total_items, "benchmark family", "benchmark families")}
       />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search benchmarks"
-        placeholder="Search benchmark names or aliases"
-      />
 
       <section className="results-section" aria-labelledby="benchmark-index-heading">
         <div className="results-section__header">
@@ -231,6 +225,14 @@ export function BenchmarksPage({
             action={pathname}
             currentSearch={currentSearch}
             value={response.page.limit}
+          />
+        </div>
+        <div className="results-toolbar">
+          <LocalSearch
+            action={pathname}
+            currentSearch={currentSearch}
+            label="Search benchmarks"
+            placeholder="Search benchmark names or aliases"
           />
         </div>
         {response.data.length === 0 ? (

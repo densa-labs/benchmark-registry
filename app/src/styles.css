@@ -1763,6 +1763,8 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .data-table tbody td.pivot-score .pivot-observation { align-items: flex-start; min-width: 0; }
   .data-table tbody td.pivot-score .pivot-observation .result-details { justify-content: flex-start; text-align: left; }
   .data-table tbody tr:hover { background: none; }
+  .data-table tbody td a.model-benchmark-score,
+  .data-table tbody td .model-benchmark-score { display: inline-flex; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 var(--space-2); text-align: left; }
   .version-variants .data-table tbody tr { padding-block: var(--space-2); }
 
   .compare-page { --compare-label-width: 25%; }

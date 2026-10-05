@@ -214,12 +214,6 @@ export function CompaniesPage({
         title="Organizations"
         description={countLabel(response.page.total_items, "organization")}
       />
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search organizations"
-        placeholder="Search organization names"
-      />
 
       <section className="results-section" aria-labelledby="company-index-heading">
         <div className="results-section__header">
@@ -231,6 +225,14 @@ export function CompaniesPage({
             action={pathname}
             currentSearch={currentSearch}
             value={response.page.limit}
+          />
+        </div>
+        <div className="results-toolbar">
+          <LocalSearch
+            action={pathname}
+            currentSearch={currentSearch}
+            label="Search organizations"
+            placeholder="Search organization names"
           />
         </div>
         {response.data.length === 0 ? (
