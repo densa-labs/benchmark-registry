@@ -1,0 +1,804 @@
+{
+  "records": [
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Verified — Droid harness",
+        "version_slug": "verified-droid",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "droid-harness",
+          "label": "Droid harness",
+          "kind": "harness"
+        },
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Verified — OpenCode harness",
+        "version_slug": "verified-opencode",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "opencode-harness",
+          "label": "OpenCode harness",
+          "kind": "harness"
+        },
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Verified — GitHub Copilot production harness",
+        "version_slug": "verified-github-copilot",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "github-copilot-production-harness",
+          "label": "GitHub Copilot production harness",
+          "kind": "harness"
+        },
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Verified — bash-only harness",
+        "version_slug": "verified-bash-only",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "bash-only-harness",
+          "label": "bash-only harness",
+          "kind": "harness"
+        },
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Multilingual — GitHub Copilot production harness",
+        "version_slug": "multilingual-github-copilot",
+        "dataset_label": "Multilingual",
+        "configuration": {
+          "key": "github-copilot-production-harness",
+          "label": "GitHub Copilot production harness",
+          "kind": "harness"
+        },
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Multilingual — Cursor standard harness",
+        "version_slug": "multilingual-cursor-standard-harness",
+        "dataset_label": "Multilingual",
+        "configuration": {
+          "key": "cursor-standard-harness",
+          "label": "Cursor standard harness",
+          "kind": "harness"
+        },
+        "source_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+        "source_checked_at": "2026-10-02T01:08:30Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Multilingual — Cursor strict harness",
+        "version_slug": "multilingual-cursor-strict-harness",
+        "dataset_label": "Multilingual",
+        "configuration": {
+          "key": "cursor-strict-harness",
+          "label": "Cursor strict harness",
+          "kind": "harness"
+        },
+        "source_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+        "source_checked_at": "2026-10-02T01:08:30Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Public — GitHub Copilot production harness",
+        "version_slug": "public-github-copilot",
+        "dataset_label": "Public",
+        "configuration": {
+          "key": "github-copilot-production-harness",
+          "label": "GitHub Copilot production harness",
+          "kind": "harness"
+        },
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.0 — Terminus-2",
+        "version_slug": "2-0-terminus-2",
+        "dataset_label": "2.0",
+        "configuration": {
+          "key": "terminus-2-harness",
+          "label": "Terminus-2 harness",
+          "kind": "harness"
+        },
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.0 — Qwen3.6 Harbor/Terminus-2",
+        "version_slug": "2-0-qwen3-6-terminus-2",
+        "dataset_label": "2.0",
+        "configuration": {
+          "key": "qwen3-6-harbor-terminus-2",
+          "label": "Qwen3.6 Harbor/Terminus-2 harness",
+          "kind": "harness"
+        },
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.0 — Qwen3.7 Harbor/Terminus-2, 5h",
+        "version_slug": "2-0-qwen3-7-terminus-2-5h",
+        "dataset_label": "2.0",
+        "configuration": {
+          "key": "qwen3-7-harbor-terminus-2-5h",
+          "label": "Qwen3.7 Harbor/Terminus-2 harness, 5h",
+          "kind": "harness"
+        },
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.0 — GitHub Copilot production harness",
+        "version_slug": "2-0-github-copilot",
+        "dataset_label": "2.0",
+        "configuration": {
+          "key": "github-copilot-production-harness",
+          "label": "GitHub Copilot production harness",
+          "kind": "harness"
+        },
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.1 — Terminus-2",
+        "version_slug": "2-1-terminus-2",
+        "dataset_label": "2.1",
+        "configuration": {
+          "key": "terminus-2-harness",
+          "label": "Terminus-2 harness",
+          "kind": "harness"
+        },
+        "source_url": "https://z.ai/blog/glm-5.2",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.1 — Claude Code",
+        "version_slug": "2-1-claude-code",
+        "dataset_label": "2.1",
+        "configuration": {
+          "key": "claude-code-harness",
+          "label": "Claude Code harness",
+          "kind": "harness"
+        },
+        "source_url": "https://huggingface.co/zai-org/GLM-5.3",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.1 — Muse Code",
+        "version_slug": "2-1-muse-code",
+        "dataset_label": "2.1",
+        "configuration": {
+          "key": "muse-code-harness",
+          "label": "Muse Code harness",
+          "kind": "harness"
+        },
+        "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.1 — mini-swe-agent",
+        "version_slug": "2-1-mini-swe-agent",
+        "dataset_label": "2.1",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "2.1 — Thinking Machines internal coding harness",
+        "version_slug": "2-1-thinking-machines-internal",
+        "dataset_label": "2.1",
+        "configuration": {
+          "key": "thinking-machines-internal-harness",
+          "label": "Thinking Machines internal coding harness",
+          "kind": "harness"
+        },
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "terminal-bench",
+        "version": "Science 0.1 — 6x verifier timeout",
+        "version_slug": "science-0.1-6x-verifier-timeout",
+        "dataset_label": "Science 0.1",
+        "configuration": {
+          "key": "verifier-timeout-6x",
+          "label": "6x verifier timeout",
+          "kind": "harness"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "deep-swe",
+        "version": "1.1 — Muse Code",
+        "version_slug": "1.1-muse-code",
+        "dataset_label": "1.1",
+        "configuration": {
+          "key": "muse-code-harness",
+          "label": "Muse Code harness",
+          "kind": "harness"
+        },
+        "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "deep-swe",
+        "version": "1.1 — mini-swe-agent",
+        "version_slug": "1.1-mini-swe-agent",
+        "dataset_label": "1.1",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://deepswe.datacurve.ai/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "browsecomp",
+        "version": "With context management — MiniMax M2.5",
+        "version_slug": "context-management-minimax-m25",
+        "dataset_label": null,
+        "configuration": {
+          "key": "context-management-minimax-m2-5",
+          "label": "Context management (MiniMax M2.5)",
+          "kind": "context"
+        },
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "browsecomp",
+        "version": "With context management — Inkling evaluation",
+        "version_slug": "with-context-management-inkling",
+        "dataset_label": null,
+        "configuration": {
+          "key": "context-management-inkling",
+          "label": "Context management (Inkling evaluation)",
+          "kind": "context"
+        },
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "version": "No tools",
+        "version_slug": "no-tools",
+        "dataset_label": null,
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-09-19T05:10:15Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "version": "With Python",
+        "version_slug": "with-python",
+        "dataset_label": null,
+        "configuration": {
+          "key": "with-python",
+          "label": "With Python",
+          "kind": "tools"
+        },
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "version": "With tools",
+        "version_slug": "with-tools",
+        "dataset_label": null,
+        "configuration": {
+          "key": "with-tools",
+          "label": "With tools",
+          "kind": "tools"
+        },
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-09-19T05:10:15Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "codeforces",
+        "version": "No tools",
+        "version_slug": "no-tools",
+        "dataset_label": null,
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-09-17T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "codeforces",
+        "version": "With tools",
+        "version_slug": "with-tools",
+        "dataset_label": null,
+        "configuration": {
+          "key": "with-tools",
+          "label": "With tools",
+          "kind": "tools"
+        },
+        "source_url": "https://deploymentsafety.openai.com/gpt-oss/a2",
+        "source_checked_at": "2026-09-17T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "erqa",
+        "version": "No tools",
+        "version_slug": "no-tools",
+        "dataset_label": null,
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-02T00:49:35Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "erqa",
+        "version": "With Python",
+        "version_slug": "with-python",
+        "dataset_label": null,
+        "configuration": {
+          "key": "with-python",
+          "label": "With Python",
+          "kind": "tools"
+        },
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-02T00:49:35Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "screenspot-pro",
+        "version": "No tools",
+        "version_slug": "no-tools",
+        "dataset_label": null,
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-02T00:49:35Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "screenspot-pro",
+        "version": "With Python",
+        "version_slug": "with-python",
+        "dataset_label": null,
+        "configuration": {
+          "key": "with-python",
+          "label": "With Python",
+          "kind": "tools"
+        },
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-02T00:49:35Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "charxiv",
+        "version": "Reasoning — No tools",
+        "version_slug": "reasoning-no-tools",
+        "dataset_label": "Reasoning",
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://arxiv.org/abs/2406.18521",
+        "source_checked_at": "2026-09-18T13:23:42Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "charxiv",
+        "version": "Reasoning — Python enabled",
+        "version_slug": "reasoning-python-enabled",
+        "dataset_label": "Reasoning",
+        "configuration": {
+          "key": "with-python",
+          "label": "With Python",
+          "kind": "tools"
+        },
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "charxiv",
+        "version": "Reasoning — Search and code execution",
+        "version_slug": "reasoning-search-code-execution",
+        "dataset_label": "Reasoning",
+        "configuration": {
+          "key": "search-and-code-execution",
+          "label": "Search and code execution",
+          "kind": "tools"
+        },
+        "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-6-flash",
+        "source_checked_at": "2026-10-03T10:16:56Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "humanitys-last-exam",
+        "version": "Full set — No tools",
+        "version_slug": "full-set-no-tools",
+        "dataset_label": "Full set",
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://arxiv.org/abs/2501.14249",
+        "source_checked_at": "2026-09-18T13:23:42Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "humanitys-last-exam",
+        "version": "Full set — With tools",
+        "version_slug": "full-set-with-tools",
+        "dataset_label": "Full set",
+        "configuration": {
+          "key": "with-tools",
+          "label": "With tools",
+          "kind": "tools"
+        },
+        "source_url": "https://arxiv.org/abs/2501.14249",
+        "source_checked_at": "2026-09-18T13:23:42Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "humanitys-last-exam",
+        "version": "No tools — GPT-5.2 evaluation",
+        "version_slug": "no-tools-gpt-5-2",
+        "dataset_label": null,
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "humanitys-last-exam",
+        "version": "Search and Python — GPT-5.2 evaluation",
+        "version_slug": "search-python-gpt-5-2",
+        "dataset_label": null,
+        "configuration": {
+          "key": "search-and-python",
+          "label": "Search and Python",
+          "kind": "tools"
+        },
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "babyvision",
+        "version": "Original — Python enabled",
+        "version_slug": "original-python-enabled",
+        "dataset_label": "Original",
+        "configuration": {
+          "key": "with-python",
+          "label": "With Python",
+          "kind": "tools"
+        },
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-03T06:25:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "math-vision",
+        "version": "Original — Python enabled",
+        "version_slug": "original-python-enabled",
+        "dataset_label": "Original",
+        "configuration": {
+          "key": "with-python",
+          "label": "With Python",
+          "kind": "tools"
+        },
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-03T06:25:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "posttrainbench",
+        "version": "1.1 — OpenCode",
+        "version_slug": "1.1-opencode",
+        "dataset_label": "1.1",
+        "configuration": {
+          "key": "opencode-harness",
+          "label": "OpenCode harness",
+          "kind": "harness"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "skillsbench",
+        "version": "78-task self-contained subset — OpenCode",
+        "version_slug": "78-task-self-contained-opencode",
+        "dataset_label": "78-task self-contained subset",
+        "configuration": {
+          "key": "opencode-harness",
+          "label": "OpenCode harness",
+          "kind": "harness"
+        },
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "skillsbench",
+        "version": "86-task set — With skills",
+        "version_slug": "86-task-with-skills",
+        "dataset_label": "86-task set",
+        "configuration": {
+          "key": "with-skills",
+          "label": "With skills",
+          "kind": "tools"
+        },
+        "source_url": "https://www.skillsbench.ai/blogs/introducing-skillsbench",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Codebase QnA — Public; mini-swe-agent",
+        "version_slug": "codebase-qna-public-mini-swe-agent",
+        "dataset_label": "Codebase QnA — Public",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+        "source_checked_at": "2026-09-24T00:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "agents-last-exam",
+        "version": "ALE-V1 — ALE-Claw, 5h",
+        "version_slug": "ale-v1-ale-claw-5h",
+        "dataset_label": "ALE-V1",
+        "configuration": {
+          "key": "ale-claw-5h",
+          "label": "ALE-Claw harness, 5h",
+          "kind": "harness"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "vibe-code-bench",
+        "version": "1.1 — OpenHands, September 2026 evaluation",
+        "version_slug": "1.1-openhands-september-2026",
+        "dataset_label": "1.1",
+        "configuration": {
+          "key": "openhands-harness",
+          "label": "OpenHands harness",
+          "kind": "harness"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "labbench2",
+        "version": "Terminal and internet — September 2026 evaluation",
+        "version_slug": "terminal-internet-september-2026",
+        "dataset_label": null,
+        "configuration": {
+          "key": "terminal-and-internet",
+          "label": "Terminal and internet",
+          "kind": "tools"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "chartography",
+        "version": "No tools — September 2026 leaderboard",
+        "version_slug": "no-tools-september-2026",
+        "dataset_label": null,
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "lvbench",
+        "version": "1 FPS — No tools",
+        "version_slug": "1-fps-no-tools",
+        "dataset_label": "1 FPS",
+        "configuration": {
+          "key": "no-tools",
+          "label": "No tools",
+          "kind": "tools"
+        },
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-03T11:14:52Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "benchcad",
+        "version": "Vision2Code — With tools",
+        "version_slug": "vision2code-with-tools",
+        "dataset_label": "Vision2Code",
+        "configuration": {
+          "key": "with-tools",
+          "label": "With tools",
+          "kind": "tools"
+        },
+        "source_url": "https://github.com/BenchCAD/BenchCAD-main/blob/main/CITATION.cff",
+        "source_checked_at": "2026-09-18T13:23:42Z"
+      }
+    }
+  ]
+}
