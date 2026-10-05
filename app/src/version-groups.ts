@@ -10,6 +10,15 @@ export interface VersionGroup {
 export function groupVersions(versions: BenchmarkVersionSummary[]): VersionGroup[] {
   const parents = new Map<string, BenchmarkVersionSummary>();
   for (const version of versions) {
+    // A configuration row belongs under the unconfigured version its recorded
+    // dataset label names exactly ("Science 0.1 — 6x verifier timeout").
+    if (version.configuration && version.dataset_label) {
+      const matches = versions.filter(candidate => !candidate.configuration && candidate.version === version.dataset_label);
+      if (matches.length === 1) {
+        parents.set(version.version_slug, matches[0]);
+        continue;
+      }
+    }
     const parts = version.version.split(/\s+[—–-]\s+/u);
     if (parts.length !== 2 || !parts[0] || !parts[1]) continue;
     const matches = versions.filter(candidate => candidate.version === parts[0]);

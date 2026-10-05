@@ -1,6 +1,7 @@
 import provenance from "../../migrations/0009_result_provenance.sql?raw";
 import direction from "../../migrations/0011_metric_direction.sql?raw";
 import effort from "../../migrations/0013_effort_vocabulary.sql?raw";
+import configurations from "../../migrations/0014_benchmark_configurations.sql?raw";
 import { DatabaseSync } from "node:sqlite";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import schema from "../../migrations/0001_initial.sql?raw";
@@ -30,7 +31,7 @@ describe("P11.7 initial document crawlability", () => {
   let env: Env;
   beforeEach(() => {
     db = new DatabaseSync(":memory:");
-    db.exec(schema + namespaces + attestations + units + provenance + direction + effort);
+    db.exec(schema + namespaces + attestations + units + provenance + direction + effort + configurations);
     db.prepare(`INSERT INTO companies (id, name, normalized_name, slug, source_url, normalized_source_url, source_checked_at)
       VALUES (1, 'Example Company', 'example company', 'example-company', ?, ?, ?)`).run(source, source, checked);
     const namespace = (db.prepare("SELECT id FROM namespaces WHERE prefix = '10'").get() as { id: number }).id;

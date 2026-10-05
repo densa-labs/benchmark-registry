@@ -1543,6 +1543,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .legal-updated { color: var(--text-muted); margin-bottom: 2rem; }
 
 .version-label { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.version-configuration { display: block; color: var(--text-muted); font-size: 0.875em; }
 .version-variants { margin-top: 0.5rem; }
 .version-variants summary { cursor: pointer; color: var(--text-muted); font-size: 0.75rem; }
 .version-variants .table-scroll { margin-top: 0.5rem; margin-left: 0.75rem; width: calc(100% - 0.75rem); }

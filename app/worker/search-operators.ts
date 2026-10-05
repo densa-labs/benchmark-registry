@@ -31,10 +31,10 @@ export async function operatorSearch(params:ParsedListParams,entities:SearchEnti
     : op.key==="date" ? row.reported_at?.startsWith(op.value)
     // brand: is an alias of org:, the model's company.
     : op.key==="org" || op.key==="brand" ? matches(row.provider_name,op.value) || matches(row.provider_slug,op.value)
-    : true)).filter(row=>!free || [modelMap.get(row.model_id)?.canonical_name,benchmarkMap.get(row.benchmark_id)?.canonical_name,row.version,row.reasoning_level].some(value=>matches(value,free)))
+    : true)).filter(row=>!free || [modelMap.get(row.model_id)?.canonical_name,benchmarkMap.get(row.benchmark_id)?.canonical_name,row.version,row.reasoning_level,row.configuration_label ?? undefined].some(value=>matches(value,free)))
     .sort((a,b)=>byReportedThenName(a,b,modelMap,benchmarkMap)).map(row=>({entity_type:"result" as const,
       canonical_name:`${modelMap.get(row.model_id)!.canonical_name} × ${benchmarkMap.get(row.benchmark_id)!.canonical_name} ${row.version}`,
-      matched_text:[row.metric_name,row.reported_at?.slice(0,10),row.reasoning_level].filter(Boolean).join(" · "),
+      matched_text:[row.metric_name,row.reported_at?.slice(0,10),row.reasoning_level,row.configuration_label].filter(Boolean).join(" · "),
       href:`${benchmarkMap.get(row.benchmark_id)!.href}/${row.version_slug}?view=history&result=${row.result_key}#BR-${row.result_key}`,
     }));
   return {direct_href:undefined as string|undefined,data:hits.slice((params.page-1)*params.limit,params.page*params.limit),page:pageMetadata(params.page,params.limit,hits.length)};

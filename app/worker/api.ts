@@ -39,6 +39,13 @@ export interface MetricSummary {
   display_precision: number;
 }
 
+// Tool, harness or context setting (migration 0014), attached to existing rows.
+export interface Configuration {
+  key: string;
+  label: string;
+  kind: "tools" | "harness" | "context";
+}
+
 export interface BenchmarkVersionSummary {
   benchmark: BenchmarkRef;
   version: string;
@@ -46,6 +53,8 @@ export interface BenchmarkVersionSummary {
   released_at: string;
   release_precision: DatePrecision;
   metric: MetricSummary;
+  configuration?: Configuration | null;
+  dataset_label?: string | null;
 }
 
 // Fixed effort vocabulary (data/reasoning-labels.json). reasoning_level stays the provider's raw label.
@@ -60,6 +69,7 @@ export interface ResultRow {
   benchmark_version_slug: string;
   reasoning_level: string | null;
   effort?: Effort | null;
+  configuration?: Configuration | null;
   metric: MetricSummary;
   score: {
     raw: string;
@@ -111,6 +121,17 @@ export function pageMetadata(
     total_items: totalItems,
     total_pages: totalItems === 0 ? 0 : Math.ceil(totalItems / limit),
   };
+}
+
+export function parseConfiguration(value: string | null | undefined): Configuration | null {
+  if (value === null || value === undefined) return null;
+  const parsed: unknown = JSON.parse(value);
+  if (!parsed || typeof parsed !== "object") throw new Error("Database returned an invalid configuration.");
+  const { key, label, kind } = parsed as Record<string, unknown>;
+  if (typeof key !== "string" || typeof label !== "string" || !["tools", "harness", "context"].includes(kind as string)) {
+    throw new Error("Database returned an invalid configuration.");
+  }
+  return { key, label, kind: kind as Configuration["kind"] };
 }
 
 export function parseJsonArray(value: string): string[] {
@@ -194,6 +215,7 @@ export interface ResultDbRow extends ModelDbRow {
   benchmark_version_slug: string;
   reasoning_level: string;
   effort?: Effort | null;
+  configuration?: string | null;
   metric_direction?: MetricSummary["direction"];
   metric_name: string;
   metric_key: string;
@@ -237,6 +259,7 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
     benchmark_version_slug: row.benchmark_version_slug,
     reasoning_level: row.reasoning_level === "" ? null : row.reasoning_level,
     effort: row.effort ?? null,
+    configuration: parseConfiguration(row.configuration),
     metric,
     score: {
       raw: row.score_raw,

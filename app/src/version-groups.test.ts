@@ -27,4 +27,14 @@ describe("version grouping", () => {
     expect(groupVersions([])).toEqual([]);
     expect(groupVersions([version("1.0")])).toEqual([{ base: version("1.0"), variants: [] }]);
   });
+  it("groups configuration rows under the version their dataset label names", () => {
+    const harness = (name: string, slug: string, dataset: string) => ({ ...version(name, slug),
+      configuration: { key: "x", label: "X harness", kind: "harness" as const }, dataset_label: dataset });
+    const science = version("Science 0.1", "science-0.1");
+    const timeout = harness("Science 0.1 — 6x verifier timeout", "science-0.1-6x", "Science 0.1");
+    const orphan = harness("Reasoning — No tools", "reasoning-no-tools", "Reasoning");
+    const groups = groupVersions([timeout, science, orphan]);
+    expect(groups.map(group => group.base.version_slug)).toEqual(["science-0.1", "reasoning-no-tools"]);
+    expect(groups[0].variants).toEqual([timeout]);
+  });
 });

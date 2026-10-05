@@ -192,7 +192,8 @@ export function BenchmarksPage({
       label: "Latest version",
       sortHref: versionSort.href,
       sortDirection: versionSort.direction,
-      render: ({ latest_version }) => latest_version,
+      // A family with no unconfigured version shows its most recent configuration, labelled as such.
+      render: ({ latest_version, latest_configuration }) => latest_configuration ? `${latest_version} (configuration)` : latest_version,
     },
     {
       key: "released",
@@ -261,16 +262,19 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
   const { benchmark, versions } = response.data;
   const displayName = benchmarkDisplayName(benchmark);
   const sharedMetric = versions.length > 0 && versions.every(version => version.metric.key === versions[0].metric.key);
+  // "Latest" marks only true versions; tool and harness configurations never are.
+  const latest = versions.find(version => !version.configuration);
   const versionLink = (version: BenchmarkVersionSummary) => (
     <span className="version-label">
       <a href={`/benchmarks/${benchmark.slug}/${version.version_slug}`}>
         {benchmarkVersionLabel(benchmark, version.version)}
       </a>
-      {version.version_slug === versions[0]?.version_slug ? <span className="latest-indicator">Latest</span> : null}
+      {version.version_slug === latest?.version_slug ? <span className="latest-indicator">Latest</span> : null}
     </span>
   );
   const variantColumns: TableColumn<BenchmarkVersionSummary>[] = [
     { key: "version", label: "Variant", render: versionLink },
+    { key: "configuration", label: "Configuration", render: version => version.configuration?.label ?? "—" },
     { key: "released", label: "Released", render: version => formatRegistryDate(version.released_at, version.release_precision) },
     ...(!sharedMetric ? [{ key: "metric", label: "Metric", render: metricLabel }] : []),
   ];
@@ -279,6 +283,7 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
       key: "version", label: "Version", className: "data-table__primary",
       render: ({ base, variants }) => <>
         {versionLink(base)}
+        {base.configuration ? <span className="version-configuration">Configuration: {base.configuration.label}</span> : null}
         {variants.length ? <details className="version-variants" open={variants.length <= 4}>
           <summary>{variants.length} {variants.length === 1 ? "variant" : "variants"} of {base.version}</summary>
           <DataTable caption={`Variants of ${benchmarkVersionLabel(benchmark, base.version)}`}
@@ -413,6 +418,7 @@ export function BenchmarkVersionPage({
               value: formatRegistryDate(version.released_at, version.release_precision),
             },
             { label: "Version", value: <BenchmarkLink benchmark={version.benchmark} version={version.version} versionSlug={version.version_slug} /> },
+            ...(version.configuration ? [{ label: "Configuration", value: version.configuration.label }] : []),
             { label: "Metric", value: version.metric.name },
           ]}
         />

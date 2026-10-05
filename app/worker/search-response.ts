@@ -6,7 +6,7 @@ import type { ParsedListParams } from './params';
 export interface SearchRelationship {
   metric_key?:string; metric_name?:string; reported_at?:string; provider_name?:string; provider_slug?:string;
   model_id:number; benchmark_id:number; version_id:number; version:string;
-  version_slug:string; reasoning_level:string; result_key:string;
+  version_slug:string; reasoning_level:string; result_key:string; configuration_label?:string|null;
 }
 export async function searchResponse(params:ParsedListParams, entities:SearchEntity[], relationships:(models:number[],benchmarks:number[])=>Promise<SearchRelationship[]>) {
   const operated=await operatorSearch(params,entities,relationships);if(operated) return operated;
@@ -19,7 +19,7 @@ export async function searchResponse(params:ParsedListParams, entities:SearchEnt
     const connected=rows.flatMap(row=>{
       const intent=interpretations.find(i=>i.model.id===row.model_id && i.benchmark.id===row.benchmark_id && (i.versionId===undefined || i.versionId===row.version_id));
       if(!intent) return [];
-      return [{hit:{entity_type:'result' as const,canonical_name:`${intent.model.canonical_name} × ${intent.benchmark.canonical_name} ${row.version}`,matched_text:row.reasoning_level ? `Reasoning: ${row.reasoning_level}` : 'Evaluation result',href:`${intent.benchmark.href}/${row.version_slug}?view=history&result=${row.result_key}`},rank:intent.high?3:5}];
+      return [{hit:{entity_type:'result' as const,canonical_name:`${intent.model.canonical_name} × ${intent.benchmark.canonical_name} ${row.version}`,matched_text:[row.reasoning_level ? `Reasoning: ${row.reasoning_level}` : '',row.configuration_label ? `Configuration: ${row.configuration_label}` : ''].filter(Boolean).join(' · ') || 'Evaluation result',href:`${intent.benchmark.href}/${row.version_slug}?view=history&result=${row.result_key}`},rank:intent.high?3:5}];
     });
     ranked.push(...connected);
     // Jump straight to a result only when exactly one candidate matches the query.

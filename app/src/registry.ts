@@ -59,6 +59,7 @@ export interface BenchmarkListResponse {
     latest_version: string;
     latest_released_at: string;
     latest_release_precision: "date" | "timestamp";
+    latest_configuration?: string | null;
   }>;
   page: Page;
 }

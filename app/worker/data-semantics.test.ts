@@ -40,3 +40,35 @@ it("adds the normalized effort beside the unchanged raw label", async () => {
   expect(labels.get("high (with tools)")).toBe("high");
   expect(labels.get("medium")).toBe("medium");
 });
+
+it("labels results and versions by configuration without changing identity", async () => {
+  const { sqlite, repository } = semanticsFixture();
+  const before = sqlite.prepare("SELECT result_key, score_value, benchmark_version_id FROM results ORDER BY id").all();
+  sqlite.exec(`INSERT INTO benchmark_version_configurations
+    (benchmark_version_id, configuration_key, dataset_label, source_url, normalized_source_url, source_checked_at)
+    VALUES (6, 'with-tools', 'HealthBench', 'https://openai.com/index/healthbench/', 'https://openai.com/index/healthbench/', '2026-09-17T00:00:00Z')`);
+
+  const family = await repository.benchmark("healthbench");
+  const hard = family.data.versions.find((version) => version.version_slug === "hard")!;
+  expect(hard.configuration).toEqual({ key: "with-tools", label: "With tools", kind: "tools" });
+  expect(hard.dataset_label).toBe("HealthBench");
+  expect(family.data.versions.find((version) => version.version_slug === "healthbench")!.configuration).toBeNull();
+
+  const version = await repository.benchmarkVersion("healthbench", "hard", params);
+  expect(version.data.version.configuration?.label).toBe("With tools");
+  expect(version.data.results.every((row) => row.configuration?.key === "with-tools")).toBe(true);
+
+  const { registry_no } = sqlite.prepare("SELECT registry_no FROM models WHERE id = 5").get() as { registry_no: string };
+  const model = await repository.model(registry_no, params);
+  const byLabel = new Map(model.data.results.map((row) => [row.reasoning_level, row.configuration?.key ?? null]));
+  expect(byLabel.get("low (no tools)")).toBe("no-tools");
+  expect(byLabel.get("high (with tools)")).toBe("with-tools");
+  expect(byLabel.get("medium")).toBeNull();
+
+  const list = await repository.benchmarks({ ...params, limit: 500 });
+  const healthbench = list.data.find((row) => row.benchmark.slug === "healthbench")!;
+  expect(healthbench.latest_version).toBe("HealthBench");
+  expect(healthbench.latest_configuration).toBeNull();
+
+  expect(sqlite.prepare("SELECT result_key, score_value, benchmark_version_id FROM results ORDER BY id").all()).toEqual(before);
+});

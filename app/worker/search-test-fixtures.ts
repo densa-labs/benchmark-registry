@@ -60,6 +60,9 @@ export function seedSearchFixtures(database: DatabaseSync) {
 
     CREATE TABLE benchmark_versions (id INTEGER PRIMARY KEY, benchmark_id INTEGER, version TEXT, version_slug TEXT);
     CREATE TABLE results (model_id INTEGER, benchmark_version_id INTEGER, reasoning_level TEXT, result_key TEXT);
+    CREATE TABLE configurations (key TEXT PRIMARY KEY, label TEXT, kind TEXT);
+    CREATE TABLE benchmark_version_configurations (benchmark_version_id INTEGER PRIMARY KEY, configuration_key TEXT, dataset_label TEXT);
+    CREATE TABLE reasoning_labels (label TEXT PRIMARY KEY, effort TEXT, configuration_key TEXT);
 
     CREATE INDEX idx_models_normalized_name ON models(normalized_name);
     CREATE INDEX idx_benchmarks_normalized_name ON benchmarks(normalized_name);
