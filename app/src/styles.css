@@ -979,6 +979,7 @@ p.local-search__clear { white-space: normal; }
 .data-table td.registry-number { font-weight: 500; }
 
 .data-table a, .compare-table a { color: var(--accent); text-decoration: none; }
+.data-table td.numeric > a { color: var(--text); }
 .data-table a:hover, .data-table a:focus-visible,
 .compare-table a:hover, .compare-table a:focus-visible { color: var(--accent-strong); text-decoration: underline; }
 .data-table td a { min-width: 1.5rem; min-height: 1.5rem; }
@@ -1699,27 +1700,27 @@ h2 .skeleton--section { display: block; height: 1.25em; }
      scrolling because its cells only make sense as a grid. */
   .results-section .table-scroll { overflow-x: visible; }
   .results-section .data-table,
-  .results-section thead,
+  .results-section .data-table thead,
   .results-section .data-table tbody { display: block; width: 100%; min-width: 0; }
   .results-section .data-table__primary { min-width: 0; }
   .results-section .data-table .source-link { white-space: normal; overflow-wrap: anywhere; }
-  .results-section td.numeric { white-space: normal; }
+  .results-section .data-table td.numeric { white-space: normal; }
   /* The models index shows one recorded result per model: context, not the row's score.
      (The repeated class outranks the general score rule above.) */
   .results-section .data-table:has(th a[href^="/models?"]) tbody td.numeric.numeric.numeric.numeric.numeric { order: 2; flex: 0 1 auto; margin-left: 0; font-size: 0.75rem; font-weight: 500; color: var(--text-muted); }
-  .results-section thead tr { display: flex; flex-wrap: wrap; gap: 0 1rem; padding-block: 0.25rem; border-bottom: 1px solid var(--border); }
-  .results-section thead th { padding: 0; border: 0; white-space: normal; }
-  .results-section thead th.data-table__sortable,
-  .results-section thead th:has(.sortable-header) { min-height: 2.75rem; display: flex; align-items: center; }
-  .results-section thead th:not(.data-table__sortable):not(:has(.sortable-header)) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
-  .results-section tbody tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.75rem; padding-block: 0.75rem; border-bottom: 1px solid var(--border); }
-  .results-section tbody tr:last-child { border-bottom: 0; }
-  .results-section tbody tr::after { content: ""; order: 1; flex: 1 0 100%; height: 0; }
-  .results-section td { order: 2; flex: 0 1 auto; min-width: 0; padding: 0; border: 0; font-size: 0.75rem; color: var(--text-muted); }
+  .results-section .data-table thead tr { display: flex; flex-wrap: wrap; gap: 0 1rem; padding-block: 0.25rem; border-bottom: 1px solid var(--border); }
+  .results-section .data-table thead th { padding: 0; border: 0; white-space: normal; }
+  .results-section .data-table thead th.data-table__sortable,
+  .results-section .data-table thead th:has(.sortable-header) { min-height: 2.75rem; display: flex; align-items: center; }
+  .results-section .data-table thead th:not(.data-table__sortable):not(:has(.sortable-header)) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  .results-section .data-table tbody tr { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.75rem; padding-block: 0.75rem; border-bottom: 1px solid var(--border); }
+  .results-section .data-table tbody tr:last-child { border-bottom: 0; }
+  .results-section .data-table tbody tr::after { content: ""; order: 1; flex: 1 0 100%; height: 0; }
+  .results-section .data-table td { order: 2; flex: 0 1 auto; min-width: 0; padding: 0; border: 0; font-size: 0.75rem; color: var(--text-muted); }
   /* Line one: the primary column (or the first column when none is marked) and the score. */
-  .results-section td.data-table__primary,
-  .results-section td:first-child:not(.numeric):not(:has(~ td.data-table__primary)) { order: 0; flex: 1 1 60%; font-size: 0.875rem; color: var(--text); }
-  .results-section td.data-table__primary ~ td.data-table__primary { order: 2; flex: 0 1 auto; font-size: 0.75rem; }
+  .results-section .data-table td.data-table__primary,
+  .results-section .data-table td:first-child:not(.numeric):not(:has(~ td.data-table__primary)) { order: 0; flex: 1 1 60%; font-size: 0.875rem; color: var(--text); }
+  .results-section .data-table td.data-table__primary ~ td.data-table__primary { order: 2; flex: 0 1 auto; font-size: 0.75rem; }
   .results-section .data-table:not(:has(.version-label)) tbody td.numeric:not(.registry-number):not(.pivot-score):not([data-label]),
   .results-section:has(> .results-section__header time) table tbody td:nth-child(3) { order: 0; flex: 0 0 auto; margin-left: auto; font-size: 0.875rem; font-weight: 600; color: var(--text); }
   /* Index and version tables label their plain values on phones (labels live in CSS, not the HTML). */
@@ -1736,21 +1737,21 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   .version-variants .data-table > tbody > tr > td:nth-child(2)::before { content: "Configuration "; }
   .version-variants .data-table > tbody > tr > td:nth-child(3)::before { content: "Released "; }
   .version-variants .data-table > tbody > tr > td:nth-child(4):not(.numeric)::before { content: "Metric "; }
-  .results-section td[data-label]::before { content: attr(data-label) " "; color: var(--text-muted); font-weight: 400; }
-  .results-section td.numeric[data-label],
+  .results-section .data-table td[data-label]::before { content: attr(data-label) " "; color: var(--text-muted); font-weight: 400; }
+  .results-section .data-table td.numeric[data-label],
   .results-section .data-table:has(.version-label) tbody td.numeric,
-  .results-section td.pivot-score { text-align: left; font-weight: 500; }
-  .results-section td .table-cell-stack > :first-child { flex: 1 0 100%; }
-  .results-section td .table-cell-stack:has(> .source-link:first-child) > :first-child { flex: 0 1 auto; }
-  .results-section td .result-details { flex: 1 0 100%; }
-  .results-section td .record-cite { margin-left: 0; }
-  .results-section td.pivot-score { width: auto; }
-  .results-section td.pivot-score .pivot-cell,
-  .results-section td.pivot-score .pivot-observation { align-items: flex-start; min-width: 0; }
-  .results-section td.pivot-score .pivot-observation .result-details { justify-content: flex-start; text-align: left; }
-  .results-section tbody tr:hover { background: none; }
-  .results-section td a.model-benchmark-score,
-  .results-section td .model-benchmark-score { display: inline-flex; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 0.5rem; text-align: left; }
+  .results-section .data-table td.pivot-score { text-align: left; font-weight: 500; }
+  .results-section .data-table td .table-cell-stack > :first-child { flex: 1 0 100%; }
+  .results-section .data-table td .table-cell-stack:has(> .source-link:first-child) > :first-child { flex: 0 1 auto; }
+  .results-section .data-table td .result-details { flex: 1 0 100%; }
+  .results-section .data-table td .record-cite { margin-left: 0; }
+  .results-section .data-table td.pivot-score { width: auto; }
+  .results-section .data-table td.pivot-score .pivot-cell,
+  .results-section .data-table td.pivot-score .pivot-observation { align-items: flex-start; min-width: 0; }
+  .results-section .data-table td.pivot-score .pivot-observation .result-details { justify-content: flex-start; text-align: left; }
+  .results-section .data-table tbody tr:hover { background: none; }
+  .results-section .data-table td a.model-benchmark-score,
+  .results-section .data-table td .model-benchmark-score { display: inline-flex; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 0.5rem; text-align: left; }
   .version-variants .data-table tbody tr { padding-block: 0.5rem; }
   .compare-section-title { flex-wrap: wrap; }
 
