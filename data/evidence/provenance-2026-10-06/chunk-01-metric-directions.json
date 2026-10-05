@@ -1,0 +1,38 @@
+{
+  "chunk": 1,
+  "rule": "A direction is recorded only where the metric's source states it in words; it is never inferred from the metric's name or from a table's sort order.",
+  "checked_at": "2026-10-05T23:53:01Z",
+  "recorded": [
+    {
+      "metric_key": "cursorbench-accuracy",
+      "direction": "higher",
+      "source_url": "https://prod.cursor.com/evals",
+      "statement": "Higher scores are better."
+    },
+    {
+      "metric_key": "milu-accuracy",
+      "direction": "higher",
+      "source_url": "https://arxiv.org/abs/2411.02538",
+      "statement": "Higher values indicate better model performance (HTML version, result tables)."
+    },
+    {
+      "metric_key": "shp2-mean-r-squared",
+      "direction": "higher",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+      "statement": "Mean R² ... with higher scores indicating more accurate predictions; table header: Mean R2 (higher is better)."
+    },
+    {
+      "metric_key": "coronavirus-ace2-composite-score",
+      "direction": "higher",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+      "statement": "Table header: Composite score (higher is better)."
+    },
+    {
+      "metric_key": "phage-plasmid-negative-log-likelihood",
+      "direction": "lower",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+      "statement": "Negative log-likelihood ... with lower scores indicating better predictions; table header: (lower is better)."
+    }
+  ],
+  "not_recorded": "The other 30 metrics used by chunk 1 results: their recorded sources (benchmark papers, repositories and leaderboards) were searched and do not state the direction in words, or could not be read (openai.com blocks automated fetches)."
+}

@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "operation": "metric_direction",
+      "record": {
+        "metric_key": "cursorbench-accuracy",
+        "direction": "higher",
+        "source_url": "https://prod.cursor.com/evals",
+        "source_checked_at": "2026-10-05T23:53:01Z"
+      }
+    },
+    {
+      "operation": "metric_direction",
+      "record": {
+        "metric_key": "milu-accuracy",
+        "direction": "higher",
+        "source_url": "https://arxiv.org/abs/2411.02538",
+        "source_checked_at": "2026-10-05T23:53:01Z"
+      }
+    },
+    {
+      "operation": "metric_direction",
+      "record": {
+        "metric_key": "shp2-mean-r-squared",
+        "direction": "higher",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "source_checked_at": "2026-10-05T23:53:01Z"
+      }
+    },
+    {
+      "operation": "metric_direction",
+      "record": {
+        "metric_key": "coronavirus-ace2-composite-score",
+        "direction": "higher",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "source_checked_at": "2026-10-05T23:53:01Z"
+      }
+    },
+    {
+      "operation": "metric_direction",
+      "record": {
+        "metric_key": "phage-plasmid-negative-log-likelihood",
+        "direction": "lower",
+        "source_url": "https://deploymentsafety.openai.com/gpt-6-astra/capability-threshold-critical",
+        "source_checked_at": "2026-10-05T23:53:01Z"
+      }
+    }
+  ]
+}
