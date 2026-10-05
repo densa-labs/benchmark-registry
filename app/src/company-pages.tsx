@@ -1,6 +1,7 @@
 import { recordAnchor } from "./citation";
 import { ResultSource } from "./result-source";
 import { RelatedModels } from "./seo-content";
+import { ReportIssue } from "./report-issue";
 import { ResultScoreLink } from "./result-score-link";
 import type { ModelSummary, ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
@@ -8,6 +9,7 @@ import {
   DataTable,
   EmptyState,
   MetadataRows,
+  PageActions,
   PageContainer,
   PageHeader,
   PageSizeSelector,
@@ -301,7 +303,7 @@ export function CompanyDetailPage({
     {
       key: "score",
       label: "Score",
-      className: "numeric",
+      className: "numeric score",
       render: (result) => <ResultScoreLink result={result} />,
     },
     {
@@ -333,7 +335,7 @@ export function CompanyDetailPage({
 
   return (
     <PageContainer className="registry-page">
-      <PageHeader title={company.name} description={response.data.seo?.sentence} />
+      <PageHeader title={company.name} description={response.data.seo?.sentence}>
       <section className="entity-metadata" aria-label="Organization metadata">
         <MetadataRows
           items={[
@@ -342,13 +344,8 @@ export function CompanyDetailPage({
           ]}
         />
       </section>
-
-      <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search benchmarks or models"
-        placeholder="Search benchmark or model names"
-      />
+      <PageActions><ReportIssue page={pathname} /></PageActions>
+      </PageHeader>
 
       <section className="results-section" aria-labelledby="company-results-heading">
         <div className="results-section__header">
@@ -358,6 +355,13 @@ export function CompanyDetailPage({
           </div>
           <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
         </div>
+        <div className="results-toolbar">
+        <LocalSearch
+          action={pathname}
+          currentSearch={currentSearch}
+          label="Search benchmarks or models"
+          placeholder="Search benchmark or model names"
+        />
         <Tabs
           label="Result view"
           items={[
@@ -373,6 +377,7 @@ export function CompanyDetailPage({
             },
           ]}
         />
+        </div>
         {results.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks or models" : "No benchmark results"}

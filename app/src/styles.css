@@ -640,6 +640,7 @@ code, pre { font-family: var(--font-mono); font-size: var(--text-xs); }
 }
 
 .results-section__header > div { display: flex; flex-direction: column; gap: 0.125rem; }
+.results-section__note { color: var(--text-muted); font-size: var(--text-sm); }
 
 /* Toolbar: search, view switches and filters on one line above the table. */
 .results-toolbar {
@@ -650,6 +651,10 @@ code, pre { font-family: var(--font-mono); font-size: var(--text-xs); }
 }
 
 .results-toolbar > * { margin: 0; }
+.results-toolbar .local-search { flex: 0 1 24rem; }
+.results-toolbar .local-search__field { width: 100%; }
+.results-toolbar .result-tabs { display: contents; }
+.results-toolbar .tabs--scroll { flex: 1 0 100%; }
 
 /* Secondary details below the primary content. */
 .related-links {
@@ -990,7 +995,7 @@ p.local-search__clear { white-space: normal; }
 }
 
 .data-table td {
-  line-height: 1.4;
+  line-height: 1.5rem;
 }
 
 .data-table__primary {

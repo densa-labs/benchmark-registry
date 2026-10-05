@@ -14,6 +14,7 @@ import {
   EmptyState,
   MetadataRows,
   PageContainer,
+  PageActions,
   PageHeader,
   PageSizeSelector,
   Pagination,
@@ -322,7 +323,7 @@ export function ModelDetailPage({
     {
       key: "score",
       label: "Score",
-      className: "numeric",
+      className: "numeric score",
       render: (result) => <ResultScoreLink result={result} />,
     },
     {
@@ -364,15 +365,12 @@ export function ModelDetailPage({
           ]}
         />
       </section>
-      <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+      <PageActions>
+        <a className="model-compare" href={comparisonHref({ ...parseComparisonState(""), models: [model.registry_no, ""] })}>Compare<span className="visually-hidden"> {model.name} with another model</span></a>
+        <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
+        <ReportIssue page={pathname} model={model.name} source={model.source_url} />
+      </PageActions>
       </PageHeader>
-
-      {totalRows > 25 || query ? <LocalSearch
-        action={pathname}
-        currentSearch={currentSearch}
-        label="Search benchmarks"
-        placeholder="Search benchmark names or aliases"
-      /> : null}
 
       <section className="results-section" aria-labelledby="benchmarks-heading">
         <div className="results-section__header">
@@ -382,6 +380,13 @@ export function ModelDetailPage({
           </div>
           {page.total_items > 50 ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} /> : null}
         </div>
+        <div className="results-toolbar">
+        {totalRows > 25 || query ? <LocalSearch
+          action={pathname}
+          currentSearch={currentSearch}
+          label="Search benchmarks"
+          placeholder="Search benchmark names or aliases"
+        /> : null}
         <Tabs
           label="Result view"
           items={[
@@ -404,6 +409,7 @@ export function ModelDetailPage({
             { href: queryHref(pathname, currentSearch, { layout: "effort", page: null }), label: "By effort", active: usePivot },
           ]}
         /> : null}
+        </div>
         {results.length === 0 ? (
           <EmptyState
             title={query ? "No matching benchmarks" : "No benchmark results"}
@@ -425,10 +431,6 @@ export function ModelDetailPage({
           totalPages={totalPages}
         />
       </section>
-      <div className="model-page-actions">
-        <Cite input={{title:`${model.name} benchmark results`,path:pathname,registryNumber:model.registry_no}} />
-        <ReportIssue page={pathname} model={model.name} source={model.source_url} />
-      </div>
       <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />
       <RelatedLinks links={response.data.seo?.links} label="Benchmarks covered" />
     </PageContainer>
