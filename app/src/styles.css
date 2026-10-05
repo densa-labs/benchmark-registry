@@ -1571,6 +1571,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .compare-table a:hover, .compare-table a:focus-visible { color: var(--accent-strong); text-decoration: underline; }
 
 .model-compare { display: inline-flex; align-items: center; margin-top: 0.5rem; min-height: var(--control-height); font-size: 0.8rem; }
+.model-page-actions { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; margin-block: 1rem; }
 
 .version-variants .data-table { min-width: 0; }
 .data-table th.pivot-score { white-space: normal; }

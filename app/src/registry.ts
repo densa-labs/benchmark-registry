@@ -13,6 +13,7 @@ import type {
   ResultRow,
 } from "../worker/api";
 import { diagnoseApiFailure } from "./diagnostics";
+import { effortRank } from "./result-pivot";
 import type { HomePanels } from "../worker/home-panels";
 import type { FeaturedResult } from "../worker/featured-result";
 import { parseComparisonState, type ComparisonResponse } from "./compare";
@@ -342,6 +343,16 @@ async function loadBenchmarkCompanies(
   );
 }
 
+// Only the one supported value is removed; anything else still reaches the
+// parameter check and is rejected like any unknown query.
+function withoutLayout(search: string): string {
+  const params = new URLSearchParams(search);
+  if (params.getAll("layout").length !== 1 || params.get("layout") !== "effort") return search;
+  params.delete("layout");
+  const query = params.toString();
+  return query ? `?${query}` : "";
+}
+
 export async function loadRegistryRoute(
   route: RegistryRoute,
   search: string,
@@ -417,6 +428,8 @@ export async function loadRegistryRoute(
     };
   }
 
+  // `layout` is presentation state on the model page only; the data request never carries it.
+  if (route.kind === "model") search = withoutLayout(search);
   const response = await fetcher(`${apiPath(route)}${search}`, {
     headers: { Accept: "application/json" },
     signal,
@@ -450,7 +463,11 @@ export async function loadRegistryRoute(
         }
       }
       if (!new URLSearchParams(search).has("sort")) {
-        allResults = [...allResults].sort((a, b) => a.benchmark.name.localeCompare(b.benchmark.name, "en", { sensitivity: "base" }) || a.result_key.localeCompare(b.result_key, "en"));
+        // Grouped by benchmark: version, metric, then effort keep each benchmark's results together.
+        allResults = [...allResults].sort((a, b) => a.benchmark.name.localeCompare(b.benchmark.name, "en", { sensitivity: "base" })
+          || a.benchmark_version.localeCompare(b.benchmark_version, "en") || a.metric.key.localeCompare(b.metric.key, "en")
+          || effortRank(a) - effortRank(b) || (a.reasoning_level ?? "").localeCompare(b.reasoning_level ?? "", "en")
+          || a.result_key.localeCompare(b.result_key, "en"));
       }
       return { kind: "model", payload: { data: { ...first, all_results: allResults } } };
     }

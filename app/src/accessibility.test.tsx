@@ -222,8 +222,10 @@ it("announces result and family counts with pagination after the effort pivot", 
   const seed = accessibilityRoutes.find(route => route.loaded.kind === "model")!.loaded;
   if (seed.kind !== "model") throw new Error("Missing fixture");
   const row = seed.payload.data.results[0];
-  const rows = Array.from({ length: 51 }, (_, index) => ({ ...row, result_key: `run-${index}`, reasoning_level: index % 2 ? "medium" : "max" }));
+  const rows = Array.from({ length: 51 }, (_, index) => ({ ...row, result_key: `run-${index}`, reasoning_level: index % 2 ? "medium" : "max", effort: index % 2 ? "medium" as const : "max" as const }));
   const loaded = { ...seed, payload: { data: { ...seed.payload.data, all_results: rows, result_page: { number: 1, limit: 50 as const, total_items: 51, total_pages: 2 } } } };
-  const notice = navigationNotice({ loaded, href: "/models/10001", currentSearch: "", head: "<title>Model</title>", time: 0 }, true, false, null);
+  const notice = navigationNotice({ loaded, href: "/models/10001?layout=effort", currentSearch: "?layout=effort", head: "<title>Model</title>", time: 0 }, true, false, null);
   expect(notice.message).toContain("51 results across 1 benchmark. Page 1 of 1.");
+  const list = navigationNotice({ loaded, href: "/models/10001", currentSearch: "", head: "<title>Model</title>", time: 0 }, true, false, null);
+  expect(list.message).toContain("51 results across 1 benchmark. Page 1 of 2.");
 });
