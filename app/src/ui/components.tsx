@@ -528,9 +528,9 @@ export function PageHeader({ title, description, kicker, children }: PageHeaderP
       {breadcrumb ? <VisibleBreadcrumbs loaded={breadcrumb} /> : null}
       {kicker ? <p className="kicker">{kicker}</p> : null}
       <h1 tabIndex={-1}>{title}</h1>
-      {children}
       {description ? <p className="page-header__description">{description}</p> : null}
       {updated && !description?.includes(`Updated ${updated.slice(0, 10)}`) ? <p className="page-header__description">Updated <time dateTime={updated}>{updated.slice(0, 10)}</time></p> : null}
+      {children}
     </header>
   );
 }
@@ -623,14 +623,16 @@ export function DataTable<Row>({
 }: DataTableProps<Row>) {
   return (
     <div className={columns.length <= 3 ? "table-scroll table-scroll--compact" : "table-scroll"} role="region" tabIndex={0} aria-label={`${caption}, scrollable`}>
-      <table className="data-table" data-columns={columns.length}>
+      {/* Explicit roles keep table semantics when phone rows change the display. */}
+      <table className="data-table" data-columns={columns.length} role="table">
         <caption className="visually-hidden">{caption}</caption>
-        <thead>
-          <tr>
+        <thead role="rowgroup">
+          <tr role="row">
             {columns.map((column) => (
               <th
                 key={column.key}
                 scope="col"
+                role="columnheader"
                 className={[column.className, column.sortHref ? "data-table__sortable" : undefined].filter(Boolean).join(" ")}
                 aria-sort={
                   column.sortDirection
@@ -653,11 +655,11 @@ export function DataTable<Row>({
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody role="rowgroup">
           {rows.map((row) => (
-            <tr key={getRowKey(row)} id={getRowId?.(row)}>
+            <tr key={getRowKey(row)} id={getRowId?.(row)} role="row">
               {columns.map((column) => (
-                <td key={column.key} className={column.className}>
+                <td key={column.key} className={column.className} role="cell" data-label={column.label} data-column={column.key}>
                   {column.render(row)}
                 </td>
               ))}
@@ -727,9 +729,9 @@ export interface TabItem {
   active?: boolean;
 }
 
-export function Tabs({ label, items }: { label: string; items: TabItem[] }) {
+export function Tabs({ label, items, className }: { label: string; items: TabItem[]; className?: string }) {
   return (
-    <nav className="tabs" aria-label={label}>
+    <nav className={["tabs", className].filter(Boolean).join(" ")} aria-label={label}>
       {items.map((item) => (
         <a
           key={item.href}
@@ -799,4 +801,9 @@ export function NotFoundState() {
       </div>
     </section>
   );
+}
+
+/** The actions row under an entity's facts: Compare, Cite, Report an issue. */
+export function PageActions({ children }: { children: ReactNode }) {
+  return <div className="page-actions">{children}</div>;
 }

@@ -359,7 +359,7 @@ describe("P7.1 model pages", () => {
     expect(list).toContain(`href="/models/${modelDetailResponse.data.model.registry_no}?layout=effort"`);
     expect(list).toContain('aria-label="Table layout"');
     const pivot = render("?layout=effort");
-    expect(pivot.match(/<tbody><tr>/g)).toHaveLength(1);
+    expect(pivot.match(/<tbody[^>]*><tr[\s>]/g)).toHaveLength(1);
     expect(pivot).toContain(">Medium</th>");
     expect(pivot).toContain(">Max</th>");
     expect(pivot).toContain('href="https://example.com/max"');

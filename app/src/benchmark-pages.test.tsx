@@ -186,8 +186,8 @@ describe("P7.2 benchmark pages", () => {
     expect(markup).toContain("2 versions, plus 1 variant or configuration");
     expect(markup).toContain(">Models</th>");
     expect(markup).toContain(">Results</th>");
-    expect(markup).toContain('<td class="numeric">12</td><td class="numeric">30</td>');
-    expect(markup).toContain('<td class="numeric">3</td><td class="numeric">4</td>');
+    expect(markup).toMatch(/<td class="numeric"[^>]*>12<\/td><td class="numeric"[^>]*>30<\/td>/);
+    expect(markup).toMatch(/<td class="numeric"[^>]*>3<\/td><td class="numeric"[^>]*>4<\/td>/);
     expect(markup).not.toMatch(/rank|top models|leaderboard/iu);
   });
 
