@@ -1,0 +1,85 @@
+{
+  "chunk": 2,
+  "selection": "Every published result still missing provenance whose primary source is a source of the models ranked 11–20 by result count (Registry Nos. 10005, 10012, 10013, 10014, 20010, 20013, 20015, 120002, 120003, 30011).",
+  "reporting_basis_rule": "self-reported when the source's publisher is the model's developer; independent otherwise. Evaluators stay recorded separately.",
+  "checked_at": "2026-10-06T00:01:15Z",
+  "sources": [
+    {
+      "url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+      "observed_title": "Gemini 4 Argon Model evaluation",
+      "source_type": "Evaluation methodology",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "PDF title; served from deepmind.google"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-2/",
+      "observed_title": "Introducing GPT-5.2 | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "observed_title": "moonshotai/Kimi-K2.6 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Moonshot AI",
+      "publisher_evidence": "Hugging Face repository owned by the moonshotai organization (Moonshot AI)"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+      "observed_title": "Claude Opus 5.5 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+      "observed_title": "Claude Opus 4.7 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+      "observed_title": "Claude Sonnet 5 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "observed_title": "moonshotai/Kimi-K3 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Moonshot AI",
+      "publisher_evidence": "Hugging Face repository owned by the moonshotai organization (Moonshot AI)"
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "observed_title": "GPT-6 Astra: A new generation of intelligence | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+      "observed_title": "Kimi K3: Open Frontier Intelligence — Technical Report of Kimi K3",
+      "source_type": "Technical report",
+      "publisher": "Moonshot AI",
+      "publisher_evidence": "First page: Kimi Team; MoonshotAI GitHub repository"
+    },
+    {
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "observed_title": "Introducing Claude Opus 5.5 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "observed_title": "Introducing Claude Opus 4.7 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    }
+  ]
+}

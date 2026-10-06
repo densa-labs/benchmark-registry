@@ -1,0 +1,1357 @@
+{
+  "records": [
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "01291a8c28a41e6e9a200b98726ba79073f58e9b57b0d79a4f6450b72709b0eb",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "131f79fe6e9e5fe608a19312a5d7534709d0be8d67ee8e4a567fa3dd56b9c7f7",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1decceb85b196ca5b414edec7681bf381e53550ad4c91d4c686a8b4ceabd5919",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2fece0a0b79016f54e290b7949138bea783f50a4f4a4985ba8a50aea990faf9e",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "375955bdb10b8da8b1eaa1072e1f50aa1af2473cc4b0bdf6cea7e0a9eebb8e0d",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "40e6b51cdab5c4f515e40bcf9d8215d4ab8605d273386a11b043d43c483fed7b",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "49185244b65701e922b8cf140f788d1bcc0b8c7ab2b8fa4a013c787a64954773",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4d654b55de5811fb4575d76cab57d9956350092fa352f0f62f2fd6138acfc6c0",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "55a7c356efc62ca004d3232ed2142bb4333e1503d2947e46255770d38953bb35",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b9fbd3e1f2effe29a93d02b5e58648a61eacc5475c807634bbf5253bb06385d",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "67a2fe26343358a8cf05dda98164eeab8ce5b045b5598b2a14544bac188bbd22",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6f129bb4fee66c6b1c1f1b1ce1683befa3f3b7b02a1633bac96f8755fb551fbb",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7644aa47e14aa8d814da75a65c4a6eaa7341b16e05b003abfdc9969644a7aa64",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9488604e655588768402341cdac4b93f1824c64ac736d93c1067f837a333b05c",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "966f5e5f88480cfc5e731a299554757c4c41163cda2c93a3cb29b7827ebe8579",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cf3d263314625350ee547ebd09e8c9e260c4419cb74bae6eb1e0c074f14be89f",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d4639b01c9fa3dccddeb5559e37c8982e83ab545226c5986644e3be2e9e14de9",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e6878e03307d91d02f2e3caa4738e238f34e3dc077bf934409a6954e238c1163",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f703e2b97bbcb8ef485e90789b889d5b31d1599b28832ad36cec2ff8575dea91",
+        "source_type": "Evaluation methodology",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1d627149c14a65a1e041cf0155acfbbd9d9fbdd99d38f7dd540942a3fadea50e",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1ddf3b3e1918b72f6c7c1daa3507bad7d6c651896b7da2ffad2a84dfd849ed02",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "394b1bd08ed7be68880205945fb6732ba366efdafc22731062ed6f7534e29d43",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "583bc60ce35dd383ad9737fa7d84976f8a93c3649d7edd27bef6301963a60ec9",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "766b77ecaa8e24723a116216567242af2bf132bdf16c7e0509c3d37bb7d6dab0",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "80ace69677b9ab7d311af0fe374c0790cc6912e5d7e40d82c479750b6b801231",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8baef06161d2a7cc7ffb2d1f290dd1281f24a56c12f1d235994bc58893f45f76",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8f466deac455f8a3cccb327636c3427aba15ee9f931a34cde06e4f3bb030f117",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "90d10bdb844ae26af15a0dd4db40b706011f9cb1b2b91a09af3f5eaf7b77c8bd",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "938e1f7e86809cf7879838b27887791900a231646f055c6bf164032a2b1e685a",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aea7a4d11abd7242d82a285abc991bc0a9f14e40379ef74577963ec3dfc25d5c",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "af22d01794d6628083116bd2a7c67034a2b28e01b2441a9452966589619777c5",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b11813a8da2c9b65f0394ba3586149959f978bf8d8176a7659a46ff93c3ed650",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b168dad47b32d1caa02081b34e733a30c43bcf737603fef1555c7334b06a0f7d",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bee3e6bd7f9fb42eae24c1f93b5fca2e74504cbec5015be7d76dbdc6da333285",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dfdde7939af9a5bf93d38479d50732bad5c6b38b464adfb697b92f3f5c2fbe17",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f7a59fc0424d588e6d8d231824b5619e3b49920f10b22ab2c639c1af4bebce6e",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "003e781bc072fff02d3018a1e9218f5957bf2cb9e7279b48279327aaf10181f3",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3b0280e7919cfcefd79158861b53fc65342bde5f7494103773553ce2b4d1886b",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "42ea7a5ce728513aed2e9bbd1fe52cbf7d772a1910c2bcda809e61dfd455bb61",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6354698365a1f1185fdb015e52c65d72575fc5f8d47934eab6d132ef79c0bf9d",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6dd11a2a1c04c3c4c3ac98e58db76ddd81e9525b2c7d1140e6e615d3e966737f",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8faf765d358671c502d20576ca2de399d4ba6aa5c3cd79841559193434e6442c",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b195b9cd61362ba357db758a66b36456a70d044ea6cdfbd67f97904863acc916",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c394cffeee4da9bda04f8e670a70697ba3efe529e99cbd222e99a604dfb84475",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eaac103d0a931b731017dc22b273d5c87f5d927e797d3585d8b4ecaa576609a0",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0f84c8b9902d3f0a5d911ffb062d4fa70e98b56f9bcad0798cd9171f79fe5822",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c7b8e4b6b77ae21a60c9b8be3180cfc98b8744a96f862aa089204f1dbafa740",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7c2321bfefd2acfa198c09afdaaa233a1028a9891e49f909e4717f5223139e59",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cdf72405aeb3ae3898ccc28a0e1ac594cbe87bac8c2bd963c047e6335b5eac48",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d9b1913345541f4685f0ef6bd6f7bd343919d35068e21e228ef938377080c60a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e6a65a690a3e46c6cef1c4404ec73b6c301516b63062c5c3a52f2b6d43b07205",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-6-astra/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "071eacebd6c6d46ff60225e423e81e8625eb8f0cd5bd83c2b7a61b8555d1c47e",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1614cbfff9f7b250b558127927fafb18472271d6a2e1b741ca784126fb57af31",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "21cc917f4fbf705a569880812b8fb73ed6710ebaae8dad162cb7f47ee9b57354",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c3091179d0105344a94f43c660650dc88edfa54b339c8af02335f6b14bacde3",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "39f943ed85d8d17e1ead28f7607e0748b5a00a9fd404a7e9f1aba5631fab3991",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "43d14411354cbd529d9d7a5a53f5b82c89dcd1784c220ae02531e59aed6c8fcc",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4d0df363f9d33cf9adc54548ae2c6cd9cc3d2a92dc48cb9e680ab4acb52042ba",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58978f1af0db524b5792393eb57c6be4fe7b424f70ea7edd014ae6506e4111c0",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6ea0e6813fbbc3220992b8408ce62f0b2f84907e0dc970f8886224bf1cd1087d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "71fbd29832b1e603777e6d60d17784397f39912521cd9f2a2f1a119cc57eef4d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "825421ee0d5f850c07108b8bce68d8472175612e33589a7521c6251362ed545d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a09caa803935405383d3e2278017fd2f3fbbfcb774720b63bd52fd6912e66636",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a1750f7c5916b6b1eacc4ec63ffb1b966831a85e7a20778f0d4e5ac8b4aae006",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e11c5b107fbdb029a9b90245f344319611704ed2d3f8949a85c08da5c90f950b",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e8796b58a10a9a19ef33c1338f1efb662b11e0b34ad005d3f9f281f974777d12",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eb00a5b273a4f42fd618123ccc2322af75722d0c34c874a1e13d1c4b3b3008c5",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f4669553046bd2a02a20cdbe3c8ceef2ade06337b9fad3b13a4bcf9d922fe411",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1e7d03c66c824fe8c96a60d2ad8a8c469e5587e776bcaec63f27f75e75c999da",
+        "source_type": "Technical report",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3d76ee1a60cda57192c849fb8b3f1a43d73b6477323a539c9848f377158b4cb0",
+        "source_type": "Technical report",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3f9602d021f19f3e5e7d8548a150d2c7d57c496604e25086468a152376cd1d64",
+        "source_type": "Technical report",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "494ede846876d200de4b7e9573815336196f4c12edfa84c4da3bc3b8eabd279c",
+        "source_type": "Technical report",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9533dc65f2412fd59ed8fda7e0ec5687b9293f2ecd8d205a465bf2b6b6d34826",
+        "source_type": "Technical report",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/3cb39dfd32e51c3328e2e4b4af21341247d06c43/k3_tech_report.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "19ce40ab2d84aefec5b5f0e311d00796101bdb821e7e8620291a03ae4119819a",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "50d742797b1b9e0052d596454cd39a5bc0c52715a4aef51f602202ad3fa2715e",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7bc71af4941d41c17f913043b84336aeefdfd278c563baf59fe41d0e21ceced3",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7e409db089597b0fccabe5cc0c2875ab23f039ba340922400fddb5fb53741a7b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "97d54d2dca6ae4c9c2e70ac1c4517ab5c5fb1f56e5ec715616302dd23fc8e039",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a036863e04534a4338c65bd86d3453585a0d1cbf317042446043a425ec6f8432",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aebab58d7f07c27a848b75e8a2bacb86abc37070172d5a3541ae76104c52ebea",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b393f7a4ddc0a56c9cee9499151a355452b3296a9a9b709ad5123e18c7b4f6a6",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bc64adeba11496a035522f70350a185a8ea3935ca6d6139f34d979d221cbe8fc",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c1543af395772a62c63f16a9094dfd27a7cab1c46043998915391256586df5d5",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c5f0436c9cade27f591860a918ed89918b80209d3d96ff8d1460bb5f6876e8da",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c7b1b71381b65a391f9847849e21b94e3c80cbf7d799ff4a47418fe3260e4653",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cbe2cf6748c00883215dba3f4cafd7dc3fac32940e7a8652a85e53755982671d",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dba3b4f0240e86696230e1ac51240c5c497484d277cab74c4f5da3488b87239f",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e189391ba7f3891f98521b6956000e7f5a5f90dda25f0554c11cf838d402fc3a",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f72bd7ce2de4b651dc76148f0b336575680c205411f077a94d89eb5ab868e96a",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0c7880f54060edf66a0f39443d4b2357c997cb8be35e6b75a9fbebe93bb9fe6f",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "190db5fe6af0ee28317c2a452d224dac2fd0477f12735d96bd2adc221287bf33",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1a3d96a5a8e158d37a852e3c714021981eb3de88c7814b79d7de9ac9cf4cf7cf",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3ad315909b7d25f288c3c3ac94399abfc9382f8a0e00a414099f649acc95005d",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "420e7f93afacebd9d554fa4f3d4727806160cb0efdf1bc3dd36253ddf21e8ede",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "48ab9277f3d239a5ca1d50dda747e9672ec01489af4a68a8ba783893339994cf",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6fdc585c3cb63238dc75f3bcd7ce964f3b806a72706fba16d308bb38656e47a4",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "773f69ab1d73ccf6f75cc056da92a8b4ea8b9e84ced607268d148516cf037b4a",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7ccaab6f6207a403f9a617f3d264dffc8d683055f223d82099132c73f4d7a2ac",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7e580a59fc7dee71b98d5e4d8d91bc6a68b7aa9bcdd1b61fb569977a6e5effce",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b34d3788d51473638ed618587bed18d7ed00c4a62a23eca2d266b5a6c6a9d9c2",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c100c06ef0abf773a59cab78f0458ada7745c28ffe8e25f442baedc724c59572",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e37c2118600b1c10e24b4bb1d685feab48d9bd3cb58d224a2ed45f4126cb14ca",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e5959a3763b9431a54a4dbbe01e3a0774427a05f81adc568da8fc61cd1c75f53",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "28dfff20762763068c297390f28c1d40967ed11f968abc35c584bb9d0ac6bf05",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3d1e5d087367ba0376e576a79b6d13c041ca64edc6ac9b3fbbfa98243540ec6b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4085ea7782b81d95253b3f2a4f913c2965a71d9e043e82235fe40b12db8162d8",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "42abde5e10b28c1632348899060acf5eb467b6c01ff2583527fc5727a130d6b6",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "673cbd6bc9bd8deb60848ee1635f487138ce1e07c525e93401bd71c8b5e853ca",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "75cdf9dc3cd32554c0c7bbd0204d0579e8f089e73b04a0f028fc9843fcf3a642",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a1c1949d5469dec7e3434b245fbb3b073697fd89def2afce2c75d572e0d6ff76",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "abd06a48274330f4cf23216e311a204fb2572db9e026094302d57309c9504413",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bacb195515dd13c888a1a1a3dfc1a3414efbec3816a889875f7e98f869ee7f1f",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c67b195cbfe82c0cf3f168219609719a79329e5c2ac5bdf1d7aef851cd658c53",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cdd5e6dd8b36a2b678cea1f065d381cae9379ad7ceb95b367b4400432a12c1b0",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cf3fca6cc5ae24cd551e43ac63ca7078f1dcdfafe667318126dbf53a8663f3b4",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d0f988362cc69393b6ef3a95b983647ff9bc1b26210086fd4e8a3e9c3464af43",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d1d00caaa19b02d271ab403316669a4075ea4bf25ccb6322384552b23ca77dbd",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d2f903286a4a643aec1b655f3d1c9ea3061c23c6fc370e4449af2baca7a464ba",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ff3884ed423b6a6981599f1681132c176075a70d6fd48e0ecdcb208770b241e8",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "49b134c9132a8c50c86ce575df9e819974b1643448b465e2f1673c0d06e83cf2",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-opus-5-5",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "71e556e679745098422b53c5913aee38934182e32f0877947d81d21f40d39e45",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-opus-5-5",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bbd9198daf7bed4d1dd1c609ae3555349397b73a875583a37d5e7edd392ca342",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/claude-opus-5-5",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "88db4904afe0b499aa8c9035b09dd4d6f94fcdc0e828aec7103543a0b702782f",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "source_checked_at": "2026-10-06T00:01:15Z"
+      }
+    }
+  ]
+}
