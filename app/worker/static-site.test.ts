@@ -86,6 +86,30 @@ it("serves the former read API in the browser from static files only", async () 
   expect(requested.at(-1)).toBe("/models");
 });
 
+it("starts the compare page's data requests with its HTML and in parallel", async () => {
+  const site=files(await buildStaticSite({db:database(),environment:"production",template,legacyRootSlugs:{}}));
+  const manifest=JSON.parse(site.get("data/manifest.json")!) as StaticDataManifest;
+  const compare=site.get("compare.html")!;
+  for(const href of [STATIC_MANIFEST_PATH,...["models","featured","redirects"].map(key=>`/data/objects/${manifest.objects[key]}.json`)])
+    expect(compare).toContain(`<link rel="preload" href="${href}" as="fetch" crossorigin="anonymous">`);
+  expect(site.get("models.html")).not.toContain('rel="preload"');
+
+  const requested:string[]=[];
+  const network=(async(input:RequestInfo|URL)=>{
+    const path=new URL(String(input),"https://registry.invalid").pathname;requested.push(path);
+    return new Response(site.get(path.slice(1)) ?? "missing",{status:site.has(path.slice(1)) ? 200 : 404});
+  }) as typeof fetch;
+  const staticFetch=createStaticFetch(network);
+  const model=Object.keys(manifest.objects).find(key=>key.startsWith("model:"))!;
+  staticFetch.prefetch!([model,"models","not-a-key"]);
+  await new Promise(resolve=>setTimeout(resolve,0));
+  await new Promise(resolve=>setTimeout(resolve,0));
+  expect(requested).toEqual([STATIC_MANIFEST_PATH,`/data/objects/${manifest.objects[model]}.json`,`/data/objects/${manifest.objects.models}.json`]);
+  // A later read reuses the prefetched file.
+  expect((await staticFetch(`/api/models/${model.slice(6)}`)).status).toBe(200);
+  expect(requested.filter(path=>path===`/data/objects/${manifest.objects[model]}.json`)).toHaveLength(1);
+});
+
 const security:SecurityPolicy={scriptHashes:["'sha256-theme'"]};
 it("keeps Cache-Control rules disjoint, so values are never appended", () => {
   const rules=headerRules(["index.html","models.html","models/10006.html","assets/index-abc12345.js","data/manifest.json","data/objects/a.json","feed.xml","badge/1/x.svg","robots.txt","_redirects","404.html"],"production",security);
