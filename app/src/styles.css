@@ -1569,6 +1569,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 .compare-evaluation .metadata-row dd { overflow-wrap: anywhere; font-size: 0.75rem; }
 .compare-pagination { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .compare-pagination .pagination { flex: 1 1 20rem; }
+.compare-selectors ~ .state-message { border-top: 0; padding-top: 0.5rem; }
 .compare-query-error { padding: 1rem; border-left: 2px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface-strong); font-size: 0.875rem; }
 .compare-query-error p { margin-bottom: 0.5rem; }
 /* Keep focused controls clear of the sticky selector bar. */
