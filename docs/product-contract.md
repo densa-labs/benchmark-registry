@@ -37,11 +37,8 @@ citation corrections.
 
 No Top Models. Neither panel ranks models or aggregates their scores.
 
-`GET /api/home-panels` exposes these two small panels from the same published
-read generation as the other read endpoints. It accepts no query parameters.
-The producer refreshes the panels on canonical updates and adds this projection
-to older generations on its next run, even without a data change. Existing
-generations must be rematerialized before deploying the new homepage.
+Both panels are computed at build time from the same D1 snapshot as every
+other page, so they change only with a new deploy.
 
 ## Routes
 
@@ -62,6 +59,17 @@ generations must be rematerialized before deploying the new homepage.
 
 Route slugs and benchmark version segments are the immutable route keys defined
 in `data-contract.md`; display names are never substituted into canonical URLs.
+
+The site also serves supporting pages outside these route families: `/search`,
+`/recent`, `/coverage`, `/corrections`, comparison pairs at
+`/compare/{name-slug}-vs-{name-slug}`, `/about`, `/contact`, `/legal`,
+`/privacy`, `/terms`, result badges at `/badge/{registry_no}/{slug}.svg`,
+`/sitemap.xml`, `/feed.xml` and `/version.json`. They must not change the
+semantics of the canonical routes.
+
+Every page is prerendered at build time and served as a static asset; there is
+no public `/api`. The site's read data is published as static files and changes
+only with a new deploy.
 
 ## Compare models
 
@@ -181,15 +189,17 @@ ranking rule. A redirected stealth placeholder is not eligible.
 
 The `/companies` index and `/companies/{slug}` detail route include companies
 and standalone AI units. Establishment dates render at their stored precision.
-Their provenance remains in the tracked data and API; the page does not add a
-provenance suffix to the date.
+Their provenance remains in the tracked data; the page does not add a
+provenance suffix to the date. A `user_attested` establishment date is not
+shown until a primary source establishes it (owner decision, 2026-10-04); the
+page shows an absence state instead.
 
 ## Registry redirects
 
 `/models/{registry_no}` for a redirected stealth number returns HTTP 308 to the
 confirmed model route. The old number remains reserved forever.
-The API model-detail response returns HTTP 200 with the confirmed model and
-identifies the old number in `redirected_from`.
+The model read data requested under the old number returns the confirmed
+model and identifies the old number in `redirected_from`.
 
 ## Table behavior
 

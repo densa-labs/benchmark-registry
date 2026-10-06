@@ -71,8 +71,8 @@ parsed as an integer.
 - Stealth `00` records may later redirect to confirmed permanent records.
 - A stealth redirect preserves the old Registry No. permanently, targets one
   confirmed model, and may not form a chain or cycle. Model-page requests for the
-  old number return a permanent redirect; API detail requests return the target
-  model plus `redirected_from`.
+  old number return a permanent redirect; the model read data for the old number
+  returns the target model plus `redirected_from`.
 - Namespace `00` is used only by models with `status = stealth`; stealth status
   is invalid outside namespace `00`. A redirect source is a `00` stealth model and
   its target is a non-stealth model outside `00`.

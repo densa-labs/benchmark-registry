@@ -25,6 +25,11 @@ npm run deploy:production   # build from production D1, verify, upload
 New data appears on the site after the next deploy. After an ingestor commit,
 run the deploy for that environment.
 
+Deploy from a clean clone outside iCloud Drive. An iCloud-synced checkout gains
+`… 2` duplicate files, which would be built and uploaded. Confirm the result with
+`curl https://<host>/version.json`: `commit` should be the commit you deployed
+and `dirty` should be `false`.
+
 A build reads each canonical table once (one D1 query per table). Rows read per
 build equal the table sizes, far under the free 5M rows/day. All joins run
 locally. Builds fail instead of publishing when projection checks fail, a page

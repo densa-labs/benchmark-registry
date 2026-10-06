@@ -198,7 +198,7 @@ source_url
 `storage_kind` is `decimal`, `integer`, or `text`. `unit` is an explicit stable
 identifier such as `percent`, `elo`, or `points`, not presentation copy. Numeric
 scores are parsed with Python `Decimal`, stored as canonical decimal text, and
-returned by the API as strings to avoid binary floating-point changes. Results
+served in the read data as strings to avoid binary floating-point changes. Results
 also retain the exact source spelling in `score_raw`. Text metrics store only
 `score_raw`.
 
@@ -274,7 +274,7 @@ run_ref
 ```
 
 Identity components may not contain NUL. The key is immutable, unique, safe to
-expose through the read API, and independent of database row order.
+expose in the public read data, and independent of database row order.
 
 Each result stores exactly one identity-bearing primary source URL and checked
 timestamp in required columns. `result_sources` stores zero or more additional
@@ -344,5 +344,5 @@ an atomic rollback probe for both the local adapter and a disposable remote D1
 database before production writes are enabled.
 
 After an ambiguous network response, the ingestor re-queries logical identities
-before retrying. It must never blindly replay a write. The public Worker and its
-routes remain read-only.
+before retrying. It must never blindly replay a write. The public site is static
+assets built from D1 and has no write path.

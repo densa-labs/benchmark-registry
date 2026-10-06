@@ -69,20 +69,21 @@ approval.
 
 ## 5. Repository map
 
-Expected structure:
-
 ```text
 /
-├── app/                    # frontend + build-time static page renderer
-├── ingestor/               # Python ingestion CLI
-├── data/                   # tracked ingestion/source data
-├── migrations/             # D1 migrations
-├── tests/
-├── scripts/
-└── README.md
+├── app/          # React pages, the build-time renderer (worker/), static build and deploy scripts
+├── ingestor/     # Python ingestion CLI (the only write path into D1) and its tests
+├── data/         # tracked batches, corrections, label mappings and research evidence
+├── migrations/   # ordered D1 migrations and their rollbacks
+├── scripts/      # repository checks: data validation, replay, backup, SEO check
+├── docs/         # the three frozen contracts only
+├── assets/       # README logos
+└── .github/      # CI workflow and issue templates
 ```
 
-Do not add new top-level directories without a concrete implementation need.
+Tests live next to the code they cover (`app/src/*.test.tsx`,
+`app/worker/*.test.ts`, `ingestor/tests/`, `scripts/test_*.py`). Do not add new
+top-level directories without a concrete implementation need.
 
 Scoped rules:
 
@@ -92,6 +93,36 @@ Scoped rules:
 - `migrations/AGENTS.md`
 
 Always read the deepest applicable `AGENTS.md` before editing files in that subtree.
+
+### How the site runs
+
+The public site is **Workers static assets only**. There is no deployed Worker
+script, no KV store, no public `/api`, and no `/healthz`.
+
+```text
+ingestor ──writes──▶ D1 (staging or production, the source of truth)
+                       │
+npm run deploy:<env> ──┤ reads each table once, prerenders every page and data file
+                       ▼
+               app/dist/client ──wrangler deploy──▶ static assets
+```
+
+- `app/worker/` is the build-time renderer. It runs inside
+  `app/scripts/build-static.mjs`, never on a request.
+- The read routes in `app/worker/api-router.ts` run at build time and in the
+  browser (`app/src/static-api.ts`) against `data/manifest.json` and its
+  content-hashed `data/objects/*.json`.
+- `/version.json` names the live build (commit, data generation, counts).
+- New data appears only after the next deploy of that environment.
+
+Operational detail lives in `app/STATIC-SITE.md` (build, caching, redirects,
+rollback), `app/STAGING.md` and `app/PRODUCTION.md` (migrations, ingestion and
+deploy order).
+
+Build and deploy from a clean clone outside iCloud Drive. An iCloud-synced
+checkout gains `… 2` duplicate files that end up in the build, and its Python
+virtualenv `.pth` files can be hidden, which breaks `uv run pytest` (run it as
+`PYTHONPATH=src uv run pytest` there).
 
 ---
 
@@ -135,7 +166,7 @@ real data
   ↓
 schema validation
   ↓
-API
+read layer (build-time projections and static data files)
   ↓
 UI
 ```
@@ -146,7 +177,7 @@ Examples:
 
 - If seed data exposes a schema flaw, fix the schema.
 - If the ingestor cannot represent a result cleanly, do not manually insert it.
-- If the API shape is wrong, do not add a frontend workaround.
+- If the read data shape is wrong, fix the projection, not the page.
 - If source provenance is incomplete, do not guess in presentation code.
 
 ---
@@ -182,7 +213,18 @@ Before marking work complete:
 
 Do not claim tests passed unless they were actually run.
 
-If the repo does not yet contain the expected verification commands, add them only when that is within task scope.
+The checks CI runs (`.github/workflows/ci.yml`), from the repository root:
+
+```sh
+cd app && npm run typecheck && npm run lint && npm test && npm run build && npm run test:seo
+cd app && npm run db:migrate:local                        # migrations apply cleanly
+cd ingestor && uv run pytest && uv run pytest ../scripts
+uv run --project ingestor ruff check ingestor scripts app/scripts
+cd ingestor && uv run python ../scripts/validate_data.py  # tracked data
+cd ingestor && uv run python ../scripts/check_replay.py   # manifest replays twice
+```
+
+Add a new verification command only when that is within task scope.
 
 ---
 
@@ -304,22 +346,26 @@ Optimize for correctness and bounded completion, not activity volume.
 
 ## 16. Owner decisions
 
-Approved by the owner on 2026-10-04 in response to the October 2026 audit
-(`docs/audit/audit-2026-10.md`, no longer in the repository; the decisions below
-are complete).
+Approved by the owner on 2026-10-04 in response to the October 2026 audit.
 Treat these as explicit task instructions; do not reopen them.
 
-1. The GPT-6.1 Sol × exploitbench-internal-port record in
-   `data/batches/expansion-2026-09-30-cohort-07.json` stays off production. It
-   must be moved out of `data/batches` so that no replay can publish it.
-2. Approved, but deferred to later batches. Do not implement any of these
-   before their batch, and do not make changes that would make them harder:
-   - effort uses a fixed vocabulary (`none`, `low`, `medium`, `high`, `xhigh`,
-     `max`), and the provider's raw label is kept separately;
-   - tool and harness settings become their own dimension;
-   - Terminal-Bench Science becomes its own benchmark;
-   - company establishment dates stay hidden until sourced;
-   - Hugging Face scores attributed to Artificial Analysis are not primary.
+1. Done. The GPT-6.1 Sol × exploitbench-internal-port record stays off
+   production. Its batch lives in `data/staging-only/`, outside
+   `data/batches`, so no replay can publish it. `scripts/validate_data.py`
+   still schema-checks it. Do not move it back.
+2. Approved for later batches:
+   - Done: effort uses a fixed vocabulary (`none`, `low`, `medium`, `high`,
+     `xhigh`, `max`), and the provider's raw label is kept separately
+     (`data/reasoning-labels.json`, migrations 0013 and 0018).
+   - Done: tool and harness settings are their own dimension (benchmark
+     configurations, migration 0014).
+   - Done: company establishment dates stay hidden until sourced
+     (`user_attested` dates are returned as null by the read layer).
+   - Done: Hugging Face scores attributed to Artificial Analysis are not
+     primary (retracted in `owner-decision-5-retractions-2026-10-06.json`).
+   - Pending: Terminal-Bench Science becomes its own benchmark. It is still a
+     `science-0.1` version of `terminal-bench`. Do not implement it before its
+     batch, and do not make changes that would make it harder.
 
 ---
 

@@ -1,4 +1,4 @@
-# Production deployment (P10)
+# Production deployment
 
 Production is the `production` Wrangler environment in `wrangler.jsonc`. It
 deploys `benchmark-registry-production` to `benchmarkregistry.org` and
@@ -50,7 +50,8 @@ script reads the production D1 database once, prerenders the site, and checks
 the assets-only configuration, both custom domains and the absence of staging
 crawler headers before upload. Run it after every ingestor commit so new data
 appears on the site. Staging has a separate environment,
-database, Worker, and custom domain; do not modify its Access policy or binding.
+database, Worker name, and custom domain; do not modify its Access policy or
+binding. Deploy to staging and check it before production.
 
 The first production export was saved locally at
 `app/.wrangler/backups/production-initial-2026-09-25.sql` and is ignored by Git.
