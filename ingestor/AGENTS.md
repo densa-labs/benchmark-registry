@@ -18,33 +18,42 @@ Accuracy and provenance take priority over convenience.
 
 ## 2. Supported operations
 
-The v1 CLI should support bounded operations equivalent to:
+Run from the repository root:
 
-```text
-ingest company
-ingest result
-ingest model
-ingest benchmark
-ingest batch
+```sh
+PYTHONPATH=ingestor/src python3 -m benchmark_registry_ingestor <operation> <file.json> --dry-run|--commit [--target local|remote]
 ```
 
-Required modes:
+`--dry-run` or `--commit` is required; `--target` defaults to `local`. There is
+no `--force`, and there must not be one.
 
-```text
---dry-run
---commit
-```
+Creating records:
 
-Do not add `--force` in v1.
+- `company` creates providers and reviewed, provenance-backed
+  namespace/company authorizations. No other operation creates those
+  mappings; namespaces themselves are migration-owned seed data.
+- `model` owns model aliases and optional stealth redirect declarations.
+- `benchmark` owns benchmark families, aliases, versions, metrics and
+  benchmark-version evaluators.
+- `benchmark_version_configuration` records tool and harness settings.
+- `result` owns run evaluators and sources.
 
-Production mutation must require explicit commit intent.
+Correcting records, each through an explicit compare-and-set with a reason:
 
-`ingest benchmark` owns benchmark families, aliases, versions, metrics, and
-benchmark-version evaluators. `ingest model` owns model aliases and optional
-stealth redirect declarations. `ingest result` owns run evaluators and sources.
-Namespaces are migration-owned approved seed data. `ingest company` creates
-reviewed, provenance-backed namespace/company authorizations; model ingestion
-requires the mapping to exist. No other operation creates those mappings.
+- `company_correction`, `company_attestation`, `model_provider_correction`,
+  `provider_name_correction`, `provider_retirement`;
+- `result_correction`, `result_retraction`;
+- `result_provenance` and `metric_direction`, which only fill empty fields.
+
+Running units:
+
+- `batch` validates and commits a whole batch file as one unit.
+- `replay data/batches/manifest.json` replays every listed batch in order
+  through the correction chain. It commits only to a local database.
+
+Production mutation requires explicit `--commit` with `--target remote`. The
+production order (migrations, then each batch dry-run and commit, then the
+replay dry-run, then deploy) is in `app/PRODUCTION.md`.
 
 ---
 
@@ -216,7 +225,9 @@ Do not mutate production schema from the ingestor.
 
 ## 11. Tests
 
-At minimum, maintain tests for:
+Run `uv run pytest` from `ingestor/` (tests are in `ingestor/tests/`). In an
+iCloud-synced checkout use `PYTHONPATH=src uv run pytest`. At minimum, maintain
+tests for:
 
 - valid company ingestion,
 - valid model ingestion,

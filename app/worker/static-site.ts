@@ -4,7 +4,7 @@
 import { CONTENT_PATHS } from "../src/content-metadata";
 import { LEGAL_PATHS } from "../src/legal-content";
 import { CANONICAL_ORIGIN } from "../src/seo-config";
-import type { StaticDataManifest } from "../src/static-api";
+import { STATIC_MANIFEST_PATH, staticObjectPath, type StaticDataManifest } from "../src/static-api";
 import { analyticsConfiguration, type AnalyticsEnvironment } from "./analytics";
 import { handleRequest, type Env } from "./index";
 import { buildGeneration } from "./materializer";
@@ -259,6 +259,11 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   const manifest: StaticDataManifest = { generation, objects: { ...build.manifest.objects, featured: featuredHash } };
   for (const hash of new Set(Object.values(manifest.objects))) files.push({ path: `data/objects/${hash}.json`, body: serialized.get(hash)! });
   files.push({ path: "data/manifest.json", body: JSON.stringify(manifest) });
+  // /compare reads its state from the URL in the browser. Start its data requests with the
+  // HTML instead of after the script: the manifest and the model list it always needs.
+  const comparePage = files.find((file) => file.path === pageFile("/compare"));
+  if (comparePage) comparePage.body = comparePage.body.replace("</head>", [STATIC_MANIFEST_PATH, ...["models", "featured", "redirects"].map((key) => staticObjectPath(manifest.objects[key]))]
+    .map((href) => `<link rel="preload" href="${href}" as="fetch" crossorigin="anonymous">`).join("") + "</head>");
 
   const redirects = redirectRules({ redirects: object(build.manifest.objects.redirects).data as ReadData["redirects"], seo: snapshot }, versions, options.legacyRootSlugs);
   for (const rule of redirects.lines) {

@@ -677,6 +677,8 @@ interface PaginationProps {
 }
 
 export function Pagination({ page, totalPages, getHref }: PaginationProps) {
+  // A single page has nowhere to go; an out-of-range page still shows the way back.
+  if (totalPages <= 1 && page <= 1) return null;
   const hasPrevious = page > 1;
   const hasNext = page < totalPages;
 

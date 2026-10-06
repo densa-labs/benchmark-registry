@@ -4,6 +4,13 @@ import { isPlaceholder } from "../src/seo";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
 import { groupVersions } from "../src/version-groups";
 
+// A version without its own label shares the family's name; tell the family link apart.
+function distinctLinkNames(links:Array<{name:string;path:string}>):Array<{name:string;path:string}> {
+  const counts=new Map<string,number>();
+  for(const link of links) counts.set(link.name,(counts.get(link.name) ?? 0)+1);
+  return links.map(link=>counts.get(link.name)!>1 && link.path.split("/").length===3 ? {...link,name:`${link.name} (all versions)`} : link);
+}
+
 export type SeoKind = "home" | "models" | "benchmarks" | "companies" | "model" | "benchmark" | "benchmark-version" | "company" | "comparison" | "recent";
 export interface SeoPage {
   kind: SeoKind;
@@ -60,10 +67,10 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
     pages[`/models/${model.registry_no}`] = { ...summarize("model", model.name, rows, [model.checked]),
       provider: model.company.name, registryNo: model.registry_no, released: model.released_at,
       sources: [...new Set([model.source, ...rows.map(({ row }) => row.primary_source_url)])].sort(),
-      coveredBenchmarks: [...new Map(rows.flatMap(({row})=>[
+      coveredBenchmarks: distinctLinkNames([...new Map(rows.flatMap(({row})=>[
         [`/benchmarks/${row.benchmark.slug}`,{name:benchmarkDisplayName(row.benchmark),path:`/benchmarks/${row.benchmark.slug}`}],
         [`/benchmarks/${row.benchmark.slug}/${row.benchmark_version_slug}`,{name:benchmarkVersionLabel(row.benchmark,row.benchmark_version),path:`/benchmarks/${row.benchmark.slug}/${row.benchmark_version_slug}`}],
-      ] as const)).values()].sort((a,b)=>a.name.localeCompare(b.name,"en") || a.path.localeCompare(b.path,"en")),
+      ] as const)).values()]).sort((a,b)=>a.name.localeCompare(b.name,"en") || a.path.localeCompare(b.path,"en")),
     };
   }
   for (const company of input.companies) {

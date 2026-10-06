@@ -8,9 +8,6 @@ export interface ComparisonState {
   reasoning: [string | undefined, string | undefined];
   query: string;
   sharedOnly: boolean;
-  provider?: string;
-  releasedFrom?: string;
-  releasedTo?: string;
   page: number;
   limit: 50 | 100 | 500;
 }
@@ -23,6 +20,7 @@ export interface ComparisonResponse {
 
 export function parseComparisonState(search: string): ComparisonState {
   const params = new URLSearchParams(search);
+  // provider and released_* belonged to a retired model filter; old links still load and ignore them.
   const allowed = ["models", "reasoning", "model_a", "model_b", "reasoning_a", "reasoning_b", "q", "benchmarks", "page", "limit", "provider", "released_from", "released_to"];
   for (const key of params.keys()) {
     if (!allowed.includes(key) || params.getAll(key).length !== 1) throw new Error("This comparison URL contains unsupported or repeated parameters.");
@@ -42,16 +40,7 @@ export function parseComparisonState(search: string): ComparisonState {
   const limitValue = params.get("limit") ?? "50";
   if (!["50", "100", "500"].includes(limitValue)) throw new Error("Rows per page must be 50, 100, or 500.");
   if (!Number.isSafeInteger((page - 1) * Number(limitValue))) throw new Error("Page is outside the supported range.");
-  const provider=params.get("provider") || undefined;
-  if(provider && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(provider)) throw new Error("Choose a recorded provider.");
-  const releaseDate=(key:string)=>{
-    const value=params.get(key) || undefined;
-    if(value && (!/^\d{4}-\d{2}-\d{2}$/u.test(value) || !Number.isFinite(Date.parse(value)) || new Date(value).toISOString().slice(0,10)!==value)) throw new Error("Choose a valid release date.");
-    return value;
-  };
-  const releasedFrom=releaseDate("released_from"),releasedTo=releaseDate("released_to");
-  if(releasedFrom && releasedTo && releasedFrom>releasedTo) throw new Error("Release range must start before it ends.");
-  return { provider,releasedFrom,releasedTo,models: [models[0] ?? "", models[1] ?? ""], reasoning: [reasoning[0], reasoning[1]], query, sharedOnly: mode !== "all", page, limit: Number(limitValue) as ComparisonState["limit"] };
+  return { models: [models[0] ?? "", models[1] ?? ""], reasoning: [reasoning[0], reasoning[1]], query, sharedOnly: mode !== "all", page, limit: Number(limitValue) as ComparisonState["limit"] };
 }
 
 export function comparisonHref(state: ComparisonState): string {
@@ -60,9 +49,6 @@ export function comparisonHref(state: ComparisonState): string {
   if (state.reasoning.some(value => value !== undefined)) params.set("reasoning", state.reasoning.map(value => value === undefined ? "~" : encodeURIComponent(value).replaceAll("~", "%7E")).join(","));
   if (state.query) params.set("q", state.query);
   if (!state.sharedOnly) params.set("benchmarks", "all");
-  if(state.provider) params.set("provider",state.provider);
-  if(state.releasedFrom) params.set("released_from",state.releasedFrom);
-  if(state.releasedTo) params.set("released_to",state.releasedTo);
   if (state.limit !== 50) params.set("limit", String(state.limit));
   if (state.page !== 1) params.set("page", String(state.page));
   return params.size ? `/compare?${params}` : "/compare";
@@ -139,10 +125,4 @@ export function comparisonPage(rows: ComparisonRow[], state: ComparisonState) {
   const filtered = rows.filter(row => (!state.sharedOnly || row.shared) && (!query || [row.benchmark.name, ...row.benchmark.aliases, ...row.results.flat().map(result => result.benchmark_version)].some(value => normalizeSearch(value).includes(query))));
   const page = filtered.slice((state.page - 1) * state.limit, state.page * state.limit);
   return { shared: page.filter(row => row.shared), other: page.filter(row => !row.shared), total: filtered.length, totalPages: Math.ceil(filtered.length / state.limit) };
-}
-
-export function filteredComparisonModels(models:ModelListEntry[],state:ComparisonState):ModelListEntry[] {
-  return models.filter(model=>(!state.provider || model.company.slug===state.provider)
-    && (!state.releasedFrom || model.released_at.slice(0,10)>=state.releasedFrom)
-    && (!state.releasedTo || model.released_at.slice(0,10)<=state.releasedTo));
 }

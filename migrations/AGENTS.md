@@ -12,7 +12,7 @@ All production schema changes must be represented by versioned migrations.
 
 Do not manually mutate production schema.
 
-Do not place schema-changing SQL in request handlers or ingestion code.
+Do not place schema-changing SQL in the app, the static build or ingestion code.
 
 ---
 
@@ -92,3 +92,20 @@ Verify:
 - no frozen identifier changes unexpectedly.
 
 If rollback is unsafe or unsupported, document recovery expectations before approval.
+
+---
+
+## 7. Adding and applying a migration
+
+- Name it `NNNN_short_description.sql` with the next number. Never edit or
+  renumber a migration that has been applied anywhere.
+- Since 0009, each migration has a matching `rollback/NNNN_*.sql`. It is applied
+  only by hand when reverting the matching app or ingestor version.
+- Check it locally: `cd app && npm run db:migrate:local`, then the ingestor
+  tests (`ingestor/tests/test_migration_*.py`) and
+  `scripts/test_product_migrations.py`.
+- Apply to staging first, then production, with the `db:migrations:list:<env>`
+  and `db:migrate:<env>` scripts in `app/package.json` (see `app/STAGING.md`
+  and `app/PRODUCTION.md`). Redeploy that environment afterwards so the
+  static build reads the new schema.
+

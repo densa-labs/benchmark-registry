@@ -1,10 +1,10 @@
 # app/AGENTS.md
 
-Applies to the frontend and the build-time page renderer in `worker/`. The site
-is static assets only (see `STATIC-SITE.md`); the `/api` routes below run at
-build time and in the browser from static data, not on a deployed Worker.
+Applies to the frontend (`src/`), the build-time page renderer (`worker/`) and
+the build and deploy scripts (`scripts/`).
 
-Read the root `AGENTS.md` first.
+Read the root `AGENTS.md` first, then `STATIC-SITE.md`. The site is static
+assets only: `worker/` never runs on a request, despite its name.
 
 ---
 
@@ -14,7 +14,7 @@ The app is a **read-first public interface** over curated Registry data.
 
 It must:
 
-- expose stable read endpoints,
+- publish stable, prerendered pages and static read data,
 - render the frozen page structures,
 - make sources easy to reach,
 - preserve model/benchmark/company relationships,
@@ -26,12 +26,14 @@ It must not become an admin application.
 
 ## 2. Public routes
 
-Preserve:
+The canonical route families are frozen in `docs/product-contract.md`:
 
 ```text
 /
 /models
 /models/{registry_no}
+
+/compare
 
 /benchmarks
 /benchmarks/{slug}
@@ -41,49 +43,32 @@ Preserve:
 /companies/{slug}
 ```
 
-Do not change canonical route semantics without explicit approval.
+The contract also lists the supporting pages (search, recent, coverage,
+corrections, comparison pairs, legal and about pages, badges, feed and
+`/version.json`). Do not change canonical route semantics or add a route
+without explicit approval. Every new page must be reachable from the build's
+page inventory in `worker/static-site.ts`, or it will not be published.
 
 ---
 
-## 3. API contract
+## 3. Read layer
 
-Expected read endpoints:
+There is no public `/api` and no database read at request time.
 
-```text
-GET /api/models
-GET /api/models/{registry_no}
-
-GET /api/benchmarks
-GET /api/benchmarks/{slug}
-GET /api/benchmarks/{slug}/{version}
-
-GET /api/companies
-GET /api/companies/{slug}
-
-GET /api/search?q=
-```
-
-Where applicable:
-
-```text
-?page=
-?limit=50|100|500
-?q=
-?company=
-?sort=
-?order=
-?view=latest|history
-```
-
-Use the response envelopes, validation rules, allowed sort keys, and deterministic
-default ordering in `development-roadmap.md` Phase 5. Reject unknown parameters
-and unsupported values; score is never an allowed sort key.
-
-No public write endpoints.
-
-Use D1 prepared statements/bindings for dynamic values.
-
-Never interpolate untrusted input directly into SQL.
+- `scripts/build-static.mjs` loads one `SELECT *` per D1 table into an
+  in-memory SQLite snapshot. `worker/repository.ts` and
+  `worker/materializer.ts` project it into `data/manifest.json` and
+  content-hashed `data/objects/*.json`.
+- The read routes in `worker/api-router.ts` are internal. They render pages
+  at build time, and `src/static-api.ts` answers the same `/api/*` paths in
+  the browser from the static data files.
+- Allowed query parameters and sort keys per route live in
+  `worker/request-policy.ts`; parsing and validation live in
+  `worker/params.ts`. Unknown parameters and unsupported values are rejected.
+  Score is never an allowed sort key.
+- SQL runs only against the build snapshot. Use bound parameters for every
+  dynamic value; never interpolate input into SQL.
+- No write endpoints, and no runtime fallback to D1.
 
 ---
 
@@ -127,8 +112,8 @@ with coverage counts, and at most five result records in Registry insertion
 order. Keep result report dates distinct from Registry addition order.
 
 There is **no Top Models** feature. Do not introduce rankings or composite model
-scores. Serve the homepage panels through the published read store, with no
-public D1 queries.
+scores. The homepage panels are computed at build time from the same D1
+snapshot as every other page.
 
 ---
 
@@ -244,7 +229,8 @@ different meaning of “latest” in presentation code.
 
 Score is never sortable.
 
-Only enable sorting keys explicitly listed in `development-roadmap.md` Phase 5.
+Only enable the sort keys listed in `worker/request-policy.ts`; adding one needs
+explicit approval.
 
 The active sort should be visually clear.
 
@@ -265,9 +251,9 @@ Global search should support:
 
 Page-local search must remain scoped to the current page.
 
-Start with indexed SQL lookups.
-
-Do not add full-text infrastructure unless the real dataset demonstrates a need.
+Search runs in the browser over the static search data
+(`worker/search-response.ts` through `src/static-api.ts`). Do not add a search service or full-text infrastructure
+unless the real dataset demonstrates a need.
 
 ---
 
@@ -325,18 +311,26 @@ Prefer:
 - compact spacing,
 - sticky first column where useful.
 
-Do not convert every row into oversized cards unless explicitly approved.
+Do not convert every row into oversized cards unless explicitly approved. On
+phones, `/compare` puts the benchmark name across the row with both scores
+beneath (owner-approved, 2026-10-06); that is not a precedent for other tables.
 
 ---
 
 ## 14. Verification
 
-Before completing app work, run the relevant repository commands for:
+Before completing app work, run from `app/`:
 
-- typechecking,
-- linting,
-- unit/integration tests,
-- route/API tests.
+```sh
+npm run typecheck
+npm run lint
+npm test                    # vitest: pages, read layer, SEO, static build
+npm run build && npm run test:seo
+```
+
+`npm run test:accessibility` covers axe checks on rendered pages. A full static
+build needs D1 access (`npm run build:staging`); for a local build from a
+SQLite copy, see `STATIC-SITE.md`.
 
 For UI changes, verify:
 

@@ -1,4 +1,4 @@
-# Staging (S1.1)
+# Staging
 
 Staging is deployed as static assets only (see [STATIC-SITE.md](STATIC-SITE.md)).
 The Wrangler `staging` environment deploys `benchmark-registry-staging`, built
@@ -28,10 +28,11 @@ npm run db:migrations:list:staging
 npm run deploy:staging
 ```
 
-The migration chain is `../migrations/0001_initial.sql`,
-`0002_seed_namespaces.sql`, then `0003_search_indexes.sql`. The namespace rows
-are schema reference data; the launch dataset belongs to S1.2. Repeating the
-migration command applies only pending migrations.
+The migration chain is every `../migrations/NNNN_*.sql` file in order. The
+namespace rows are schema reference data; Registry data arrives only through the
+ingestor batches in `../data/batches/manifest.json`, in the same order as
+production (see [PRODUCTION.md](PRODUCTION.md), with the staging D1 ID).
+Repeating the migration command applies only pending migrations.
 
 The deployment creates the Custom Domain's DNS record and certificate when the
 zone is active and the hostname is available. If Cloudflare reports an existing

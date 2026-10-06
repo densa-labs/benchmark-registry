@@ -15,6 +15,7 @@ import type {
 import { diagnoseApiFailure } from "./diagnostics";
 import { effortRank } from "./result-pivot";
 import type { HomePanels } from "../worker/home-panels";
+import type { StaticFetch } from "./static-api";
 import type { FeaturedResult } from "../worker/featured-result";
 import { parseComparisonState, type ComparisonResponse } from "./compare";
 import { ApiError } from "../worker/api";
@@ -515,6 +516,8 @@ async function loadComparison(search: string, fetcher: typeof fetch, signal?: Ab
     if (!response.ok) { diagnoseApiFailure(response.status); throw new RegistryClientError(errorMessage(body)); }
     return body as T;
   };
+  // Start every data file this comparison needs at once instead of one after another.
+  (fetcher as StaticFetch).prefetch?.(["models", "featured", "redirects", ...state.models.filter(Boolean).map(number => `model:${number}`)]);
   const directory = async () => {
     const first = (await request<ModelListResponse>("/api/models?sort=name&order=asc&limit=500"))!;
     const models = [...first.data];

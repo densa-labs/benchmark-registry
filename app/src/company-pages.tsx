@@ -143,19 +143,28 @@ function PaginationFor({
   currentSearch,
   page,
   totalPages,
+  limit,
+  totalItems,
 }: {
   pathname: string;
   currentSearch: string;
   page: number;
   totalPages: number;
+  limit: 50 | 100 | 500;
+  totalItems: number;
 }) {
-  if (totalPages === 0) return null;
+  // Rows per page sits with pagination under the table, so results start higher on phones.
+  const sizes = totalItems > 50 || limit !== 50;
+  if (!sizes && totalPages <= 1 && page <= 1) return null;
   return (
-    <Pagination
-      page={page}
-      totalPages={totalPages}
-      getHref={(nextPage) => queryHref(pathname, currentSearch, { page: nextPage })}
-    />
+    <div className="results-footer">
+      {sizes ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={limit} /> : null}
+      <Pagination
+        page={page}
+        totalPages={totalPages}
+        getHref={(nextPage) => queryHref(pathname, currentSearch, { page: nextPage })}
+      />
+    </div>
   );
 }
 
@@ -214,17 +223,8 @@ export function CompaniesPage({
       />
 
       <section className="results-section" aria-labelledby="company-index-heading">
-        <div className="results-section__header">
-          <div>
-            <h2 id="company-index-heading">Registry organizations</h2>
-            <p>{countLabel(response.page.total_items, "organization")}</p>
-          </div>
-          <PageSizeForm
-            action={pathname}
-            currentSearch={currentSearch}
-            value={response.page.limit}
-          />
-        </div>
+        {/* The page header already shows the count; the section keeps a heading for navigation. */}
+        <h2 id="company-index-heading" className="visually-hidden">Registry organizations</h2>
           <LocalSearch
             action={pathname}
             currentSearch={currentSearch}
@@ -251,6 +251,10 @@ export function CompaniesPage({
           currentSearch={currentSearch}
           page={response.page.number}
           totalPages={response.page.total_pages}
+
+          limit={response.page.limit}
+
+          totalItems={response.page.total_items}
         />
       </section>
     </PageContainer>
@@ -350,7 +354,6 @@ export function CompanyDetailPage({
             <h2 id="company-results-heading">Benchmarks</h2>
             <p>{countLabel(page.total_items, "result")}</p>
           </div>
-          <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} />
         </div>
         <LocalSearch
           action={pathname}
@@ -394,6 +397,10 @@ export function CompanyDetailPage({
           currentSearch={currentSearch}
           page={page.number}
           totalPages={page.total_pages}
+
+          limit={page.limit}
+
+          totalItems={page.total_items}
         />
       </section>
       <RelatedModels models={response.data.seo?.related ?? []} label={`${company.name} models`} showDates />

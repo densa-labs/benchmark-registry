@@ -149,19 +149,28 @@ function PaginationFor({
   currentSearch,
   page,
   totalPages,
+  limit,
+  totalItems,
 }: {
   pathname: string;
   currentSearch: string;
   page: number;
   totalPages: number;
+  limit: 50 | 100 | 500;
+  totalItems: number;
 }) {
-  if (totalPages === 0) return null;
+  // Rows per page sits with pagination under the table, so results start higher on phones.
+  const sizes = totalItems > 50;
+  if (!sizes && totalPages <= 1 && page <= 1) return null;
   return (
-    <Pagination
-      page={page}
-      totalPages={totalPages}
-      getHref={(nextPage) => queryHref(pathname, currentSearch, { page: nextPage })}
-    />
+    <div className="results-footer">
+      {sizes ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={limit} /> : null}
+      <Pagination
+        page={page}
+        totalPages={totalPages}
+        getHref={(nextPage) => queryHref(pathname, currentSearch, { page: nextPage })}
+      />
+    </div>
   );
 }
 
@@ -204,7 +213,7 @@ export function ModelsPage({
     {
       key: "status",
       label: "Status",
-      render: (model) => <span className="model-status">{model.status}</span>,
+      render: (model) => <span className="model-status" data-status={model.status.toLowerCase()}>{model.status}</span>,
     },
     {
       key: "benchmark-score",
@@ -220,17 +229,8 @@ export function ModelsPage({
       <PageHeader title="Models" description={modelCount(response.page.total_items)} />
 
       <section className="results-section" aria-labelledby="models-heading">
-        <div className="results-section__header">
-          <div>
-            <h2 id="models-heading">Registry models</h2>
-            <p>{modelCount(response.page.total_items)}</p>
-          </div>
-          <PageSizeForm
-            action={pathname}
-            currentSearch={currentSearch}
-            value={response.page.limit}
-          />
-        </div>
+        {/* The page header already shows the count; the section keeps a heading for navigation. */}
+        <h2 id="models-heading" className="visually-hidden">Registry models</h2>
           <LocalSearch
             action={pathname}
             currentSearch={currentSearch}
@@ -255,6 +255,10 @@ export function ModelsPage({
           currentSearch={currentSearch}
           page={response.page.number}
           totalPages={response.page.total_pages}
+
+          limit={response.page.limit}
+
+          totalItems={response.page.total_items}
         />
       </section>
     </PageContainer>
@@ -375,7 +379,6 @@ export function ModelDetailPage({
             <h2 id="benchmarks-heading">Benchmarks</h2>
             <p>{resultCount(page.total_items)} across {benchmarks.toLocaleString("en-US")} {benchmarks === 1 ? "benchmark" : "benchmarks"}</p>
           </div>
-          {page.total_items > 50 ? <PageSizeForm action={pathname} currentSearch={currentSearch} value={page.limit} /> : null}
         </div>
         {totalRows > 25 || query ? <LocalSearch
           action={pathname}
@@ -424,6 +427,10 @@ export function ModelDetailPage({
           currentSearch={currentSearch}
           page={page.number}
           totalPages={totalPages}
+
+          limit={page.limit}
+
+          totalItems={totalRows}
         />
       </section>
       <RelatedModels models={response.data.seo?.related ?? []} label="Related models" />

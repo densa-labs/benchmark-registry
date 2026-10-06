@@ -6,6 +6,30 @@ Read the root `AGENTS.md`, `docs/data-contract.md`, and `docs/registry-numbering
 
 This directory is evidence-backed project data, not scratch space.
 
+## Layout
+
+```text
+batches/manifest.json   ordered list of every batch: file, sha256, and when it
+                        was applied to staging and production
+batches/*.json          ingestor input documents, one unit of work each
+staging-only/           records kept off production; schema-checked, never replayed
+evidence/<work-unit>/   research notes and before/after snapshots for a unit
+reasoning-labels.json   provider reasoning label → fixed effort vocabulary
+corrections.json        curated notes shown on /corrections
+```
+
+A new batch is appended to the manifest with the next `order` and its sha256.
+Do not edit a batch that has been applied; correct it with a later correction
+batch so replay keeps the history. Its `applied` timestamps stay `null` until the
+batch is committed to that environment.
+
+Check tracked data from `ingestor/`:
+
+```sh
+uv run python ../scripts/validate_data.py   # schema, manifest hashes, cross-batch rules
+uv run python ../scripts/check_replay.py    # the manifest replays twice with no change
+```
+
 ---
 
 ## 1. Evidence-first rule
