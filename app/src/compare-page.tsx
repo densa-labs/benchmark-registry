@@ -146,9 +146,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
     navigateRegistry(comparisonHref(next));
   };
   return <PageContainer className="registry-page compare-page">
-    <PageHeader title="Compare models" description="Model information and benchmark results, side by side.">
-      {ready ? <CopyLink href={comparisonHref(effective)} /> : null}
-    </PageHeader>
+    <PageHeader title="Compare models" description="Model information and benchmark results, side by side." />
     {response.issues.length ? <div className="compare-query-error" role="alert">{response.issues.map(issue => <p key={issue}>{issue}</p>)}<a href="/compare">Reset comparison</a></div> : null}
     <form className="compare-selectors" method="get" action="/compare" onSubmit={submitSelection} aria-label="Select models to compare">
       {queryFields(["models", "reasoning", "page"])}
@@ -181,6 +179,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
       <section className="results-section compare-benchmarks" aria-labelledby="compare-benchmarks-heading">
         <div className="results-section__header">
           <div><h2 id="compare-benchmarks-heading">Benchmarks</h2><p>{page.total} {page.total === 1 ? "benchmark" : "benchmarks"}</p></div>
+          <CopyLink href={comparisonHref(effective)} />
         </div>
         <div className="compare-results-controls">
           <form className="compare-search" role="search" aria-label="Search comparison benchmarks" method="get" action="/compare">

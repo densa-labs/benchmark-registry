@@ -541,7 +541,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.75rem; }
 
 /* Actions share one button style; the citation opens as a panel under the row. */
 .page-header > .model-compare,
-.page-header > .copy-link,
+.copy-link,
 .page-header > .report-issue,
 .page-header > .cite-details > summary {
   display: inline-flex;
@@ -561,7 +561,7 @@ code, pre { font-family: var(--font-mono); font-size: 0.75rem; }
 }
 
 .page-header > .model-compare:hover,
-.page-header > .copy-link:hover,
+.copy-link:hover,
 .page-header > .report-issue:hover,
 .page-header > .cite-details > summary:hover {
   border-color: var(--accent);
@@ -1260,7 +1260,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   font-variant-numeric: tabular-nums;
 }
 
-.home-scale p { margin: 0; }
+.home-scale p { margin: 0 0 0 -1px; }
 
 .home-scale__primary strong {
   color: var(--text);
@@ -1486,7 +1486,6 @@ h2 .skeleton--section { display: block; height: 1.25em; }
 
 .compare-page { --compare-label-width: 24%; --compare-header-offset: var(--header-height); }
 .app-shell:has(.site-header--hidden:not(:has(:focus-visible))) .compare-page { --compare-header-offset: 0rem; }
-.page-header > .copy-link { flex: 0 0 auto; margin-top: 0.5rem; }
 .page-header > .compare-pair-models { font-size: 0.875rem; }
 .compare-selectors {
   position: sticky;
@@ -1865,7 +1864,7 @@ h2 .skeleton--section { display: block; height: 1.25em; }
   :focus-visible, .theme-toggle__input:focus-visible + label { outline-color: Highlight; }
   .theme-toggle__input:checked + label, .primary-nav a[aria-current="page"], .tabs a[aria-current="page"] { text-decoration: underline; }
   .global-search:focus-within, .local-search__controls:focus-within, .compare-search:focus-within { outline: 2px solid Highlight; }
-  .global-search button, .local-search button, .page-size-form button, .button-link, .compare-apply, .page-header > .model-compare, .page-header > .copy-link, .page-header > .report-issue, .page-header > .cite-details > summary { border: 1px solid ButtonText; }
+  .global-search button, .local-search button, .page-size-form button, .button-link, .compare-apply, .page-header > .model-compare, .copy-link, .page-header > .report-issue, .page-header > .cite-details > summary { border: 1px solid ButtonText; }
 }
 
 /* WCAG 2.2 SC 2.5.8: small text links and disclosures get a 24px-tall target; the text itself is unchanged. */
