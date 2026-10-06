@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "operation": "result_retraction",
+      "record": {
+        "result_key": "df2d520cc61b88b6a87950a47ffabc74f398d6fd44dfb6f2883d69895e5a4f5f",
+        "reason": "Owner decision 5: the developer's Hugging Face model card attributes this score to Artificial Analysis, so it is not a primary source for the result.",
+        "source_url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+        "source_checked_at": "2026-10-01T03:17:42Z",
+        "retracted_at": "2026-10-05T22:55:59Z"
+      }
+    },
+    {
+      "operation": "result_retraction",
+      "record": {
+        "result_key": "5dd7479293974aa3ca9b0dcfef876b49f699deaf78684cd0c68ec34eaf3e3a56",
+        "reason": "Owner decision 5: the developer's Hugging Face model card attributes this score to Artificial Analysis, so it is not a primary source for the result.",
+        "source_url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+        "source_checked_at": "2026-10-01T03:17:42Z",
+        "retracted_at": "2026-10-05T22:55:59Z"
+      }
+    },
+    {
+      "operation": "result_retraction",
+      "record": {
+        "result_key": "984ff22481bd2d55fca9bf1e3a2d99e545d190a3ffcd56c5240e26863bf3eacd",
+        "reason": "Owner decision 5: the developer's Hugging Face model card attributes this score to Artificial Analysis, so it is not a primary source for the result.",
+        "source_url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/46ac57a4502be771dc743ac85866351c5629ca71/README.md",
+        "source_checked_at": "2026-10-01T03:17:42Z",
+        "retracted_at": "2026-10-05T22:55:59Z"
+      }
+    }
+  ]
+}

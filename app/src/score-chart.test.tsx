@@ -38,5 +38,8 @@ it("renders an accessible server SVG and matching selectable data table",()=>{
   const html=renderToStaticMarkup(<ScoreChart data={data} />);
   expect(html).toContain('role="img"');expect(html).toContain("Data table");expect(html).toContain("&lt;script&gt;");
   expect(html.match(/<circle/gu)).toHaveLength(5);expect(html.match(/<time/gu)).toHaveLength(5);
+  // SVG titles carry the accessible names, so none may render empty.
+  expect(html).toContain(`<title id="score-chart-title">${data.metric} scores over time</title>`);
+  expect(html).not.toMatch(/<title[^>]*><\/title>/u);
   expect(renderToStaticMarkup(<ScoreChart data={null} />)).toBe("");
 });

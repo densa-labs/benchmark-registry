@@ -245,17 +245,25 @@ const BENCHMARK_VERSION_KEY = `CASE
   ELSE bv.release_at
 END`;
 
+// Owner decision 4: a user-attested establishment date stays hidden until a
+// primary source establishes it. It remains in the tracked data.
+const SOURCED = "c.established_basis IS NOT 'user_attested'";
+const SOURCED_ESTABLISHED = `CASE WHEN ${SOURCED} THEN c.established_at END AS established_at,
+        CASE WHEN ${SOURCED} THEN c.established_precision END AS established_precision`;
+
 const COMPANY_ESTABLISHED_KEY = `CASE
-  WHEN c.established_at IS NULL THEN NULL
+  WHEN c.established_at IS NULL OR NOT (${SOURCED}) THEN NULL
   WHEN c.established_precision = 'year' OR EXISTS (
     SELECT 1 FROM companies year_peer
     WHERE substr(year_peer.established_at, 1, 4) = substr(c.established_at, 1, 4)
       AND year_peer.established_precision = 'year'
+      AND year_peer.established_basis IS NOT 'user_attested'
   ) THEN substr(c.established_at, 1, 4)
   WHEN c.established_precision = 'date' OR EXISTS (
     SELECT 1 FROM companies date_peer
     WHERE substr(date_peer.established_at, 1, 10) = substr(c.established_at, 1, 10)
       AND date_peer.established_precision = 'date'
+      AND date_peer.established_basis IS NOT 'user_attested'
   ) THEN substr(c.established_at, 1, 10)
   ELSE c.established_at
 END`;
@@ -874,7 +882,7 @@ export class RegistryRepository {
     const rows = await this.all<CompanyListRow>(
       `/* companies:list */ WITH ${this.latestModelsCte()}
        SELECT c.id, c.name AS company_name, c.slug AS company_slug,
-        c.established_at, c.established_precision, c.provider_kind AS entity_kind,
+        ${SOURCED_ESTABLISHED}, c.provider_kind AS entity_kind,
         c.established_basis,
         lm.registry_no AS latest_registry_no,
         lm.canonical_name AS latest_model_name,
@@ -907,7 +915,7 @@ export class RegistryRepository {
     const row = await this.first<CompanyListRow>(
       `/* company:detail */ WITH ${this.latestModelsCte(true)}
        SELECT c.id, c.name AS company_name, c.slug AS company_slug,
-        c.established_at, c.established_precision, c.provider_kind AS entity_kind,
+        ${SOURCED_ESTABLISHED}, c.provider_kind AS entity_kind,
         c.established_basis,
         lm.registry_no AS latest_registry_no,
         lm.canonical_name AS latest_model_name,

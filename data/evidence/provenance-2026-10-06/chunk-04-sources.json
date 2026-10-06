@@ -1,0 +1,116 @@
+{
+  "chunk": 4,
+  "selection": "Every published result still missing provenance whose primary source is a source of the models ranked 31–40 by result count (Registry Nos. 20008, 20009, 20011, 30004, 30005, 30006, 35005, 80003, 80005, 130006).",
+  "reporting_basis_rule": "self-reported when the source's publisher is the model's developer; independent otherwise. Evaluators stay recorded separately. Google publishes for Google (DeepMind); Alibaba Cloud and the Qwen Team publish for Alibaba (Tongyi).",
+  "checked_at": "2026-10-06T00:29:32Z",
+  "notes": [
+    "https://dev.meta.ai/models/muse-spark now shows Muse Spark 1.3; its publisher and type are unchanged."
+  ],
+  "sources": [
+    {
+      "url": "https://huggingface.co/google/gemma-4-31B-it",
+      "observed_title": "google/gemma-4-31B-it · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Google",
+      "publisher_evidence": "Hugging Face repository owned by the google organization (Google)"
+    },
+    {
+      "url": "https://dev.meta.ai/models/muse-spark",
+      "observed_title": "Muse Spark 1.3 | Meta",
+      "source_type": "Model page",
+      "publisher": "Meta",
+      "publisher_evidence": "og:site_name Meta Model API; served from dev.meta.ai"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.02770",
+      "observed_title": "Gemma 4 Technical Report",
+      "source_type": "Technical report",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Author line: Gemma Team, Google DeepMind"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2607.02770v2",
+      "observed_title": "Gemma 4 Technical Report",
+      "source_type": "Technical report",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Author line: Gemma Team, Google DeepMind (arXiv 2607.02770)"
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+      "observed_title": "Qwen3.7: The Agent Frontier - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+      "observed_title": "Claude Sonnet 4.6 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+      "observed_title": "Claude Opus 4.8 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+      "observed_title": "Claude Opus 4.6 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+      "observed_title": "Gemini 3.8 Flash - Model Card — Google DeepMind",
+      "source_type": "Model card",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+      "observed_title": "Gemini 3.6 Flash - Model Card — Google DeepMind",
+      "source_type": "Model card",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+      "observed_title": "Gemini 3.5 Flash - Model Card — Google DeepMind",
+      "source_type": "Model card",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+      "observed_title": "Gemini 3.1 Pro - Model Card — Google DeepMind",
+      "source_type": "Model card",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "observed_title": "Introducing Muse Code and Muse Spark 1.2 | Meta AI Research",
+      "source_type": "Launch post",
+      "publisher": "Meta",
+      "publisher_evidence": "og:site_name Meta AI Research"
+    },
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "observed_title": "Qwen3.7: The Agent Frontier",
+      "source_type": "Launch post",
+      "publisher": "Qwen Team",
+      "publisher_evidence": "Byline: QwenTeam on qwen.ai"
+    },
+    {
+      "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "observed_title": "Introducing Muse Spark 1.3 | Meta AI Research",
+      "source_type": "Launch post",
+      "publisher": "Meta",
+      "publisher_evidence": "og:site_name Meta AI Research"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "description": "Reviewed mapping from each provider reasoning label (results.reasoning_level, kept unchanged) to the fixed effort vocabulary. Migrations 0013 (effort) and 0014 (configuration) seed this table; a test keeps them equal. A new label needs a reviewed row here and in a migration before a result can use it.",
+  "description": "Reviewed mapping from each provider reasoning label (results.reasoning_level, kept unchanged) to the fixed effort vocabulary. Migrations 0013 (effort), 0014 (configuration) and 0018 (owner decisions) set this table; a test keeps them equal. A new label needs a reviewed row here and in a migration before a result can use it.",
   "vocabulary": [
     "none",
     "low",
@@ -230,113 +230,113 @@
       "label": "thinking",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "On/off switch with no stated level."
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "thinking mode",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "On/off switch with no stated level."
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "effort=0.99",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Numeric provider scale."
+      "status": "not_reported",
+      "note": "Numeric provider scale; no level on the fixed vocabulary. Owner decision, 2026-10-05."
     },
     {
       "label": "highest thinking settings",
-      "effort": null,
+      "effort": "max",
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Provider wording; no level named."
+      "status": "mapped",
+      "note": "The provider's highest setting (owner decision, 2026-10-05)."
     },
     {
       "label": "automatic think/nothink",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "The model decides whether to reason."
+      "status": "not_reported",
+      "note": "The model decides whether to reason; no level stated. Owner decision, 2026-10-05."
     },
     {
       "label": "adaptive thinking",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "No effort stated."
+      "status": "not_reported",
+      "note": "Adaptive thinking; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "pro xhigh",
-      "effort": null,
+      "effort": "xhigh",
       "configuration": null,
-      "status": "pending_owner",
-      "note": "xhigh, but \"pro\" may name a different model."
+      "status": "mapped",
+      "note": "xhigh effort as labelled (owner decision, 2026-10-05)."
     },
     {
       "label": "contemplating",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Provider mode name."
+      "status": "not_reported",
+      "note": "Provider mode name; no level stated. Owner decision, 2026-10-05."
     },
     {
       "label": "extended thinking",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "On, with no stated level."
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "extended thinking (32K)",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Token budget, not a level."
+      "status": "not_reported",
+      "note": "Token budget; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "extended thinking (128K)",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Token budget, not a level."
+      "status": "not_reported",
+      "note": "Token budget; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "extended thinking (200K)",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Token budget, not a level."
+      "status": "not_reported",
+      "note": "Token budget; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "64K extended thinking",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Token budget, not a level."
+      "status": "not_reported",
+      "note": "Token budget; the source states no level. Owner decision, 2026-10-05."
     },
     {
       "label": "heavy",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Provider mode name."
+      "status": "not_reported",
+      "note": "Provider mode name; no level stated. Owner decision, 2026-10-05."
     },
     {
       "label": "sol",
       "effort": null,
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Looks like the model name."
+      "status": "not_reported",
+      "note": "Looks like the model name; no level stated. Owner decision, 2026-10-05."
     },
     {
       "label": "no thinking, max effort",
-      "effort": null,
+      "effort": "max",
       "configuration": null,
-      "status": "pending_owner",
-      "note": "Contradictory wording."
+      "status": "mapped",
+      "note": "Effort set to max with thinking off (owner decision, 2026-10-05)."
     }
   ]
 }

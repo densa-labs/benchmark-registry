@@ -1,0 +1,347 @@
+{
+  "chunk": 5,
+  "selection": "Every remaining published result without provenance (models ranked 41 and below, plus any source not yet covered).",
+  "reporting_basis_rule": "self-reported when the model's developer is the source's publisher or a named co-publisher; independent otherwise. Evaluators stay recorded separately. Google publishes for Google (DeepMind), Microsoft for Microsoft AI, Alibaba Cloud for Alibaba (Tongyi), AutoClaw (autoclaw.z.ai) for Z.ai.",
+  "checked_at": "2026-10-06T00:58:17Z",
+  "notes": [
+    "https://autoclaw.z.ai/blog/model/glm-5.3-flash/ displays 'Published: October 6, 2026', later than the results' recorded check date of 2026-09-24; the date appears to be rendered client-side. Publisher and type are unaffected."
+  ],
+  "sources": [
+    {
+      "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+      "observed_title": "Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities",
+      "source_type": "Technical report",
+      "publisher": "Google",
+      "publisher_evidence": "Author line: Gemini Team, Google; served from storage.googleapis.com/deepmind-media"
+    },
+    {
+      "url": "https://cursor.com/resources/Composer2.pdf",
+      "observed_title": "Composer 2 Technical Report",
+      "source_type": "Technical report",
+      "publisher": "Cursor",
+      "publisher_evidence": "Author line: Cursor Research Team; served from cursor.com"
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/602894",
+      "observed_title": "Qwen3.5: Towards Native Multimodal Agents - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://openai.com/index/gpt-4-1/",
+      "observed_title": "Introducing GPT-4.1 in the API | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "observed_title": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "NVIDIA",
+      "publisher_evidence": "Hugging Face repository owned by the nvidia organization (NVIDIA)"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "observed_title": "mistralai/Mistral-Small-4-119B-2603 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Mistral AI",
+      "publisher_evidence": "Hugging Face repository owned by the mistralai organization (Mistral AI)"
+    },
+    {
+      "url": "https://dev.meta.ai/models/muse-glimmer",
+      "observed_title": "Muse Glimmer | Meta",
+      "source_type": "Model page",
+      "publisher": "Meta",
+      "publisher_evidence": "og:site_name Meta Model API; served from dev.meta.ai"
+    },
+    {
+      "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+      "observed_title": "Gemini 3.7 Flash - Model Card — Google DeepMind",
+      "source_type": "Model card",
+      "publisher": "Google DeepMind",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+      "observed_title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
+      "source_type": "Technical report",
+      "publisher": "Microsoft AI",
+      "publisher_evidence": "Author line: The Microsoft AI Team; served from microsoft.ai"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+      "observed_title": "mistralai/Mistral-Medium-3.5-128B · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Mistral AI",
+      "publisher_evidence": "Hugging Face repository owned by the mistralai organization (Mistral AI)"
+    },
+    {
+      "url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+      "observed_title": "microsoft/Phi-4-reasoning-vision-15B · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Microsoft",
+      "publisher_evidence": "Hugging Face repository owned by the microsoft organization (Microsoft), the parent of the registry developer Microsoft AI"
+    },
+    {
+      "url": "https://z.ai/blog/glm-5.1",
+      "observed_title": "GLM-5.1: Towards Long-Horizon Tasks",
+      "source_type": "Launch post",
+      "publisher": "Z.ai",
+      "publisher_evidence": "Page footer: © 2026 Z.ai Inc."
+    },
+    {
+      "url": "https://z.ai/blog/glm-4.7",
+      "observed_title": "GLM-4.7: Advancing the Coding Capability",
+      "source_type": "Launch post",
+      "publisher": "Z.ai",
+      "publisher_evidence": "Page footer: © 2026 Z.ai Inc."
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-4",
+      "observed_title": "Introducing Claude 4 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+      "observed_title": "Pushing Qwen3-Max-Thinking Beyond its Limits - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+      "observed_title": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "NVIDIA",
+      "publisher_evidence": "Hugging Face repository owned by the nvidia organization (NVIDIA)"
+    },
+    {
+      "url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+      "observed_title": "mistralai/Devstral-2-123B-Instruct-2512 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Mistral AI",
+      "publisher_evidence": "Hugging Face repository owned by the mistralai organization (Mistral AI)"
+    },
+    {
+      "url": "https://z.ai/blog/glm-5.3",
+      "observed_title": "GLM-5.3: Frontier Coding with Emergent Cyber Capabilities",
+      "source_type": "Launch post",
+      "publisher": "Z.ai",
+      "publisher_evidence": "Page footer: © 2026 Z.ai Inc."
+    },
+    {
+      "url": "https://z.ai/blog/glm-5.2",
+      "observed_title": "GLM-5.2: Built for Long-Horizon Tasks",
+      "source_type": "Launch post",
+      "publisher": "Z.ai",
+      "publisher_evidence": "Page footer: © 2026 Z.ai Inc."
+    },
+    {
+      "url": "https://z.ai/blog/glm-5",
+      "observed_title": "GLM-5: From Vibe Coding to Agentic Engineering",
+      "source_type": "Launch post",
+      "publisher": "Z.ai",
+      "publisher_evidence": "Page footer: © 2026 Z.ai Inc."
+    },
+    {
+      "url": "https://www.minimax.io/news/minimax-m25",
+      "observed_title": "MiniMax M2.5: Built for Real-World Productivity. - MiniMax News",
+      "source_type": "Launch post",
+      "publisher": "MiniMax",
+      "publisher_evidence": "og:site_name MiniMax"
+    },
+    {
+      "url": "https://www.minimax.io/blog/minimax-m3",
+      "observed_title": "MiniMax M3: Frontier Coding, 1M Context, Native Multimodality — All in One Model - MiniMax",
+      "source_type": "Launch post",
+      "publisher": "MiniMax",
+      "publisher_evidence": "og:site_name MiniMax"
+    },
+    {
+      "url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+      "observed_title": "Introducing MAI-Code-1-Flash | Microsoft AI",
+      "source_type": "Launch post",
+      "publisher": "Microsoft AI",
+      "publisher_evidence": "og:site_name Microsoft AI"
+    },
+    {
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "observed_title": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "NVIDIA",
+      "publisher_evidence": "Hugging Face repository owned by the nvidia organization (NVIDIA)"
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+      "observed_title": "Gemini 3: Introducing the latest Gemini AI model from Google",
+      "source_type": "Launch post",
+      "publisher": "Google",
+      "publisher_evidence": "og:site_name Google; blog.google"
+    },
+    {
+      "url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash/",
+      "observed_title": "GLM-5.3-Flash: More Intelligence with Less Compute | AutoClaw Blog",
+      "source_type": "Launch post",
+      "publisher": "AutoClaw Team (Z.ai)",
+      "publisher_evidence": "Served from autoclaw.z.ai; author AutoClaw Team; first-person release (\"our first natively multimodal model\")"
+    },
+    {
+      "url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+      "observed_title": "Claude Opus 4.5 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from assets.anthropic.com"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "observed_title": "Introducing GPT-5.3-Codex | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+      "observed_title": "Introducing Gemini 3 Flash: Benchmarks, global availability",
+      "source_type": "Launch post",
+      "publisher": "Google",
+      "publisher_evidence": "og:site_name Google; blog.google"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+      "observed_title": "Introducing Claude Haiku 4.5 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "observed_title": "Claude 3.7 Sonnet and Claude Code \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+      "observed_title": "Claude Fable 5 & Claude Mythos 5 System Card",
+      "source_type": "System card",
+      "publisher": "Anthropic",
+      "publisher_evidence": "PDF title; served from Anthropic's CDN"
+    },
+    {
+      "url": "https://cursor.com/composer",
+      "observed_title": "Fast Agentic Coding Model with Low Token Cost | Composer",
+      "source_type": "Model page",
+      "publisher": "Cursor",
+      "publisher_evidence": "og:site_name Cursor"
+    },
+    {
+      "url": "https://x.ai/news/grok-4-7",
+      "observed_title": "Introducing Grok 4.7 | SpaceXAI",
+      "source_type": "Launch post",
+      "publisher": "SpaceXAI",
+      "publisher_evidence": "Page title suffix: SpaceXAI"
+    },
+    {
+      "url": "https://x.ai/news/grok-4-6",
+      "observed_title": "Introducing Grok 4.6 | SpaceXAI",
+      "source_type": "Launch post",
+      "publisher": "SpaceXAI",
+      "publisher_evidence": "Page title suffix: SpaceXAI"
+    },
+    {
+      "url": "https://x.ai/news/grok-4-5",
+      "observed_title": "Introducing Grok 4.5 | SpaceXAI",
+      "source_type": "Launch post",
+      "publisher": "SpaceXAI",
+      "publisher_evidence": "Page title suffix: SpaceXAI"
+    },
+    {
+      "url": "https://www.minimax.io/blog/minimax-m27",
+      "observed_title": "MiniMax M2.7: Early Echoes of Self-Evolution - MiniMax Research",
+      "source_type": "Launch post",
+      "publisher": "MiniMax",
+      "publisher_evidence": "og:site_name MiniMax"
+    },
+    {
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "observed_title": "MiniMaxAI/MiniMax-M3 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "MiniMax",
+      "publisher_evidence": "Hugging Face repository owned by the MiniMaxAI organization (MiniMax)"
+    },
+    {
+      "url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+      "observed_title": "Reward hacking is swamping model intelligence gains · Cursor",
+      "source_type": "Blog post",
+      "publisher": "Cursor",
+      "publisher_evidence": "og:site_name Cursor"
+    },
+    {
+      "url": "https://www.minimax.io/news/minimax-m27-en",
+      "observed_title": "MiniMax M2.7: Early Echoes of Self-Evolution - MiniMax News",
+      "source_type": "Launch post",
+      "publisher": "MiniMax",
+      "publisher_evidence": "og:site_name MiniMax"
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "observed_title": "Introducing Claude Sonnet 4.5 \\ Anthropic",
+      "source_type": "Launch post",
+      "publisher": "Anthropic",
+      "publisher_evidence": "Page title"
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621",
+      "observed_title": "Qwen3-Max: Just Scale it - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+      "observed_title": "Remote agents in Vibe. Powered by Mistral Medium 3.5. | Mistral AI",
+      "source_type": "Launch post",
+      "publisher": "Mistral AI",
+      "publisher_evidence": "og:site_name Mistral"
+    },
+    {
+      "url": "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+      "observed_title": "Model Card: Grok 4.7",
+      "source_type": "Model card",
+      "publisher": "SpaceXAI",
+      "publisher_evidence": "First page: Grok 4.7 is SpaceXAI's latest model; served from media.x.ai"
+    },
+    {
+      "url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+      "observed_title": "Model Card: Grok 4.6",
+      "source_type": "Model card",
+      "publisher": "SpaceXAI",
+      "publisher_evidence": "First page: the latest release in SpaceXAI's model family; served from media.x.ai"
+    },
+    {
+      "url": "https://github.com/zapier/AutomationBench",
+      "observed_title": "GitHub - zapier/AutomationBench",
+      "source_type": "Benchmark repository",
+      "publisher": "Zapier",
+      "publisher_evidence": "GitHub repository owned by the zapier organization"
+    },
+    {
+      "url": "https://cursor.com/resources/grok-4-5-model-card.pdf",
+      "observed_title": "Model Card: Grok 4.5",
+      "source_type": "Model card",
+      "publisher": "SpaceXAI and Cursor",
+      "publisher_evidence": "First page: the newest family of models from SpaceXAI and Cursor; served from cursor.com"
+    },
+    {
+      "url": "https://arena.ai/leaderboard/text/overall?q=mistral",
+      "observed_title": "Text Arena: LLM Rankings & AI Model Benchmarks",
+      "source_type": "Benchmark leaderboard",
+      "publisher": "Arena Intelligence",
+      "publisher_evidence": "Page footer: © Arena Intelligence"
+    }
+  ]
+}

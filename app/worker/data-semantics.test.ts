@@ -99,3 +99,19 @@ it("drops retracted results from the public snapshot and lists them on /correcti
     { date: "2026-10-04", record_number: `BR-${corrected}`, what_changed: "Score 73.1% → 73.4%", reason: "Transcription error." },
   ]);
 });
+
+it("hides user-attested establishment dates until a primary source establishes them", async () => {
+  const { sqlite, repository } = semanticsFixture();
+  sqlite.exec(`UPDATE companies SET established_basis = 'user_attested',
+    established_attestation_ref = 'data/batches/p11-user-attested-dates.json', established_attested_at = '2026-09-25T08:41:23Z'
+    WHERE slug = 'anthropic'`);
+  const list = await repository.companies({ ...params, sort: "established", order: "asc" });
+  const anthropic = list.data.find((row) => row.slug === "anthropic")!;
+  expect(anthropic).toMatchObject({ established_at: null, established_precision: null, established_basis: "user_attested" });
+  expect(list.data.find((row) => row.slug === "openai")).toMatchObject({ established_at: "2015-12-11", established_precision: "date" });
+  // Hidden dates sort with the other unknown dates, never by the attested value.
+  expect(list.data.map((row) => row.slug)).toEqual(["anthropic", "google", "openai"]);
+  const detail = await repository.company("anthropic", params);
+  expect(detail.data.company).toMatchObject({ established_at: null, established_precision: null });
+  expect(sqlite.prepare("SELECT established_at FROM companies WHERE slug = 'anthropic'").get()).toEqual({ established_at: "2021" });
+});

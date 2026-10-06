@@ -1,0 +1,2358 @@
+{
+  "records": [
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1e701c13ea18657772966213c84ff7b2df40cbf4cf6d7764ad9fadbc20b1c1b4",
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Arena Intelligence",
+        "reporting_basis": "independent",
+        "source_url": "https://arena.ai/leaderboard/text/overall?q=mistral",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "08c26b5a2e81e0a427f4713448e4405a9c38781d0edb71e9ba57a21e913b4a8b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "24077bbeaef25bc07717c0bc77b94af69e661b606836f8df6c53bbe4a4e90db8",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3c01385de3d17003579c766060b40bf9c777157bbb882895e622074fac5a47ce",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dfb4cf13ba8865d0cd5fd2d07faa3fbc26ab8eb4989d8456a15fdf42c4a1e865",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f864f64186f26bcd81062e97bd5ecc753fb26612c43dfe746ba942f35eb376b4",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1c9f645442abd09d2a77a732d361bcc8ae2d195fad4d9cb7e1347dad36772194",
+        "source_type": "Launch post",
+        "publisher": "AutoClaw Team (Z.ai)",
+        "reporting_basis": "self-reported",
+        "source_url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1f9f56590a579d61408c1834dca661d9868b25f3ebabb4199c6ef727ca28251d",
+        "source_type": "Launch post",
+        "publisher": "AutoClaw Team (Z.ai)",
+        "reporting_basis": "self-reported",
+        "source_url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bf480492726b30ca476af03f7662cce24790f5a9a490702bb99ce3cf8048826b",
+        "source_type": "Launch post",
+        "publisher": "AutoClaw Team (Z.ai)",
+        "reporting_basis": "self-reported",
+        "source_url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c7266a9004dbf1f72bab9fbd2711271f12d53d17af1fbdf56c8dc7e355b3fd7f",
+        "source_type": "Launch post",
+        "publisher": "AutoClaw Team (Z.ai)",
+        "reporting_basis": "self-reported",
+        "source_url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ee15491193ff4c0d4d5d596a531c0751c0ba3a55dee282d8cb595d0b217ed9cc",
+        "source_type": "Launch post",
+        "publisher": "AutoClaw Team (Z.ai)",
+        "reporting_basis": "self-reported",
+        "source_url": "https://autoclaw.z.ai/blog/model/glm-5.3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3a9e7c51a47558890849f8d471e762543f104a6ec72be5b426ceb18440b0d5e0",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "617928bdaa590c28b714173293696589ba1ff491dba7470c76fa7fca5c860988",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bc85543eaada39e5deea20b928c1c47c01be5ba324b93f76016a56c01f9e52c0",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f4e19702eebe9c51f0723a212015444d812b511957654b5e8e540a4910a84018",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "14c0a8bcc621d4364d20ce5aa8832ee631c97879b0961158bda1aa8207d5a2b7",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "916f1859c0dc3a78eba98e328246b34912237b07538f89c93bef92589014bf11",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a58288a9809a390534413a78290bc7b807aca0596e2c30860e24885d88725d9b",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c596d4632ffa0e02f811de3373b43b5c97df2c58ee37af5a65f95e68e15d3da8",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fcf11dfddfc9bc3d84b667fc8b127217d1bc0f239d582fcb4018359866066a2f",
+        "source_type": "Launch post",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2caef72711dab7e6c8290efffdf3b746c803c71665764eb9c0ba3f367ebe80c9",
+        "source_type": "Blog post",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d7acce3c7d65f907d1686fa3f6865020c9fc5f473259dafbf9d4655b855409be",
+        "source_type": "Blog post",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/blog/reward-hacking-coding-benchmarks",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "146a287c87c2a179d48154c90a1f74dfd60dae1282aebd755f0434378ecfba08",
+        "source_type": "Model page",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/composer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "498283a4354e0aa0148424f2a146269c6417a4f9a454fa9d9e0f244780abd0ab",
+        "source_type": "Model page",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/composer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8a86f945cb5cc577227287ef1dbf610709bd404d0ecf8e42c2efff293a1db1c3",
+        "source_type": "Model page",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/composer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "092ffebb8d27ecff84e5d8181d7eac44ed5e9ca6bfd5daf5cf38ddeb35587348",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0c56c313494f9b5a5650ab51af898dfb57583f82d77fa76b0f29fe0955bc39be",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2d1dc590a225f03a2e0770851181b18c989ea6371eb204e3b8682bddf75ed445",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3adafe2e24e6483ef6e2c1c7fc36a298f8dba0b6475bc94063064b5a680daff6",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "41d72aecb1d78318b9652ceb09c04dbd5ea5bbe914904dea9fc2dd7e4d301a8a",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cebc672dd52863198dd99ee2e38627df5d04f75f52e419cabd9621a5adfdbc80",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dd5a105b1786f28226bef44642fe566230eb638eb020f02885c2ef9f01c977e7",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e4fde21ba8f29a6ab41acd7b46df3fbe9afce225c7efb947bbb2d47dc6530e1f",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f48da10c24d778a584c3aa0e449346a59bbc36a4425159ad2a2ca6af4908f8ac",
+        "source_type": "Technical report",
+        "publisher": "Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/Composer2.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "49a8d048d869619837693f0e96d7ddb9c6f9f7cb5a6de3a08345e5c46dedf060",
+        "source_type": "Model card",
+        "publisher": "SpaceXAI and Cursor",
+        "reporting_basis": "self-reported",
+        "source_url": "https://cursor.com/resources/grok-4-5-model-card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1b4d96e71ab0349d46f86692ba83b728235efd27429edb8e5c5be44988d6456c",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6ac62320017d2a71b5e9c44e8c70c2bef0d2cfe116c0e6f8f7089e0adb1735d9",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "750062ce1c8f880484bea52ffa478ae83be8b872e0b174aaec9acae54c765d7d",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7dae32678a0f8ccc3f4977e738c30c3128c917508021196ebecbcc5cfaede976",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "baf97fafa08a77128ae48a26b74ff9762eedd50947a49f7c1b6aedece140a4c9",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c03438470ab0288c297efa5e4885f6619f8ac5b75dc86e0eeed02319f0807210",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dd34f0204cdf210d61ff4527766fb558daa1d441ac361bd6e1eef40e43cb0cfa",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fd28da54092f598870bf3d0e1ff6248ea1222cbc15efb034bf956c49012497a6",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "313168ab0686c61cefd1ae186b5d4f088e9aec2c8f98dcd281b41acefcb9d221",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4321095fbd62bf0e977d63ace711d353afac6b2fd5f68a1f5a39d37d8ddfad63",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "72785dde66ce38c32954989dea8e72d4e5063ee939cc676066805ca0fe29de21",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8f1f2301546802f07ae3865233982e436f0a4ac2499f5b046b1eebf194c13035",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9907d8e9cf4369671058046d38f936d33ed364f01f51481d6877bbf771704617",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bcbfd8484dd723c89b3cfbb7963d40b314d406a28eb79e514d970bcbd15081f8",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bd94e2c27815c8a5b4e6b36dee26d1dc1c9a56bfe499f818c5639ceeedeea35e",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bfb0408f689e9ee6c99bde5bfe875b08814692769230f82f46dcb5b48267bde0",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-glimmer",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b",
+        "source_type": "Benchmark repository",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_url": "https://github.com/zapier/AutomationBench",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "141017da7ea46d302a27c728b7e56e08c058d09528c517f898ae93dd4ba2a57e",
+        "source_type": "Model card",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b30fea475aa14b4ca7b874a36337b3b29c06a54d3354f6150e39593e04b256ac",
+        "source_type": "Model card",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2923d442833d9d4ac224db3d671261b745fe011fb2c204aa4b721e4980f83964",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3195ac2416e989de0f6c8cf83c9ccc69eaa1f48eb02c621ede56e550727a9cc0",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "388329803e62872d8e698ab6c54d71ea67eca5049c385f656ab4e212605d6181",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "65d5a4f176f6f5744a6054e24f682f0661411553fce457378195a40580ccd508",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a9e62c31553526dc24d20bbee6e97be3de6af2173037ddd86363fa0b3281325e",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dd8095093ee2a9dc2b861cbce2eae666027b36d4301127bbcc999de99d4a718c",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f07fed621f5e7cb55a26940da31cb2dd731147f360002a52342b06817277b8a6",
+        "source_type": "Model card",
+        "publisher": "Microsoft",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0b635a7a1d7707dbb1b1c2a93f937fc0ba80235fa9f6d7235c47928c7f633525",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0cc25ddaa9f5beb5620a58afb29c6468e05263bcdd4ed0fc3288e50a176a9049",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "477a6430e83f17837f3083ad885a2dd6c97ffcf9a75cb471652a083617717d24",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cb33522fbbb860caa5784dc20146117a1ae8cac91993e020b768d45071045e63",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d0bcafd2dd8175f5beb763dc733c42dc273555ada19962b591e9403ae3ea80cd",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f7ef83b0adbef5ef7c2d6e53f96907845cfd45d7ede2f43fbf83306ea75ab6ea",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c1a6d57fdac88922a56c66d24812f6214cf245ce731489913a040e57a4e89e4",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "371fabbc76ae11f1fa18483b18d9d0cfafb1e2740b195e04a88c4f38caa15a08",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "45d5f3301dca05b29135c64263a43b6cb52bbc1f7beff482639438aaa3093297",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4922442680e07426254ef73c326c8e04d63b2c59bc9d0d366128f9b192c5402b",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "70e9711cd171e3116a645a50fc590fa7f01aa35c80493987eae745765450a16a",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aef396f5700e6834b15177e073aed02acde102cc6c12feda4f21bd279599d71b",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f94663a425dfdc9a3140f472d21b87ee6401c6e9b50f1847e049cacd9232b2d4",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "494032edfe9d59ab3f5903627616aad5aec5310a3ba2b94a82e4f7855fd261c2",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "50b18c7e09a0b8b53ee9bb0db5031e0901b238f5c1761a33a7c9eb328142649b",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5d4157df24d820f0139c5787b1081ba56df5727b9721844f73ea0ea2d23db8a9",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "80a5ea4e72114d50dc43bf79452ce0db774423952c72ff4174940149a182bece",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "81b4b98edde21e449bc38fe480890fb963f1c533ae6a7aaa2b140d7b4d336771",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9c5df3d6cf422ae1d4785dc94b346c6275bf5dd6692befd7c621b518e5f1a792",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d30e0f9b079a2c34d0ea8997a39bc8aac917a0f0a8cf2c1dca224b89e98365ee",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e739761b5bf1a2da341d838744b3773110642196bf29034afcb595ea3271b88a",
+        "source_type": "Model card",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6f0768e9e72a4e6a275f9ef13b42a616131e0f63d33078fa676ffecc1842e849",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "722a94fdf7c8eef20cbd7bf2d4bfd8fc1792b3adcf624a1048acde13c1bc4d6a",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9754c9b9e6f9bbea83e22286fca2d933656082e95ace5418bbd8b8369699f55a",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b302e33d290c162e41cb07e5b6431b794f04fc4c8f6e37b487262874bde7f59a",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e7218d1394feb1f41345865789993d439808d2d9f5bfde61ab976ac406ab430d",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "185e4d92d1bde5e2c7c475822265cfe33e01fd5fa5468b424f618cab5ba45d7d",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c0a325d60e44f5bf284f4adb5f282f5dbcfc29dbd278fda79e27bd386e3f1af",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3bea7aa31d877421be069966ac2e3f4d661330d8545b619f46fbb56087e2f4d3",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4478fb160678286d296a6c2c5cd06df8088f90324cdcd69d0e00b8d6eb403643",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5f9b7184cdf3c3687901a3813b84a711a7ec7bf6ed990469ab4bc06e2dbcbac8",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ce2a0701bd6f19a1219c2376598e385225cf47ee20962bcd90161f3053bc6127",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d2c84ed842b5d4897dfc66e2c5a6100fbdeeb43f2e320217c281347e8e04393b",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ec658da81db7b9b286545ec82276e4e8c7f7dff5f87a10c1ee3fae7138b08c4d",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b86d15d6363b539f4a520bdca5e7dc7db380b26aed202580088057588e0531c",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "66c000771da23074ee8101915cda4c0b7d5343fb213ba8b9153a2bf90abef83c",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6f5ab45aa43a204281799ac0023582ffe16915713d8b42e781654afe742b175f",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "954e1ccf48bd3505fd975ab010bd795136c7c7efaa93872d0378d23076a185a3",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ab2d94377dcaea2e789270a0136c6034baa0088fe585a549aad196f9d8def6f0",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ac57a04e875984b2b03b017e1324de31b63dd1c598f2ccf0c7f321c994f3e878",
+        "source_type": "Model card",
+        "publisher": "NVIDIA",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "72650f5b9139033012f31c09f8557d38570f189163c03254fdbf8044dd6e6f34",
+        "source_type": "Model card",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e7092f30ee7acd165e92d88d5bb5a6228727dad4e7359dffc8388b695932a476",
+        "source_type": "Model card",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "42e6acbc9e6c94a680e31a99164abf243ecdd2194937f769b0679c680b6790ba",
+        "source_type": "Launch post",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "65c70acb8fbcb9a4f7c813475728564ee378b16d4a6b2a840f6dfa4bc5676163",
+        "source_type": "Launch post",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6c0fb26b6538c4e76e65e1b649586a6c27cfa6d1875da8aae6c2df509802e116",
+        "source_type": "Launch post",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a128e6abe943629f6e0ba1d5465006e8fd78ff30de1b41879a4128e393ad6265",
+        "source_type": "Launch post",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e87f75187abe0bbdcb03bd303dcf045bcc699ebf721c1ce5c4fa35319ea922e8",
+        "source_type": "Launch post",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "11ef5aa35ff8567b78b2607d14e96925a6548c0119ba5a28afabcb4fa17d4f4d",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5737a2774eb2a6153e9fe0d9cb5a5bcdcca6c96c2fc2f46f0d55ff0aeba4297f",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5afae448e9c3e888c14f1f032cfb24b995935e58a6dbb82cea9307931a10bd23",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5dd4f4658e1cb1c752270d8fac62b927e7ee2181c1d61f08c1ac0080d7cacc42",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7d6261c5d345672fa6388251a0e0eefe3dad20006a7584aae908c110066eaedb",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ab76cb67e7b4823e015e3b65b59c4a3173c88ad14332f7d03dbbfc98d1172e61",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c8b794f9289c5b3a83851656660d5ad0ff1d5948b5c5cc32ba4f175e20713a04",
+        "source_type": "Technical report",
+        "publisher": "Microsoft AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://microsoft.ai/pdf/mai-thinking-1.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "99a7eb16b6de4bbd01c45558f43505a2d5cd0e551bf78f96a7d7789652143972",
+        "source_type": "Launch post",
+        "publisher": "Mistral AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3e0785bb54144ab472e25d5bc422a9bc6e5b01b5aef99e8768156aeccf517868",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "92f509eb3daebed244dcfcb3cd114367c037599b450b771e5c4a54adc0cc2219",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "950ef1cc69fd17c066f0d0c575ec2591b15278f65fd2c5d23ff0e93e95a1177b",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b7c47a5c9cfa965a91de55e14c40aa18ef3ec1d282b8b251db81850a7edbeea9",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e919de300a2b429597d4426e269ee34e2c07f062469613338e19270273048244",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f741d056fedfa35ce0a1057f9ed4f687ec489e2abeadd8bc7098e6973f213ea9",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ff65fcce53a507c247cee2a3f0ad67f853aea497dee9a09c212bc6a69fdfe5e8",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "52e6b1c2a90759a85a68af260d46fc6b0d9c1cfda80e6c2ffe86e9eee8819773",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "937988fabde57f13a0a6182908ebc733c84bc951c0ad870fb6f9ee74248c04fd",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9afe9a15e659d124381519ec7f4ac71221127f859567a6df7d77b35a3ea1816a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "deb1516d7969e36a998f7999fa76043781eddfbfc72620fd682cba575b961094",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "04de44ce1a810eb10c0d3eeadeda7d6c1d8b9a47e450522073a205c845f51d6d",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58e1c8cc321d5876ac6b327bb77cc69e1ddc93f5f88c3b22522e5f26e8b60080",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "616717b3f9611fd837812bf801a5b9d52fa2204a8cbc233d4f1f68cb6ce937a2",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6fdb2c362b5eea0ac3aa41f734ec1140b61b2db460de4009ce297828bb233cd0",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7c4a24ffdd1bf84fd872ce61372069e502bf0d08abc50b6b3af0c27d301c1a4f",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a57dacfbf0416e62ff571a78759e08e2c39b3a39cceb2f08be85183eb1a01731",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bbbc94cc78d979869d97abf24c3ca11995e44dcff8d1e88e923a373498c5beee",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cdb779a24c509127b00ba249f30c17a66ce9088bc46a0c92326e41a4ceca0b13",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d0a49fdd40a623b06ec2f43e54b2de4b86575743133b73131de47cee9713b21d",
+        "source_type": "Technical report",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3b4cee84f604ecc2adda9aa52720d58d67601c06caf1b9ebaf37b4ef7ca119a6",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "97909710c54ef0486d315d5cde02528f2781d947daccdc4f702fc9bb9f69652a",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d77709685eb6f88c6f3633c7ecfb25d77403544afb5b41eb207f3f68e1fc861b",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "090dcd7c8ec79a22aceb8e284fc6eedb5a39c2a48fc281d12f0cb59a74e79d45",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "162b7c7cdf8800395e235471ea37e895c77ef446354cd52153f51e218b7b9fc1",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6c46889c8df1dbb323e9cd27f9a9ad4976937839d2babdae62170f86f294df6d",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9236bc93e7f8036d25f15844f69d31bf61959e49265a1dd5055cf1e00435dd71",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9754ca5c54aad4df65ce145e88c0197f37b10e45e0c5206ac615152ac8a98c65",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bfd80511267c5243ff89d5e73906419f0a2086c7c87a4ca6a4e57b2c754b724e",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c123d71355175331ba983f688546ec362b6c96014ffb2ae86a54caf98bcfaad7",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c9cb1116db24c17d240bdb5f6d715a0ba683e886c1d7cf3b69f969d9c1772e89",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/602894",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2880f9f14751f5b7fe50461b3d588fcc395db55a1012bc79c619d77c75d4c0dc",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58f06fefe069b13e2dcc4b5ccb62ee7703bc83378726dd4d622c638cced572f9",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7ab1f14910f776f78d2c4436774114090381b90be79bee3174b55260d85eea95",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7bb00a578d87b2e33881a4b3f2cf9f6aca1f970db0d3389f5b363fbe71d3742e",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "82b9bfd250a839f10fdda6a8471d865aac868e4c6a1bd4086dd3ef7e6ec029ac",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8e528f479b7d8ecd202758a947409404d5e9eaae1a7c5d9dbbed16d693db8a0c",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/pushing-qwen3-max-thinking-beyond-its-limits_602834",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "360e12d23f1aa69e39b3b7db5ea5e3a4115fda7893342a558f7c55e0745dd56e",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-max-just-scale-it_602621",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "012802908b145a55af3f061ee5bf34d536927a26d51f91dc367823284fc12928",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "af3c6589e3fdb9554f16af2ff54fad037d6a771b0bb04c4e282af9b87c27ec46",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f26c5a2a9278ce40316b0dc795ff5d7d2fcd3683c8e40719fd411c421bc6499b",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0376c6d34c8b6f09fe024db0af3f2a76c87ac36bd8c03790e882ea07432816b9",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "31544867cd417d6cc426dfc749c16ffdd3885012cf9edbf7811d608751596230",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b46a8bc268ac1e0dceb3bcbe8a15e6580e6a08f4d3dd06d412e4dbfc92f60d4",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "91618aa222c96a73a81f9e66b53706e7e3dbbe76b74f9b0197b7dbf8d0936a53",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d3d04e4a350654baa76f58b2e5a768e8b16fb844c01566590af5c46a76e3e3a0",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "faebf486b3f8ac2deb74448ea9ac55087e11d14123aea25c6016fcc7bfd402e4",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-4",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b2a05434000254b84bd629f36a1fce1d2d96ec5cc378012b5635a0372b8fd8e",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-haiku-4-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8e2fd77ad39f12afa1c3c58dd2db9e811b4fecdd8f8ca191f751d503d84b4bfa",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-haiku-4-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9a52a2f4b0f28e04bf19a249c3b0e810cb6946e487801d3441fbdac8148f8de0",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-haiku-4-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "10dbf3401dc753fd2e241b574179ef203f32914e232943dddc22d1ebb38da6e2",
+        "source_type": "Launch post",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "147a362c1395c64f21532f11adbed0613ee2f64862fbbd86863680eed94dc31a",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m27",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "da84af737021c449ee569c02c3fcc0c011b5045290127156bf83d329f7d82e7c",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m27",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1a0fcc352bf1668b96a82413bfbaa1a2cf26b7c2b0370dde92c6486c97547b39",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2d41716d562b688877e5c37973efedaf17438b36b5312c7dad2ca16138b67eae",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3eb7267bc2b4fc07255d342a3f3ae301bb873775e108bc41a0394c5c6bc8abb8",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bef78c0fa5817b16cf67aa3a00fb4db7527994d207d0abb57fe685437f4d0003",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e6195a59d3d1fcf75b23a7ea21371bd476cc896de2ce2dde7928768a6bdce00b",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/blog/minimax-m3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "22b646d1ef8a6d7769e437cd0d9ca13a14ba867c557ee38e95f99df2c289a57a",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c9e7d1f6033c50a62ac365e75bd8c070898bcb379876a88c482440540c5fb4a",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2d6282f04c6fa255ebe33569540ea4b50fb5af2f9bb479b72d4266ad35229ef3",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b85fa83581f45c01beb1ad2ac8a2db94e44d4c7167f82e98cc7e95e5e6522725",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c6ffe6eee9ecc2940a1d4103ccbf5948bf5b0aa4a4ce814a41cad934fad6e5b4",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/news/minimax-m25",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b9fb43027a0b089d506f5f86a4bd1b2b49327ba6dc518eac51619915d15ce03",
+        "source_type": "Launch post",
+        "publisher": "MiniMax",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.minimax.io/news/minimax-m27-en",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "356e1028ad19bca49deb3938b4e4bed4d007fe151d1a11abf5524d91acdadc22",
+        "source_type": "Launch post",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://x.ai/news/grok-4-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "77880352113bb464499d793a548addf9b1a3a514c63796be3a48a3da18055b54",
+        "source_type": "Launch post",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://x.ai/news/grok-4-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "88a7c50a9ba66d2d7afd0763085777d7490c52d44725c6c70f0ca76879cff687",
+        "source_type": "Launch post",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://x.ai/news/grok-4-6",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a0c9277fbfb3ab300dcc397967583b05b7db3ced063def082c21bcf9f3e6478f",
+        "source_type": "Launch post",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://x.ai/news/grok-4-6",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a7b4dcf8a22b11e376d3f25a05e13ab42af420e24d06f7330dac15a734e37753",
+        "source_type": "Launch post",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://x.ai/news/grok-4-7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ad0a311db1377b7dcc9a981816e9c4291ca257b64bdd786a48e294782b1a8288",
+        "source_type": "Launch post",
+        "publisher": "SpaceXAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://x.ai/news/grok-4-7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2134fff6c31a108b4d875838a1f8151b06da20ff374727538c2b0ea8a1a5357e",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-4.7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2cd040d1578e7a3d71d91c7d3297ef372649dc9203f9a2c294b3bcdd12ca33e8",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-4.7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58a3dc796338b5e102aabf2ec73368bd4c4145db2d931e3094b5d47572c6bb7b",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-4.7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aeac84ad22f4bd670e53b5b416d8681202f7f6d4d307506aa31eeab91c8bc95b",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-4.7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f6fbc88a40d0c3368614d3947a84a1329daa070e86893a1968319cdbbfe503e6",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-4.7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fc0c0ff4c1803d469e7747368c9085450ff92e5000f169d1f0acf1d0fee789ed",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-4.7",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1bb9d032826aa775ee6e7cb8320a317b441014895e459194be19f30509b88a94",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "51155e7bf4e2aa14d3958a625b836398beee4d75985d05d34c0a6e1248a680c4",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "666ff8d02384b7a144cd194b8a9b355fdb7d91244946621e8f10a7b4f2ef43dd",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "929d0f51190365122d325f7d74ea47d49a04c05b5281df2c81725fa8ee312c61",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b5b0386b709b11feecbf75f65f58aa81dc49049337d81abb7a23bb136fd743af",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0560da34529c66f8e7ed4905116cf7cc06aa9ae6e7264bc7088524b58a07a965",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "127f558e6165497de12e2ee7f6a623023a34ef02a49025207bcb3af1e8e292f1",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "16a84c33260cd7848dd16acd7155a0ead2750d60798c69041d99afedc785c4b2",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "397adc10a5bb4ff06fef438b553c98fcedafddbb4f13c06a0a37d304baad8cbb",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8b04c9c8430d592a828bd44ae18e83dc11772349647055300aa794b0f438b3bf",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a2729abff69dc6f526c04019704e1a230eccf3058c9e551e3b14b0fcff6a5ba2",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.1",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "39a1e89bcfbf10069bd798d5f7904e3cf5da650ec6bbc57812da28f5f56709bb",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.2",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "78e3fba70e6cdaf4de42feaac273bc040bed99c98fcf65005a63b7d0c7dbd08a",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.2",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "875684ec52f07af28a83a1d14e6d56bed2b0c425bfbd60f8485767edd72ac0d4",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.2",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c60df254da2c221dfc3770689da7427a2f1598a22f4ab943fe29fbb5853c474c",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.2",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "cd7c2b4f4223e43b164eafe5f35fc8faa47727fb9d3c859848bab33faf5547b6",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.2",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "36b0c7373510b9219608ca8dca367288eb912fba0fcf96ca7bc1a63a4c98070c",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3bd4b4dfeb92a1818b820086e4479e0157393af45e9c8552adc7bf0668c084fd",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "68cdd2ee3907e4cb3e92a62be99220806a076e16c2871fc6a6e6b890f410f124",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "db45a9437b85cdba841fc9e89741c89b26abd9853ae4096114711d06787844e0",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f4a1f7bcd11e58868204c36e910bad4a91e3c635162b26843f27d892dd16771e",
+        "source_type": "Launch post",
+        "publisher": "Z.ai",
+        "reporting_basis": "self-reported",
+        "source_url": "https://z.ai/blog/glm-5.3",
+        "source_checked_at": "2026-10-06T00:58:17Z"
+      }
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { generateComparisonPairs, type ComparisonPair } from "../src/comparison-
 import type { BenchmarkRef, BenchmarkVersionSummary, ModelSummary, ResultRow } from "./api";
 import { isPlaceholder } from "../src/seo";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "../src/benchmark-names";
+import { groupVersions } from "../src/version-groups";
 
 export type SeoKind = "home" | "models" | "benchmarks" | "companies" | "model" | "benchmark" | "benchmark-version" | "company" | "comparison" | "recent";
 export interface SeoPage {
@@ -73,10 +74,11 @@ export function buildSeoSnapshot(input: SeoInputs): SeoSnapshot {
   for (const family of input.families) {
     const versions = input.versions.filter(version => version.benchmark.slug === family.slug);
     const rows = input.results.filter(({ row }) => row.benchmark.slug === family.slug);
+    // Count versions as the page does: variants and configurations sit under their version.
     // Latest is the newest true version; configurations only stand in for the recent-results table.
     const latest = versions.find(version => !version.configuration);
     const shown = latest ?? versions[0];
-    pages[`/benchmarks/${family.slug}`] = { ...summarize("benchmark", benchmarkDisplayName(family), rows, [family.checked, ...versions.map(version => version.checked)]), versions: versions.length, latest: latest ? (isPlaceholder(latest.version) ? benchmarkDisplayName(family) : benchmarkVersionLabel(family, latest.version)) : undefined };
+    pages[`/benchmarks/${family.slug}`] = { ...summarize("benchmark", benchmarkDisplayName(family), rows, [family.checked, ...versions.map(version => version.checked)]), versions: groupVersions(versions).length, latest: latest ? (isPlaceholder(latest.version) ? benchmarkDisplayName(family) : benchmarkVersionLabel(family, latest.version)) : undefined };
     const familyPage=pages[`/benchmarks/${family.slug}`];
     familyPage.latestVersion=shown;
     familyPage.topResults=rows.filter(({row})=>row.benchmark_version_slug===shown?.version_slug)

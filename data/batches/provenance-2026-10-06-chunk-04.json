@@ -1,0 +1,1346 @@
+{
+  "records": [
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "28e288936cfc4e48943b0baadcb05f1bce6ef06fc9a0a7e7052e238e32e31ce2",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "40f239d3f705131370b5d17e8fff92c1b4ac68eef199c41b9d1e7dea5f71c91b",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4ee2deb50843652c9522187111dc812b305304e5e5caf93fc4ee22c7cf86ee68",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58ced8bd51b133c2d6b6c76b919e3c60176406a8aea29c9091ebd117c31df058",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "746c78a3816ba91de55d7b9d91b079a73c862ec7750e157acc82304c5e24e8a0",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "86d1ca185d97057655058c3b24cae7142d2a9a2051c547e9329085686ac1ff59",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "983d67c7b825692a200b098a95328229de9f9d5f99bceafe10df82d247256bc7",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a8f164364783a7c5cb570fb47132fbfa3fc3700eed5dd59250def99feeac92e6",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aa8414bd0268ed1b0305b518c50c5022a8fd4a9ee466903ae6cdedb3e896a9ed",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b4c12ec14070f133d5687dcbfb7f0a26dbbf15292cc98358d4c034cfbd4f8717",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/html/2607.02770",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "80e989dfcbf873bbfc2c465eee33549ac4ba350c144cc02ca052f3561f3c1312",
+        "source_type": "Technical report",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://arxiv.org/pdf/2607.02770v2",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0b1faec5a6cc5955d52c0ea32446332bd3b7f5bea3eea989b4c853acff6a3cc9",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3c8b0c97095417068a3df2e618e119b7bbf651fd96494e5ab25d6869e0826f72",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "54102ce3e3a66aa699354d081f48904648337b9f5cec31f1ede13a5caa96716c",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8ac087d7dc1796ac008f395b67c03b0fef563f8d75f682255327f8df8a7902d6",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9453e5cdc905127ddb72ee92e6de7bf63410765ec00c0399da04696389830b55",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bd25dda2569858cbe603470926a6b7d258f346e7509d125a1bab5a93b7802f7f",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f048f86e342d69defa7953ec13548ef336cc9e8a890cd2e3af036f4105c5a147",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1c6e71b1be77ef8e099d6e3cadf86db9b7df6e683561e5d25bade2f30c4ad52d",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1deb0bc13b02c043edda3f0cab5f6260fdf84159b9502b3cc97e9be0b7fa6582",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "81dc68dcc2888c887e360b0197594dbfc2579e134bd1b4d417350df16e1291f7",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "85035dd35dd837e2f125556e410e56fd5862d9b448e33fb239c29af17cb4dcf9",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bb2adaaa7175c60247bada9752b267e9db2dabb7e38d20ff1ba47b25e19f2070",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f692ad9d1327c25049bc4cba2edf12978c050237c1090be5513061fabeaf3426",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ff0d86abbea2b4cfadd219234df35e2b4815d7cf070543ffb83735cc2123297e",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "00ef6704f1169a68d6b2f04768dd05e44c3b820e63ddde70ab67372718ec7b01",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "093c363f056bb70b902ce74d5ecf74dac41b2330f6a678f0d516eb1367ae40ab",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "310cacedcb4aefdddef2d924ef30fa91ab74f7ea0aeaa9468aaa0c76f0866264",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "64c2f04fd3cd7617d362d647017b3fddb48b51e51f4e868090ccea7ee3fd8e6c",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "655ae371f8f2908e8cdffbb9878dc479f816abf06bfe79eb7cdd06fc8f5f3a1e",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a986b84c960a11564ab2de07cf553164dd2bf41ecbd7948ea74ad3b85e90939a",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f178e5126c6d10907043f9c4d5e9c5984bc13baae26ce0d25fb608421df60864",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "00484acb308f1e169d68afd7eb4019c5e75b83f0b8313877479b755f975f245a",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "066c35fd4bb736b5f50ad61ddf598d0fe28cd5422055e38a51d4cf63d1a4adb1",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2ae286acbbc6bd794425475794f791db60de4a86b3b1b4a22e2c8b01086685e1",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "45b61e06689f572ce72ae2959649c4b3369e3ca608e7f526b7ba0addb12d1377",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "47c119f902f60b66451677acf1c44b609bf1ce23037a65bfba022cf3527db2cb",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5b6d35497aa60800416f666ea53a5669ca6ab739f7a2d35c00ea14a084e8061f",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d5592c5cb37ba3380ea9e10f2517be4349f907ae508d4acdfad412168b180e67",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f245a6db42ca69727adac89e0f9b38940d4c08911072f8e32d1ca797a531f28a",
+        "source_type": "Model card",
+        "publisher": "Google DeepMind",
+        "reporting_basis": "self-reported",
+        "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1d08a4765901ce94a392ad7b99261434bd82cee4627cee909535ef4250b7e56d",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "39503c42af20318a95386123ed671a943c696ed19501ed67ca083a313301f821",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3a8cb364c648dce88a3c5661a51ba89398f25e8f3f92a71ac83dd1f2c1d421c5",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3e0e938852f8762ff50b7e7505f3d16036fc4cd2cc61449c48f1fccfe83b4c14",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6fb678bb0875146fdda0e4729cc76bd9a03952c4d12d327bc4d728ebacfbb630",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "765f5623ea10544c32ed761edf8dab6c55f4a8746ace09880af5281e6c37d055",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7def67d66f92f41352dfdb020197d944e86dd5306cf5a264287e6f70a21c0c23",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7f219e65bfa0afb2678b718575b4e9ee137bb7eb63703a6c689a343abdd6a6d2",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "80504116937e45a40c7307698163c7078c547ce1252c54b62b6e06521a6b40b3",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "85d3f8b80e0449c0d533861c696e4303e4f51df01bfcbbdae2f00999bc3f1546",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8f8fc6592246430218d841ddfeebe863123b91864d1e895c0baa99aee2c99064",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9a1bdf1064e50d63970987c4aa045efe0a425af0e9a04f816e25e1bfdd9b5ae1",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a72c43eaf0d711ee9cf88e437cf3cd8cc96ad146411fbd17f73b715ca4451c4e",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b8af3781860d58b5ee17900ead2002184890145314e6229e66d3abd8b6315abc",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e2194dbec95af98ce277e8ce660be4f3b858819b3246c448839bf2ff6e21cbf8",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ee5747918092f8e5e30151c69de3e3e12344ac0fb5edfc2fd4a493b10989313e",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "02a91b7843d0b71dcc87b2e86bf31c6522a4bc81342d390b45bb713a1068a2e6",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0a9b2dead11a09839d34307e599f93ff134e602cd72e358479627d9eccbc5ac9",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "277fbed9c2b50ff98aaaa49c2c6741ee5ef1838092ab241b7bae6709ae6acd30",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2dc2f43ab7ae15ae5a3e647b4871f87e7198286b579f815eee3dbc9994e22b18",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "35e16878fd44f78f8307a611b4a1f77476e8843887b9acc7d1c87ea9bd3ad645",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "399ccf0cb23cf24d936210b4fe2ac51359d1b434069a11ede7ec3621ca0e147d",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3a2a2a00b1593b22d39d79aaf469e4dd713c4907a57f6db08213e02555a9292b",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4055b7df261c59b2523ec84e5a49d1db523731830871a06fc20039d8476adec8",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4fd521545a7e47c529356924c7b61f9d2775c574f1859264e4a5091bd2599f13",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "53cf08fa7be999dfa070b245e8149485ef59cb5d33a48dc252e604688c052194",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "54131791114bf14f60a8f7a815547d4673d6f56b2bffaa5cd732f49bd9e0b341",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5fe64629d4ff84a596680d0335cec97f262ae5d7f6bc881e943e6a076ef20554",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "62f39bc2a0c7516086ddc6848844d914f00980c90a61cb4c3c613ff4edec5c9e",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7150fe9a2378dd1b5f7ec0a0654109e23ac4fcfa1ca3328dfe660a199e1a7c74",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "72e08f914521ee1aa4e5f6fdbe57b86ae56177361b8c302e74026e7bb77a690e",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8284282d3311d1f9986f050914be465bea65b32387e9b985ec79e4b9a716ecd4",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "89668e540ffd0c6080a94b092e2df01e06eafa937864cff86eeeb3fc912ac18b",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9a5315b00945be2e7b0ec4665afd644e42cb40b3ba9e901d25bf256819bf87c3",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9c366c34c0773c72b1fede46305571c56ded0c1092c0bc5bcca9b6491098f396",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9d79d71fa33df478b717553931bf21b840fe5c167fdc413aa8b2648fa861c2a0",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a03e35322783f9ed3ecdb5781501f8f9ec19e0644fb16a2b558c9130c582274b",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a8a88f7c5d4dc88d3c9d595dd1ad85922cd4e4507756965c5d95f8e078bfe9b0",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ab8fa2c260def6167385b9dea31515bcdbbd0c6f680a2e14b9958bf56a077b62",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b6f0e59bf18915951de6db690f178837166135770c319746004b4a2fecd2721b",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bdaf94d5ab0fa93b36fdc59d0621ab81c652bf56f4ec191383686757d8816b2d",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d2b97589860071506457aaa315c61b73d2780b8a67fac55c3371a0eb310d909d",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "deac5967f6cfc3762b1c78159615586116c8e9656d57a1cacba8f1843d3a77f2",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ea74b8ca3cd0250a308e5a8bfa12a6bd51b3635aa8752e102b5783f9c09cf59b",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f2d2d5161a07c80d4d89d028c581ee16d5dce497e20b9f5f89ff47ff6d7bf090",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f97f0abb847cd01ce9a688196c5c1a42062dfea42208a8b4a9b9c833b77c6532",
+        "source_type": "Model card",
+        "publisher": "Google",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/google/gemma-4-31B-it",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9aeee31205b9c18942748c2edd513c31483fc428d4faf9f07b114918a9ca9764",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.7",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d576216e1fcbe65699805dc38d295d9d0a97a26d1da52722973c84aba5b081cf",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.7",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5ef68d4fb3a741d1fee48a655ae74c602c60b5334fbdf34bcbeecd027f934a32",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aac634fe45153445c8416302cc942527f060497002efc6ed6282b245b1c89c35",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5ef58f90665fd52308dc3b6aa640272faaffebf480875ca48edb776dc482baae",
+        "source_type": "Launch post",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "09285ef4d0a794e441caa1c3805ddcc85105a76486b2ba8bc744c0ce476f59cd",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "39a0ae9128d12fc7aa08b52493b00af4afeed6c9f0d4e8374b023bb59a42532e",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5826f121ef12ce63a6ea67da6c267eec9800e66484358576b8f1cf71bcb1d145",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7ed9aae6c435809091756e135d299798c7ac473a0eeee072a08df93406f6748f",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8a2160007ebb7d21840183c4efe9a83d2427b510e5b6b1a1ccd34a47c2abf29e",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9399d264e9bb7dbfc36c711e6ec6bb2a4755f465f2e005bc1656c47d77e585c5",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9a40fd47577c3693f57baca7a34847abcd5025d051518d1ed55534dbad338bad",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a1a5786308d9a9d1fc0f39155a0ecd84fad816616910e55eb7c0dcd8c6de63e3",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "252c14ad5d546625277bf404087e2fbab51a70576cc86f16ccb32a39c6ccd3f1",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6fe82f350b5b7ff418c121f466d7f892e5743788a4edb169630718e5d2278d2d",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9ee4e7c6275ad157cabdb55d1b766af84b2d0fcd6a277d853d92476f623c5ab5",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c04136ccb1cb6834865c1113dafc9044559577255d1dd62448e451587bab71de",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c185b3434356e1591bf8c2347b1376d9e400f09022247643faac4573dece046d",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d80e202ccd297f01eeedff91e69334f617756fe1cee0efb791ac1fd4acee7faa",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fe83a0e26404e67012ef901f10daf5ee00fceed3d16cd2774a6923846a4e41d2",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2f6a94e9aaaf515744287ad83b7323f923465c62581a715cad9a5b30fcafa346",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4dac73034abcee49a72b7690ae46b1551a99225bae9064d8efc8e92154a2bfd0",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "51928710d37981d90df5a2241f27eb1d4af63173bd45cb5113ae698693dfa128",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "59400fb32fd7b15b7e48cd77fea2fd959072626fbf1e47e83005f2bded45a580",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6e563587e771bc53063de24d2259d47de055a6189c8216e12adbcdec66df60f5",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "90b0d0e36659f3987ab70d22722c1c6f3ffd53810410d64a9a7407aee6b99256",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9d0ae59eee810afc473d74aab3fe9d12725a080668073ccd126f33b4231febe5",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eba658af4e8f69ea4dd7311bbaf4d1dd281171d876968f8eedd7abbf7d01e1f6",
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1ed4e63bea6a5ba88998739c92a623cc209470500c6161889c72d5252ea9ec68",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5681aa67f24af3ab90899b7c68f8abe9284680ae6d4661ac533fb4370dd4f902",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6edb657d3d818cb25cfeb276c5437e8e5ad17a90f9855a2b477a43a216db7845",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "7da6c93b82358fa6482f727de862e2a57264ce9bcbe523048ce442ddd41078a1",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9b33fee9ccbfcbcd135094bad5674e5b542b7a0154ba99c3826b646c46ed0f3e",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "aa1a4247d6a76b4eb93f25e4d239bfa6eeb5b00a4ba16e216879cfc568f3fcc1",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f91598fb50acda906304a3ac5824fb0460a877d5d3e39de6aee441ecfb227637",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fac4988138c3937be2077808f925cafb31e8952fa1ee5186d31fe8b3f6d7e37d",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154",
+        "source_checked_at": "2026-10-06T00:29:32Z"
+      }
+    }
+  ]
+}

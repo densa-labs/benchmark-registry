@@ -23,11 +23,18 @@ class ProductMigrationTests(unittest.TestCase):
                 ).fetchone()[0],
                 0,
             )
+            # 0019 builds on these columns, so it rolls back first.
+            db.executescript(
+                (ROOT / "migrations/rollback/0019_provenance_backfill.sql").read_text()
+            )
             db.executescript(
                 (ROOT / "migrations/rollback/0009_result_provenance.sql").read_text()
             )
             db.executescript(
                 (ROOT / "migrations/0009_result_provenance.sql").read_text()
+            )
+            db.executescript(
+                (ROOT / "migrations/0019_provenance_backfill.sql").read_text()
             )
             self.assertEqual(
                 before,
@@ -77,11 +84,18 @@ class ProductMigrationTests(unittest.TestCase):
                 ).fetchone()[0],
                 0,
             )
+            # 0019 builds on these columns, so it rolls back first.
+            db.executescript(
+                (ROOT / "migrations/rollback/0019_provenance_backfill.sql").read_text()
+            )
             db.executescript(
                 (ROOT / "migrations/rollback/0011_metric_direction.sql").read_text()
             )
             db.executescript(
                 (ROOT / "migrations/0011_metric_direction.sql").read_text()
+            )
+            db.executescript(
+                (ROOT / "migrations/0019_provenance_backfill.sql").read_text()
             )
 
     def test_registry_numbers_are_immutable_up_down_up(self):
@@ -161,6 +175,35 @@ class ProductMigrationTests(unittest.TestCase):
                 before,
                 db.execute("SELECT result_key, reasoning_level FROM results ORDER BY id").fetchall(),
             )
+
+    def test_owner_effort_labels_roll_back_to_pending(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            query = "SELECT label, effort, status, note FROM reasoning_labels ORDER BY label"
+            after = db.execute(query).fetchall()
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM reasoning_labels WHERE status = 'pending_owner'").fetchone()[0], 0
+            )
+            db.executescript((ROOT / "migrations/rollback/0018_owner_effort_labels.sql").read_text())
+            self.assertEqual(
+                db.execute("SELECT count(*) FROM reasoning_labels WHERE status = 'pending_owner'").fetchone()[0], 16
+            )
+            db.executescript((ROOT / "migrations/0018_owner_effort_labels.sql").read_text())
+            self.assertEqual(after, db.execute(query).fetchall())
+
+    def test_provenance_backfill_up_down_and_records_unchanged(self):
+        with sqlite3.connect(":memory:") as db:
+            for migration in sorted((ROOT / "migrations").glob("*.sql")):
+                db.executescript(migration.read_text())
+            db.executescript((ROOT / "app/worker/fixtures/p4-read-producer.sql").read_text())
+            query = "SELECT result_key, score_value, source_type FROM results ORDER BY id"
+            before = db.execute(query).fetchall()
+            db.executescript((ROOT / "migrations/rollback/0019_provenance_backfill.sql").read_text())
+            db.executescript((ROOT / "migrations/0019_provenance_backfill.sql").read_text())
+            self.assertEqual(before, db.execute(query).fetchall())
+            with self.assertRaises(sqlite3.IntegrityError):
+                db.execute("UPDATE metrics SET direction = 'higher'")
 
     def test_result_corrections_up_down_and_records_unchanged(self):
         with sqlite3.connect(":memory:") as db:
