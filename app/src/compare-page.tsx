@@ -1,11 +1,12 @@
 import { RecordCite } from "./cite";
-import { Fragment, useState, type FormEvent, type ReactNode } from "react";
+import { Fragment, useEffect, useState, type FormEvent, type ReactNode } from "react";
 import type { ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "./benchmark-names";
 import { buildComparisonRows, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
 import { formatRegistryDate, type ModelDetailResponse } from "./registry";
 import { navigateRegistry } from "./navigation";
+import { staticFetch, type StaticFetch } from "./static-api";
 import { EmptyState, MetadataRows, PageContainer, PageHeader, PageSizeSelector, Pagination, SourceLink, Tabs } from "./ui/components";
 
 // What tells one side's results apart: only the fields that vary are shown under each score,
@@ -129,6 +130,8 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
   const rows = buildComparisonRows(selections[0].results, selections[1].results);
   const page = comparisonPage(rows, state);
   const ready = response.selected.every(Boolean);
+  // The page preloads the shared data files; reading them now makes the first pick fast.
+  useEffect(() => { (staticFetch as StaticFetch).prefetch?.(["models", "featured", "redirects"]); }, []);
   const groups = [...new Set(response.models.map(model => model.company.name))].sort((a, b) => a.localeCompare(b, "en"));
   const update = (change: Partial<ComparisonState>) => navigateRegistry(comparisonHref({ ...effective, ...change, page: 1 }));
   const chooseModel = (side: number, value: string) => {
