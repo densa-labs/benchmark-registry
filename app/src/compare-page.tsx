@@ -72,11 +72,12 @@ function BenchmarkRows({ rows, names }: { rows: ComparisonRow[]; names: [string,
 }
 
 // Explicit table roles keep row and column semantics when phone styles turn rows into grids.
-export function BenchmarkSection({ title, rows, names }: { title: string; rows: ComparisonRow[]; names: [string, string] }) {
+export function BenchmarkSection({ title, rows, names, level = 3 }: { title: string; rows: ComparisonRow[]; names: [string, string]; level?: 2 | 3 }) {
   if (!rows.length) return null;
+  const Heading = level === 2 ? "h2" : "h3";
   const id = title === "Shared benchmarks" ? "shared-benchmarks" : "other-benchmarks";
   return <section className="compare-benchmark-section" aria-labelledby={id}>
-    <div className="compare-section-heading"><h3 id={id}>{title}</h3><span>{rows.length}</span></div>
+    <div className="compare-section-heading"><Heading id={id}>{title}</Heading><span>{rows.length}</span></div>
     <div className="compare-table-scroll" role="region" tabIndex={0} aria-label={`${title}, scrollable`}>
       <table className="compare-table" role="table"><caption className="visually-hidden">{title} for {names.join(" and ")}</caption>
         <colgroup><col className="compare-label-col" /><col /><col /></colgroup>
@@ -174,7 +175,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
       })}
       <noscript><button type="submit" className="compare-apply">Compare</button></noscript>
     </form>
-    {!ready ? <EmptyState title="Choose two models to compare" description="Pick a model on each side. Each one's recorded reasoning levels then appear below it." /> : <>
+    {!ready ? <><h2 className="visually-hidden">Comparison</h2><EmptyState title="Choose two models to compare" description="Pick a model on each side. Each one's recorded reasoning levels then appear below it." /></> : <>
       <Information selected={response.selected} names={names} />
       <section className="results-section compare-benchmarks" aria-labelledby="compare-benchmarks-heading">
         <div className="results-section__header">

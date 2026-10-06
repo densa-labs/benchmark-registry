@@ -11,6 +11,6 @@ export function StaticComparisonPage({response,name}:{response:ComparisonRespons
       <p className="compare-pair-models"><a href={`/models/${a.data.model.registry_no}`}>{a.data.model.name}</a><span aria-hidden="true"> · </span><a href={`/models/${b.data.model.registry_no}`}>{b.data.model.name}</a></p>
       <a className="model-compare" href={comparisonHref({...parseComparisonState(""),models})}>Change models<span className="visually-hidden"> in the comparison tool</span></a>
     </PageHeader>
-    <BenchmarkSection title="Shared benchmarks" rows={rows} names={[a.data.model.name,b.data.model.name]} />
+    <BenchmarkSection title="Shared benchmarks" rows={rows} names={[a.data.model.name,b.data.model.name]} level={2} />
   </PageContainer>;
 }
