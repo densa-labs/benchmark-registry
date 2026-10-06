@@ -303,7 +303,7 @@
       "file": "benchmark-configurations-2026-10-06.json",
       "sha256": "96ec75011178382d3b7b78ef72b4eb466a42e03fab174cb372c6a9aaccbae699",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T02:59:46Z",
         "production": null
       }
     },
@@ -312,7 +312,7 @@
       "file": "owner-decision-5-retractions-2026-10-06.json",
       "sha256": "bd0b5baf5b901c219e01f499065807d857a2f613baae6d75a3541edc9f34a7b7",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T02:59:51Z",
         "production": null
       }
     },
@@ -321,7 +321,7 @@
       "file": "provenance-2026-10-06-chunk-01.json",
       "sha256": "3c3e0804fade85a9d682e541ebd77941bb8a698eb7ad94645f0606fb8933f628",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T02:59:55Z",
         "production": null
       }
     },
@@ -330,7 +330,7 @@
       "file": "metric-directions-2026-10-06-chunk-01.json",
       "sha256": "ebefd4853797b5823d1dc3eead1ff295e5b0042b3c2725b1ac54a894d5fb2823",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T02:59:59Z",
         "production": null
       }
     },
@@ -339,7 +339,7 @@
       "file": "provenance-2026-10-06-chunk-02.json",
       "sha256": "941fd8ac7f0c3d51b4f4b582099798221d4c3c47ae6ab6b1076233cb96470c7f",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T03:00:04Z",
         "production": null
       }
     },
@@ -348,7 +348,7 @@
       "file": "provenance-2026-10-06-chunk-03.json",
       "sha256": "3c7800a1425dadc7715d69954d0e2a414c066e4c75c244ba5fe07375d41eab2f",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T03:00:09Z",
         "production": null
       }
     },
@@ -357,7 +357,7 @@
       "file": "provenance-2026-10-06-chunk-04.json",
       "sha256": "fb377d0abd5320b5e4f400f48fc3462b57323dc3d4b255ccef6fa8018f035231",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T03:00:13Z",
         "production": null
       }
     },
@@ -366,7 +366,7 @@
       "file": "provenance-2026-10-06-chunk-05.json",
       "sha256": "a22604718827dcde53216a4cb851d07eda7b1c2d4ff2960f8a6b8ef5f0381321",
       "applied": {
-        "staging": null,
+        "staging": "2026-10-06T03:00:19Z",
         "production": null
       }
     }
