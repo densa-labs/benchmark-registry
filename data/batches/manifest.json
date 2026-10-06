@@ -351,6 +351,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 40,
+      "file": "provenance-2026-10-06-chunk-04.json",
+      "sha256": "fb377d0abd5320b5e4f400f48fc3462b57323dc3d4b255ccef6fa8018f035231",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
