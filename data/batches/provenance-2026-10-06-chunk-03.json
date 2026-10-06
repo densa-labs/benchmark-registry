@@ -1,0 +1,1258 @@
+{
+  "records": [
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "10ed1447edd515893f55af18549555e2913a9a3bf2f9c4d8d10d2056a50e573d",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2451b2517dc563b1681415ecd476f0b874d7ec38aa8a90cb8141ca0be351af09",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b3a22fc3b2b17dd99b72db69cd16dcf7041ec50bcbb414c44545b878574d92fa",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "baa313a2abae55308ae06651f02a77b745d3d04939fb97d55b871966ea1e36a8",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bc8b8521bdb48c640fe18632419afc127064a3c099baf5f3b011149f5d9ddfe5",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d8cb06ab2ad622b98e20000aa89630c23b7aefdb8ca1f09dea045d4e1fb154f7",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e045bf15ab44dde00b5febc61ee98c922d62ea87c438d023c46513f9a022780e",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eed903976ffe0073ab8c583d274207bc5dae18f5b0366f92a27c5127057d2a00",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fe77da1dd2c1da1c821bcd8b4ae733922393d27f514eb3237c8bb2d5760b829c",
+        "source_type": "Model page",
+        "publisher": "Meta",
+        "reporting_basis": "self-reported",
+        "source_url": "https://dev.meta.ai/models/muse-spark-1-1",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0d7003b817cea9cbff878d88051d164b796dda7b551750bb9b757522b8d3071e",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "889aba673be34f8149918a6ce7d66f7b5af370143a4774fbc0acaaf1478843f0",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b64073f2df86b9be029a0ece1d994dff67bc9443bfc8bda6751ef82e382c102c",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0af59d28b745874fb62887e2894fec384eca4401aae7a87eb04cfd92070f6226",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2bf6d40664c05b6df2e6755465d998e1abac03e7c8950d4f53696d674b00b1ca",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "41c661728adc6ae8ecc2ea4f79321e9936651c5741d95bf10aa10deb3c25790a",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8b2429d9402191fd448a5506e5150bd10a6cc99e75d80b3d0bc28ac4c627b6c4",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "efcd195531eb3a3a84d08cc82722d960fefaa8bee8d83ad2cf5ac2e3379a9f35",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f0c2a5403152e3e9ed7f7563967482b94e04d3a7a29db60c3e1903c11a81a178",
+        "source_type": "Model card",
+        "publisher": "Qwen",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "00e2702ac4474f3ea00f945cfcc0871ce8514ccd1080b33388a107eff0078eec",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0b1484b51d7ecded976bfbd02006f7f67c31f9c6f5e0684066688d4e5c04adb3",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "47004966acdc67f6031358babfd124aa71e5aba45fd2d9087b89ee775f563a0e",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4f927eb9f931bd12ab76d2728a4f32a748e79c0c2f1878b4dfdb7e2e6eb101c3",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5c94f09584499568c0c3203ee66b6c26df28f35d539cac355f309e5010091a8f",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "77cfdde247f86247788bf6c91da1442826997dd5b84930a9f942a858ca9f8ad2",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a2f0556f0b2aaded55e52f9227619a0a7ee8d5e3e7133f94bf69e3d888423f90",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b1ff4cea8605235de05af59af3f20e106d3c5dd49cfa32272703a8b8a1b31366",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c0b0cc414a8eba2e3095e78f9b23dd3da747b9f34848a40f0b2b35e87ae57acd",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c0ddf9833ef2580b334bd999587d4ce3f82c9c62e2891220cdb7c08e1b8fbb40",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fdb6be47babf7d90792a3881230979cc8a923b34207fa6e983fc5e8a34bb5b8d",
+        "source_type": "Model card",
+        "publisher": "Moonshot AI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0d65f78673466470cb08ec39398d0232b1abfa3a984ac8f19e7a4f8331d71694",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3f269ec17cd9a078b2552dee867893bac4b9675fbac37b8beb59a48679cc2c9a",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "811fb18d7d6d1488db8d3bacc65ee2da0fe9726f934dc324dfe13a5165f34a07",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "910e7bf5d3dfa57b519394be08ddcb9267b829c1d38e8719c805226079ae4627",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "93f90c79788958aa6c48a56cfc00a08f7f2c3d95d645d4406fc3a4c323509de6",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "99edc3cd7af383e2492b902623b4c8c12415ee36259a6756a11680b788cb578c",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a2c93a3f3fad1801746ec708b923bfd4f5f13cc8ee01df200d8d564298196116",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c09a0cbaaa1c941000c409168f0f38e9cc33943e0ddaefcece1cad44e541a0fb",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "daf2e068e9bf9ef9b656b9470462d2d3ee59ed45777051c493e309b1787d1d3e",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "df487c023f815491b15cce3a7a45d7fd551a30f7faeed6c877b7ec835c525a30",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "320027a25e0f3a8de1863fdc730bef36f3b483e9eb89648a9782ecca05411d08",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "394bb4695b78362ea091299bfc80156ad0852b25f4de54c22e199d511e414045",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "39714798ab5b1ebdeef1d015a05f39bb0bcc9f435e0c347b7efc30bb2e4e99db",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6349581e5394b4d07ba61aee433e71f08b55eee1457cee0227dee6ce73c80d3d",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8b121c313816737362eba29228de2a4ecde165b8f1ca031f93df4660d4f95947",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ac57e0a81383d93872bf578456e5e92b875b73f7f43675cd383878345160a56b",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b9519e7fc160c36c54143ede9489370660a5c28ef5bab5cc7fea8ad26b2b49ee",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ec0181a061d2048b79e63e3f6c1ca87e1034b0f61163751bae03a21eeed83cb1",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ef575af0fff5a19f6f8db8fbddaee6d3c31b94c103a2b9ab80710105f1a19213",
+        "source_type": "Launch post",
+        "publisher": "OpenAI",
+        "reporting_basis": "self-reported",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2c2e3d870c58da94c8f1bc779dae369ffb7a0f3dccaf12ad58d5e96b628184c7",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.6",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2f034316c8e206e93a7dd8ddad0902de7e0b646f903c25754abfa6f9faad70c2",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.6",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "916da121af2d3dcecfefe2c5d9f73ca85b7b565ee0022813ef4db4faee9c5326",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.6",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a34f714b1ff334798c4e1500d362a569694782e888817f87addf1644579bbb89",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.6",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c022dd0adbd0bae45e5a7a3b31be22e8082c0ea651439a09d5e96f2fec586aa4",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.7-plus",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fdf5d2e71bac954578648d12739432fa4a3a6ebed4822a8e68381c2f53f901b5",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.7-plus",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8a4fcbb7cde2600dc22ec754890aaa5d76ed3e3edd11187f71d1d0095d4da160",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ab26343de78f32cc6fc0d40066f49809f06ab3189d43d83b89a804e1e4693d12",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bdb1a2244995f494a7e58bfcf8066a24ddbcd901eebaa40829ffa15294387388",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "c35665f6b04869daaec3a6d8a2b010875a89184d556a5090f52fc6f4a21eee51",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dacd3eb3a9e494455044097faac90ca26c2ae34b38fb8e6fb757dee54d831e46",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ee02c16a004b2d34a5de443c7ef0c673b7c71c169245c20408df7a2b28dc10ac",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ef8c1629b290d9a3a96d3cb3acf89271cb26ccc427167526d0fb1b7b5023e4bd",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f2a49da4793f09d3469de46eb21a14b57422134c8d3060af71045bfcc5c29b4c",
+        "source_type": "Launch post",
+        "publisher": "Qwen Team",
+        "reporting_basis": "self-reported",
+        "source_url": "https://qwen.ai/blog?id=qwen3.8",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "617eebeacee380ae2957bcfc1f281fec979df590ba9c76151f25f4dcbcf49f58",
+        "source_type": "Model card",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b4f4e1a20e12ae9a4526abf43a4ccce7cd14471b985fa5b03f3165148697abfe",
+        "source_type": "Model card",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/model-card/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "185fccf0a61127ff2b4333af4c53e9a22dbe4caca68a792f6c7e19cfbfe25540",
+        "source_type": "Model card",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/model-card/inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "54c6c85e4206d0cf32ab4eb7196484f6a251ae8448eabc50e25997cde69ab4db",
+        "source_type": "Model card",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/model-card/inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "851190060a3cbd0260ebcb1ce60fefaa65e35b4d01a49a30b2aed579ef72d5c0",
+        "source_type": "Model card",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/model-card/inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "0ebf424b14a449ba2fbb7fd486163f2c299a953dd63d4811aa96d79c2d41aff5",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "4163b60897e04ffd2ed52ec5a8ae3c6e3839460b18e1655473dd0c47db6a82bc",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "85ec9eb6c7de6aa5c6564f8267c15955745e6792c6ad6bb87ca8b5256fd791b6",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "93c495a1834cade79bc05a33cd3854d95a751d18c9d573d8536344cf2eaee629",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9c133a69cc2e5a1ac8b61a84efad1841f18bdd8d303260638a25cfb8ae949100",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a20d73f11c019c3c5da70094b9a72e26e98ed55338e5730a157364ef8fa79737",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d5341461780dbc993c674432575c975e42193025ce001cca744dc205473b25bd",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ddd3ade2e75368e3cf555ddd2f35035bc47c6c9d8f086cb104370b5a33e185f0",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/inkling-small/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "293439b88ddc9d3d8c74134d7e7faa3a93ffb6876aa686351a52ad884d6b0bc5",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "335799718499a298b57ed442091c22455883a4a9009dfba34a4a383ba2560da9",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "697ffb71136d7a7b29ba682f99878ef58ff3160e8d2c284bbe19d5b79c311cd0",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "bb5bf478f6bbae8ae707b80b8f813a870f9a64861db13cea0a17ecaec3f84e67",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d3a4145286f1b4911748108759443fd2657a7508a3ec37950bb183a91f2083f4",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e193143aeda1291573355af3076d69df8ceae91759e9ccadacd25c54af499759",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ebc0f78f5a10a416fbb2edd25a85d63579104efe4d8951087c14300e75093d32",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fbc5a59724f38edcbafdb37e10852ea9438ad247a04b066e84aec8b414b0a66b",
+        "source_type": "Launch post",
+        "publisher": "Thinking Machines Lab",
+        "reporting_basis": "self-reported",
+        "source_url": "https://thinkingmachines.ai/news/introducing-inkling/",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "1c4b3a28154954694d3395e9a7abb83021a67484af29876732a2daf94e067059",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2479c4fc9f39653e66b6f54e2156e0e149843ac2cf32fdeabf114a510461ae66",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "372b81819fc473e10de75fe49da8e21cbd0a3b6a9fff2ff66cd1f1555e38d53f",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "686e948add7119961856b75f5ce152a76e60ef8af3e30216fd01ba8caa3ce163",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "6a0d82f30a15c71881bb36267d98bbcae4162fcff4cb72e42d4165665f58751f",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "704493e43dc58ffdb7aa99a03741bb5418a6e399d50f11840690f56c07e419e9",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "dc72db3734851b944e045b64b2e364e7de05b428d0a794292840018dcf269166",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2616ad0aac2a023d6cd3ae5c3debab88fb46149f411d980f84a04f531ba20530",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "377dd57e6fc3a8cfbc9821a634c154eeec85ea9ed258423ea83ada2e8ced32b3",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "58db0aa29dbe302c310d3792a561b43fd666c4c617017037ad809eba83b65031",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "72128bcca9b6a6cce602b6d147280c809771a41701f4590ac4d8f3209a61e8b1",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "752ffc72dd601b5c765d0611416f806e853e1a462145837b468a3e1b53bf7143",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "b9987b52563f769af1f8ae8e77755c7ec02dbce5bb0a1723a3cd6a86b8312fec",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "f71b7576d481abd41054ce0457c410a43388aa560dbe9d94ab4ad343e4ffdbc4",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "fc6166bcf19695d2a8625bf1a1ce76e7c472b1466913238cdbc450c51927ea8f",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "2941d27f2872f3c679c95c0a491569f3c308c7855a56937c6f63ac473aa24643",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "326a9070d332143f78eeeebef7e65322bfac9a3454875ef73c3def6f916dfbdc",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "3a6043d72ae4e9523865e62a057d59c26b20ed7cdff1e86752e7ba122223e1e9",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "410462622b167170c464f33967d477dea25fb13fc43ceace0a58b30121fea412",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "44995bd326dd96792e0e047f7dc4b02ffc0703789c43e925f473a6be85bca062",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "5722e842aa9a82efcde0916aec0a5814d2b155ac1a329cf70b6482f8759dbfea",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "8ccebe8221dd8a9a9fc95e4450a9a7bd5c1dec94352d5d171d559f27ac589091",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "946d879eb89c9da10ada45985a2a078e493166b4c5fae890ceaa3ea94effad90",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "9765b8b1fc64e4e26f99957df781309a1bfe0ee9423f677ab0d5f21cd8a574ed",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a74b7a7f809100afdd1a2d3fbdc851a0ff38d8661c41cab3251f4f5388a2bc12",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "a7f3964c4a4a0cfea6fbd86c607ebc7db9a667d5b7442bc3cd8977ce135109c3",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "d8a4c9c095e06cf968854de94bcb523cb47037fb2d7d2a996410ca29ce9d4eba",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "ded2368fc42bea1c38f8d84a7f355de14c5d1eba81b8201c0bc320fe42f0e165",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "e76c28ea6091c7eb7749f88a936160b351f5c338585024e45be5f284da57131c",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eb14713880a6758a25c8da661d3c2d5cc7b18c4a7f53a676984c9e11d9d93a88",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    },
+    {
+      "operation": "result_provenance",
+      "record": {
+        "result_key": "eda0e6d8a29b099d9599224c7b166feef2d25569aab5159f08e23f53eb4fab54",
+        "source_type": "Launch post",
+        "publisher": "Alibaba Cloud Community",
+        "reporting_basis": "self-reported",
+        "source_url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+        "source_checked_at": "2026-10-06T00:21:11Z"
+      }
+    }
+  ]
+}

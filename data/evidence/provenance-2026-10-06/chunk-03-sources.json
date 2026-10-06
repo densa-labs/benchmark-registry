@@ -1,0 +1,120 @@
+{
+  "chunk": 3,
+  "selection": "Every published result still missing provenance whose primary source is a source of the models ranked 21–30 by result count (Registry Nos. 10007, 10008, 80002, 120001, 130004, 130005, 130007, 130008, 160001, 160002).",
+  "reporting_basis_rule": "self-reported when the source's publisher is the model's developer; independent otherwise. Evaluators stay recorded separately. Alibaba Cloud and the Qwen Team publish for the developer Alibaba (Tongyi).",
+  "checked_at": "2026-10-06T00:21:11Z",
+  "sources": [
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206",
+      "observed_title": "Qwen3.7-Plus: Multimodal Agent Intelligence - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+      "observed_title": "moonshotai/Kimi-K2.5 · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Moonshot AI",
+      "publisher_evidence": "Hugging Face repository owned by the moonshotai organization (Moonshot AI)"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-4/",
+      "observed_title": "Introducing GPT-5.4 | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "observed_title": "Introducing GPT-5.5 | OpenAI",
+      "source_type": "Launch post",
+      "publisher": "OpenAI",
+      "publisher_evidence": "og:site_name OpenAI"
+    },
+    {
+      "url": "https://dev.meta.ai/models/muse-spark-1-1",
+      "observed_title": "Muse Spark | Meta",
+      "source_type": "Model page",
+      "publisher": "Meta",
+      "publisher_evidence": "og:site_name Meta Model API; served from dev.meta.ai"
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/qwen3-6-35b-a3b-thinking-open-weights-uncompromised-agentic-coding_603043",
+      "observed_title": "Qwen3.6-35B-A3B: Agentic Coding Power, Now Open to All - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "observed_title": "Inkling: Our Open-Weights Model - Thinking Machines Lab",
+      "source_type": "Launch post",
+      "publisher": "Thinking Machines Lab",
+      "publisher_evidence": "og:site_name Thinking Machines Lab"
+    },
+    {
+      "url": "https://thinkingmachines.ai/news/inkling-small/",
+      "observed_title": "Introducing Inkling-Small - Thinking Machines Lab",
+      "source_type": "Launch post",
+      "publisher": "Thinking Machines Lab",
+      "publisher_evidence": "og:site_name Thinking Machines Lab"
+    },
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "observed_title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "source_type": "Launch post",
+      "publisher": "Qwen Team",
+      "publisher_evidence": "Byline: QwenTeam on qwen.ai"
+    },
+    {
+      "url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+      "observed_title": "Qwen3.6-Plus: Towards Real World Agents - Alibaba Cloud Community",
+      "source_type": "Launch post",
+      "publisher": "Alibaba Cloud Community",
+      "publisher_evidence": "Byline: Alibaba Cloud Community (official account) on alibabacloud.com"
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "observed_title": "Qwen/Qwen3.8-2.4T-A95B · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Qwen",
+      "publisher_evidence": "Hugging Face repository owned by the Qwen organization"
+    },
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.6",
+      "observed_title": "Qwen3.6-Plus: Towards Real World Agents",
+      "source_type": "Launch post",
+      "publisher": "Qwen Team",
+      "publisher_evidence": "Byline: QwenTeam on qwen.ai"
+    },
+    {
+      "url": "https://thinkingmachines.ai/model-card/inkling/",
+      "observed_title": "Inkling Model Card - Thinking Machines Lab",
+      "source_type": "Model card",
+      "publisher": "Thinking Machines Lab",
+      "publisher_evidence": "og:site_name Thinking Machines Lab"
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "observed_title": "Qwen/Qwen3.6-35B-A3B · Hugging Face",
+      "source_type": "Model card",
+      "publisher": "Qwen",
+      "publisher_evidence": "Hugging Face repository owned by the Qwen organization"
+    },
+    {
+      "url": "https://thinkingmachines.ai/model-card/inkling-small/",
+      "observed_title": "Inkling-Small Model Card - Thinking Machines Lab",
+      "source_type": "Model card",
+      "publisher": "Thinking Machines Lab",
+      "publisher_evidence": "og:site_name Thinking Machines Lab"
+    },
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.7-plus",
+      "observed_title": "Qwen3.7-Plus: Multimodal Agent Intelligence",
+      "source_type": "Launch post",
+      "publisher": "Qwen Team",
+      "publisher_evidence": "Byline: QwenTeam on qwen.ai"
+    }
+  ]
+}
