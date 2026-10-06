@@ -3,6 +3,10 @@ import type { ResultRow } from "../worker/api";
 import { formatRegistryDate } from "./registry";
 import { SourceLink } from "./ui/components";
 
+// A self-reported result usually names the developer as both publisher and evaluator; show it once.
+const sameOrganization = (result: ResultRow) => Boolean(result.publisher)
+  && result.evaluator_names.join(", ").trim().toLowerCase() === result.publisher!.trim().toLowerCase();
+
 export function ResultDetails({ result, showEvaluator = false, compact = false }: { result: ResultRow; showEvaluator?: boolean; compact?: boolean }) {
   const metric = result.metric.name?.trim();
   const hasDate = Boolean(result.reported_at) && Number.isFinite(Date.parse(result.reported_at));
@@ -13,7 +17,7 @@ export function ResultDetails({ result, showEvaluator = false, compact = false }
     {result.source_type && result.source_type.toLowerCase() !== "unknown" ? <span>{result.source_type}</span> : null}
     {result.publisher && result.publisher.toLowerCase() !== "unknown" ? <span>{result.publisher}</span> : null}
     {result.reporting_basis === "self-reported" || result.reporting_basis === "independent" ? <span>{result.reporting_basis === "self-reported" ? "Self-reported" : "Independent"}</span> : null}
-    {(showEvaluator || !result.publisher) && result.evaluator_names.length ? <span>{result.evaluator_names.join(", ")}</span> : null}
+    {(showEvaluator || !result.publisher) && result.evaluator_names.length && !sameOrganization(result) ? <span>{result.evaluator_names.join(", ")}</span> : null}
   </span>;
 }
 

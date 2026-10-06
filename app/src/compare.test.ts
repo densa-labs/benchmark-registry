@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { buildComparisonRows, filteredComparisonModels, comparisonHref, parseComparisonState, reasoningSelection } from "./compare";
+import { buildComparisonRows, comparisonHref, parseComparisonState, reasoningSelection } from "./compare";
 import { loadRegistryRoute, resolveRegistryRoute } from "./registry";
 import { modelA, modelB, detail, result } from "./compare-fixtures";
 
@@ -97,11 +97,10 @@ describe("comparison data loading", () => {
   });
 });
 
-it("defaults to shared results and preserves provider/release filters in stable URLs",()=>{
-  const state=parseComparisonState("?provider=openai&released_from=2026-01-01&released_to=2026-12-31");
+it("defaults to shared results and drops the retired provider/release filter from old links",()=>{
+  const state=parseComparisonState("?models=10001,20001&provider=openai&released_from=2026-01-01&released_to=2026-12-31");
   expect(state.sharedOnly).toBe(true);
+  expect(comparisonHref(state)).toBe("/compare?models=10001%2C20001");
   expect(parseComparisonState(comparisonHref(state).split("?")[1])).toEqual(state);
   expect(parseComparisonState("?benchmarks=all").sharedOnly).toBe(false);
-  expect(filteredComparisonModels([modelA,modelB],{...state,releasedFrom:undefined,releasedTo:undefined}).every(row=>row.company.slug==="openai")).toBe(true);
-  for(const query of ["?released_from=2026-02-30","?released_from=2026-02-02&released_to=2026-01-01","?provider=BAD"]) expect(()=>parseComparisonState(query)).toThrow();
 });

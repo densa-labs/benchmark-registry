@@ -5,7 +5,7 @@ import { renderToString } from "react-dom/server";
 import axe from "axe-core";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { RegistryDocument, App } from "./App";
-import { ComparePage } from "./compare-page";
+import { BenchmarkSection, ComparePage } from "./compare-page";
 import { buildComparisonRows, comparisonPage, parseComparisonState, type ComparisonResponse } from "./compare";
 import { detail, modelA, modelB, result } from "./compare-fixtures";
 import { serializeInitialDocument } from "./bootstrap";
@@ -85,7 +85,36 @@ describe("Compare page", () => {
     const fields = new URLSearchParams([...new FormData(form)].map(([key, value]) => [key, String(value)]));
     expect(parseComparisonState(fields.toString())).toMatchObject({ models: ["10001", "20001"], reasoning: ["high", "high"] });
     expect([...selectControl("#compare-reasoning-0").options].map(option => option.value)).toEqual(["high"]);
-    expect(container.querySelectorAll('#compare-page-size option')).toHaveLength(3);
+    expect(container.querySelector("#compare-page-size")).toBeNull();
+    expect(container.querySelector(".pagination")).toBeNull();
+    expect(container.querySelector('select[name="provider"], input[name="released_from"]')).toBeNull();
+    expect(container.querySelector(".copy-link")?.textContent).toBe("Copy link");
+  });
+
+  it("shows only the selectors and a prompt until both models are chosen", () => {
+    const response = { models: [modelA, modelB], selected: [detail(modelA, [result()]), null] as ComparisonResponse["selected"], issues: [] };
+    container.innerHTML = renderToString(<ComparePage response={response} currentSearch="?models=10001" />);
+    expect(container.querySelector(".compare-selectors")).not.toBeNull();
+    expect(container.querySelector("#compare-information-heading")).toBeNull();
+    expect(container.querySelector("#compare-benchmarks-heading")).toBeNull();
+    expect(container.querySelector(".copy-link")).toBeNull();
+    expect(container.querySelector(".state-message h3")?.textContent).toBe("Choose two models to compare");
+  });
+
+  it("labels several runs on one side by what differs between them, not the shared context", () => {
+    const runs = [result({ result_key: "low", reasoning_level: "low", score: { ...result().score, display: "43.0%" } }), result({ result_key: "max", reasoning_level: "max", score: { ...result().score, display: "54.7%" } })];
+    container.innerHTML = renderToString(<BenchmarkSection title="Shared benchmarks" rows={buildComparisonRows(runs, [shared])} names={["Model A", "Model B"]} />);
+    expect([...container.querySelectorAll(".compare-score")].map(item => item.textContent)).toEqual(["43.0%", "54.7%", "91.2%"]);
+    expect([...container.querySelectorAll(".compare-score-context")].map(item => item.textContent)).toEqual(["low", "max"]);
+    expect(container.querySelector('[role="rowheader"]')).not.toBeNull();
+  });
+
+  it("offers rows per page and pagination only for long comparisons", () => {
+    const many = Array.from({ length: 70 }, (_, index) => result({ result_key: String(index), benchmark: { name: `Benchmark ${index}`, slug: `benchmark-${index}`, aliases: [] } }));
+    const response = { ...payload, selected: [detail(modelA, many), detail(modelB, [shared])] as ComparisonResponse["selected"] };
+    container.innerHTML = renderToString(<ComparePage response={response} currentSearch={search + "&benchmarks=all"} />);
+    expect(container.querySelectorAll("#compare-page-size option")).toHaveLength(3);
+    expect(container.querySelector(".pagination")?.textContent).toContain("Page 1 of 2");
   });
 
   it("searches aliases and paginates the union after shared-only filtering", () => {
