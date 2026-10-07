@@ -1,0 +1,16 @@
+{
+ "oss-gpqa-diamond-leaderboard": "https://web.archive.org/web/20261007141849/https://www.mercor.com/apex/oss-benchmarks/oss-gpqa-diamond-leaderboard/",
+ "oss-hle-leaderboard": "https://web.archive.org/web/20261007141935/https://www.mercor.com/apex/oss-benchmarks/oss-hle-leaderboard/",
+ "oss-swe-bench-verified-leaderboard": "https://web.archive.org/web/20261007142057/https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard/",
+ "oss-swe-bench-multilingual-leaderboard": "https://web.archive.org/web/20261007142228/https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-multilingual-leaderboard/",
+ "oss-terminal-bench-4-0-leaderboard": "https://web.archive.org/web/20261007142506/https://www.mercor.com/apex/oss-benchmarks/oss-terminal-bench-4-0-leaderboard/",
+ "oss-mmmu-pro-leaderboard": "https://web.archive.org/web/20261007142541/https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+ "oss-mmlu-pro-leaderboard": "https://web.archive.org/web/20261007142613/https://www.mercor.com/apex/oss-benchmarks/oss-mmlu-pro-leaderboard/",
+ "oss-charxiv-leaderboard": "https://web.archive.org/web/20261007142648/https://www.mercor.com/apex/oss-benchmarks/oss-charxiv-leaderboard/",
+ "oss-deep-swe-leaderboard": "https://web.archive.org/web/20261007142755/https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/",
+ "oss-browsecomp-leaderboard": "https://web.archive.org/web/20261007142913/https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/",
+ "oss-medxpertqa-mm-leaderboard": "https://web.archive.org/web/20261007142954/https://www.mercor.com/apex/oss-benchmarks/oss-medxpertqa-mm-leaderboard/",
+ "oss-swe-atlas-leaderboard": "https://web.archive.org/web/20261007143027/https://www.mercor.com/apex/oss-benchmarks/oss-swe-atlas-leaderboard/",
+ "oss-terminal-bench-2-1-leaderboard": "https://web.archive.org/web/20261007142354/https://www.mercor.com/apex/oss-benchmarks/oss-terminal-bench-2-1-leaderboard/",
+ "apex-agents-leaderboard": "https://web.archive.org/web/20261007143233/https://www.mercor.com/apex/apex-agents-leaderboard/"
+}

@@ -1,0 +1,530 @@
+{
+ "url": "https://www.mercor.com/apex/methodology/",
+ "rows": [
+  {
+   "title": "APEX-1",
+   "leaderboardHref": "/apex/apex-v1-leaderboard",
+   "specs": {
+    "Source": "Mercor",
+    "Tasks": "300",
+    "Runs": "k = 4",
+    "Metric": "Mean Score",
+    "Modality": "Text + reference files",
+    "Task format": "Single-turn",
+    "Question format": "Open-ended professional deliverables",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "Expert-authored rubrics, scored criterion by criterion",
+    "Judge": "LLM judge over expert rubrics",
+    "Released": "September 2025"
+   }
+  },
+  {
+   "title": "APEX-Accounting",
+   "leaderboardHref": "/apex/apex-accounting-leaderboard",
+   "specs": {
+    "Source": "Mercor",
+    "Tasks": "160",
+    "Runs": "k = 4",
+    "Metric": "Mean Score, Pass@1",
+    "Modality": "Text + spreadsheets and filings",
+    "Task format": "Single-turn",
+    "Question format": "Open-ended accounting deliverables",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "Expert-authored rubrics, scored criterion by criterion",
+    "Judge": "LLM judge over expert rubrics",
+    "Released": "March 2026"
+   }
+  },
+  {
+   "title": "Harvey LAB",
+   "leaderboardHref": "/apex/partner-benchmarks/harvey-lab-leaderboard",
+   "specs": {
+    "Source": "Harvey",
+    "Tasks": "1,749",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text + reference files",
+    "Task format": "Multi-step agentic",
+    "Question format": "Open-ended legal deliverables",
+    "Canonical harness": "Harvey LAB Agent",
+    "Grading": "Expert-authored rubrics, scored criterion by criterion",
+    "Judge": "Gemini 3 Flash Preview",
+    "Released": "May 2026"
+   }
+  },
+  {
+   "title": "GDPval",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-gdpval-leaderboard",
+   "specs": {
+    "Source": "OpenAI",
+    "Tasks": "213",
+    "Runs": "k = 4",
+    "Metric": "Mean Score",
+    "Modality": "Text + reference files",
+    "Task format": "Multi-step agentic",
+    "Question format": "Open-ended real-world deliverables",
+    "Canonical harness": "Stirrup",
+    "Grading": "LLM-as-a-judge (LMAAJ)",
+    "Judge": "Gemini 3 Flash Preview",
+    "Released": "October 2025"
+   }
+  },
+  {
+   "title": "RedlineBench",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-redlinebench",
+   "specs": {
+    "Source": "Crosby + micro1",
+    "Tasks": "140",
+    "Runs": "k = 3",
+    "Metric": "Turn-Weighted Mean Score",
+    "Modality": "Text + reference files",
+    "Task format": "Multi-step agentic",
+    "Question format": "Open-ended legal deliverables",
+    "Canonical harness": "RedlineBench Harbor — Claude Code (gen-only, disable_verif+capture)",
+    "Grading": "Expert-authored rubrics, scored criterion by criterion",
+    "Judge": "3-LLM judge panel over expert rubrics",
+    "Released": "June 2026"
+   }
+  },
+  {
+   "title": "APEX-Agents",
+   "leaderboardHref": "/apex/apex-agents-leaderboard",
+   "specs": {
+    "Source": "Mercor",
+    "Tasks": "240",
+    "Runs": "k = 3",
+    "Metric": "Pass@1, Mean Score",
+    "Modality": "Text + cross-application environment",
+    "Task format": "Multi-step agentic",
+    "Question format": "Long-horizon cross-application tasks",
+    "Canonical harness": "Loop (truncated tools)",
+    "Grading": "Expert-authored rubrics over final deliverables and agent trajectories",
+    "Judge": "LLM judge over expert rubrics",
+    "Released": "January 2026"
+   }
+  },
+  {
+   "title": "BrowseComp",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-browsecomp-leaderboard",
+   "specs": {
+    "Source": "OpenAI",
+    "Tasks": "130",
+    "Runs": "k = 4",
+    "Metric": "Pass@1",
+    "Modality": "Text + live web browsing",
+    "Task format": "Multi-step agentic",
+    "Question format": "Short free-text answer",
+    "Canonical harness": "Web research agent (100 max steps, 3 hour time limit)",
+    "Grading": "LLM-as-a-judge (LMAAJ)",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "April 2025"
+   }
+  },
+  {
+   "title": "DeepResearch Bench II",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-deepresearch-bench-ii-leaderboard",
+   "specs": {
+    "Source": "University of Science and Technology of China",
+    "Tasks": "130",
+    "Runs": "k = 1",
+    "Metric": "Mean Score",
+    "Modality": "Text + live web browsing",
+    "Task format": "Multi-step agentic",
+    "Question format": "Long-form research report generation",
+    "Canonical harness": "Web research agent (100 max steps)",
+    "Grading": "Expert-authored rubrics, scored criterion by criterion",
+    "Judge": "GPT 5.5",
+    "Released": "January 2026"
+   }
+  },
+  {
+   "title": "APEX-SWE",
+   "leaderboardHref": "/apex/apex-swe-leaderboard",
+   "specs": {
+    "Source": "Mercor + Cognition",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (code repositories)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Observability and integration engineering tasks",
+    "Canonical harness": "Agentic coding harness",
+    "Grading": "Expert-authored rubrics plus repository test suites",
+    "Judge": "LLM judge + programmatic tests",
+    "Released": "January 2026"
+   }
+  },
+  {
+   "title": "APEX-SWE",
+   "leaderboardHref": "/apex/apex-swe-leaderboard",
+   "specs": {
+    "Source": "Mercor + Cognition",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (code repositories)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Observability and integration engineering tasks",
+    "Canonical harness": "Agentic coding harness",
+    "Grading": "Expert-authored rubrics plus repository test suites",
+    "Judge": "LLM judge + programmatic tests",
+    "Released": "January 2026"
+   }
+  },
+  {
+   "title": "SciCode",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-scicode-leaderboard",
+   "specs": {
+    "Source": "University of Illinois Urbana-Champaign",
+    "Tasks": "65",
+    "Runs": "k = 3",
+    "Metric": "Mean Score",
+    "Modality": "Text (scientific code)",
+    "Task format": "Chained single-shot",
+    "Question format": "Scientific subproblem code implementation",
+    "Canonical harness": "SciCode chain agent",
+    "Grading": "Programmatic unit tests for each subproblem (all must pass)",
+    "Judge": "None",
+    "Released": "July 2024"
+   }
+  },
+  {
+   "title": "Terminal-Bench 2.1",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-terminal-bench-2-1-leaderboard",
+   "specs": {
+    "Source": "Stanford; Harbor; Laude Institute",
+    "Tasks": "89",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (terminal, CLI)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Command-line task completion",
+    "Canonical harness": "Terminus 2 (1000 max steps, 3 hour time limit)",
+    "Grading": "Programmatic unit tests (all must pass)",
+    "Judge": "None",
+    "Released": "January 2026"
+   }
+  },
+  {
+   "title": "SWE Atlas - Codebase QnA",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-swe-atlas-leaderboard",
+   "specs": {
+    "Source": "Scale AI",
+    "Tasks": "124",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (code repositories)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Under-specified agentic codebase Q&A",
+    "Canonical harness": "mini-swe-agent (250 max steps, 1 hour time limit)",
+    "Grading": "LLM-as-a-judge (LMAAJ) over software quality rubrics",
+    "Judge": "Claude Opus 4.5",
+    "Released": "May 2026"
+   }
+  },
+  {
+   "title": "SWE-bench Verified",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard",
+   "specs": {
+    "Source": "Princeton; OpenAI (Verified subset)",
+    "Tasks": "500",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (code repositories)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Code patch resolving a GitHub issue",
+    "Canonical harness": "mini-swe-agent (1000 max steps, 3 hour time limit)",
+    "Grading": "Programmatic fail-to-pass and pass-to-pass unit tests (all must pass)",
+    "Judge": "None",
+    "Released": "October 2023"
+   }
+  },
+  {
+   "title": "CVDP",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-cvdp-leaderboard",
+   "specs": {
+    "Source": "NVIDIA",
+    "Tasks": "517",
+    "Runs": "k = 5",
+    "Metric": "Pass@1",
+    "Modality": "Text (Verilog/SystemVerilog source and testbenches)",
+    "Task format": "Multi-step agentic (code generation) + single-shot (comprehension)",
+    "Question format": "RTL or testbench file edits; free-text answers for comprehension",
+    "Canonical harness": "Terminus via Harbor (1 hour time limit) for code generation; single-shot for comprehension",
+    "Grading": "Code generation: programmatic — a cocotb testbench runs against Icarus Verilog in Docker and the task passes iff pytest passes. Comprehension: BLEU-2 overlap against the reference answer (correspondence) and an LLM rating (Q&A).",
+    "Judge": "None for code generation; BLEU/ROUGE similarity and an LLM judge for comprehension",
+    "Released": "June 2025"
+   }
+  },
+  {
+   "title": "DeepSWE v1.1",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-deep-swe-leaderboard",
+   "specs": {
+    "Source": "Datacurve",
+    "Tasks": "113",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (code repositories)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Code patch resolving a real-world repository issue",
+    "Canonical harness": "mini-swe-agent (500 max steps, 2 hour time limit)",
+    "Grading": "Programmatic unit tests (all must pass)",
+    "Judge": "None",
+    "Released": "June 2026"
+   }
+  },
+  {
+   "title": "FrontierSWE v2",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-frontier-swe-v2-leaderboard",
+   "specs": {
+    "Source": "Proximal Labs",
+    "Tasks": "34",
+    "Runs": "k = 3",
+    "Metric": "Mean Score",
+    "Modality": "Text (code repositories, terminal, GPU environments)",
+    "Task format": "Multi-step agentic (ultra-long-horizon)",
+    "Question format": "Open-ended engineering projects scored on a task-native metric",
+    "Canonical harness": "Terminus 2 via Harbor (5000 max steps, 20 hour agent time limit, 1 hour per LLM call)",
+    "Grading": "Programmatic, task-native metrics rescaled to [0, 1] against published or measured anchors (continuous partial credit)",
+    "Judge": "None — programmatic verifiers",
+    "Released": "September 2026"
+   }
+  },
+  {
+   "title": "ProgramBench",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-program-bench-leaderboard",
+   "specs": {
+    "Source": "Meta",
+    "Tasks": "100",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (executable + documentation)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Executable reverse engineering",
+    "Canonical harness": "mini-swe-agent (1000 max steps, 6 hour time limit)",
+    "Grading": "Programmatic unit tests (all must pass)",
+    "Judge": "None",
+    "Released": "May 2026"
+   }
+  },
+  {
+   "title": "SWE-bench Multilingual",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-swe-bench-multilingual-leaderboard",
+   "specs": {
+    "Source": "Princeton",
+    "Tasks": "298",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (code repositories)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Code patch resolving a GitHub issue",
+    "Canonical harness": "mini-swe-agent (1000 max steps, 3 hour time limit)",
+    "Grading": "Programmatic fail-to-pass and pass-to-pass unit tests (all must pass)",
+    "Judge": "None",
+    "Released": "May 2025"
+   }
+  },
+  {
+   "title": "Terminal-Bench 4.0",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-terminal-bench-4-0-leaderboard",
+   "specs": {
+    "Source": "Stanford; Harbor; Laude Institute",
+    "Tasks": "66",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text (terminal, CLI)",
+    "Task format": "Multi-step agentic",
+    "Question format": "Command-line task completion",
+    "Canonical harness": "mini-swe-agent (1000 max steps, 8 hour time limit)",
+    "Grading": "Programmatic unit tests (all must pass)",
+    "Judge": "None",
+    "Released": "August 2026"
+   }
+  },
+  {
+   "title": "MMLU-Pro",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-mmlu-pro-leaderboard",
+   "specs": {
+    "Source": "University of Waterloo (TIGER-Lab)",
+    "Tasks": "12,032",
+    "Runs": "k = 1",
+    "Metric": "Pass@1",
+    "Modality": "Text",
+    "Task format": "Single-shot",
+    "Question format": "Multiple choice (10 options)",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "Programmatic multiple-choice answer extraction",
+    "Judge": "None",
+    "Released": "June 2024"
+   }
+  },
+  {
+   "title": "GPQA Diamond",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-gpqa-diamond-leaderboard",
+   "specs": {
+    "Source": "New York University",
+    "Tasks": "198",
+    "Runs": "k = 4",
+    "Metric": "Pass@1",
+    "Modality": "Text",
+    "Task format": "Single-shot",
+    "Question format": "Multiple choice (4 options)",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "Programmatic multiple-choice answer extraction",
+    "Judge": "None",
+    "Released": "November 2023"
+   }
+  },
+  {
+   "title": "AIME 2025",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-aime-2025-leaderboard",
+   "specs": {
+    "Source": "Mathematical Association of America",
+    "Tasks": "30",
+    "Runs": "k = 4",
+    "Metric": "Pass@1",
+    "Modality": "Text",
+    "Task format": "Single-shot",
+    "Question format": "Integer answer (0–999)",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "LLM-as-a-judge (LMAAJ)",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "2025"
+   }
+  },
+  {
+   "title": "HLE",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-hle-leaderboard",
+   "specs": {
+    "Source": "Scale AI + Center for AI Safety",
+    "Tasks": "2,158",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text + multimodal",
+    "Task format": "Single-shot",
+    "Question format": "Exact-match short answer (~76%); multiple choice, 5+ options (~24%)",
+    "Canonical harness": "Single-shot multimodal",
+    "Grading": "LLM-as-a-judge (LMAAJ)",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "January 2025"
+   }
+  },
+  {
+   "title": "SUPERChem",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-super-chem-leaderboard",
+   "specs": {
+    "Source": "Peking University",
+    "Tasks": "500",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text + multimodal",
+    "Task format": "Single-shot",
+    "Question format": "Multiple choice (up to 26 options)",
+    "Canonical harness": "Single-shot multimodal",
+    "Grading": "Programmatic multiple-choice answer extraction",
+    "Judge": "None",
+    "Released": "December 2025"
+   }
+  },
+  {
+   "title": "MMMU-Pro",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-mmmu-pro-leaderboard",
+   "specs": {
+    "Source": "Carnegie Mellon University",
+    "Tasks": "1,730",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Multimodal (image required)",
+    "Task format": "Single-shot",
+    "Question format": "Multiple choice (up to 10 options)",
+    "Canonical harness": "Single-shot multimodal",
+    "Grading": "Programmatic multiple-choice answer extraction",
+    "Judge": "None",
+    "Released": "September 2024"
+   }
+  },
+  {
+   "title": "CharXiv",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-charxiv-leaderboard",
+   "specs": {
+    "Source": "Princeton University",
+    "Tasks": "5,000",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Multimodal (charts, figures)",
+    "Task format": "Single-shot",
+    "Question format": "Short answer (descriptive + reasoning questions on charts)",
+    "Canonical harness": "Single-shot multimodal",
+    "Grading": "LLM-as-a-judge (LMAAJ)",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "June 2024"
+   }
+  },
+  {
+   "title": "MedXpertQA MM",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-medxpertqa-mm-leaderboard",
+   "specs": {
+    "Source": "Tsinghua University; Shanghai Artificial Intelligence Laboratory",
+    "Tasks": "200",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Multimodal (image required)",
+    "Task format": "Single-shot",
+    "Question format": "Multiple choice (5 options)",
+    "Canonical harness": "Single-shot multimodal",
+    "Grading": "Programmatic multiple-choice answer extraction",
+    "Judge": "None",
+    "Released": "January 2025"
+   }
+  },
+  {
+   "title": "Long Context Reasoning (AA-LCR v1.1)",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-aa-lcr-leaderboard",
+   "specs": {
+    "Source": "Artificial Analysis",
+    "Tasks": "100",
+    "Runs": "k = 4",
+    "Metric": "Pass@1",
+    "Modality": "Text (~100k tokens per question)",
+    "Task format": "Single-shot",
+    "Question format": "Short free-text answer over multi-document sets",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "LLM-as-a-judge (LMAAJ)",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "August 2025"
+   }
+  },
+  {
+   "title": "AdvancedIF",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-advanced-if-leaderboard",
+   "specs": {
+    "Source": "Meta",
+    "Tasks": "1,645",
+    "Runs": "k = 4",
+    "Metric": "Pass@1",
+    "Modality": "Text",
+    "Task format": "Single-shot",
+    "Question format": "Open-ended prompts graded against expert-written rubrics",
+    "Canonical harness": "Single-shot agent",
+    "Grading": "LLM-as-a-judge (LMAAJ) over expert-written rubric criteria",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "November 2025"
+   }
+  },
+  {
+   "title": "τ³-Banking",
+   "leaderboardHref": "/apex/oss-benchmarks/oss-tau-3-banking-leaderboard",
+   "specs": {
+    "Source": "Sierra; Princeton University",
+    "Tasks": "97",
+    "Runs": "k = 3",
+    "Metric": "Pass@1",
+    "Modality": "Text + document search",
+    "Task format": "Multi-step agentic user-sim conversation",
+    "Question format": "Simulated customer troubleshooting",
+    "Canonical harness": "Tau half-duplex agent (200 max steps, 10 tool error limit, 3 hour time limit)",
+    "Grading": "Programmatic database-state checks and agent action checks; one LLM-judged natural-language assertion",
+    "Judge": "Gemini 3.5 Flash",
+    "Released": "March 2026"
+   }
+  }
+ ]
+}

@@ -1,0 +1,5240 @@
+[
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 94.2,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 91.4,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 86.4,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 92,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 85,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 93.4,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 92.4,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 86,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 90.5,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 90.8,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 87.8,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 89.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "kimi-k2-thinking-high",
+    "model_name": "Kimi K2",
+    "effort": "high",
+    "score": 83.7,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 92.7,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 87.2,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 84.7,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 85.7,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 80.6,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 85.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 89.4,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gemma-4-31B",
+    "model_name": "Gemma 4 31B",
+    "effort": null,
+    "score": 85.5,
+    "registry_no": "35002",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 93.2,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 90.2,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "openai/gpt-oss-120b",
+    "model_name": "GPT OSS 120B",
+    "effort": "high",
+    "score": 77.5,
+    "registry_no": "15001",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 93.2,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 91.8,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 96.2,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 85.2,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 91.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 89.9,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 94.4,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 91.3,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 94.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 91.4,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 95.2,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 95.1,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 93.8,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "muse-spark-1-3-max",
+    "model_name": "Muse Spark 1.3",
+    "effort": "max",
+    "score": 91.3,
+    "registry_no": "80005",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 93.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 93.6,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 93.9,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 92.5,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 91.3,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 94.2,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-gpqa-diamond-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 94.6,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 46.5,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 46.5,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 53.2,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-5-6-sol-max",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 47,
+    "registry_no": "10010",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 44.9,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 41.9,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 41.3,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 41.2,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 39.6,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 34,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 39,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 34.4,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 37.8,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 28.1,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "openai/gpt-oss-120b",
+    "model_name": "GPT OSS 120B",
+    "effort": "high",
+    "score": 18.5,
+    "registry_no": "15001",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gemma-4-31B",
+    "model_name": "Gemma 4 31B",
+    "effort": null,
+    "score": 23.2,
+    "registry_no": "35002",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 40.6,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 25.5,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 44.1,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 31.7,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 37.1,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 27.1,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "kimi-k2-thinking-high",
+    "model_name": "Kimi K2",
+    "effort": "high",
+    "score": 12.7,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 24.4,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 35.4,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 46,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 27.3,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 42.2,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 33.6,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 22.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 40,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-fable-5-high",
+    "model_name": "Fable 5",
+    "effort": "high",
+    "score": 51.5,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-4-7-high",
+    "model_name": "Opus 4.7",
+    "effort": "high",
+    "score": 42.2,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-4-8-high",
+    "model_name": "Opus 4.8",
+    "effort": "high",
+    "score": 44.8,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-sonnet-5",
+    "model_name": "Sonnet 5",
+    "effort": "high",
+    "score": 36.3,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-sonnet-4-6-medium",
+    "model_name": "Sonnet 4.6",
+    "effort": "medium",
+    "score": 29.2,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-5-high",
+    "model_name": "Opus 5",
+    "effort": "high",
+    "score": 52,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 55.6,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 44.1,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 53.1,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 52.2,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 54.6,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-4-6-max",
+    "model_name": "Opus 4.6",
+    "effort": "max",
+    "score": 35,
+    "registry_no": "20008",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 47,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "glm-5-1",
+    "model_name": "GLM 5.1",
+    "effort": null,
+    "score": 29.4,
+    "registry_no": "150003",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 38.7,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 40.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 49.2,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 57.4,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 41.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 46.5,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-hle-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 29.2,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 95.9,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 93.5,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 66,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 75.4,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 78.5,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 81.1,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 78.5,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 78.8,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 81.7,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 78.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 75.3,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 75.5,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 72.1,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gemma-4-31B",
+    "model_name": "Gemma 4 31B",
+    "effort": null,
+    "score": 46.1,
+    "registry_no": "35002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 78.1,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 82.8,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 83.1,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 88.5,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 79.1,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 78.4,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 92.1,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 81,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 80.6,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 81.7,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 82.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 76.1,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 80.3,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 77.8,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 98.2,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 72.8,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 76.2,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 96.7,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 87.3,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 96.6,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 84.6,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 83.3,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 83.6,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-verified-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 79.1,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 94.8,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 86.6,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 96.2,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 85.3,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 78.1,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 89.2,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 96.4,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 60.7,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 65.1,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 68.2,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 75.1,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 82.6,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 85.8,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 78.6,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 88.9,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 87.6,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 77,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 77.7,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 92.4,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 94.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 94.4,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 92.7,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 77.7,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 75.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 87.7,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 60.8,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 91.4,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 76,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 61.7,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 88.3,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 95.4,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 98.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 78.2,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 81.7,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 95.5,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 91.1,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 90.9,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 84.9,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-bench-multilingual-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 84.2,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 44.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 72.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 66.7,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 72.7,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 73.8,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 74.5,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gemma-4-31B",
+    "model_name": "Gemma 4 31B",
+    "effort": null,
+    "score": 46.8,
+    "registry_no": "35002",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 83.1,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 79,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 68.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 82,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 54.3,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 61.4,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 49.8,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 53.9,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 77.2,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "kimi-k2-thinking-high",
+    "model_name": "Kimi K2",
+    "effort": "high",
+    "score": 39,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-fable-5-high",
+    "model_name": "Fable 5",
+    "effort": "high",
+    "score": 70.8,
+    "registry_no": "20012",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-opus-4-7-high",
+    "model_name": "Opus 4.7",
+    "effort": "high",
+    "score": 76.4,
+    "registry_no": "20010",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-opus-4-8-high",
+    "model_name": "Opus 4.8",
+    "effort": "high",
+    "score": 82,
+    "registry_no": "20011",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-opus-5-high",
+    "model_name": "Opus 5",
+    "effort": "high",
+    "score": 83.9,
+    "registry_no": "20014",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-sonnet-5",
+    "model_name": "Sonnet 5",
+    "effort": "high",
+    "score": 82.4,
+    "registry_no": "20013",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 62.9,
+    "registry_no": "20009",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-5-6-sol-xhigh",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "xhigh",
+    "score": 84.6,
+    "registry_no": "10010",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 81.6,
+    "registry_no": "20004",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 83.5,
+    "registry_no": "150005",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 84.6,
+    "registry_no": "40002",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 85.4,
+    "registry_no": "10005",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 86.5,
+    "registry_no": null,
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 77.9,
+    "registry_no": "10013",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 85.4,
+    "registry_no": "10014",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 80.9,
+    "registry_no": "10011",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 76.4,
+    "registry_no": "10009",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 83.5,
+    "registry_no": "20015",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 87.3,
+    "registry_no": "20016",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 72.7,
+    "registry_no": "20004",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 85.4,
+    "registry_no": "10015",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 86.1,
+    "registry_no": "10005",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 80.9,
+    "registry_no": "30004",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 69.7,
+    "registry_no": null,
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 85,
+    "registry_no": "40003",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-2-1-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 79,
+    "registry_no": "30010",
+    "status": "held: row missing from the Wayback snapshot of the page"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 49.5,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 53,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 32.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 12.1,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 25.3,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 26.3,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 37.9,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 12.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 13.5,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 43.8,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 58.3,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 54.5,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 6.6,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gemini-3-5-flash-lite",
+    "model_name": "Gemini 3.5 Flash Lite",
+    "effort": "high",
+    "score": 0.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 10.1,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 0.5,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 29.8,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 1,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 24.7,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 51.5,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 59.6,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 17.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-terminal-bench-4-0-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 0,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 74.6,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 75.5,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 84.3,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 83.7,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 85.2,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 80.9,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 80.7,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 78.9,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 80.8,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 79.1,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 84.7,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 81.8,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-5-6-sol-max",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 83.6,
+    "registry_no": "10010",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 79,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 72.7,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 79.5,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 84.2,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-opus-4-7-high",
+    "model_name": "Opus 4.7",
+    "effort": "high",
+    "score": 78.6,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 82.8,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 86.8,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 83.9,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 76.6,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 76.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 83,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 87.4,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 86.1,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 85.8,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 80.5,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 85.8,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 78.4,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 69.7,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 81.3,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 87.5,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 85.3,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmmu-pro-leaderboard",
+    "model_id": "muse-spark-1-2",
+    "model_name": "Muse Spark 1.2",
+    "effort": "xhigh",
+    "score": 80.7,
+    "registry_no": "80003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 79.4,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 89.9,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 90,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 92,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 88,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 87.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 86.5,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 91.3,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 90,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 90,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gemma-4-31B",
+    "model_name": "Gemma 4 31B",
+    "effort": null,
+    "score": 85.8,
+    "registry_no": "35002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 85.9,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 88.2,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 88.9,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 86.5,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 89.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 88.1,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 88.2,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 86.8,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 86.4,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "kimi-k2-thinking-high",
+    "model_name": "Kimi K2",
+    "effort": "high",
+    "score": 84.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 89.3,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 79.6,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 84.6,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 89.9,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 88,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 88.5,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 86,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 91,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 91.5,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 88,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 88,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 90.6,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 90.7,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 89.4,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 87.3,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 76.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 88.2,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 86.2,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 88.9,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 93.4,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 93,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 91,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 91,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 91.5,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-mmlu-pro-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 88.8,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 89.1,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 92.6,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 94.6,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 90.5,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 88.8,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 94.3,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 95.1,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 95.3,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 85.9,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 94.1,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 93.9,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 93.2,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 93.4,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 92.9,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 94.1,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 92.9,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 88.9,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 92.8,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 94.6,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 92.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 94.6,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 95.8,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 94.1,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 90.9,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 90.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 92.5,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 95,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 91.6,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 95.4,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 95.1,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 96.1,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 95.2,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 96.4,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 96.1,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "muse-spark-1-2",
+    "model_name": "Muse Spark 1.2",
+    "effort": "xhigh",
+    "score": 95.3,
+    "registry_no": "80003",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 96,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 92,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "oss-charxiv-leaderboard",
+    "model_id": "muse-spark-1-3-max",
+    "model_name": "Muse Spark 1.3",
+    "effort": "max",
+    "score": 93.9,
+    "registry_no": "80005",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 66.1,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 64.3,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 70.2,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "openai/gpt-oss-120b",
+    "model_name": "GPT OSS 120B",
+    "effort": "high",
+    "score": 0,
+    "registry_no": "15001",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 49.3,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 5,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 30.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "kimi-k2-thinking-high",
+    "model_name": "Kimi K2",
+    "effort": "high",
+    "score": 0,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 66.4,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax M2.7",
+    "effort": "high",
+    "score": 0,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 9.1,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 0,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 53.1,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 67.3,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 49.3,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 59.6,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 71.4,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 34.2,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 49.6,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 0.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 9.1,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 56.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 7.7,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 36.6,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 49.3,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "zai-org/GLM-5",
+    "model_name": "GLM 5",
+    "effort": null,
+    "score": 2.1,
+    "registry_no": "150002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "glm-5-1",
+    "model_name": "GLM 5.1",
+    "effort": null,
+    "score": 18.9,
+    "registry_no": "150003",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 38.9,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 49,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gemma-4-31B",
+    "model_name": "Gemma 4 31B",
+    "effort": null,
+    "score": 0,
+    "registry_no": "35002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-opus-5-xhigh",
+    "model_name": "Opus 5",
+    "effort": "xhigh",
+    "score": 70.2,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 56.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 67.3,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 65.5,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 71.4,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-5-6-sol-max",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 70.5,
+    "registry_no": "10010",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-opus-4-6-max",
+    "model_name": "Opus 4.6",
+    "effort": "max",
+    "score": 31.9,
+    "registry_no": "20008",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 72,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "grok-4-6",
+    "model_name": "Grok 4.6",
+    "effort": "high",
+    "score": 63.7,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 67,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 71.7,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 70.5,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 72.3,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 70.5,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 70.5,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 72.3,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 40.4,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 33.3,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 42.5,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 24.8,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 64.9,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-deep-swe-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 0.6,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 56.7,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 84.6,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 73.7,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 60.6,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-fable-5-high",
+    "model_name": "Fable 5",
+    "effort": "high",
+    "score": 82.5,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek-V4-Flash",
+    "effort": "max",
+    "score": 77.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek-V3.2",
+    "effort": null,
+    "score": 38.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek-V4-Pro",
+    "effort": "max",
+    "score": 62.3,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 54.6,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 43.3,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 75.6,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 79.2,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM-5.2",
+    "effort": "max",
+    "score": 65.4,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 68.7,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT-5.5",
+    "effort": "xhigh",
+    "score": 77.7,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT-5.6 Terra",
+    "effort": "max",
+    "score": 85.8,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT-5.4",
+    "effort": "xhigh",
+    "score": 73.3,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT-5.6 Luna",
+    "effort": "max",
+    "score": 83.8,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 84,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 50.4,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 43.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-5-6-sol-xhigh",
+    "model_name": "GPT-5.6 Sol",
+    "effort": "xhigh",
+    "score": 90.6,
+    "registry_no": "10010",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 75.8,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "minimax-m2-7",
+    "model_name": "MiniMax-M2.7",
+    "effort": "high",
+    "score": 38.3,
+    "registry_no": "140002",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax-M3",
+    "effort": "high",
+    "score": 53.3,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 89,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek-V4-Pro-0813",
+    "effort": "max",
+    "score": 73.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT-6 Astra",
+    "effort": "xhigh",
+    "score": 94.2,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 78.3,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek-V4.1-Flash",
+    "effort": "max",
+    "score": 85.8,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT-6 Luna",
+    "effort": "max",
+    "score": 83.3,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT-6 Sol",
+    "effort": "max",
+    "score": 89.4,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 88.5,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen3.8-Max",
+    "effort": "xhigh",
+    "score": 67.9,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 86.6,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 85.2,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT-6.1 Sol",
+    "effort": "max",
+    "score": 95.4,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "muse-spark-1-2",
+    "model_name": "Muse Spark 1.2",
+    "effort": "xhigh",
+    "score": 75.2,
+    "registry_no": "80003",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 83.1,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-browsecomp-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 75.8,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 79.8,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 83.5,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 63,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 80.2,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 82.8,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 83.5,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 73.7,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 74.2,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 76.7,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 70.2,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 79.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 75.7,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 60,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 75.2,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 65.7,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 69.5,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 73.2,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 59.7,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 65.8,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 78.3,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 72.5,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 76.2,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 61.7,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 72.8,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 86.5,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 79.7,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 84.7,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 77,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "muse-spark-1-2",
+    "model_name": "Muse Spark 1.2",
+    "effort": "xhigh",
+    "score": 75.7,
+    "registry_no": "80003",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "muse-spark-1-3-max",
+    "model_name": "Muse Spark 1.3",
+    "effort": "max",
+    "score": 76.3,
+    "registry_no": "80005",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 86.8,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 63.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 64.8,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 81.3,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 85.7,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 80.7,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 83.7,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 85.7,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-medxpertqa-mm-leaderboard",
+    "model_id": "gemini-3-5-flash-lite",
+    "model_name": "Gemini 3.5 Flash Lite",
+    "effort": "high",
+    "score": 66.7,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 18,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 19.6,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 32,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 41.9,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 45.2,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "deepseek-v4-pro",
+    "model_name": "DeepSeek V4 Pro",
+    "effort": "max",
+    "score": 25,
+    "registry_no": "110002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 5.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 44.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 39.5,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 33.1,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 52.7,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 46,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 21.2,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 33.1,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 37.1,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 47,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 44.4,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 50.3,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 35.5,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 46,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 45.2,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 42.7,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 33.9,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 53.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 44.1,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 48.9,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 30.9,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 42.5,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-6-astra",
+    "model_name": "GPT 6 Astra",
+    "effort": "xhigh",
+    "score": 48.9,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 50.3,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 43.3,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 48.4,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 50.3,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 50.5,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 47.8,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 3.9,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 37.9,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "oss-swe-atlas-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 47,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-fable-5.1",
+    "model_name": "Fable 5.1",
+    "effort": "max",
+    "score": 68.6,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-3.7-flash",
+    "model_name": "Gemini 3.7 Flash",
+    "effort": "high",
+    "score": 67.8,
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-opus-5",
+    "model_name": "Opus 5",
+    "effort": "max",
+    "score": 65.8,
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-6-astra-max",
+    "model_name": "GPT 6 Astra",
+    "effort": "max",
+    "score": 64.7,
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "grok-4-6-xhigh",
+    "model_name": "Grok 4.6",
+    "effort": "xhigh",
+    "score": 65.3,
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-3.8-flash",
+    "model_name": "Gemini 3.8 Flash",
+    "effort": "high",
+    "score": 64.3,
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-fable-5",
+    "model_name": "Fable 5",
+    "effort": "max",
+    "score": 63.6,
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-5.6-terra-max",
+    "model_name": "GPT 5.6 Terra",
+    "effort": "max",
+    "score": 58.2,
+    "registry_no": "10011",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "glm-5-3",
+    "model_name": "GLM 5.3",
+    "effort": "max",
+    "score": 56.6,
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "grok-4-5",
+    "model_name": "Grok 4.5",
+    "effort": "high",
+    "score": 56.2,
+    "registry_no": "40001",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-5.5-xhigh",
+    "model_name": "GPT 5.5",
+    "effort": "xhigh",
+    "score": 55.1,
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-sonnet-5-max",
+    "model_name": "Sonnet 5",
+    "effort": "max",
+    "score": 54.5,
+    "registry_no": "20013",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "glm-5-3-flash",
+    "model_name": "GLM 5.3 Flash",
+    "effort": "max",
+    "score": 52.8,
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "responses/gpt-5.4",
+    "model_name": "GPT 5.4",
+    "effort": "xhigh",
+    "score": 52.4,
+    "registry_no": "10007",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-5-6-sol-max-pro",
+    "model_name": "GPT 5.6 Sol",
+    "effort": "max",
+    "score": 51.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "kimi-k3",
+    "model_name": "Kimi K3",
+    "effort": "max",
+    "score": 50.6,
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-opus-4-7",
+    "model_name": "Opus 4.7",
+    "effort": "max",
+    "score": 49.2,
+    "registry_no": "20010",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-opus-4-8",
+    "model_name": "Opus 4.8",
+    "effort": "max",
+    "score": 48.9,
+    "registry_no": "20011",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "deepseek-v4-pro-08-13",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "effort": "max",
+    "score": 47.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-opus-4-6-max",
+    "model_name": "Opus 4.6",
+    "effort": "max",
+    "score": 46.3,
+    "registry_no": "20008",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-3.5-flash",
+    "model_name": "Gemini 3.5 Flash",
+    "effort": "high",
+    "score": 27.5,
+    "registry_no": "30006",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-3.6-flash",
+    "model_name": "Gemini 3.6 Flash",
+    "effort": "high",
+    "score": 46.9,
+    "registry_no": "30007",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "muse-spark-1-2",
+    "model_name": "Muse Spark 1.2",
+    "effort": "xhigh",
+    "score": 36.4,
+    "registry_no": "80003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "muse-spark-1-3",
+    "model_name": "Muse Spark 1.3",
+    "effort": "xhigh",
+    "score": 58.6,
+    "registry_no": "80005",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "openai/gpt-oss-120b",
+    "model_name": "GPT OSS 120B",
+    "effort": "high",
+    "score": 4.4,
+    "registry_no": "15001",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "Qwen3.5-397B-A17B",
+    "model_name": "Qwen 3.5",
+    "effort": null,
+    "score": 24.9,
+    "registry_no": "130003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-fable-5.1-high",
+    "model_name": "Fable 5.1",
+    "effort": "high",
+    "score": 59.7,
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-3.1-pro-preview-high",
+    "model_name": "Gemini 3.1 Pro",
+    "effort": "high",
+    "score": 35.3,
+    "registry_no": "30005",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "inkling",
+    "model_name": "Inkling",
+    "effort": "high",
+    "score": 33.8,
+    "registry_no": "160001",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "minimax-m3",
+    "model_name": "MiniMax M3",
+    "effort": "high",
+    "score": 37.7,
+    "registry_no": "140003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "kimi-k2-7-code-high",
+    "model_name": "Kimi K2.7 Code",
+    "effort": "high",
+    "score": 37.6,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-sonnet-4-6-high",
+    "model_name": "Sonnet 4.6",
+    "effort": "high",
+    "score": 43,
+    "registry_no": "20009",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "glm-5-1",
+    "model_name": "GLM 5.1",
+    "effort": null,
+    "score": 40.9,
+    "registry_no": "150003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "grok-4.7",
+    "model_name": "Grok 4.7",
+    "effort": "xhigh",
+    "score": 54.6,
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "deepseek-ai/DeepSeek-V3.2",
+    "model_name": "DeepSeek V3.2",
+    "effort": null,
+    "score": 21.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-5.6-luna-max",
+    "model_name": "GPT 5.6 Luna",
+    "effort": "max",
+    "score": 43,
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "deepseek-v4-flash",
+    "model_name": "DeepSeek V4 Flash",
+    "effort": "max",
+    "score": 55.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "glm-5-2",
+    "model_name": "GLM 5.2",
+    "effort": "max",
+    "score": 45.2,
+    "registry_no": "150004",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "qwen-3-8-max-xhigh",
+    "model_name": "Qwen 3.8 Max",
+    "effort": "xhigh",
+    "score": 63.3,
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "nemotron-3-ultra-nvfp4",
+    "model_name": "Nemotron 3 Ultra",
+    "effort": "high",
+    "score": 22.7,
+    "registry_no": "60003",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "opus-5.5",
+    "model_name": "Opus 5.5",
+    "effort": "medium",
+    "score": 52.5,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-opus-5-5",
+    "model_name": "Opus 5.5",
+    "effort": "max",
+    "score": 73.5,
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-6-luna",
+    "model_name": "GPT 6 Luna",
+    "effort": "max",
+    "score": 44.3,
+    "registry_no": "10013",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-6-sol",
+    "model_name": "GPT 6 Sol",
+    "effort": "max",
+    "score": 54.3,
+    "registry_no": "10014",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "deepseek-v4-1-flash",
+    "model_name": "DeepSeek V4.1 Flash",
+    "effort": "max",
+    "score": 39.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-3-5-flash-lite",
+    "model_name": "Gemini 3.5 Flash Lite",
+    "effort": "high",
+    "score": 29.3,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "qwen-3-8-27b",
+    "model_name": "Qwen 3.8 27B",
+    "effort": "xhigh",
+    "score": 47.5,
+    "registry_no": null,
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "muse-spark-1-1",
+    "model_name": "Muse Spark 1.1",
+    "effort": "xhigh",
+    "score": 31.8,
+    "registry_no": "80002",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-sonnet-5-5-medium",
+    "model_name": "Sonnet 5.5",
+    "effort": "medium",
+    "score": 44.6,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "claude-sonnet-5-5",
+    "model_name": "Sonnet 5.5",
+    "effort": "max",
+    "score": 75.5,
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gpt-6-1-sol",
+    "model_name": "GPT 6.1 Sol",
+    "effort": "max",
+    "score": 60,
+    "registry_no": "10015",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "mimo-v2.6-pro",
+    "model_name": "MiMo V2.6 Pro",
+    "effort": "auto",
+    "score": 59.5,
+    "registry_no": null,
+    "status": "held: effort 'auto' not on the fixed vocabulary"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "mimo-v2.6-flash-rl",
+    "model_name": "MiMo V2.6 Flash RL",
+    "effort": "auto",
+    "score": 57.4,
+    "registry_no": null,
+    "status": "held: effort 'auto' not on the fixed vocabulary"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "muse-spark-1-3-max",
+    "model_name": "Muse Spark 1.3",
+    "effort": "max",
+    "score": 47.6,
+    "registry_no": "80005",
+    "status": "included"
+  },
+  {
+    "board": "apex-agents-leaderboard",
+    "model_id": "gemini-4-argon",
+    "model_name": "Gemini 4 Argon",
+    "effort": "high",
+    "score": 82.4,
+    "registry_no": "30011",
+    "status": "included"
+  }
+]

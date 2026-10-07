@@ -513,6 +513,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 58,
+      "file": "evaluator-mercor-2026-10-07.json",
+      "sha256": "f9370269b4c86a7a5a4db127be376eac02dc429fbff20a528379fc1c016e01ac",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
