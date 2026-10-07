@@ -64,7 +64,9 @@ The site also serves supporting pages outside these route families: `/search`,
 `/recent`, `/coverage`, `/corrections`, comparison pairs at
 `/compare/{name-slug}-vs-{name-slug}`, `/about`, `/contact`, `/legal`,
 `/privacy`, `/terms`, result badges at `/badge/{registry_no}/{slug}.svg`,
-`/sitemap.xml`, `/feed.xml` and `/version.json`. They must not change the
+`/sitemap.xml`, `/feed.xml`, `/version.json`, `/llms.txt`, the published-results
+download at `/downloads/benchmark-registry-results.csv`, and share-card images at
+`/og/site.png` and `/og/models/{registry_no}.png`. They must not change the
 semantics of the canonical routes.
 
 Every page is prerendered at build time and served as a static asset; there is

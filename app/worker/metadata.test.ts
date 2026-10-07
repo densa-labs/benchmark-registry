@@ -16,7 +16,7 @@ it("renders the new metadata templates with real counts in initial HTML",async()
   expect(description(html)).toMatch(/primary sources: \d+ models, \d+ benchmarks, \d+ records\. Updated 20/u);
   expect(html).toContain('<div id="root"><');
 });
-it("uses one aligned metadata set on all page types, including Twitter and the shipped logo",async()=>{
+it("uses one aligned metadata set on all page types, including Twitter and the share card",async()=>{
   for(const path of ["/","/models","/benchmarks","/companies","/models/10001","/benchmarks/gpqa","/benchmarks/gpqa/diamond","/companies/openai","/compare","/legal"]) {
     const {response,html}=await page(path);
     expect(response.status,path).toBe(200);
@@ -26,8 +26,12 @@ it("uses one aligned metadata set on all page types, including Twitter and the s
     expect(html).toContain(`<meta property="og:title" content="${title(html)}">`);
     expect(html).toContain(`<meta property="og:description" content="${description(html)}">`);
     expect(html).toContain(`property="og:url" content="${CANONICAL_ORIGIN}${path}"`);
-    expect(html).toContain('name="twitter:card" content="summary"');
-    expect(html).toContain('property="og:image" content="'+CANONICAL_ORIGIN+'/assets/Benchmark-Registry-B-Logo-Dark.png"');
+    expect(html).toContain('name="twitter:card" content="summary_large_image"');
+    const card=path==="/models/10001" ? "/og/models/10001.png" : "/og/site.png";
+    expect(html).toContain('property="og:image" content="'+CANONICAL_ORIGIN+card+'"');
+    expect(html).toContain('name="twitter:image" content="'+CANONICAL_ORIGIN+card+'"');
+    expect(html).toContain('<meta property="og:image:width" content="1200">');
+    expect(html).toContain('<meta property="og:image:height" content="630">');
     expect(html).toContain('<html lang="en">');
     expect((title(html) ?? "")+(description(html) ?? "")).not.toMatch(/\b(Unspecified|Unknown|undefined|null|default)\b/iu);
   }

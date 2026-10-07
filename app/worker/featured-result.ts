@@ -43,3 +43,13 @@ export function latestReportedResult(results: ResultRow[]): FeaturedResult | nul
   return { result_key, exact_result_href, benchmark, benchmark_version,
     benchmark_version_slug, reasoning_level, score };
 }
+
+/**
+ * Up to `limit` of the model's most recently reported numeric results, one per
+ * benchmark family, in the featured order. Never chosen by score.
+ */
+export function latestReportedResults(results: ResultRow[], limit: number): ResultRow[] {
+  const seen = new Set<string>();
+  return results.filter((result) => result.score.value !== null).sort(latestFirst)
+    .filter((result) => !seen.has(result.benchmark.slug) && Boolean(seen.add(result.benchmark.slug))).slice(0, limit);
+}

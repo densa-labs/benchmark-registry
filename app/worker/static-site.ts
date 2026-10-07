@@ -13,6 +13,9 @@ import { verifyGeneration } from "./publication";
 import { latestReportedResult } from "./featured-result";
 import { LEGACY_ROOT_SLUGS } from "./legacy-root-slugs";
 import { digest, type ReadData, type ReadEnvironment, type ReadObject } from "./read-model";
+import { modelShareCard, siteShareCard, type ShareCard } from "./share-card";
+import { LLMS_TXT_PATH, RESULTS_CSV_PATH, llmsText, resultsCsv } from "./downloads";
+import type { ResultRow } from "./api";
 
 export type SiteEnvironment = "staging" | "production";
 export interface StaticFile { path: string; body: string }
@@ -27,6 +30,8 @@ export interface StaticSiteOptions {
 }
 export interface StaticSite {
   files: StaticFile[];
+  /** Share-card SVGs; scripts/build-static.mjs rasterises each to PNG at its path. */
+  cards: ShareCard[];
   generation: string;
   security: SecurityPolicy;
   report: { pages: number; badges: number; dataFiles: number; redirects: number; dynamicRedirects: number };
@@ -69,7 +74,7 @@ export function pageFile(path: string): string {
   if (path === "/") return "index.html";
   const decoded = decodeURIComponent(path).replace(/^\//u, "").replace(/\/$/u, "");
   if (!decoded || decoded.split("/").some((part) => !part || part === "." || part === "..")) throw new Error(`Unsafe page path: ${path}`);
-  return /\.(xml|txt|svg)$/u.test(decoded) ? decoded : `${decoded}.html`;
+  return /\.(xml|txt|svg|csv|png)$/u.test(decoded) ? decoded : `${decoded}.html`;
 }
 
 const nameSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/gu, "");
@@ -133,6 +138,8 @@ export function headerRules(files: string[], environment: SiteEnvironment, secur
     const headers: Record<string, string> = { "Cache-Control": HTML_CACHE_CONTROL };
     if (name === "feed.xml" || name === "badge") headers["X-Robots-Tag"] = "noindex";
     if (name === "feed.xml") headers["Content-Type"] = "application/atom+xml; charset=utf-8";
+    if (name === "llms.txt") headers["Content-Type"] = "text/plain; charset=utf-8";
+    if (name === "downloads") Object.assign(headers, { "Content-Type": "text/csv; charset=utf-8", "X-Robots-Tag": "noindex" });
     if (kind === "directory") {
       rule(`/${name}/*`, headers);
       continue;
@@ -231,11 +238,29 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
 
   const versions: Array<{ family: string; version: string }> = [];
   const badges = new Set<string>();
+  const published: ResultRow[] = [];
   for (const [key, hash] of Object.entries(build.manifest.objects)) {
     if (!key.startsWith("version:")) continue;
     const [, family, version] = key.split(":");
     versions.push({ family, version });
-    for (const row of (object(hash).data as ReadData["version"]).response.data.results) badges.add(`/badge/${row.model.registry_no}/${row.benchmark.slug}.svg`);
+    const data = (object(hash).data as ReadData["version"]).response.data;
+    if (data.result_page.total_pages > 1) throw new Error(`${key} is paginated; the results download would be incomplete.`);
+    published.push(...data.results);
+    for (const row of data.results) badges.add(`/badge/${row.model.registry_no}/${row.benchmark.slug}.svg`);
+  }
+  const stats = (object(build.manifest.objects.stats).data as ReadData["stats"]).data;
+  if (published.length !== stats.benchmark_results) throw new Error(`The results download has ${published.length} rows; the registry publishes ${stats.benchmark_results}.`);
+  files.push({ path: RESULTS_CSV_PATH, body: resultsCsv(published) });
+  files.push({ path: LLMS_TXT_PATH, body: llmsText({ models: stats.models, benchmarks: stats.benchmarks, versions: stats.versions, results: stats.benchmark_results }) });
+
+  // Every model page shares its own card; every other page shares the site card.
+  const cards: ShareCard[] = [siteShareCard({ models: stats.models, benchmarks: stats.benchmarks, results: stats.benchmark_results })];
+  for (const path of pages) {
+    const registryNo = /^\/models\/([0-9]+)$/u.exec(path)?.[1];
+    if (!registryNo) continue;
+    const data = (object(build.manifest.objects[`model:${registryNo}`]).data as ReadData["model"]).response.data;
+    if (data.result_page.total_pages > 1) throw new Error(`model:${registryNo} is paginated; its share card would miss results.`);
+    cards.push(modelShareCard({ registry_no: registryNo, name: data.model.name, company: data.model.company.name, results: data.results }));
   }
   let badgeCount = 0;
   for (const path of [...badges].sort()) {
@@ -276,7 +301,7 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
     ...(options.environment === "production" && analyticsConfiguration(options.analytics ?? {}) ? { analyticsScript: analyticsConfiguration(options.analytics!)!.url } : {}),
   };
   return {
-    files, generation, security,
+    files, cards, generation, security,
     report: { pages: pages.length + standalone.size, badges: badgeCount, dataFiles: new Set(Object.values(manifest.objects)).size + 1, redirects: redirects.lines.length - redirects.dynamic, dynamicRedirects: redirects.dynamic },
   };
 }
