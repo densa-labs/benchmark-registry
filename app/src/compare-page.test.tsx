@@ -84,11 +84,26 @@ describe("Compare page", () => {
     expect(form.method).toBe("get");
     const fields = new URLSearchParams([...new FormData(form)].map(([key, value]) => [key, String(value)]));
     expect(parseComparisonState(fields.toString())).toMatchObject({ models: ["10001", "20001"], reasoning: ["high", "high"] });
-    expect([...selectControl("#compare-reasoning-0").options].map(option => option.value)).toEqual(["high"]);
+    expect([...selectControl("#compare-reasoning-0").options].map(option => option.textContent)).toEqual(["Any", "high"]);
     expect(container.querySelector("#compare-page-size")).toBeNull();
     expect(container.querySelector(".pagination")).toBeNull();
     expect(container.querySelector('select[name="provider"], input[name="released_from"]')).toBeNull();
     expect(container.querySelector(".copy-link")?.textContent).toBe("Copy link");
+  });
+
+  it("defaults each side to Any and shows every recorded reasoning level", () => {
+    const runs = detail(modelA, [result({ result_key: "a-max", reasoning_level: "max", effort: "max", score: { ...result().score, display: "54.7%" } }), result({ result_key: "z-low", reasoning_level: "low", effort: "low", score: { ...result().score, display: "43.0%" } })]);
+    const response = { ...payload, selected: [runs, detail(modelB, [shared])] as ComparisonResponse["selected"] };
+    container.innerHTML = renderToString(<ComparePage response={response} currentSearch="?models=10001,20001" />);
+    expect(selectControl("#compare-reasoning-0").value).toBe("~");
+    expect(selectControl("#compare-reasoning-0").selectedOptions[0].textContent).toBe("Any");
+    expect([...container.querySelectorAll(".compare-result-row .compare-score")].map(score => score.textContent)).toEqual(["43.0%", "54.7%", shared.score.display]);
+    expect(container.textContent).toContain("low");
+    expect(container.querySelector(".copy-link")).not.toBeNull();
+    const fields = new URLSearchParams([...new FormData(container.querySelector<HTMLFormElement>(".compare-selectors")!)].map(([key, value]) => [key, String(value)]));
+    expect(parseComparisonState(fields.toString()).reasoning).toEqual([undefined, undefined]);
+    container.innerHTML = renderToString(<ComparePage response={response} currentSearch="?models=10001,20001&reasoning=max,~" />);
+    expect([...container.querySelectorAll(".compare-result-row .compare-score")].map(score => score.textContent)).toEqual(["54.7%", shared.score.display]);
   });
 
   it("shows only the selectors and a prompt until both models are chosen", () => {
