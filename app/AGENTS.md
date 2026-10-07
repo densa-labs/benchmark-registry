@@ -44,8 +44,8 @@ The canonical route families are frozen in `docs/product-contract.md`:
 ```
 
 The contract also lists the supporting pages (search, recent, coverage,
-corrections, comparison pairs, legal and about pages, badges, feed and
-`/version.json`). Do not change canonical route semantics or add a route
+corrections, comparison pairs, legal and about pages, badges, feed,
+`/version.json`, `/llms.txt`, the results CSV and share cards). Do not change canonical route semantics or add a route
 without explicit approval. Every new page must be reachable from the build's
 page inventory in `worker/static-site.ts`, or it will not be published.
 

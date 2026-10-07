@@ -1,5 +1,6 @@
 import { CONTENT_METADATA } from "../src/content-metadata";
 import { structuredDataScript } from "./structured-data";
+import { modelShareCardPath, SHARE_CARD_HEIGHT, SHARE_CARD_WIDTH, SITE_SHARE_CARD_PATH } from "./share-card";
 import { LEGAL_METADATA } from "../src/legal-content";
 import { resolveRegistryRoute } from "../src/registry";
 import type { RegistryReader } from "./materialized-repository";
@@ -72,6 +73,14 @@ export function escapeHtml(value: string): string {
   })[character]!);
 }
 
+/** A model page shares its own card (built by worker/share-card.ts); every other page shares the site card. */
+export function shareImage(metadata: DocumentMetadata): { url: string; alt: string } {
+  const registryNo = (metadata.status ?? 200) === 200 ? /^\/models\/([0-9]+)$/u.exec(metadata.path ?? "")?.[1] : undefined;
+  return registryNo
+    ? { url: `${CANONICAL_ORIGIN}/${modelShareCardPath(registryNo)}`, alt: escapeHtml(`${metadata.page?.name ?? "Model"} benchmark results on Benchmark Registry`) }
+    : { url: `${CANONICAL_ORIGIN}/${SITE_SHARE_CARD_PATH}`, alt: "Benchmark Registry: AI model benchmark results, each linked to its source" };
+}
+
 export function metadataHead(metadata: DocumentMetadata, url: URL): string {
   const title = escapeHtml(metadata.title);
   const documentTitle = IS_STAGING ? "STAGING | Benchmark Registry" : title;
@@ -80,17 +89,22 @@ export function metadataHead(metadata: DocumentMetadata, url: URL): string {
   const pageUrl = metadata.canonical
     ? `<meta property="og:url" content="${escapeHtml(metadata.canonical)}">` : "";
   const canonical = metadata.canonical ? `<link rel="canonical" href="${escapeHtml(metadata.canonical)}">` : "";
+  const image = shareImage(metadata);
   const robots = metadata.noindex || url.hostname !== CANONICAL_HOST
     ? '<meta name="robots" content="noindex, follow">' : '';
   return `<title>${documentTitle}</title>
 <meta name="description" content="${description}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${title}">
 <meta name="twitter:description" content="${description}">
-<meta property="og:image" content="${CANONICAL_ORIGIN}/assets/Benchmark-Registry-B-Logo-Dark.png">
-<meta name="twitter:image" content="${CANONICAL_ORIGIN}/assets/Benchmark-Registry-B-Logo-Dark.png">
+<meta property="og:image" content="${image.url}">
+<meta property="og:image:width" content="${SHARE_CARD_WIDTH}">
+<meta property="og:image:height" content="${SHARE_CARD_HEIGHT}">
+<meta property="og:image:alt" content="${image.alt}">
+<meta name="twitter:image" content="${image.url}">
+<meta name="twitter:image:alt" content="${image.alt}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${SITE_NAME}">
 ${pageUrl}

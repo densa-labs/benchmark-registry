@@ -7,6 +7,7 @@ import {build} from 'esbuild';
 import {execFileSync} from 'node:child_process';
 import {mkdirSync,readFileSync,readdirSync,rmSync,statSync,writeFileSync,existsSync} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
+import {Resvg} from '@resvg/resvg-js';
 import {dirname,join,relative,resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {parseArgs} from 'node:util';
@@ -82,11 +83,19 @@ const counts={models:count('models'),benchmarks:count('benchmarks'),benchmark_ve
 sqlite.close();
 
 // Generated outputs are replaced as a whole; Vite's assets and favicons stay.
-for(const directory of ['data','models','benchmarks','companies','compare','badge']) rmSync(join(out,directory),{recursive:true,force:true});
+for(const directory of ['data','models','benchmarks','companies','compare','badge','og','downloads']) rmSync(join(out,directory),{recursive:true,force:true});
 for(const file of result.files) {
   const target=join(out,file.path);
   if(!target.startsWith(out+'/')) throw new Error(`Unsafe output path: ${file.path}`);
   mkdirSync(dirname(target),{recursive:true});writeFileSync(target,file.body);
+}
+// Share cards: the bundled Inter font only, never system fonts, so every machine draws the same PNG.
+const fontFiles=['400Regular/Inter_400Regular.ttf','600SemiBold/Inter_600SemiBold.ttf','700Bold/Inter_700Bold.ttf'].map(file=>resolve('node_modules/@expo-google-fonts/inter',file));
+for(const card of result.cards) {
+  const target=join(out,card.path);
+  if(!target.startsWith(out+'/')) throw new Error(`Unsafe output path: ${card.path}`);
+  const png=new Resvg(card.svg,{font:{fontFiles,loadSystemFonts:false,defaultFontFamily:'Inter'}}).render().asPng();
+  mkdirSync(dirname(target),{recursive:true});writeFileSync(target,png);
 }
 // Which build is live: answers health and "which commit is deployed" without a Worker (audit I1, I2).
 const git=(...args)=>execFileSync('git',args,{encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();

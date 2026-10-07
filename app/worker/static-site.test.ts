@@ -35,6 +35,17 @@ it("prerenders every page byte-for-byte as the Worker rendered it, plus data, fe
   const output=files(site);
   for(const path of ["index.html","models.html","benchmarks.html","companies.html","compare.html","recent.html","search.html","coverage.html","about.html","404.html","sitemap.xml","feed.xml","robots.txt","_redirects",STATIC_MANIFEST_PATH.slice(1)]) expect(output.has(path),path).toBe(true);
   expect(output.get("robots.txt")).toBe(robotsFile("production"));
+  // Downloads and share cards come from the same snapshot as the pages.
+  const csv=output.get("downloads/benchmark-registry-results.csv")!;
+  const statsObjects=(JSON.parse(output.get("data/manifest.json")!) as StaticDataManifest).objects;
+  const stats=(JSON.parse(output.get(`data/objects/${statsObjects.stats}.json`)!) as {data:ReadData["stats"]}).data.data;
+  expect(stats.benchmark_results).toBeGreaterThan(0);
+  expect(csv.trimEnd().split("\r\n")).toHaveLength(stats.benchmark_results+1);
+  expect(output.get("llms.txt")).toContain("# Benchmark Registry");
+  expect(site.cards.map(card=>card.path)).toContain("og/site.png");
+  const modelPages=[...output.keys()].filter(path=>/^models\/[0-9]+\.html$/u.test(path)).map(path=>path.replace(/^models\/|\.html$/gu,""));
+  expect(modelPages.length).toBeGreaterThan(0);
+  for(const no of modelPages) expect(site.cards.map(card=>card.path)).toContain(`og/models/${no}.png`);
   expect(site.files.length).toBeLessThan(FILE_COUNT_BUDGET);
 
   const manifest=JSON.parse(output.get("data/manifest.json")!) as StaticDataManifest;

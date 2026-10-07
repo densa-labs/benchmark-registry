@@ -10,7 +10,8 @@ D1 (canonical, edited by the ingestor)
        ├─ one SELECT * per table into an in-memory SQLite snapshot
        ├─ projections + publication checks (worker/materializer.ts, worker/publication.ts)
        └─ dist/client/  HTML per page, data/*.json, sitemap.xml, feed.xml,
-                        badge/*.svg, robots.txt, 404.html, _headers, _redirects
+                        badge/*.svg, og/*.png, downloads/*.csv, llms.txt,
+                        robots.txt, 404.html, _headers, _redirects
   └─ wrangler deploy --env <env>
 ```
 
@@ -62,13 +63,27 @@ query from static data and marks that view `noindex, follow`, as the Worker did.
 against `data/manifest.json` and its content-hashed `data/objects/*.json`.
 There is no public `/api` anymore.
 
+The same snapshot also produces:
+
+- `/downloads/benchmark-registry-results.csv`: one row per published result
+  (`worker/downloads.ts`), linked from `/about`. The build fails if its row
+  count differs from the published result count.
+- `/llms.txt`: a short description of the site, its URL patterns, counts,
+  licence and the CSV, for AI assistants.
+- Share cards (`worker/share-card.ts`): a 1200×630 PNG per model page at
+  `/og/models/{registry_no}.png` and `/og/site.png` for every other page,
+  named by `og:image` and `twitter:image`. `scripts/build-static.mjs`
+  rasterises them with `@resvg/resvg-js` using only the bundled Inter font
+  (`@expo-google-fonts/inter`), never system fonts, so every machine draws the
+  same image.
+
 ## Caching (`_headers`)
 
 | Path | Cache-Control |
 |---|---|
 | `/assets/*` (Vite-hashed JS, CSS, fonts) | `public, max-age=31536000, immutable` |
 | `/data/objects/*` (content-hashed data) | `public, max-age=31536000, immutable` |
-| HTML pages, `data/manifest.json`, sitemap, feed, robots, badges | `public, max-age=300, must-revalidate` |
+| HTML pages, `data/manifest.json`, sitemap, feed, robots, badges, `llms.txt`, `/og/*`, `/downloads/*` | `public, max-age=300, must-revalidate` |
 
 Static assets send `ETag` and answer conditional requests with 304. Cache rules
 never overlap, because overlapping `_headers` rules append values. Staging adds

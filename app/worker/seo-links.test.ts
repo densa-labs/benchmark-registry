@@ -11,7 +11,9 @@ it("makes every sitemap URL reachable within three ordinary anchor clicks",async
  for(let index=0;index<queue.length;index++) {
   const path=queue[index],depth=seen.get(path)!;if(depth>=3) continue;
   const {status,html}=await request(path);expect(status,path).toBe(200);
-  for(const match of html.matchAll(/<a\b[^>]*href="([^"#]+)"/gu)) {
+  for(const match of html.matchAll(/<a\b[^>]*href="([^"#]+)"[^>]*>/gu)) {
+   // A download link names a static file (the results CSV), not a page.
+   if(/\sdownload\b/u.test(match[0])) continue;
    const url=new URL(match[1].replaceAll("&amp;","&"),origin);
    if(url.origin!==origin || url.search || url.pathname.startsWith("/api/") || seen.has(url.pathname)) continue;
    seen.set(url.pathname,depth+1);queue.push(url.pathname);
