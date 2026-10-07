@@ -1,0 +1,539 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "frontierswe",
+        "canonical_name": "FrontierSWE",
+        "source_url": "https://www.frontierswe.com/blog/v2",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "2 — October 2026 evaluation",
+            "version_slug": "2-october-2026",
+            "release_at": "2026-10-07",
+            "release_precision": "date",
+            "metric_key": "frontierswe-score",
+            "source_url": "https://www.frontierswe.com/",
+            "source_checked_at": "2026-10-07T14:20:00Z",
+            "evaluator_keys": [
+              "proximal"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "frontierswe",
+        "version": "2 — October 2026 evaluation",
+        "version_slug": "2-october-2026",
+        "dataset_label": "2",
+        "configuration": {
+          "key": "proximus-harness",
+          "label": "Proximus harness, 5 trials, 20-hour budget",
+          "kind": "harness"
+        },
+        "source_url": "https://www.frontierswe.com/",
+        "source_checked_at": "2026-10-07T14:20:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "65.50757455882352",
+        "score_raw": "65.50757455882352",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "62.33098823529411",
+        "score_raw": "62.33098823529411",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20016",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "61.889299411764696",
+        "score_raw": "61.889299411764696",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "56.29078999999999",
+        "score_raw": "56.29078999999999",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "52.01176764705882",
+        "score_raw": "52.01176764705882",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "46.96449352941177",
+        "score_raw": "46.96449352941177",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "32.20246705882353",
+        "score_raw": "32.20246705882353",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150005",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "30.181864117647052",
+        "score_raw": "30.181864117647052",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40003",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "29.50476117647059",
+        "score_raw": "29.50476117647059",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "25.865032058823534",
+        "score_raw": "25.865032058823534",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40002",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "25.286195882352946",
+        "score_raw": "25.286195882352946",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30010",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "20.260590588235296",
+        "score_raw": "20.260590588235296",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "19.626902941176464",
+        "score_raw": "19.626902941176464",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150006",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "18.125205882352944",
+        "score_raw": "18.125205882352944",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "15.809350588235294",
+        "score_raw": "15.809350588235294",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80003",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "11.970256470588238",
+        "score_raw": "11.970256470588238",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "4.118886470588236",
+        "score_raw": "4.118886470588236",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142052/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

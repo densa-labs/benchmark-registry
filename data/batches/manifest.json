@@ -486,6 +486,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 55,
+      "file": "evaluator-frontierswe-2026-10-07.json",
+      "sha256": "546345d7adab492045b0ec067d3ea99555cdd4ca430a7d6d99987ecf921b92e8",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
