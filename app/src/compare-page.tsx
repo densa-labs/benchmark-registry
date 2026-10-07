@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState, type FormEvent, type ReactNode } from "r
 import type { ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "./benchmark-names";
-import { buildComparisonRows, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
+import { ANY_REASONING, buildComparisonRows, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
 import { formatRegistryDate, type ModelDetailResponse } from "./registry";
 import { navigateRegistry } from "./navigation";
 import { staticFetch, type StaticFetch } from "./static-api";
@@ -140,7 +140,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
     update({ models, reasoning });
   };
   const chooseReasoning = (side: number, value: string) => {
-    const reasoning: ComparisonState["reasoning"] = [...effective.reasoning]; reasoning[side] = value; update({ reasoning });
+    const reasoning: ComparisonState["reasoning"] = [...effective.reasoning]; reasoning[side] = value === ANY_REASONING ? undefined : value; update({ reasoning });
   };
   const queryFields = (exclude: string[]) => [...new URLSearchParams(comparisonHref(effective).split("?")[1])].filter(([key]) => !exclude.includes(key)).map(([key, value]) => <input key={key} type="hidden" name={key} value={value} />);
   const submitSelection = (event: FormEvent<HTMLFormElement>) => {
@@ -167,9 +167,10 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
             {groups.map(group => <optgroup label={group} key={group}>{response.models.filter(item => item.company.name === group).map(item => <option value={item.registry_no} key={item.registry_no}>{item.name}</option>)}</optgroup>)}
           </select>
           <div className="compare-reasoning"><label htmlFor={`compare-reasoning-${side}`}>Reasoning<span className="visually-hidden"> level for Model {label}</span></label>
-            <select id={`compare-reasoning-${side}`} name={`reasoning_${side === 0 ? "a" : "b"}`} value={selection.value} disabled={!model || !selection.available.length} onChange={event => chooseReasoning(side, event.target.value)}>
+            <select id={`compare-reasoning-${side}`} name={`reasoning_${side === 0 ? "a" : "b"}`} value={selection.available.length ? selection.value ?? ANY_REASONING : ""} disabled={!model || !selection.available.length} onChange={event => chooseReasoning(side, event.target.value)}>
               {!selection.available.length ? <option value="">{model ? "No results" : "Select a model first"}</option> : null}
-              {selection.unavailable ? <option value={selection.value}>{selection.value || "Not specified"} (unavailable)</option> : null}
+              {selection.available.length ? <option value={ANY_REASONING}>Any</option> : null}
+              {selection.unavailable ? <option value={selection.value ?? ""}>{selection.value || "Not specified"} (unavailable)</option> : null}
               {selection.available.map(level => <option value={level} key={level}>{level || "Not specified"}</option>)}
             </select>
           </div>
