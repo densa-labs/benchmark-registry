@@ -432,6 +432,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 49,
+      "file": "evaluator-scale-atlas-hle-text-2026-10-07.json",
+      "sha256": "05fb1d34f2b4c4af4fc4948c6ce422700a8ab50c630760b8915f99c902e57ac6",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

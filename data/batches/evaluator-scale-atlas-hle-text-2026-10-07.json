@@ -1,0 +1,2184 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "swe-atlas",
+        "canonical_name": "SWE Atlas",
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+        "source_checked_at": "2026-09-24T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Codebase QnA — Public; Claude Code",
+            "version_slug": "codebase-qna-public-claude-code",
+            "release_at": "2026-03-04",
+            "release_precision": "date",
+            "metric_key": "swe-atlas-pass-at-1",
+            "source_url": "https://scale.com/blog/swe-atlas",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Codebase QnA — Public; Codex",
+            "version_slug": "codebase-qna-public-codex",
+            "release_at": "2026-03-04",
+            "release_precision": "date",
+            "metric_key": "swe-atlas-pass-at-1",
+            "source_url": "https://scale.com/blog/swe-atlas",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Refactoring — Claude Code",
+            "version_slug": "refactoring-claude-code",
+            "release_at": "2026-05-07",
+            "release_precision": "date",
+            "metric_key": "swe-atlas-pass-at-1",
+            "source_url": "https://scale.com/blog/swe-atlas-complete",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Refactoring — Codex",
+            "version_slug": "refactoring-codex",
+            "release_at": "2026-05-07",
+            "release_precision": "date",
+            "metric_key": "swe-atlas-pass-at-1",
+            "source_url": "https://scale.com/blog/swe-atlas-complete",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Refactoring — Gemini CLI",
+            "version_slug": "refactoring-gemini-cli",
+            "release_at": "2026-05-07",
+            "release_precision": "date",
+            "metric_key": "swe-atlas-pass-at-1",
+            "source_url": "https://scale.com/blog/swe-atlas-complete",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Refactoring — mini-swe-agent",
+            "version_slug": "refactoring-mini-swe-agent",
+            "release_at": "2026-05-07",
+            "release_precision": "date",
+            "metric_key": "swe-atlas-pass-at-1",
+            "source_url": "https://scale.com/blog/swe-atlas-complete",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "humanitys-last-exam",
+        "canonical_name": "Humanity's Last Exam",
+        "source_url": "https://arxiv.org/abs/2501.14249",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Text only — Scale AI evaluation",
+            "version_slug": "text-only-scale-ai",
+            "release_at": "2025-04-03",
+            "release_precision": "date",
+            "metric_key": "hle-accuracy",
+            "source_url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "source_checked_at": "2026-10-07T13:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Codebase QnA — Public; Claude Code",
+        "version_slug": "codebase-qna-public-claude-code",
+        "dataset_label": "Codebase QnA — Public",
+        "configuration": {
+          "key": "claude-code-harness",
+          "label": "Claude Code harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+        "source_checked_at": "2026-10-07T13:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Codebase QnA — Public; Codex",
+        "version_slug": "codebase-qna-public-codex",
+        "dataset_label": "Codebase QnA — Public",
+        "configuration": {
+          "key": "codex-harness",
+          "label": "Codex harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+        "source_checked_at": "2026-10-07T13:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Refactoring — Claude Code",
+        "version_slug": "refactoring-claude-code",
+        "dataset_label": "Refactoring",
+        "configuration": {
+          "key": "claude-code-harness",
+          "label": "Claude Code harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "source_checked_at": "2026-10-07T13:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Refactoring — Codex",
+        "version_slug": "refactoring-codex",
+        "dataset_label": "Refactoring",
+        "configuration": {
+          "key": "codex-harness",
+          "label": "Codex harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "source_checked_at": "2026-10-07T13:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Refactoring — Gemini CLI",
+        "version_slug": "refactoring-gemini-cli",
+        "dataset_label": "Refactoring",
+        "configuration": {
+          "key": "gemini-cli-harness",
+          "label": "Gemini CLI harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "source_checked_at": "2026-10-07T13:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-atlas",
+        "version": "Refactoring — mini-swe-agent",
+        "version_slug": "refactoring-mini-swe-agent",
+        "dataset_label": "Refactoring",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "source_checked_at": "2026-10-07T13:50:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "63.17",
+        "score_raw": "63.17",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "59.95",
+        "score_raw": "59.95",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "59.14",
+        "score_raw": "59.14",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "57.26",
+        "score_raw": "57.26",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "48.12",
+        "score_raw": "48.12",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "47.04",
+        "score_raw": "47.04",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "46",
+        "score_raw": "46",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "45.43",
+        "score_raw": "45.43",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "42.2",
+        "score_raw": "42.2",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "40.8",
+        "score_raw": "40.8",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "40.32",
+        "score_raw": "40.32",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "39",
+        "score_raw": "39",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "36.3",
+        "score_raw": "36.3",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "33.3",
+        "score_raw": "33.3",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10006",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "32.6",
+        "score_raw": "32.6",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "31.2",
+        "score_raw": "31.2",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "30",
+        "score_raw": "30",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "27.15",
+        "score_raw": "27.15",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "20.5",
+        "score_raw": "20.5",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "13.5",
+        "score_raw": "13.5",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "13.1",
+        "score_raw": "13.1",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "10.3",
+        "score_raw": "10.3",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Public; mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "8.2",
+        "score_raw": "8.2",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135231/https://labs.scale.com/leaderboard/sweatlas-qna",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-qna",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "59.05",
+        "score_raw": "59.05",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "56.67",
+        "score_raw": "56.67",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "54.76",
+        "score_raw": "54.76",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "48.57",
+        "score_raw": "48.57",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "46.67",
+        "score_raw": "46.67",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "44.79",
+        "score_raw": "44.79",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "44.76",
+        "score_raw": "44.76",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "44.29",
+        "score_raw": "44.29",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "42.38",
+        "score_raw": "42.38",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10006",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Codex",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "42.38",
+        "score_raw": "42.38",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "35.58",
+        "score_raw": "35.58",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Gemini CLI",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "33.81",
+        "score_raw": "33.81",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — Claude Code",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "32.21",
+        "score_raw": "32.21",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "24.24",
+        "score_raw": "24.24",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "20.95",
+        "score_raw": "20.95",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "19.52",
+        "score_raw": "19.52",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Refactoring — mini-swe-agent",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "10",
+        "score_raw": "10",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135352/https://labs.scale.com/leaderboard/sweatlas-refactoring",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/sweatlas-refactoring",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "54.17",
+        "score_raw": "54.17",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "thinking high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "47.31",
+        "score_raw": "47.31",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "46.8",
+        "score_raw": "46.8",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "44.95",
+        "score_raw": "44.95",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "40.92",
+        "score_raw": "40.92",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "37.72",
+        "score_raw": "37.72",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "36.47",
+        "score_raw": "36.47",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "thinking-max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "36.24",
+        "score_raw": "36.24",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "28.5",
+        "score_raw": "28.5",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "26.32",
+        "score_raw": "26.32",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "20.57",
+        "score_raw": "20.57",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "19.78",
+        "score_raw": "19.78",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "Non-Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "19.37",
+        "score_raw": "19.37",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10004",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "18.9",
+        "score_raw": "18.9",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30002",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "18.38",
+        "score_raw": "18.38",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "15001",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "15.48",
+        "score_raw": "15.48",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "14.53",
+        "score_raw": "14.53",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "14.09",
+        "score_raw": "14.09",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "13.9",
+        "score_raw": "13.9",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30003",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "12.58",
+        "score_raw": "12.58",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20002",
+        "reasoning_level": "Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "10.8",
+        "score_raw": "10.8",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "7.89",
+        "score_raw": "7.89",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "7.65",
+        "score_raw": "7.65",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "7.6",
+        "score_raw": "7.6",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20002",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "6.26",
+        "score_raw": "6.26",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10001",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "5.8",
+        "score_raw": "5.8",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "5.42",
+        "score_raw": "5.42",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10002",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "4.97",
+        "score_raw": "4.97",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

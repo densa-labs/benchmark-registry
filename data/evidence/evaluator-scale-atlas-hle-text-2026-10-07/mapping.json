@@ -1,0 +1,626 @@
+[
+  {
+    "board": "sweatlas-qna",
+    "model": "Opus 5 (Claude Code) xHigh",
+    "score": 63.17,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Fable-5.1 (Claude Code) xHigh*",
+    "score": 59.95,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "GPT 6 Astra (Codex) xHigh*",
+    "score": 59.14,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Opus 4.8 (Claude Code) xhigh",
+    "score": 57.26,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "GLM 5.2 (Mini-SWE-Agent)",
+    "score": 48.12,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Gemini 3.8 Flash (Mini-SWE-Agent)",
+    "score": 47.04,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "GPT-5.6-Sol (Codex) xHigh*",
+    "score": 46,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "GPT 5.5 (Codex) xHigh",
+    "score": 45.43,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Muse Spark 1.1 (Mini-SWE-Agent) xHigh",
+    "score": 42.2,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "GPT 5.4 (Codex) xHigh",
+    "score": 40.8,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Opus 4.7 (Claude Code)",
+    "score": 40.32,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Fable-5 (Claude Code) xHigh*",
+    "score": 39,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Gpt 5.4 xHigh (Mini-SWE-Agent)",
+    "score": 36.3,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Opus 4.6 (Claude Code)",
+    "score": 33.3,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "GPT 5.3 (Codex) xHigh",
+    "score": 32.6,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Sonnet 4.6 (Claude Code)",
+    "score": 31.2,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Opus 4.6 (Mini-SWE-Agent)",
+    "score": 30,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "DeepSeek V4 Pro (Mini-SWE-Agent)",
+    "score": 27.15,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Muse Spark",
+    "score": 24.2,
+    "status": "held: harness not stated or not mapped"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Glm 5 (Mini-SWE-Agent)",
+    "score": 20.5,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Gemini 3.1 Pro (Mini-SWE-Agent)",
+    "score": 13.5,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Kimi K2.5 (Mini-SWE-Agent)",
+    "score": 13.1,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Minimax M2.5 (Mini-SWE-Agent)",
+    "score": 10.3,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-qna",
+    "model": "Gemini 3 Flash (Mini-SWE-Agent)",
+    "score": 8.2,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "GPT 6 Astra (Codex) xHigh",
+    "score": 59.05,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Fable-5.1 (Claude Code) xHigh",
+    "score": 56.67,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Fable-5 (Claude Code) xHigh",
+    "score": 54.76,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Opus-4.7 (Claude Code)",
+    "score": 48.57,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Opus 4.8 (Claude Code)",
+    "score": 46.67,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "GPT-5.5 (Codex) xHigh",
+    "score": 44.79,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Gemini 3.8 Flash (Mini-SWE-Agent)",
+    "score": 44.76,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "GPT 5.4 (Codex) xHigh",
+    "score": 44.29,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "GLM 5.2 (Mini-SWE-Agent)",
+    "score": 42.38,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "GPT 5.3 (Codex) xHigh",
+    "score": 42.38,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Opus-4.6 (Claude Code)",
+    "score": 35.58,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Gemini-3.1-Pro (Gemini CLI)",
+    "score": 33.81,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Sonnet-4.6 (Claude Code)",
+    "score": 32.21,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Glm-5 (Mini-SWE-Agent)",
+    "score": 24.24,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Kimi-K2.5 (Mini-SWE-Agent)",
+    "score": 20.95,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Minimax-M2.5 (Mini-SWE-Agent)",
+    "score": 19.52,
+    "status": "included"
+  },
+  {
+    "board": "sweatlas-refactoring",
+    "model": "Gemini-3-Flash (Mini-SWE-Agent)",
+    "score": 10,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "GPT 6 Astra",
+    "score": 54.17,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gemini-3.1-pro-preview (thinking high)",
+    "score": 47.31,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Fable 5.1 (xhigh)",
+    "score": 46.8,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5.4-pro-2026-03-05",
+    "score": 45.32,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini 3.8 Flash",
+    "score": 44.95,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Muse Spark",
+    "score": 40.92,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gemini-3-pro-preview",
+    "score": 37.72,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5.4-2026-03-05 (xhigh thinking)",
+    "score": 36.47,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-opus-4-6-thinking-max",
+    "score": 36.24,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5-pro-2025-10-06",
+    "score": 33.32,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5.2-2025-12-11",
+    "score": 28.5,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-opus-4-5-20251101-thinking",
+    "score": 26.32,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5-2025-08-07",
+    "score": 26.32,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5.1-thinking",
+    "score": 24.65,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gemini-2.5-pro-preview-06-05",
+    "score": 22.06,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o3 (high) (April 2025)",
+    "score": 20.57,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o3 (medium) (April 2025)",
+    "score": 19.78,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5-mini-2025-08-07",
+    "score": 19.74,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-opus-4-6 (Non-Thinking)",
+    "score": 19.37,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o4-mini (high) (April 2025)",
+    "score": 18.9,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini 2.5 Pro Experimental (March 2025)",
+    "score": 18.38,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini 2.5 Pro Preview (May 06 2025)",
+    "score": 18.38,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-oss-120b",
+    "score": 15.48,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Qwen3-235B-A22B-Thinking-2507",
+    "score": 15.43,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o4-mini (medium) (April 2025)",
+    "score": 14.53,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-sonnet-4-5-20250929-thinking",
+    "score": 14.09,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "DeepSeek-R1-0528",
+    "score": 14.04,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-opus-4-5-20251101",
+    "score": 13.9,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o3 mini (high)",
+    "score": 13.37,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "DeepSeek-V3.1",
+    "score": 12.88,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini 2.5 Flash (April 2025)",
+    "score": 12.58,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Qwen3-235B-A22B",
+    "score": 11.75,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-opus-4-1-20250805-thinking",
+    "score": 11.26,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Claude Opus 4 (Thinking)",
+    "score": 10.8,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini 2.5 Flash Preview (May 2025)",
+    "score": 10.72,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o3 mini (medium)",
+    "score": 10.31,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-oss-20b",
+    "score": 9.73,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "glm-4p5",
+    "score": 9.64,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "glm-4p5-air",
+    "score": 9.41,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "DeepSeek R1",
+    "score": 8.54,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gemini-3.1-flash-lite-preview",
+    "score": 8.02,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Claude 3.7 Sonnet (Thinking)",
+    "score": 7.89,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o1 (December 2024)",
+    "score": 7.75,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "o1 Pro",
+    "score": 7.71,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-sonnet-4-5-20250929",
+    "score": 7.65,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Claude Sonnet 4 (Thinking)",
+    "score": 7.6,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "claude-opus-4-1-20250805",
+    "score": 7.37,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini 2.0 Flash Thinking (January 2025)",
+    "score": 6.55,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "gpt-5.1-instant",
+    "score": 6.49,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Claude Opus 4",
+    "score": 6.26,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "GPT 4.5 Preview",
+    "score": 5.8,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Claude Sonnet 4",
+    "score": 5.42,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Llama 4 Maverick",
+    "score": 5.34,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "GPT-4.1",
+    "score": 4.97,
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "kimi-k2-instruct",
+    "score": 4.68,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "DeepSeek V3 (March 2025)",
+    "score": 4.55,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Gemini-1.5-Pro-002",
+    "score": 4.55,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Nova Micro",
+    "score": 4.41,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Mistral Medium 3",
+    "score": 4.36,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Claude 3.5 Sonnet (October 2024)",
+    "score": 4.32,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Nova Pro",
+    "score": 4.32,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "Nova Lite",
+    "score": 3.76,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam_text_only",
+    "model": "GPT-4o (November 2024)",
+    "score": 2.32,
+    "status": "held: model not in Registry or identity unsettled"
+  }
+]
