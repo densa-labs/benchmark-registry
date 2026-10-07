@@ -1,0 +1,2699 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30011",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "50.08",
+        "score_raw": "50.08%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30010",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "30.44",
+        "score_raw": "30.44%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "29.68",
+        "score_raw": "29.68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "29.68",
+        "score_raw": "29.68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "26.94",
+        "score_raw": "26.94%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "25.27",
+        "score_raw": "25.27%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "none",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "25.27",
+        "score_raw": "25.27%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "23.9",
+        "score_raw": "23.9%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "23.59",
+        "score_raw": "23.59%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "22.68",
+        "score_raw": "22.68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "22.37",
+        "score_raw": "22.37%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "21.31",
+        "score_raw": "21.31%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80005",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "20.7",
+        "score_raw": "20.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "20.55",
+        "score_raw": "20.55%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "20.4",
+        "score_raw": "20.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "18.11",
+        "score_raw": "18.11%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "17.05",
+        "score_raw": "17.05%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "17.05",
+        "score_raw": "17.05%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "16.89",
+        "score_raw": "16.89%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "16.59",
+        "score_raw": "16.59%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "16.44",
+        "score_raw": "16.44%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "16.44",
+        "score_raw": "16.44%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "16.13",
+        "score_raw": "16.13%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "16.13",
+        "score_raw": "16.13%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "15.68",
+        "score_raw": "15.68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "15.22",
+        "score_raw": "15.22%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "14.76",
+        "score_raw": "14.76%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "14.0",
+        "score_raw": "14.0%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "13.7",
+        "score_raw": "13.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "13.55",
+        "score_raw": "13.55%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "13.39",
+        "score_raw": "13.39%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "13.39",
+        "score_raw": "13.39%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "12.79",
+        "score_raw": "12.79%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "12.48",
+        "score_raw": "12.48%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "11.72",
+        "score_raw": "11.72%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "11.57",
+        "score_raw": "11.57%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "11.42",
+        "score_raw": "11.42%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "10.65",
+        "score_raw": "10.65%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "10.05",
+        "score_raw": "10.05%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "9.89",
+        "score_raw": "9.89%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "9.74",
+        "score_raw": "9.74%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "9.13",
+        "score_raw": "9.13%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "none",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "9.1",
+        "score_raw": "9.1%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "8.98",
+        "score_raw": "8.98%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "8.98",
+        "score_raw": "8.98%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "8.68",
+        "score_raw": "8.68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "8.07",
+        "score_raw": "8.07%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "7.61",
+        "score_raw": "7.61%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "7.46",
+        "score_raw": "7.46%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "7.0",
+        "score_raw": "7.0%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "6.85",
+        "score_raw": "6.85%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150003",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "6.2",
+        "score_raw": "6.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "5.78",
+        "score_raw": "5.78%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "5.48",
+        "score_raw": "5.48%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "5.33",
+        "score_raw": "5.33%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "5.33",
+        "score_raw": "5.33%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "5.02",
+        "score_raw": "5.02%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140003",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "4.87",
+        "score_raw": "4.87%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "4.57",
+        "score_raw": "4.57%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130004",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "4.3",
+        "score_raw": "4.3%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "3.81",
+        "score_raw": "3.81%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130007",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "3.7",
+        "score_raw": "3.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "3.65",
+        "score_raw": "3.65%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "medium",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "3.65",
+        "score_raw": "3.65%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "2.89",
+        "score_raw": "2.89%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "2.59",
+        "score_raw": "2.59%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "2.59",
+        "score_raw": "2.59%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "35002",
+        "reasoning_level": "max",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "1.7",
+        "score_raw": "1.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "low",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "1.52",
+        "score_raw": "1.52%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "1.07",
+        "score_raw": "1.07%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.76",
+        "score_raw": "0.76%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20006",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.46",
+        "score_raw": "0.46%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140002",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.46",
+        "score_raw": "0.46%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "none",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.3",
+        "score_raw": "0.3%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "15001",
+        "reasoning_level": "high",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.15",
+        "score_raw": "0.15%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.15",
+        "score_raw": "0.15%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "",
+        "benchmark_slug": "automationbench",
+        "benchmark_version": "1.0.6",
+        "metric_key": "automationbench-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0.15",
+        "score_raw": "0.15%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "automationbench-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Zapier",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140930/https://zapier.com/benchmarks",
+        "sources": [
+          {
+            "url": "https://zapier.com/benchmarks",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://framerusercontent.com/sites/4WTSl4BNjd1q9QFEFibC6h/EoTxbXN5IqknxERosd2sBrwM9eKEsz_G9J9FFC1HRNA.CSDhPu6z.mjs",
+            "checked_at": "2026-10-07T14:10:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

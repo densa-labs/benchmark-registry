@@ -468,6 +468,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 53,
+      "file": "evaluator-automationbench-2026-10-07.json",
+      "sha256": "8a2387c690e85b5679c60097edfe308d8da65a6a56e290a1a9ef50e630f720a6",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
