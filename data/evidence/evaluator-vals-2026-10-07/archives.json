@@ -1,0 +1,13 @@
+{
+ "fabv2": "https://web.archive.org/web/20261007133537/https://www.vals.ai/benchmarks/fabv2",
+ "hlab": "https://web.archive.org/web/20261007133648/https://www.vals.ai/benchmarks/hlab",
+ "vals_index": "https://web.archive.org/web/20261007133720/https://www.vals.ai/benchmarks/vals_index",
+ "vibe-code": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+ "gpqa": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+ "mmlu_pro": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+ "mmmu": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+ "swebench": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+ "terminal-bench-2": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+ "terminal-bench-2-1": "https://web.archive.org/web/20261007134217/https://www.vals.ai/benchmarks/terminal-bench-2-1",
+ "terminal-bench-4": "https://web.archive.org/web/20261007134327/https://www.vals.ai/benchmarks/terminal-bench-4"
+}

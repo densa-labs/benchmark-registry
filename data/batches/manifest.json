@@ -414,6 +414,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 47,
+      "file": "evaluator-vals-2026-10-07.json",
+      "sha256": "b6d1f454e7c9af59cc873c5b87b857e6d3438980918e0f4dedfdddbe65d3d644",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
