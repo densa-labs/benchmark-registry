@@ -405,6 +405,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 46,
+      "file": "evaluator-osworld-2026-10-07.json",
+      "sha256": "9e00e2afe01422de84151b70acc7f3b8bff012a7095144e8f724876c1e3d015f",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

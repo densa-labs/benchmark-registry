@@ -1,0 +1,566 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "osworld",
+        "canonical_name": "OSWorld",
+        "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Verified — 15 steps",
+            "version_slug": "verified-15-steps",
+            "release_at": "2025-07-28",
+            "release_precision": "date",
+            "metric_key": "osworld-verified-resolved",
+            "source_url": "https://os-world.github.io/",
+            "source_checked_at": "2026-10-07T13:43:00Z",
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
+          },
+          {
+            "version": "Verified — 50 steps",
+            "version_slug": "verified-50-steps",
+            "release_at": "2025-07-28",
+            "release_precision": "date",
+            "metric_key": "osworld-verified-resolved",
+            "source_url": "https://os-world.github.io/",
+            "source_checked_at": "2026-10-07T13:43:00Z",
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
+          },
+          {
+            "version": "Verified — 100 steps",
+            "version_slug": "verified-100-steps",
+            "release_at": "2025-07-28",
+            "release_precision": "date",
+            "metric_key": "osworld-verified-resolved",
+            "source_url": "https://os-world.github.io/",
+            "source_checked_at": "2026-10-07T13:43:00Z",
+            "evaluator_keys": [
+              "xlang-lab"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "osworld",
+        "version": "Verified — 15 steps",
+        "version_slug": "verified-15-steps",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "max-steps-15",
+          "label": "15-step limit",
+          "kind": "harness"
+        },
+        "source_url": "https://os-world.github.io/",
+        "source_checked_at": "2026-10-07T13:43:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "osworld",
+        "version": "Verified — 50 steps",
+        "version_slug": "verified-50-steps",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "max-steps-50",
+          "label": "50-step limit",
+          "kind": "harness"
+        },
+        "source_url": "https://os-world.github.io/",
+        "source_checked_at": "2026-10-07T13:43:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "osworld",
+        "version": "Verified — 100 steps",
+        "version_slug": "verified-100-steps",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "max-steps-100",
+          "label": "100-step limit",
+          "kind": "harness"
+        },
+        "source_url": "https://os-world.github.io/",
+        "source_checked_at": "2026-10-07T13:43:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 15 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "9.1",
+        "score_raw": "9.1",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 50 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "17.17",
+        "score_raw": "17.17",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "23",
+        "score_raw": "23",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 15 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "27.1",
+        "score_raw": "27.1",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 50 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "35.8",
+        "score_raw": "35.8",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "35.6",
+        "score_raw": "35.6",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 15 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "31.2",
+        "score_raw": "31.2",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 50 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "43.9",
+        "score_raw": "43.9",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "41.4",
+        "score_raw": "41.4",
+        "reported_at": "2025-07-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 15 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "42.88",
+        "score_raw": "42.88",
+        "reported_at": "2025-10-31",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 50 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "58.08",
+        "score_raw": "58.08",
+        "reported_at": "2025-10-31",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "62.88",
+        "score_raw": "62.88",
+        "reported_at": "2025-10-31",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "63.3",
+        "score_raw": "63.3",
+        "reported_at": "2026-01-31",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "72.11",
+        "score_raw": "72.11",
+        "reported_at": "2026-03-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140003",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "75.19",
+        "score_raw": "75.19",
+        "reported_at": "2026-06-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "",
+        "benchmark_slug": "osworld",
+        "benchmark_version": "Verified — 100 steps",
+        "metric_key": "osworld-verified-resolved",
+        "source_has_single_run": true,
+        "score_value": "80.67",
+        "score_raw": "80.67",
+        "reported_at": "2026-07-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "xlang-lab"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "OSWorld",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134313/http://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx",
+        "sources": [
+          {
+            "url": "https://os-world.github.io/",
+            "checked_at": "2026-10-07T13:43:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
