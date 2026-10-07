@@ -423,6 +423,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 48,
+      "file": "evaluator-epoch-ai-2026-10-07.json",
+      "sha256": "6e908a0ae24c105deed696c1925ef9def43f703eedaee3133784973612b08b6e",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

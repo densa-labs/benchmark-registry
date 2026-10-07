@@ -386,6 +386,13 @@
       "configuration": null,
       "status": "mapped",
       "note": "Case variant of max."
+    },
+    {
+      "label": "enabled",
+      "effort": null,
+      "configuration": null,
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level."
     }
   ]
 }
