@@ -387,6 +387,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 44,
+      "file": "evaluator-terminal-bench-2026-10-07.json",
+      "sha256": "a4c83179099ed3a6554857d2be42607e5f2206e1cfde6fe9cae325e2487a6de9",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
