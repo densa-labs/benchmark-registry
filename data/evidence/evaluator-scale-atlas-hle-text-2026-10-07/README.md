@@ -33,7 +33,7 @@ HLE page says Scale evaluates each model. Rows are `independent`, evaluator
 
 ## Result: 68 rows included
 
-Codebase QnA 22, Refactoring 17, HLE text only 29.
+Codebase QnA 23, Refactoring 17, HLE text only 28.
 
 Held: SWE Atlas Test Writing (its release date is not published), the
 "Muse Spark" QnA row with no harness named, and HLE models not in the Registry
