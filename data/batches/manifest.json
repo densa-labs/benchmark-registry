@@ -450,6 +450,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 51,
+      "file": "evaluator-cursorbench-refresh-2026-10-07.json",
+      "sha256": "44e7545659c52462c23890fd879796d0a5fb9b01efb60fcf20480fd3bd7e7de2",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
