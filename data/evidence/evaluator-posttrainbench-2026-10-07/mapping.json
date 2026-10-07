@@ -1,0 +1,290 @@
+[
+  {
+    "results_version": "v1.2",
+    "agent": "fable-5",
+    "avg": 37.27,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "held: score includes cells another model answered (page note)"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "fable-5.1",
+    "avg": 44.65,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "held: score includes cells another model answered (page note)"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "glm-5.2",
+    "avg": 30.4,
+    "n": 3,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "glm-5.3",
+    "avg": 34.52,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "glm-5.3-flash",
+    "avg": 36.79,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "gpt-5.4-high",
+    "avg": 17.76,
+    "n": 3,
+    "scaffold": "Codex CLI",
+    "effort": "High",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "gpt-5.5-xhigh",
+    "avg": 23.87,
+    "n": 2,
+    "scaffold": "Codex CLI",
+    "effort": "xHigh",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "gpt-5.6-sol",
+    "avg": 31.01,
+    "n": 2,
+    "scaffold": "Codex CLI",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "gpt-6-astra",
+    "avg": 41.88,
+    "n": 2,
+    "scaffold": "Codex CLI",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "gpt-6.1-sol",
+    "avg": 38.79,
+    "n": 2,
+    "scaffold": "Codex CLI",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "gemini-3.1-pro",
+    "avg": 18.11,
+    "n": 3,
+    "scaffold": "OpenCode",
+    "effort": null,
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "grok-4.5-high",
+    "avg": 22.62,
+    "n": 2,
+    "scaffold": "Cursor CLI",
+    "effort": "High",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "kimi-k3",
+    "avg": 31.48,
+    "n": 3,
+    "scaffold": "Claude Code",
+    "effort": null,
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "opus-4.7",
+    "avg": 24.34,
+    "n": 3,
+    "scaffold": "Claude Code",
+    "effort": "xHigh",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "opus-4.8",
+    "avg": 30.66,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "High",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "opus-4.8-max",
+    "avg": 31,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "opus-5",
+    "avg": 35.66,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": null,
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "opus-5.5-max",
+    "avg": 43.8,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.2",
+    "agent": "locus",
+    "avg": 41.66,
+    "n": 3,
+    "scaffold": "Intology · Opus 5",
+    "effort": null,
+    "status": "held: external entry or model not in Registry"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "fable-5",
+    "avg": 41.79,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "held: score includes cells another model answered (page note)"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "glm-5.2",
+    "avg": 31.7,
+    "n": 3,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "gpt-5.4-high",
+    "avg": 19,
+    "n": 3,
+    "scaffold": "Codex CLI",
+    "effort": "High",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "gpt-5.5-xhigh",
+    "avg": 27.23,
+    "n": 2,
+    "scaffold": "Codex CLI",
+    "effort": "xHigh",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "gpt-5.6-sol",
+    "avg": 36.23,
+    "n": 2,
+    "scaffold": "Codex CLI",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "gemini-3.1-pro",
+    "avg": 21.99,
+    "n": 3,
+    "scaffold": "OpenCode",
+    "effort": null,
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "grok-4.5-high",
+    "avg": 23.45,
+    "n": 2,
+    "scaffold": "Cursor CLI",
+    "effort": "High",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "kimi-k3",
+    "avg": 31.96,
+    "n": 3,
+    "scaffold": "Claude Code",
+    "effort": null,
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "opus-4.7",
+    "avg": 28.56,
+    "n": 3,
+    "scaffold": "Claude Code",
+    "effort": "xHigh",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "opus-4.8",
+    "avg": 33.84,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "High",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "opus-4.8-max",
+    "avg": 32.9,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": "Max",
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "opus-5",
+    "avg": 35.04,
+    "n": 2,
+    "scaffold": "Claude Code",
+    "effort": null,
+    "status": "included"
+  },
+  {
+    "results_version": "v1.1",
+    "agent": "locus",
+    "avg": 45.58,
+    "n": 3,
+    "scaffold": "Intology · Opus 5",
+    "effort": null,
+    "status": "held: external entry or model not in Registry"
+  }
+]
