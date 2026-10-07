@@ -321,7 +321,7 @@
     "board": "humanitys_last_exam_text_only",
     "model": "gpt-5-2025-08-07",
     "score": 26.32,
-    "status": "held: model not in Registry or identity unsettled"
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam_text_only",
@@ -351,7 +351,7 @@
     "board": "humanitys_last_exam_text_only",
     "model": "gpt-5-mini-2025-08-07",
     "score": 19.74,
-    "status": "held: model not in Registry or identity unsettled"
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam_text_only",
@@ -441,7 +441,7 @@
     "board": "humanitys_last_exam_text_only",
     "model": "claude-opus-4-1-20250805-thinking",
     "score": 11.26,
-    "status": "held: model not in Registry or identity unsettled"
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam_text_only",
@@ -471,13 +471,13 @@
     "board": "humanitys_last_exam_text_only",
     "model": "glm-4p5",
     "score": 9.64,
-    "status": "held: model not in Registry or identity unsettled"
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam_text_only",
     "model": "glm-4p5-air",
     "score": 9.41,
-    "status": "held: model not in Registry or identity unsettled"
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam_text_only",
@@ -525,7 +525,7 @@
     "board": "humanitys_last_exam_text_only",
     "model": "claude-opus-4-1-20250805",
     "score": 7.37,
-    "status": "held: model not in Registry or identity unsettled"
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam_text_only",

@@ -52,12 +52,12 @@
     "folder": "20260213_mini-v2.0.0a0_deepseek-3-2",
     "model_tag": "deepseek-v3.2",
     "model_display": "DeepSeek V3.2",
-    "registry_no": null,
+    "registry_no": "110003",
     "reasoning_effort": null,
     "resolved": "59.0",
     "date": "2026-02-13",
     "mini_version": "2.0.0a0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Multilingual",
@@ -112,12 +112,12 @@
     "folder": "20260213_mini-v2.0.0a0_gpt-5-mini",
     "model_tag": "gpt-5-mini-2025-08-07",
     "model_display": "GPT 5 mini",
-    "registry_no": null,
+    "registry_no": "10019",
     "reasoning_effort": null,
     "resolved": "39.7",
     "date": "2026-02-13",
     "mini_version": "2.0.0a0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Multilingual",
@@ -208,12 +208,12 @@
     "folder": "20250720_mini-v0.0.0_gpt-4.1-mini-2025-04-14",
     "model_tag": "gpt-4.1-mini-20250414",
     "model_display": "GPT 4.1 mini",
-    "registry_no": null,
+    "registry_no": "10016",
     "reasoning_effort": null,
     "resolved": "23.94",
     "date": "2025-07-20",
     "mini_version": "0.0.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
@@ -340,36 +340,36 @@
     "folder": "20250807_mini-v1.7.0_gpt-5",
     "model_tag": "gpt-5-2025-08-07",
     "model_display": "GPT 5",
-    "registry_no": null,
+    "registry_no": "10018",
     "reasoning_effort": "medium",
     "resolved": "65.0",
     "date": "2025-08-07",
     "mini_version": "1.7.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
     "folder": "20250807_mini-v1.7.0_gpt-5-mini",
     "model_tag": "gpt-5-mini-2025-08-07",
     "model_display": "GPT 5 mini",
-    "registry_no": null,
+    "registry_no": "10019",
     "reasoning_effort": "medium",
     "resolved": "59.8",
     "date": "2025-08-07",
     "mini_version": "1.7.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
     "folder": "20250807_mini-v1.7.0_gpt-5-nano",
     "model_tag": "gpt-5-nano-2025-08-07",
     "model_display": "GPT 5 nano",
-    "registry_no": null,
+    "registry_no": "10020",
     "reasoning_effort": "medium",
     "resolved": "34.8",
     "date": "2025-08-07",
     "mini_version": "1.7.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
@@ -400,12 +400,12 @@
     "folder": "20250822_mini-v1.9.1_glm-4.5",
     "model_tag": "GLM-4.5",
     "model_display": "GLM 4.5",
-    "registry_no": null,
+    "registry_no": "150007",
     "reasoning_effort": null,
     "resolved": "54.2",
     "date": "2025-08-22",
     "mini_version": "1.9.1",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
@@ -472,12 +472,12 @@
     "folder": "20251124_mini-v1.17.0_minimax-m2",
     "model_tag": "minimax-m2",
     "model_display": "MiniMax M2",
-    "registry_no": null,
+    "registry_no": "140004",
     "reasoning_effort": null,
     "resolved": "61.0",
     "date": "2025-11-24",
     "mini_version": "1.17.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
@@ -496,12 +496,12 @@
     "folder": "20251201_mini-v1.17.1_glm-4.6",
     "model_tag": "glm-4.6",
     "model_display": "GLM 4.6",
-    "registry_no": null,
+    "registry_no": "150009",
     "reasoning_effort": null,
     "resolved": "55.40",
     "date": "2025-12-01",
     "mini_version": "1.17.1",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
@@ -616,12 +616,12 @@
     "folder": "20260217_mini-v2.0.0_deepseek-3-2-high",
     "model_tag": "deepseek-v3.2",
     "model_display": "DeepSeek V3.2",
-    "registry_no": null,
+    "registry_no": "110003",
     "reasoning_effort": "high",
     "resolved": "70.0",
     "date": "2026-02-17",
     "mini_version": "2.0.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",
@@ -664,12 +664,12 @@
     "folder": "20260217_mini-v2.0.0_gpt-5-mini",
     "model_tag": "gpt-5-mini-2025-08-07",
     "model_display": "GPT 5 mini",
-    "registry_no": null,
+    "registry_no": "10019",
     "reasoning_effort": null,
     "resolved": "56.2",
     "date": "2026-02-17",
     "mini_version": "2.0.0",
-    "status": "held: model not in Registry"
+    "status": "included"
   },
   {
     "board": "Verified",

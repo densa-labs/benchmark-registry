@@ -23,6 +23,10 @@ EVALUATOR = "toolathlon-authors"
 
 # (table, model text) -> (Registry No., reasoning label as shown)
 MODELS = {
+    ("Original", "GPT-5-high‡"): ("10018", "high"),
+    ("Original", "GLM-4.6"): ("150009", ""),
+    ("Original", "Grok-4"): ("40004", ""),
+    ("Original", "GPT-5-mini"): ("10019", ""),
     ("Verified", "GLM 5.3 Flash (max)"): ("150006", "max"),
     ("Verified", "Kimi K3 (max)"): ("120003", "max"),
     ("Verified", "Claude Opus 4.8 (max)"): ("20011", "max"),

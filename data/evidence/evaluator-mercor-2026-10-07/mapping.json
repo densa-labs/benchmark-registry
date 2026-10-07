@@ -167,8 +167,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 85.2,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-gpqa-diamond-leaderboard",
@@ -671,8 +671,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 22.3,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-hle-leaderboard",
@@ -896,8 +896,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 66,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-swe-bench-verified-leaderboard",
@@ -1283,8 +1283,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 60.7,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-swe-bench-multilingual-leaderboard",
@@ -1571,8 +1571,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 44.6,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-terminal-bench-2-1-leaderboard",
@@ -2795,8 +2795,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 76.5,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-mmlu-pro-leaderboard",
@@ -3398,8 +3398,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 0.6,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-deep-swe-leaderboard",
@@ -3749,8 +3749,8 @@
     "model_name": "DeepSeek-V3.2",
     "effort": null,
     "score": 38.1,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-browsecomp-leaderboard",
@@ -4460,8 +4460,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 5.9,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "oss-swe-atlas-leaderboard",
@@ -5054,8 +5054,8 @@
     "model_name": "DeepSeek V3.2",
     "effort": null,
     "score": 21.3,
-    "registry_no": null,
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "registry_no": "110003",
+    "status": "included"
   },
   {
     "board": "apex-agents-leaderboard",

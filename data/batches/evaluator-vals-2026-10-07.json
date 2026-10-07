@@ -968,6 +968,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "vals-index",
+        "benchmark_version": "2.1",
+        "metric_key": "vals-index-accuracy",
+        "source_has_single_run": true,
+        "score_value": "33.169",
+        "score_raw": "33.169",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133720/https://www.vals.ai/benchmarks/vals_index",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vals_index",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10009",
         "reasoning_level": "max",
         "benchmark_slug": "vals-index",
@@ -2223,6 +2252,64 @@
         "source_has_single_run": true,
         "score_value": "37.667",
         "score_raw": "37.667",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133537/https://www.vals.ai/benchmarks/fabv2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/fabv2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "finance-agent",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "finance-agent-accuracy",
+        "source_has_single_run": true,
+        "score_value": "45.36",
+        "score_raw": "45.36",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133537/https://www.vals.ai/benchmarks/fabv2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/fabv2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "finance-agent",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "finance-agent-accuracy",
+        "source_has_single_run": true,
+        "score_value": "38.217",
+        "score_raw": "38.217",
         "reported_at": "2026-10-06",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -3636,6 +3723,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "harveys-legal-agent-benchmark",
+        "benchmark_version": "October 2026 evaluation",
+        "metric_key": "hlab-task-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0",
+        "score_raw": "0.0",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133648/https://www.vals.ai/benchmarks/hlab",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/hlab",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "harveys-legal-agent-benchmark",
+        "benchmark_version": "October 2026 evaluation",
+        "metric_key": "hlab-task-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "0",
+        "score_raw": "0.0",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133648/https://www.vals.ai/benchmarks/hlab",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/hlab",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10008",
         "reasoning_level": "xhigh",
         "benchmark_slug": "harveys-legal-agent-benchmark",
@@ -4680,6 +4825,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "high",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 — OpenHands, October 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "source_has_single_run": true,
+        "score_value": "5.108",
+        "score_raw": "5.108",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vibe-code",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "30009",
         "reasoning_level": "high",
         "benchmark_slug": "vibe-code-bench",
@@ -5347,6 +5521,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 — OpenHands, October 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "source_has_single_run": true,
+        "score_value": "20.088",
+        "score_raw": "20.088",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vibe-code",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 — OpenHands, October 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "source_has_single_run": true,
+        "score_value": "14.171",
+        "score_raw": "14.171",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vibe-code",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10012",
         "reasoning_level": "xhigh",
         "benchmark_slug": "vibe-code-bench",
@@ -5442,6 +5674,64 @@
         "source_has_single_run": true,
         "score_value": "67.421",
         "score_raw": "67.421",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vibe-code",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 — OpenHands, October 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "source_has_single_run": true,
+        "score_value": "47.969",
+        "score_raw": "47.969",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vibe-code",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 — OpenHands, October 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "source_has_single_run": true,
+        "score_value": "26.097",
+        "score_raw": "26.097",
         "reported_at": "2026-10-06",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -5790,6 +6080,35 @@
         "source_has_single_run": true,
         "score_value": "19.052",
         "score_raw": "19.052",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133844/https://www.vals.ai/benchmarks/vibe-code",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/vibe-code",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150009",
+        "reasoning_level": "",
+        "benchmark_slug": "vibe-code-bench",
+        "benchmark_version": "1.1 — OpenHands, October 2026 evaluation",
+        "metric_key": "vibe-code-bench-score",
+        "source_has_single_run": true,
+        "score_value": "3.09",
+        "score_raw": "3.09",
         "reported_at": "2026-10-06",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -6188,6 +6507,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "69.95",
+        "score_raw": "69.95",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "76.263",
+        "score_raw": "76.263",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20002",
         "reasoning_level": "",
         "benchmark_slug": "gpqa",
@@ -6565,6 +6942,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "none",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "76.263",
+        "score_raw": "76.263",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "80.303",
+        "score_raw": "80.303",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "15001",
         "reasoning_level": "",
         "benchmark_slug": "gpqa",
@@ -6863,6 +7298,35 @@
         "source_has_single_run": true,
         "score_value": "94.444",
         "score_raw": "94.444",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "88.132",
+        "score_raw": "88.132",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -7290,6 +7754,151 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10016",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "67.929",
+        "score_raw": "67.929",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10017",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "50.758",
+        "score_raw": "50.758",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "85.606",
+        "score_raw": "85.606",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "80.303",
+        "score_raw": "80.303",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "63.384",
+        "score_raw": "63.384",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10012",
         "reasoning_level": "xhigh",
         "benchmark_slug": "gpqa",
@@ -7327,6 +7936,64 @@
         "source_has_single_run": true,
         "score_value": "91.666",
         "score_raw": "91.666",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "83.08",
+        "score_raw": "83.08",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "77.526",
+        "score_raw": "77.526",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -7559,6 +8226,64 @@
         "source_has_single_run": true,
         "score_value": "83.586",
         "score_raw": "83.586",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150007",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "72.222",
+        "score_raw": "72.222",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133922/https://www.vals.ai/benchmarks/gpqa",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/gpqa",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150009",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Vals AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "74.495",
+        "score_raw": "74.495",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -8015,6 +8740,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "87.214",
+        "score_raw": "87.214",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "87.924",
+        "score_raw": "87.924",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20002",
         "reasoning_level": "",
         "benchmark_slug": "mmlu-pro",
@@ -8392,6 +9175,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "83.056",
+        "score_raw": "83.056",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "84.917",
+        "score_raw": "84.917",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "15001",
         "reasoning_level": "",
         "benchmark_slug": "mmlu-pro",
@@ -8661,6 +9502,35 @@
         "source_has_single_run": true,
         "score_value": "90.221",
         "score_raw": "90.221",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "85.304",
+        "score_raw": "85.304",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -9117,6 +9987,151 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10016",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "77.225",
+        "score_raw": "77.225",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10017",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "63.479",
+        "score_raw": "63.479",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "86.544",
+        "score_raw": "86.544",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "82.226",
+        "score_raw": "82.226",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "76.067",
+        "score_raw": "76.067",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10012",
         "reasoning_level": "xhigh",
         "benchmark_slug": "mmlu-pro",
@@ -9154,6 +10169,64 @@
         "source_has_single_run": true,
         "score_value": "87.482",
         "score_raw": "87.482",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "84.554",
+        "score_raw": "84.554",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "77.172",
+        "score_raw": "77.172",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -9386,6 +10459,64 @@
         "source_has_single_run": true,
         "score_value": "85.566",
         "score_raw": "85.566",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150007",
+        "reasoning_level": "",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "81.222",
+        "score_raw": "81.222",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007133956/https://www.vals.ai/benchmarks/mmlu_pro",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmlu_pro",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150009",
+        "reasoning_level": "",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Vals AI harness",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "82.203",
+        "score_raw": "82.203",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -9763,6 +10894,64 @@
         "source_has_single_run": true,
         "score_value": "46.069",
         "score_raw": "46.069",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "73.715",
+        "score_raw": "73.715",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "77.514",
+        "score_raw": "77.514",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -10451,6 +11640,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "76.27",
+        "score_raw": "76.27",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "40001",
         "reasoning_level": "high",
         "benchmark_slug": "mmmu-pro",
@@ -10741,6 +11959,151 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10016",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "70.537",
+        "score_raw": "70.537",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10017",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "55.055",
+        "score_raw": "55.055",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "81.503",
+        "score_raw": "81.503",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "78.914",
+        "score_raw": "78.914",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "70.942",
+        "score_raw": "70.942",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10012",
         "reasoning_level": "xhigh",
         "benchmark_slug": "mmmu-pro",
@@ -10778,6 +12141,64 @@
         "source_has_single_run": true,
         "score_value": "87.514",
         "score_raw": "87.514",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "79.249",
+        "score_raw": "79.249",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134033/https://www.vals.ai/benchmarks/mmmu",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/mmmu",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "mmmu-pro",
+        "benchmark_version": "Vals AI harness",
+        "metric_key": "mmmu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "73.584",
+        "score_raw": "73.584",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -11466,6 +12887,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Vals AI mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "67.6",
+        "score_raw": "67.6",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/swebench",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "15001",
         "reasoning_level": "",
         "benchmark_slug": "swe-bench",
@@ -11677,6 +13127,35 @@
         "source_has_single_run": true,
         "score_value": "80",
         "score_raw": "80.0",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/swebench",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Vals AI mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "57.8",
+        "score_raw": "57.8",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -12133,6 +13612,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Vals AI mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "69",
+        "score_raw": "69.0",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/swebench",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Vals AI mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "60.8",
+        "score_raw": "60.8",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/swebench",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10012",
         "reasoning_level": "xhigh",
         "benchmark_slug": "swe-bench",
@@ -12199,6 +13736,64 @@
         "source_has_single_run": true,
         "score_value": "78.2",
         "score_raw": "78.2",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/swebench",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Vals AI mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "73",
+        "score_raw": "73.0",
+        "reported_at": "2026-09-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134109/https://www.vals.ai/benchmarks/swebench",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/swebench",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Vals AI mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "69.8",
+        "score_raw": "69.8",
         "reported_at": "2026-09-01",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -12916,6 +14511,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "none",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "34.831",
+        "score_raw": "34.831",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "35.955",
+        "score_raw": "35.955",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "15001",
         "reasoning_level": "",
         "benchmark_slug": "terminal-bench",
@@ -13069,6 +14722,35 @@
         "source_has_single_run": true,
         "score_value": "39.326",
         "score_raw": "39.326",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "28.09",
+        "score_raw": "28.09",
         "reported_at": "2026-06-04",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -13380,6 +15062,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "37.079",
+        "score_raw": "37.079",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "26.966",
+        "score_raw": "26.966",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10012",
         "reasoning_level": "high",
         "benchmark_slug": "terminal-bench",
@@ -13467,6 +15207,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "44.944",
+        "score_raw": "44.944",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "39.888",
+        "score_raw": "39.888",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10008",
         "reasoning_level": "high",
         "benchmark_slug": "terminal-bench",
@@ -13475,6 +15273,35 @@
         "source_has_single_run": true,
         "score_value": "73.202",
         "score_raw": "73.202",
+        "reported_at": "2026-06-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134143/https://www.vals.ai/benchmarks/terminal-bench-2",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150009",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.0 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "28.09",
+        "score_raw": "28.09",
         "reported_at": "2026-06-04",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -14511,6 +16338,64 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "54.682",
+        "score_raw": "54.682",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134217/https://www.vals.ai/benchmarks/terminal-bench-2-1",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1 — Vals AI Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "41.573",
+        "score_raw": "41.573",
+        "reported_at": "2026-09-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134217/https://www.vals.ai/benchmarks/terminal-bench-2-1",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10008",
         "reasoning_level": "high",
         "benchmark_slug": "terminal-bench",
@@ -15331,6 +17216,35 @@
         "source_has_single_run": true,
         "score_value": "1.01",
         "score_raw": "1.01",
+        "reported_at": "2026-10-06",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "vals-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Vals AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134327/https://www.vals.ai/benchmarks/terminal-bench-4",
+        "sources": [
+          {
+            "url": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "checked_at": "2026-10-07T12:00:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0 — Vals AI mini-swe-agent",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "2.525",
+        "score_raw": "2.525",
         "reported_at": "2026-10-06",
         "reported_precision": "date",
         "evaluator_keys": [

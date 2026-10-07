@@ -95,9 +95,9 @@
     "version": "Public — Scale AI SWE-Agent",
     "model": "gpt-5-2025-08-07 (High)",
     "score": "41.78",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "10018",
+    "reasoning_level": "High",
+    "status": "included"
   },
   {
     "board": "swe_bench_pro",
@@ -195,9 +195,9 @@
     "version": "Public — Scale AI SWE-Agent",
     "model": "deepseek-v3p2",
     "score": "15.56",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "110003",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "swe_bench_pro",
@@ -225,9 +225,9 @@
     "version": "Public — Scale AI SWE-Agent",
     "model": "glm-4.6",
     "score": "9.67",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "150009",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "swe_bench_pro",
@@ -345,9 +345,9 @@
     "version": "Private — Scale AI SWE-Agent",
     "model": "Claude Opus 4.1",
     "score": "17.75",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "20017",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "swe_bench_pro",
@@ -355,9 +355,9 @@
     "version": "Private — Scale AI SWE-Agent",
     "model": "OpenAI GPT-5",
     "score": "14.86",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "10018",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "swe_bench_pro",
@@ -515,9 +515,9 @@
     "version": "Full set — Scale AI evaluation",
     "model": "gpt-5-2025-08-07",
     "score": "25.32",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "10018",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam",
@@ -575,9 +575,9 @@
     "version": "Full set — Scale AI evaluation",
     "model": "gpt-5-mini-2025-08-07",
     "score": "19.44",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "10019",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam",
@@ -675,9 +675,9 @@
     "version": "Full set — Scale AI evaluation",
     "model": "claude-opus-4-1-20250805-thinking",
     "score": "11.52",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "20017",
+    "reasoning_level": "thinking",
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam",
@@ -715,9 +715,9 @@
     "version": "Full set — Scale AI evaluation",
     "model": "glm-4p5",
     "score": "8.32",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "150007",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam",
@@ -725,9 +725,9 @@
     "version": "Full set — Scale AI evaluation",
     "model": "glm-4p5-air",
     "score": "8.12",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "150008",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam",
@@ -765,9 +765,9 @@
     "version": "Full set — Scale AI evaluation",
     "model": "claude-opus-4-1-20250805",
     "score": "7.92",
-    "registry_no": null,
-    "reasoning_level": null,
-    "status": "held: model not in Registry or identity unsettled"
+    "registry_no": "20017",
+    "reasoning_level": "",
+    "status": "included"
   },
   {
     "board": "humanitys_last_exam",

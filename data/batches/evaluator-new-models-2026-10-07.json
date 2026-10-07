@@ -1,0 +1,286 @@
+{
+  "records": [
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-4.1 mini",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 16,
+        "registry_no": "10016",
+        "release_at": "2025-04-14",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-4.1-mini",
+            "source_url": "https://openai.com/index/gpt-4-1/",
+            "source_checked_at": "2026-10-07T14:45:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-4.1 nano",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 17,
+        "registry_no": "10017",
+        "release_at": "2025-04-14",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/gpt-4-1/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-4.1-nano",
+            "source_url": "https://openai.com/index/gpt-4-1/",
+            "source_checked_at": "2026-10-07T14:45:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 18,
+        "registry_no": "10018",
+        "release_at": "2025-08-07",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5",
+            "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "source_checked_at": "2026-10-07T14:45:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5 mini",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 19,
+        "registry_no": "10019",
+        "release_at": "2025-08-07",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5-mini",
+            "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "source_checked_at": "2026-10-07T14:45:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5 nano",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 20,
+        "registry_no": "10020",
+        "release_at": "2025-08-07",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": [
+          {
+            "name": "gpt-5-nano",
+            "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+            "source_checked_at": "2026-10-07T14:45:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.4 mini",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 21,
+        "registry_no": "10021",
+        "release_at": "2026-03-17",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GPT-5.4 nano",
+        "company_slug": "openai",
+        "namespace_prefix": "10",
+        "sequence": 22,
+        "registry_no": "10022",
+        "release_at": "2026-03-17",
+        "release_precision": "date",
+        "release_source_url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Claude Opus 4.1",
+        "company_slug": "anthropic",
+        "namespace_prefix": "20",
+        "sequence": 17,
+        "registry_no": "20017",
+        "release_at": "2025-08-05",
+        "release_precision": "date",
+        "release_source_url": "https://www.anthropic.com/news/claude-opus-4-1",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Grok 4",
+        "company_slug": "spacexai",
+        "namespace_prefix": "40",
+        "sequence": 4,
+        "registry_no": "40004",
+        "release_at": "2025-07-09",
+        "release_precision": "date",
+        "release_source_url": "https://x.ai/news/grok-4",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "DeepSeek-V3.2",
+        "company_slug": "deepseek",
+        "namespace_prefix": "110",
+        "sequence": 3,
+        "registry_no": "110003",
+        "release_at": "2025-12-01",
+        "release_precision": "date",
+        "release_source_url": "https://api-docs.deepseek.com/news/news251201",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "MiniMax M2",
+        "company_slug": "minimax",
+        "namespace_prefix": "140",
+        "sequence": 4,
+        "registry_no": "140004",
+        "release_at": "2025-10-27",
+        "release_precision": "date",
+        "release_source_url": "https://www.minimax.io/news/minimax-m2",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GLM-4.5",
+        "company_slug": "z-ai",
+        "namespace_prefix": "150",
+        "sequence": 7,
+        "registry_no": "150007",
+        "release_at": "2025-07-28",
+        "release_precision": "date",
+        "release_source_url": "https://z.ai/blog/glm-4.5",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GLM-4.5-Air",
+        "company_slug": "z-ai",
+        "namespace_prefix": "150",
+        "sequence": 8,
+        "registry_no": "150008",
+        "release_at": "2025-07-28",
+        "release_precision": "date",
+        "release_source_url": "https://z.ai/blog/glm-4.5",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    },
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "GLM-4.6",
+        "company_slug": "z-ai",
+        "namespace_prefix": "150",
+        "sequence": 9,
+        "registry_no": "150009",
+        "release_at": "2025-09-30",
+        "release_precision": "date",
+        "release_source_url": "https://z.ai/blog/glm-4.6",
+        "source_checked_at": "2026-10-07T14:45:00Z",
+        "published_at": "2026-10-07T14:45:00Z",
+        "status": "active",
+        "sequence_exception_reason": "late_backfill",
+        "aliases": []
+      }
+    }
+  ]
+}

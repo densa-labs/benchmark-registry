@@ -20,6 +20,14 @@ EVALUATOR = "swe-bench-team"
 
 # Leaderboard model tag -> Registry No. Only models already in the Registry.
 MODELS = {
+    "gpt-4.1-mini-20250414": "10016",
+    "gpt-5-2025-08-07": "10018",
+    "gpt-5-mini-2025-08-07": "10019",
+    "gpt-5-nano-2025-08-07": "10020",
+    "GLM-4.5": "150007",
+    "glm-4.6": "150009",
+    "minimax-m2": "140004",
+    "deepseek-v3.2": "110003",
     "claude-3-7-sonnet-20250219": "20001",
     "claude-4-sonnet-20250514": "20003",
     "claude-4-opus-20250514": "20002",

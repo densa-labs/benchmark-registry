@@ -956,6 +956,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Mercor single-shot",
+        "metric_key": "gpqa-diamond-accuracy",
+        "source_has_single_run": true,
+        "score_value": "85.2",
+        "score_raw": "85.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141849/https://www.mercor.com/apex/oss-benchmarks/oss-gpqa-diamond-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-gpqa-diamond-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "110002",
         "reasoning_level": "max",
         "benchmark_slug": "gpqa",
@@ -2377,6 +2406,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Mercor single-shot",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "22.3",
+        "score_raw": "22.3%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141935/https://www.mercor.com/apex/oss-benchmarks/oss-hle-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-hle-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "150005",
         "reasoning_level": "max",
         "benchmark_slug": "humanitys-last-exam",
@@ -2994,6 +3052,35 @@
         "source_has_single_run": true,
         "score_value": "93.5",
         "score_raw": "93.5%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142057/https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Mercor mini-swe-agent, 1000 steps",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "66",
+        "score_raw": "66%",
         "reported_at": "2026-10-07",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -4117,6 +4204,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — Mercor mini-swe-agent, 1000 steps",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "60.7",
+        "score_raw": "60.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142228/https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-multilingual-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-multilingual-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "30005",
         "reasoning_level": "high",
         "benchmark_slug": "swe-bench",
@@ -4891,6 +5007,35 @@
         "sources": [
           {
             "url": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-multilingual-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "2.1 — Mercor Terminus 2",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "44.6",
+        "score_raw": "44.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142354/https://www.mercor.com/apex/oss-benchmarks/oss-terminal-bench-2-1-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-terminal-bench-2-1-leaderboard/",
             "checked_at": "2026-10-07T14:20:00Z",
             "primary": true
           }
@@ -7713,6 +7858,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "mmlu-pro",
+        "benchmark_version": "Original — Mercor single-shot",
+        "metric_key": "mmlu-pro-accuracy",
+        "source_has_single_run": true,
+        "score_value": "76.5",
+        "score_raw": "76.5%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142613/https://www.mercor.com/apex/oss-benchmarks/oss-mmlu-pro-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmlu-pro-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10013",
         "reasoning_level": "max",
         "benchmark_slug": "mmlu-pro",
@@ -9482,6 +9656,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1 — Mercor mini-swe-agent, 500 steps",
+        "metric_key": "deep-swe-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "0.6",
+        "score_raw": "0.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142755/https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "110002",
         "reasoning_level": "max",
         "benchmark_slug": "deep-swe",
@@ -10447,6 +10650,35 @@
         "source_has_single_run": true,
         "score_value": "82.5",
         "score_raw": "82.5%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142913/https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "browsecomp",
+        "benchmark_version": "130-question subset — Mercor web research agent",
+        "metric_key": "browsecomp-accuracy",
+        "source_has_single_run": true,
+        "score_value": "38.1",
+        "score_raw": "38.1%",
         "reported_at": "2026-10-07",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -12527,6 +12759,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-atlas",
+        "benchmark_version": "Codebase QnA — Mercor mini-swe-agent, 250 steps",
+        "metric_key": "swe-atlas-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "5.9",
+        "score_raw": "5.9%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007143027/https://www.mercor.com/apex/oss-benchmarks/oss-swe-atlas-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-atlas-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20013",
         "reasoning_level": "max",
         "benchmark_slug": "swe-atlas",
@@ -14188,6 +14449,35 @@
         "source_has_single_run": true,
         "score_value": "54.6",
         "score_raw": "54.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "mercor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Mercor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007143233/https://www.mercor.com/apex/apex-agents-leaderboard/",
+        "sources": [
+          {
+            "url": "https://www.mercor.com/apex/apex-agents-leaderboard/",
+            "checked_at": "2026-10-07T14:20:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "apex-agents",
+        "benchmark_version": "Original",
+        "metric_key": "apex-agents-pass",
+        "source_has_single_run": true,
+        "score_value": "21.3",
+        "score_raw": "21.3%",
         "reported_at": "2026-10-07",
         "reported_precision": "date",
         "evaluator_keys": [

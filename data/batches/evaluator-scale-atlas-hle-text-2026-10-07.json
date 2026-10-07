@@ -1661,6 +1661,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "26.32",
+        "score_raw": "26.32",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10003",
         "reasoning_level": "high",
         "benchmark_slug": "humanitys-last-exam",
@@ -1698,6 +1727,35 @@
         "source_has_single_run": true,
         "score_value": "19.78",
         "score_raw": "19.78",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "19.74",
+        "score_raw": "19.74",
         "reported_at": "2026-10-07",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -1951,6 +2009,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "11.26",
+        "score_raw": "11.26",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20002",
         "reasoning_level": "Thinking",
         "benchmark_slug": "humanitys-last-exam",
@@ -1959,6 +2046,64 @@
         "source_has_single_run": true,
         "score_value": "10.8",
         "score_raw": "10.8",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150007",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "9.64",
+        "score_raw": "9.64",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150008",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "9.41",
+        "score_raw": "9.41",
         "reported_at": "2026-10-07",
         "reported_precision": "date",
         "evaluator_keys": [
@@ -2046,6 +2191,35 @@
         "source_has_single_run": true,
         "score_value": "7.6",
         "score_raw": "7.6",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135520/https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam_text_only",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Text only — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "7.37",
+        "score_raw": "7.37",
         "reported_at": "2026-10-07",
         "reported_precision": "date",
         "evaluator_keys": [

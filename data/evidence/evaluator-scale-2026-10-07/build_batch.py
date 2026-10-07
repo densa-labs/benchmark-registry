@@ -19,6 +19,11 @@ EVALUATOR = "scale-ai"
 # Board model string -> (Registry No., reasoning label exactly as shown).
 # None marks a model that is not in the Registry or whose identity is not settled.
 SWE_PRO = {
+    "gpt-5-2025-08-07 (High)": ("10018", "High"),
+    "OpenAI GPT-5": ("10018", ""),
+    "deepseek-v3p2": ("110003", ""),
+    "glm-4.6": ("150009", ""),
+    "Claude Opus 4.1": ("20017", ""),
     "Muse Spark 1.1*": ("80002", ""),
     "gpt-5.4 (xHigh)*": ("10007", "xHigh"),
     "gpt-5.4(xHigh)*": ("10007", "xHigh"),
@@ -39,6 +44,12 @@ SWE_PRO = {
     "gpt-oss-120b": ("15001", ""),
 }
 HLE = {
+    "gpt-5-2025-08-07": ("10018", ""),
+    "gpt-5-mini-2025-08-07": ("10019", ""),
+    "claude-opus-4-1-20250805-thinking": ("20017", "thinking"),
+    "claude-opus-4-1-20250805": ("20017", ""),
+    "glm-4p5": ("150007", ""),
+    "glm-4p5-air": ("150008", ""),
     "GPT 6 Astra": ("10005", ""),
     "Fable 5.1 (xhigh)": ("20004", "xhigh"),
     "gemini-3.1-pro-preview (thinking high)": ("30005", "thinking high"),

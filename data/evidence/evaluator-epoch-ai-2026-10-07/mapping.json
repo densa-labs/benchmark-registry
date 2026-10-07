@@ -580,9 +580,9 @@
     "model_version": "gpt-5.4-mini-2026-03-17_xhigh",
     "id": "gKB2rCD7mHzFN2MCt2YCni",
     "score": "0.8686868686868687",
-    "registry_no": null,
+    "registry_no": "10021",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -634,9 +634,9 @@
     "model_version": "gpt-5.4-mini-2026-03-17_none",
     "id": "Qyz2Qt5x4P2XwB3w4h4jFR",
     "score": "0.6414141414141414",
-    "registry_no": null,
+    "registry_no": "10021",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -859,9 +859,9 @@
     "model_version": "gpt-5.4-nano-2026-03-17_none",
     "id": "gLewKMc7ttCD2moUrgAyYX",
     "score": "0.5555555555555556",
-    "registry_no": null,
+    "registry_no": "10022",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -886,9 +886,9 @@
     "model_version": "gpt-5.4-nano-2026-03-17_low",
     "id": "Nq7w5iKALDSuT5oQdn5m8f",
     "score": "0.7222222222222222",
-    "registry_no": null,
+    "registry_no": "10022",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -1291,9 +1291,9 @@
     "model_version": "gpt-5-nano-2025-08-07_low",
     "id": "mNZ34pXP8JN779JoHnjNQc",
     "score": "0.5757575757575758",
-    "registry_no": null,
+    "registry_no": "10020",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -1489,18 +1489,18 @@
     "model_version": "gpt-5.4-mini-2026-03-17_high",
     "id": "AQF46S9hBhosKPEMy3fyB9",
     "score": "0.8358585858585859",
-    "registry_no": null,
+    "registry_no": "10021",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
     "model_version": "gpt-5.4-nano-2026-03-17_high",
     "id": "fZB3qGSohAVYzN97mniuUp",
     "score": "0.7847",
-    "registry_no": null,
+    "registry_no": "10022",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -1741,27 +1741,27 @@
     "model_version": "gpt-5-nano-2025-08-07_high",
     "id": "2pSDjMSGDh4HsAxkqUuNQP",
     "score": "0.6944444444444444",
-    "registry_no": null,
+    "registry_no": "10020",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
     "model_version": "gpt-5-mini-2025-08-07_high",
     "id": "jP8EyLtPFsakgnsHe2oJM6",
     "score": "0.75",
-    "registry_no": null,
+    "registry_no": "10019",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
     "model_version": "gpt-5-2025-08-07_high",
     "id": "9nPyNrZxwtoT7eS4DZbQF6",
     "score": "0.8617424242424242",
-    "registry_no": null,
+    "registry_no": "10018",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -1840,27 +1840,27 @@
     "model_version": "gpt-5-mini-2025-08-07_medium",
     "id": "CFNzodoTSVVVgp9PUXftUP",
     "score": "0.7165404040404041",
-    "registry_no": null,
+    "registry_no": "10019",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
     "model_version": "gpt-5-2025-08-07_medium",
     "id": "YQCwJRoGbGAqNCQoaL6cjk",
     "score": "0.8535353535353535",
-    "registry_no": null,
+    "registry_no": "10018",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
     "model_version": "gpt-5-nano-2025-08-07_medium",
     "id": "ELAxkvAigvEVdMmhxiaMiy",
     "score": "0.6742424242424242",
-    "registry_no": null,
+    "registry_no": "10020",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -1885,9 +1885,9 @@
     "model_version": "claude-opus-4-1-20250805",
     "id": "j62bkFDjBSeFyVpnGzuzg4",
     "score": "0.7323232323232324",
-    "registry_no": null,
+    "registry_no": "20017",
     "epoch_release_date": "2025-08-05",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -2047,18 +2047,18 @@
     "model_version": "gpt-4.1-mini-2025-04-14",
     "id": "dXHddeGRX7JRVa5UNfad5C",
     "score": "0.6584595959595959",
-    "registry_no": null,
+    "registry_no": "10016",
     "epoch_release_date": "2025-04-14",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
     "model_version": "gpt-4.1-nano-2025-04-14",
     "id": "azWfeFPP6zSocuQX3JYBU5",
     "score": "0.48926767676767674",
-    "registry_no": null,
+    "registry_no": "10017",
     "epoch_release_date": "2025-04-14",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "gpqa_diamond.csv",
@@ -2866,9 +2866,9 @@
     "model_version": "grok-4-0709",
     "id": "A85Zfq2qguE4X9xXBweBHP",
     "score": "0.87",
-    "registry_no": null,
+    "registry_no": "40004",
     "epoch_release_date": "2025-07-09",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "swe_bench_verified.csv",
@@ -3091,9 +3091,9 @@
     "model_version": "claude-opus-4-1-20250805",
     "id": "cA6Mq67yaynLhY8F5kes3c",
     "score": "0.7334710743801653",
-    "registry_no": null,
+    "registry_no": "20017",
     "epoch_release_date": "2025-08-05",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "swe_bench_verified.csv",
@@ -3127,9 +3127,9 @@
     "model_version": "gpt-5-2025-08-07_high",
     "id": "C85Bnci9xVzq5jmt8zNnbw",
     "score": "0.7355371900826446",
-    "registry_no": null,
+    "registry_no": "10018",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "swe_bench_verified.csv",
@@ -3163,9 +3163,9 @@
     "model_version": "gpt-5-2025-08-07_medium",
     "id": "FCCkMNVHcjLLUDeNFqTGRL",
     "score": "0.7148760330578512",
-    "registry_no": null,
+    "registry_no": "10018",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "swe_bench_verified.csv",
@@ -3181,9 +3181,9 @@
     "model_version": "gpt-5-mini-2025-08-07_medium",
     "id": "7nvdQy3AwKtoay2FBvfST5",
     "score": "0.6466942148760331",
-    "registry_no": null,
+    "registry_no": "10019",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
@@ -3289,18 +3289,18 @@
     "model_version": "gpt-4.1-nano-2025-04-14",
     "id": "A4JEeJR5LQfLR3Hb8z7kL2",
     "score": "0.06",
-    "registry_no": null,
+    "registry_no": "10017",
     "epoch_release_date": "2025-04-14",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
     "model_version": "gpt-4.1-mini-2025-04-14",
     "id": "gYV4CJTjSd7VonfzMmnwcw",
     "score": "0.127",
-    "registry_no": null,
+    "registry_no": "10016",
     "epoch_release_date": "2025-04-14",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
@@ -3685,9 +3685,9 @@
     "model_version": "gpt-5.4-nano-2026-03-17_high",
     "id": "3QBsxKkbF2R2LEXTd6HDrJ",
     "score": "0.117",
-    "registry_no": null,
+    "registry_no": "10022",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
@@ -3703,18 +3703,18 @@
     "model_version": "gpt-5-2025-08-07_high",
     "id": "gTLurbyKU63i2opsGkJGwh",
     "score": "0.501",
-    "registry_no": null,
+    "registry_no": "10018",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
     "model_version": "gpt-5.4-mini-2026-03-17_high",
     "id": "Z3pjKgAULY9j9wmzQpdqZG",
     "score": "0.294",
-    "registry_no": null,
+    "registry_no": "10021",
     "epoch_release_date": "2026-03-17",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
@@ -3937,18 +3937,18 @@
     "model_version": "gpt-5-mini-2025-08-07_high",
     "id": "8d5RuFTTJKuJ5iJYmPZVJe",
     "score": "0.216",
-    "registry_no": null,
+    "registry_no": "10019",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",
     "model_version": "gpt-5-nano-2025-08-07_high",
     "id": "KgUCEfVCyRnY8B5kVChyiD",
     "score": "0.117",
-    "registry_no": null,
+    "registry_no": "10020",
     "epoch_release_date": "2025-08-07",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "file": "simpleqa_verified.csv",

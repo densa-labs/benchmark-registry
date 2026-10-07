@@ -323,9 +323,9 @@
     "board": "riemann-bench",
     "board_name": "DeepSeek V3.2 (High reasoning)",
     "score": "8",
-    "registry_no": null,
+    "registry_no": "110003",
     "reasoning_level": "High",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "board": "riemann-bench",

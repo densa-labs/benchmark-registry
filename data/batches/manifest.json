@@ -372,8 +372,8 @@
     },
     {
       "order": 42,
-      "file": "evaluator-swe-bench-2026-10-07.json",
-      "sha256": "fdf27a5eae951cc08824b6abfe8abb3aa5e7c807e07d33fcc71bb795234b6b30",
+      "file": "evaluator-new-models-2026-10-07.json",
+      "sha256": "604d62ee1136f691693b36be70a3325e8407cab42af1d10865f0315b7b21fd1b",
       "applied": {
         "staging": null,
         "production": null
@@ -381,8 +381,8 @@
     },
     {
       "order": 43,
-      "file": "evaluator-scale-2026-10-07.json",
-      "sha256": "03e03819a4808de1d0a6070e1b463bba201c31acd0ee37e48887a124c83a34e1",
+      "file": "evaluator-swe-bench-2026-10-07.json",
+      "sha256": "c5d1ccbc4c52f82d6ec5ed16334b9a362c6d7ee2453b7b5ef8b0279524088f07",
       "applied": {
         "staging": null,
         "production": null
@@ -390,6 +390,15 @@
     },
     {
       "order": 44,
+      "file": "evaluator-scale-2026-10-07.json",
+      "sha256": "b967241eaf522614bd60a5ecfa555a796c7905738806f997e5a8eeabe18ec560",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 45,
       "file": "evaluator-terminal-bench-2026-10-07.json",
       "sha256": "a4c83179099ed3a6554857d2be42607e5f2206e1cfde6fe9cae325e2487a6de9",
       "applied": {
@@ -398,16 +407,16 @@
       }
     },
     {
-      "order": 45,
+      "order": 46,
       "file": "evaluator-toolathlon-2026-10-07.json",
-      "sha256": "e4c68f745151fe8ccae58c7762a39b0d4b96d68ebb488a66956533650f2d0ed7",
+      "sha256": "30fa12eeaef0f1f67241c6eacad3d40c9e5579b19037a2377a037a13460b3efc",
       "applied": {
         "staging": null,
         "production": null
       }
     },
     {
-      "order": 46,
+      "order": 47,
       "file": "evaluator-osworld-2026-10-07.json",
       "sha256": "9e00e2afe01422de84151b70acc7f3b8bff012a7095144e8f724876c1e3d015f",
       "applied": {
@@ -416,18 +425,9 @@
       }
     },
     {
-      "order": 47,
-      "file": "evaluator-vals-2026-10-07.json",
-      "sha256": "b6d1f454e7c9af59cc873c5b87b857e6d3438980918e0f4dedfdddbe65d3d644",
-      "applied": {
-        "staging": null,
-        "production": null
-      }
-    },
-    {
       "order": 48,
-      "file": "evaluator-epoch-ai-2026-10-07.json",
-      "sha256": "6e908a0ae24c105deed696c1925ef9def43f703eedaee3133784973612b08b6e",
+      "file": "evaluator-vals-2026-10-07.json",
+      "sha256": "2cafe1afe99b1ee8172e6dd303df16730249f56ec50d3cbc7bcb89717fb6a5aa",
       "applied": {
         "staging": null,
         "production": null
@@ -435,8 +435,8 @@
     },
     {
       "order": 49,
-      "file": "evaluator-scale-atlas-hle-text-2026-10-07.json",
-      "sha256": "05fb1d34f2b4c4af4fc4948c6ce422700a8ab50c630760b8915f99c902e57ac6",
+      "file": "evaluator-epoch-ai-2026-10-07.json",
+      "sha256": "2ae0c0345c6d55537e74ff4e39af4cc0188acab862ebe6f25267699a4ee54518",
       "applied": {
         "staging": null,
         "production": null
@@ -444,6 +444,15 @@
     },
     {
       "order": 50,
+      "file": "evaluator-scale-atlas-hle-text-2026-10-07.json",
+      "sha256": "b60043271459aae2589f48740851e3fc0a49fdbf481a5dd7dbd5670aaf6dfbcf",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
+    },
+    {
+      "order": 51,
       "file": "evaluator-deepswe-refresh-2026-10-07.json",
       "sha256": "d6755efd294a2d89c0547adce2e5185c1022f13ffbca730fc4efc3a2070d3551",
       "applied": {
@@ -452,7 +461,7 @@
       }
     },
     {
-      "order": 51,
+      "order": 52,
       "file": "evaluator-cursorbench-refresh-2026-10-07.json",
       "sha256": "44e7545659c52462c23890fd879796d0a5fb9b01efb60fcf20480fd3bd7e7de2",
       "applied": {
@@ -461,7 +470,7 @@
       }
     },
     {
-      "order": 52,
+      "order": 53,
       "file": "evaluator-tau3-bench-2026-10-07.json",
       "sha256": "cf1a254866a8ab021fd6eb238d04e5998ebe3725cca62581bc5d3391375cf497",
       "applied": {
@@ -470,7 +479,7 @@
       }
     },
     {
-      "order": 53,
+      "order": 54,
       "file": "evaluator-automationbench-2026-10-07.json",
       "sha256": "8a2387c690e85b5679c60097edfe308d8da65a6a56e290a1a9ef50e630f720a6",
       "applied": {
@@ -479,16 +488,16 @@
       }
     },
     {
-      "order": 54,
+      "order": 55,
       "file": "evaluator-surge-2026-10-07.json",
-      "sha256": "374859c7c123d27706b5b661400a90fd90a666b0ffeca42c4677359e1e12aa67",
+      "sha256": "a64e2c83eca0fc1ce35307c227f3ed67951ce9f4f563928913ff853485a3e83b",
       "applied": {
         "staging": null,
         "production": null
       }
     },
     {
-      "order": 55,
+      "order": 56,
       "file": "evaluator-frontierswe-2026-10-07.json",
       "sha256": "546345d7adab492045b0ec067d3ea99555cdd4ca430a7d6d99987ecf921b92e8",
       "applied": {
@@ -497,7 +506,7 @@
       }
     },
     {
-      "order": 56,
+      "order": 57,
       "file": "evaluator-posttrainbench-2026-10-07.json",
       "sha256": "066e1d7d29c0d6383725394877a84c79714788644cb1870c6138310577c51e1a",
       "applied": {
@@ -506,7 +515,7 @@
       }
     },
     {
-      "order": 57,
+      "order": 58,
       "file": "evaluator-cwe-bench-2026-10-07.json",
       "sha256": "c3cc26771527360f0d6da550f6061daf7e6d013274bcab2904689769de714cda",
       "applied": {
@@ -515,9 +524,9 @@
       }
     },
     {
-      "order": 58,
+      "order": 59,
       "file": "evaluator-mercor-2026-10-07.json",
-      "sha256": "f9370269b4c86a7a5a4db127be376eac02dc429fbff20a528379fc1c016e01ac",
+      "sha256": "34eb5dd30bfb3e835d31ce9e85947e3fdd2da1a3b2fe1fd36cf5ffa30493d4d2",
       "applied": {
         "staging": null,
         "production": null

@@ -21,6 +21,20 @@ EVALUATOR = "vals-ai"
 # Vals model key -> Registry No. Keys not listed are held for the new-model
 # batch or because the build is not shown to be the Registry model.
 MODELS = {
+    "openai/gpt-5-2025-08-07": "10018",
+    "openai/gpt-5-mini-2025-08-07": "10019",
+    "openai/gpt-5-nano-2025-08-07": "10020",
+    "openai/gpt-4.1-mini-2025-04-14": "10016",
+    "openai/gpt-4.1-nano-2025-04-14": "10017",
+    "openai/gpt-5.4-mini-2026-03-17": "10021",
+    "openai/gpt-5.4-nano-2026-03-17": "10022",
+    "anthropic/claude-opus-4-1-20250805": "20017",
+    "anthropic/claude-opus-4-1-20250805-thinking": "20017",
+    "grok/grok-4-0709": "40004",
+    "zai/glm-4.5": "150007",
+    "zai/glm-4.6": "150009",
+    "fireworks/deepseek-v3p2": "110003",
+    "fireworks/deepseek-v3p2-thinking": "110003",
     "anthropic/claude-3-7-sonnet-20250219": "20001",
     "anthropic/claude-3-7-sonnet-20250219-thinking": "20001",
     "anthropic/claude-opus-4-20250514": "20002",

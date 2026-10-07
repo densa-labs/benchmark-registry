@@ -42,6 +42,12 @@ ATLAS = {
                              "2026-05-07", "https://scale.com/blog/swe-atlas-complete"),
 }
 HLE_TEXT = {
+    "gpt-5-2025-08-07": ("10018", ""),
+    "gpt-5-mini-2025-08-07": ("10019", ""),
+    "claude-opus-4-1-20250805-thinking": ("20017", "thinking"),
+    "claude-opus-4-1-20250805": ("20017", ""),
+    "glm-4p5": ("150007", ""),
+    "glm-4p5-air": ("150008", ""),
     "GPT 6 Astra": ("10005", ""),
     "gemini-3.1-pro-preview (thinking high)": ("30005", "thinking high"),
     "Fable 5.1 (xhigh)": ("20004", "xhigh"),

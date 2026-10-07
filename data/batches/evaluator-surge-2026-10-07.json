@@ -1099,6 +1099,35 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "8",
+        "score_raw": "8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "120002",
         "reasoning_level": "Thinking on",
         "benchmark_slug": "riemann-bench",

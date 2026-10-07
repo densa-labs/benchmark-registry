@@ -28,6 +28,7 @@ BOARDS = {
     "chartography": ("chartography", "chartography-pass-at-1", "October 2026 leaderboard", "october-2026"),
 }
 MODELS = {
+    "DeepSeek V3.2": "110003",
     "GPT 5.6 Sol": "10010", "GPT 6 Astra": "10005", "Claude Opus 5.5": "20015", "Claude Opus 5": "20014",
     "GPT 5.6 Terra": "10011", "GPT 5.6 Luna": "10009", "Claude Fable 5.1": "20004", "GPT 6 Sol": "10014",
     "Claude Fable 5": "20012", "GPT 6 Luna": "10013", "GPT 5.5": "10008", "Gemini 3.8 Flash": "30004",

@@ -756,6 +756,37 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:gKB2rCD7mHzFN2MCt2YCni",
+        "score_value": "86.86868686868687",
+        "score_raw": "0.8686868686868687",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-07T01:00:11Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10010",
         "reasoning_level": "none",
         "benchmark_slug": "gpqa",
@@ -905,6 +936,37 @@
           }
         ],
         "evaluated_at": "2026-08-07T00:50:06Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "none",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:Qyz2Qt5x4P2XwB3w4h4jFR",
+        "score_value": "64.14141414141414",
+        "score_raw": "0.6414141414141414",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-07T00:46:46Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -1339,6 +1401,68 @@
           }
         ],
         "evaluated_at": "2026-08-07T00:03:42Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "none",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:gLewKMc7ttCD2moUrgAyYX",
+        "score_value": "55.55555555555556",
+        "score_raw": "0.5555555555555556",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-07T00:01:43Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "low",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:Nq7w5iKALDSuT5oQdn5m8f",
+        "score_value": "72.22222222222222",
+        "score_raw": "0.7222222222222222",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-07T00:00:23Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -2182,6 +2306,37 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "low",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:mNZ34pXP8JN779JoHnjNQc",
+        "score_value": "57.57575757575758",
+        "score_raw": "0.5757575757575758",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-07-13T17:28:21Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20009",
         "reasoning_level": "high",
         "benchmark_slug": "gpqa",
@@ -2678,6 +2833,68 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:AQF46S9hBhosKPEMy3fyB9",
+        "score_value": "83.58585858585859",
+        "score_raw": "0.8358585858585859",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-04-15T14:03:19Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:fZB3qGSohAVYzN97mniuUp",
+        "score_value": "78.47",
+        "score_raw": "0.7847",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-04-14T15:07:20.513Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "80001",
         "reasoning_level": "",
         "benchmark_slug": "gpqa",
@@ -3112,6 +3329,99 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:2pSDjMSGDh4HsAxkqUuNQP",
+        "score_value": "69.44444444444444",
+        "score_raw": "0.6944444444444444",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-10-30T16:20:27.447Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:jP8EyLtPFsakgnsHe2oJM6",
+        "score_value": "75",
+        "score_raw": "0.75",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-10-30T09:59:56.459Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:9nPyNrZxwtoT7eS4DZbQF6",
+        "score_value": "86.17424242424242",
+        "score_raw": "0.8617424242424242",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-10-29T22:29:36.692Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20006",
         "reasoning_level": "",
         "benchmark_slug": "gpqa",
@@ -3168,6 +3478,130 @@
           }
         ],
         "evaluated_at": "2025-09-29T18:04:57.033Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "medium",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:CFNzodoTSVVVgp9PUXftUP",
+        "score_value": "71.65404040404041",
+        "score_raw": "0.7165404040404041",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-08-07T19:34:31.180Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "medium",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:YQCwJRoGbGAqNCQoaL6cjk",
+        "score_value": "85.35353535353535",
+        "score_raw": "0.8535353535353535",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-08-07T19:34:30.433Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "medium",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:ELAxkvAigvEVdMmhxiaMiy",
+        "score_value": "67.42424242424242",
+        "score_raw": "0.6742424242424242",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-08-07T19:34:29.562Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:j62bkFDjBSeFyVpnGzuzg4",
+        "score_value": "73.23232323232324",
+        "score_raw": "0.7323232323232324",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-08-05T16:45:23.948Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -3292,6 +3726,68 @@
           }
         ],
         "evaluated_at": "2025-04-16T18:17:09.093Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10016",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:dXHddeGRX7JRVa5UNfad5C",
+        "score_value": "65.84595959595959",
+        "score_raw": "0.6584595959595959",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-04-14T22:49:57.790Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10017",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:azWfeFPP6zSocuQX3JYBU5",
+        "score_value": "48.926767676767674",
+        "score_raw": "0.48926767676767674",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2025-04-14T22:49:56.708Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -3448,6 +3944,35 @@
         ],
         "evaluated_at": "2025-02-06T15:51:21.852Z",
         "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "gpqa",
+        "benchmark_version": "Diamond — Epoch AI harness",
+        "metric_key": "gpqa-diamond-accuracy",
+        "run_ref": "epoch-ai:A85Zfq2qguE4X9xXBweBHP",
+        "score_value": "87",
+        "score_raw": "0.87",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ]
       }
     },
     {
@@ -4011,6 +4536,37 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "20017",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Epoch AI harness",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "epoch-ai:cA6Mq67yaynLhY8F5kes3c",
+        "score_value": "73.34710743801653",
+        "score_raw": "0.7334710743801653",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-02-11T21:33:53.502Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20008",
         "reasoning_level": "",
         "benchmark_slug": "swe-bench",
@@ -4067,6 +4623,37 @@
           }
         ],
         "evaluated_at": "2026-02-08T17:41:23.879Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Epoch AI harness",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "epoch-ai:C85Bnci9xVzq5jmt8zNnbw",
+        "score_value": "73.55371900826446",
+        "score_raw": "0.7355371900826446",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-02-06T14:23:51.990Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -4166,6 +4753,37 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "medium",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Epoch AI harness",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "epoch-ai:FCCkMNVHcjLLUDeNFqTGRL",
+        "score_value": "71.48760330578512",
+        "score_raw": "0.7148760330578512",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-02-05T13:39:28.137Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "20001",
         "reasoning_level": "",
         "benchmark_slug": "swe-bench",
@@ -4191,6 +4809,37 @@
           }
         ],
         "evaluated_at": "2026-02-04T18:05:21.852Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "medium",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — Epoch AI harness",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "epoch-ai:7nvdQy3AwKtoay2FBvfST5",
+        "score_value": "64.66942148760331",
+        "score_raw": "0.6466942148760331",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-02-01T11:28:37.125Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -4439,6 +5088,68 @@
           }
         ],
         "evaluated_at": "2026-09-01T18:31:59Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10017",
+        "reasoning_level": "",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:A4JEeJR5LQfLR3Hb8z7kL2",
+        "score_value": "6",
+        "score_raw": "0.06",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-31T22:01:58Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10016",
+        "reasoning_level": "",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:gYV4CJTjSd7VonfzMmnwcw",
+        "score_value": "12.7",
+        "score_raw": "0.127",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-31T22:01:51Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -5313,6 +6024,37 @@
     {
       "operation": "result",
       "record": {
+        "model_registry_no": "10022",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:3QBsxKkbF2R2LEXTd6HDrJ",
+        "score_value": "11.7",
+        "score_raw": "0.117",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-27T19:28:50Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
         "model_registry_no": "10004",
         "reasoning_level": "high",
         "benchmark_slug": "simpleqa-verified",
@@ -5338,6 +6080,68 @@
           }
         ],
         "evaluated_at": "2026-08-27T19:28:50Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:gTLurbyKU63i2opsGkJGwh",
+        "score_value": "50.1",
+        "score_raw": "0.501",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-27T19:28:49Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10021",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:Z3pjKgAULY9j9wmzQpdqZG",
+        "score_value": "29.4",
+        "score_raw": "0.294",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-27T19:28:49Z",
         "evaluated_precision": "timestamp"
       }
     },
@@ -5927,6 +6731,68 @@
           }
         ],
         "evaluated_at": "2026-08-10T21:35:30Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:8d5RuFTTJKuJ5iJYmPZVJe",
+        "score_value": "21.6",
+        "score_raw": "0.216",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-10T21:35:29Z",
+        "evaluated_precision": "timestamp"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "high",
+        "benchmark_slug": "simpleqa-verified",
+        "benchmark_version": "Original — Epoch AI harness",
+        "metric_key": "simpleqa-verified-accuracy",
+        "run_ref": "epoch-ai:KgUCEfVCyRnY8B5kVChyiD",
+        "score_value": "11.7",
+        "score_raw": "0.117",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "epoch-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Epoch AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134933/https://epoch.ai/data/benchmark_data.zip",
+        "sources": [
+          {
+            "url": "https://epoch.ai/benchmarks",
+            "checked_at": "2026-10-07T13:50:00Z",
+            "primary": true
+          }
+        ],
+        "evaluated_at": "2026-08-10T21:35:25Z",
         "evaluated_precision": "timestamp"
       }
     },

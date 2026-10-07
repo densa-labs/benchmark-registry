@@ -447,7 +447,7 @@
     "agent": "Default",
     "date": "2025-12-17",
     "pass_at_1": "37.7",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "table": "Original",
@@ -537,7 +537,7 @@
     "agent": "Default",
     "date": "2025-10-28",
     "pass_at_1": "27.5",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "table": "Original",
@@ -582,7 +582,7 @@
     "agent": "Default",
     "date": "2025-10-28",
     "pass_at_1": "18.8",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "table": "Original",
@@ -636,7 +636,7 @@
     "agent": "Default",
     "date": "2025-10-28",
     "pass_at_1": "14.5",
-    "status": "held: model not in Registry or build not shown to be the Registry model"
+    "status": "included"
   },
   {
     "table": "Original",

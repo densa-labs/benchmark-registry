@@ -1,5 +1,7 @@
 # Scale AI SEAL leaderboards, 2026-10-07
 
+> Update (same day): the batch was rebuilt after `evaluator-new-models-2026-10-07` added 14 models (GPT-4.1 mini/nano, GPT-5, GPT-5 mini/nano, GPT-5.4 mini/nano, Claude Opus 4.1, Grok 4, DeepSeek-V3.2, MiniMax M2, GLM-4.5, GLM-4.5-Air, GLM-4.6). It now holds 63 result rows instead of 52; only rows were added. `mapping.json` has the current status of every entry.
+
 Batch: `data/batches/evaluator-scale-2026-10-07.json`, built by
 `build_batch.py` (pass the local replay database so MCP Atlas rows can be
 compared with what the Registry holds). Needs migration 0020 (new reasoning

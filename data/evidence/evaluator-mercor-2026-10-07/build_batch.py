@@ -59,6 +59,7 @@ BOARDS = {
 }
 HLE_TEXT_RELEASE = ("2025-04-03", "hle-accuracy")
 MODELS = {
+    "deepseek-ai/DeepSeek-V3.2": "110003",
     "Qwen3.5-397B-A17B": "130003", "claude-fable-5": "20012", "claude-fable-5-high": "20012",
     "claude-fable-5.1": "20004", "claude-fable-5.1-high": "20004", "claude-opus-4-6-max": "20008",
     "claude-opus-4-7": "20010", "claude-opus-4-7-high": "20010", "claude-opus-4-8": "20011",

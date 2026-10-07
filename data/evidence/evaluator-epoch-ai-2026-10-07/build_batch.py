@@ -26,6 +26,10 @@ EVALUATOR = "epoch-ai"
 EFFORTS = {"max", "xhigh", "high", "medium", "low", "none"}
 
 MODELS = {
+    "gpt-5-2025-08-07": "10018", "gpt-5-mini-2025-08-07": "10019", "gpt-5-nano-2025-08-07": "10020",
+    "gpt-4.1-mini-2025-04-14": "10016", "gpt-4.1-nano-2025-04-14": "10017",
+    "gpt-5.4-mini-2026-03-17": "10021", "gpt-5.4-nano-2026-03-17": "10022",
+    "claude-opus-4-1-20250805": "20017", "grok-4-0709": "40004",
     "claude-3-7-sonnet-20250219": "20001", "claude-fable-5-1": "20004", "claude-fable-5": "20012",
     "claude-haiku-4-5-20251001": "20006", "claude-opus-4-20250514": "20002",
     "claude-opus-4-5-20251101": "20007", "claude-opus-4-6": "20008", "claude-opus-4-7": "20010",
