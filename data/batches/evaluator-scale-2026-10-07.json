@@ -1,0 +1,1664 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SWE-bench Pro",
+        "slug": "swe-bench-pro",
+        "source_url": "https://labs.scale.com/papers/swe_bench_pro",
+        "source_checked_at": "2026-09-19T05:10:15Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Public — Scale AI SWE-Agent",
+            "version_slug": "public-scale-ai-swe-agent",
+            "release_at": "2025-09-19",
+            "release_precision": "date",
+            "metric_key": "swe-bench-pro-resolved",
+            "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "source_checked_at": "2026-10-07T11:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Public — Scale AI mini-swe-agent",
+            "version_slug": "public-scale-ai-mini-swe-agent",
+            "release_at": "2025-09-19",
+            "release_precision": "date",
+            "metric_key": "swe-bench-pro-resolved",
+            "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "source_checked_at": "2026-10-07T11:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Private — Scale AI SWE-Agent",
+            "version_slug": "private-scale-ai-swe-agent",
+            "release_at": "2025-09-19",
+            "release_precision": "date",
+            "metric_key": "swe-bench-pro-resolved",
+            "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "source_checked_at": "2026-10-07T11:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          },
+          {
+            "version": "Private — Scale AI mini-swe-agent",
+            "version_slug": "private-scale-ai-mini-swe-agent",
+            "release_at": "2025-09-19",
+            "release_precision": "date",
+            "metric_key": "swe-bench-pro-resolved",
+            "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "source_checked_at": "2026-10-07T11:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "Humanity's Last Exam",
+        "slug": "humanitys-last-exam",
+        "source_url": "https://arxiv.org/abs/2501.14249",
+        "source_checked_at": "2026-09-18T13:23:42Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Full set — Scale AI evaluation",
+            "version_slug": "full-set-scale-ai",
+            "release_at": "2025-04-03",
+            "release_precision": "date",
+            "metric_key": "hle-accuracy",
+            "source_url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "source_checked_at": "2026-10-07T11:50:00Z",
+            "evaluator_keys": [
+              "scale-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Public — Scale AI SWE-Agent",
+        "version_slug": "public-scale-ai-swe-agent",
+        "dataset_label": "Public",
+        "configuration": {
+          "key": "swe-agent-250-turns",
+          "label": "SWE-Agent harness, 250 turns, uncapped cost",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+        "source_checked_at": "2026-10-07T11:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Public — Scale AI mini-swe-agent",
+        "version_slug": "public-scale-ai-mini-swe-agent",
+        "dataset_label": "Public",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+        "source_checked_at": "2026-10-07T11:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Private — Scale AI SWE-Agent",
+        "version_slug": "private-scale-ai-swe-agent",
+        "dataset_label": "Private",
+        "configuration": {
+          "key": "swe-agent-250-turns",
+          "label": "SWE-Agent harness, 250 turns, uncapped cost",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+        "source_checked_at": "2026-10-07T11:50:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench-pro",
+        "version": "Private — Scale AI mini-swe-agent",
+        "version_slug": "private-scale-ai-mini-swe-agent",
+        "dataset_label": "Private",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+        "source_checked_at": "2026-10-07T11:50:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "61.5",
+        "score_raw": "61.5",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "59.1",
+        "score_raw": "59.1",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "55",
+        "score_raw": "55",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "51.9",
+        "score_raw": "51.9",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "46.1",
+        "score_raw": "46.1",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "45.89",
+        "score_raw": "45.89",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "43.6",
+        "score_raw": "43.6",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "43.3",
+        "score_raw": "43.3",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "42.7",
+        "score_raw": "42.7",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20006",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "39.45",
+        "score_raw": "39.45",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "34.63",
+        "score_raw": "34.63",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "29.94",
+        "score_raw": "29.94",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "15001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "16.2",
+        "score_raw": "16.2",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "51.5",
+        "score_raw": "51.5",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "47.1",
+        "score_raw": "47.1",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "44.7",
+        "score_raw": "44.7",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "43.4",
+        "score_raw": "43.4",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI mini-swe-agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "32.2",
+        "score_raw": "32.2",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "23.809524",
+        "score_raw": "23.80952381",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "23.443223",
+        "score_raw": "23.44322344",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "17.948718",
+        "score_raw": "17.94871795",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Private — Scale AI SWE-Agent",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "9.06",
+        "score_raw": "9.06",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007113854/https://labs.scale.com/leaderboard/swe_bench_pro",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/swe_bench_pro",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "54.8",
+        "score_raw": "54.8",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "46.5",
+        "score_raw": "46.5",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "thinking high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "46.44",
+        "score_raw": "46.44",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "44.52",
+        "score_raw": "44.52",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80001",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "40.56",
+        "score_raw": "40.56",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "37.52",
+        "score_raw": "37.52",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "36.24",
+        "score_raw": "36.24",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "36.2",
+        "score_raw": "36.2",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "thinking-max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "34.44",
+        "score_raw": "34.44",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "27.8",
+        "score_raw": "27.8",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "25.2",
+        "score_raw": "25.2",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "24.37",
+        "score_raw": "24.37",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "20.32",
+        "score_raw": "20.32",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "19.2",
+        "score_raw": "19.2",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "Non-Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "19",
+        "score_raw": "19",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30002",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "18.16",
+        "score_raw": "18.16",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10004",
+        "reasoning_level": "high",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "18.08",
+        "score_raw": "18.08",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10004",
+        "reasoning_level": "medium",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "14.28",
+        "score_raw": "14.28",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "14.16",
+        "score_raw": "14.16",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "13.72",
+        "score_raw": "13.72",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30003",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "12.08",
+        "score_raw": "12.08",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20002",
+        "reasoning_level": "Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "10.72",
+        "score_raw": "10.72",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "8.04",
+        "score_raw": "8.04",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "Thinking",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "7.76",
+        "score_raw": "7.76",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "7.52",
+        "score_raw": "7.52",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20002",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "6.68",
+        "score_raw": "6.68",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "5.52",
+        "score_raw": "5.52",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10001",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "5.44",
+        "score_raw": "5.44",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10002",
+        "reasoning_level": "",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — Scale AI evaluation",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "5.4",
+        "score_raw": "5.4",
+        "reported_at": "2026-10-03",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261003080149/https://labs.scale.com/leaderboard/humanitys_last_exam",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "mcp-atlas",
+        "benchmark_version": "Public, April 2026 update",
+        "metric_key": "mcp-atlas-pass-rate",
+        "source_has_single_run": true,
+        "score_value": "67.6",
+        "score_raw": "67.6",
+        "reported_at": "2026-09-21",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "scale-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Scale AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20260921153248/https://labs.scale.com/leaderboard/mcp_atlas",
+        "sources": [
+          {
+            "url": "https://labs.scale.com/leaderboard/mcp_atlas",
+            "checked_at": "2026-10-07T11:50:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

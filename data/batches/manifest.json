@@ -378,6 +378,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 43,
+      "file": "evaluator-scale-2026-10-07.json",
+      "sha256": "03e03819a4808de1d0a6070e1b463bba201c31acd0ee37e48887a124c83a34e1",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
