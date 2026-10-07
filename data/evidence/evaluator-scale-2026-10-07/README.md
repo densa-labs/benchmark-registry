@@ -39,10 +39,11 @@ public questions. All rows are `independent`, evaluator `scale-ai`.
 
 ## Result: 52 rows included
 
-- SWE-bench Pro: 21 rows (public 15, private 6).
-- HLE: 31 rows.
-- MCP Atlas: 0 rows. All 28 Registry models on the board show the same score
-  as the rows taken on 2026-09-24, so they are skipped (decision D6).
+- SWE-bench Pro: 22 rows (public 13, private 9).
+- HLE: 29 rows.
+- MCP Atlas: 1 row, GPT-5.2 (xhigh) 67.6, which the Registry did not hold.
+  The 28 Registry models already taken on 2026-09-24 show the same score and
+  are skipped (decision D6).
 
 Held (47): models not in the Registry or whose identity is not settled, for the
 new-model batch. Examples: GPT-5, GPT-5 Pro, GPT-5.1, GPT-5.2 Codex,
