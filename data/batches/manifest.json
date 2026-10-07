@@ -441,6 +441,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 50,
+      "file": "evaluator-deepswe-refresh-2026-10-07.json",
+      "sha256": "d6755efd294a2d89c0547adce2e5185c1022f13ffbca730fc4efc3a2070d3551",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

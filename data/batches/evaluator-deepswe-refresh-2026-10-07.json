@@ -1,0 +1,121 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "max",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "67",
+        "score_raw": "67%±4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "datacurve"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135832/https://deepswe.datacurve.ai/",
+        "sources": [
+          {
+            "url": "https://deepswe.datacurve.ai/",
+            "checked_at": "2026-10-07T13:58:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "67",
+        "score_raw": "67%±6%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "datacurve"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135832/https://deepswe.datacurve.ai/",
+        "sources": [
+          {
+            "url": "https://deepswe.datacurve.ai/",
+            "checked_at": "2026-10-07T13:58:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "47",
+        "score_raw": "47%±4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "datacurve"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135832/https://deepswe.datacurve.ai/",
+        "sources": [
+          {
+            "url": "https://deepswe.datacurve.ai/",
+            "checked_at": "2026-10-07T13:58:00Z",
+            "primary": true
+          }
+        ],
+        "supersedes": "00ef6704f1169a68d6b2f04768dd05e44c3b820e63ddde70ab67372718ec7b01"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "high",
+        "benchmark_slug": "deep-swe",
+        "benchmark_version": "1.1",
+        "metric_key": "deep-swe-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "36",
+        "score_raw": "36%±4%",
+        "reported_at": "2026-09-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "datacurve"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Datacurve",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135832/https://deepswe.datacurve.ai/",
+        "sources": [
+          {
+            "url": "https://deepswe.datacurve.ai/",
+            "checked_at": "2026-10-07T13:58:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

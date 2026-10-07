@@ -1,0 +1,149 @@
+[
+  {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "score": "74",
+    "registry_no": "10005",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "gemini-3.8-flash",
+    "effort": "high",
+    "score": "74",
+    "registry_no": "30004",
+    "status": "skipped: a developer row already quotes this run"
+  },
+  {
+    "model": "claude-opus-5",
+    "effort": "max",
+    "score": "74",
+    "registry_no": "20014",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "gpt-5.6-sol",
+    "effort": "max",
+    "score": "73",
+    "registry_no": "10010",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "claude-fable-5",
+    "effort": "xhigh",
+    "score": "70",
+    "registry_no": "20012",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "glm-5.3",
+    "effort": "max",
+    "score": "69",
+    "registry_no": "150005",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "kimi-k3",
+    "effort": "max",
+    "score": "69",
+    "registry_no": "120003",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "grok-4.6",
+    "effort": "medium",
+    "score": "67",
+    "registry_no": "40002",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "gpt-5.6-luna",
+    "effort": "max",
+    "score": "67",
+    "registry_no": "10009",
+    "status": "included"
+  },
+  {
+    "model": "gpt-5.5",
+    "effort": "xhigh",
+    "score": "67",
+    "registry_no": "10008",
+    "status": "included"
+  },
+  {
+    "model": "gemini-3.7-flash",
+    "effort": "medium",
+    "score": "65",
+    "registry_no": "30010",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "glm-5.3-flash",
+    "effort": "max",
+    "score": "63",
+    "registry_no": "150006",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "deepseek-v4-pro",
+    "effort": "max",
+    "score": "63",
+    "registry_no": "110002",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "claude-opus-4.8",
+    "effort": "max",
+    "score": "59",
+    "registry_no": "20011",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "qwen3.8-max",
+    "effort": "xhigh",
+    "score": "57",
+    "registry_no": "130008",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "muse-spark-1.2",
+    "effort": "xhigh",
+    "score": "55",
+    "registry_no": "80003",
+    "status": "skipped: a developer row already quotes this run"
+  },
+  {
+    "model": "claude-sonnet-5",
+    "effort": "max",
+    "score": "54",
+    "registry_no": "20013",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "deepseek-v4-flash",
+    "effort": "max",
+    "score": "53",
+    "registry_no": "110001",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "gemini-3.6-flash",
+    "effort": "high",
+    "score": "47",
+    "registry_no": "30007",
+    "status": "included: supersedes 00ef6704f1169a68d6b2f04768dd05e44c3b820e63ddde70ab67372718ec7b01 (49)"
+  },
+  {
+    "model": "glm-5.2",
+    "effort": "max",
+    "score": "44",
+    "registry_no": "150004",
+    "status": "skipped: unchanged from the Datacurve row already held"
+  },
+  {
+    "model": "gemini-3.5-flash",
+    "effort": "high",
+    "score": "36",
+    "registry_no": "30006",
+    "status": "included"
+  }
+]
