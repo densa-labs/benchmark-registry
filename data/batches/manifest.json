@@ -504,6 +504,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 57,
+      "file": "evaluator-cwe-bench-2026-10-07.json",
+      "sha256": "c3cc26771527360f0d6da550f6061daf7e6d013274bcab2904689769de714cda",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
