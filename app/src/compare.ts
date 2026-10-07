@@ -2,6 +2,7 @@ import type { BenchmarkRef, ResultRow } from "../worker/api";
 import type { ModelDetailResponse, ModelListEntry } from "./registry";
 import { benchmarkDisplayName } from "./benchmark-names";
 import { normalizeSearch } from "../worker/params";
+import { effortRank } from "./result-pivot";
 
 export interface ComparisonState {
   models: [string, string];
@@ -18,6 +19,9 @@ export interface ComparisonResponse {
   issues: string[];
 }
 
+/** Selector value for Any; the comma format writes it as a bare "~" too. */
+export const ANY_REASONING = "~";
+
 export function parseComparisonState(search: string): ComparisonState {
   const params = new URLSearchParams(search);
   // provider and released_* belonged to a retired model filter; old links still load and ignore them.
@@ -28,7 +32,8 @@ export function parseComparisonState(search: string): ComparisonState {
   if (params.has("models") && (params.has("model_a") || params.has("model_b")) || params.has("reasoning") && (params.has("reasoning_a") || params.has("reasoning_b"))) throw new Error("This comparison URL mixes selection formats.");
   const models = params.has("models") ? params.get("models")!.split(",") : [params.get("model_a") ?? "", params.get("model_b") ?? ""];
   if (models.length > 2 || models.some(value => value !== "" && !/^[0-9]{5,6}$/u.test(value))) throw new Error("Choose up to two models using their Registry Nos.");
-  const reasoning = params.has("reasoning") ? params.get("reasoning")!.split(",").map(value => value === "~" ? undefined : decodeURIComponent(value)) : [params.get("reasoning_a") ?? undefined, params.get("reasoning_b") ?? undefined];
+  // "~" (or no value) is Any: every recorded reasoning level for that model.
+  const reasoning = params.has("reasoning") ? params.get("reasoning")!.split(",").map(value => value === "~" ? undefined : decodeURIComponent(value)) : [params.get("reasoning_a"), params.get("reasoning_b")].map(value => value === null || value === ANY_REASONING ? undefined : value);
   if (reasoning.length > 2 || reasoning.some(value => value?.includes("\u0000"))) throw new Error("Choose one reasoning level per model.");
   const query = (params.get("q") ?? "").trim();
   if (new TextEncoder().encode(query).length > 50) throw new Error("Benchmark search must be 50 bytes or fewer.");
@@ -54,10 +59,12 @@ export function comparisonHref(state: ComparisonState): string {
   return params.size ? `/compare?${params}` : "/compare";
 }
 
+// Any (undefined) keeps the latest result at every recorded level, each labelled with
+// its level in the score cell; a named level filters to exactly that level.
 export function reasoningSelection(response: ModelDetailResponse | null, requested: string | undefined) {
-  const available = [...new Set(response?.data.results.map(row => row.reasoning_level ?? "") ?? [])].sort((a, b) => a.localeCompare(b, "en"));
-  const value = requested ?? available[0] ?? "";
-  return { available, value, unavailable: requested !== undefined && available.length > 0 && !available.includes(requested), results: response?.data.results.filter(row => (row.reasoning_level ?? "") === value) ?? [] };
+  const rows = response?.data.results ?? [];
+  const available = [...new Set(rows.map(row => row.reasoning_level ?? ""))].sort((a, b) => a.localeCompare(b, "en"));
+  return { available, value: requested, unavailable: requested !== undefined && available.length > 0 && !available.includes(requested), results: requested === undefined ? rows : rows.filter(row => (row.reasoning_level ?? "") === requested) };
 }
 
 export interface ComparisonRow {
@@ -81,7 +88,9 @@ function comparisonRow(key: string, benchmark: BenchmarkRef, results: Comparison
     if (setKey(a, row => JSON.stringify([row.metric.key, row.metric.unit, row.metric.storage_kind])) !== setKey(b, row => JSON.stringify([row.metric.key, row.metric.unit, row.metric.storage_kind]))) differences.push("Metrics differ.");
     if (setKey(a, evaluatorKey) !== setKey(b, evaluatorKey)) differences.push("Evaluator sets differ.");
   }
-  const order = (rows: ResultRow[]) => [...rows].sort((left, right) => evaluatorKey(left).localeCompare(evaluatorKey(right), "en") || left.result_key.localeCompare(right.result_key, "en"));
+  // Within an evaluator, Any lists levels from no effort to max, then unreviewed labels.
+  const order = (rows: ResultRow[]) => [...rows].sort((left, right) => evaluatorKey(left).localeCompare(evaluatorKey(right), "en") || effortRank(left) - effortRank(right)
+    || (left.reasoning_level ?? "").localeCompare(right.reasoning_level ?? "", "en") || left.result_key.localeCompare(right.result_key, "en"));
   return { key, benchmark, results: [order(a), order(b)], shared, differences };
 }
 

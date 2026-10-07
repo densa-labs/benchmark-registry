@@ -23,13 +23,22 @@ describe("comparison state and result identity", () => {
     expect(parseComparisonState(comparisonHref(state).split("?")[1]).reasoning).toEqual(state.reasoning);
   });
 
+  it("reads Any from the selector form and keeps named levels from older links", () => {
+    expect(parseComparisonState("?model_a=10001&model_b=20001&reasoning_a=~&reasoning_b=high").reasoning).toEqual([undefined, "high"]);
+    expect(parseComparisonState("?models=10001,20001").reasoning).toEqual([undefined, undefined]);
+    expect(parseComparisonState("?models=10001,20001&reasoning=high,max").reasoning).toEqual(["high", "max"]);
+    expect(comparisonHref({ ...parseComparisonState("?models=10001,20001"), reasoning: [undefined, undefined] })).toBe("/compare?models=10001%2C20001");
+  });
+
   it.each(["?models=10001,20001,30001", "?models=oops,20001", "?reasoning=high,max,low", "?page=0", "?limit=20", "?benchmarks=unknown", "?models=10001&models=20001", "?sort=score"])("rejects ambiguous or unsupported state %s", (search) => {
     expect(() => parseComparisonState(search)).toThrow();
   });
 
   it("filters reasoning exactly and reports an unavailable requested level", () => {
     const response = detail(modelA, [result(), result({ result_key: "b", reasoning_level: null }), result({ result_key: "c", reasoning_level: "max" })]);
-    expect(reasoningSelection(response, undefined)).toMatchObject({ value: "", available: ["", "high", "max"] });
+    expect(reasoningSelection(response, undefined)).toMatchObject({ value: undefined, available: ["", "high", "max"], unavailable: false });
+    expect(reasoningSelection(response, undefined).results.map(row => row.result_key)).toEqual([result().result_key, "b", "c"]);
+    expect(reasoningSelection(response, "").results.map(row => row.result_key)).toEqual(["b"]);
     expect(reasoningSelection(response, "max").results.map(row => row.result_key)).toEqual(["c"]);
     expect(reasoningSelection(response, "low")).toMatchObject({ value: "low", results: [], unavailable: true });
   });
