@@ -1,0 +1,19 @@
+assets:
+  logs: s3://swe-bench-submissions/verified/20250503_patchpilot-v1.1-o4-mini/logs
+  trajs: s3://swe-bench-submissions/verified/20250503_patchpilot-v1.1-o4-mini/trajs
+info:
+  logo: https://brand.ucsb.edu/sites/default/files/images/pages/Visual-Identity/Marks/Seal/navy-seal.gif
+  name: PatchPilot-v1.1
+  report: https://arxiv.org/abs/2502.02747
+  site: null
+tags:
+  checked: false
+  model:
+  - o4-mini
+  os_model: false
+  os_system: true
+  system:
+    attempts: 2+
+  agent: PatchPilot-v1.1
+  model_display: o4-mini
+  model_org: OpenAI

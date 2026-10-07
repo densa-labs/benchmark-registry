@@ -1,0 +1,27 @@
+assets:
+  logs: s3://swe-bench-submissions/bash-only/20250720_mini-v0.0.0-Llama-4-Maverick-17B-Instruct/logs
+  trajs: s3://swe-bench-submissions/bash-only/20250720_mini-v0.0.0-Llama-4-Maverick-17B-Instruct/trajs
+info:
+  model_release_date: 20250405
+  logo:
+  - https://upload.wikimedia.org/wikipedia/commons/d/d0/Meta_Platforms_logo.svg
+  mini-swe-agent_version: 0.0.0
+  name: Llama 4 Maverick Instruct
+  resolved: 21.04
+  site: https://www.together.ai/models/llama-4-maverick
+  cost: 156.85304879999998
+  instance_cost: 0.31370609759999996
+  instance_calls: 48.076
+tags:
+  checked: true
+  model:
+  - llama-4-maverick-instruct
+  org: Meta
+  os_model: false
+  os_system: true
+  system:
+    attempts: 1
+  agent: mini-SWE-agent
+  agent_org: SWE-agent
+  model_display: Llama 4 Maverick Instruct
+  model_org: Meta

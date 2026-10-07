@@ -1,0 +1,28 @@
+assets:
+  logs: s3://swe-bench-submissions/bash-only/20250726_mini-v1.0.0_claude-sonnet-4-20250514/logs
+  trajs: s3://swe-bench-submissions/bash-only/20250726_mini-v1.0.0_claude-sonnet-4-20250514/trajs
+  trajs_docent: https://docent.transluce.org/dashboard/0cb59666-bca8-476b-bf8e-3b924fafcae7
+info:
+  model_release_date: 20250522
+  logo:
+  - https://pbs.twimg.com/profile_images/1798110641414443008/XP8gyBaY_400x400.jpg
+  mini-swe-agent_version: 1.0.0
+  name: Claude 4 Sonnet (20250514)
+  resolved: 64.93
+  site: https://www.anthropic.com/news/claude-4
+  cost: 185.7265839
+  instance_cost: 0.37145316780000004
+  instance_calls: 37.172
+tags:
+  checked: true
+  model:
+  - claude-4-sonnet-20250514
+  org: Anthropic
+  os_model: false
+  os_system: true
+  system:
+    attempts: 1
+  agent: mini-SWE-agent
+  agent_org: SWE-agent
+  model_display: Claude 4 Sonnet
+  model_org: Anthropic

@@ -1,0 +1,21 @@
+assets:
+  logs: s3://swe-bench-submissions/verified/20250214_agentless_lite_o3_mini/logs
+  trajs: s3://swe-bench-submissions/verified/20250214_agentless_lite_o3_mini/trajs
+info:
+  logo: https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png
+  name: Agentless Lite + O3 Mini (20250214)
+  report: https://github.com/sorendunn/Agentless-Lite
+  site: https://github.com/sorendunn/Agentless-Lite
+tags:
+  checked: true
+  model:
+  - o3-mini
+  org: Agentless
+  os_model: false
+  os_system: true
+  system:
+    attempts: 2+
+  agent: Agentless Lite
+  agent_org: Agentless
+  model_display: O3 Mini
+  model_org: OpenAI
