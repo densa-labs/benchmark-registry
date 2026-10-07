@@ -459,6 +459,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 52,
+      "file": "evaluator-tau3-bench-2026-10-07.json",
+      "sha256": "cf1a254866a8ab021fd6eb238d04e5998ebe3725cca62581bc5d3391375cf497",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

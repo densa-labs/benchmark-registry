@@ -1,0 +1,965 @@
+[
+  {
+    "submission": "claude-opus-4-5_sierra_2026-02-26",
+    "model": "Claude Opus 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20007",
+    "domain": "airline",
+    "pass_1": 84.0,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-4-5_sierra_2026-02-26",
+    "model": "Claude Opus 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20007",
+    "domain": "retail",
+    "pass_1": 79.61,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-4-5_sierra_2026-02-26",
+    "model": "Claude Opus 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20007",
+    "domain": "telecom",
+    "pass_1": 92.32,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-4-5_sierra_2026-02-26",
+    "model": "Claude Opus 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20007",
+    "domain": "banking_knowledge",
+    "pass_1": 24.74,
+    "status": "included"
+  },
+  {
+    "submission": "claude-sonnet-4-5_sierra_2026-02-26",
+    "model": "Claude Sonnet 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20005",
+    "domain": "airline",
+    "pass_1": 72.0,
+    "status": "included"
+  },
+  {
+    "submission": "claude-sonnet-4-5_sierra_2026-02-26",
+    "model": "Claude Sonnet 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20005",
+    "domain": "retail",
+    "pass_1": 72.37,
+    "status": "included"
+  },
+  {
+    "submission": "claude-sonnet-4-5_sierra_2026-02-26",
+    "model": "Claude Sonnet 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20005",
+    "domain": "telecom",
+    "pass_1": 84.87,
+    "status": "included"
+  },
+  {
+    "submission": "claude-sonnet-4-5_sierra_2026-02-26",
+    "model": "Claude Sonnet 4.5",
+    "submitter": "Sierra",
+    "registry_no": "20005",
+    "domain": "banking_knowledge",
+    "pass_1": 25.26,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "airline",
+    "pass_1": 83.0,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "retail",
+    "pass_1": 81.58,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "telecom",
+    "pass_1": 89.69,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "banking_knowledge",
+    "pass_1": 32.22,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2-none_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "airline",
+    "pass_1": 52.5,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2-none_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "retail",
+    "pass_1": 75.0,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2-none_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "telecom",
+    "pass_1": 57.23684210526315,
+    "status": "included"
+  },
+  {
+    "submission": "gpt-5-2-none_sierra_2026-02-26",
+    "model": "GPT-5.2",
+    "submitter": "Sierra",
+    "registry_no": "10012",
+    "domain": "banking_knowledge",
+    "pass_1": 12.63,
+    "status": "included"
+  },
+  {
+    "submission": "glm-5-think_sierra_2026-03-02",
+    "model": "GLM-5",
+    "submitter": "Sierra",
+    "registry_no": "150002",
+    "domain": "airline",
+    "pass_1": 82.5,
+    "status": "included"
+  },
+  {
+    "submission": "glm-5-think_sierra_2026-03-02",
+    "model": "GLM-5",
+    "submitter": "Sierra",
+    "registry_no": "150002",
+    "domain": "retail",
+    "pass_1": 73.68,
+    "status": "included"
+  },
+  {
+    "submission": "glm-5-think_sierra_2026-03-02",
+    "model": "GLM-5",
+    "submitter": "Sierra",
+    "registry_no": "150002",
+    "domain": "telecom",
+    "pass_1": 86.84,
+    "status": "included"
+  },
+  {
+    "submission": "glm-5-think_sierra_2026-03-02",
+    "model": "GLM-5",
+    "submitter": "Sierra",
+    "registry_no": "150002",
+    "domain": "banking_knowledge",
+    "pass_1": 9.79,
+    "status": "included"
+  },
+  {
+    "submission": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+    "model": "Qwen3.5-397B-A17B",
+    "submitter": "Sierra",
+    "registry_no": "130003",
+    "domain": "airline",
+    "pass_1": 81.5,
+    "status": "included"
+  },
+  {
+    "submission": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+    "model": "Qwen3.5-397B-A17B",
+    "submitter": "Sierra",
+    "registry_no": "130003",
+    "domain": "retail",
+    "pass_1": 84.43,
+    "status": "included"
+  },
+  {
+    "submission": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+    "model": "Qwen3.5-397B-A17B",
+    "submitter": "Sierra",
+    "registry_no": "130003",
+    "domain": "telecom",
+    "pass_1": 97.81,
+    "status": "included"
+  },
+  {
+    "submission": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+    "model": "Qwen3.5-397B-A17B",
+    "submitter": "Sierra",
+    "registry_no": "130003",
+    "domain": "banking_knowledge",
+    "pass_1": 9.79,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-flash_sierra_2026-03-02",
+    "model": "Gemini 3 Flash",
+    "submitter": "Sierra",
+    "registry_no": "30009",
+    "domain": "airline",
+    "pass_1": 82.5,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-flash_sierra_2026-03-02",
+    "model": "Gemini 3 Flash",
+    "submitter": "Sierra",
+    "registry_no": "30009",
+    "domain": "retail",
+    "pass_1": 76.75,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-flash_sierra_2026-03-02",
+    "model": "Gemini 3 Flash",
+    "submitter": "Sierra",
+    "registry_no": "30009",
+    "domain": "telecom",
+    "pass_1": 91.23,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-flash_sierra_2026-03-02",
+    "model": "Gemini 3 Flash",
+    "submitter": "Sierra",
+    "registry_no": "30009",
+    "domain": "banking_knowledge",
+    "pass_1": 27.32,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-pro_sierra_2026-03-02",
+    "model": "Gemini 3 Pro",
+    "submitter": "Sierra",
+    "registry_no": "30008",
+    "domain": "airline",
+    "pass_1": 80.5,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-pro_sierra_2026-03-02",
+    "model": "Gemini 3 Pro",
+    "submitter": "Sierra",
+    "registry_no": "30008",
+    "domain": "retail",
+    "pass_1": 75.88,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-pro_sierra_2026-03-02",
+    "model": "Gemini 3 Pro",
+    "submitter": "Sierra",
+    "registry_no": "30008",
+    "domain": "telecom",
+    "pass_1": 91.01,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-3-pro_sierra_2026-03-02",
+    "model": "Gemini 3 Pro",
+    "submitter": "Sierra",
+    "registry_no": "30008",
+    "domain": "banking_knowledge",
+    "pass_1": 18.04,
+    "status": "included"
+  },
+  {
+    "submission": "distyl-buttonagent_distyl_2026-03-25",
+    "model": "Distyl ButtonAgent",
+    "submitter": "Distyl AI",
+    "registry_no": null,
+    "domain": "banking_knowledge",
+    "pass_1": 31.19,
+    "status": "skipped: not run by Sierra"
+  },
+  {
+    "submission": "gpt-5-4_sierra_2026-03-25",
+    "model": "GPT-5.4",
+    "submitter": "Sierra",
+    "registry_no": "10007",
+    "domain": "banking_knowledge",
+    "pass_1": 39.43,
+    "status": "included"
+  },
+  {
+    "submission": "raft-30b-a3b_neu_2026-04-29",
+    "model": "RAFT-30B-A3B",
+    "submitter": "Northeastern University HAI Lab",
+    "registry_no": null,
+    "domain": "retail",
+    "pass_1": 82.45614035087719,
+    "status": "skipped: not run by Sierra"
+  },
+  {
+    "submission": "gpt-5-5_sierra_2026-05-05",
+    "model": "GPT-5.5",
+    "submitter": "Sierra",
+    "registry_no": "10008",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gpt-5-5_sierra_2026-05-05",
+    "model": "GPT-5.5",
+    "submitter": "Sierra",
+    "registry_no": "10008",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gpt-5-5_sierra_2026-05-05",
+    "model": "GPT-5.5",
+    "submitter": "Sierra",
+    "registry_no": "10008",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gpt-5-5_sierra_2026-05-05",
+    "model": "GPT-5.5",
+    "submitter": "Sierra",
+    "registry_no": "10008",
+    "domain": "banking_knowledge",
+    "pass_1": 44.58762886597938,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-4-6_sierra_2026-05-05",
+    "model": "Claude Opus 4.6",
+    "submitter": "Sierra",
+    "registry_no": "20008",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-6_sierra_2026-05-05",
+    "model": "Claude Opus 4.6",
+    "submitter": "Sierra",
+    "registry_no": "20008",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-6_sierra_2026-05-05",
+    "model": "Claude Opus 4.6",
+    "submitter": "Sierra",
+    "registry_no": "20008",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-6_sierra_2026-05-05",
+    "model": "Claude Opus 4.6",
+    "submitter": "Sierra",
+    "registry_no": "20008",
+    "domain": "banking_knowledge",
+    "pass_1": 27.32,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-4-7_sierra_2026-05-05",
+    "model": "Claude Opus 4.7",
+    "submitter": "Sierra",
+    "registry_no": "20010",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-7_sierra_2026-05-05",
+    "model": "Claude Opus 4.7",
+    "submitter": "Sierra",
+    "registry_no": "20010",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-7_sierra_2026-05-05",
+    "model": "Claude Opus 4.7",
+    "submitter": "Sierra",
+    "registry_no": "20010",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-7_sierra_2026-05-05",
+    "model": "Claude Opus 4.7",
+    "submitter": "Sierra",
+    "registry_no": "20010",
+    "domain": "banking_knowledge",
+    "pass_1": 40.20618556701031,
+    "status": "included"
+  },
+  {
+    "submission": "gemini-2-5-pro_sierra_2026-05-05",
+    "model": "Gemini 2.5 Pro",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "gemini-2-5-pro_sierra_2026-05-05",
+    "model": "Gemini 2.5 Pro",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "gemini-2-5-pro_sierra_2026-05-05",
+    "model": "Gemini 2.5 Pro",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "gemini-2-5-pro_sierra_2026-05-05",
+    "model": "Gemini 2.5 Pro",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "banking_knowledge",
+    "pass_1": 13.66,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "gemini-3-1-pro-preview_sierra_2026-05-05",
+    "model": "Gemini 3.1 Pro Preview",
+    "submitter": "Sierra",
+    "registry_no": "30005",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gemini-3-1-pro-preview_sierra_2026-05-05",
+    "model": "Gemini 3.1 Pro Preview",
+    "submitter": "Sierra",
+    "registry_no": "30005",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gemini-3-1-pro-preview_sierra_2026-05-05",
+    "model": "Gemini 3.1 Pro Preview",
+    "submitter": "Sierra",
+    "registry_no": "30005",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gemini-3-1-pro-preview_sierra_2026-05-05",
+    "model": "Gemini 3.1 Pro Preview",
+    "submitter": "Sierra",
+    "registry_no": "30005",
+    "domain": "banking_knowledge",
+    "pass_1": 26.03,
+    "status": "included"
+  },
+  {
+    "submission": "grok-4-fast_sierra_2026-05-05",
+    "model": "Grok 4 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-fast_sierra_2026-05-05",
+    "model": "Grok 4 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-fast_sierra_2026-05-05",
+    "model": "Grok 4 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-fast_sierra_2026-05-05",
+    "model": "Grok 4 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "banking_knowledge",
+    "pass_1": 15.72,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-1-fast_sierra_2026-05-05",
+    "model": "Grok 4.1 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-1-fast_sierra_2026-05-05",
+    "model": "Grok 4.1 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-1-fast_sierra_2026-05-05",
+    "model": "Grok 4.1 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-1-fast_sierra_2026-05-05",
+    "model": "Grok 4.1 fast",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "banking_knowledge",
+    "pass_1": 13.14,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-2_sierra_2026-05-05",
+    "model": "Grok 4.2",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-2_sierra_2026-05-05",
+    "model": "Grok 4.2",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-2_sierra_2026-05-05",
+    "model": "Grok 4.2",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "grok-4-2_sierra_2026-05-05",
+    "model": "Grok 4.2",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "banking_knowledge",
+    "pass_1": 18.04,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "gpt-5-6-sol_sierra_2026-08-04",
+    "model": "GPT-5.6-sol",
+    "submitter": "Sierra",
+    "registry_no": "10010",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gpt-5-6-sol_sierra_2026-08-04",
+    "model": "GPT-5.6-sol",
+    "submitter": "Sierra",
+    "registry_no": "10010",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gpt-5-6-sol_sierra_2026-08-04",
+    "model": "GPT-5.6-sol",
+    "submitter": "Sierra",
+    "registry_no": "10010",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "gpt-5-6-sol_sierra_2026-08-04",
+    "model": "GPT-5.6-sol",
+    "submitter": "Sierra",
+    "registry_no": "10010",
+    "domain": "banking_knowledge",
+    "pass_1": 46.90721649484536,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-4-8_sierra_2026-08-04",
+    "model": "Claude Opus 4.8",
+    "submitter": "Sierra",
+    "registry_no": "20011",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-8_sierra_2026-08-04",
+    "model": "Claude Opus 4.8",
+    "submitter": "Sierra",
+    "registry_no": "20011",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-8_sierra_2026-08-04",
+    "model": "Claude Opus 4.8",
+    "submitter": "Sierra",
+    "registry_no": "20011",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-4-8_sierra_2026-08-04",
+    "model": "Claude Opus 4.8",
+    "submitter": "Sierra",
+    "registry_no": "20011",
+    "domain": "banking_knowledge",
+    "pass_1": 39.69072164948454,
+    "status": "included"
+  },
+  {
+    "submission": "claude-fable-5_sierra_2026-08-04",
+    "model": "Claude Fable 5",
+    "submitter": "Sierra",
+    "registry_no": "20012",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-fable-5_sierra_2026-08-04",
+    "model": "Claude Fable 5",
+    "submitter": "Sierra",
+    "registry_no": "20012",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-fable-5_sierra_2026-08-04",
+    "model": "Claude Fable 5",
+    "submitter": "Sierra",
+    "registry_no": "20012",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-fable-5_sierra_2026-08-04",
+    "model": "Claude Fable 5",
+    "submitter": "Sierra",
+    "registry_no": "20012",
+    "domain": "banking_knowledge",
+    "pass_1": 39.69072164948454,
+    "status": "included"
+  },
+  {
+    "submission": "muse-spark-1-1_sierra_2026-08-04",
+    "model": "Muse Spark 1.1",
+    "submitter": "Sierra",
+    "registry_no": "80002",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "muse-spark-1-1_sierra_2026-08-04",
+    "model": "Muse Spark 1.1",
+    "submitter": "Sierra",
+    "registry_no": "80002",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "muse-spark-1-1_sierra_2026-08-04",
+    "model": "Muse Spark 1.1",
+    "submitter": "Sierra",
+    "registry_no": "80002",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "muse-spark-1-1_sierra_2026-08-04",
+    "model": "Muse Spark 1.1",
+    "submitter": "Sierra",
+    "registry_no": "80002",
+    "domain": "banking_knowledge",
+    "pass_1": 40.4639175257732,
+    "status": "included"
+  },
+  {
+    "submission": "kimi-k3_sierra_2026-08-04",
+    "model": "Kimi K3",
+    "submitter": "Sierra",
+    "registry_no": "120003",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "kimi-k3_sierra_2026-08-04",
+    "model": "Kimi K3",
+    "submitter": "Sierra",
+    "registry_no": "120003",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "kimi-k3_sierra_2026-08-04",
+    "model": "Kimi K3",
+    "submitter": "Sierra",
+    "registry_no": "120003",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "kimi-k3_sierra_2026-08-04",
+    "model": "Kimi K3",
+    "submitter": "Sierra",
+    "registry_no": "120003",
+    "domain": "banking_knowledge",
+    "pass_1": 37.11340206185567,
+    "status": "included"
+  },
+  {
+    "submission": "glm-5-2_sierra_2026-08-04",
+    "model": "GLM-5.2",
+    "submitter": "Sierra",
+    "registry_no": "150004",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "glm-5-2_sierra_2026-08-04",
+    "model": "GLM-5.2",
+    "submitter": "Sierra",
+    "registry_no": "150004",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "glm-5-2_sierra_2026-08-04",
+    "model": "GLM-5.2",
+    "submitter": "Sierra",
+    "registry_no": "150004",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "glm-5-2_sierra_2026-08-04",
+    "model": "GLM-5.2",
+    "submitter": "Sierra",
+    "registry_no": "150004",
+    "domain": "banking_knowledge",
+    "pass_1": 37.11340206185567,
+    "status": "included"
+  },
+  {
+    "submission": "grok-4-5_sierra_2026-08-04",
+    "model": "Grok 4.5",
+    "submitter": "Sierra",
+    "registry_no": "40001",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "grok-4-5_sierra_2026-08-04",
+    "model": "Grok 4.5",
+    "submitter": "Sierra",
+    "registry_no": "40001",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "grok-4-5_sierra_2026-08-04",
+    "model": "Grok 4.5",
+    "submitter": "Sierra",
+    "registry_no": "40001",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "grok-4-5_sierra_2026-08-04",
+    "model": "Grok 4.5",
+    "submitter": "Sierra",
+    "registry_no": "40001",
+    "domain": "banking_knowledge",
+    "pass_1": 47.93814432989691,
+    "status": "included"
+  },
+  {
+    "submission": "inkling_sierra_2026-08-04",
+    "model": "Inkling",
+    "submitter": "Sierra",
+    "registry_no": "160001",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "inkling_sierra_2026-08-04",
+    "model": "Inkling",
+    "submitter": "Sierra",
+    "registry_no": "160001",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "inkling_sierra_2026-08-04",
+    "model": "Inkling",
+    "submitter": "Sierra",
+    "registry_no": "160001",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "inkling_sierra_2026-08-04",
+    "model": "Inkling",
+    "submitter": "Sierra",
+    "registry_no": "160001",
+    "domain": "banking_knowledge",
+    "pass_1": 25.0,
+    "status": "included"
+  },
+  {
+    "submission": "claude-opus-5_sierra_2026-08-04",
+    "model": "Claude Opus 5",
+    "submitter": "Sierra",
+    "registry_no": "20014",
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-5_sierra_2026-08-04",
+    "model": "Claude Opus 5",
+    "submitter": "Sierra",
+    "registry_no": "20014",
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-5_sierra_2026-08-04",
+    "model": "Claude Opus 5",
+    "submitter": "Sierra",
+    "registry_no": "20014",
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: no score for this domain"
+  },
+  {
+    "submission": "claude-opus-5_sierra_2026-08-04",
+    "model": "Claude Opus 5",
+    "submitter": "Sierra",
+    "registry_no": "20014",
+    "domain": "banking_knowledge",
+    "pass_1": 48.71134020618557,
+    "status": "included"
+  },
+  {
+    "submission": "qwen3-8-max_sierra_2026-08-04",
+    "model": "Qwen 3.8 Max",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "airline",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "qwen3-8-max_sierra_2026-08-04",
+    "model": "Qwen 3.8 Max",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "retail",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "qwen3-8-max_sierra_2026-08-04",
+    "model": "Qwen 3.8 Max",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "telecom",
+    "pass_1": null,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  },
+  {
+    "submission": "qwen3-8-max_sierra_2026-08-04",
+    "model": "Qwen 3.8 Max",
+    "submitter": "Sierra",
+    "registry_no": null,
+    "domain": "banking_knowledge",
+    "pass_1": 55.154639175257735,
+    "status": "held: model not in Registry or release date differs from the Registry's"
+  }
+]
