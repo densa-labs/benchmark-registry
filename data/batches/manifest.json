@@ -396,6 +396,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 45,
+      "file": "evaluator-toolathlon-2026-10-07.json",
+      "sha256": "e4c68f745151fe8ccae58c7762a39b0d4b96d68ebb488a66956533650f2d0ed7",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

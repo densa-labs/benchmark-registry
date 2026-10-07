@@ -1,0 +1,686 @@
+[
+  {
+    "table": "Verified",
+    "model": "GLM 5.3 Flash (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-08-30",
+    "pass_at_1": "78.4",
+    "status": "skipped: the Registry already holds this score via the developer's report of the same run"
+  },
+  {
+    "table": "Verified",
+    "model": "Kimi K3 (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-16",
+    "pass_at_1": "76.5",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Claude Opus 4.8 (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-06-30",
+    "pass_at_1": "76.2",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Muse Spark 1.2 (xhigh)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-08-05",
+    "pass_at_1": "75.9",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Muse Spark 1.1 (xhigh)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-09",
+    "pass_at_1": "75.6",
+    "status": "skipped: the Registry already holds this score via the developer's report of the same run"
+  },
+  {
+    "table": "Verified",
+    "model": "DeepSeek V4 Pro 0813 (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-08-13",
+    "pass_at_1": "74.4",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Verified",
+    "model": "GPT-5.5 (xhigh)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-06-30",
+    "pass_at_1": "73.5",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Claude Sonnet 5 (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-01",
+    "pass_at_1": "71.6",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "DeepSeek V4 Flash 0731 (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-31",
+    "pass_at_1": "70.7",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Verified",
+    "model": "Gemini 3.5 Flash (high)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-06-30",
+    "pass_at_1": "67.3",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Gemini 3.1 Pro (high)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-01",
+    "pass_at_1": "61.1",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "GLM 5.2 (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-06-30",
+    "pass_at_1": "59.9",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Kimi K2.6",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-15",
+    "pass_at_1": "58.0",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Kimi K2.7 Code",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-06-30",
+    "pass_at_1": "58.0",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Verified",
+    "model": "Gemini 3.5 Flash-Lite (high)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "57.1",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Verified",
+    "model": "Hy3 (high)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "56.8",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Verified",
+    "model": "DeepSeek V4 Pro (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-06-30",
+    "pass_at_1": "55.9",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Inkling-Small (xhigh)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "54.4",
+    "status": "skipped: the Registry already holds this score via the developer's report of the same run"
+  },
+  {
+    "table": "Verified",
+    "model": "DeepSeek V4 Flash (max)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "50.9",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "MiMo V2.5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "49.1",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Verified",
+    "model": "MiniMax M2.7",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "47.5",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Inkling (xhigh)",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-15",
+    "pass_at_1": "45.5",
+    "status": "skipped: the Registry already holds this score via the developer's report of the same run"
+  },
+  {
+    "table": "Verified",
+    "model": "Qwen3.5 397B-A17B",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-30",
+    "pass_at_1": "40.7",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Nemotron 3 Ultra",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-15",
+    "pass_at_1": "34.3",
+    "status": "included"
+  },
+  {
+    "table": "Verified",
+    "model": "Kimi K2.5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-07-15",
+    "pass_at_1": "33.0",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-3.5-Flash",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-05-19",
+    "pass_at_1": "56.5",
+    "status": "skipped: the Registry already holds this score via the developer's report of the same run"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.5-xhigh",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-24",
+    "pass_at_1": "55.6",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.4-xhigh",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-03-06",
+    "pass_at_1": "",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "DeepSeek-V4-Pro Max",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-04-25",
+    "pass_at_1": "52.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Opus-4.7",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-04-25",
+    "pass_at_1": "52.8†",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.3-Codex-xhigh",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-03-06",
+    "pass_at_1": "51.9",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Kimi-K2.6",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-21",
+    "pass_at_1": "50.0",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-3-Flash",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-18",
+    "pass_at_1": "49.4",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-3.1-Pro",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-03-13",
+    "pass_at_1": "48.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "DeepSeek-V4-Flash Max",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-04-25",
+    "pass_at_1": "48.2",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Opus-4.6",
+    "verified": true,
+    "agent": "Claude Agent SDK",
+    "date": "2026-03-06",
+    "pass_at_1": "47.2†",
+    "status": "held: agent 'Claude Agent SDK' differs from the default harness"
+  },
+  {
+    "table": "Original",
+    "model": "MiniMax-M2.7",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-03-18",
+    "pass_at_1": "46.3",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Sonnet-4.6",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-02-23",
+    "pass_at_1": "44.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.2-xhigh‡",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-18",
+    "pass_at_1": "43.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Opus-4.5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-11-27",
+    "pass_at_1": "43.5",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.4-mini-xhigh",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-03-17",
+    "pass_at_1": "42.9",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.2-high‡",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-17",
+    "pass_at_1": "41.7",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "MiniMax-M2.1",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-25",
+    "pass_at_1": "40.7",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "GLM-5.1",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-07",
+    "pass_at_1": "40.7",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen3.6-Plus",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-02",
+    "pass_at_1": "39.8",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "GLM-5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-02-13",
+    "pass_at_1": "39.2",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Sonnet-4.5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "38.9",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "MiniMax-M2.5",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-03-18",
+    "pass_at_1": "38.3",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen3.5-397B-A17B",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-02",
+    "pass_at_1": "38.3",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5-high‡",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-17",
+    "pass_at_1": "37.7",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen3.5-Plus",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-02-21",
+    "pass_at_1": "37.7",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.1-high‡",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-17",
+    "pass_at_1": "37.0",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-3-Pro",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-11-22",
+    "pass_at_1": "36.4",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5.4-nano-xhigh",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-03-17",
+    "pass_at_1": "35.5",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "DeepSeek-V3.2-Thinking",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-01",
+    "pass_at_1": "35.2",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen3.5-27B",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-17",
+    "pass_at_1": "31.5",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Sonnet-4",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "29.9",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen3.5-35BA3B",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-17",
+    "pass_at_1": "28.7",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Kimi-K2.5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-02-04",
+    "pass_at_1": "27.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "Grok-4",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "27.5",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen3.6-35BA3B",
+    "verified": false,
+    "agent": "Default",
+    "date": "2026-04-17",
+    "pass_at_1": "26.9",
+    "status": "skipped: submitted result; the board links to the developer's own report"
+  },
+  {
+    "table": "Original",
+    "model": "Claude-Haiku-4.5",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "26.2",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "GLM-4.7",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-12-25",
+    "pass_at_1": "23.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "DeepSeek-V3.2-Exp",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "20.1",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "GLM-4.6",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "18.8",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Grok-Code-Fast-1",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "18.5",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Grok-4-Fast",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "18.5",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Kimi-K2-thinking",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-11-22",
+    "pass_at_1": "17.6",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "o3",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "17.0",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "o4-mini",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "14.8",
+    "status": "included"
+  },
+  {
+    "table": "Original",
+    "model": "GPT-5-mini",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "14.5",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Qwen-3-Coder",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "14.5",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-3.1-Flash-Lite",
+    "verified": true,
+    "agent": "Default",
+    "date": "2026-03-13",
+    "pass_at_1": "14.2",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Kimi-K2-0905",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "13.0",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-2.5-Pro",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "10.5",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "table": "Original",
+    "model": "Gemini-2.5-Flash",
+    "verified": true,
+    "agent": "Default",
+    "date": "2025-10-28",
+    "pass_at_1": "3.7",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  }
+]
