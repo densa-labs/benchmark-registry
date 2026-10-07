@@ -477,6 +477,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 54,
+      "file": "evaluator-surge-2026-10-07.json",
+      "sha256": "374859c7c123d27706b5b661400a90fd90a666b0ffeca42c4677359e1e12aa67",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

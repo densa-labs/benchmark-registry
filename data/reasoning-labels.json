@@ -393,6 +393,27 @@
       "configuration": null,
       "status": "not_reported",
       "note": "Reasoning switched on; the source states no level."
+    },
+    {
+      "label": "Adaptive/Max",
+      "effort": "max",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Adaptive thinking at max effort, as labelled."
+    },
+    {
+      "label": "Medium",
+      "effort": "medium",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Case variant of medium."
+    },
+    {
+      "label": "Thinking on",
+      "effort": null,
+      "configuration": null,
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level."
     }
   ]
 }

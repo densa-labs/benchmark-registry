@@ -1,0 +1,2173 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "riemann-bench",
+        "canonical_name": "Riemann-bench",
+        "source_url": "https://surgehq.ai/benchmarks/riemann-bench",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "October 2026 leaderboard",
+            "version_slug": "october-2026",
+            "release_at": "2026-10-07",
+            "release_precision": "date",
+            "metric_key": "riemann-bench-pass-at-1",
+            "source_url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "source_checked_at": "2026-10-07T14:15:00Z",
+            "evaluator_keys": [
+              "surge-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "chartography",
+        "canonical_name": "Chartography",
+        "source_url": "https://surgehq.ai/benchmarks/chartography",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "October 2026 leaderboard",
+            "version_slug": "october-2026",
+            "release_at": "2026-10-07",
+            "release_precision": "date",
+            "metric_key": "chartography-pass-at-1",
+            "source_url": "https://surgehq.ai/benchmarks/chartography",
+            "source_checked_at": "2026-10-07T14:15:00Z",
+            "evaluator_keys": [
+              "surge-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "74.4",
+        "score_raw": "74.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "72",
+        "score_raw": "72%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "69.6",
+        "score_raw": "69.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "68",
+        "score_raw": "68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "66.4",
+        "score_raw": "66.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "65.6",
+        "score_raw": "65.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "64.8",
+        "score_raw": "64.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "60",
+        "score_raw": "60%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "59.2",
+        "score_raw": "59.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "55.2",
+        "score_raw": "55.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "51.2",
+        "score_raw": "51.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "47.2",
+        "score_raw": "47.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "41.6",
+        "score_raw": "41.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30010",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "39.2",
+        "score_raw": "39.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "38.4",
+        "score_raw": "38.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40001",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "38.4",
+        "score_raw": "38.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "37.6",
+        "score_raw": "37.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "37.6",
+        "score_raw": "37.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "36.8",
+        "score_raw": "36.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "33.6",
+        "score_raw": "33.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "32.8",
+        "score_raw": "32.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "High",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "30.4",
+        "score_raw": "30.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80005",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "28",
+        "score_raw": "28%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "27.2",
+        "score_raw": "27.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80003",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "23.2",
+        "score_raw": "23.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "20.8",
+        "score_raw": "20.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130006",
+        "reasoning_level": "Thinking on",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "15.2",
+        "score_raw": "15.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "15.2",
+        "score_raw": "15.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "15.2",
+        "score_raw": "15.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80004",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "13.6",
+        "score_raw": "13.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150005",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "12",
+        "score_raw": "12%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "Thinking on",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "12",
+        "score_raw": "12%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "11.2",
+        "score_raw": "11.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "10.4",
+        "score_raw": "10.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150004",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "10.4",
+        "score_raw": "10.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150006",
+        "reasoning_level": "Max",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "8.8",
+        "score_raw": "8.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "Thinking on",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "7.2",
+        "score_raw": "7.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "70003",
+        "reasoning_level": "",
+        "benchmark_slug": "riemann-bench",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "riemann-bench-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "4.8",
+        "score_raw": "4.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141323/https://surgehq.ai/benchmarks/riemann-bench",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/riemann-bench",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "71",
+        "score_raw": "71%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "66.3",
+        "score_raw": "66.3%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "53.6",
+        "score_raw": "53.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "46.2",
+        "score_raw": "46.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "45",
+        "score_raw": "45%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30004",
+        "reasoning_level": "High",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "40.9",
+        "score_raw": "40.9%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30010",
+        "reasoning_level": "High",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "40.4",
+        "score_raw": "40.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "34.8",
+        "score_raw": "34.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30007",
+        "reasoning_level": "Medium",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "34",
+        "score_raw": "34%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10011",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "34",
+        "score_raw": "34%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80003",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "32.1",
+        "score_raw": "32.1%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10009",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "31.4",
+        "score_raw": "31.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "31",
+        "score_raw": "31%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "29.6",
+        "score_raw": "29.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10013",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "29.1",
+        "score_raw": "29.1%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130008",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "29.1",
+        "score_raw": "29.1%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80005",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "27.6",
+        "score_raw": "27.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "27.3",
+        "score_raw": "27.3%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "26.6",
+        "score_raw": "26.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "High",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "26.1",
+        "score_raw": "26.1%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "24.4",
+        "score_raw": "24.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40002",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "20.5",
+        "score_raw": "20.5%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80004",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "17.2",
+        "score_raw": "17.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40001",
+        "reasoning_level": "High",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "17",
+        "score_raw": "17%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "16.6",
+        "score_raw": "16.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "16.5",
+        "score_raw": "16.5%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150006",
+        "reasoning_level": "Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "16.3",
+        "score_raw": "16.3%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "Adaptive/Max",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "15.9",
+        "score_raw": "15.9%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130007",
+        "reasoning_level": "Thinking on",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "15.8",
+        "score_raw": "15.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40003",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "14.7",
+        "score_raw": "14.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "Thinking on",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "12.6",
+        "score_raw": "12.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "Thinking on",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "12.2",
+        "score_raw": "12.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "High",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "10",
+        "score_raw": "10%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160002",
+        "reasoning_level": "xHigh",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "9.1",
+        "score_raw": "9.1%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "90001",
+        "reasoning_level": "",
+        "benchmark_slug": "chartography",
+        "benchmark_version": "October 2026 leaderboard",
+        "metric_key": "chartography-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "9",
+        "score_raw": "9%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "surge-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Surge AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007141430/https://surgehq.ai/benchmarks/chartography",
+        "sources": [
+          {
+            "url": "https://surgehq.ai/benchmarks/chartography",
+            "checked_at": "2026-10-07T14:15:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

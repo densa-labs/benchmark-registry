@@ -9,4 +9,7 @@ INSERT INTO reasoning_labels (label, effort, status, note) VALUES
     ('Thinking', NULL, 'not_reported', 'Case variant of thinking; the source states no level.'),
     ('0.99', NULL, 'not_reported', 'Numeric provider scale; no level on the fixed vocabulary, as effort=0.99.'),
     ('Max', 'max', 'mapped', 'Case variant of max.'),
-    ('enabled', NULL, 'not_reported', 'Reasoning switched on; the source states no level.');
+    ('enabled', NULL, 'not_reported', 'Reasoning switched on; the source states no level.'),
+    ('Adaptive/Max', 'max', 'mapped', 'Adaptive thinking at max effort, as labelled.'),
+    ('Medium', 'medium', 'mapped', 'Case variant of medium.'),
+    ('Thinking on', NULL, 'not_reported', 'Reasoning switched on; the source states no level.');
