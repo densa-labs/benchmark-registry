@@ -540,6 +540,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 61,
+      "file": "mmmu-pro-settings-2026-10-08.json",
+      "sha256": "0645325bb7a2fa7ed5a1bc69b845a0f70fbc6ea76a034fe6ecf1d154422f335f",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

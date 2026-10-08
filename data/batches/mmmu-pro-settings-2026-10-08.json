@@ -1,0 +1,1148 @@
+{
+  "records": [
+    {
+      "operation": "score_setting",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "key": "mmmu-pro-overall",
+        "label": "Overall (Standard 10 options + Vision)",
+        "definition": "The average of the Standard setting with augmented options (usually 10) and the Vision-only input setting. The paper defines this as the overall MMMU-Pro score (Section 3.1; Table 1).",
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "score_setting",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "key": "mmmu-pro-standard-10",
+        "label": "Standard (10 options)",
+        "definition": "The Standard setting with augmented options (usually 10) only.",
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "score_setting",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "key": "mmmu-pro-vision",
+        "label": "Vision",
+        "definition": "The Vision-only input setting only: each question and its options are embedded in a screenshot or photo.",
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "score_setting",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "key": "mmmu-pro-standard-4",
+        "label": "Standard (4 options)",
+        "definition": "The Standard setting without augmented options (usually 4). The paper reports it only for comparison; it is not part of the overall score.",
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "score_setting",
+      "record": {
+        "benchmark_slug": "mmmu-pro",
+        "key": "mmmu-pro-not-stated",
+        "label": "Not stated",
+        "definition": "The source reports an MMMU-Pro score without saying which setting it covers.",
+        "source_url": "https://arxiv.org/abs/2409.02813",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "00dbd5e1c50aad09d564f10bdd235f4080c1c378482e6f99c66a235ae2a3f829",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "03e62b17c9b6fb6bde0a3dafb2abcb1536416aafd06586ecf55d97c08d26b715",
+        "setting_key": "mmmu-pro-standard-10",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "06094e3a0c050dfea3257567f53618903d90e347d3863f74c699ff0133cdc7ec",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "071eacebd6c6d46ff60225e423e81e8625eb8f0cd5bd83c2b7a61b8555d1c47e",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "073a7769442abc0aff252a05d752867ac42bc8d0b9beb51716e90ea514cf8e67",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "0d4337468ea549ef8cf0d04daa0b09259812cde8b02e2fe9175cc8d83ec168e9",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "0d65f78673466470cb08ec39398d0232b1abfa3a984ac8f19e7a4f8331d71694",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "1186af84bebcb242e1986474753138920ae776cd2d60455096bd132e3910baea",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "131d8ddb12aeeda536a35afef9b18a9eedcc67e5a7510619321691dfe8370ee0",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "1538709ad2356809a34b440db044ed775d7e9456672482784fce133ccc0c526b",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "15b334c1e54652d705fe23b16aea5ee3180978d19f8fab4ebb3f27780fa0a7cb",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "166efbbafc559f37cabab45e22424b990086d6d7fb89b744c2ea886719ee8d07",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "18ae75d217d07e9015a64439bd1711a9e250529e63c99a0599723ac68fc5c72b",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "19492b8cab7a394c89649a552cd8930cd592cd987bd130be7d4b2fce04f0ad74",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "1b46ee8a0dbc130204e1e28122cdf4dff8df8808e02d3f346ca151b3b8e1eb3c",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "201ca57d390279bc60453369ff1bc8909348351218ddeb840eae55fd94ff7ed4",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "20bc69bafe417f3e84d174f62ca5fb8e80d9ab1e74ba8d19d0d73e4cc5a55b3f",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "241822896913cb02611833d618aae99abbba120671a93e21a22b8f793db19cf7",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "2c3091179d0105344a94f43c660650dc88edfa54b339c8af02335f6b14bacde3",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/introducing-gpt-5-2/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "2f00f8a1b4d68a77e778e0fd5d13c4158250ee421cc570641b98a09199d2e8f2",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "3324dc843e5a2a763113754b95672019ec558b5f96418f3724e51e7f448e6f53",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "350f162c0fb7b12e2ee0572f3d73cc24cc7ccd6f544788f6c53afcc3c5811add",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "36206b87e801318e6941406fc2c979f7699b2bdc1671b2e59e0cb2dc2b82e521",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "394b1bd08ed7be68880205945fb6732ba366efdafc22731062ed6f7534e29d43",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "3b0280e7919cfcefd79158861b53fc65342bde5f7494103773553ce2b4d1886b",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "3c972b60e1e16f75927a8579cddd7b955b35c4fb1e9720c166882efb802120f3",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "45bd4b39675a75a8f463dac5755fdcca16b0cc7ac4c6a9435434764b89927939",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "4aa5efdf814a5f06a3712e58a9d9b814c37dbedbee47a62d92c2ca536e2406c8",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "5d136ebb79e042183f2d0b0132f4e85cb2462d72f9de6f918020d3e0a95b9dc0",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "5de431eb1c859e8fa4b1d78241cb0886efdbbfadfd1448b60ff877d06af143c5",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "5eb2730ca3d88ab72b54e775b6f82c3071615aeb742d3b43d6662d1ab4bbc176",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "60d8ea74e73a6b5d4f2a45b276a79cfb6a64e0d55cddb7e8900d78fc24a25075",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "63e705a28006efbcc4e50b25126a64ecbae77438bf54944f4a5b0990b76b48f4",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "67cac52e96ff32c7eea0db77146acb3ace56fec98bc19c12d18038f87ac3effe",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "69343bc2e24802c967bd4f411192e9805811d14eafb17c3333e9536a7a9e806a",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "6ab0ada3f6f17e7c9daea9d187d929d2bf37a8c14567372cbfe3a4135a5d6efa",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "6ab0d1372de0bc07a618c8a62d8294aa8470fc550617051e6e41198ac5ded04f",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "70e668b38a6a36befa5c2c08a0d328032d450bb85190eef604a586c348c9f27f",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "7274ad1ac1dce7540fdeaff855fa6334d9cc5ba0c9f07928396e5f1ecd12c440",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "745091c04a0c3bd7ae0fbb7b995779e5054baf1f25e9bbc4c4988f9eb78dde72",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "755cda46d02f2a14a228ef45fe8aa647c0ff37b7291ede89bb0dac908c6a5cae",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "7585209bd26520241ec75519bdb606af8159707c9fabf5c169497e0483adf889",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "771e188615e8d47201aaedc8b984c1eb21c49845f71a0ca30ea2141b780b801a",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "7aaa80c53bc007c77a33e77ea3bc28c8117f1f7440293cba2fa2f603e65f1575",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "7afb59716dc2a34bc879a1d34a5e8408e9825964539fcad3e74832651b081c3c",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "7c23173c803bf34deef0a916ef7af790bbb34d6517176e14029b7eb91b9740dc",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "7eedbae3a611ea0b7467ce553493b4f8ecf65d39d8e0e0fe857dfb78c4e9b07a",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "848f595635cbc3169b3cc0d37d20e8db2fa49b17554917af2402a2e940c72ed2",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "8640cbc3f709c8e37617a4b71f34db45db9761bde4fbdfc91f4d4306be31cb33",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "86c934b13cbac7f62fbfc5f84eb885d45867327d3e78b3f44230defffc4a1251",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "870d5a89e530a380738de4e1b4dc2ea30ac7579c519e5cebcc126675745e4ffc",
+        "setting_key": "mmmu-pro-standard-10",
+        "source_url": "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "8ac087d7dc1796ac008f395b67c03b0fef563f8d75f682255327f8df8a7902d6",
+        "setting_key": "mmmu-pro-overall",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-1-pro",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "8c7dd6fce7d827a7192930818543c26f51888fd02f432c1907bbd90b9dc81e10",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "8e92c8d70847ddb2ce94edd46597ea6e17c2a06c783cb2ab64bc0847c0a7a178",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "8ed9c93938f725f824223af315345b1d465868592bdfbe493008c19d1b7111f8",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "8f2de327ff519d469de74bc133bd92ed6ad198b192f4b7af20fdd6eec766c8e8",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "92ac9ac4801101e418651c0ebf532be9c8dc30270cc0e78c869c73ffacb18931",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "93f90c79788958aa6c48a56cfc00a08f7f2c3d95d645d4406fc3a4c323509de6",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/introducing-gpt-5-4/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "99053742c9a1ba3e5fcdfa960443b8959114f21701b0be1bd05089b5e185e6fb",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "9967e5c20d4df5badf6a5cf76089c49a6385a37adcf8d11ab712fb331a31359d",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "9c5df3d6cf422ae1d4785dc94b346c6275bf5dd6692befd7c621b518e5f1a792",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "9caf56bf3f4aea04fab0f89632815d33c26d97c91fa102b8ea5bf94588e32aa0",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "a29d7574726fabc5fe8115be570d39e170cd81d13e77830fa5c641b83697c1dd",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "a2f0556f0b2aaded55e52f9227619a0a7ee8d5e3e7133f94bf69e3d888423f90",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "a3f311356ed48e6ec7868a115305adf0d61230baac171edbf69df7fedf484edd",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "a5f8439f88dbe24189a075eba07c5ad45a13485fbd94c5937208da89bfc5797b",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "a85c34c03a16b28db549f5b34ff45929f080dbcd9e68a7a2f9af5139420f55f4",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "aa3675a66e8e4d9494cc39e1f83d116cc6dc126258a35820b5f28fdcd7d5762f",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "aae58515e6edd7dc08409219058c3b517ed4bfe10d99b70e2be644a5a6f7e859",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "ac57e0a81383d93872bf578456e5e92b875b73f7f43675cd383878345160a56b",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "addb1f6b1c968dba15ce3a11eb9bf2802a9a90b69d0a38c5476fb3c501b3fc4e",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b0b9c03d70999e8f4cbeeb1ae1b626b50ac401f5bcc48c462669a34a23a8d061",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b195b9cd61362ba357db758a66b36456a70d044ea6cdfbd67f97904863acc916",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b1c14889aacab853164aaf9e850f147f0616152f11c8b93cb77a25bf4e1be643",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b205c4b7da0f13b455cfb1e6d9d48fbe025fe8b97064b42d732990d12ed91bfa",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b5849d4d6fe57f4fcb0e3d084eb55924042901b9077b749073affc4fed5dbd7c",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b64073f2df86b9be029a0ece1d994dff67bc9443bfc8bda6751ef82e382c102c",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b6423ae6e8b52a4a37b1ceca16cd07d84e85a8c52012679ad1ad391f3ac0d2e7",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b6f993ba9369b2ef23e31e723b1ea483a30bc0752ce153e387d36f73de976e81",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b833a4c5333ad919b2b37346ce0100d2214f91464b1d8bc4314a7e9b69c35af9",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b837aeded30e08fdf833327c0c2ccef52ec85a12cdfca181e98ec51f90fe74d8",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b9519e7fc160c36c54143ede9489370660a5c28ef5bab5cc7fea8ad26b2b49ee",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/introducing-gpt-5-5/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "b9cc7f82b6b1f20b1a7d7a71e4aa904d960ad24a5130c2e1cf0ce32817added7",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "ba0568a5c59e502ecf232a052610681cdd7f683ece353ea72a5de5ec3f939be2",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "bb25fdcac29b5888ea1d24bd3372a2319e6f061cb0cf10f588cb4270d3273c23",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "bc85543eaada39e5deea20b928c1c47c01be5ba324b93f76016a56c01f9e52c0",
+        "setting_key": "mmmu-pro-overall",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-flash",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "bee3e6bd7f9fb42eae24c1f93b5fca2e74504cbec5015be7d76dbdc6da333285",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c141ab3e63bd9440815f903bc0fa2eb86450a485d4854e9109e1dad894385cbf",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c2d2410f6e5a3b3e3f4e945cb355f48e90f65b69ffa5cf24dbe5b37a53193c15",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c34e5942f9b7f024d52b2440b297841e61e1ccb8a42335c02cf8a4c80d5695a8",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c3e7e3fa2453711c46701b59f804ce8794de696e2ae4e124fdfcd76d1485e3e6",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c4ca552f8ca24dcd85b51033a713c0d2a3a9109de967968c02704c8583a90a8b",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c5648b60d78a3427dbc7f1c2536047bd98d3991382c4b766a9a5fc152b805647",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "c596d4632ffa0e02f811de3373b43b5c97df2c58ee37af5a65f95e68e15d3da8",
+        "setting_key": "mmmu-pro-overall",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-pro",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "ca5a9474f1daee3d35cdddb32afbde4f383113261e4661c0b6364c1732d6279a",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "caf12ca963d50c98771d091ecd3b4075a1c847b746d5af58167833a83fa6e088",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "cb0325992f1794385ce6b39f78e34831aae904e1dd8140d7b3336606406bcc16",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://openai.com/index/gpt-5-6/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "cd0b2fc256f8daf89b669d71741fb013c100bf69647b3af981c9cc5f73797235",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "d110c05b08e03b244340acebfe56b2cd761ce9b648323a1a147a26f82d4ff362",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "d363079995b2f2605e2f8226780ff1c529faf4def04f2961626f1cf4d442ef43",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "d424715e420f07d6eda0989ea49e24fb71d166533f89b2d28810378b5a2f6137",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "daef590c63a2b77309fb19a4b5595268baf0b1793220df5be2f792d7de69334d",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "dbe3e25221f66aabc8ce88ca0293d4753c3e99cdbe5e23c5fc7dc13d5de8e6a0",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "df27fab44535c9df92d197c69c0476b69908a8bef3938efc2c73e0702dcbbce8",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "df6b277b8c08ee902d4653ffad0a78ef873887c33f3cf62e8fd3f68e5e8b399a",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e0e62fcb0f75ce5bff0e8c09305ab3db68791e34f4687a5ad38a60033e8022ba",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e31620c22b3dc923249f5e2ced6bb75e4b690df28da6c85260b7a1b7f75d2ef7",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e419268351302275ea334c1c9a1fd1ec6db4c6102f20e22f7dee27c295bbd20c",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e5d73342a5a845e95f7cc9e485bd9a137274fbe5a24fbf9fc443a63c56796ba4",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e708737e2fa93d39bfd1231a35730b25a574c2b509e875db2bf6a4b9236c777e",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e739761b5bf1a2da341d838744b3773110642196bf29034afcb595ea3271b88a",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "e9faaaa3b3e6ad1895ddf417a8839962ce93a83ba947b9053b3c11bbeb8317ef",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "eaee99f67e8c7ead3f3f9b7977873caf7543e4a6b19760fd3fae6b9cfe5f54f7",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "eba658af4e8f69ea4dd7311bbaf4d1dd281171d876968f8eedd7abbf7d01e1f6",
+        "setting_key": "mmmu-pro-overall",
+        "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "ec16528511626f949fa3c13df938e8c6a6bbcfd45870e1cbe39512c788434ee9",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "eeab2f315e8b5b5f969d8fdeac8bd3804243e1e15323084667f82e3d31ac0893",
+        "setting_key": "mmmu-pro-not-stated",
+        "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "f09a328906493c8b863156019c3368a034eef17e7e60031aeb419a0d0ee68b4d",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "f38c7b79d509912920f27b94f67c062924fa995b0f09fda18b69a9a49894e072",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "f40b34d9dc54451bb98f65b9c27277287af5b0b0c5926acc598ba9ef760ee166",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "f692ad9d1327c25049bc4cba2edf12978c050237c1090be5513061fabeaf3426",
+        "setting_key": "mmmu-pro-overall",
+        "source_url": "https://deepmind.google/models/evals-methodology/gemini-3-5-flash",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    },
+    {
+      "operation": "result_score_setting",
+      "record": {
+        "result_key": "f7923de0281ba7c47e279dbfa004a67d6723389e901f80d03e513424d8c7f178",
+        "setting_key": "mmmu-pro-standard-4",
+        "source_url": "https://www.vals.ai/benchmarks/mmmu",
+        "source_checked_at": "2026-10-08T04:55:00Z"
+      }
+    }
+  ]
+}
