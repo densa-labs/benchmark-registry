@@ -1,3 +1,4 @@
+import type { ComparisonPair } from "./comparison-pairs";
 import type { BenchmarkRef, ResultRow } from "../worker/api";
 import type { ModelDetailResponse, ModelListEntry } from "./registry";
 import { benchmarkDisplayName } from "./benchmark-names";
@@ -17,6 +18,8 @@ export interface ComparisonResponse {
   models: ModelListEntry[];
   selected: [ModelDetailResponse | null, ModelDetailResponse | null];
   issues: string[];
+  /** Prerendered pair pages, offered while fewer than two models are chosen. */
+  suggestions?: ComparisonPair[];
 }
 
 /** Selector value for Any; the comma format writes it as a bare "~" too. */
@@ -134,4 +137,13 @@ export function comparisonPage(rows: ComparisonRow[], state: ComparisonState) {
   const filtered = rows.filter(row => (!state.sharedOnly || row.shared) && (!query || [row.benchmark.name, ...row.benchmark.aliases, ...row.results.flat().map(result => result.benchmark_version)].some(value => normalizeSearch(value).includes(query))));
   const page = filtered.slice((state.page - 1) * state.limit, state.page * state.limit);
   return { shared: page.filter(row => row.shared), other: page.filter(row => !row.shared), total: filtered.length, totalPages: Math.ceil(filtered.length / state.limit) };
+}
+
+/** Prerendered pair pages, newest release first; pairs with a model missing from the directory are skipped. */
+export function suggestedComparisons(response: ComparisonResponse): { name: string; path: string }[] {
+  const byNo = new Map(response.models.map(model => [model.registry_no, model]));
+  return (response.suggestions ?? []).flatMap(pair => {
+    const [a, b] = pair.models.map(no => byNo.get(no));
+    return a && b ? [{ name: `${a.name} vs ${b.name}`, path: pair.path, newest: a.released_at > b.released_at ? a.released_at : b.released_at }] : [];
+  }).sort((x, y) => y.newest.localeCompare(x.newest, "en") || x.path.localeCompare(y.path, "en")).map(({ name, path }) => ({ name, path }));
 }

@@ -5,6 +5,7 @@ import { HOME_PANEL_LIMIT, type HomePanels } from './home-panels';
 import type { SearchEntity } from './search';
 import type { SearchRelationship } from './search-response';
 import type { FeaturedResult } from './featured-result';
+import type { ComparisonPair } from '../src/comparison-pairs';
 export type ReadEnvironment='staging'|'production'|'local';
 export type ReadData={
   seo:SeoSnapshot;
@@ -23,6 +24,8 @@ export type ReadData={
   'search-relationships':SearchRelationship[];
   /** Static-site only: each listed model's featured result, so model lists need no per-model reads. */
   featured:Record<string,FeaturedResult|null>;
+  /** Static-site only: the numbered-family comparison pairs, so /compare can suggest them without the SEO snapshot. */
+  comparisons:ComparisonPair[];
 };
 export interface ResultFields {identity:string;latest:number;reported:string;source:string;aliases:string}
 export interface ReadObject {schema:1;key:string;environment:ReadEnvironment;data:unknown}

@@ -15,6 +15,7 @@ export async function handleApi(request: Request, revision: string | undefined, 
     if(!pair) return jsonError(404,"not_found","Comparison not found.");
     return Response.json(await comparisonPayload(repository,pair,snapshot));
   }
+  if (path.length === 2 && path[1] === "comparisons") return Response.json({data:await repository.comparisons()});
   if (path.length === 2 && path[1] === "stats") return Response.json(await repository.stats());
   if (path.length === 2 && path[1] === "recent") return Response.json((await repository.seoSnapshot()).recent);
   if (path.length === 2 && path[1] === "home-panels") return Response.json(await repository.homePanels());

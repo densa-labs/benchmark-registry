@@ -32,7 +32,12 @@ it("includes real homepage counts and a data date",()=>{
 
 it("preserves result keywords and compacts repeated family names in long comparison titles",()=>{
   const long=entityTitle("NVIDIA Nemotron 3 Super 120B-A12B","Benchmark Results & Scores","Benchmark Results");
-  expect(long).toContain("Benchmark Results | Benchmark Registry");expect(long.length).toBeLessThanOrEqual(70);
+  expect(long).toBe("NVIDIA Nemotron 3 Super 120B-A12B Benchmark Results");
   const comparison=buildPageMetadata(fixture("comparison","Claude Opus 5 vs Claude Opus 5.5"));
   expect(comparison.title).toBe("Claude Opus 5 vs 5.5: Benchmark Comparison | Benchmark Registry");
+});
+
+it("drops the site name before clipping a long name, so sibling version titles stay distinct",()=>{
+  const titles=["SWE-bench Pro Private — Scale AI SWE-Agent","SWE-bench Pro Private — Scale AI mini-swe-agent"].map(name=>entityTitle(name,"Results & Scores","Results"));
+  expect(titles).toEqual(["SWE-bench Pro Private — Scale AI SWE-Agent Results","SWE-bench Pro Private — Scale AI mini-swe-agent Results"]);
 });

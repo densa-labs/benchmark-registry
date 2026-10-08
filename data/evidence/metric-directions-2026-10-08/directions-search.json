@@ -1,0 +1,616 @@
+{
+ "checked_at": "2026-10-08",
+ "rule": "A direction is recorded only where the metric's primary source states it in words; never from the name, sort order or a bare arrow.",
+ "recorded": [],
+ "arrow_only": [
+  {
+   "metric_key": "babyvision-accuracy",
+   "source_url": "https://arxiv.org/html/2601.06521",
+   "note": "Results tables header \"Avg (μ) ↑ / Std (σ) ↓\" only; no words"
+  },
+  {
+   "metric_key": "deepsearchqa-f1",
+   "source_url": "https://storage.googleapis.com/deepmind-media/DeepSearchQA/DeepSearchQA_benchmark_paper.pdf",
+   "note": "Results table header shows 'F1 ↑' (and 'Fully correct ↑', 'Fully incorrect ↓') with no words"
+  },
+  {
+   "metric_key": "hallusionbench-accuracy",
+   "source_url": "https://arxiv.org/html/2310.14566",
+   "note": "Table headers \"Question Pair Accuracy (qAcc) ↑\", \"Figure Accuracy (fAcc) ↑\"; no words"
+  },
+  {
+   "metric_key": "hle-accuracy",
+   "source_url": "https://arxiv.org/html/2501.14249",
+   "note": "Table headers \"Accuracy (%) ↑  Calibration Error (%) ↓\"; no words"
+  }
+ ],
+ "not_found": [
+  {
+   "metric_key": "agents-last-exam-pass-rate",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://github.com/MaxIntelligenceAgency/ALE-Benchmark"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "ai2d-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/1603.07396"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "apex-agents-pass",
+   "checked": [
+    "https://www.mercor.com/blog/introducing-apex-agents/",
+    "https://arxiv.org/html/2601.14242"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "arena-elo",
+   "checked": [
+    "https://arena.ai/leaderboard/text/overall?q=mistral"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "automationbench-pass-rate",
+   "checked": [
+    "https://github.com/zapier/AutomationBench"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "bbeh-micro-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2502.19187"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "benchcad-geometric-overlap",
+   "checked": [
+    "https://github.com/BenchCAD/BenchCAD-main",
+    "https://github.com/BenchCAD/BenchCAD-main/blob/main/CITATION.cff"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "beyond-aime-accuracy",
+   "checked": [
+    "https://huggingface.co/datasets/ByteDance-Seed/BeyondAIME"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "browsecomp-accuracy",
+   "checked": [
+    "https://openai.com/index/browsecomp/"
+   ],
+   "note": "OpenAI page returned HTTP 403 to fetch; unreadable, no direction confirmed."
+  },
+  {
+   "metric_key": "chartography-pass-at-1",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://surgehq.ai/benchmarks/chartography"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "chartqa-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2203.10244"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "charxiv-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2406.18521"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "cl-bench-task-solving-rate",
+   "checked": [
+    "https://arxiv.org/abs/2602.03587",
+    "https://arxiv.org/html/2602.03587v1",
+    "https://github.com/Tencent-Hunyuan/CL-bench"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "codeforces-elo",
+   "checked": [
+    "https://deploymentsafety.openai.com/gpt-oss/a2"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "cwe-bench-programmatic-pass-at-1",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://cwe-bench.com/"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "cybergym-success",
+   "checked": [
+    "https://arxiv.org/abs/2506.02548"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "deep-swe-pass-at-1",
+   "checked": [
+    "https://deepswe.datacurve.ai/"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "erqa-accuracy",
+   "checked": [
+    "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+    "https://github.com/embodiedreasoning/ERQA"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "finance-agent-accuracy",
+   "checked": [
+    "https://www.vals.ai/benchmarks/fabv2",
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon (PDF text not extractable)"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "frontierscience-research-accuracy",
+   "checked": [
+    "https://openai.com/index/frontierscience/"
+   ],
+   "note": "OpenAI page returned HTTP 403 to fetch; unreadable, no direction confirmed."
+  },
+  {
+   "metric_key": "frontierswe-score",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://www.frontierswe.com/",
+    "https://www.frontierswe.com/blog/v2"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "gaia2-success",
+   "checked": [
+    "https://github.com/facebookresearch/meta-agents-research-environments",
+    "https://arxiv.org/html/2602.11964",
+    "https://arxiv.org/html/2509.17158"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "gdp-pdf-all-pass-rate",
+   "checked": [
+    "https://arxiv.org/abs/2607.11192"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "gdpval-win-tie-rate",
+   "checked": [
+    "https://openai.com/index/gdpval/"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages; openai.com page blocked (403), checked arXiv 2510.04374 HTML instead"
+  },
+  {
+   "metric_key": "global-mmlu-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2412.03304"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "gpqa-diamond-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2311.12022"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "graphwalks-f1",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://huggingface.co/datasets/openai/graphwalks"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "healthbench-score",
+   "checked": [
+    "https://openai.com/index/healthbench/"
+   ],
+   "note": "OpenAI page returned HTTP 403 to fetch; unreadable, no direction confirmed."
+  },
+  {
+   "metric_key": "hlab-task-pass-rate",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://www.vals.ai/benchmarks/hlab"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "hle-verified-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2602.13964"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "ifbench-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2507.02833"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "ifeval-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2311.07911"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "ipho-theory-score",
+   "checked": [
+    "https://www.ipho2025.fr/sujets-officiels-ipho-france-2025"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "jobbench-mean-rubric-score",
+   "checked": [
+    "https://github.com/Job-Bench/job-bench-eval"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "labbench2-accuracy",
+   "checked": [
+    "https://github.com/EdisonScientific/labbench2",
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon (PDF text not extractable)"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "longbench-v2-accuracy",
+   "checked": [
+    "https://github.com/THUDM/LongBench"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "lvbench-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2406.08035",
+    "https://deepmind.google/models/evals-methodology/gemini-3-8-flash",
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "math-vision-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2402.14804"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "mathverse-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2403.14624"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "mathvista-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2310.02255"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "mcp-atlas-pass-rate",
+   "checked": [
+    "https://labs.scale.com/leaderboard/mcp_atlas"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "medxpertqa-mm-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2501.18362"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "medxpertqa-text-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2501.18362"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages; arrows appear only on perplexity/Rouge-L/edit distance, not accuracy"
+  },
+  {
+   "metric_key": "mmlu-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2009.03300"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "mmlu-pro-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2406.01574"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "mmmlu-accuracy",
+   "checked": [
+    "https://github.com/modelscope/evalscope/blob/main/docs/en/benchmarks/mmmlu.md",
+    "https://huggingface.co/datasets/openai/MMMLU",
+    "https://huggingface.co/datasets/openai/MMMLU/commits/main"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "mmmu-accuracy",
+   "checked": [
+    "https://mmmu-benchmark.github.io/",
+    "https://arxiv.org/html/2311.16502"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "mmmu-pro-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2409.02813"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "mmstar-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2403.20330"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages; arrows appear only on MG/ML metrics, not accuracy"
+  },
+  {
+   "metric_key": "mrcr-sequence-ratio",
+   "checked": [
+    "https://github.com/google-deepmind/eval_hub/blob/master/eval_hub/mrcr_v2/README.md"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "mtvqa-test-accuracy",
+   "checked": [
+    "https://github.com/bytedance/MTVQA/blob/main/scripts/acc.py",
+    "https://github.com/bytedance/MTVQA"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "multi-swe-bench-resolved",
+   "checked": [
+    "https://arxiv.org/abs/2504.02605"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "nl2repo-test-pass-rate",
+   "checked": [
+    "https://arxiv.org/html/2512.12730"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "ocrbench-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2305.07895"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "osworld-partial-score",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://github.com/xlang-ai/OSWorld-V2",
+    "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.06.24",
+    "https://github.com/xlang-ai/OSWorld-V2/releases/tag/v2026.08.08"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "osworld-strict-score",
+   "checked": [
+    "https://github.com/xlang-ai/OSWorld-V2"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "osworld-verified-resolved",
+   "checked": [
+    "https://github.com/xlang-ai/OSWorld",
+    "https://github.com/xlang-ai/OSWorld-V2"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "paperbench-code-dev-replication-score",
+   "checked": [
+    "https://arxiv.org/html/2504.01848v1"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "perceptionbench-accuracy",
+   "checked": [
+    "https://huggingface.co/datasets/moonshotai/PerceptionBench"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "posttrainbench-weighted-score",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://posttrainbench.com/?version=v1.1"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "realworldqa-accuracy",
+   "checked": [
+    "https://x.ai/news/grok-1.5v"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "riemann-bench-pass-at-1",
+   "checked": [
+    "https://surgehq.ai/benchmarks/riemann-bench",
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon (PDF text not extractable)"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "scicode-accuracy",
+   "checked": [
+    "https://arxiv.org/abs/2407.13168"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "screenspot-pro-accuracy",
+   "checked": [
+    "https://ai.meta.com/static-resource/muse-spark-eval-methodology",
+    "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "simpleqa-verified-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2509.07968"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "skillsbench-reward",
+   "checked": [
+    "https://github.com/benchflow-ai/SkillsBench"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "spatialbench-accuracy",
+   "checked": [
+    "https://blog.latch.bio/p/human-verification-of-spatialbench"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "strongreject-refusal",
+   "checked": [
+    "https://arxiv.org/html/2402.10260"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "swe-atlas-pass-at-1",
+   "checked": [
+    "https://labs.scale.com/leaderboard/sweatlas-qna"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "swe-bench-pro-resolved",
+   "checked": [
+    "https://labs.scale.com/leaderboard/swe_bench_pro",
+    "https://labs.scale.com/papers/swe_bench_pro",
+    "https://microsoft.ai/news/introducingmai-code-1-flash/",
+    "https://www.alibabacloud.com/blog/alibaba-unveils-qwen3-6-plus-to-accelerate-agentic-ai-deployment-for-enterprises-and-alibaba%E2%80%99s-ai-applications_603005",
+    "https://www.alibabacloud.com/blog/qwen3-7-the-agent-frontier_603154"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "swe-bench-resolved",
+   "checked": [
+    "https://www.swebench.com/",
+    "https://arxiv.org/html/2310.06770 (only rank-change arrows on deltas)",
+    "https://openai.com/index/introducing-swe-bench-verified/ (HTTP 403)"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "swe-fficiency-success",
+   "checked": [
+    "https://arxiv.org/html/2511.06090"
+   ],
+   "note": "'higher is better' refers to the speedup ratio table, not the task success rate the registry records."
+  },
+  {
+   "metric_key": "tau3-success",
+   "checked": [
+    "https://github.com/sierra-research/tau2-bench",
+    "https://github.com/sierra-research/tau2-bench/releases/tag/v1.0.0",
+    "https://github.com/sierra-research/tau2-bench/releases/tag/v1.0.1"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "terminal-bench-accuracy",
+   "checked": [
+    "https://www.tbench.ai/",
+    "https://arxiv.org/html/2601.11868v1"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "toolathlon-task-success",
+   "checked": [
+    "https://arxiv.org/abs/2510.25726"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  },
+  {
+   "metric_key": "vals-index-accuracy",
+   "checked": [
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon",
+    "https://www.vals.ai/benchmarks/vals_index"
+   ],
+   "note": "No explicit higher/lower-is-better statement found in fetched primary pages"
+  },
+  {
+   "metric_key": "vibe-code-bench-score",
+   "checked": [
+    "https://www.vals.ai/benchmarks/vibe-code",
+    "https://deepmind.google/models/evals-methodology/gemini-4-argon (PDF text not extractable)"
+   ],
+   "note": "No explicit higher/lower-is-better statement for this metric in pages read (JS-rendered or image-only pages may hide text)."
+  },
+  {
+   "metric_key": "video-mme-accuracy",
+   "checked": [
+    "https://arxiv.org/html/2405.21075v2",
+    "https://github.com/MME-Benchmarks/Video-MME"
+   ],
+   "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
+  }
+ ]
+}

@@ -19,8 +19,6 @@
     "db:migrate:production": "wrangler d1 migrations apply DB --config wrangler.maintenance.jsonc --env production --remote",
     "build:production": "tsc --noEmit && CLOUDFLARE_ENV=production vite build && node scripts/build-static.mjs --environment production",
     "deploy:production": "npm run build:production && node scripts/verify-static-deployment.mjs --environment production && wrangler deploy --env production",
-    "test:links": "python3 -m unittest discover -s scripts -p 'test_*.py'",
-    "audit:links": "python3 scripts/verify-links-live.py",
     "verify:lighthouse": "node scripts/verify-lighthouse.mjs",
     "test:accessibility": "vitest run src/accessibility.test.tsx",
     "audit:accessibility": "node scripts/audit-accessibility.mjs",

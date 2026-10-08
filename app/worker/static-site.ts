@@ -13,7 +13,7 @@ import { verifyGeneration } from "./publication";
 import { latestReportedResult } from "./featured-result";
 import { LEGACY_ROOT_SLUGS } from "./legacy-root-slugs";
 import { digest, type ReadData, type ReadEnvironment, type ReadObject } from "./read-model";
-import { modelShareCard, siteShareCard, type ShareCard } from "./share-card";
+import { benchmarkShareCard, comparisonCardRows, comparisonShareCard, modelShareCard, siteShareCard, type ShareCard } from "./share-card";
 import { LLMS_TXT_PATH, RESULTS_CSV_PATH, llmsText, resultsCsv } from "./downloads";
 import type { ResultRow } from "./api";
 
@@ -253,7 +253,7 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   files.push({ path: RESULTS_CSV_PATH, body: resultsCsv(published) });
   files.push({ path: LLMS_TXT_PATH, body: llmsText({ models: stats.models, benchmarks: stats.benchmarks, versions: stats.versions, results: stats.benchmark_results }) });
 
-  // Every model page shares its own card; every other page shares the site card.
+  // Model pages, benchmark families and comparison pairs share their own card; every other page shares the site card.
   const cards: ShareCard[] = [siteShareCard({ models: stats.models, benchmarks: stats.benchmarks, results: stats.benchmark_results })];
   for (const path of pages) {
     const registryNo = /^\/models\/([0-9]+)$/u.exec(path)?.[1];
@@ -261,6 +261,24 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
     const data = (object(build.manifest.objects[`model:${registryNo}`]).data as ReadData["model"]).response.data;
     if (data.result_page.total_pages > 1) throw new Error(`model:${registryNo} is paginated; its share card would miss results.`);
     cards.push(modelShareCard({ registry_no: registryNo, name: data.model.name, company: data.model.company.name, results: data.results }));
+  }
+  // Benchmark families and comparison pairs get their own cards too; version pages share the site card.
+  for (const [path, page] of Object.entries(snapshot.pages)) {
+    const slug = /^\/benchmarks\/([a-z0-9-]+)$/u.exec(path)?.[1];
+    if (slug) cards.push(benchmarkShareCard({ slug, name: page.name, models: page.models, versions: page.versions, latest: page.latest, results: page.topResults ?? [] }));
+  }
+  for (const pair of snapshot.comparisons) {
+    const sides = await Promise.all(pair.models.map(async (no) => {
+      const { data } = await repository.model(no, { page: 1, limit: 500, view: "latest" });
+      if (data.result_page.total_pages > 1) throw new Error(`model:${no} is paginated; its comparison card would miss results.`);
+      return data;
+    }));
+    cards.push(comparisonShareCard({
+      slug: pair.path.slice("/compare/".length),
+      models: [{ name: sides[0].model.name, company: sides[0].model.company.name }, { name: sides[1].model.name, company: sides[1].model.company.name }],
+      sharedBenchmarks: pair.sharedBenchmarks,
+      rows: comparisonCardRows(sides[0].results, sides[1].results),
+    }));
   }
   let badgeCount = 0;
   for (const path of [...badges].sort()) {
@@ -281,13 +299,16 @@ export async function buildStaticSite(options: StaticSiteOptions): Promise<Stati
   const featuredObject = JSON.stringify({ schema: 1, key: "featured", environment: readEnvironment, data: featured } satisfies ReadObject);
   const featuredHash = await digest(featuredObject);
   serialized.set(featuredHash, featuredObject);
-  const manifest: StaticDataManifest = { generation, objects: { ...build.manifest.objects, featured: featuredHash } };
+  const comparisonsObject = JSON.stringify({ schema: 1, key: "comparisons", environment: readEnvironment, data: snapshot.comparisons } satisfies ReadObject);
+  const comparisonsHash = await digest(comparisonsObject);
+  serialized.set(comparisonsHash, comparisonsObject);
+  const manifest: StaticDataManifest = { generation, objects: { ...build.manifest.objects, featured: featuredHash, comparisons: comparisonsHash } };
   for (const hash of new Set(Object.values(manifest.objects))) files.push({ path: `data/objects/${hash}.json`, body: serialized.get(hash)! });
   files.push({ path: "data/manifest.json", body: JSON.stringify(manifest) });
   // /compare reads its state from the URL in the browser. Start its data requests with the
   // HTML instead of after the script: the manifest and the model list it always needs.
   const comparePage = files.find((file) => file.path === pageFile("/compare"));
-  if (comparePage) comparePage.body = comparePage.body.replace("</head>", [STATIC_MANIFEST_PATH, ...["models", "featured", "redirects"].map((key) => staticObjectPath(manifest.objects[key]))]
+  if (comparePage) comparePage.body = comparePage.body.replace("</head>", [STATIC_MANIFEST_PATH, ...["models", "featured", "redirects", "comparisons"].map((key) => staticObjectPath(manifest.objects[key]))]
     .map((href) => `<link rel="preload" href="${href}" as="fetch" crossorigin="anonymous">`).join("") + "</head>");
 
   const redirects = redirectRules({ redirects: object(build.manifest.objects.redirects).data as ReadData["redirects"], seo: snapshot }, versions, options.legacyRootSlugs);

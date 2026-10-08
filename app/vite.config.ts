@@ -2,7 +2,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { faviconAssets } from "./src/branding";
+import { faviconAssets } from "./src/branding.ts";
 
 const staging = process.env.CLOUDFLARE_ENV === "staging";
 // UTC commit time (or SOURCE_DATE_EPOCH), so rebuilding a commit gives identical bytes.

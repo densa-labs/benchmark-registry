@@ -18,6 +18,7 @@ import type { HomePanels } from "../worker/home-panels";
 import type { StaticFetch } from "./static-api";
 import type { FeaturedResult } from "../worker/featured-result";
 import { parseComparisonState, type ComparisonResponse } from "./compare";
+import type { ComparisonPair } from "./comparison-pairs";
 import { ApiError } from "../worker/api";
 
 export type ModelListEntry = ModelSummary & { featured_result?: FeaturedResult | null };
@@ -517,7 +518,7 @@ async function loadComparison(search: string, fetcher: typeof fetch, signal?: Ab
     return body as T;
   };
   // Start every data file this comparison needs at once instead of one after another.
-  (fetcher as StaticFetch).prefetch?.(["models", "featured", "redirects", ...state.models.filter(Boolean).map(number => `model:${number}`)]);
+  (fetcher as StaticFetch).prefetch?.(["models", "featured", "redirects", ...(state.models.every(Boolean) ? [] : ["comparisons"]), ...state.models.filter(Boolean).map(number => `model:${number}`)]);
   const directory = async () => {
     const first = (await request<ModelListResponse>("/api/models?sort=name&order=asc&limit=500"))!;
     const models = [...first.data];
@@ -539,11 +540,12 @@ async function loadComparison(search: string, fetcher: typeof fetch, signal?: Ab
     }
     return { data: { ...first.data, results } };
   };
-  const [models, a, b] = await Promise.all([directory(), model(state.models[0]), model(state.models[1])]);
+  const suggestions = async () => state.models.every(Boolean) ? undefined : (await request<{ data: ComparisonPair[] }>("/api/comparisons", true))?.data;
+  const [models, a, b, pairs] = await Promise.all([directory(), model(state.models[0]), model(state.models[1]), suggestions()]);
   for (const [side, selected] of [a, b].entries()) {
     if (!selected && state.models[side]) issues.push(`Model ${side === 0 ? "A" : "B"} (Registry No. ${state.models[side]}) was not found. Choose another model.`);
   }
-  return { models, selected: [a, b], issues };
+  return pairs ? { models, selected: [a, b], issues, suggestions: pairs } : { models, selected: [a, b], issues };
 }
 
 export type QueryChange = string | number | null | undefined;
