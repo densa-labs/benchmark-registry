@@ -1,0 +1,11 @@
+DROP TRIGGER revision_result_score_settings_delete;
+DROP TRIGGER revision_result_score_settings_update;
+DROP TRIGGER revision_result_score_settings_insert;
+DROP TRIGGER revision_score_settings_delete;
+DROP TRIGGER revision_score_settings_update;
+DROP TRIGGER revision_score_settings_insert;
+DROP TRIGGER result_score_settings_immutable;
+DROP TRIGGER score_settings_immutable;
+DROP TRIGGER result_score_settings_same_benchmark;
+DROP TABLE result_score_settings;
+DROP TABLE score_settings;
