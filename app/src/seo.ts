@@ -23,7 +23,10 @@ export function seoTitle(primary: string, suffix = ` | ${SITE_NAME}`): string {
 export function entityTitle(name:string,keywords:string,compactKeywords=keywords):string {
   const suffix=` ${keywords} | ${SITE_NAME}`;
   if(cleanSeoText(name).length+suffix.length<=TITLE_LIMIT) return seoTitle(name,suffix);
-  return seoTitle(name,` ${compactKeywords} | ${SITE_NAME}`);
+  const compact=` ${compactKeywords} | ${SITE_NAME}`;
+  if(cleanSeoText(name).length+compact.length<=TITLE_LIMIT) return seoTitle(name,compact);
+  // Clipping the name would make sibling titles identical (e.g. two harness versions); drop the site name first.
+  return seoTitle(name,` ${compactKeywords}`);
 }
 function comparisonName(name:string):string {
   const sides=name.split(" vs ");if(sides.length!==2) return name;
