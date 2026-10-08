@@ -1,0 +1,767 @@
+{
+  "environment": "production",
+  "verifiedAt": "2026-09-29T08:35:30.205Z",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/models",
+      "status": 200,
+      "title": "Models | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/models",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/models/10005",
+      "status": 200,
+      "title": "GPT-6 Astra | Benchmarks",
+      "canonical": "https://benchmarkregistry.org/models/10005",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks",
+      "status": 200,
+      "title": "Benchmarks | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/benchmarks",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks/gpqa",
+      "status": 200,
+      "title": "GPQA | Benchmarks",
+      "canonical": "https://benchmarkregistry.org/benchmarks/gpqa",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks/gpqa/diamond",
+      "status": 200,
+      "title": "GPQA Diamond | Results",
+      "canonical": "https://benchmarkregistry.org/benchmarks/gpqa/diamond",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "title": "Companies | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/companies",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/companies/openai",
+      "status": 200,
+      "title": "OpenAI | Benchmarks",
+      "canonical": "https://benchmarkregistry.org/companies/openai",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b",
+      "status": 200,
+      "title": "GLM-5.2 | AutomationBench 1.0.6",
+      "canonical": "https://benchmarkregistry.org/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/models?page=2",
+      "status": 200,
+      "title": "Models | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/models",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks/gpqa/diamond?company=openai",
+      "status": 200,
+      "title": "GPQA Diamond | Results",
+      "canonical": "https://benchmarkregistry.org/benchmarks/gpqa/diamond",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/models/99999",
+      "status": 404,
+      "title": "Page Not Found | Benchmark Registry",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks/unknown",
+      "status": 404,
+      "title": "Page Not Found | Benchmark Registry",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/benchmarks/gpqa/unknown",
+      "status": 404,
+      "title": "Page Not Found | Benchmark Registry",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/companies/unknown",
+      "status": 404,
+      "title": "Page Not Found | Benchmark Registry",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "miss",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/unknown",
+      "status": 404,
+      "title": "Page Not Found | Benchmark Registry",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": "bypass",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/legal/unknown",
+      "status": 404,
+      "title": "Page Not Found | Benchmark Registry",
+      "noindex": true,
+      "robotsHeader": null,
+      "cache": null,
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 0,
+      "generation": null,
+      "setCookie": false
+    },
+    {
+      "path": "/legal",
+      "status": 200,
+      "title": "Legal | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/legal",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": null,
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 0,
+      "generation": null,
+      "setCookie": false
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "title": "Privacy Policy | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/privacy",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": null,
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 0,
+      "generation": null,
+      "setCookie": false
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "title": "Terms | Benchmark Registry",
+      "canonical": "https://benchmarkregistry.org/terms",
+      "noindex": false,
+      "robotsHeader": null,
+      "cache": null,
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 0,
+      "generation": null,
+      "setCookie": false
+    },
+    {
+      "path": "/api/models?sort=score",
+      "status": 400,
+      "noindex": false,
+      "robotsHeader": "noindex, follow",
+      "cache": "bypass",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/api/models?limit=All",
+      "status": 400,
+      "noindex": false,
+      "robotsHeader": "noindex, follow",
+      "cache": "bypass",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    },
+    {
+      "path": "/api/models?unexpected=x",
+      "status": 400,
+      "noindex": false,
+      "robotsHeader": "noindex, follow",
+      "cache": "bypass",
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1,
+      "generation": "c43aa32558574636ac9e202016920931",
+      "setCookie": false
+    }
+  ],
+  "search": [
+    {
+      "q": "gpt",
+      "response": {
+        "data": [
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.1",
+            "matched_text": "GPT-4.1",
+            "href": "/models/10002"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.5 Preview",
+            "matched_text": "GPT-4.5 Preview",
+            "href": "/models/10001"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.2",
+            "matched_text": "GPT-5.2",
+            "href": "/models/10012"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.3-Codex",
+            "matched_text": "GPT-5.3-Codex",
+            "href": "/models/10006"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.4",
+            "matched_text": "GPT-5.4",
+            "href": "/models/10007"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.5",
+            "matched_text": "GPT-5.5",
+            "href": "/models/10008"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.6 Luna",
+            "matched_text": "GPT-5.6 Luna",
+            "href": "/models/10009"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.6 Sol",
+            "matched_text": "GPT-5.6 Sol",
+            "href": "/models/10010"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-5.6 Terra",
+            "matched_text": "GPT-5.6 Terra",
+            "href": "/models/10011"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-6 Astra",
+            "matched_text": "GPT-6 Astra",
+            "href": "/models/10005"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-6 Luna",
+            "matched_text": "GPT-6 Luna",
+            "href": "/models/10013"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-6 Sol",
+            "matched_text": "GPT-6 Sol",
+            "href": "/models/10014"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "gpt-oss-120b",
+            "matched_text": "gpt-oss-120b",
+            "href": "/models/15001"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 13,
+          "total_pages": 1
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "10001",
+      "response": {
+        "data": [
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.5 Preview",
+            "matched_text": "10001",
+            "href": "/models/10001"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 1,
+          "total_pages": 1
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "GPT-4.1 GPQA",
+      "response": {
+        "data": [
+          {
+            "entity_type": "result",
+            "canonical_name": "GPT-4.1 × Graduate-Level Google-Proof Q&A Diamond",
+            "matched_text": "Evaluation result",
+            "href": "/benchmarks/gpqa/diamond?view=history&result=c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf"
+          },
+          {
+            "entity_type": "benchmark",
+            "canonical_name": "Graduate-Level Google-Proof Q&A",
+            "matched_text": "GPQA",
+            "href": "/benchmarks/gpqa",
+            "aliases": [
+              "GPQA"
+            ]
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.1",
+            "matched_text": "GPT-4.1",
+            "href": "/models/10002"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 3,
+          "total_pages": 1
+        },
+        "direct_href": "/benchmarks/gpqa/diamond?view=history&result=c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf"
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "GPQA GPT-4.1",
+      "response": {
+        "data": [
+          {
+            "entity_type": "result",
+            "canonical_name": "GPT-4.1 × Graduate-Level Google-Proof Q&A Diamond",
+            "matched_text": "Evaluation result",
+            "href": "/benchmarks/gpqa/diamond?view=history&result=c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf"
+          },
+          {
+            "entity_type": "benchmark",
+            "canonical_name": "Graduate-Level Google-Proof Q&A",
+            "matched_text": "GPQA",
+            "href": "/benchmarks/gpqa",
+            "aliases": [
+              "GPQA"
+            ]
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.1",
+            "matched_text": "GPT-4.1",
+            "href": "/models/10002"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 3,
+          "total_pages": 1
+        },
+        "direct_href": "/benchmarks/gpqa/diamond?view=history&result=c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf"
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "GPT-4.1 GPQA Diamond",
+      "response": {
+        "data": [
+          {
+            "entity_type": "result",
+            "canonical_name": "GPT-4.1 × Graduate-Level Google-Proof Q&A Diamond",
+            "matched_text": "Evaluation result",
+            "href": "/benchmarks/gpqa/diamond?view=history&result=c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf"
+          },
+          {
+            "entity_type": "benchmark",
+            "canonical_name": "Graduate-Level Google-Proof Q&A Diamond",
+            "matched_text": "GPQA Diamond",
+            "href": "/benchmarks/gpqa/diamond",
+            "aliases": []
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.1",
+            "matched_text": "GPT-4.1",
+            "href": "/models/10002"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 3,
+          "total_pages": 1
+        },
+        "direct_href": "/benchmarks/gpqa/diamond?view=history&result=c4d898e3e476b3e5ab2f8d22ce5ef25b202c73005211081b729d89f90ad7fdcf"
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "gpt-4.1-2025-04-14",
+      "response": {
+        "data": [
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.1",
+            "matched_text": "gpt-4.1-2025-04-14",
+            "href": "/models/10002"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 1,
+          "total_pages": 1
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "ＧＰＴ－４．１",
+      "response": {
+        "data": [
+          {
+            "entity_type": "model",
+            "canonical_name": "GPT-4.1",
+            "matched_text": "GPT-4.1",
+            "href": "/models/10002"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 1,
+          "total_pages": 1
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "claud",
+      "response": {
+        "data": [
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude 3.7 Sonnet",
+            "matched_text": "Claude 3.7 Sonnet",
+            "href": "/models/20001"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Fable 5",
+            "matched_text": "Claude Fable 5",
+            "href": "/models/20012"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Fable 5.1",
+            "matched_text": "Claude Fable 5.1",
+            "href": "/models/20004"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Haiku 4.5",
+            "matched_text": "Claude Haiku 4.5",
+            "href": "/models/20006"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 4",
+            "matched_text": "Claude Opus 4",
+            "href": "/models/20002"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 4.5",
+            "matched_text": "Claude Opus 4.5",
+            "href": "/models/20007"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 4.6",
+            "matched_text": "Claude Opus 4.6",
+            "href": "/models/20008"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 4.7",
+            "matched_text": "Claude Opus 4.7",
+            "href": "/models/20010"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 4.8",
+            "matched_text": "Claude Opus 4.8",
+            "href": "/models/20011"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 5",
+            "matched_text": "Claude Opus 5",
+            "href": "/models/20014"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Opus 5.5",
+            "matched_text": "Claude Opus 5.5",
+            "href": "/models/20015"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Sonnet 4",
+            "matched_text": "Claude Sonnet 4",
+            "href": "/models/20003"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Sonnet 4.5",
+            "matched_text": "Claude Sonnet 4.5",
+            "href": "/models/20005"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Sonnet 4.6",
+            "matched_text": "Claude Sonnet 4.6",
+            "href": "/models/20009"
+          },
+          {
+            "entity_type": "model",
+            "canonical_name": "Claude Sonnet 5",
+            "matched_text": "Claude Sonnet 5",
+            "href": "/models/20013"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 15,
+          "total_pages": 1
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "anthropci",
+      "response": {
+        "data": [
+          {
+            "entity_type": "company",
+            "canonical_name": "Anthropic",
+            "matched_text": "Anthropic",
+            "href": "/companies/anthropic"
+          }
+        ],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 1,
+          "total_pages": 1
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    },
+    {
+      "q": "p1112-no-result-xyz",
+      "response": {
+        "data": [],
+        "page": {
+          "number": 1,
+          "limit": 50,
+          "total_items": 0,
+          "total_pages": 0
+        }
+      },
+      "d1Queries": 0,
+      "d1Rows": 0,
+      "kvReads": 1
+    }
+  ],
+  "redirects": [
+    {
+      "url": "http://benchmarkregistry.org/models/10001?q=gpt",
+      "status": 301,
+      "location": "https://benchmarkregistry.org/models/10001?q=gpt"
+    },
+    {
+      "url": "http://www.benchmarkregistry.org/models/10001?q=gpt",
+      "status": 301,
+      "location": "https://www.benchmarkregistry.org/models/10001?q=gpt"
+    },
+    {
+      "url": "https://www.benchmarkregistry.org/models/10001?q=gpt",
+      "status": 308,
+      "location": "https://benchmarkregistry.org/models/10001?q=gpt"
+    }
+  ],
+  "securityHeaders": {
+    "strict-transport-security": null,
+    "content-type": "text/html",
+    "x-content-type-options": null,
+    "x-frame-options": null,
+    "referrer-policy": null,
+    "content-security-policy": null,
+    "cross-origin-opener-policy": null
+  },
+  "result": "PASS",
+  "sitemap": {
+    "count": 808,
+    "exact": 537,
+    "unique": true,
+    "apexHttpsOnly": true
+  },
+  "robots": "User-agent: *\nAllow: /\n\nSitemap: https://benchmarkregistry.org/sitemap.xml"
+}

@@ -531,6 +531,15 @@
         "staging": "2026-10-07T23:52:38Z",
         "production": "2026-10-08T00:03:53Z"
       }
+    },
+    {
+      "order": 60,
+      "file": "claude-haiku-5-5-2026-10-08.json",
+      "sha256": "7d35cfd461b0a3edd336503aff85caa3c956c3dd05ad48ef92071a511cc490ec",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }

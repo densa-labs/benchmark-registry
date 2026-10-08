@@ -1,0 +1,9 @@
+{
+  "indexable_urls": 808,
+  "orphaned": [],
+  "unreachable": [],
+  "invalid_origins": [],
+  "invalid_result_links": [],
+  "result": "PASS",
+  "method": "Existing graph verifier over offline materialized SSR; no production crawl"
+}

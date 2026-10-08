@@ -1,0 +1,66 @@
+{
+  "verifiedAt": "2026-09-29T08:44:20.527Z",
+  "checks": [
+    {
+      "path": "/api/models",
+      "status": 200,
+      "cache": "miss",
+      "kvReads": "1",
+      "d1Queries": "0",
+      "d1Rows": "0",
+      "responseCookies": false,
+      "vary": null
+    },
+    {
+      "path": "/api/models",
+      "status": 200,
+      "cache": "hit",
+      "kvReads": "1",
+      "d1Queries": "0",
+      "d1Rows": "0",
+      "responseCookies": false,
+      "vary": null
+    },
+    {
+      "path": "/api/models",
+      "status": 200,
+      "cache": "hit",
+      "kvReads": "1",
+      "d1Queries": "0",
+      "d1Rows": "0",
+      "responseCookies": false,
+      "vary": null
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "cache": "miss",
+      "kvReads": "1",
+      "d1Queries": "0",
+      "d1Rows": "0",
+      "responseCookies": false,
+      "vary": null
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "cache": "hit",
+      "kvReads": "1",
+      "d1Queries": "0",
+      "d1Rows": "0",
+      "responseCookies": false,
+      "vary": null
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "cache": "hit",
+      "kvReads": "1",
+      "d1Queries": "0",
+      "d1Rows": "0",
+      "responseCookies": false,
+      "vary": null
+    }
+  ],
+  "note": "Fixed repeated requests; cache hits are not assumed. Each request serves materialized state with zero D1."
+}

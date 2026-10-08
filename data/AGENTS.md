@@ -2,7 +2,7 @@
 
 Applies to tracked Registry data and ingestion source files.
 
-Read the root `AGENTS.md`, `docs/data-contract.md`, and `docs/registry-numbering.md` first.
+Read the root `AGENTS.md` first, especially its essential rules (section 2).
 
 This directory is evidence-backed project data, not scratch space.
 
@@ -73,7 +73,7 @@ Do not simplify tracked source files in ways that make provenance unrecoverable.
 
 Never assign a Registry No. until namespace and release order are verified.
 
-Registry number assignment follows `docs/registry-numbering.md`, including release
+Registry number assignment follows the registry numbering rules in the root `AGENTS.md`, including release
 precision, immutable published numbers, append-only late backfills, and namespace
 exhaustion.
 
@@ -98,7 +98,7 @@ A version-specific record may differ in:
 
 Do not merge version-specific metadata into the family merely for convenience.
 
-Each v2 benchmark version has exactly one metric. Stop for contract review rather
+Each v2 benchmark version has exactly one metric. Stop for owner review rather
 than silently selecting among multiple published metrics.
 
 ---

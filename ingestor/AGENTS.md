@@ -2,7 +2,7 @@
 
 Applies to the Python ingestion system.
 
-Read the root `AGENTS.md`, `docs/data-contract.md`, and `docs/registry-numbering.md` first.
+Read the root `AGENTS.md` first, especially its essential rules (section 2).
 
 The ingestor is the **primary controlled write path** into Benchmark Registry.
 
@@ -136,7 +136,7 @@ Metric must be explicit.
 Every source must be exact and one source must be marked primary.
 
 Logical identity, run-reference fallback, evaluator-set hashing, and duplicate /
-conflict behavior are defined in `docs/data-contract.md`. Do not invent a new
+conflict behavior are defined in the data rules in the root `AGENTS.md`. Do not invent a new
 `run_ref` merely to get a conflict through validation.
 
 ---
@@ -167,7 +167,7 @@ If primary sources disagree materially, do not choose silently.
 
 Do not assign or modify Registry Nos. casually.
 
-Registry No. assignment follows `docs/registry-numbering.md`, including release
+Registry No. assignment follows the registry numbering rules in the root `AGENTS.md`, including release
 precision, deterministic ties, immutable numbers, late backfills, and exhaustion.
 
 Registry Nos. are strings.
@@ -210,7 +210,7 @@ If the schema cannot distinguish these safely, stop and report the schema ambigu
 
 ## 10. Database writes
 
-Use only the approved local and production D1 adapters in `docs/data-contract.md`.
+Use only the approved local and production D1 adapters in the data rules in the root `AGENTS.md`.
 
 After an ambiguous network response, re-query logical identities before retrying;
 never blindly replay a write batch.

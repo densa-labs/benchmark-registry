@@ -2,8 +2,11 @@
 """Replay the batch manifest twice into an empty SQLite database and compare
 the result with production evidence.
 
-Pass 1 must reproduce data/batches/expected-counts.json and the production
-result_keys; pass 2 must report SKIPPED for every record and exit 0.
+Pass 1 replays every batch except those listed as "pending" in
+data/batches/expected-counts.json (batches not yet applied to production) and
+must reproduce its counts and the production result_keys. Pass 2 replays the
+whole manifest, so pending batches must apply cleanly; pass 3 must report
+SKIPPED for every record and exit 0.
 Local only: no network calls.
 """
 
@@ -54,14 +57,14 @@ def compare(actual: dict, expected: dict, keys: set[str], production: set[str]) 
     return problems
 
 
-def replay(database: Path) -> list[dict]:
+def replay(database: Path, manifest: Path = MANIFEST) -> list[dict]:
     environment = {
         **os.environ,
         "REGISTRY_LOCAL_DB_PATH": str(database),
         "PYTHONPATH": str(ROOT / "ingestor" / "src"),
     }
     process = subprocess.run(
-        [sys.executable, "-m", "benchmark_registry_ingestor", "replay", str(MANIFEST), "--commit"],
+        [sys.executable, "-m", "benchmark_registry_ingestor", "replay", str(manifest), "--commit"],
         capture_output=True, text=True, env=environment, check=False,
     )
     if process.returncode:
@@ -81,10 +84,19 @@ def main() -> int:
         with sqlite3.connect(database) as connection:
             for migration in sorted((ROOT / "migrations").glob("*.sql")):
                 connection.executescript(migration.read_text())
-        first = replay(database)
+        pending = set(expected.get("pending", []))
+        manifest = json.loads(MANIFEST.read_text())
+        batches = next(key for key, value in manifest.items() if isinstance(value, list))
+        applied = Path(directory) / "applied-manifest.json"
+        applied.write_text(json.dumps({**manifest, batches: [
+            {**entry, "file": str(MANIFEST.parent / entry["file"])}
+            for entry in manifest[batches] if entry["file"] not in pending
+        ]}))
+        first = replay(database, applied)
         with sqlite3.connect(database) as connection:
             actual = {name: connection.execute(sql).fetchone()[0] for name, sql in COUNTS.items()}
             keys = {row[0] for row in connection.execute("SELECT result_key FROM results")}
+        pending_pass = replay(database)
         second = replay(database)
     problems = compare(actual, expected["counts"], keys, evidence_result_keys(expected["result_keys"]))
     statuses = Counter(row["status"] for row in second)
@@ -92,6 +104,7 @@ def main() -> int:
         problems.append(f"second pass was not all SKIPPED: {dict(statuses)}")
     print(json.dumps({
         "first_pass": dict(Counter(row["status"] for row in first)),
+        "pending_pass": dict(Counter(row["status"] for row in pending_pass)),
         "counts": actual,
         "second_pass": dict(statuses),
         "superseded": sum(row["message"].startswith("superseded") for row in second),

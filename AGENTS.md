@@ -19,55 +19,117 @@ This is **not** a leaderboard, community submission platform, ranking engine, so
 When working in this repository, use this authority order:
 
 1. Explicit task/user instructions
-2. Frozen project contracts (`docs/product-contract.md`, `docs/data-contract.md`, and
-   `docs/registry-numbering.md`)
-3. This root `AGENTS.md`
-4. Any deeper `AGENTS.md` applying to the files being changed
-5. Existing tests and code behavior
-6. Inference
+2. This root `AGENTS.md`, including the essential rules in section 2
+3. Any deeper `AGENTS.md` applying to the files being changed
+4. Existing tests and code behavior
+5. Inference
 
-If two higher-priority sources conflict, **stop and report the conflict**. Do not silently choose one.
+If two sources at the same level conflict, stop and report the conflict.
 
 ---
 
-## 2. Read before changing architecture
+## 2. Essential rules
 
-Before making architectural or cross-cutting changes, read:
+These rules replace the former `docs/` contracts. Change them only when the
+owner asks; when a task would break one, say so before writing code.
 
-- `development-roadmap.md` (local and gitignored; read it when present)
-- `docs/product-contract.md`
-- `docs/data-contract.md`
-- `docs/registry-numbering.md`
+### Product
 
-Do not duplicate those documents into code comments or additional specs unless explicitly requested.
+- A simple, data-first registry. Not a leaderboard: no rankings, "top models",
+  composite or average scores, winners, or sortable score columns anywhere.
+- Canonical routes: `/`, `/models`, `/models/{registry_no}`, `/compare`,
+  `/benchmarks`, `/benchmarks/{slug}`, `/benchmarks/{slug}/{version_slug}`,
+  `/companies`, `/companies/{slug}`. Route keys are the immutable slugs and
+  Registry Nos., never display names. Supporting pages (search, recent,
+  coverage, corrections, compare pairs, legal pages, badges, sitemap, feed,
+  `/version.json`, `/llms.txt`, the results CSV, share cards) must not change
+  canonical route meaning. Do not add canonical routes without approval.
+- Every page is prerendered at build time from one D1 snapshot and served as
+  static assets; no public API. New data appears only after a deploy.
+- Homepage: global search, Explore Benchmarks (at most five families, by
+  distinct model count, then name, then slug), Latest Additions (at most five
+  newest result rows by ingestor id, not by report date), All Models.
+  Redirected stealth models are excluded from counts and feeds.
+- Result tables: page sizes exactly 50 / 100 / 500, default 50, no "All";
+  `Latest` (default) and `History` views; search, filters, view, page and page
+  size live in shareable URL state.
+- Benchmark versions list by release (precision-aware, descending), then
+  version text. "Latest" is the first in that order; no inferred semver.
+- Compare: two selections with optional reasoning filters
+  (`/compare?models=10001,20001&reasoning=high,max`), latest result per series,
+  shared benchmarks first, `—` for missing. Show evaluator, version, metric,
+  reasoning, date and source; flag differing versions, metrics or evaluator
+  sets as possibly non-equivalent. Parameterized compares are noindex.
+- Provider page: "Latest model" is the newest non-redirected model by release
+  date (ties: name). `user_attested` establishment dates stay hidden until a
+  primary source establishes them.
+- A redirected stealth Registry No. returns 308 to the confirmed model; the
+  old number stays reserved.
+- Design: basic and modern; no heavy cards, gradients, giant heroes or
+  dashboard clutter.
+
+### Data
+
+- Entities: companies (providers, `company` or `ai_unit`), namespaces, models,
+  model aliases, benchmarks (families), benchmark versions, metrics, results;
+  plus integrity tables for evaluators, sources, configurations and redirects.
+- Slugs are lowercase ASCII kebab-case and unique. Names and aliases also store
+  an NFKC + case-folded normalized form; aliases are unique within their type.
+- Dates are ISO 8601 with explicit precision. Model release, version release and
+  result report dates must be `date` or `timestamp`; if a source gives only a
+  year, stop. Compare dates only at the precision both values have.
+- Every fact keeps an exact source URL and a checked timestamp. Source priority:
+  benchmark/evaluator primary source, then the developer's primary source.
+  Never use snippets or secondary articles when a primary source exists. If
+  primary sources disagree and are not shown to be different runs, stop.
+- Each benchmark version has exactly one metric, enforced in the schema. Metric
+  keys are kebab-case; numeric scores are parsed as `Decimal`, stored as
+  canonical decimal text, and the exact source text is kept in `score_raw`.
+- A result is one model's observation in one run. Logical identity: model,
+  reasoning level, benchmark version, metric, `run_ref`. Reasoning level is
+  result metadata (empty string = not stated) and never a model property.
+- `run_ref`: the evaluator's stable run id when published; otherwise
+  `source:<normalized primary URL>#<reported_at>`. Never invent a `run_ref` to
+  get past a conflict.
+- `result_key` = lowercase hex SHA-256 of `v1`, Registry No., reasoning level,
+  benchmark slug, version label, metric key, `run_ref`, joined by NUL bytes.
+  `evaluator_set_key` = SHA-256 of `v1` and the sorted evaluator keys, joined
+  by NUL. Both are immutable.
+- Conflicts: identical record = SKIPPED; same identity with a different score,
+  evaluator set or date = CONFLICT and stop; a proven same-run citation is
+  added without replacing provenance; a different `run_ref` is a distinct run.
+  Old runs are never overwritten.
+- Latest view: one row per (model, reasoning, version, metric, evaluator set),
+  the greatest `reported_at`, then `result_key`. History shows every run.
+- Writes go only through the Python ingestor (local SQLite, or D1 over the HTTP
+  API with credentials from the environment). `--dry-run` writes nothing;
+  `--commit` sends one atomic batch. After an ambiguous network response,
+  re-query before retrying.
+
+### Registry numbering
+
+- Registry No. = namespace prefix + three-digit sequence (`001`–`999`), stored
+  as text. Prefixes: 00 stealth, 10 OpenAI, 15 OpenAI OSS, 20 Anthropic,
+  30 Google, 35 Google Gemma, 40 SpaceXAI, 50 Cursor, 60 NVIDIA,
+  70 Microsoft, 80 Meta, 90 Mistral, 100 reserved, 110 DeepSeek,
+  120 Moonshot AI, 130 Alibaba, 140 MiniMax, 150 Z.ai, 160 Thinking Machines,
+  170 SSI.
+- Published numbers are permanent: never renumber or reuse. New models take
+  the next unused sequence in their namespace; a model released before
+  already-numbered ones is appended with `sequence_exception_reason =
+  late_backfill`. Same-day releases order by case-folded name, then source URL.
+- `release_at` is the earliest official public availability from a primary
+  source. Marketing numbers do not set the sequence.
+- A new Registry No. is a distinct released artifact; renames and API aliases
+  stay aliases. If identity or release order is not established, stop.
+- Namespace `00` is only for stealth models; a stealth number may redirect once
+  to a confirmed model. A company may publish only in namespaces it is
+  authorized for. At sequence 999 a namespace stops until a new prefix is
+  approved.
 
 ---
 
-## 3. Frozen product invariants
-
-The complete, canonical frozen contracts are:
-
-- `docs/product-contract.md` for product behavior and routes,
-- `docs/data-contract.md` for entities, provenance, result identity, and write boundaries,
-- `docs/registry-numbering.md` for namespace and Registry No. assignment.
-
-Treat them as hard constraints unless explicitly revised. Summaries in the roadmap
-and scoped instructions are operational guidance; they do not override the
-canonical contracts.
-
-If a requested change would violate one of these, stop and surface it.
-
----
-
-## 4. Frozen routes
-
-The canonical route families and redirect behavior are defined only in
-`docs/product-contract.md`. Do not invent alternate canonical routes without explicit
-approval.
-
----
-
-## 5. Repository map
+## 3. Repository map
 
 ```text
 /
@@ -76,7 +138,6 @@ approval.
 ├── data/         # tracked batches, corrections, label mappings and research evidence
 ├── migrations/   # ordered D1 migrations and their rollbacks
 ├── scripts/      # repository checks: data validation, replay, backup, SEO check
-├── docs/         # the three frozen contracts only
 ├── assets/       # README logos
 └── .github/      # CI workflow and issue templates
 ```
@@ -126,7 +187,7 @@ virtualenv `.pth` files can be hidden, which breaks `uv run pytest` (run it as
 
 ---
 
-## 6. Development behavior
+## 4. Development behavior
 
 Use the smallest complete change that satisfies the task.
 
@@ -147,13 +208,13 @@ Avoid:
 - generic repository frameworks,
 - hidden fallback behavior,
 - silent data coercion,
-- feature additions not required by the frozen contract.
+- feature additions nobody asked for.
 
 Do not redesign neighboring systems just because a local implementation could be “cleaner.”
 
 ---
 
-## 7. Dependency rule
+## 5. Dependency rule
 
 The implementation dependency order is:
 
@@ -182,7 +243,7 @@ Examples:
 
 ---
 
-## 8. Data accuracy
+## 6. Data accuracy
 
 Accuracy is a product feature.
 
@@ -199,7 +260,7 @@ Do not use search-result snippets, secondary articles, or unsourced posts when a
 
 ---
 
-## 9. Testing and verification
+## 7. Testing and verification
 
 Every implementation task must leave deterministic evidence.
 
@@ -208,7 +269,7 @@ Before marking work complete:
 1. run the most relevant targeted tests,
 2. run broader checks required by the affected subtree,
 3. inspect the diff,
-4. verify no frozen invariant was changed,
+4. verify no essential rule (section 2) was broken,
 5. report any unresolved risk.
 
 Do not claim tests passed unless they were actually run.
@@ -228,7 +289,7 @@ Add a new verification command only when that is within task scope.
 
 ---
 
-## 10. Agent task shape
+## 8. Agent task shape
 
 Prefer work units with:
 
@@ -247,11 +308,11 @@ If a task is too broad to verify as one unit, split it.
 
 ---
 
-## 11. Stop conditions
+## 9. Stop conditions
 
 Stop and report instead of guessing when:
 
-- a frozen requirement conflicts with implementation,
+- an essential rule conflicts with the implementation,
 - Registry numbering cannot be determined confidently,
 - release ordering is ambiguous,
 - two primary sources materially disagree,
@@ -266,7 +327,7 @@ A concise blocker report is better than a speculative implementation.
 
 ---
 
-## 12. Git and commits
+## 10. Git and commits
 
 Prefer small commits aligned to complete work units.
 Use the Conventional Commits naming standard.
@@ -294,7 +355,7 @@ Do not mix unrelated roadmap phases unless unavoidable.
 
 ---
 
-## 13. Agent handoff
+## 11. Agent handoff
 
 When handing work to another agent, leave:
 
@@ -314,25 +375,18 @@ Do not require the next agent to reconstruct context from chat history.
 
 ---
 
-## 14. Change control
+## 12. Change control
 
-If a frozen contract must change:
-
-1. stop the affected work,
-2. state the exact contradiction,
-3. propose the smallest viable revision,
-4. describe migration/backward-compatibility impact,
-5. wait for explicit approval.
-
-Do not reinterpret a frozen rule as “close enough.”
+If a task needs an essential rule changed, say which rule and why, propose the
+smallest change, and wait for the owner. Do not treat a rule as "close enough".
 
 ---
 
-## 15. Definition of good agent behavior
+## 13. Definition of good agent behavior
 
 A good agent in this repository:
 
-- reads the relevant contracts,
+- reads the essential rules and the scoped `AGENTS.md`,
 - changes only what is necessary,
 - preserves provenance,
 - adds or updates tests,
@@ -344,7 +398,7 @@ Optimize for correctness and bounded completion, not activity volume.
 
 ---
 
-## 16. Owner decisions
+## 14. Owner decisions
 
 Approved by the owner on 2026-10-04 in response to the October 2026 audit.
 Treat these as explicit task instructions; do not reopen them.
@@ -369,6 +423,6 @@ Treat these as explicit task instructions; do not reopen them.
 
 ---
 
-## 17. Extra development information
+## 15. Extra development information
 
 - Do not use, unless explicitly stated, the `superpowers` skill and any related skill alongside it.

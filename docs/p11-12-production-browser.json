@@ -1,0 +1,111 @@
+{
+  "host": "benchmarkregistry.org",
+  "started": "2026-09-29T08:35:28.451Z",
+  "axeVersion": "4.13.0",
+  "routes": [
+    {
+      "label": "/ 390 light",
+      "violations": [],
+      "incomplete": [],
+      "passes": 42
+    },
+    {
+      "label": "/models/10005 390 light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 16
+        }
+      ],
+      "passes": 50
+    },
+    {
+      "label": "/benchmarks/gpqa/diamond 390 light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 174
+        }
+      ],
+      "passes": 50
+    },
+    {
+      "label": "/companies/openai 390 light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 160
+        }
+      ],
+      "passes": 51
+    },
+    {
+      "label": "/benchmarks/automationbench/1-0-6?view=history&result=4b14afd90fb1cc979b76f2f3a99a5f1e5610e93a84bd6f19559467343de5481b 390 light",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 51
+    },
+    {
+      "label": "/models/99999 390 light",
+      "violations": [],
+      "incomplete": [],
+      "passes": 40
+    },
+    {
+      "label": "Mobile global search expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 167
+        }
+      ],
+      "passes": 50
+    },
+    {
+      "label": "Empty local search",
+      "violations": [],
+      "incomplete": [],
+      "passes": 42
+    },
+    {
+      "label": "Explicit Dark theme",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 157
+        }
+      ],
+      "passes": 48
+    }
+  ],
+  "interactions": [
+    "Skip link visible and focuses main; mobile Space/open, search Tab/Enter/results, nested Escape and focus restoration; closed menu omitted from Tab order.",
+    "Sort state and restored control focus; keyboard table scrolling; pagination announcement; local search/empty/clear; cold and cached route identity focus.",
+    {
+      "darkContrast": {
+        "text": 17.05142639794523,
+        "muted": 6.052456547894523,
+        "focus": 7.261235771935444,
+        "control": 4.030630895083772,
+        "accent": 7.184656801071799
+      }
+    },
+    "Native theme arrows, one selected radio, explicit theme persistence, System restoration; Last updated Space/Enter toggle; Legal/theme/GitHub keyboard order.",
+    "Reduced-motion menu/scrolling; 320px viewport with 200% text: page, menu and footer reflow."
+  ],
+  "limits": [
+    "Automated Chrome keyboard and accessibility-tree checks; no physical screen reader or touch-device test.",
+    "200% text resize and constrained layout are automated separately from actual browser zoom."
+  ],
+  "result": "PASS"
+}

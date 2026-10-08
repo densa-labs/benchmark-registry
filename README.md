@@ -6,6 +6,19 @@
 
 # Benchmark Registry
 
+<p>
+  <a href="https://benchmarkregistry.org"><img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fbenchmarkregistry.org&label=benchmarkregistry.org"></a>
+  <a href="https://github.com/densa-labs/benchmark-registry/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/densa-labs/benchmark-registry/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+  <img alt="Models" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbenchmarkregistry.org%2Fversion.json&query=%24.counts.models&label=models&color=2563eb">
+  <img alt="Results" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbenchmarkregistry.org%2Fversion.json&query=%24.counts.results&label=results&color=2563eb">
+  <img alt="Benchmarks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbenchmarkregistry.org%2Fversion.json&query=%24.counts.benchmarks&label=benchmarks&color=2563eb">
+  <a href="LICENSE"><img alt="Code license: Apache 2.0" src="https://img.shields.io/badge/code-Apache%202.0-informational"></a>
+  <a href="LICENSE-DATA"><img alt="Data license: CC BY 4.0" src="https://img.shields.io/badge/data-CC%20BY%204.0-informational"></a>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-React-3178c6?logo=typescript&logoColor=white">
+  <img alt="Python" src="https://img.shields.io/badge/Python-ingestor-3776ab?logo=python&logoColor=white">
+  <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-static%20assets%20%2B%20D1-f38020?logo=cloudflare&logoColor=white">
+</p>
+
 **A project of [Densa Labs](https://densa-labs.github.io).**
 
 [Benchmark Registry](https://benchmarkregistry.org) puts AI models and their benchmark results in one place. It solves a simple, common problem: benchmark results are scattered across model announcements, benchmark sites, companies and evaluators.
@@ -57,7 +70,14 @@ Models receive stable Registry numbers based on their provider namespace and the
 170 = SSI
 ```
 
-The full numbering rules are in [docs/registry-numbering.md](docs/registry-numbering.md). A namespace can be allocated before its company has any models in the Registry; SSI's is.
+### Numbering rules
+
+- A Registry No. is the namespace prefix followed by a three-digit sequence (001–999).
+- Published numbers never change and are never reused.
+- A new model takes the next free sequence in its namespace. A model released before already-numbered ones is added at the end as a late backfill.
+- A new number means a separately released model; renames and API aliases stay aliases of the existing number.
+- Namespace 00 holds stealth models, which may later redirect to their confirmed number.
+- A namespace can be allocated before its company has any models in the Registry; SSI's is.
 
 ## Corrections and missing results
 
