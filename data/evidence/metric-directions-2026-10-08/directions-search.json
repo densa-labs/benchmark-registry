@@ -6,22 +6,26 @@
   {
    "metric_key": "babyvision-accuracy",
    "source_url": "https://arxiv.org/html/2601.06521",
-   "note": "Results tables header \"Avg (μ) ↑ / Std (σ) ↓\" only; no words"
+   "note": "Results tables header \"Avg (μ) ↑ / Std (σ) ↓\" only; no words",
+   "recorded_as": "higher"
   },
   {
    "metric_key": "deepsearchqa-f1",
    "source_url": "https://storage.googleapis.com/deepmind-media/DeepSearchQA/DeepSearchQA_benchmark_paper.pdf",
-   "note": "Results table header shows 'F1 ↑' (and 'Fully correct ↑', 'Fully incorrect ↓') with no words"
+   "note": "Results table header shows 'F1 ↑' (and 'Fully correct ↑', 'Fully incorrect ↓') with no words",
+   "recorded_as": "higher"
   },
   {
    "metric_key": "hallusionbench-accuracy",
    "source_url": "https://arxiv.org/html/2310.14566",
-   "note": "Table headers \"Question Pair Accuracy (qAcc) ↑\", \"Figure Accuracy (fAcc) ↑\"; no words"
+   "note": "Table headers \"Question Pair Accuracy (qAcc) ↑\", \"Figure Accuracy (fAcc) ↑\"; no words",
+   "recorded_as": "higher"
   },
   {
    "metric_key": "hle-accuracy",
    "source_url": "https://arxiv.org/html/2501.14249",
-   "note": "Table headers \"Accuracy (%) ↑  Calibration Error (%) ↓\"; no words"
+   "note": "Table headers \"Accuracy (%) ↑  Calibration Error (%) ↓\"; no words",
+   "recorded_as": "higher"
   }
  ],
  "not_found": [
@@ -612,5 +616,6 @@
    ],
    "note": "No explicit higher/lower-is-better wording found on the pages read (fetched and text-searched)."
   }
- ]
+ ],
+ "owner_decision": "2026-10-08: Ivan approved counting an up arrow in a results table header of the benchmark's own paper as a stated direction. The four arrow_only metrics are recorded as higher in metric-directions-2026-10-08-arrows.json."
 }

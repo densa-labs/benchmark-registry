@@ -51,6 +51,10 @@ Do not use:
 - inferred reasoning levels,
 - inferred benchmark versions.
 
+A metric direction needs a primary source that states it in words or marks that
+metric with an up or down arrow in the benchmark's own results table (owner
+decision, 2026-10-08). Never take it from the metric's name or a table's sort order.
+
 ---
 
 ## 2. Preserve provenance
