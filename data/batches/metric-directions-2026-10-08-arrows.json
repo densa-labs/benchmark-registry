@@ -1,0 +1,40 @@
+{
+ "records": [
+  {
+   "operation": "metric_direction",
+   "record": {
+    "metric_key": "babyvision-accuracy",
+    "direction": "higher",
+    "source_url": "https://arxiv.org/html/2601.06521",
+    "source_checked_at": "2026-10-08T05:05:56Z"
+   }
+  },
+  {
+   "operation": "metric_direction",
+   "record": {
+    "metric_key": "deepsearchqa-f1",
+    "direction": "higher",
+    "source_url": "https://storage.googleapis.com/deepmind-media/DeepSearchQA/DeepSearchQA_benchmark_paper.pdf",
+    "source_checked_at": "2026-10-08T05:05:56Z"
+   }
+  },
+  {
+   "operation": "metric_direction",
+   "record": {
+    "metric_key": "hallusionbench-accuracy",
+    "direction": "higher",
+    "source_url": "https://arxiv.org/html/2310.14566",
+    "source_checked_at": "2026-10-08T05:05:56Z"
+   }
+  },
+  {
+   "operation": "metric_direction",
+   "record": {
+    "metric_key": "hle-accuracy",
+    "direction": "higher",
+    "source_url": "https://arxiv.org/html/2501.14249",
+    "source_checked_at": "2026-10-08T05:05:56Z"
+   }
+  }
+ ]
+}

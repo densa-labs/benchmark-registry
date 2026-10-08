@@ -549,6 +549,15 @@
         "staging": null,
         "production": null
       }
+    },
+    {
+      "order": 62,
+      "file": "metric-directions-2026-10-08-arrows.json",
+      "sha256": "a4648707d41745325f02df4b7321cc6d0f47ac63f9993c8dc06c6248e0ac984a",
+      "applied": {
+        "staging": null,
+        "production": null
+      }
     }
   ]
 }
