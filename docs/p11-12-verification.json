@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-09-29T08:50:43.366199+00:00",
+  "result": "PASS",
+  "app": {
+    "passed": 376,
+    "skipped": 1,
+    "defaultOptInFixtureAbsent": true,
+    "finalTypecheck": "PASS",
+    "finalEslint": "PASS"
+  },
+  "focusedAccessibility": {
+    "passed": 28
+  },
+  "python": {
+    "passed": 89,
+    "skipped": 1,
+    "skipReason": "Disposable remote D1 credentials absent"
+  },
+  "offlineLinkTests": {
+    "passed": 8
+  },
+  "ruff": "PASS",
+  "builds": {
+    "staging": "PASS",
+    "production": "PASS"
+  },
+  "environmentGuards": {
+    "staging": "PASS",
+    "production": "PASS"
+  },
+  "lighthouseGate": {
+    "mobile": "PASS",
+    "desktop": "PASS"
+  },
+  "diffCheck": "PASS",
+  "optionalLocalMiniflareAudit": {
+    "attempted": true,
+    "result": "TIMEOUT",
+    "timeoutMs": 120000,
+    "classification": "Non-blocking optional legacy canonical-reference harness limitation; full-data materialized equivalent passes"
+  },
+  "applicationSourceChangedByP1112": false,
+  "productionDataWrites": 0,
+  "deploymentChanges": 0
+}

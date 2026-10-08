@@ -1,0 +1,22 @@
+{
+  "staging": {
+    "buildIds": [
+      "37969bbe53c0-dirty"
+    ],
+    "buildTimestamps": [
+      "2026-09-28 13:59:37"
+    ],
+    "publicServingSqlRepositoryPresent": false,
+    "readOnlyServingCode": true
+  },
+  "production": {
+    "buildIds": [
+      "37969bbe53c0-dirty"
+    ],
+    "buildTimestamps": [
+      "2026-09-28 14:01:12"
+    ],
+    "publicServingSqlRepositoryPresent": false,
+    "readOnlyServingCode": true
+  }
+}

@@ -2,7 +2,7 @@
 
 Applies to D1 schema migrations.
 
-Read the root `AGENTS.md`, `docs/data-contract.md`, and `docs/registry-numbering.md` first.
+Read the root `AGENTS.md` first, especially its essential rules (section 2).
 
 ---
 
@@ -56,7 +56,7 @@ Prefer database-enforced correctness for stable invariants such as:
 - unique logical result identities,
 - foreign-key integrity.
 
-Also enforce the cross-table invariants required by `docs/data-contract.md`, including
+Also enforce the cross-table invariants required by the data rules in the root `AGENTS.md`, including
 benchmark-version/metric consistency, namespace/company authorization, source
 cardinality, and redirect integrity.
 
@@ -89,7 +89,7 @@ Verify:
 - migration applies,
 - constraints behave as expected,
 - seed data remains valid,
-- no frozen identifier changes unexpectedly.
+- no public identifier changes unexpectedly.
 
 If rollback is unsafe or unsupported, document recovery expectations before approval.
 

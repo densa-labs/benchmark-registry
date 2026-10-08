@@ -15,7 +15,7 @@ The app is a **read-first public interface** over curated Registry data.
 It must:
 
 - publish stable, prerendered pages and static read data,
-- render the frozen page structures,
+- render the page structures in the product rules,
 - make sources easy to reach,
 - preserve model/benchmark/company relationships,
 - avoid inventing interpretations not present in the data.
@@ -26,7 +26,7 @@ It must not become an admin application.
 
 ## 2. Public routes
 
-The canonical route families are frozen in `docs/product-contract.md`:
+The canonical route families are fixed by the product rules in the root `AGENTS.md`:
 
 ```text
 /
@@ -43,7 +43,7 @@ The canonical route families are frozen in `docs/product-contract.md`:
 /companies/{slug}
 ```
 
-The contract also lists the supporting pages (search, recent, coverage,
+Those rules also list the supporting pages (search, recent, coverage,
 corrections, comparison pairs, legal and about pages, badges, feed,
 `/version.json`, `/llms.txt`, the results CSV and share cards). Do not change canonical route semantics or add a route
 without explicit approval. Every new page must be reachable from the build's
@@ -107,7 +107,7 @@ The product should feel like a clean technical directory, not an institution.
 The homepage includes global search, Explore Benchmarks, Latest Additions,
 and the complete alphabetical All Models directory.
 
-Use the homepage semantics in `docs/product-contract.md`: at most five families
+Use the homepage semantics in the product rules in the root `AGENTS.md`: at most five families
 with coverage counts, and at most five result records in Registry insertion
 order. Keep result report dates distinct from Registry addition order.
 
@@ -191,7 +191,7 @@ Company   Model   Score   Source   Registry No.
 Rules:
 
 - company tabs are dynamic,
-- Latest/History semantics come from `docs/data-contract.md`,
+- Latest/History semantics come from the data rules in the root `AGENTS.md`,
 - Score is not sortable,
 - page-size selector is exactly 50 / 100 / 500,
 - default is 50,
@@ -220,7 +220,7 @@ Latest model links to its model page.
 
 The result table exposes the shared Latest/History switch.
 
-Use the eligibility and tie-break rules in `docs/product-contract.md`; do not infer a
+Use the eligibility and tie-break rules in the product rules in the root `AGENTS.md`; do not infer a
 different meaning of “latest” in presentation code.
 
 ---
@@ -340,6 +340,6 @@ For UI changes, verify:
 - pagination,
 - keyboard/focus behavior,
 - mobile overflow,
-- frozen sorting behavior.
+- the no-sortable-scores rule.
 
 Do not claim visual behavior is correct without checking it.

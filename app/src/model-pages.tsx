@@ -360,7 +360,7 @@ export function ModelDetailPage({
             },
             {
               label: "Registry No.",
-              value: <a className="registry-number" href="https://github.com/densa-labs/benchmark-registry/blob/main/docs/registry-numbering.md"
+              value: <a className="registry-number" href="https://github.com/densa-labs/benchmark-registry#registry-numbers"
                 title="Stable ID composed of a developer namespace and an assigned sequence.">
                 {model.registry_no}<span className="visually-hidden"> — Stable ID composed of a developer namespace and an assigned sequence. Read about Registry numbering.</span>
               </a>,

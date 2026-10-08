@@ -57,7 +57,14 @@ Models receive stable Registry numbers based on their provider namespace and the
 170 = SSI
 ```
 
-The full numbering rules are in [docs/registry-numbering.md](docs/registry-numbering.md). A namespace can be allocated before its company has any models in the Registry; SSI's is.
+### Numbering rules
+
+- A Registry No. is the namespace prefix followed by a three-digit sequence (001–999).
+- Published numbers never change and are never reused.
+- A new model takes the next free sequence in its namespace. A model released before already-numbered ones is added at the end as a late backfill.
+- A new number means a separately released model; renames and API aliases stay aliases of the existing number.
+- Namespace 00 holds stealth models, which may later redirect to their confirmed number.
+- A namespace can be allocated before its company has any models in the Registry; SSI's is.
 
 ## Corrections and missing results
 

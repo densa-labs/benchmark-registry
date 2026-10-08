@@ -1,0 +1,100 @@
+{
+  "result": "PASS",
+  "method": "Clean local replay of all migrations and approved canonical batches; no remote writes",
+  "counts": {
+    "models": 92,
+    "benchmarks": 53,
+    "benchmark_versions": 104,
+    "results": 594,
+    "companies": 15
+  },
+  "approvedExact": 537,
+  "ambiguous": 57,
+  "foreignKeyErrors": 0,
+  "malformedRegistryNumbers": 0,
+  "namespaceOwnershipErrors": 0,
+  "metricRelationshipErrors": 0,
+  "resultAndEvaluatorHashesValidated": 594,
+  "namespaces": [
+    {
+      "prefix": "00",
+      "name": "Stealth models"
+    },
+    {
+      "prefix": "10",
+      "name": "OpenAI"
+    },
+    {
+      "prefix": "15",
+      "name": "OpenAI OSS"
+    },
+    {
+      "prefix": "20",
+      "name": "Anthropic"
+    },
+    {
+      "prefix": "30",
+      "name": "Google"
+    },
+    {
+      "prefix": "35",
+      "name": "Google Gemma"
+    },
+    {
+      "prefix": "40",
+      "name": "SpaceXAI"
+    },
+    {
+      "prefix": "50",
+      "name": "Cursor"
+    },
+    {
+      "prefix": "60",
+      "name": "NVIDIA"
+    },
+    {
+      "prefix": "70",
+      "name": "Microsoft"
+    },
+    {
+      "prefix": "80",
+      "name": "Meta"
+    },
+    {
+      "prefix": "90",
+      "name": "Mistral"
+    },
+    {
+      "prefix": "110",
+      "name": "DeepSeek"
+    },
+    {
+      "prefix": "120",
+      "name": "Moonshot AI"
+    },
+    {
+      "prefix": "130",
+      "name": "Alibaba"
+    },
+    {
+      "prefix": "140",
+      "name": "MiniMax"
+    },
+    {
+      "prefix": "150",
+      "name": "Z.ai"
+    },
+    {
+      "prefix": "160",
+      "name": "Thinking Machines"
+    },
+    {
+      "prefix": "170",
+      "name": "SSI"
+    }
+  ],
+  "modelAliases": 45,
+  "benchmarkAliases": 5,
+  "redirects": [],
+  "reasoningLevelOnModels": false
+}

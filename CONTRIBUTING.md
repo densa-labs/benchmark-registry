@@ -24,14 +24,11 @@ You can also email support@benchmarkregistry.org.
 ## Before changing code or data
 
 Read [AGENTS.md](AGENTS.md) and the `AGENTS.md` in the directory you are
-changing. They apply to people as well as coding agents. The frozen rules are in
-[docs/](docs/):
+changing. They apply to people as well as coding agents. The essential rules
+for pages, data and Registry numbering are in section 2 of the root
+[AGENTS.md](AGENTS.md).
 
-- [product-contract.md](docs/product-contract.md): pages, routes and table behavior.
-- [data-contract.md](docs/data-contract.md): entities, provenance, result identity and conflicts.
-- [registry-numbering.md](docs/registry-numbering.md): namespaces and Registry Nos.
-
-A change that would alter one of these contracts needs the maintainer's
+A change that would alter one of these rules needs the maintainer's
 approval first. Open an issue describing the change before writing it.
 
 The project is not a leaderboard. Rankings, composite scores, sortable scores
@@ -45,7 +42,6 @@ ingestor/     Python ingestion CLI, the only write path into the database
 data/         tracked batches, corrections and research evidence
 migrations/   D1 schema migrations
 scripts/      data validation, replay and SEO checks
-docs/         the frozen contracts
 ```
 
 The public site is static files built from a Cloudflare D1 database. See
