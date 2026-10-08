@@ -1,0 +1,175 @@
+{
+ "evaluators": [
+  {
+   "evaluator": "Vals AI",
+   "rows": 593,
+   "verdict": "none",
+   "where": "https://www.vals.ai/benchmarks/swebench",
+   "definition_quote": "",
+   "example": null,
+   "note": "Leaderboard columns: Rank, Model, Harness, Score, Cost, Duration (elapsed time). Only page-level 'Updated 9/1/2026' and a model-page release date. No data download."
+  },
+  {
+   "evaluator": "Mercor",
+   "rows": 496,
+   "verdict": "none",
+   "where": "https://www.mercor.com/apex/oss-benchmarks/oss-gpqa-diamond-leaderboard/",
+   "definition_quote": "",
+   "example": null,
+   "note": "Table has only Model and Score. No dates, no data files."
+  },
+  {
+   "evaluator": "Scale AI",
+   "rows": 165,
+   "verdict": "none",
+   "where": "https://labs.scale.com/leaderboard/swe_bench_pro",
+   "definition_quote": "",
+   "example": null,
+   "note": "Rank/model/score only; 'NEW' tag undefined. Trajectories on Docent not checked for timestamps."
+  },
+  {
+   "evaluator": "Cursor",
+   "rows": 82,
+   "verdict": "none",
+   "where": "https://cursor.com/cursorbench",
+   "definition_quote": "",
+   "example": null,
+   "note": "No date column. Changelog dates (e.g. Oct 7, 2026 pricing update) are about reporting changes, not runs."
+  },
+  {
+   "evaluator": "Zapier AutomationBench Team",
+   "rows": 81,
+   "verdict": "none",
+   "where": "https://zapier.com/benchmarks",
+   "definition_quote": "",
+   "example": null,
+   "note": "Version label 1.0.6 only. GitHub repo has no leaderboard date metadata found. Many rows are cited via developer system cards (see developer note)."
+  },
+  {
+   "evaluator": "Surge AI",
+   "rows": 76,
+   "verdict": "none",
+   "where": "https://surgehq.ai/benchmarks/chartography",
+   "definition_quote": "",
+   "example": null,
+   "note": "Rank/model/score only; last 7 KB of the page not read."
+  },
+  {
+   "evaluator": "SWE-bench Team",
+   "rows": 48,
+   "verdict": "ambiguous_date_only",
+   "where": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-opus-high",
+   "definition_quote": "",
+   "example": {
+    "model": "Claude 4.5 Opus (high)",
+    "date": "20260217 (folder prefix)"
+   },
+   "note": "Folder name starts with YYYYMMDD but nothing defines it as run date; metadata.yaml has model_release_date, cost, resolved, no run timestamp. Folder date plausibly = submission date. Not verified against git history."
+  },
+  {
+   "evaluator": "Toolathlon Authors",
+   "rows": 37,
+   "verdict": "ambiguous_date_only",
+   "where": "https://toolathlon.xyz/docs/leaderboard",
+   "definition_quote": "",
+   "example": {
+    "model": "Kimi K3 (max)",
+    "date": "2026-07-16"
+   },
+   "note": "Per-entry 'Date' column (YYYY-MM-DD) with no header definition or tooltip; same model has different dates in current vs archived table, so it is entry/snapshot date. Submit docs do not define it. Last ~82K chars of page not read."
+  },
+  {
+   "evaluator": "Terminal-Bench Team",
+   "rows": 35,
+   "verdict": "none",
+   "where": "https://www.tbench.ai/",
+   "definition_quote": "",
+   "example": null,
+   "note": "Columns: Rank, Model, Agent, Resolution rate, Cost, Tokens. No date found in rendered leaderboard (table rows not in scraped text; JSON date-field regex on /leaderboard/terminal-bench/2.0 found nothing). GitHub repo not inspected for results."
+  },
+  {
+   "evaluator": "PostTrainBench Team",
+   "rows": 27,
+   "verdict": "ambiguous_date_only",
+   "where": "https://posttrainbench.com/",
+   "definition_quote": "Changelog lists entry additions e.g. 'Added Opus 4.8 (High) and Opus 4.8 (Max)' (Jun 9, 2026)",
+   "example": {
+    "model": "Opus 4.8 (High)",
+    "date": "2026-06-09"
+   },
+   "note": "Changelog dates are leaderboard-add dates, not run dates. Repo has no results folder at top level; trajectories dataset on Hugging Face (aisa-group/PostTrainBench-Trajectories) not inspected."
+  },
+  {
+   "evaluator": "DataCurve",
+   "rows": 21,
+   "verdict": "ambiguous_date_only",
+   "where": "https://deepswe.datacurve.ai/changelog",
+   "definition_quote": "",
+   "example": {
+    "model": "GPT-6 Astra",
+    "date": "2026-09-03"
+   },
+   "note": "Page-level 'updated September 22, 2026'; changelog dates when results were added/re-priced (Gemini re-runs noted Aug 13). No definition as run date. /data/v1.1 is an HTML page; GitHub datacurve-ai/deep-swe not checked for run data."
+  },
+  {
+   "evaluator": "Proximal",
+   "rows": 18,
+   "verdict": "ambiguous_date_only",
+   "where": "https://www.frontierswe.com/changelog",
+   "definition_quote": "When models and other changes went live on the leaderboard.",
+   "example": {
+    "model": "GPT-6 Astra",
+    "date": "2026-09-11"
+   },
+   "note": "Explicitly a leaderboard go-live date, NOT a run date. No run dates on leaderboard or trace pages."
+  },
+  {
+   "evaluator": "XLang Lab",
+   "rows": 16,
+   "verdict": "none",
+   "where": "http://osworld-v1.xlang.ai/ (redirect of https://os-world.github.io/)",
+   "definition_quote": "",
+   "example": null,
+   "note": "Leaderboard table did not render in fetch. Only announcements 2025-07-28 and 2026-06-26. HF trajectories dataset xlangai/ubuntu_osworld_verified_trajs has zip filenames embedding dates (e.g. ...-20260330-...Verified_20260420_verified-run...) but these are submitter filenames, unspecified meaning."
+  },
+  {
+   "evaluator": "Collinear AI",
+   "rows": 9,
+   "verdict": "none",
+   "where": "https://cwe-bench.com/",
+   "definition_quote": "",
+   "example": null,
+   "note": "Only version labels (v0 Sept 1, v1 Sept 25), not per-model; no data links."
+  },
+  {
+   "evaluator": "Arena",
+   "rows": 1,
+   "verdict": "none",
+   "where": "https://arena.ai/leaderboard/text/overall",
+   "definition_quote": "",
+   "example": null,
+   "note": "Header date 'Oct 2, 2026' is an unlabeled page date, not defined as data cutoff or run date. Arena scores are aggregated votes, so a single run date is not meaningful."
+  },
+  {
+   "evaluator": "Epoch AI (row lacking evaluated_at: Grok 4 GPQA Diamond)",
+   "rows": 1,
+   "verdict": "none",
+   "where": "https://epoch.ai/data/benchmark_data.zip (gpqa_diamond.csv)",
+   "definition_quote": "Started at (column header; no definition in README)",
+   "example": {
+    "model": "grok-4-0709",
+    "date": null
+   },
+   "note": "Epoch CSV has 'Started at' per run for recent models (e.g. grok-4.7_xhigh 2026-09-22T21:49:22Z), but the grok-4-0709 row (score 0.87, release 2025-07-09) has an empty Started at, so no date is published for it. README does not define 'Started at'."
+  },
+  {
+   "evaluator": "Developer self-reports (spot-check: Anthropic, Google DeepMind)",
+   "rows": null,
+   "verdict": "none",
+   "where": "https://www.anthropic.com/news/claude-opus-4-7 ; https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+   "definition_quote": "Results as of February 2026 are listed below:",
+   "example": null,
+   "note": "Anthropic Opus 4.7 post: only publication/update dates, 'pre-release testing' undated. Gemini 3.1 Pro card: 'Results as of' month, not a run date. OpenAI gpt-5-6 page returned 403 (not checked). Consistent with expectation: no run dates."
+  }
+ ]
+}
