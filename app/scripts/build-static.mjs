@@ -23,7 +23,7 @@ if(buildInfo.staging!==(environment==='staging')) throw new Error(`The client bu
 const template=readFileSync(templatePath,'utf8');
 if(!template.includes('<div id="root"></div>')) throw new Error('dist/client/index.html is not the unrendered Vite template. Rebuild the client first.');
 
-const TABLES=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','effort_levels','reasoning_labels','configurations','benchmark_version_configurations','result_corrections','registry_revision','registry_read_changes'];
+const TABLES=['companies','namespaces','namespace_companies','models','model_aliases','benchmarks','benchmark_aliases','benchmark_versions','metrics','evaluator_organizations','benchmark_version_evaluators','results','result_evaluators','result_sources','registry_redirects','effort_levels','reasoning_labels','configurations','benchmark_version_configurations','result_corrections','score_settings','result_score_settings','registry_revision','registry_read_changes'];
 const metrics={d1Queries:0,d1RowsRead:0};
 
 // Builds always read from a private in-memory snapshot, so retracted results

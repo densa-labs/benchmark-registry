@@ -39,6 +39,18 @@ export interface MetricSummary {
   display_precision: number;
 }
 
+// Which benchmark setting a score covers (migration 0021), e.g. MMMU-Pro's overall score.
+export interface ScoreSetting {
+  key: string;
+  label: string;
+}
+
+// A benchmark's setting with the definition its own source gives.
+export interface BenchmarkScoreSetting extends ScoreSetting {
+  definition: string;
+  source_url: string;
+}
+
 // Tool, harness or context setting (migration 0014), attached to existing rows.
 export interface Configuration {
   key: string;
@@ -83,6 +95,7 @@ export interface ResultRow {
   source_archive_url?: string | null;
   publisher?: string | null;
   reporting_basis?: "self-reported" | "independent" | null;
+  score_setting?: ScoreSetting | null;
   primary_source_url: string;
   reported_at: string;
   reported_precision: DatePrecision;
@@ -121,6 +134,14 @@ export function pageMetadata(
     total_items: totalItems,
     total_pages: totalItems === 0 ? 0 : Math.ceil(totalItems / limit),
   };
+}
+
+export function parseScoreSetting(value: string | null | undefined): ScoreSetting | null {
+  if (value === null || value === undefined) return null;
+  const parsed: unknown = JSON.parse(value);
+  const { key, label } = (parsed ?? {}) as Record<string, unknown>;
+  if (typeof key !== "string" || typeof label !== "string") throw new Error("Database returned an invalid score setting.");
+  return { key, label };
 }
 
 export function parseConfiguration(value: string | null | undefined): Configuration | null {
@@ -231,6 +252,7 @@ export interface ResultDbRow extends ModelDbRow {
   source_archive_url?: string | null;
   publisher?: string | null;
   reporting_basis?: "self-reported" | "independent" | null;
+  score_setting?: string | null;
   primary_source_url: string;
   reported_at: string;
   reported_precision: DatePrecision;
@@ -279,6 +301,7 @@ export function resultFromRow(row: ResultDbRow): ResultRow {
     source_archive_url: row.source_archive_url ?? null,
     publisher: row.publisher ?? null,
     reporting_basis: row.reporting_basis ?? null,
+    score_setting: parseScoreSetting(row.score_setting),
     primary_source_url: row.primary_source_url,
     reported_at: row.reported_at,
     reported_precision: row.reported_precision,

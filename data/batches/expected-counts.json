@@ -10,6 +10,7 @@
     "data/evidence/evaluator-production-2026-10-08/production-after.json"
   ],
   "pending": [
-    "claude-haiku-5-5-2026-10-08.json"
+    "claude-haiku-5-5-2026-10-08.json",
+    "mmmu-pro-settings-2026-10-08.json"
   ]
 }

@@ -36,6 +36,8 @@ Creating records:
 - `benchmark` owns benchmark families, aliases, versions, metrics and
   benchmark-version evaluators.
 - `benchmark_version_configuration` records tool and harness settings.
+- `score_setting` defines a benchmark's settings (such as MMMU-Pro's overall
+  score) from the benchmark's own source.
 - `result` owns run evaluators and sources.
 
 Correcting records, each through an explicit compare-and-set with a reason:
@@ -43,7 +45,9 @@ Correcting records, each through an explicit compare-and-set with a reason:
 - `company_correction`, `company_attestation`, `model_provider_correction`,
   `provider_name_correction`, `provider_retirement`;
 - `result_correction`, `result_retraction`;
-- `result_provenance` and `metric_direction`, which only fill empty fields.
+- `result_provenance` and `metric_direction`, which only fill empty fields;
+- `result_score_setting`, which labels a published result once with the
+  setting its source states, outside `result_key`.
 
 Running units:
 

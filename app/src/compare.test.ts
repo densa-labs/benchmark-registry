@@ -62,6 +62,15 @@ describe("comparison state and result identity", () => {
     expect(row.differences).toContain("Evaluator sets differ.");
   });
 
+  it("warns when the two sides report different benchmark settings", () => {
+    const overall = { key: "mmmu-pro-overall", label: "Overall (Standard 10 options + Vision)" };
+    const notStated = { key: "mmmu-pro-not-stated", label: "Setting not stated" };
+    const [differing] = buildComparisonRows([result({ score_setting: overall })], [result({ model: modelB, result_key: "b1", score_setting: notStated })]);
+    expect(differing.differences).toEqual(["Benchmark settings differ."]);
+    const [same] = buildComparisonRows([result({ score_setting: overall })], [result({ model: modelB, result_key: "b1", score_setting: overall })]);
+    expect(same.differences).toEqual([]);
+  });
+
   it("keeps one-sided benchmarks and multiple unpaired versions without inventing a match", () => {
     const a = [result(), result({ result_key: "a2", benchmark_version_slug: "main", benchmark_version: "Main" })];
     const b = [result({ result_key: "b1", benchmark: { name: "Terminal-Bench", slug: "terminal-bench", aliases: [] } })];

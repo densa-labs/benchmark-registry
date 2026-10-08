@@ -71,6 +71,8 @@ TABLES = (
     "configurations",
     "benchmark_version_configurations",
     "result_corrections",
+    "score_settings",
+    "result_score_settings",
 )
 
 RECORD_FIELDS = {
@@ -144,6 +146,10 @@ RECORD_FIELDS = {
         "source_url", "source_checked_at",
     },
     "metric_direction": {"metric_key", "direction", "source_url", "source_checked_at"},
+    "score_setting": {
+        "benchmark_slug", "key", "label", "definition", "source_url", "source_checked_at",
+    },
+    "result_score_setting": {"result_key", "setting_key", "source_url", "source_checked_at"},
     "result": {
         "model_registry_no",
         "reasoning_level",
@@ -371,7 +377,7 @@ class Ingestor:
                 ]
             except DatabaseFailure as exc:
                 if any(
-                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement", "result_correction", "result_retraction", "result_provenance", "metric_direction"}
+                    item_operation in {"company_correction", "company_attestation", "model_provider_correction", "provider_name_correction", "provider_retirement", "result_correction", "result_retraction", "result_provenance", "metric_direction", "score_setting", "result_score_setting"}
                     for item_operation, _ in records
                 ):
                     try:
@@ -443,6 +449,8 @@ class Ingestor:
             "result_retraction": "result_key",
             "result_provenance": "result_key",
             "metric_direction": "metric_key",
+            "score_setting": "key",
+            "result_score_setting": "result_key",
             "result": "run_ref",
         }
         value = record.get(fields[operation])
@@ -2403,6 +2411,74 @@ class Ingestor:
         )
         result.update(missing)
         plan.valid("result_provenance", result_key, f"provenance recorded: {', '.join(missing)}")
+
+    def _plan_score_setting(self, plan: Plan, record: Record) -> None:
+        """Define one setting of a benchmark (which part of it a score covers), from its source."""
+        key = require_key(record.get("key"), "key")
+        benchmark_slug = require_slug(record.get("benchmark_slug"), "benchmark_slug")
+        benchmark = plan.catalog.one("benchmarks", slug=benchmark_slug)
+        if benchmark is None:
+            raise IngestionFailure("ERROR", key, "unknown benchmark family")
+        source = _source(record)
+        expected = {
+            "key": key,
+            "benchmark_id": benchmark["id"],
+            "label": require_string(record.get("label"), "label"),
+            "definition": require_string(record.get("definition"), "definition"),
+            **source,
+        }
+        existing = plan.catalog.one("score_settings", key=key)
+        if existing:
+            if not _same(existing, expected, tuple(expected)):
+                raise IngestionFailure("CONFLICT", key, "score setting differs")
+            plan.skipped("score_setting", key, "score setting already defined")
+            return
+        if plan.catalog.one("score_settings", benchmark_id=benchmark["id"], label=expected["label"]):
+            raise IngestionFailure("CONFLICT", key, "setting label belongs to another key")
+        plan.catalog.add("score_settings", expected)
+        plan.statements.append(
+            Statement(
+                """INSERT INTO score_settings (
+                    key, benchmark_id, label, definition,
+                    source_url, normalized_source_url, source_checked_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?)""",
+                tuple(expected.values()),
+            )
+        )
+        plan.valid("score_setting", key, "score setting defined")
+
+    def _plan_result_score_setting(self, plan: Plan, record: Record) -> None:
+        """Label which benchmark setting a published score covers, with the source checked."""
+        result_key = require_string(record.get("result_key"), "result_key")
+        result = plan.catalog.one("results", result_key=result_key)
+        if result is None:
+            raise IngestionFailure("ERROR", result_key, "result does not exist")
+        setting_key = require_key(record.get("setting_key"), "setting_key")
+        setting = plan.catalog.one("score_settings", key=setting_key)
+        if setting is None:
+            raise IngestionFailure("ERROR", result_key, f"unknown score setting {setting_key}")
+        version = plan.catalog.one("benchmark_versions", id=result["benchmark_version_id"])
+        if version is None or version["benchmark_id"] != setting["benchmark_id"]:
+            raise IngestionFailure("ERROR", result_key, "score setting belongs to another benchmark")
+        source = _source(record)
+        expected = {"result_id": result["id"], "score_setting_key": setting_key, **source}
+        existing = plan.catalog.one("result_score_settings", result_id=result["id"])
+        if existing:
+            if not _same(existing, expected, tuple(expected)):
+                raise IngestionFailure("CONFLICT", result_key, "result already has a different score setting")
+            plan.skipped("result_score_setting", result_key, "score setting already recorded")
+            return
+        plan.catalog.add("result_score_settings", expected)
+        plan.statements.append(
+            Statement(
+                """INSERT INTO result_score_settings (
+                    result_id, score_setting_key,
+                    source_url, normalized_source_url, source_checked_at
+                ) VALUES (?, ?, ?, ?, ?)""",
+                tuple(expected.values()),
+            )
+        )
+        plan.valid("result_score_setting", result_key, f"score setting {setting_key} recorded")
 
     def _plan_metric_direction(self, plan: Plan, record: Record) -> None:
         """Record whether a higher or lower score is better, with the source that says so."""

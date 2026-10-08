@@ -20,6 +20,7 @@ import {
   PageHeader,
   PageSizeSelector,
   Pagination,
+  SourceLink,
   Tabs,
   type SortDirection,
   type TableColumn,
@@ -341,6 +342,18 @@ export function BenchmarkFamilyPage({ response }: { response: BenchmarkFamilyRes
           />
         )}
       </section>
+      {response.data.score_settings?.length ? <section className="results-section" aria-labelledby="settings-heading">
+        <div className="results-section__header">
+          <div>
+            <h2 id="settings-heading">Settings</h2>
+            <p>Each score is labelled with the setting its source states.</p>
+          </div>
+        </div>
+        <MetadataRows items={response.data.score_settings.map(setting => ({
+          label: setting.label,
+          value: <>{setting.definition} <SourceLink href={setting.source_url} context={`${setting.label} definition`}>Source</SourceLink></>,
+        }))} />
+      </section> : null}
       <FamilyResults content={response.data.seo} />
     </PageContainer>
   );

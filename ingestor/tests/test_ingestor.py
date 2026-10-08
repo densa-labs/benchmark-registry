@@ -1379,6 +1379,78 @@ def provenance_record(result_key: str, **overrides: object) -> dict:
     return record
 
 
+def score_setting_record(key: str = "example-overall", **overrides: object) -> dict:
+    record = {
+        "benchmark_slug": "example-benchmark",
+        "key": key,
+        "label": "Overall",
+        "definition": "The average of both settings.",
+        "source_url": "https://example.com/benchmark",
+        "source_checked_at": CHECKED_AT,
+    }
+    record.update(overrides)
+    return record
+
+
+def test_result_score_setting_labels_a_result_without_changing_its_key(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    before = database.query("SELECT * FROM results")
+    labelled = {
+        "result_key": key,
+        "setting_key": "example-overall",
+        "source_url": "https://example.com/methodology",
+        "source_checked_at": CHECKED_AT,
+    }
+    assert_failure(ingestor, "result_score_setting", labelled, match="unknown score setting")
+    batch = {"records": [
+        {"operation": "score_setting", "record": score_setting_record()},
+        {"operation": "result_score_setting", "record": labelled},
+    ]}
+    first = ingestor.run("batch", batch, commit=True)
+    second = ingestor.run("batch", batch, commit=True)
+    assert [outcome.status for outcome in first + second] == ["VALID", "VALID", "SKIPPED", "SKIPPED"]
+    assert database.query("SELECT * FROM results") == before
+    assert database.query("SELECT score_setting_key, source_url FROM result_score_settings") == [
+        {"score_setting_key": "example-overall", "source_url": "https://example.com/methodology"}
+    ]
+    assert_failure(ingestor, "score_setting", score_setting_record(label="Changed"), status="CONFLICT")
+    assert_failure(
+        ingestor, "score_setting", score_setting_record("example-other"),
+        status="CONFLICT", match="label belongs to another key",
+    )
+    ingestor.run("score_setting", score_setting_record("example-not-stated", label="Not stated"), commit=True)
+    assert_failure(
+        ingestor, "result_score_setting", {**labelled, "setting_key": "example-not-stated"},
+        status="CONFLICT",
+    )
+    assert_failure(ingestor, "result_score_setting", {**labelled, "result_key": "0" * 64}, match="does not exist")
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute("UPDATE result_score_settings SET score_setting_key = 'example-not-stated'")
+
+
+def test_score_setting_must_belong_to_the_result_benchmark(
+    ingestor: Ingestor, database: LocalDatabase
+) -> None:
+    key = committed_result_key(ingestor, database)
+    other = {**benchmark_record(), "slug": "other-benchmark", "canonical_name": "Other Benchmark", "aliases": []}
+    ingestor.run("benchmark", other, commit=True)
+    ingestor.run("score_setting", score_setting_record(benchmark_slug="other-benchmark"), commit=True)
+    record = {
+        "result_key": key, "setting_key": "example-overall",
+        "source_url": "https://example.com/methodology", "source_checked_at": CHECKED_AT,
+    }
+    assert_failure(ingestor, "result_score_setting", record, match="another benchmark")
+    result_id = database.query("SELECT id FROM results")[0]["id"]
+    with sqlite3.connect(database.path) as connection, pytest.raises(sqlite3.IntegrityError):
+        connection.execute(
+            """INSERT INTO result_score_settings (result_id, score_setting_key, source_url,
+            normalized_source_url, source_checked_at) VALUES (?, 'example-overall', 'u', 'u', 'c')""",
+            (result_id,),
+        )
+
+
 def test_result_provenance_fills_empty_fields_only(
     ingestor: Ingestor, database: LocalDatabase
 ) -> None:

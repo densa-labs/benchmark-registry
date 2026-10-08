@@ -2,6 +2,7 @@ import provenance from "../../migrations/0009_result_provenance.sql?raw";
 import direction from "../../migrations/0011_metric_direction.sql?raw";
 import effort from "../../migrations/0013_effort_vocabulary.sql?raw";
 import configurations from "../../migrations/0014_benchmark_configurations.sql?raw";
+import scoreSettings from "../../migrations/0021_score_settings.sql?raw";
 import { DatabaseSync } from "node:sqlite";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import schema from "../../migrations/0001_initial.sql?raw";
@@ -31,7 +32,7 @@ describe("P11.7 initial document crawlability", () => {
   let env: Env;
   beforeEach(() => {
     db = new DatabaseSync(":memory:");
-    db.exec(schema + namespaces + attestations + units + provenance + direction + effort + configurations);
+    db.exec(schema + namespaces + attestations + units + provenance + direction + effort + configurations + scoreSettings);
     db.prepare(`INSERT INTO companies (id, name, normalized_name, slug, source_url, normalized_source_url, source_checked_at)
       VALUES (1, 'Example Company', 'example company', 'example-company', ?, ?, ?)`).run(source, source, checked);
     const namespace = (db.prepare("SELECT id FROM namespaces WHERE prefix = '10'").get() as { id: number }).id;
@@ -183,6 +184,24 @@ describe("P11.7 initial document crawlability", () => {
     expect(links(html)).toContain("/models/10001");
     const api = await worker.fetch(new Request(`https://benchmarkregistry.org/api${versionPath}?result=invalid`), env);
     expect(api.status).toBe(400);
+  });
+
+  it("shows the benchmark setting a score covers and the family's setting definitions", async () => {
+    // The fixture's schema predates the revision table that the setting triggers update.
+    db.exec("CREATE TABLE registry_revision (id INTEGER PRIMARY KEY, token TEXT NOT NULL); INSERT INTO registry_revision VALUES (1, 'fixture');");
+    db.prepare(`INSERT INTO score_settings (key, benchmark_id, label, definition, source_url, normalized_source_url, source_checked_at)
+      VALUES ('example-overall', 1, 'Overall', 'The average of both settings.', ?, ?, ?)`).run(source, source, checked);
+    db.prepare(`INSERT INTO result_score_settings (result_id, score_setting_key, source_url, normalized_source_url, source_checked_at)
+      SELECT id, 'example-overall', ?, ?, ? FROM results WHERE result_key = ?`).run(source, source, checked, exactKey);
+    const response = await worker.fetch(new Request(`https://benchmarkregistry.org/api${versionPath}?view=history`), env);
+    const payload = await response.json() as { data: { results: Array<{ result_key: string; score_setting: { key: string; label: string } | null }> } };
+    for (const row of payload.data.results) {
+      expect(row.score_setting).toEqual(row.result_key === exactKey ? { key: "example-overall", label: "Overall" } : null);
+    }
+    expect(await page(versionPath)).toContain("Setting: Overall");
+    const family = await page("/benchmarks/example");
+    expect(family).toContain("Settings</h2>");
+    expect(family).toContain("The average of both settings.");
   });
 
   it("preserves staging protection on the rendered documents", async () => {

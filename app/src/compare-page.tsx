@@ -16,6 +16,7 @@ function distinguishing(results: ResultRow[], showContext: boolean): (result: Re
   const fields: ((result: ResultRow) => string)[] = [
     result => result.reasoning_level ?? "",
     result => result.configuration?.label ?? "",
+    result => result.score_setting?.label ?? "",
     result => result.benchmark_version,
     result => result.evaluator_names.join(", "),
   ];
@@ -42,6 +43,7 @@ function EvaluationDetails({ results, name }: { results: ResultRow[]; name: stri
         { label: "Metric", value: `${result.metric.name} (${result.metric.unit})` },
         { label: "Reasoning", value: result.reasoning_level ?? "Not specified" },
         { label: "Configuration", value: result.configuration?.label ?? "Not specified" },
+        ...(result.score_setting ? [{ label: "Setting", value: result.score_setting.label }] : []),
         { label: "Reported", value: formatRegistryDate(result.reported_at, result.reported_precision) },
         { label: "Source", value: <SourceLink href={result.primary_source_url} context={`${name} on ${benchmarkVersionLabel(result.benchmark, result.benchmark_version)}`}>Evaluation source</SourceLink> },
       ]} /><RecordCite result={result} />

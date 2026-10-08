@@ -90,6 +90,7 @@ function comparisonRow(key: string, benchmark: BenchmarkRef, results: Comparison
     if (setKey(a, row => row.benchmark_version_slug) !== setKey(b, row => row.benchmark_version_slug)) differences.push("Benchmark versions differ.");
     if (setKey(a, row => JSON.stringify([row.metric.key, row.metric.unit, row.metric.storage_kind])) !== setKey(b, row => JSON.stringify([row.metric.key, row.metric.unit, row.metric.storage_kind]))) differences.push("Metrics differ.");
     if (setKey(a, evaluatorKey) !== setKey(b, evaluatorKey)) differences.push("Evaluator sets differ.");
+    if (setKey(a, row => row.score_setting?.key ?? "") !== setKey(b, row => row.score_setting?.key ?? "")) differences.push("Benchmark settings differ.");
   }
   // Within an evaluator, Any lists levels from no effort to max, then unreviewed labels.
   const order = (rows: ResultRow[]) => [...rows].sort((left, right) => evaluatorKey(left).localeCompare(evaluatorKey(right), "en") || effortRank(left) - effortRank(right)
