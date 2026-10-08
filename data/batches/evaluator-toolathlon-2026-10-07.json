@@ -1,0 +1,1077 @@
+{
+  "records": [
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "76.5",
+        "score_raw": "76.5",
+        "reported_at": "2026-07-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "76.2",
+        "score_raw": "76.2",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80003",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "75.9",
+        "score_raw": "75.9",
+        "reported_at": "2026-08-05",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "73.5",
+        "score_raw": "73.5",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20013",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "71.6",
+        "score_raw": "71.6",
+        "reported_at": "2026-07-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30006",
+        "reasoning_level": "high",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "67.3",
+        "score_raw": "67.3",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "high",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "61.1",
+        "score_raw": "61.1",
+        "reported_at": "2026-07-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150004",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "59.9",
+        "score_raw": "59.9",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120002",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "58.0",
+        "score_raw": "58.0",
+        "reported_at": "2026-07-15",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "55.9",
+        "score_raw": "55.9",
+        "reported_at": "2026-06-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "50.9",
+        "score_raw": "50.9",
+        "reported_at": "2026-07-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140002",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "47.5",
+        "score_raw": "47.5",
+        "reported_at": "2026-07-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130003",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "40.7",
+        "score_raw": "40.7",
+        "reported_at": "2026-07-30",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "60003",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "34.3",
+        "score_raw": "34.3",
+        "reported_at": "2026-07-15",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Verified",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "33.0",
+        "score_raw": "33.0",
+        "reported_at": "2026-07-15",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110002",
+        "reasoning_level": "Max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "52.8",
+        "score_raw": "52.8",
+        "reported_at": "2026-04-25",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "52.8",
+        "score_raw": "52.8†",
+        "reported_at": "2026-04-25",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "49.4",
+        "score_raw": "49.4",
+        "reported_at": "2025-12-18",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "48.8",
+        "score_raw": "48.8",
+        "reported_at": "2026-03-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110001",
+        "reasoning_level": "Max",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "48.2",
+        "score_raw": "48.2",
+        "reported_at": "2026-04-25",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20009",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "44.8",
+        "score_raw": "44.8",
+        "reported_at": "2026-02-23",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "43.8",
+        "score_raw": "43.8",
+        "reported_at": "2025-12-18",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "43.5",
+        "score_raw": "43.5",
+        "reported_at": "2025-11-27",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "41.7",
+        "score_raw": "41.7",
+        "reported_at": "2025-12-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "39.2",
+        "score_raw": "39.2",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "38.9",
+        "score_raw": "38.9",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "high",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "37.7",
+        "score_raw": "37.7",
+        "reported_at": "2025-12-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "36.4",
+        "score_raw": "36.4",
+        "reported_at": "2025-11-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "29.9",
+        "score_raw": "29.9",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "27.8",
+        "score_raw": "27.8",
+        "reported_at": "2026-02-04",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40004",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "27.5",
+        "score_raw": "27.5",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20006",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "26.2",
+        "score_raw": "26.2",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150001",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "23.8",
+        "score_raw": "23.8",
+        "reported_at": "2025-12-25",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150009",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "18.8",
+        "score_raw": "18.8",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "17.0",
+        "score_raw": "17.0",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10004",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "14.8",
+        "score_raw": "14.8",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "",
+        "benchmark_slug": "toolathlon",
+        "benchmark_version": "Original",
+        "metric_key": "toolathlon-task-success",
+        "source_has_single_run": true,
+        "score_value": "14.5",
+        "score_raw": "14.5",
+        "reported_at": "2025-10-28",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "toolathlon-authors"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Toolathlon",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134104/https://toolathlon.xyz/docs/leaderboard.md",
+        "sources": [
+          {
+            "url": "https://toolathlon.xyz/docs/leaderboard",
+            "checked_at": "2026-10-07T13:40:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}

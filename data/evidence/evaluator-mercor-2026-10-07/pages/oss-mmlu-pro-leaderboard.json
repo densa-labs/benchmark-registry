@@ -1,0 +1,1012 @@
+{
+ "url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmlu-pro-leaderboard/",
+ "html_sha256": "d25177e80ff5c99bd3470d44b63ec1b75131a63f6f0f07f05510d4df16a9043c",
+ "fetched_at": "2026-10-07T14:20:00Z",
+ "benchmark": {
+  "_id": "NAciSVwSmWIjTOVlvaBHJs",
+  "availablePasses": [
+   {
+    "label": "Pass@1",
+    "value": "pass-1"
+   }
+  ],
+  "benchmarkId": "oss-mmlu-pro",
+  "blogLink": null,
+  "cardSubheading": null,
+  "chartAxisRanges": null,
+  "codeLink": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+  "criteriaCount": null,
+  "dataLink": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
+  "description": "An enhanced MMLU adding harder, reasoning-focused questions and expanding choices from 4 to 10 options. The MMLU benchmark evaluates an AI model's general knowledge and reasoning skills using multiple-choice questions across 57 academic and professional subjects.",
+  "displayName": "MMLU-Pro",
+  "domainsHeading": null,
+  "extendsBenchmark": null,
+  "isReady": true,
+  "isUnlisted": null,
+  "kind": "open-source",
+  "leaderboardDescription": null,
+  "leaderboardHeading": null,
+  "leaderboardKey": "oss-mmlu-pro-leaderboard",
+  "mercorTaskCount": null,
+  "pageSubtitle": "Broad multidisciplinary knowledge and reasoning.",
+  "pageTitle": null,
+  "paperLink": "https://arxiv.org/pdf/2406.01574",
+  "partner": null,
+  "publicTaskCount": 12032,
+  "sampleTaskLink": null,
+  "seoDescription": null,
+  "seoTitle": null,
+  "stats": null
+ },
+ "leaderboardData": [
+  {
+   "model_name": "Fable 5",
+   "model_id": "claude-fable-5",
+   "score": {
+    "pass-1": 79.4,
+    "mean-score": 79.4
+   },
+   "error": {
+    "pass-1": 0.7,
+    "mean-score": 0.7
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-06-09",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Opus 4.7",
+   "model_id": "claude-opus-4-7",
+   "score": {
+    "pass-1": 89.9,
+    "mean-score": 89.9
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-04-16",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Opus 4.8",
+   "model_id": "claude-opus-4-8",
+   "score": {
+    "pass-1": 90,
+    "mean-score": 90
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-05-28",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Opus 5",
+   "model_id": "claude-opus-5",
+   "score": {
+    "pass-1": 92,
+    "mean-score": 92
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-07-24",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Sonnet 4.6",
+   "model_id": "claude-sonnet-4-6-high",
+   "score": {
+    "pass-1": 88,
+    "mean-score": 88
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-02-17",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "DeepSeek V4 Flash",
+   "model_id": "deepseek-v4-flash",
+   "score": {
+    "pass-1": 87.1,
+    "mean-score": 87.1
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "deepseek",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ff33d5e41c990bfae7566b9adb61924b766d2bb8-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#6882ff",
+   "providerName": "DeepSeek",
+   "gradientStyle": "linear-gradient(to right, #b8c4ff, #6882ff)",
+   "release_date": "2026-07-31",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "DeepSeek V4 Pro",
+   "model_id": "deepseek-v4-pro",
+   "score": {
+    "pass-1": 86.5,
+    "mean-score": 86.5
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "deepseek",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ff33d5e41c990bfae7566b9adb61924b766d2bb8-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#6882ff",
+   "providerName": "DeepSeek",
+   "gradientStyle": "linear-gradient(to right, #b8c4ff, #6882ff)",
+   "release_date": "2026-04-23",
+   "n_samples": 11726
+  },
+  {
+   "model_name": "Gemini 3.1 Pro",
+   "model_id": "gemini-3.1-pro-preview-high",
+   "score": {
+    "pass-1": 91.3,
+    "mean-score": 91.3
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "high",
+   "company": "google",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/a1acc8dde3315d66c95f7b6bc705df1e05757018-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#468aff",
+   "providerName": "Google",
+   "gradientStyle": "linear-gradient(to right, #8eb7ff, #468aff)",
+   "release_date": "2026-02-19",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Gemini 3.5 Flash",
+   "model_id": "gemini-3.5-flash",
+   "score": {
+    "pass-1": 90,
+    "mean-score": 90
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "high",
+   "company": "google",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/a1acc8dde3315d66c95f7b6bc705df1e05757018-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#468aff",
+   "providerName": "Google",
+   "gradientStyle": "linear-gradient(to right, #8eb7ff, #468aff)",
+   "release_date": "2026-05-19",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Gemini 3.6 Flash",
+   "model_id": "gemini-3.6-flash",
+   "score": {
+    "pass-1": 90,
+    "mean-score": 90
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "high",
+   "company": "google",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/a1acc8dde3315d66c95f7b6bc705df1e05757018-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#468aff",
+   "providerName": "Google",
+   "gradientStyle": "linear-gradient(to right, #8eb7ff, #468aff)",
+   "release_date": "2026-07-21",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Gemma 4 31B",
+   "model_id": "gemma-4-31B",
+   "score": {
+    "pass-1": 85.8,
+    "mean-score": 85.8
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "company": "google",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/a1acc8dde3315d66c95f7b6bc705df1e05757018-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#468aff",
+   "providerName": "Google",
+   "gradientStyle": "linear-gradient(to right, #8eb7ff, #468aff)",
+   "release_date": "2026-03-31",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GLM 5.2",
+   "model_id": "glm-5-2",
+   "score": {
+    "pass-1": 85.9,
+    "mean-score": 85.9
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "zhipu",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/aa7bca59e8147d8872f46859bb6ec753845106cc-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#848484",
+   "providerName": "Zhipu",
+   "gradientStyle": "linear-gradient(to right, #e2e2e2, #848484)",
+   "release_date": "2026-06-16",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 5.4",
+   "model_id": "responses/gpt-5.4",
+   "score": {
+    "pass-1": 88.2,
+    "mean-score": 88.2
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "xhigh",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-03-05",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 5.5",
+   "model_id": "gpt-5.5-xhigh",
+   "score": {
+    "pass-1": 88.9,
+    "mean-score": 88.9
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "xhigh",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-04-23",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 5.6 Luna",
+   "model_id": "gpt-5.6-luna-max",
+   "score": {
+    "pass-1": 86.5,
+    "mean-score": 86.5
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-07-09",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 5.6 Sol",
+   "model_id": "gpt-5-6-sol-max-pro",
+   "score": {
+    "pass-1": 89.9,
+    "mean-score": 89.9
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "descriptors": [
+    "Pro"
+   ],
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-07-09",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 5.6 Terra",
+   "model_id": "gpt-5.6-terra-max",
+   "score": {
+    "pass-1": 88.1,
+    "mean-score": 88.1
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-07-09",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Grok 4.5",
+   "model_id": "grok-4-5",
+   "score": {
+    "pass-1": 88.2,
+    "mean-score": 88.2
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "company": "xai",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/b16de16ffcb7238e086ea99505637838caa37afc-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#767676",
+   "providerName": "xAI",
+   "gradientStyle": "linear-gradient(to right, #e2e2e2, #767676)",
+   "release_date": "2026-07-08",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Inkling",
+   "model_id": "inkling",
+   "score": {
+    "pass-1": 86.8,
+    "mean-score": 86.8
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "company": "thinking-machines",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/16834b49720d8d9d9cb700a60aa11689ec4bc27a-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#A19696",
+   "providerName": "Thinking Machines",
+   "gradientStyle": "linear-gradient(to right, #D4CECE, #A19696)",
+   "release_date": "2026-07-15",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Kimi K2.7 Code",
+   "model_id": "kimi-k2-7-code-high",
+   "score": {
+    "pass-1": 86.4,
+    "mean-score": 86.4
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "company": "kimi",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ae0bd249960a1f6790b07a1d74b9275313bc427b-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#7c94a5",
+   "providerName": "Kimi",
+   "gradientStyle": "linear-gradient(to right, #bdcfdc, #7c94a5)",
+   "release_date": "",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Kimi K2",
+   "model_id": "kimi-k2-thinking-high",
+   "score": {
+    "pass-1": 84.3,
+    "mean-score": 84.3
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "descriptors": [
+    "Thinking"
+   ],
+   "company": "kimi",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ae0bd249960a1f6790b07a1d74b9275313bc427b-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#7c94a5",
+   "providerName": "Kimi",
+   "gradientStyle": "linear-gradient(to right, #bdcfdc, #7c94a5)",
+   "release_date": "2025-11-06",
+   "n_samples": 23974
+  },
+  {
+   "model_name": "Kimi K3",
+   "model_id": "kimi-k3",
+   "score": {
+    "pass-1": 89.3,
+    "mean-score": 89.3
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "kimi",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ae0bd249960a1f6790b07a1d74b9275313bc427b-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#7c94a5",
+   "providerName": "Kimi",
+   "gradientStyle": "linear-gradient(to right, #bdcfdc, #7c94a5)",
+   "release_date": "2026-07-27",
+   "n_samples": 12023
+  },
+  {
+   "model_name": "MiniMax M2.7",
+   "model_id": "minimax-m2-7",
+   "score": {
+    "pass-1": 79.6,
+    "mean-score": 79.6
+   },
+   "error": {
+    "pass-1": 0.7,
+    "mean-score": 0.7
+   },
+   "effort": "high",
+   "company": "minimax",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/e230cc3be938804212b18e376dad70671df5c8cd-17x14.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ff5371",
+   "providerName": "MiniMax",
+   "gradientStyle": "linear-gradient(to right, #ffb9c5, #ff5371)",
+   "release_date": "",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "MiniMax M3",
+   "model_id": "minimax-m3",
+   "score": {
+    "pass-1": 84.6,
+    "mean-score": 84.6
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "company": "minimax",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/e230cc3be938804212b18e376dad70671df5c8cd-17x14.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ff5371",
+   "providerName": "MiniMax",
+   "gradientStyle": "linear-gradient(to right, #ffb9c5, #ff5371)",
+   "release_date": "",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Muse Spark 1.1",
+   "model_id": "muse-spark-1-1",
+   "score": {
+    "pass-1": 89.9,
+    "mean-score": 89.9
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "xhigh",
+   "company": "meta",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/9acfeac811b8266d47c46a63b3ce28b22491dfaf-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#3281ee",
+   "providerName": "Meta",
+   "gradientStyle": "linear-gradient(to right, #7cd3ff, #3281ee)",
+   "release_date": "2026-07-09",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Qwen 3.5",
+   "model_id": "Qwen3.5-397B-A17B",
+   "score": {
+    "pass-1": 88,
+    "mean-score": 88
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "company": "alibaba",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/86b12c706a7eab193bb495dc072c98564d5a841d-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#766bff",
+   "providerName": "Alibaba",
+   "gradientStyle": "linear-gradient(to right, #c1bcff, #766bff)",
+   "release_date": "2026-02-16",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Sonnet 5",
+   "model_id": "claude-sonnet-5-max",
+   "score": {
+    "pass-1": 88.5,
+    "mean-score": 88.5
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-06-30",
+   "n_samples": 12023
+  },
+  {
+   "model_name": "Nemotron 3 Ultra",
+   "model_id": "nemotron-3-ultra-nvfp4",
+   "score": {
+    "pass-1": 86,
+    "mean-score": 86
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "high",
+   "company": "nvidia",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/0f369c60091d5b0d00663c0efce8cb33d079d0e5-19x13.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#5cb900",
+   "providerName": "NVIDIA",
+   "gradientStyle": "linear-gradient(to right, #ace473, #5cb900)",
+   "release_date": "2026-06-04",
+   "n_samples": 12030
+  },
+  {
+   "model_name": "GPT 6 Astra",
+   "model_id": "gpt-6-astra",
+   "score": {
+    "pass-1": 91,
+    "mean-score": 91
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "xhigh",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-09-03",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Fable 5.1",
+   "model_id": "claude-fable-5.1-high",
+   "score": {
+    "pass-1": 91.5,
+    "mean-score": 91.5
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "high",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-09-01",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GLM 5.3",
+   "model_id": "glm-5-3",
+   "score": {
+    "pass-1": 88,
+    "mean-score": 88
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "zhipu",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/aa7bca59e8147d8872f46859bb6ec753845106cc-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#848484",
+   "providerName": "Zhipu",
+   "gradientStyle": "linear-gradient(to right, #e2e2e2, #848484)",
+   "release_date": "2026-08-14",
+   "n_samples": 12026
+  },
+  {
+   "model_name": "DeepSeek V4 Pro 0813",
+   "model_id": "deepseek-v4-pro-08-13",
+   "score": {
+    "pass-1": 88,
+    "mean-score": 88
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "deepseek",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ff33d5e41c990bfae7566b9adb61924b766d2bb8-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#6882ff",
+   "providerName": "DeepSeek",
+   "gradientStyle": "linear-gradient(to right, #b8c4ff, #6882ff)",
+   "release_date": "2026-08-13",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Gemini 3.7 Flash",
+   "model_id": "gemini-3.7-flash",
+   "score": {
+    "pass-1": 90.6,
+    "mean-score": 90.6
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "high",
+   "company": "google",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/a1acc8dde3315d66c95f7b6bc705df1e05757018-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#468aff",
+   "providerName": "Google",
+   "gradientStyle": "linear-gradient(to right, #8eb7ff, #468aff)",
+   "release_date": "2026-08-13",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Gemini 3.8 Flash",
+   "model_id": "gemini-3.8-flash",
+   "score": {
+    "pass-1": 90.7,
+    "mean-score": 90.7
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "high",
+   "company": "google",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/a1acc8dde3315d66c95f7b6bc705df1e05757018-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#468aff",
+   "providerName": "Google",
+   "gradientStyle": "linear-gradient(to right, #8eb7ff, #468aff)",
+   "release_date": "2026-09-02",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Grok 4.6",
+   "model_id": "grok-4-6-xhigh",
+   "score": {
+    "pass-1": 89.4,
+    "mean-score": 89.4
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "xhigh",
+   "company": "xai",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/b16de16ffcb7238e086ea99505637838caa37afc-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#767676",
+   "providerName": "xAI",
+   "gradientStyle": "linear-gradient(to right, #e2e2e2, #767676)",
+   "release_date": "2026-08-12",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GLM 5.3 Flash",
+   "model_id": "glm-5-3-flash",
+   "score": {
+    "pass-1": 87.3,
+    "mean-score": 87.3
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "zhipu",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/aa7bca59e8147d8872f46859bb6ec753845106cc-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#848484",
+   "providerName": "Zhipu",
+   "gradientStyle": "linear-gradient(to right, #e2e2e2, #848484)",
+   "release_date": "2026-08-26",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "DeepSeek V3.2",
+   "model_id": "deepseek-ai/DeepSeek-V3.2",
+   "score": {
+    "pass-1": 76.5,
+    "mean-score": 76.5
+   },
+   "error": {
+    "pass-1": 0.8,
+    "mean-score": 0.8
+   },
+   "company": "deepseek",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ff33d5e41c990bfae7566b9adb61924b766d2bb8-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#6882ff",
+   "providerName": "DeepSeek",
+   "gradientStyle": "linear-gradient(to right, #b8c4ff, #6882ff)",
+   "release_date": "2025-12-01",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "DeepSeek V4.1 Flash",
+   "model_id": "deepseek-v4-1-flash",
+   "score": {
+    "pass-1": 88.2,
+    "mean-score": 88.2
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "deepseek",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/ff33d5e41c990bfae7566b9adb61924b766d2bb8-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#6882ff",
+   "providerName": "DeepSeek",
+   "gradientStyle": "linear-gradient(to right, #b8c4ff, #6882ff)",
+   "release_date": "2026-09-09",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 6 Luna",
+   "model_id": "gpt-6-luna",
+   "score": {
+    "pass-1": 86.2,
+    "mean-score": 86.2
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-09-22",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 6 Sol",
+   "model_id": "gpt-6-sol",
+   "score": {
+    "pass-1": 88.9,
+    "mean-score": 88.9
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "max",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-09-22",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Opus 5.5",
+   "model_id": "claude-opus-5-5",
+   "score": {
+    "pass-1": 93.4,
+    "mean-score": 93.4
+   },
+   "error": {
+    "pass-1": 0.4,
+    "mean-score": 0.4
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-09-22",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Fable 5.1",
+   "model_id": "claude-fable-5.1",
+   "score": {
+    "pass-1": 93,
+    "mean-score": 93
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "2026-09-01",
+   "n_samples": 12022
+  },
+  {
+   "model_name": "Sonnet 5.5",
+   "model_id": "claude-sonnet-5-5",
+   "score": {
+    "pass-1": 91,
+    "mean-score": 91
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "claude",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/6f898fa35f2eb8458e60c6dd43a1dc553b0a5674-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ea6234",
+   "providerName": "Anthropic",
+   "gradientStyle": "linear-gradient(to right, #ff9b5e, #ea6234)",
+   "release_date": "",
+   "n_samples": 12015
+  },
+  {
+   "model_name": "GPT 6.1 Sol",
+   "model_id": "gpt-6-1-sol",
+   "score": {
+    "pass-1": 91,
+    "mean-score": 91
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-09-29",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "GPT 6 Astra",
+   "model_id": "gpt-6-astra-max",
+   "score": {
+    "pass-1": 91.5,
+    "mean-score": 91.5
+   },
+   "error": {
+    "pass-1": 0.5,
+    "mean-score": 0.5
+   },
+   "effort": "max",
+   "company": "gpt",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/d0157b817dd39b0eeb64cd582258759f8577ce42-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#ffb814",
+   "providerName": "OpenAI",
+   "gradientStyle": "linear-gradient(to right, #ffd900, #ffb814)",
+   "release_date": "2026-09-03",
+   "n_samples": 12032
+  },
+  {
+   "model_name": "Qwen 3.8 Max",
+   "model_id": "qwen-3-8-max-xhigh",
+   "score": {
+    "pass-1": 88.8,
+    "mean-score": 88.8
+   },
+   "error": {
+    "pass-1": 0.6,
+    "mean-score": 0.6
+   },
+   "effort": "xhigh",
+   "company": "alibaba",
+   "logoUrl": "https://cdn.sanity.io/images/h6s14f4z/production/86b12c706a7eab193bb495dc072c98564d5a841d-20x20.svg",
+   "darkLogoUrl": null,
+   "providerColorTo": "#766bff",
+   "providerName": "Alibaba",
+   "gradientStyle": "linear-gradient(to right, #c1bcff, #766bff)",
+   "release_date": "2026-08-02",
+   "n_samples": 12029
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+assets:
+  logs: s3://swe-bench-submissions/bash-only/20250726_mini-v1.0.0_o3-2025-04-16/logs
+  trajs: s3://swe-bench-submissions/bash-only/20250726_mini-v1.0.0_o3-2025-04-16/trajs
+  trajs_docent: https://docent.transluce.org/dashboard/565e5680-b913-4031-b537-00721a7a619a
+info:
+  model_release_date: 20250416
+  logo:
+  - https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg
+  mini-swe-agent_version: 1.0.0
+  name: o3 (2025-04-16)
+  resolved: 58.4
+  site: https://platform.openai.com/docs/models/o3
+  cost: 166.826374
+  instance_cost: 0.333652748
+  instance_calls: 24.698
+tags:
+  checked: true
+  model:
+  - o3-20250416
+  org: OpenAI
+  os_model: false
+  os_system: true
+  system:
+    attempts: 1
+  agent: mini-SWE-agent
+  agent_org: SWE-agent
+  model_display: o3
+  model_org: OpenAI

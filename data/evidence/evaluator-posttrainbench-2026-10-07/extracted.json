@@ -1,0 +1,473 @@
+{
+ "agentInfo": {
+  "human": {
+   "name": "Official Instruct Models",
+   "description": "Reference implementation",
+   "isBaseline": true
+  },
+  "base-model": {
+   "name": "Base Models",
+   "description": "No post-training, zero-shot (baseline)",
+   "isBaseline": true,
+   "scaffold": "Zero Shot"
+  },
+  "base-model-fewshot": {
+   "name": "Base Models",
+   "description": "No post-training, few-shot (baseline)",
+   "isBaseline": true,
+   "scaffold": "Few Shot"
+  },
+  "locus": {
+   "name": "Locus",
+   "description": "External result from Intology's Locus system, powered by Opus 5",
+   "scaffold": "Intology · Opus 5",
+   "chartSourceLabel": "Intology",
+   "isExternal": true,
+   "verificationNote": "Run by Intology and reviewed by PostTrainBench."
+  },
+  "gpt-5.2": {
+   "name": "GPT-5.2",
+   "description": "GPT-5.2 agent",
+   "scaffold": "Codex CLI"
+  },
+  "gpt-5.1-codex-max": {
+   "name": "GPT 5.1 Codex Max",
+   "description": "GPT 5.1 Codex Max agent",
+   "scaffold": "Codex CLI"
+  },
+  "gpt-5.2-codex": {
+   "name": "GPT 5.2 Codex",
+   "description": "GPT 5.2 Codex agent",
+   "scaffold": "Codex CLI"
+  },
+  "opus-4.5": {
+   "name": "Opus 4.5",
+   "description": "Claude Opus 4.5 agent",
+   "scaffold": "Claude Code"
+  },
+  "gemini-3-pro": {
+   "name": "Gemini 3 Pro",
+   "description": "Gemini 3 Pro agent",
+   "scaffold": "Gemini CLI"
+  },
+  "gemini-3.1-pro": {
+   "name": "Gemini 3.1 Pro",
+   "description": "Gemini 3.1 Pro agent",
+   "scaffold": "OpenCode"
+  },
+  "sonnet-4.5": {
+   "name": "Sonnet 4.5",
+   "description": "Claude Sonnet 4.5 agent",
+   "scaffold": "Claude Code"
+  },
+  "sonnet-4.6": {
+   "name": "Sonnet 4.6",
+   "description": "Claude Sonnet 4.6 agent",
+   "scaffold": "Claude Code"
+  },
+  "glm-4.7": {
+   "name": "GLM 4.7",
+   "description": "GLM 4.7 agent",
+   "scaffold": "OpenCode"
+  },
+  "minimax-m2.1": {
+   "name": "MiniMax M2.1",
+   "description": "MiniMax M2.1 agent",
+   "scaffold": "OpenCode"
+  },
+  "opus-4.5-opencode": {
+   "name": "Opus 4.5",
+   "description": "Claude Opus 4.5 with OpenCode",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "gemini-3-pro-opencode": {
+   "name": "Gemini 3 Pro",
+   "description": "Gemini 3 Pro with OpenCode",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "gpt-5.1-codex-max-opencode": {
+   "name": "GPT 5.1 Codex Max",
+   "description": "GPT 5.1 Codex Max with OpenCode",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "kimi-k2": {
+   "name": "Kimi K2 Thinking",
+   "description": "Kimi K2 Thinking agent",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "kimi-k2.5": {
+   "name": "Kimi K2.5",
+   "description": "Kimi K2.5 agent",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "kimi-k3": {
+   "name": "Kimi K3",
+   "description": "Kimi K3 agent with a 1M context window",
+   "scaffold": "Claude Code"
+  },
+  "minimax-m2.5": {
+   "name": "MiniMax M2.5",
+   "description": "MiniMax M2.5 agent",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "glm-5": {
+   "name": "GLM 5",
+   "description": "GLM 5 agent",
+   "isOpenCode": true,
+   "scaffold": "OpenCode"
+  },
+  "glm-5.2": {
+   "name": "GLM 5.2",
+   "description": "GLM 5.2 agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max"
+  },
+  "glm-5.3": {
+   "name": "GLM 5.3",
+   "description": "GLM 5.3 agent with a 1M context window",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max"
+  },
+  "glm-5.3-flash": {
+   "name": "GLM 5.3 Flash",
+   "description": "GLM 5.3 Flash agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max"
+  },
+  "opus-4.6": {
+   "name": "Opus 4.6",
+   "description": "Claude Opus 4.6 agent",
+   "scaffold": "Claude Code"
+  },
+  "opus-4.6-1m": {
+   "name": "Opus 4.6 (1M)",
+   "description": "Claude Opus 4.6 with 1M context window",
+   "scaffold": "Claude Code"
+  },
+  "opus-4.7": {
+   "name": "Opus 4.7",
+   "description": "Claude Opus 4.7 extra-high reasoning agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "xHigh"
+  },
+  "opus-4.8": {
+   "name": "Opus 4.8",
+   "description": "Claude Opus 4.8 high reasoning agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "High"
+  },
+  "opus-4.8-max": {
+   "name": "Opus 4.8",
+   "description": "Claude Opus 4.8 max reasoning agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max"
+  },
+  "gpt-5.3-codex-high": {
+   "name": "GPT 5.3 Codex",
+   "description": "GPT 5.3 Codex high reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "High"
+  },
+  "gpt-5.3-codex-med": {
+   "name": "GPT 5.3 Codex",
+   "description": "GPT 5.3 Codex medium reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "Med"
+  },
+  "gpt-5.4-high": {
+   "name": "GPT 5.4",
+   "description": "GPT 5.4 high reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "High"
+  },
+  "gpt-5.4-high-reprompted": {
+   "name": "GPT 5.4",
+   "description": "GPT 5.4 high reasoning agent (reprompted)",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "High, Reprompted"
+  },
+  "gpt-5.5-xhigh": {
+   "name": "GPT 5.5",
+   "description": "GPT 5.5 extra-high reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "xHigh"
+  },
+  "gpt-5.5-xhigh-reprompted": {
+   "name": "GPT 5.5",
+   "description": "GPT 5.5 extra-high reasoning agent (reprompted)",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "xHigh, Reprompted"
+  },
+  "gpt-5.6-sol": {
+   "name": "GPT 5.6 (Sol)",
+   "description": "GPT 5.6 Sol max reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "Max"
+  },
+  "gpt-6-astra": {
+   "name": "GPT 6 (Astra)",
+   "description": "GPT 6 Astra max reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "Max"
+  },
+  "gpt-6.1-sol": {
+   "name": "GPT 6.1 (Sol)",
+   "description": "GPT 6.1 Sol max reasoning agent",
+   "scaffold": "Codex CLI",
+   "reasoningEffort": "Max"
+  },
+  "opus-5": {
+   "name": "Opus 5",
+   "description": "Claude Opus 5 agent",
+   "scaffold": "Claude Code"
+  },
+  "opus-5.5-max": {
+   "name": "Opus 5.5",
+   "description": "Claude Opus 5.5 with a 1M context window, max reasoning agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max"
+  },
+  "grok-4.5-high": {
+   "name": "Grok 4.5",
+   "description": "Grok 4.5 high reasoning agent",
+   "scaffold": "Cursor CLI",
+   "reasoningEffort": "High"
+  },
+  "qwen3-max": {
+   "name": "Qwen3 Max",
+   "description": "Qwen3 Max agent",
+   "isOpenCode": true,
+   "scaffold": "Claude Code"
+  },
+  "fable-5": {
+   "name": "Fable 5",
+   "description": "Claude Fable 5 with 1M context, max reasoning agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max",
+   "provenanceLabel": "mixed GPQA",
+   "provenanceNote": "Fable 5 GPQA Main cells use Opus 4.8 Max fallback scores."
+  },
+  "fable-5.1": {
+   "name": "Fable 5.1",
+   "description": "Claude Fable 5.1 with a 1M context window, max reasoning agent",
+   "scaffold": "Claude Code",
+   "reasoningEffort": "Max",
+   "provenanceLabel": "mixed GPQA",
+   "provenanceNote": "Five Fable 5.1 GPQA Main cells fell back to Opus 5."
+  }
+ },
+ "v1.2": {
+  "aggregatedScores": {
+   "fable-5": {
+    "avg": 37.27,
+    "std": 1.65,
+    "n": 2
+   },
+   "fable-5.1": {
+    "avg": 44.65,
+    "std": 2.72,
+    "n": 2
+   },
+   "glm-5.2": {
+    "avg": 30.4,
+    "std": 1.46,
+    "n": 3
+   },
+   "glm-5.3": {
+    "avg": 34.52,
+    "std": 3.39,
+    "n": 2
+   },
+   "glm-5.3-flash": {
+    "avg": 36.79,
+    "std": 0.11,
+    "n": 2
+   },
+   "gpt-5.4-high": {
+    "avg": 17.76,
+    "std": 1.8,
+    "n": 3
+   },
+   "gpt-5.5-xhigh": {
+    "avg": 23.87,
+    "std": 0.48,
+    "n": 2
+   },
+   "gpt-5.6-sol": {
+    "avg": 31.01,
+    "std": 0.2,
+    "n": 2
+   },
+   "gpt-6-astra": {
+    "avg": 41.88,
+    "std": 0.76,
+    "n": 2
+   },
+   "gpt-6.1-sol": {
+    "avg": 38.79,
+    "std": 0.36,
+    "n": 2
+   },
+   "gemini-3.1-pro": {
+    "avg": 18.11,
+    "std": 1.68,
+    "n": 3
+   },
+   "grok-4.5-high": {
+    "avg": 22.62,
+    "std": 0.94,
+    "n": 2
+   },
+   "kimi-k3": {
+    "avg": 31.48,
+    "std": 0.63,
+    "n": 3
+   },
+   "opus-4.7": {
+    "avg": 24.34,
+    "std": 1.63,
+    "n": 3
+   },
+   "opus-4.8": {
+    "avg": 30.66,
+    "std": 3.04,
+    "n": 2
+   },
+   "opus-4.8-max": {
+    "avg": 31,
+    "std": 3,
+    "n": 2
+   },
+   "opus-5": {
+    "avg": 35.66,
+    "std": 2.62,
+    "n": 2
+   },
+   "opus-5.5-max": {
+    "avg": 43.8,
+    "std": 3,
+    "n": 2
+   },
+   "locus": {
+    "avg": 41.66,
+    "std": 0.82,
+    "n": 3
+   }
+  },
+  "fallback": {
+   "base-model": false,
+   "human": false,
+   "locus": false,
+   "fable-5.1": false,
+   "glm-5.3": false,
+   "glm-5.3-flash": false,
+   "gpt-6-astra": false,
+   "gpt-6.1-sol": false,
+   "opus-5.5-max": false,
+   "gemini-3.1-pro": false,
+   "gpt-5.4-high": false,
+   "opus-4.7": false,
+   "gpt-5.5-xhigh": false,
+   "opus-4.8": false,
+   "opus-4.8-max": false,
+   "glm-5.2": false,
+   "fable-5": false,
+   "gpt-5.6-sol": false,
+   "kimi-k3": false,
+   "grok-4.5-high": false,
+   "opus-5": false
+  }
+ },
+ "v1.1": {
+  "aggregatedScores": {
+   "fable-5": {
+    "avg": 41.79,
+    "std": 1.74,
+    "n": 2
+   },
+   "glm-5.2": {
+    "avg": 31.7,
+    "std": 2.14,
+    "n": 3
+   },
+   "gpt-5.4-high": {
+    "avg": 19,
+    "std": 2.99,
+    "n": 3
+   },
+   "gpt-5.5-xhigh": {
+    "avg": 27.23,
+    "std": 0.56,
+    "n": 2
+   },
+   "gpt-5.6-sol": {
+    "avg": 36.23,
+    "std": 0.22,
+    "n": 2
+   },
+   "gemini-3.1-pro": {
+    "avg": 21.99,
+    "std": 1.8,
+    "n": 3
+   },
+   "grok-4.5-high": {
+    "avg": 23.45,
+    "std": 0.09,
+    "n": 2
+   },
+   "kimi-k3": {
+    "avg": 31.96,
+    "std": 0.26,
+    "n": 3
+   },
+   "opus-4.7": {
+    "avg": 28.56,
+    "std": 1.74,
+    "n": 3
+   },
+   "opus-4.8": {
+    "avg": 33.84,
+    "std": 3.58,
+    "n": 2
+   },
+   "opus-4.8-max": {
+    "avg": 32.9,
+    "std": 5.75,
+    "n": 2
+   },
+   "opus-5": {
+    "avg": 35.04,
+    "std": 1.38,
+    "n": 2
+   },
+   "locus": {
+    "avg": 45.58,
+    "std": 0.75,
+    "n": 3
+   }
+  },
+  "fallback": {
+   "base-model": false,
+   "human": false,
+   "locus": false,
+   "gemini-3.1-pro": false,
+   "gpt-5.4-high": false,
+   "opus-4.7": false,
+   "gpt-5.5-xhigh": false,
+   "opus-4.8": false,
+   "opus-4.8-max": false,
+   "glm-5.2": false,
+   "fable-5": false,
+   "gpt-5.6-sol": false,
+   "kimi-k3": false,
+   "grok-4.5-high": false,
+   "opus-5": false
+  }
+ }
+}

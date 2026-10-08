@@ -1,0 +1,443 @@
+[
+  {
+    "board_name": "Opus 5.5 Max",
+    "score": "57.8",
+    "registry_no": "20015",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 2d83f88dd96d270c96c142616e062c7252155409a6ef68a6fa4d674266ab3550"
+  },
+  {
+    "board_name": "Opus 5.5 Extra High",
+    "score": "56.0",
+    "registry_no": "20015",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Opus 5.5 High",
+    "score": "56.0",
+    "registry_no": "20015",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5.5 Max",
+    "score": "55.5",
+    "registry_no": "20016",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 54650f9cc9dce85b11ab88bbf260aa487a42892d28c2c233617fb6cc697bade3"
+  },
+  {
+    "board_name": "Sonnet 5.5 Extra High",
+    "score": "53.1",
+    "registry_no": "20016",
+    "reasoning_level": "xhigh",
+    "status": "skipped: unchanged from 0aaba5e202d8db0095e354fa9cb394811174bc583444c6976affc3bc1b9a031e"
+  },
+  {
+    "board_name": "Opus 5.5 Medium",
+    "score": "52.5",
+    "registry_no": "20015",
+    "reasoning_level": "medium",
+    "status": "skipped: unchanged from 1b574c50fd1c6085db7f1245aeae62a714850121f5feb077b297d02987e46c77"
+  },
+  {
+    "board_name": "Fable 5.1 Max",
+    "score": "51.8",
+    "registry_no": "20004",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 3d96bacf7019860079b1f414d498696e7fcbadc2bc12aa9509b8d086c593f1d3"
+  },
+  {
+    "board_name": "Fable 5.1 Extra High",
+    "score": "51.6",
+    "registry_no": "20004",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Fable 5.1 High",
+    "score": "49.2",
+    "registry_no": "20004",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5.5 High",
+    "score": "47.8",
+    "registry_no": "20016",
+    "reasoning_level": "high",
+    "status": "skipped: unchanged from 877d9f7b30f6a84d890199415706b9d08e5f6ef6705d42bf65276a9c1c0264af"
+  },
+  {
+    "board_name": "Fable 5.1 Medium",
+    "score": "46.8",
+    "registry_no": "20004",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "Opus 5 Max",
+    "score": "46.6",
+    "registry_no": "20014",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 385f9f372337a93943da043ef98ce4c98ca5cdefeb51ac4567cf4fcd5495b3e1"
+  },
+  {
+    "board_name": "Grok 4.7 Extra High",
+    "score": "46.3",
+    "registry_no": "40003",
+    "reasoning_level": "xhigh",
+    "status": "skipped: unchanged from fe6f5d5b7af3c48e5b3a051be8cf2ec27b9b93b741b5e0a29cc393c5d850fc0e"
+  },
+  {
+    "board_name": "Opus 5 Extra High",
+    "score": "46.1",
+    "registry_no": "20014",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Fable 5.1 Low",
+    "score": "45.1",
+    "registry_no": "20004",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Opus 5 High",
+    "score": "44.7",
+    "registry_no": "20014",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.7 High",
+    "score": "43.9",
+    "registry_no": "40003",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Opus 5.5 Low",
+    "score": "43.7",
+    "registry_no": "20015",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Opus 5 Medium",
+    "score": "43.3",
+    "registry_no": "20014",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "GLM 5.3 Max",
+    "score": "42.6",
+    "registry_no": "150005",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Sol Max",
+    "score": "41.7",
+    "registry_no": "10010",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.7 Medium",
+    "score": "41.6",
+    "registry_no": "40003",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "Muse Spark 1.3 Max",
+    "score": "41.6",
+    "registry_no": "80005",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.6 Extra High",
+    "score": "41.4",
+    "registry_no": "40002",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Terra Max",
+    "score": "41.3",
+    "registry_no": "10011",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "board_name": "Opus 5 Low",
+    "score": "40.7",
+    "registry_no": "20014",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.6 High",
+    "score": "40.4",
+    "registry_no": "40002",
+    "reasoning_level": "high",
+    "status": "skipped: unchanged from b19cc99f8581a76a68e66516fdb16618bd1d1d3352a643ba868371b86f0faff4"
+  },
+  {
+    "board_name": "Gemini 3.8 Flash High",
+    "score": "39.6",
+    "registry_no": "30004",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5.5 Medium",
+    "score": "39.2",
+    "registry_no": "20016",
+    "reasoning_level": "medium",
+    "status": "skipped: unchanged from 579666bf10a4b6962e9b7e84c3a62c62c531218e4276e570841cbe6b5406c155"
+  },
+  {
+    "board_name": "GLM 5.3 High",
+    "score": "38.0",
+    "registry_no": "150005",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Sol Extra High",
+    "score": "37.7",
+    "registry_no": "10010",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Muse Spark 1.3 Extra High",
+    "score": "37.5",
+    "registry_no": "80005",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Gemini 3.8 Flash Medium",
+    "score": "37.3",
+    "registry_no": "30004",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "GLM 5.3 Flash Max",
+    "score": "36.8",
+    "registry_no": "150006",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.6 Medium",
+    "score": "36.1",
+    "registry_no": "40002",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Luna Max",
+    "score": "35.9",
+    "registry_no": "10009",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5.5 Low",
+    "score": "35.8",
+    "registry_no": "20016",
+    "reasoning_level": "low",
+    "status": "skipped: unchanged from 4543f7e02affd5f93e0ca4b4b1f53d6269033baaeb228828d70cf367269afb9b"
+  },
+  {
+    "board_name": "GPT-5.6 Sol High",
+    "score": "35.7",
+    "registry_no": "10010",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5 Max",
+    "score": "34.1",
+    "registry_no": "20013",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 0e213b1889c14530bb4966ec7d13f2cc3c7a36d31924f69a7debd443f2c8ee6f"
+  },
+  {
+    "board_name": "GPT-5.6 Terra Extra High",
+    "score": "33.6",
+    "registry_no": "10011",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.6 Low",
+    "score": "33.4",
+    "registry_no": "40002",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Muse Spark 1.3 High",
+    "score": "33.4",
+    "registry_no": "80005",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "GLM 5.3 Low",
+    "score": "33.3",
+    "registry_no": "150005",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Grok 4.7 Low",
+    "score": "33.1",
+    "registry_no": "40003",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Luna Extra High",
+    "score": "33.0",
+    "registry_no": "10009",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "Muse Spark 1.3 Medium",
+    "score": "32.6",
+    "registry_no": "80005",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5 Extra High",
+    "score": "32.0",
+    "registry_no": "20013",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Sol Medium",
+    "score": "31.1",
+    "registry_no": "10010",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "GLM 5.3 Flash High",
+    "score": "31.1",
+    "registry_no": "150006",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5 High",
+    "score": "30.8",
+    "registry_no": "20013",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Terra High",
+    "score": "30.7",
+    "registry_no": "10011",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Luna High",
+    "score": "29.4",
+    "registry_no": "10009",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board_name": "Muse Spark 1.3 Low",
+    "score": "29.3",
+    "registry_no": "80005",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Sonnet 5 Medium",
+    "score": "28.0",
+    "registry_no": "20013",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "Composer 2.5",
+    "score": "27.7",
+    "registry_no": "50004",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 5b240f64f9c3427298fe24d938af541bf83215bfcc72d578f3276d77c48c9e7c"
+  },
+  {
+    "board_name": "GPT-5.6 Terra Medium",
+    "score": "27.6",
+    "registry_no": "10011",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "GLM 5.3 Flash Low",
+    "score": "26.9",
+    "registry_no": "150006",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Terra Low",
+    "score": "25.2",
+    "registry_no": "10011",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Sol Low",
+    "score": "24.6",
+    "registry_no": "10010",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "Muse Spark 1.3 Minimal",
+    "score": "24.3",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: setting not on the fixed effort vocabulary"
+  },
+  {
+    "board_name": "Sonnet 5 Low",
+    "score": "24.1",
+    "registry_no": "20013",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Luna Medium",
+    "score": "22.2",
+    "registry_no": "10009",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board_name": "GPT-5.6 Luna Low",
+    "score": "16.0",
+    "registry_no": "10009",
+    "reasoning_level": "low",
+    "status": "included"
+  }
+]

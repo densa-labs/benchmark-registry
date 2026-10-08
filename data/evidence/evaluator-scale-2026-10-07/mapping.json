@@ -1,0 +1,1262 @@
+[
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI mini-swe-agent",
+    "model": "Muse Spark 1.1*",
+    "score": "61.5",
+    "registry_no": "80002",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI mini-swe-agent",
+    "model": "gpt-5.4 (xHigh)*",
+    "score": "59.1",
+    "registry_no": "10007",
+    "reasoning_level": "xHigh",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI mini-swe-agent",
+    "model": "Muse Spark*",
+    "score": "55",
+    "registry_no": "80001",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI mini-swe-agent",
+    "model": "claude-opus-4-6 (thinking)*",
+    "score": "51.9",
+    "registry_no": "20008",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI mini-swe-agent",
+    "model": "gemini-3.1-pro (thinking)*",
+    "score": "46.1",
+    "registry_no": "30005",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "claude-opus-4-5-20251101",
+    "score": "45.89",
+    "registry_no": "20007",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "claude-4-5-Sonnet",
+    "score": "43.6",
+    "registry_no": "20005",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gemini-3-pro-preview",
+    "score": "43.3",
+    "registry_no": "30008",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "claude-4-Sonnet",
+    "score": "42.7",
+    "registry_no": "20003",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gpt-5-2025-08-07 (High)",
+    "score": "41.78",
+    "registry_no": "10018",
+    "reasoning_level": "High",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gpt-5.2-codex",
+    "score": "41.04",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "claude-4-5-haiku",
+    "score": "39.45",
+    "registry_no": "20006",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "qwen3-coder-480b-a35b",
+    "score": "38.7",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "minimax-2.1",
+    "score": "36.81",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gemini-3-flash",
+    "score": "34.63",
+    "registry_no": "30009",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gpt-5.2",
+    "score": "29.94",
+    "registry_no": "10012",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "kimi-k2-instruct",
+    "score": "27.67",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "qwen3-235b-a22b",
+    "score": "21.41",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gpt-oss-120b",
+    "score": "16.2",
+    "registry_no": "15001",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "deepseek-v3p2",
+    "score": "15.56",
+    "registry_no": "110003",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "gemma-3-27b-it",
+    "score": "11.38",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "llama3-1-405b-instruct",
+    "score": "11.18",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "glm-4.6",
+    "score": "9.67",
+    "registry_no": "150009",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "llama4-maverick-17b-instruct",
+    "score": "5.24",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "public",
+    "version": "Public — Scale AI SWE-Agent",
+    "model": "codestral-2405",
+    "score": "1.51",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI mini-swe-agent",
+    "model": "Muse Spark 1.1*",
+    "score": "51.5",
+    "registry_no": "80002",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI mini-swe-agent",
+    "model": "claude-opus-4-6 (thinking)*",
+    "score": "47.1",
+    "registry_no": "20008",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI mini-swe-agent",
+    "model": "Muse Spark*",
+    "score": "44.7",
+    "registry_no": "80001",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI mini-swe-agent",
+    "model": "gpt-5.4(xHigh)*",
+    "score": "43.4",
+    "registry_no": "10007",
+    "reasoning_level": "xHigh",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI mini-swe-agent",
+    "model": "gemini-3.1-pro (thinking)*",
+    "score": "32.2",
+    "registry_no": "30005",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "GPT 5.2 Codex",
+    "score": "27.74",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "GPT 5.2",
+    "score": "23.809524",
+    "registry_no": "10012",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "Opus 4.5",
+    "score": "23.443223",
+    "registry_no": "20007",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "Gemini 3 Pro",
+    "score": "17.948718",
+    "registry_no": "30008",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "Claude Opus 4.1",
+    "score": "17.75",
+    "registry_no": "20017",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "OpenAI GPT-5",
+    "score": "14.86",
+    "registry_no": "10018",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "Gemini 2.5 Pro Preview",
+    "score": "10.14",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "Claude Sonnet 4",
+    "score": "9.06",
+    "registry_no": "20003",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "swe_bench_pro",
+    "variant": "private",
+    "version": "Private — Scale AI SWE-Agent",
+    "model": "OpenAI GPT-4o",
+    "score": "3.62",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "GPT 6 Astra",
+    "score": "54.8",
+    "registry_no": "10005",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Fable 5.1 (xhigh)",
+    "score": "46.5",
+    "registry_no": "20004",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gemini-3.1-pro-preview (thinking high)",
+    "score": "46.44",
+    "registry_no": "30005",
+    "reasoning_level": "thinking high",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini 3.8 Flash",
+    "score": "44.52",
+    "registry_no": "30004",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5.4-pro-2026-03-05",
+    "score": "44.32",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Muse Spark",
+    "score": "40.56",
+    "registry_no": "80001",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gemini-3-pro-preview",
+    "score": "37.52",
+    "registry_no": "30008",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5.4-2026-03-05 (xhigh thinking)",
+    "score": "36.24",
+    "registry_no": "10007",
+    "reasoning_level": "xhigh thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-7",
+    "score": "36.2",
+    "registry_no": "20010",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-6-thinking-max",
+    "score": "34.44",
+    "registry_no": "20008",
+    "reasoning_level": "thinking-max",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5-pro-2025-10-06",
+    "score": "31.64",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5.2-2025-12-11",
+    "score": "27.8",
+    "registry_no": "10012",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5-2025-08-07",
+    "score": "25.32",
+    "registry_no": "10018",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-5-20251101-thinking",
+    "score": "25.2",
+    "registry_no": "20007",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "kimi-k2.5",
+    "score": "24.37",
+    "registry_no": "120001",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5.1-thinking",
+    "score": "23.68",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gemini-2.5-pro-preview-06-05",
+    "score": "21.64",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "o3 (high) (April 2025)",
+    "score": "20.32",
+    "registry_no": "10003",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5-mini-2025-08-07",
+    "score": "19.44",
+    "registry_no": "10019",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "o3 (medium) (April 2025)",
+    "score": "19.2",
+    "registry_no": "10003",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-6 (Non-Thinking)",
+    "score": "19",
+    "registry_no": "20008",
+    "reasoning_level": "Non-Thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini 2.5 Pro Experimental (March 2025)",
+    "score": "18.16",
+    "registry_no": "30002",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "o4-mini (high) (April 2025)",
+    "score": "18.08",
+    "registry_no": "10004",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini 2.5 Pro Preview (May 06 2025)",
+    "score": "17.8",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "o4-mini (medium) (April 2025)",
+    "score": "14.28",
+    "registry_no": "10004",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-5-20251101",
+    "score": "14.16",
+    "registry_no": "20007",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-sonnet-4-5-20250929-thinking",
+    "score": "13.72",
+    "registry_no": "20005",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini 2.5 Flash (April 2025)",
+    "score": "12.08",
+    "registry_no": "30003",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-1-20250805-thinking",
+    "score": "11.52",
+    "registry_no": "20017",
+    "reasoning_level": "thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini 2.5 Flash Preview (May 2025)",
+    "score": "10.96",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Claude Opus 4 (Thinking)",
+    "score": "10.72",
+    "registry_no": "20002",
+    "reasoning_level": "Thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gemini-3.1-flash-lite-preview",
+    "score": "8.64",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "glm-4p5",
+    "score": "8.32",
+    "registry_no": "150007",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "glm-4p5-air",
+    "score": "8.12",
+    "registry_no": "150008",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "o1 Pro",
+    "score": "8.12",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Claude 3.7 Sonnet (Thinking)",
+    "score": "8.04",
+    "registry_no": "20001",
+    "reasoning_level": "Thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "o1 (December 2024)",
+    "score": "7.96",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-opus-4-1-20250805",
+    "score": "7.92",
+    "registry_no": "20017",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Claude Sonnet 4 (Thinking)",
+    "score": "7.76",
+    "registry_no": "20003",
+    "reasoning_level": "Thinking",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "claude-sonnet-4-5-20250929",
+    "score": "7.52",
+    "registry_no": "20005",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "gpt-5.1-instant",
+    "score": "6.8",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Claude Opus 4",
+    "score": "6.68",
+    "registry_no": "20002",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini 2.0 Flash Thinking (January 2025)",
+    "score": "6.56",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Llama 4 Maverick",
+    "score": "5.68",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Claude Sonnet 4",
+    "score": "5.52",
+    "registry_no": "20003",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "GPT 4.5 Preview",
+    "score": "5.44",
+    "registry_no": "10001",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "GPT-4.1",
+    "score": "5.4",
+    "registry_no": "10002",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Gemini-1.5-Pro-002",
+    "score": "4.6",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Mistral Medium 3",
+    "score": "4.52",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Nova Pro",
+    "score": "4.4",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Claude 3.5 Sonnet (October 2024)",
+    "score": "4.08",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "Nova Lite",
+    "score": "3.64",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "humanitys_last_exam",
+    "variant": "default",
+    "version": "Full set — Scale AI evaluation",
+    "model": "GPT-4o (November 2024)",
+    "score": "2.72",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Muse Spark 1.1",
+    "score": "88.1",
+    "registry_no": "80002",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 0d767e922c106e0f12a3310f5bb759fa0d2eefda557de262c26770c0b61e845a"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Fable 5.1",
+    "score": "87.2",
+    "registry_no": "20004",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 509bd5787987f812de2d680c754d5d71864ced36beee4bffbebcf7a640566bcc"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-opus-5 (xhigh)",
+    "score": "85.8",
+    "registry_no": "20014",
+    "reasoning_level": "xhigh",
+    "status": "skipped: unchanged from a200c9807f7198b9d99dc70e8a9d975708d10756917feecbdcd4bef63d6b03a4"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Qwen3.8-2.4T-A95B (xHigh)",
+    "score": "84.5",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "GLM 5.3",
+    "score": "84.2",
+    "registry_no": "150005",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 040c4a2b8b0f8524f26ed23c4d085170d338839560f7318db6f92534d29bfbf4"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Gemini 3.5 Flash (high)",
+    "score": "83.6",
+    "registry_no": "30006",
+    "reasoning_level": "high",
+    "status": "skipped: unchanged from 11acbf398644ffbb6313ee3407d4f54c0e68868e5c9dd272784a79f71d850182"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Claude Fable 5",
+    "score": "83.3",
+    "registry_no": "20012",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 444a2c85e2fbeada68d02aeec887f9b0419fdabf14f583ccde9fcbc42ef6ed83"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "kimi-k3 (max)",
+    "score": "82.3",
+    "registry_no": "120003",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 72474cf80f87730041c470a7ce2b3148ecfd9006f9f23baeff6fb826f32bd25f"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-opus-4-8 (max)",
+    "score": "82.2",
+    "registry_no": "20011",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 53b84c2643a21d3e9cb0424bd0956e6560b6b566b9aa2f48d8dabbdaa50346c2"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Muse Spark",
+    "score": "82.2",
+    "registry_no": "80001",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 6f47f675a75a9655359827540789c55de4f25f9696c87a32f35758a428a05970"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gpt-5.6 (sol)",
+    "score": "81.8",
+    "registry_no": "10010",
+    "reasoning_level": "sol",
+    "status": "skipped: unchanged from 5d96b33cea625d0a6d725d63f4f9d56dde8f076091054a1d03d64b386cf8e507"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Inkling-small",
+    "score": "79.2",
+    "registry_no": "160002",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from f22da7c77f1a16998b98b8588dcd69cd05a1c8117831df3811d18feecfa8340a"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-opus-4-7 (max)",
+    "score": "79.1",
+    "registry_no": "20010",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from 4456fc2a19f7cc32215db6f4d9178eb32380a6cdb04f32a2ab8be3e4912ed7c0"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gemini-3.1-pro-preview (high)",
+    "score": "78.2",
+    "registry_no": "30005",
+    "reasoning_level": "high",
+    "status": "skipped: unchanged from 71af89571aafb9b2454f7f4d921441885aa84494a60cfd3a1986082c914d87f6"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "glm-5p2",
+    "score": "77.8",
+    "registry_no": "150004",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 6f5855a830828c6d1bcb08a7b27a0b1ff4d4dfdaac0d4fdbdbf6ba06a76d1ad2"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-opus-4-6 (max)",
+    "score": "76.8",
+    "registry_no": "20008",
+    "reasoning_level": "max",
+    "status": "skipped: unchanged from f178c08b9ba441f82dd8ec78c541e40a5d063bce9e81e620e42b4d50104a84d6"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Inkling (xHigh)",
+    "score": "76",
+    "registry_no": "160001",
+    "reasoning_level": "xHigh",
+    "status": "skipped: unchanged from bab81259a168fe63855648f04ba056706705ac94350298aafe7939323315a719"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "glm-5p1",
+    "score": "75.6",
+    "registry_no": "150003",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from b4f088fa8ea92e5ba6c18a09edd4900527bb27ba6b2b3754c3dba101fabf970d"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gpt-5.5 (xhigh)",
+    "score": "75.3",
+    "registry_no": "10008",
+    "reasoning_level": "xhigh",
+    "status": "skipped: unchanged from fbcd87496cecdf44e85263f948479daa6635f72654b0e726d111fd5cd2384e2f"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gpt-5.4 (xhigh)",
+    "score": "70.6",
+    "registry_no": "10007",
+    "reasoning_level": "xhigh",
+    "status": "skipped: unchanged from 95d32a013513de05fb47f154a96a8b24d81e8adc732a9df776e0fc04164e8051"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gemini-3-pro-preview",
+    "score": "70.3",
+    "registry_no": "30008",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from ab9729fe417733277d7310e850bf8fb51579c293494f22114c87a9e579f58771"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-opus-4-5 (high)",
+    "score": "69.8",
+    "registry_no": "20007",
+    "reasoning_level": "high",
+    "status": "skipped: unchanged from d1c7cec8e7bf26ae9bc3e9f65c9f2508a6f41c44c98fe00b501e029837cebb62"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-sonnet-4-6",
+    "score": "69.5",
+    "registry_no": "20009",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 371996bbc4c8c220a7fae5a477a44bfc63dc01a2dd4b839193d70d0b2ab4875d"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gpt-5.2 (xhigh)",
+    "score": "67.6",
+    "registry_no": "10012",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "kimi-k2p5",
+    "score": "64.4",
+    "registry_no": "120001",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 33a4c35d33eb3513a5091f0612b4706d6f7dcf9090466221b56d94dcee14daa8"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "Nemotron 3 Ultra (thinking)",
+    "score": "63.1",
+    "registry_no": "60003",
+    "reasoning_level": "thinking",
+    "status": "held: archive snapshot shows a different score"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gemini-3-flash-preview",
+    "score": "62",
+    "registry_no": "30009",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from f6d9d674671389beb6c09a27092e39da11972870063b8c8f9ab48ce9ef8da711"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-sonnet-4-5 (thinking)",
+    "score": "59.5",
+    "registry_no": "20005",
+    "reasoning_level": "thinking",
+    "status": "skipped: unchanged from a6333b33dcb11edf6f393e0b484e29055d2bf84ae457b60daf778e3e1fdfdb04"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "glm-4p7",
+    "score": "58.1",
+    "registry_no": "150001",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 99fb5fe2775f597fa4df481491f9f4486ea807374f6298ddf4c28b4f03f3746b"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gemini-3.1-flash-lite (high)",
+    "score": "57.1",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gpt-5.4-mini (xhigh)",
+    "score": "56.7",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "gpt-5.1 (high)",
+    "score": "50.1",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "o3-pro",
+    "score": "44.5",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: model not in Registry or identity unsettled"
+  },
+  {
+    "board": "mcp_atlas",
+    "variant": "default",
+    "version": "Public, April 2026 update",
+    "model": "claude-haiku-4-5",
+    "score": "40.2",
+    "registry_no": "20006",
+    "reasoning_level": "",
+    "status": "skipped: unchanged from 3d0580d327105021504da9290e87d5346a61ccf8e51c05dd93d28a7374c5c84e"
+  }
+]

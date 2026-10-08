@@ -1,0 +1,27 @@
+assets:
+  logs: s3://swe-bench-submissions/bash-only/20250720_mini-v0.0.0-Llama-4-Scout-17B-Instruct/logs
+  trajs: s3://swe-bench-submissions/bash-only/20250720_mini-v0.0.0-Llama-4-Scout-17B-Instruct/trajs
+info:
+  model_release_date: 20250405
+  logo:
+  - https://upload.wikimedia.org/wikipedia/commons/d/d0/Meta_Platforms_logo.svg
+  mini-swe-agent_version: 0.0.0
+  name: Llama 4 Scout Instruct
+  resolved: 9.06
+  site: https://www.together.ai/models/llama-4-scout
+  cost: 57.8157615
+  instance_cost: 0.115631523
+  instance_calls: 29.216
+tags:
+  checked: true
+  model:
+  - llama-4-scout-instruct
+  org: Meta
+  os_model: false
+  os_system: true
+  system:
+    attempts: 1
+  agent: mini-SWE-agent
+  agent_org: SWE-agent
+  model_display: Llama 4 Scout Instruct
+  model_org: Meta

@@ -1,0 +1,19 @@
+assets:
+  logs: s3://swe-bench-submissions/verified/20241212_google_jules_gemini_2.0_flash_experimental/logs
+  trajs: s3://swe-bench-submissions/verified/20241212_google_jules_gemini_2.0_flash_experimental/trajs
+info:
+  logo: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png
+  name: Google Jules + Gemini 2.0 Flash (v20241212-experimental)
+  report: https://developers.googleblog.com/en/the-next-chapter-of-the-gemini-era-for-developers/
+  site: https://developers.googleblog.com/en/the-next-chapter-of-the-gemini-era-for-developers/
+tags:
+  checked: false
+  org: Google
+  os_model: false
+  os_system: false
+  system:
+    attempts: 2+
+  agent: Google Jules
+  agent_org: Google
+  model_display: Gemini 2.0 Flash (v20241212-experimental)
+  model_org: Google DeepMind

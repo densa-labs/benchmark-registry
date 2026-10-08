@@ -1,0 +1,970 @@
+[
+  {
+    "rank": 1,
+    "board_name": "Gemini 4 Argon (High)",
+    "score": "51.29",
+    "registry_no": "30011",
+    "reasoning_level": "high",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 2,
+    "board_name": "Gemini 4 Argon (Medium)",
+    "score": "50.08",
+    "registry_no": "30011",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 3,
+    "board_name": "Claude Sonnet 5.5 (default fallbacks, Max)",
+    "score": "44.75",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 4,
+    "board_name": "Claude Opus 5.5 (default fallbacks, Max)",
+    "score": "42.47",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 5,
+    "board_name": "GPT 6 Astra (Max)",
+    "score": "41.4",
+    "registry_no": "10005",
+    "reasoning_level": "max",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 6,
+    "board_name": "GPT 6 Astra (XHigh)",
+    "score": "38.96",
+    "registry_no": "10005",
+    "reasoning_level": "xhigh",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 7,
+    "board_name": "GPT 6 Astra (High)",
+    "score": "37.14",
+    "registry_no": "10005",
+    "reasoning_level": "high",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 8,
+    "board_name": "Claude Sonnet 5.5 (default fallbacks, XHigh)",
+    "score": "36.83",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 9,
+    "board_name": "Claude Opus 5.5 (default fallbacks, XHigh)",
+    "score": "35.77",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 10,
+    "board_name": "GPT 6 Astra (Medium)",
+    "score": "34.09",
+    "registry_no": "10005",
+    "reasoning_level": "medium",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 11,
+    "board_name": "GPT 6 Sol (XHigh)",
+    "score": "33.2",
+    "registry_no": "10014",
+    "reasoning_level": "xhigh",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 12,
+    "board_name": "Claude Opus 5.5 (default fallbacks, High)",
+    "score": "33.03",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 13,
+    "board_name": "GPT 6 Sol (Max)",
+    "score": "32.0",
+    "registry_no": "10014",
+    "reasoning_level": "max",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 14,
+    "board_name": "Claude Fable 5.1 (with Opus 5 Fallback)",
+    "score": "31.4",
+    "registry_no": "20004",
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 15,
+    "board_name": "GPT 6 Sol (High)",
+    "score": "31.2",
+    "registry_no": "10014",
+    "reasoning_level": "high",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 16,
+    "board_name": "Gemini 3.7 Flash (High)",
+    "score": "30.44",
+    "registry_no": "30010",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 17,
+    "board_name": "GPT 6 Astra (Low)",
+    "score": "30.29",
+    "registry_no": "10005",
+    "reasoning_level": "low",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 18,
+    "board_name": "Gemini 3.8 Flash (Medium)",
+    "score": "29.68",
+    "registry_no": "30004",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 19,
+    "board_name": "Gemini 3.8 Flash (High)",
+    "score": "29.68",
+    "registry_no": "30004",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 20,
+    "board_name": "Claude Opus 5.5 (default fallbacks, Medium)",
+    "score": "29.53",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 21,
+    "board_name": "Claude Sonnet 5.5 (default fallbacks, High)",
+    "score": "29.38",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 22,
+    "board_name": "GPT-5.6 Sol (Max)",
+    "score": "28.77",
+    "registry_no": "10010",
+    "reasoning_level": "max",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 23,
+    "board_name": "Claude Opus 5 (Max)",
+    "score": "26.94",
+    "registry_no": "20014",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 24,
+    "board_name": "GPT 6 Sol (Medium)",
+    "score": "26.9",
+    "registry_no": "10014",
+    "reasoning_level": "medium",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 25,
+    "board_name": "GPT-5.6 Sol (XHigh)",
+    "score": "26.33",
+    "registry_no": "10010",
+    "reasoning_level": "xhigh",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 26,
+    "board_name": "Claude Opus 5 (XHigh)",
+    "score": "25.27",
+    "registry_no": "20014",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 27,
+    "board_name": "GPT 6 Astra (None)",
+    "score": "25.27",
+    "registry_no": "10005",
+    "reasoning_level": "none",
+    "status": "included"
+  },
+  {
+    "rank": 28,
+    "board_name": "GPT-5.6 Sol (High)",
+    "score": "24.81",
+    "registry_no": "10010",
+    "reasoning_level": "high",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 29,
+    "board_name": "Claude Opus 5.5 (default fallbacks, Low)",
+    "score": "24.2",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 30,
+    "board_name": "Claude Opus 5 (Medium)",
+    "score": "23.9",
+    "registry_no": "20014",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 31,
+    "board_name": "GPT-5.6 Terra (Max)",
+    "score": "23.59",
+    "registry_no": "10011",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 32,
+    "board_name": "Claude Sonnet 5.5 (default fallbacks, Medium)",
+    "score": "23.29",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 33,
+    "board_name": "Kimi K3",
+    "score": "22.68",
+    "registry_no": "120003",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 34,
+    "board_name": "Claude Fable 5.1 (Max)",
+    "score": "22.37",
+    "registry_no": "20004",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 35,
+    "board_name": "Claude Fable 5.1 (XHigh)",
+    "score": "21.31",
+    "registry_no": "20004",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 36,
+    "board_name": "GPT 6 Sol (Low)",
+    "score": "21.2",
+    "registry_no": "10014",
+    "reasoning_level": "low",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 37,
+    "board_name": "GPT 6 Luna (Max)",
+    "score": "20.7",
+    "registry_no": "10013",
+    "reasoning_level": "max",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 38,
+    "board_name": "Muse Spark 1.3 (Max)",
+    "score": "20.7",
+    "registry_no": "80005",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 39,
+    "board_name": "Claude Opus 5 (High)",
+    "score": "20.55",
+    "registry_no": "20014",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 40,
+    "board_name": "Claude Opus 5 (Low)",
+    "score": "20.4",
+    "registry_no": "20014",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 41,
+    "board_name": "GPT-5.6 Sol (Medium)",
+    "score": "19.63",
+    "registry_no": "10010",
+    "reasoning_level": "medium",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 42,
+    "board_name": "Claude Sonnet 5.5 (default fallbacks, Between tools)",
+    "score": "18.57",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 43,
+    "board_name": "Claude Sonnet 5.5 (default fallbacks, Low)",
+    "score": "18.26",
+    "registry_no": null,
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 44,
+    "board_name": "DeepSeek V4 Flash (Max)",
+    "score": "18.11",
+    "registry_no": "110001",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 45,
+    "board_name": "GPT-5.6 Luna (Max)",
+    "score": "17.05",
+    "registry_no": "10009",
+    "reasoning_level": "max",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 46,
+    "board_name": "Gemini 3.6 Flash (High)",
+    "score": "17.05",
+    "registry_no": "30007",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 47,
+    "board_name": "Claude Fable 5.0 (Max)",
+    "score": "17.05",
+    "registry_no": "20012",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 48,
+    "board_name": "Claude Opus 4.8 (XHigh)",
+    "score": "16.89",
+    "registry_no": "20011",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 49,
+    "board_name": "GPT-5.5 (XHigh)",
+    "score": "16.59",
+    "registry_no": "10008",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 50,
+    "board_name": "Gemini 3.6 Flash (Medium)",
+    "score": "16.44",
+    "registry_no": "30007",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 51,
+    "board_name": "Claude Opus 4.8 (Max)",
+    "score": "16.44",
+    "registry_no": "20011",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 52,
+    "board_name": "Claude Opus 4.8 (High)",
+    "score": "16.13",
+    "registry_no": "20011",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 53,
+    "board_name": "Claude Fable 5.0 (High)",
+    "score": "16.13",
+    "registry_no": "20012",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 54,
+    "board_name": "Gemini 3.6 Flash (Low)",
+    "score": "15.68",
+    "registry_no": "30007",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 55,
+    "board_name": "Claude Fable 5.0 (XHigh)",
+    "score": "15.22",
+    "registry_no": "20012",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 56,
+    "board_name": "GPT-5.6 Terra (XHigh)",
+    "score": "14.76",
+    "registry_no": "10011",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 57,
+    "board_name": "GPT 6 Luna (High)",
+    "score": "14.46",
+    "registry_no": "10013",
+    "reasoning_level": "high",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 58,
+    "board_name": "Claude Opus 4.8 (Medium)",
+    "score": "14.0",
+    "registry_no": "20011",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 59,
+    "board_name": "Claude Fable 5.0 (Medium)",
+    "score": "13.7",
+    "registry_no": "20012",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 60,
+    "board_name": "Claude Opus 4.8 (Low)",
+    "score": "13.55",
+    "registry_no": "20011",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 61,
+    "board_name": "Gemini 3.5 Flash (High)",
+    "score": "13.39",
+    "registry_no": "30006",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 62,
+    "board_name": "Claude Opus 4.7 (Max)",
+    "score": "13.39",
+    "registry_no": "20010",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 63,
+    "board_name": "GPT-5.6 Luna (XHigh)",
+    "score": "12.94",
+    "registry_no": "10009",
+    "reasoning_level": "xhigh",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 64,
+    "board_name": "GPT-5.5 (High)",
+    "score": "12.79",
+    "registry_no": "10008",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 65,
+    "board_name": "GPT 6 Luna (XHigh)",
+    "score": "12.63",
+    "registry_no": "10013",
+    "reasoning_level": "xhigh",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 66,
+    "board_name": "Claude Fable 5.0 (Low)",
+    "score": "12.48",
+    "registry_no": "20012",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 67,
+    "board_name": "GPT-5.6 Terra (High)",
+    "score": "11.72",
+    "registry_no": "10011",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 68,
+    "board_name": "GPT-5.6 Sol (Low)",
+    "score": "11.72",
+    "registry_no": "10010",
+    "reasoning_level": "low",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 69,
+    "board_name": "GPT-5.4 (XHigh)",
+    "score": "11.57",
+    "registry_no": "10007",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 70,
+    "board_name": "Gemini 3.5 Flash (Medium)",
+    "score": "11.42",
+    "registry_no": "30006",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 71,
+    "board_name": "Claude Sonnet 5 (Max)",
+    "score": "10.65",
+    "registry_no": "20013",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 72,
+    "board_name": "GPT-5.4 (High)",
+    "score": "10.05",
+    "registry_no": "10007",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 73,
+    "board_name": "Claude Sonnet 5 (High)",
+    "score": "9.89",
+    "registry_no": "20013",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 74,
+    "board_name": "Claude Opus 4.7 (XHigh)",
+    "score": "9.74",
+    "registry_no": "20010",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 75,
+    "board_name": "GPT 6 Luna (Medium)",
+    "score": "9.44",
+    "registry_no": "10013",
+    "reasoning_level": "medium",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 76,
+    "board_name": "GPT-5.6 Luna (High)",
+    "score": "9.13",
+    "registry_no": "10009",
+    "reasoning_level": "high",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 77,
+    "board_name": "Claude Opus 4.7 (High)",
+    "score": "9.13",
+    "registry_no": "20010",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 78,
+    "board_name": "GPT 6 Sol (None)",
+    "score": "9.1",
+    "registry_no": "10014",
+    "reasoning_level": "none",
+    "status": "included"
+  },
+  {
+    "rank": 79,
+    "board_name": "Gemini 3.5 Flash (Low)",
+    "score": "8.98",
+    "registry_no": "30006",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 80,
+    "board_name": "GPT-5.5 (Medium)",
+    "score": "8.98",
+    "registry_no": "10008",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 81,
+    "board_name": "Gemini 3.1 Pro (preview) (High)",
+    "score": "8.68",
+    "registry_no": "30005",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 82,
+    "board_name": "GPT-5.6 Terra (Medium)",
+    "score": "8.07",
+    "registry_no": "10011",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 83,
+    "board_name": "GLM 5.2 (Max)",
+    "score": "7.76",
+    "registry_no": null,
+    "reasoning_level": "max",
+    "status": "held: model not in Registry"
+  },
+  {
+    "rank": 84,
+    "board_name": "Claude Sonnet 5 (XHigh)",
+    "score": "7.61",
+    "registry_no": "20013",
+    "reasoning_level": "xhigh",
+    "status": "included"
+  },
+  {
+    "rank": 85,
+    "board_name": "GPT-5.6 Terra (Low)",
+    "score": "7.46",
+    "registry_no": "10011",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 86,
+    "board_name": "Gemini 3.1 Pro (preview) (Medium)",
+    "score": "7.0",
+    "registry_no": "30005",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 87,
+    "board_name": "Claude Opus 4.7 (Medium)",
+    "score": "6.85",
+    "registry_no": "20010",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 88,
+    "board_name": "GLM 5.1 (Max)",
+    "score": "6.2",
+    "registry_no": "150003",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 89,
+    "board_name": "Claude Sonnet 5 (Medium)",
+    "score": "5.78",
+    "registry_no": "20013",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 90,
+    "board_name": "Claude Opus 4.7 (Low)",
+    "score": "5.48",
+    "registry_no": "20010",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 91,
+    "board_name": "GPT-5.4 (Medium)",
+    "score": "5.33",
+    "registry_no": "10007",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 92,
+    "board_name": "Claude Sonnet 4.6 (Max)",
+    "score": "5.33",
+    "registry_no": "20009",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 93,
+    "board_name": "Claude Sonnet 4.6 (High)",
+    "score": "5.02",
+    "registry_no": "20009",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 94,
+    "board_name": "Minimax M3 (Max)",
+    "score": "4.87",
+    "registry_no": "140003",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 95,
+    "board_name": "Gemini 3.1 Pro (preview) (Low)",
+    "score": "4.57",
+    "registry_no": "30005",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 96,
+    "board_name": "Qwen 3.6+ (High)",
+    "score": "4.3",
+    "registry_no": "130004",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 97,
+    "board_name": "GPT-5.6 Luna (Medium)",
+    "score": "4.26",
+    "registry_no": "10009",
+    "reasoning_level": "medium",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 98,
+    "board_name": "Gemini 3.5 Flash Lite (Medium)",
+    "score": "3.96",
+    "registry_no": null,
+    "reasoning_level": "medium",
+    "status": "held: model not in Registry"
+  },
+  {
+    "rank": 99,
+    "board_name": "GPT-5.6 Sol",
+    "score": "3.81",
+    "registry_no": "10010",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 100,
+    "board_name": "Qwen 3.7+",
+    "score": "3.7",
+    "registry_no": "130007",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 101,
+    "board_name": "Claude Sonnet 5 (Low)",
+    "score": "3.65",
+    "registry_no": "20013",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 102,
+    "board_name": "Claude Sonnet 4.6 (Medium)",
+    "score": "3.65",
+    "registry_no": "20009",
+    "reasoning_level": "medium",
+    "status": "included"
+  },
+  {
+    "rank": 103,
+    "board_name": "Gemini 3.5 Flash Lite (High)",
+    "score": "3.35",
+    "registry_no": null,
+    "reasoning_level": "high",
+    "status": "held: model not in Registry"
+  },
+  {
+    "rank": 104,
+    "board_name": "Kimi K2.7 Code",
+    "score": "3.2",
+    "registry_no": null,
+    "reasoning_level": "",
+    "status": "held: model not in Registry"
+  },
+  {
+    "rank": 105,
+    "board_name": "Claude Sonnet 4.6 (Low)",
+    "score": "2.89",
+    "registry_no": "20009",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 106,
+    "board_name": "Kimi K2.6",
+    "score": "2.59",
+    "registry_no": "120002",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 107,
+    "board_name": "GPT-5.5 (Low)",
+    "score": "2.59",
+    "registry_no": "10008",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 108,
+    "board_name": "GPT-5.6 Luna (Low)",
+    "score": "1.83",
+    "registry_no": "10009",
+    "reasoning_level": "low",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 109,
+    "board_name": "Gemma 4 31B (Max)",
+    "score": "1.7",
+    "registry_no": "35002",
+    "reasoning_level": "max",
+    "status": "included"
+  },
+  {
+    "rank": 110,
+    "board_name": "GPT-5.4 (Low)",
+    "score": "1.52",
+    "registry_no": "10007",
+    "reasoning_level": "low",
+    "status": "included"
+  },
+  {
+    "rank": 111,
+    "board_name": "GPT 6 Luna (Low)",
+    "score": "1.22",
+    "registry_no": "10013",
+    "reasoning_level": "low",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "rank": 112,
+    "board_name": "Gemini 3.5 Flash (Minimal)",
+    "score": "1.22",
+    "registry_no": "30006",
+    "reasoning_level": null,
+    "status": "held: score includes a fallback model, or a setting off the fixed vocabulary"
+  },
+  {
+    "rank": 113,
+    "board_name": "GPT-5.5",
+    "score": "1.07",
+    "registry_no": "10008",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 114,
+    "board_name": "GPT-5.6 Terra",
+    "score": "0.76",
+    "registry_no": "10011",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 115,
+    "board_name": "Claude Haiku 4.5",
+    "score": "0.46",
+    "registry_no": "20006",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 116,
+    "board_name": "Minimax M2.7 (High)",
+    "score": "0.46",
+    "registry_no": "140002",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 117,
+    "board_name": "GPT 6 Luna (None)",
+    "score": "0.3",
+    "registry_no": "10013",
+    "reasoning_level": "none",
+    "status": "included"
+  },
+  {
+    "rank": 118,
+    "board_name": "GPT-OSS 120B (High)",
+    "score": "0.15",
+    "registry_no": "15001",
+    "reasoning_level": "high",
+    "status": "included"
+  },
+  {
+    "rank": 119,
+    "board_name": "GPT-5.6 Luna",
+    "score": "0.15",
+    "registry_no": "10009",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 120,
+    "board_name": "GPT-5.4",
+    "score": "0.15",
+    "registry_no": "10007",
+    "reasoning_level": "",
+    "status": "included"
+  },
+  {
+    "rank": 121,
+    "board_name": "Gemini 3.5 Flash Lite (Low)",
+    "score": "0.0",
+    "registry_no": null,
+    "reasoning_level": "low",
+    "status": "held: model not in Registry"
+  }
+]

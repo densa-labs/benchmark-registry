@@ -1,0 +1,1832 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "tau3-bench",
+        "canonical_name": "τ³-bench",
+        "source_url": "https://github.com/sierra-research/tau2-bench",
+        "source_checked_at": "2026-09-24T00:00:00Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+            "version_slug": "banking-alltools-retrieval-v1-0-1",
+            "release_at": "2026-07-22",
+            "release_precision": "date",
+            "metric_key": "tau3-success",
+            "source_url": "https://github.com/sierra-research/tau2-bench/releases/tag/v1.0.1",
+            "source_checked_at": "2026-10-07T14:00:00Z",
+            "evaluator_keys": [
+              "sierra-research"
+            ]
+          },
+          {
+            "version": "τ³ — Banking, Qwen embeddings retrieval, v1.0.1 grading",
+            "version_slug": "banking-qwen-embeddings-retrieval-v1-0-1",
+            "release_at": "2026-07-22",
+            "release_precision": "date",
+            "metric_key": "tau3-success",
+            "source_url": "https://github.com/sierra-research/tau2-bench/releases/tag/v1.0.1",
+            "source_checked_at": "2026-10-07T14:00:00Z",
+            "evaluator_keys": [
+              "sierra-research"
+            ]
+          },
+          {
+            "version": "τ³ — Banking, Terminal retrieval, v1.0.1 grading",
+            "version_slug": "banking-terminal-retrieval-v1-0-1",
+            "release_at": "2026-07-22",
+            "release_precision": "date",
+            "metric_key": "tau3-success",
+            "source_url": "https://github.com/sierra-research/tau2-bench/releases/tag/v1.0.1",
+            "source_checked_at": "2026-10-07T14:00:00Z",
+            "evaluator_keys": [
+              "sierra-research"
+            ]
+          },
+          {
+            "version": "τ³ — Banking, text-embedding-3-large retrieval, v1.0.1 grading",
+            "version_slug": "banking-text-emb-3-large-retrieval-v1-0-1",
+            "release_at": "2026-07-22",
+            "release_precision": "date",
+            "metric_key": "tau3-success",
+            "source_url": "https://github.com/sierra-research/tau2-bench/releases/tag/v1.0.1",
+            "source_checked_at": "2026-10-07T14:00:00Z",
+            "evaluator_keys": [
+              "sierra-research"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "tau3-bench",
+        "version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "version_slug": "banking-alltools-retrieval-v1-0-1",
+        "dataset_label": "τ³ — Banking",
+        "configuration": {
+          "key": "retrieval-alltools",
+          "label": "AllTools retrieval",
+          "kind": "tools"
+        },
+        "source_url": "https://taubench.com/leaderboard",
+        "source_checked_at": "2026-10-07T14:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "tau3-bench",
+        "version": "τ³ — Banking, Qwen embeddings retrieval, v1.0.1 grading",
+        "version_slug": "banking-qwen-embeddings-retrieval-v1-0-1",
+        "dataset_label": "τ³ — Banking",
+        "configuration": {
+          "key": "retrieval-qwen-embeddings",
+          "label": "Qwen embeddings retrieval",
+          "kind": "tools"
+        },
+        "source_url": "https://taubench.com/leaderboard",
+        "source_checked_at": "2026-10-07T14:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "tau3-bench",
+        "version": "τ³ — Banking, Terminal retrieval, v1.0.1 grading",
+        "version_slug": "banking-terminal-retrieval-v1-0-1",
+        "dataset_label": "τ³ — Banking",
+        "configuration": {
+          "key": "retrieval-terminal",
+          "label": "Terminal retrieval",
+          "kind": "tools"
+        },
+        "source_url": "https://taubench.com/leaderboard",
+        "source_checked_at": "2026-10-07T14:00:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "tau3-bench",
+        "version": "τ³ — Banking, text-embedding-3-large retrieval, v1.0.1 grading",
+        "version_slug": "banking-text-emb-3-large-retrieval-v1-0-1",
+        "dataset_label": "τ³ — Banking",
+        "configuration": {
+          "key": "retrieval-text-emb-3-large",
+          "label": "text-embedding-3-large retrieval",
+          "kind": "tools"
+        },
+        "source_url": "https://taubench.com/leaderboard",
+        "source_checked_at": "2026-10-07T14:00:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-5_sierra_2026-02-26",
+        "score_value": "84.0",
+        "score_raw": "84.0",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134836/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-5_sierra_2026-02-26",
+        "score_value": "79.61",
+        "score_raw": "79.61",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134836/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-5_sierra_2026-02-26",
+        "score_value": "92.32",
+        "score_raw": "92.32",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134836/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-5_sierra_2026-02-26",
+        "score_value": "24.74",
+        "score_raw": "24.74",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134836/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-sonnet-4-5_sierra_2026-02-26",
+        "score_value": "72.0",
+        "score_raw": "72.0",
+        "reported_at": "2026-02-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134937/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-sonnet-4-5_sierra_2026-02-26",
+        "score_value": "72.37",
+        "score_raw": "72.37",
+        "reported_at": "2026-02-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134937/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-sonnet-4-5_sierra_2026-02-26",
+        "score_value": "84.87",
+        "score_raw": "84.87",
+        "reported_at": "2026-02-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134937/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, Terminal retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-sonnet-4-5_sierra_2026-02-26",
+        "score_value": "25.26",
+        "score_raw": "25.26",
+        "reported_at": "2026-02-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134937/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-sonnet-4-5_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2_sierra_2026-02-26",
+        "score_value": "83.0",
+        "score_raw": "83.0",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134955/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2_sierra_2026-02-26",
+        "score_value": "81.58",
+        "score_raw": "81.58",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134955/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2_sierra_2026-02-26",
+        "score_value": "89.69",
+        "score_raw": "89.69",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134955/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2_sierra_2026-02-26",
+        "score_value": "32.22",
+        "score_raw": "32.22",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007134955/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "none",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2-none_sierra_2026-02-26",
+        "score_value": "52.5",
+        "score_raw": "52.5",
+        "reported_at": "2026-05-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-26",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135014/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "none",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2-none_sierra_2026-02-26",
+        "score_value": "75.0",
+        "score_raw": "75.0",
+        "reported_at": "2026-05-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-26",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135014/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "none",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2-none_sierra_2026-02-26",
+        "score_value": "57.23684210526315",
+        "score_raw": "57.23684210526315",
+        "reported_at": "2026-05-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-26",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135014/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "none",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, Qwen embeddings retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-2-none_sierra_2026-02-26",
+        "score_value": "12.63",
+        "score_raw": "12.63",
+        "reported_at": "2026-05-26",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-26",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135014/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-2-none_sierra_2026-02-26/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:glm-5-think_sierra_2026-03-02",
+        "score_value": "82.5",
+        "score_raw": "82.5",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135116/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:glm-5-think_sierra_2026-03-02",
+        "score_value": "73.68",
+        "score_raw": "73.68",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135116/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:glm-5-think_sierra_2026-03-02",
+        "score_value": "86.84",
+        "score_raw": "86.84",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135116/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, text-embedding-3-large retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:glm-5-think_sierra_2026-03-02",
+        "score_value": "9.79",
+        "score_raw": "9.79",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135116/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130003",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:qwen3.5-397b-a17b-think_sierra_2026-03-02",
+        "score_value": "81.5",
+        "score_raw": "81.5",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135133/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130003",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:qwen3.5-397b-a17b-think_sierra_2026-03-02",
+        "score_value": "84.43",
+        "score_raw": "84.43",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135133/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130003",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:qwen3.5-397b-a17b-think_sierra_2026-03-02",
+        "score_value": "97.81",
+        "score_raw": "97.81",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135133/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "130003",
+        "reasoning_level": "enabled",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, text-embedding-3-large retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:qwen3.5-397b-a17b-think_sierra_2026-03-02",
+        "score_value": "9.79",
+        "score_raw": "9.79",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-02-27",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135133/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/qwen3.5-397b-a17b-think_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-flash_sierra_2026-03-02",
+        "score_value": "82.5",
+        "score_raw": "82.5",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135230/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-flash_sierra_2026-03-02",
+        "score_value": "76.75",
+        "score_raw": "76.75",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135230/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-flash_sierra_2026-03-02",
+        "score_value": "91.23",
+        "score_raw": "91.23",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135230/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, Terminal retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-flash_sierra_2026-03-02",
+        "score_value": "27.32",
+        "score_raw": "27.32",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135230/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-flash_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Airline",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-pro_sierra_2026-03-02",
+        "score_value": "80.5",
+        "score_raw": "80.5",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135247/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Retail",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-pro_sierra_2026-03-02",
+        "score_value": "75.88",
+        "score_raw": "75.88",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135247/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Telecom",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-pro_sierra_2026-03-02",
+        "score_value": "91.01",
+        "score_raw": "91.01",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135247/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, Terminal retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-pro_sierra_2026-03-02",
+        "score_value": "18.04",
+        "score_raw": "18.04",
+        "reported_at": "2026-03-02",
+        "reported_precision": "date",
+        "evaluated_at": "2026-03-02",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135247/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-pro_sierra_2026-03-02/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10007",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-4_sierra_2026-03-25",
+        "score_value": "39.43",
+        "score_raw": "39.43",
+        "reported_at": "2026-05-06",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-06",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135306/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-4_sierra_2026-03-25/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-4_sierra_2026-03-25/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10008",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-5_sierra_2026-05-05",
+        "score_value": "44.58762886597938",
+        "score_raw": "44.58762886597938",
+        "reported_at": "2026-07-22",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-22",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135439/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-5_sierra_2026-05-05/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-5_sierra_2026-05-05/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-6_sierra_2026-05-05",
+        "score_value": "27.32",
+        "score_raw": "27.32",
+        "reported_at": "2026-05-06",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-06",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135528/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-6_sierra_2026-05-05/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-6_sierra_2026-05-05/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20010",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-7_sierra_2026-05-05",
+        "score_value": "40.20618556701031",
+        "score_raw": "40.20618556701031",
+        "reported_at": "2026-07-23",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-23",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135547/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-7_sierra_2026-05-05/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-7_sierra_2026-05-05/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30005",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gemini-3-1-pro-preview_sierra_2026-05-05",
+        "score_value": "26.03",
+        "score_raw": "26.03",
+        "reported_at": "2026-05-05",
+        "reported_precision": "date",
+        "evaluated_at": "2026-05-05",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135605/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-1-pro-preview_sierra_2026-05-05/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gemini-3-1-pro-preview_sierra_2026-05-05/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10010",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:gpt-5-6-sol_sierra_2026-08-04",
+        "score_value": "46.90721649484536",
+        "score_raw": "46.90721649484536",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-22",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135628/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-6-sol_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/gpt-5-6-sol_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20011",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-4-8_sierra_2026-08-04",
+        "score_value": "39.69072164948454",
+        "score_raw": "39.69072164948454",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-23",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135643/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-8_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-4-8_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20012",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-fable-5_sierra_2026-08-04",
+        "score_value": "39.69072164948454",
+        "score_raw": "39.69072164948454",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-23",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135745/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-fable-5_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-fable-5_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80002",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:muse-spark-1-1_sierra_2026-08-04",
+        "score_value": "40.4639175257732",
+        "score_raw": "40.4639175257732",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-23",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135802/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/muse-spark-1-1_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/muse-spark-1-1_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120003",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:kimi-k3_sierra_2026-08-04",
+        "score_value": "37.11340206185567",
+        "score_raw": "37.11340206185567",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135821/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/kimi-k3_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/kimi-k3_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150004",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:glm-5-2_sierra_2026-08-04",
+        "score_value": "37.11340206185567",
+        "score_raw": "37.11340206185567",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007135951/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-2_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/glm-5-2_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40001",
+        "reasoning_level": "high",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:grok-4-5_sierra_2026-08-04",
+        "score_value": "47.93814432989691",
+        "score_raw": "47.93814432989691",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140006/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/grok-4-5_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/grok-4-5_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:inkling_sierra_2026-08-04",
+        "score_value": "25.0",
+        "score_raw": "25.0",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-07-24",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140043/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/inkling_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/inkling_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20014",
+        "reasoning_level": "max",
+        "benchmark_slug": "tau3-bench",
+        "benchmark_version": "τ³ — Banking, AllTools retrieval, v1.0.1 grading",
+        "metric_key": "tau3-success",
+        "run_ref": "tau-bench-submissions:claude-opus-5_sierra_2026-08-04",
+        "score_value": "48.71134020618557",
+        "score_raw": "48.71134020618557",
+        "reported_at": "2026-08-04",
+        "reported_precision": "date",
+        "evaluated_at": "2026-08-03",
+        "evaluated_precision": "date",
+        "evaluator_keys": [
+          "sierra-research"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Sierra",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007140127/https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-5_sierra_2026-08-04/submission.json",
+        "sources": [
+          {
+            "url": "https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/claude-opus-5_sierra_2026-08-04/submission.json",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://taubench.com/leaderboard",
+            "checked_at": "2026-10-07T14:00:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

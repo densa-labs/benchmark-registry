@@ -1,0 +1,3962 @@
+[
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-6.1-sol_max",
+    "id": "LspviLnbeZ82WCngWp6rwR",
+    "score": "0.9539141414141414",
+    "registry_no": "10015",
+    "epoch_release_date": "2026-09-29",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-5-5_max",
+    "id": "QPk8jbJvo4986sbWtdte6J",
+    "score": "0.9558080808080808",
+    "registry_no": "20016",
+    "epoch_release_date": "2026-09-28",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-6-luna_max",
+    "id": "7F3QFMAkwnCV62HcvxP96q",
+    "score": "0.9046717171717171",
+    "registry_no": "10013",
+    "epoch_release_date": "2026-09-22",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4.7_xhigh",
+    "id": "hxAhYJfXdPNanxatXpG5hC",
+    "score": "0.92739898989899",
+    "registry_no": "40003",
+    "epoch_release_date": "2026-09-21",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-6-sol_max",
+    "id": "aJD7ZfFftu2cZoToJhhzF7",
+    "score": "0.9431818181818182",
+    "registry_no": "10014",
+    "epoch_release_date": "2026-09-22",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-5-5_max",
+    "id": "6gmbahPSxHf9xVhAYqpnhi",
+    "score": "0.9059343434343434",
+    "registry_no": "20015",
+    "epoch_release_date": "2026-09-22",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.8-max-0902_xhigh",
+    "id": "VzeQXKBH9maR2nDcZJ8b7S",
+    "score": "0.922979797979798",
+    "registry_no": null,
+    "epoch_release_date": "2026-09-01",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.8-flash_high",
+    "id": "Br3mjs2GrYcCwX9AMwcihU",
+    "score": "0.9539141414141414",
+    "registry_no": "30004",
+    "epoch_release_date": "2026-09-02",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "granite-4.0-micro",
+    "id": "SadaSwnSdMpYRstc8zvgjJ",
+    "score": "0.2828282828282828",
+    "registry_no": null,
+    "epoch_release_date": "2025-10-02",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "seed-oss-36b-instruct",
+    "id": "BVat526nF6NUGoVaLCp7DT",
+    "score": "0.7152777777777778",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Qwen3-32B_none",
+    "id": "EXpHB6kFqDjRfG9A5LsDf6",
+    "score": "0.5410353535353535",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-30b-a3b-thinking-2507",
+    "id": "2gzNF2d53h2oCKDnojLtSP",
+    "score": "0.7007575757575758",
+    "registry_no": null,
+    "epoch_release_date": "2025-07-30",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-30b-a3b-instruct-2507",
+    "id": "X3HfncZtnLKUPoUuRc9YsR",
+    "score": "0.5561868686868687",
+    "registry_no": null,
+    "epoch_release_date": "2025-07-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Qwen3-30B-A3B_none",
+    "id": "DGSmhVxWsi7chsuKS64VLg",
+    "score": "0.5037878787878788",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Qwen3-30B-A3B",
+    "id": "BnX67AoZzgVbHgaM8F8Brz",
+    "score": "0.6167929292929293",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen2.5-7b-instruct",
+    "id": "6jkd5nJzspGZJtvZynZZTD",
+    "score": "0.3547979797979798",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-19",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-small-3.1-2503",
+    "id": "DvbGrBaybHM3UhJwWhE3LR",
+    "score": "0.41919191919191917",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-small-3-2501",
+    "id": "YJPwhEJa6qQWB23HQjByxt",
+    "score": "0.47285353535353536",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-30",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "magistral-small-2509",
+    "id": "3UbYVQELDHAcQgu7sTTnRf",
+    "score": "0.476010101010101",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.2-1B-Instruct",
+    "id": "FGEsLTxzZ7fE9aq7DhdqZb",
+    "score": "0.23926767676767677",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-4.7-flash_none",
+    "id": "GSde7u2Mb6GZGpubJjjPam",
+    "score": "0.4513888888888889",
+    "registry_no": null,
+    "epoch_release_date": "",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-4.7-flash",
+    "id": "GL7htq7XRnbzqpAVK5f862",
+    "score": "0.6054292929292929",
+    "registry_no": null,
+    "epoch_release_date": "",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-6-astra_max",
+    "id": "3h8STJpG2VzY9LiBUzwotv",
+    "score": "0.9577020202020202",
+    "registry_no": "10005",
+    "epoch_release_date": "2026-09-03",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "granite-4.0-1b",
+    "id": "oWiE4CniV7k5adL5wDh5r8",
+    "score": "0.2398989898989899",
+    "registry_no": null,
+    "epoch_release_date": "2025-10-28",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-35b-a3b_none",
+    "id": "KKm5DbPUgXo88eYr64g4SK",
+    "score": "0.8118686868686869",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-35b-a3b",
+    "id": "RWjuCuVGvaRd4vDjJJ6aP2",
+    "score": "0.8345959595959596",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-4b-instruct-2507",
+    "id": "VhQBa9AViRt2UKSNpEAyjN",
+    "score": "0.4583333333333333",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-4b_none",
+    "id": "SLJyD8yew4TxcmprJfVvuE",
+    "score": "0.4356060606060606",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-4b",
+    "id": "G3dinPvwrci2Nu3m9pby2i",
+    "score": "0.5233585858585859",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Qwen3-32B",
+    "id": "Ffoxqm7YsZr3FimCGsGAJv",
+    "score": "0.6571969696969697",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-14b_none",
+    "id": "GRQV9Q8gHoHnSEPWofiQuq",
+    "score": "0.5340909090909091",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-14b",
+    "id": "XGK9DjJHHVWr2LyT298ooL",
+    "score": "0.6376262626262627",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-1.7b_none",
+    "id": "GdfzaHmiZht2DKPZDtQAET",
+    "score": "0.3061868686868687",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-1.7b",
+    "id": "F3CtjUceBrMi9iYmjULx7J",
+    "score": "0.380050505050505",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-small-3.2-2506",
+    "id": "V2CVKXcEdLnEXmppjUEB9M",
+    "score": "0.49053030303030304",
+    "registry_no": null,
+    "epoch_release_date": "2025-06-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "granite-4.0-350m",
+    "id": "F6xZSehzKjpybEh8JkGwni",
+    "score": "0.11237373737373738",
+    "registry_no": null,
+    "epoch_release_date": "2025-10-28",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-3-4b-it",
+    "id": "McJyXLHBzx5VjAqXjmrrsb",
+    "score": "0.23232323232323232",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-3-1b-it",
+    "id": "Pc6CyTEYKbcdDUDKzGZnS9",
+    "score": "0.1994949494949495",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-3-12b-it",
+    "id": "KfQKr2ibCFMx5xBELoiM3Y",
+    "score": "0.39457070707070707",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-R1-Distill-Qwen-32B",
+    "id": "dwyb2yzFewGT6w6oFdVMAc",
+    "score": "0.6414141414141414",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-R1-Distill-Qwen-1.5B",
+    "id": "ESnXA8LqMqhjcsoWQaMLVQ",
+    "score": "0.33585858585858586",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-r1-0528-qwen3-8b",
+    "id": "dszRh7ELyCEukWnwYnUxMp",
+    "score": "0.0928030303030303",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-28",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "QwQ-32B",
+    "id": "PUXMxQiRY6XaG6NjwsEDLy",
+    "score": "0.6534090909090909",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.1-8B-Instruct",
+    "id": "fxwRTtt8bLV4DNutwtMEox",
+    "score": "0.26957070707070707",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-9B_none",
+    "id": "AczFCvkWR5SmdbV7eXruqj",
+    "score": "0.7891414141414141",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-9B",
+    "id": "o6migB5WP27uLr9nUWpCiM",
+    "score": "0.7897727272727273",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-8b_none",
+    "id": "LcttjHHzTyAW6MqNE29xiK",
+    "score": "0.47474747474747475",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-28",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-8b",
+    "id": "jRiWmBxtBAyiXiRBRMY8wX",
+    "score": "0.5675505050505051",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-28",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-3-27b-it",
+    "id": "jdFH2zZdssYKDVJQPKXvNB",
+    "score": "0.4772727272727273",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-oss-20b_medium",
+    "id": "GEwyLqZT93Hp55fdtHrJhm",
+    "score": "0.6079545454545454",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-oss-20b_low",
+    "id": "DCJQMqipndGxwMXe8BDGeg",
+    "score": "0.5315656565656566",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5.3-flash_max",
+    "id": "Jvt5BNr4ERbE9QGgMcEbmT",
+    "score": "0.9015151515151515",
+    "registry_no": "150006",
+    "epoch_release_date": "2026-08-20",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5.3_max",
+    "id": "dLDBahYBTGRNjbsXA5pyr3",
+    "score": "0.9090909090909091",
+    "registry_no": "150005",
+    "epoch_release_date": "2026-08-14",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-v4-pro-0813_max",
+    "id": "nEJGtXGN588zynPkynZkxz",
+    "score": "0.9166666666666666",
+    "registry_no": null,
+    "epoch_release_date": "2026-08-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.7-flash_high",
+    "id": "XyVL3VffJ6UboY97vxpohL",
+    "score": "0.9482323232323232",
+    "registry_no": "30010",
+    "epoch_release_date": "2026-08-13",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "inkling-small_xhigh",
+    "id": "jTHw5SET8usd7emYPjEDjS",
+    "score": "0.88510101010101",
+    "registry_no": "160002",
+    "epoch_release_date": "2026-07-15",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4.6_xhigh",
+    "id": "9YJf2nviwjM6WVhw8qeJta",
+    "score": "0.9318181818181818",
+    "registry_no": "40002",
+    "epoch_release_date": "2026-08-12",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4.6_high",
+    "id": "hnP6Z88x8bPEBRZ2PW6kps",
+    "score": "0.9400252525252525",
+    "registry_no": "40002",
+    "epoch_release_date": "2026-08-12",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "nemotron-3-ultra",
+    "id": "bpZy8tAbh7UV6A6U7XZtBg",
+    "score": "0.8535353535353535",
+    "registry_no": "60003",
+    "epoch_release_date": "2026-06-04",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "MiniMax-M3_none",
+    "id": "KM4G49tQZB8ce67RxYGyMy",
+    "score": "0.8131313131313131",
+    "registry_no": "140003",
+    "epoch_release_date": "2026-06-01",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "MiniMax-M3",
+    "id": "hDESmyGFrbZDomjff3rqzD",
+    "score": "0.9090909090909091",
+    "registry_no": "140003",
+    "epoch_release_date": "2026-06-01",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5.2_none",
+    "id": "YDQJAMgMjLaikPkeVDbAjr",
+    "score": "0.7121212121212122",
+    "registry_no": "150004",
+    "epoch_release_date": "2026-06-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5.2_low",
+    "id": "SB6Qj6rCBDk8jZmFcCTzWc",
+    "score": "0.8787878787878788",
+    "registry_no": "150004",
+    "epoch_release_date": "2026-06-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5.1",
+    "id": "CBbeMKRRSeRsXnvSfn7Png",
+    "score": "0.898989898989899",
+    "registry_no": "150003",
+    "epoch_release_date": "2026-04-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-mini-2026-03-17_xhigh",
+    "id": "gKB2rCD7mHzFN2MCt2YCni",
+    "score": "0.8686868686868687",
+    "registry_no": "10021",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-sol_none",
+    "id": "DDfYPyKQW7vgDtGgkwcKSi",
+    "score": "0.8282828282828283",
+    "registry_no": "10010",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.5_none",
+    "id": "KesKa5EXtFG7H4UMBFzgCh",
+    "score": "0.7727272727272727",
+    "registry_no": "10008",
+    "epoch_release_date": "2026-04-23",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "kimi-k3_low",
+    "id": "mvNb3hNgSZ2gS6jHMtvCdk",
+    "score": "0.8484848484848485",
+    "registry_no": "120003",
+    "epoch_release_date": "2026-07-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "kimi-k3_high",
+    "id": "AoAD5uVtgVDnXmwA7STuno",
+    "score": "0.9191919191919192",
+    "registry_no": "120003",
+    "epoch_release_date": "2026-07-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-terra_none",
+    "id": "F7v3JtKFb27j2YVmsndLM5",
+    "score": "0.7727272727272727",
+    "registry_no": "10011",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-mini-2026-03-17_none",
+    "id": "Qyz2Qt5x4P2XwB3w4h4jFR",
+    "score": "0.6414141414141414",
+    "registry_no": "10021",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-max-preview",
+    "id": "Jv2hJvjpvA8xJW3Bzv7bfw",
+    "score": "0.8737373737373737",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-sol_low",
+    "id": "6cmgkNAQZekBr6e6rVdLe9",
+    "score": "0.898989898989899",
+    "registry_no": "10010",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.7-max",
+    "id": "W6mTanyjvXhasFBzHukv4S",
+    "score": "0.9090909090909091",
+    "registry_no": "130006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o3-2025-04-16_medium",
+    "id": "TBYA7JWneLUCy9kyktFBbt",
+    "score": "0.8080808080808081",
+    "registry_no": "10003",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.1-2025-11-13_none",
+    "id": "UT5fVL4EGvSTZBKMTPy9YN",
+    "score": "0.6666666666666666",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "kimi-k2.7-code",
+    "id": "XneEig6pACkAWeekvgCwNk",
+    "score": "0.8787878787878788",
+    "registry_no": null,
+    "epoch_release_date": "2026-06-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-luna_none",
+    "id": "bDKKx7zTdW5WwMCfwqsLi4",
+    "score": "0.6363636363636364",
+    "registry_no": "10009",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-terra_low",
+    "id": "JcuoAWhcnngPEZBPmiUyLF",
+    "score": "0.8737373737373737",
+    "registry_no": "10011",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-plus",
+    "id": "f6ZdMtRpdfskGbrBCzrKSn",
+    "score": "0.8838383838383839",
+    "registry_no": "130004",
+    "epoch_release_date": "2026-03-31",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o4-mini-2025-04-16_medium",
+    "id": "noAGevebNp5W5yAnmbEYaz",
+    "score": "0.7777777777777778",
+    "registry_no": "10004",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-27b",
+    "id": "buLf8Ne29xmzMZBRQkvrQG",
+    "score": "0.8585858585858586",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-22",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-27b_none",
+    "id": "WeP7Q27N5PzxSgg4ybgijX",
+    "score": "0.8484848484848485",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-22",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-397b-a17b",
+    "id": "gZMFRbVKnBmcnZU4YqqKMN",
+    "score": "0.8585858585858586",
+    "registry_no": "130003",
+    "epoch_release_date": "2026-02-13",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-397b-a17b_none",
+    "id": "bXrmQqzF9sXbuZfRrSc7NP",
+    "score": "0.8636363636363636",
+    "registry_no": "130003",
+    "epoch_release_date": "2026-02-13",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-plus",
+    "id": "mGXYSUNCMisvaRzhQp6g2L",
+    "score": "0.8484848484848485",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-16",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.6-flash_minimal",
+    "id": "aPmR8fV49N98a6NVKpASAf",
+    "score": "0.8585858585858586",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-21",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-35b-a3b",
+    "id": "EWAyxFsRUvuu4NpmmLqWkn",
+    "score": "0.8383838383838383",
+    "registry_no": "130005",
+    "epoch_release_date": "2026-04-14",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-35b-a3b_none",
+    "id": "9kErpmgQ42wTvgJaFn478v",
+    "score": "0.8484848484848485",
+    "registry_no": "130005",
+    "epoch_release_date": "2026-04-14",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.6-flash",
+    "id": "H2FvRXagQRQmiNa7WrNMU2",
+    "score": "0.8333333333333334",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-luna_low",
+    "id": "nW39ZzuDQ3xTAGVoEfFG95",
+    "score": "0.8232323232323232",
+    "registry_no": "10009",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.7-plus",
+    "id": "URoWjw9Htc6QPwABVcrybw",
+    "score": "0.8787878787878788",
+    "registry_no": "130007",
+    "epoch_release_date": "2026-06-02",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.7-plus_none",
+    "id": "BWz8uig4QyqPtke59pM88z",
+    "score": "0.8181818181818182",
+    "registry_no": "130007",
+    "epoch_release_date": "2026-06-02",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.7-flash",
+    "id": "i6i3gQf3ng2aAipvowPpws",
+    "score": "0.8232323232323232",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.7-flash_none",
+    "id": "Yhds8GYkCXWgRQhuLiURua",
+    "score": "0.8080808080808081",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-nano-2026-03-17_none",
+    "id": "gLewKMc7ttCD2moUrgAyYX",
+    "score": "0.5555555555555556",
+    "registry_no": "10022",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.5-flash",
+    "id": "S7wbot7JR53BAjM8F9gaws",
+    "score": "0.8232323232323232",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-mini-2025-08-07_minimal",
+    "id": "hYSstHWNUNwYoZdmZpYQqK",
+    "score": "0.7171717171717171",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-07",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-nano-2026-03-17_low",
+    "id": "Nq7w5iKALDSuT5oQdn5m8f",
+    "score": "0.7222222222222222",
+    "registry_no": "10022",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-4-31b-it_minimal",
+    "id": "P5L8qbXo42vTvbU3UvTNjk",
+    "score": "0.7575757575757576",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-02",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-4-26b-a4b-it_minimal",
+    "id": "Usx9KaiXvHZU4qrzgc4sLg",
+    "score": "0.7323232323232324",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-02",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-v4-pro_none",
+    "id": "FtGueFbnFnKBAuLmEEufFg",
+    "score": "0.7323232323232324",
+    "registry_no": "110002",
+    "epoch_release_date": "2026-04-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-v4-pro_high",
+    "id": "TPdRwHTJtaJYSu2Cxc5Czn",
+    "score": "0.9090909090909091",
+    "registry_no": "110002",
+    "epoch_release_date": "2026-04-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-6_max",
+    "id": "JcQMgXdZKU54u52B8TGQKp",
+    "score": "0.8838383838383839",
+    "registry_no": "20008",
+    "epoch_release_date": "2026-02-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-oss-20b_high",
+    "id": "hYATFPeUnMq7Std2nLUVAJ",
+    "score": "0.4595959595959596",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.6-flash_low",
+    "id": "JoraLb9y55QXpMg4Rrmr5x",
+    "score": "0.8636363636363636",
+    "registry_no": "30007",
+    "epoch_release_date": "2026-07-21",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.5-flash-lite_low",
+    "id": "dgSJTFQ4UtuQKEhB9ss6K7",
+    "score": "0.7575757575757576",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-21",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.5-flash-lite_minimal",
+    "id": "7aAKcnsCXoSumfAu8mr2un",
+    "score": "0.7424242424242424",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-21",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.5-flash-lite_high",
+    "id": "chbh6XstiqtUa5W9zuyfjS",
+    "score": "0.8333333333333334",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-21",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.5-flash_low",
+    "id": "eiTYduCDNq3HgwTg4ZhEw6",
+    "score": "0.8888888888888888",
+    "registry_no": "30006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.1-pro-preview_high",
+    "id": "BgmrBFsbsaD8rNpebv49Da",
+    "score": "0.9444444444444444",
+    "registry_no": "30005",
+    "epoch_release_date": "2026-02-19",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.1-flash-lite_minimal",
+    "id": "CmHy8cVECGkvQTwakfjRo2",
+    "score": "0.7373737373737373",
+    "registry_no": null,
+    "epoch_release_date": "2026-03-03",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.1-flash-lite_high",
+    "id": "nE4hmJo3QV6X5jeGWAeAze",
+    "score": "0.8181818181818182",
+    "registry_no": null,
+    "epoch_release_date": "2026-03-03",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.1-flash-lite_low",
+    "id": "99ys2jgQiPQ5UwrqnazfqA",
+    "score": "0.7424242424242424",
+    "registry_no": null,
+    "epoch_release_date": "2026-03-03",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3-flash-preview_high",
+    "id": "gVdraDT3pXmaExP9VbqME4",
+    "score": "0.8939393939393939",
+    "registry_no": "30009",
+    "epoch_release_date": "2025-12-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-5_max",
+    "id": "FNXAt76ZUS3sWhQDFMga7U",
+    "score": "0.803030303030303",
+    "registry_no": "20013",
+    "epoch_release_date": "2026-06-30",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-6_max",
+    "id": "SEePRKRcv8oqn5HpD2KFxB",
+    "score": "0.7878787878787878",
+    "registry_no": "20009",
+    "epoch_release_date": "2026-02-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-5",
+    "id": "mLmUnBuX6DYKtb6x46GteM",
+    "score": "0.9292929292929293",
+    "registry_no": "20014",
+    "epoch_release_date": "2026-07-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-5_low",
+    "id": "WfaJS4L7Xdz5ZBXgJMbRGb",
+    "score": "0.8787878787878788",
+    "registry_no": "20014",
+    "epoch_release_date": "2026-07-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-8_none",
+    "id": "ckbZdkrXPwbFdjn6bmUQsi",
+    "score": "0.8535353535353535",
+    "registry_no": "20011",
+    "epoch_release_date": "2026-05-28",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-8_low",
+    "id": "GThtce6GAmRAS8srQyGQoA",
+    "score": "0.8838383838383839",
+    "registry_no": "20011",
+    "epoch_release_date": "2026-05-28",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-7_max",
+    "id": "Ju7pUkkwYVj6ugi9Ri5Jjp",
+    "score": "0.8636363636363636",
+    "registry_no": "20010",
+    "epoch_release_date": "2026-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-fable-5_max",
+    "id": "S5pm7ctk9zgPfbyHrbD9AV",
+    "score": "0.8585858585858586",
+    "registry_no": "20012",
+    "epoch_release_date": "2026-06-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-fable-5_low",
+    "id": "U5PsUdX2ak4kJ2hgnQkWnX",
+    "score": "0.7878787878787878",
+    "registry_no": "20012",
+    "epoch_release_date": "2026-06-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-fable-5_high",
+    "id": "d23hYvSNGFo7rniLFyBWiu",
+    "score": "0.8333333333333334",
+    "registry_no": "20012",
+    "epoch_release_date": "2026-06-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "magistral-small-2506",
+    "id": "dwGLob8Vhrwx4Wn376jVmt",
+    "score": "0.5606060606060606",
+    "registry_no": null,
+    "epoch_release_date": "2025-06-10",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Inkling_xhigh",
+    "id": "dfmiZmjAcNkLuAJL4z65eb",
+    "score": "0.8825757575757576",
+    "registry_no": "160001",
+    "epoch_release_date": "2026-07-15",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3.8-max_xhigh",
+    "id": "TEVNDC9QXBh7PQvX9kHZip",
+    "score": "0.9267676767676768",
+    "registry_no": "130008",
+    "epoch_release_date": "2026-08-02",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.5-instant",
+    "id": "WPVhgi8NT9grAT7kfipT9G",
+    "score": "0.8251262626262627",
+    "registry_no": null,
+    "epoch_release_date": "2026-05-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-v4-flash-0731_max",
+    "id": "EDFusDaaFkh5n2MqKNxMBD",
+    "score": "0.9103535353535354",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.6-flash_high",
+    "id": "86SY5JbPB49xXhHFQW6tHu",
+    "score": "0.9412878787878788",
+    "registry_no": "30007",
+    "epoch_release_date": "2026-07-21",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-5_max",
+    "id": "D3mtasTumfvjR4fjmnHWRy",
+    "score": "0.9387626262626263",
+    "registry_no": "20014",
+    "epoch_release_date": "2026-07-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o1-2024-12-17_low",
+    "id": "hP6P5e9zuHPToaQTTQC9A2",
+    "score": "0.7424242424242424",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-2025-08-07_minimal",
+    "id": "n4wyt7wHjhDdjrGacE9smk",
+    "score": "0.7171717171717171",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-07",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o3-mini-2025-01-31_low",
+    "id": "hJf7Hxg4tgdftQ2QDNHMJA",
+    "score": "0.6818181818181818",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "kimi-k3_max",
+    "id": "B8MaPUe3EYwUZASsNqE7C9",
+    "score": "0.9311868686868687",
+    "registry_no": "120003",
+    "epoch_release_date": "2026-07-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-chat",
+    "id": "6osoAGM4euiAAksriYyLtj",
+    "score": "0.7121212121212122",
+    "registry_no": null,
+    "epoch_release_date": "2025-12-01",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o3-2025-04-16_low",
+    "id": "AZf6N4kygJGHPsSUkYtCba",
+    "score": "0.797979797979798",
+    "registry_no": "10003",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-2026-03-05_medium",
+    "id": "ManJk43Kf9VuXowNqoDrov",
+    "score": "0.8888888888888888",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-2026-03-05_none",
+    "id": "LaBuzZExRqocD4FET6yx26",
+    "score": "0.7474747474747475",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-2026-03-05_high",
+    "id": "FbhcT8NnJUntcyNGubJXY6",
+    "score": "0.898989898989899",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-2026-03-05_low",
+    "id": "aYgDc2iSDpmHkQfu7YjCHc",
+    "score": "0.8484848484848485",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.5-flash_minimal",
+    "id": "QDZRoAVaEDtdS6nECEeE35",
+    "score": "0.8636363636363636",
+    "registry_no": null,
+    "epoch_release_date": "2026-05-19",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-nano-2025-08-07_low",
+    "id": "mNZ34pXP8JN779JoHnjNQc",
+    "score": "0.5757575757575758",
+    "registry_no": "10020",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-6_high",
+    "id": "DmdKPD9Z9RXwYyATAoG4Uw",
+    "score": "0.8333333333333334",
+    "registry_no": "20009",
+    "epoch_release_date": "2026-02-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-nano-2025-08-07_minimal",
+    "id": "hp4x7bhBYhkQqZoZFf4dTZ",
+    "score": "0.48484848484848486",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-07",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.2-2025-12-11_none",
+    "id": "4sPs53wmM9bvN8JXzsiNCk",
+    "score": "0.7323232323232324",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-6_medium",
+    "id": "e8MXnAM8HMF8eEzYtYA7xv",
+    "score": "0.8333333333333334",
+    "registry_no": "20009",
+    "epoch_release_date": "2026-02-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4.20-0309-reasoning",
+    "id": "STxFZiSPAPScUuENvXBWLc",
+    "score": "0.8933080808080808",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o4-mini-2025-04-16_low",
+    "id": "XwRFKnuHv5qdUp9m5uTAEb",
+    "score": "0.7525252525252525",
+    "registry_no": "10004",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-terra_max",
+    "id": "4bLcFNu5zF6YuZf3qVKoHE",
+    "score": "0.9330808080808081",
+    "registry_no": "10011",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-luna_max",
+    "id": "LWkDtkmd3TNmLzMhfZD5HW",
+    "score": "0.9160353535353535",
+    "registry_no": "10009",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.6-sol_max",
+    "id": "nuKCgZReCBsXKCkNj9bK37",
+    "score": "0.9349747474747475",
+    "registry_no": "10010",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4.5_high",
+    "id": "9kSgmUd9vh4CBXz3tJhctN",
+    "score": "0.9343434343434344",
+    "registry_no": "40001",
+    "epoch_release_date": "2026-07-08",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-5_xhigh",
+    "id": "HhiYxEx3Bf8YDPUh34K4DC",
+    "score": "0.9053030303030303",
+    "registry_no": "20013",
+    "epoch_release_date": "2026-06-30",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5.2_max",
+    "id": "c5kpB4axzmygRywWqBKFmv",
+    "score": "0.9185606060606061",
+    "registry_no": "150004",
+    "epoch_release_date": "2026-06-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4.3_high",
+    "id": "Vw7spGUnJyf3vuzSjTcj2F",
+    "score": "0.8882575757575758",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-v4-pro_max",
+    "id": "LuZUnhD5rBLjRw36DaqfvZ",
+    "score": "0.8964646464646465",
+    "registry_no": "110002",
+    "epoch_release_date": "2026-04-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-8_max",
+    "id": "dqgqP2uEPswfECCVj2Kbr9",
+    "score": "0.9103535353535354",
+    "registry_no": "20011",
+    "epoch_release_date": "2026-05-28",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.5-flash_high",
+    "id": "dYYtcwENFRtm9jZTDA2p9C",
+    "score": "0.928030303030303",
+    "registry_no": "30006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.5_low",
+    "id": "2CdomqtBVz2it7a2Zx2G2t",
+    "score": "0.9065656565656566",
+    "registry_no": "10008",
+    "epoch_release_date": "2026-04-23",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "kimi-k2.6",
+    "id": "LjgJoDosTLkiGVT59smA7q",
+    "score": "0.9078282828282829",
+    "registry_no": "120002",
+    "epoch_release_date": "2026-04-20",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.5-pro-pre-release_xhigh",
+    "id": "cBmhJzrC3SkfZ7uVgGVYZX",
+    "score": "0.9392135642135643",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.5-pre-release_xhigh",
+    "id": "FUv4EUwR78nAsdGbiwiLEr",
+    "score": "0.9400252525252525",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-7_xhigh",
+    "id": "VJezHrJ5YPCbpui8pZgcJg",
+    "score": "0.9015151515151515",
+    "registry_no": "20010",
+    "epoch_release_date": "2026-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-mini-2026-03-17_high",
+    "id": "AQF46S9hBhosKPEMy3fyB9",
+    "score": "0.8358585858585859",
+    "registry_no": "10021",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-nano-2026-03-17_high",
+    "id": "fZB3qGSohAVYzN97mniuUp",
+    "score": "0.7847",
+    "registry_no": "10022",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "muse-spark",
+    "id": "muse-spark-pre-release-gpqa",
+    "score": "0.898",
+    "registry_no": "80001",
+    "epoch_release_date": "2026-04-08",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-pro-2026-03-05_xhigh",
+    "id": "gpt-5-4-pro-gpqa-cloud-run",
+    "score": "0.946",
+    "registry_no": null,
+    "epoch_release_date": "2026-03-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.4-2026-03-05_xhigh",
+    "id": "fFatyce8UvpN7ZivdmrhAy",
+    "score": "0.933",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-6_32K",
+    "id": "58eQmyCfPa3FufhXJFvAL2",
+    "score": "0.8737373737373737",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-17",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3.1-pro-preview",
+    "id": "kR9F3oHBCnwQW4AiTPKwpd",
+    "score": "0.941",
+    "registry_no": "30005",
+    "epoch_release_date": "2026-02-19",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-5",
+    "id": "n4hyz75SVpwPEisKVVjvNg",
+    "score": "0.8781725888324873",
+    "registry_no": "150002",
+    "epoch_release_date": "2026-02-11",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-6_32K",
+    "id": "DiXCMhdfhcjaCUSzYWgACy",
+    "score": "0.9053030303030303",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-05",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-6_64K",
+    "id": "eB9e2mtd5nRwqdFyLEsz6k",
+    "score": "0.8876262626262627",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-05",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "fireworks/kimi-k2p5",
+    "id": "FmqGUq87N4JcuSbo6Uu3U5",
+    "score": "0.876",
+    "registry_no": "120001",
+    "epoch_release_date": "2026-01-27",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "glm-4.7",
+    "id": "6phXzd4aCbnBUSQmBsaywa",
+    "score": "0.8333333333333334",
+    "registry_no": "150001",
+    "epoch_release_date": "2025-12-22",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3-flash-preview",
+    "id": "oAu9CZSNPZgwiwKnoNpM8Q",
+    "score": "0.8320707070707071",
+    "registry_no": "30009",
+    "epoch_release_date": "2025-12-17",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-reasoner",
+    "id": "CDdjbqiYYPtEBGoZLMPM3n",
+    "score": "0.8342352092352093",
+    "registry_no": null,
+    "epoch_release_date": "2025-12-01",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.2-2025-12-11_xhigh",
+    "id": "Ejo6Fy7XYxUDcCwbejfcYX",
+    "score": "0.914",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Qwen3-235B-A22B-Thinking-2507",
+    "id": "gu39ndv9QxWP3NRxSUJRaX",
+    "score": "0.8005050505050505",
+    "registry_no": null,
+    "epoch_release_date": "2025-07-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "openai/gpt-oss-120b_high",
+    "id": "LC5Rhog6wt2PT84CtJ483h",
+    "score": "0.7575757575757576",
+    "registry_no": "15001",
+    "epoch_release_date": "2025-08-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.2-2025-12-11_high",
+    "id": "3Q6osT8EYezayG7yfxkSpr",
+    "score": "0.8819444444444444",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.2-2025-12-11_medium",
+    "id": "MuhtxxvALeZZ37cSG5CVcc",
+    "score": "0.8787878787878788",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.2-2025-12-11_low",
+    "id": "oD4Jpoi75KWChqTPDaN9aB",
+    "score": "0.827020202020202",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-5-20251101_16K",
+    "id": "cXkPywkhy3NnW992ri73yG",
+    "score": "0.8547979797979798",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-24",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-5-20251101_32K",
+    "id": "Kwwo3UFcPDk6iLAeSeeRaa",
+    "score": "0.860479797979798",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-24",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-5-20251101",
+    "id": "mEkZaYpiurQ6TEMAALK3su",
+    "score": "0.8068181818181818",
+    "registry_no": "20007",
+    "epoch_release_date": "2025-11-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-3-pro-preview",
+    "id": "Cg54udQGcTCnfDGX2qePLZ",
+    "score": "0.9261363636363636",
+    "registry_no": "30008",
+    "epoch_release_date": "2025-11-18",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.1-2025-11-13_medium",
+    "id": "V3YQtSEnQ3TPZEPPgkCKQM",
+    "score": "0.8503787878787878",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.5-pro",
+    "id": "cqUZ6gcq2HBnShFRWvKjGr",
+    "score": "0.8529040404040404",
+    "registry_no": null,
+    "epoch_release_date": "2025-06-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5.1-2025-11-13_high",
+    "id": "CSVtMksEVjBNsGJGjW4GcQ",
+    "score": "0.8762626262626263",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "kimi-k2-thinking-turbo",
+    "id": "muGecFpAg9wHd6gexWJ99L",
+    "score": "0.8421717171717171",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-nano-2025-08-07_high",
+    "id": "2pSDjMSGDh4HsAxkqUuNQP",
+    "score": "0.6944444444444444",
+    "registry_no": "10020",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-mini-2025-08-07_high",
+    "id": "jP8EyLtPFsakgnsHe2oJM6",
+    "score": "0.75",
+    "registry_no": "10019",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-2025-08-07_high",
+    "id": "9nPyNrZxwtoT7eS4DZbQF6",
+    "score": "0.8617424242424242",
+    "registry_no": "10018",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-5-20250929_16K",
+    "id": "LkVuUxvsHNzpcg3sUiH7f3",
+    "score": "0.7878787878787878",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-29",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-5-20250929_59K",
+    "id": "XaGuWDxPtqVvyxqdMncKFj",
+    "score": "0.8232323232323232",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-29",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4-0314",
+    "id": "FkbLkW5ed8rnZGFJMevDFn",
+    "score": "0.3573232323232323",
+    "registry_no": null,
+    "epoch_release_date": "2023-03-14",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-haiku-4-5-20251001_32K",
+    "id": "GEaAdb9UmoUFbEtBx7WzAR",
+    "score": "0.7121212121212122",
+    "registry_no": null,
+    "epoch_release_date": "2025-10-15",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-5-20250929_32K",
+    "id": "ii6JE9j57eSbuswEsJArTa",
+    "score": "0.817258883248731",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-29",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-haiku-4-5-20251001",
+    "id": "cgnopvpB6mzsfb9yGnYK2z",
+    "score": "0.6047979797979798",
+    "registry_no": "20006",
+    "epoch_release_date": "2025-10-15",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-max-2025-09-23",
+    "id": "46RCssznDADYeg8MuSgvsj",
+    "score": "0.726010101010101",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-5-20250929",
+    "id": "fsZmzw8jjyUgMQGwxodBwN",
+    "score": "0.7373737373737373",
+    "registry_no": "20005",
+    "epoch_release_date": "2025-09-29",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-mini-2025-08-07_medium",
+    "id": "CFNzodoTSVVVgp9PUXftUP",
+    "score": "0.7165404040404041",
+    "registry_no": "10019",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-2025-08-07_medium",
+    "id": "YQCwJRoGbGAqNCQoaL6cjk",
+    "score": "0.8535353535353535",
+    "registry_no": "10018",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-5-nano-2025-08-07_medium",
+    "id": "ELAxkvAigvEVdMmhxiaMiy",
+    "score": "0.6742424242424242",
+    "registry_no": "10020",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-1-20250805_27K",
+    "id": "3obcsGCfuwYeEm9wRyqzPg",
+    "score": "0.7676767676767676",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-05",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-1-20250805_16K",
+    "id": "erLgyKQs2mg2memE9SJvK5",
+    "score": "0.7727272727272727",
+    "registry_no": null,
+    "epoch_release_date": "2025-08-05",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-1-20250805",
+    "id": "j62bkFDjBSeFyVpnGzuzg4",
+    "score": "0.7323232323232324",
+    "registry_no": "20017",
+    "epoch_release_date": "2025-08-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.5-pro-preview-06-05",
+    "id": "Q4qTzHnjLyiCCRvNpXioUq",
+    "score": "0.8484848484848485",
+    "registry_no": null,
+    "epoch_release_date": "2025-06-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen3-235b-a22b",
+    "id": "agebmxGseTvmvN4AHN8i4m",
+    "score": "0.7070707070707071",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.5-pro-preview-05-06",
+    "id": "TT66gGiVoeYLGQMCESPrEG",
+    "score": "0.6666666666666666",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-R1-0528",
+    "id": "LiRiryJsGb3h5UuxX8bmJv",
+    "score": "0.7632575757575758",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-28",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-7-sonnet-20250219_64K",
+    "id": "2t26VSNdsAE5pefQEMP25x",
+    "score": "0.7973484848484849",
+    "registry_no": null,
+    "epoch_release_date": "2025-02-24",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-3-mini-beta_high",
+    "id": "JFZMWFVGNi5R5TdZrvQUFw",
+    "score": "0.7550505050505051",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-09",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-R1",
+    "id": "fFGyQR2mfDufvrSV2rzWyV",
+    "score": "0.7171717171717171",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-20250514_59K",
+    "id": "J9wjcQqKJ7hCSYnnoa5E9i",
+    "score": "0.7918781725888325",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-22",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-3-beta",
+    "id": "FQ8Ykq4JWRSXnyF9rbmLc7",
+    "score": "0.7575757575757576",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-09",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-20250514_32K",
+    "id": "8hGbWtbpUjAQpebkKQfSi7",
+    "score": "0.7828282828282829",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-22",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-20250514_16K",
+    "id": "CtxFusPxCraL3EeRJu2c5k",
+    "score": "0.7626262626262627",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-22",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-20250514_16K",
+    "id": "PPLoBnbKQ9CEYZNSk3E7LE",
+    "score": "0.7575757575757576",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-22",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-sonnet-4-20250514",
+    "id": "ZF4eejw7J2KrcoNWd6hUbU",
+    "score": "0.6666666666666666",
+    "registry_no": "20003",
+    "epoch_release_date": "2025-05-22",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-opus-4-20250514",
+    "id": "EnjJ8bGi9vRNNQFzfkLCkQ",
+    "score": "0.6919191919191919",
+    "registry_no": "20002",
+    "epoch_release_date": "2025-05-22",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-medium-2505",
+    "id": "FNMbfvEEm9PRnrJnrqk2PH",
+    "score": "0.5953282828282829",
+    "registry_no": null,
+    "epoch_release_date": "2025-05-07",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o4-mini-2025-04-16_high",
+    "id": "9Sgsz5XCjscuZkexf7MX9c",
+    "score": "0.7960858585858586",
+    "registry_no": "10004",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o3-2025-04-16_high",
+    "id": "evANZQ9oQTdGYbDERw7VrD",
+    "score": "0.8181818181818182",
+    "registry_no": "10003",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4.1-mini-2025-04-14",
+    "id": "dXHddeGRX7JRVa5UNfad5C",
+    "score": "0.6584595959595959",
+    "registry_no": "10016",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4.1-nano-2025-04-14",
+    "id": "azWfeFPP6zSocuQX3JYBU5",
+    "score": "0.48926767676767674",
+    "registry_no": "10017",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4.1-2025-04-14",
+    "id": "Gj8pd5gU9r4LqwDK8XZ4mL",
+    "score": "0.6691919191919192",
+    "registry_no": "10002",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwq-plus",
+    "id": "PtxHF8BH8WuNdNfDnutGBb",
+    "score": "0.6540404040404041",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-08",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-3-mini-beta_low",
+    "id": "McxfQdC5aypnD3STwZUBjH",
+    "score": "0.7626262626262627",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-09",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-4-Scout-17B-16E-Instruct",
+    "id": "MsXAXDEKP3xBKtiA7aTBBG",
+    "score": "0.5183080808080808",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-4-Maverick-17B-128E-Instruct-FP8",
+    "id": "LyHy99ubGCqBhoaksQjkiF",
+    "score": "0.6698232323232324",
+    "registry_no": null,
+    "epoch_release_date": "2025-04-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen-turbo-2024-11-01",
+    "id": "9Ke5At9bYuf56SmKJJ7Sz7",
+    "score": "0.41792929292929293",
+    "registry_no": null,
+    "epoch_release_date": "2024-11-01",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen-plus-2025-01-25",
+    "id": "QtraMoKiQRRpZc9txpFAYF",
+    "score": "0.4810606060606061",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen-max-2025-01-25",
+    "id": "GBf7rqHkGGzfX87V37F9mH",
+    "score": "0.5612373737373737",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-V3-0324",
+    "id": "VjfLwKbT6kTprYsMGcz2YT",
+    "score": "0.6761363636363636",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.5-pro-exp-03-25",
+    "id": "WKjzEQdfnBHnYeZoKeCWnB",
+    "score": "0.8383838383838383",
+    "registry_no": "30002",
+    "epoch_release_date": "2025-03-25",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-small-2503",
+    "id": "S8bBDAbucsFceirHxeEDvu",
+    "score": "0.47474747474747475",
+    "registry_no": null,
+    "epoch_release_date": "2025-03-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-5-haiku-20241022",
+    "id": "JpLxrpvthx7A75sbaHZ9Et",
+    "score": "0.3813131313131313",
+    "registry_no": null,
+    "epoch_release_date": "2024-10-22",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-1.5-flash-8b-001",
+    "id": "gFT36W4KU3wggLQ9nNCctg",
+    "score": "0.32954545454545453",
+    "registry_no": null,
+    "epoch_release_date": "2024-10-03",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-R1-Distill-Qwen-14B",
+    "id": "8UqaLobhmNJLuPGTTpeaCw",
+    "score": "0.44696969696969696",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-7-sonnet-20250219_32K",
+    "id": "iv9yfwZ9vTznxQfvJF6J7p",
+    "score": "0.7676767676767676",
+    "registry_no": null,
+    "epoch_release_date": "2025-02-24",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-R1-Distill-Llama-70B",
+    "id": "f6pnAATjxmrFJS353EjQKi",
+    "score": "0.5574494949494949",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4.5-preview-2025-02-27",
+    "id": "dodibSv7pk8GtqeMy4YLQg",
+    "score": "0.6868686868686869",
+    "registry_no": "10001",
+    "epoch_release_date": "2025-02-27",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4-turbo-2024-04-09",
+    "id": "TaCoN7eyPQEfDWXqs2MpcF",
+    "score": "0.4659090909090909",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-09",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-7-sonnet-20250219_16K",
+    "id": "Vn3Ug88CRbxEaJhLbRzAWD",
+    "score": "0.7676767676767676",
+    "registry_no": null,
+    "epoch_release_date": "2025-02-24",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-large-2411",
+    "id": "n9gpXfUzo8SbWqvrG2q4xM",
+    "score": "0.5132575757575758",
+    "registry_no": null,
+    "epoch_release_date": "2024-11-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-7-sonnet-20250219",
+    "id": "PyNEkFCfMEReodeE2oiPhh",
+    "score": "0.6603535353535354",
+    "registry_no": "20001",
+    "epoch_release_date": "2025-02-24",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o1-2024-12-17_high",
+    "id": "NAkCFiFiDSN3NXMj7HMvMS",
+    "score": "0.7676767676767676",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o1-mini-2024-09-12_high",
+    "id": "X2gKewiGPZx5DLFEddUUqW",
+    "score": "0.6237373737373737",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o3-mini-2025-01-31_high",
+    "id": "MzsTvCEEfEpzn4WvxYdJkX",
+    "score": "0.7702020202020202",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.0-pro-exp-02-05",
+    "id": "g5YE7G6DXb45EH4HxEdiht",
+    "score": "0.6565656565656566",
+    "registry_no": null,
+    "epoch_release_date": "2025-02-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.0-flash-thinking-exp-01-21",
+    "id": "ag9w2w4xa47ghZaWt5oZey",
+    "score": "0.5707070707070707",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-21",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-2.0-flash-001",
+    "id": "fbszwTApm3f28z5VA6oXBK",
+    "score": "0.6414141414141414",
+    "registry_no": "30001",
+    "epoch_release_date": "2025-02-05",
+    "status": "included"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4o-2024-11-20",
+    "id": "gULKGqAe9nG9syxmYMtkhi",
+    "score": "0.4788510101010101",
+    "registry_no": null,
+    "epoch_release_date": "2024-11-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "phi-4",
+    "id": "RAwuPRwJedy7P2KeQhEmr8",
+    "score": "0.5606060606060606",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Phi-3-medium-128k-instruct",
+    "id": "bDS2AGEf3AywbVcdDyAKZK",
+    "score": "0.2758838383838384",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o3-mini-2025-01-31_medium",
+    "id": "ehvA5nisC7GMbgbyy3Z4Et",
+    "score": "0.742739898989899",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-small-2501",
+    "id": "oDq358GfyV5Au65scERdVo",
+    "score": "0.4529671717171717",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen2.5-32b-instruct",
+    "id": "d6JihAFVqUy3u9suNt4P3L",
+    "score": "0.46085858585858586",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-1.5-flash-001",
+    "id": "Hc2ycMP6DyCZxCPjKbZFQU",
+    "score": "0.40372474747474746",
+    "registry_no": null,
+    "epoch_release_date": "2024-05-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-2.0",
+    "id": "mTa4f52zsEuxdrPy7WfQvX",
+    "score": "0.3465909090909091",
+    "registry_no": null,
+    "epoch_release_date": "2023-07-11",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-opus-20240229",
+    "id": "hTnDa4gn8RYduCEYqoNywe",
+    "score": "0.4715909090909091",
+    "registry_no": null,
+    "epoch_release_date": "2024-02-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o1-mini-2024-09-12_medium",
+    "id": "4NiUpCrLfz3oFaerkrMeBt",
+    "score": "0.5950126262626263",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4o-2024-08-06",
+    "id": "fairJpL9VekDBKxYHG9ZoG",
+    "score": "0.49210858585858586",
+    "registry_no": null,
+    "epoch_release_date": "2024-08-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o1-preview-2024-09-12",
+    "id": "7CkADTsoNbDd88uqYbqfwj",
+    "score": "0.5031565656565656",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-sonnet-20240229",
+    "id": "QLejPZXhjX6SQCQgzjNvCG",
+    "score": "0.4059343434343434",
+    "registry_no": null,
+    "epoch_release_date": "2024-02-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-5-sonnet-20241022",
+    "id": "JCCVcVLz3J4TQXSU67hMJZ",
+    "score": "0.553030303030303",
+    "registry_no": null,
+    "epoch_release_date": "2024-10-22",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4-0125-preview",
+    "id": "4j3WRhhruXrfaq9Jki3NDc",
+    "score": "0.42266414141414144",
+    "registry_no": null,
+    "epoch_release_date": "2024-01-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-2.1",
+    "id": "eMAisrJd7fAUHPfcPWXeXo",
+    "score": "0.32954545454545453",
+    "registry_no": null,
+    "epoch_release_date": "2023-11-21",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-2-27b-it",
+    "id": "ZUJxsJDpHnLXxNiDcvj22W",
+    "score": "0.3648989898989899",
+    "registry_no": null,
+    "epoch_release_date": "2024-06-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-haiku-20240307",
+    "id": "T3FWdCCWBryVjxwTcoY5bK",
+    "score": "0.3630050505050505",
+    "registry_no": null,
+    "epoch_release_date": "2024-03-07",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "claude-3-5-sonnet-20240620",
+    "id": "78Wpvp8WDByAcQRBas72cs",
+    "score": "0.5404040404040404",
+    "registry_no": null,
+    "epoch_release_date": "2024-06-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4o-2024-05-13",
+    "id": "Y59q8WbEDp2HH8oovyJCj9",
+    "score": "0.4889520202020202",
+    "registry_no": null,
+    "epoch_release_date": "2024-05-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-1.5-flash-002",
+    "id": "PCLvrs4TEBtqQqcYeU8pAG",
+    "score": "0.47316919191919193",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4-0613",
+    "id": "fu7pWqbSC4MUBdwv3GFNa5",
+    "score": "0.30650252525252525",
+    "registry_no": null,
+    "epoch_release_date": "2023-06-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemma-2-9b-it",
+    "id": "fQjoHKyUEPAuwdrBGfL8SG",
+    "score": "0.2746212121212121",
+    "registry_no": null,
+    "epoch_release_date": "2024-06-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-3.5-turbo-1106",
+    "id": "enhRcQmfN6RFB2zu7R3Uxr",
+    "score": "0.2803030303030303",
+    "registry_no": null,
+    "epoch_release_date": "2023-11-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-1.5-pro-001",
+    "id": "PKdqpKZ9tqDWyWJ7GksBWz",
+    "score": "0.4586489898989899",
+    "registry_no": null,
+    "epoch_release_date": "2024-05-14",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4-1106-preview",
+    "id": "AWewipyfSQb8hXtS8d4fNL",
+    "score": "0.4236111111111111",
+    "registry_no": null,
+    "epoch_release_date": "2023-11-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "id": "L9yfwZC3snsKZshBXTaXjc",
+    "score": "0.37720959595959597",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-1.5-pro-002",
+    "id": "9TrLEEw8TvsyugyCjwvUvD",
+    "score": "0.5722853535353535",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gpt-3.5-turbo-0125",
+    "id": "eZaQhpbhbzbo3sbKGS5Efa",
+    "score": "0.27178030303030304",
+    "registry_no": null,
+    "epoch_release_date": "2024-01-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.1-70B-Instruct",
+    "id": "MEwMcmSV32JHrsNoAq4BFL",
+    "score": "0.44191919191919193",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.1-405B-Instruct",
+    "id": "S5QYXSvQBRSbUbXSnAGbMm",
+    "score": "0.5091540404040404",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Yi-1.5-34B-Chat",
+    "id": "Jwi8JTeeTxJuJY8qidxngw",
+    "score": "0.319760101010101",
+    "registry_no": null,
+    "epoch_release_date": "2024-05-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Yi-34B-Chat",
+    "id": "WxMpEBcTf8qPFPz4BrF86B",
+    "score": "0.14741161616161616",
+    "registry_no": null,
+    "epoch_release_date": "2023-11-22",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-2-1212",
+    "id": "83DRJD4FvjwqU9eStRaNiU",
+    "score": "0.5378787878787878",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen2-72b-instruct",
+    "id": "Pex6SpYJX8ZPySncfNNy7H",
+    "score": "0.4078282828282828",
+    "registry_no": null,
+    "epoch_release_date": "2024-06-07",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen1.5-72b-chat",
+    "id": "NeqeQSxHmdUNLk9Ytpo6qo",
+    "score": "0.2881944444444444",
+    "registry_no": null,
+    "epoch_release_date": "2024-02-04",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen1.5-32b-chat",
+    "id": "9K6c9b6v9zQrQYtw827BDn",
+    "score": "0.307449494949495",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-03",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Hermes-2-Theta-Llama-3-70B",
+    "id": "DHdeZNynu4VtRp2VGkCGvd",
+    "score": "0.3746843434343434",
+    "registry_no": null,
+    "epoch_release_date": "2024-06-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-2-70b-chat-hf",
+    "id": "evPjJw9SKqq3TieSdxrSQn",
+    "score": "0.26325757575757575",
+    "registry_no": null,
+    "epoch_release_date": "2023-07-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Meta-Llama-3-70B-Instruct",
+    "id": "jrvutCoFFG4KxYtU7REdpe",
+    "score": "0.40561868686868685",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Meta-Llama-3-8B-Instruct",
+    "id": "iT3BBFWjsZk2rKHKeJDsM8",
+    "score": "0.26073232323232326",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Mistral-7B-Instruct-v0.3",
+    "id": "YbQkMPC2GtNLhxqTEhhVsa",
+    "score": "0.1518308080808081",
+    "registry_no": null,
+    "epoch_release_date": "2024-05-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "deepseek-llm-67b-chat",
+    "id": "82RTgqgiC2UuM5M37L3WWM",
+    "score": "0.24621212121212122",
+    "registry_no": null,
+    "epoch_release_date": "2023-11-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Mixtral-8x7B-Instruct-v0.1",
+    "id": "Sn2qbB2HiySe7NcG28jnyM",
+    "score": "0.3058712121212121",
+    "registry_no": null,
+    "epoch_release_date": "2023-12-11",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "qwen2.5-72b-instruct",
+    "id": "WtALgW6VSFdihDZWXRm2AZ",
+    "score": "0.4914772727272727",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-19",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "WizardLM-2-8x22B",
+    "id": "MQJA3RUjsQzSubGJiukZ7A",
+    "score": "0.43434343434343436",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-15",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "dbrx-instruct",
+    "id": "TTa3hu7PgRxHgizVreZsdJ",
+    "score": "0.32891414141414144",
+    "registry_no": null,
+    "epoch_release_date": "2024-03-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "gemini-1.0-pro-001",
+    "id": "ibpS8bs4z3wD3Hb6F3kpdV",
+    "score": "0.33964646464646464",
+    "registry_no": null,
+    "epoch_release_date": "2023-12-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "ministral-3b-2410",
+    "id": "bJV4D8SEo9zMJPEYTTXJNZ",
+    "score": "0.25252525252525254",
+    "registry_no": null,
+    "epoch_release_date": "2024-10-16",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-large-2402",
+    "id": "dDeREdDJ5bVyci3APZxzWb",
+    "score": "0.38762626262626265",
+    "registry_no": null,
+    "epoch_release_date": "2024-02-26",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "open-mixtral-8x22b",
+    "id": "ifAM3DJBdm5eU9Y2DjaEvW",
+    "score": "0.34059343434343436",
+    "registry_no": null,
+    "epoch_release_date": "2024-04-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "ministral-8b-2410",
+    "id": "DGEzZA6nvTne4MEGSuo3Tm",
+    "score": "0.27146464646464646",
+    "registry_no": null,
+    "epoch_release_date": "2024-10-16",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "mistral-large-2407",
+    "id": "ZQPNnicTuhuscJvni85PFY",
+    "score": "0.49021464646464646",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "open-mixtral-8x7b",
+    "id": "Y6KPSujFepdwqinKLf9mDF",
+    "score": "0.29829545454545453",
+    "registry_no": null,
+    "epoch_release_date": "2023-12-11",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "open-mistral-7b",
+    "id": "5XuVuHeUDekHqjUy2P8gww",
+    "score": "0.13226010101010102",
+    "registry_no": null,
+    "epoch_release_date": "2023-09-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "open-mistral-nemo-2407",
+    "id": "XCSWtbDquA7FUiWfd7kh9q",
+    "score": "0.2989267676767677",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.2-90B-Vision-Instruct",
+    "id": "9SSHEP95FYVZvHDdoHSRy3",
+    "score": "0.41035353535353536",
+    "registry_no": null,
+    "epoch_release_date": "2024-09-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.1-Tulu-3-70B-DPO",
+    "id": "5JgivNDZp2D7Lc7cpDhS28",
+    "score": "0.46275252525252525",
+    "registry_no": null,
+    "epoch_release_date": "2024-11-21",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Eurus-2-7B-PRIME",
+    "id": "RJm4u2vXF6PUmThJGzAfHE",
+    "score": "0.3390151515151515",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "Llama-3.3-70B-Instruct",
+    "id": "TxXS78Wg2pSCDbpmeJuzQn",
+    "score": "0.4744318181818182",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "o1-2024-12-17_medium",
+    "id": "Uczhz7MKLstjLkSbbGuwdN",
+    "score": "0.7575757575757576",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "DeepSeek-V3",
+    "id": "Vwo3nMA8g2gGBCyTdKFMQJ",
+    "score": "0.5653409090909091",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-26",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "gpqa_diamond.csv",
+    "model_version": "grok-4-0709",
+    "id": "A85Zfq2qguE4X9xXBweBHP",
+    "score": "0.87",
+    "registry_no": "40004",
+    "epoch_release_date": "2025-07-09",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "glm-5.2_max",
+    "id": "4AfhcmYVNrw6gM5u8CQsyy",
+    "score": "0.787",
+    "registry_no": "150004",
+    "epoch_release_date": "2026-06-16",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "qwen3.7-max",
+    "id": "83hhDhcT9UUrZ2NiUbWSUU",
+    "score": "0.7727272727272727",
+    "registry_no": "130006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "deepseek-v4-pro_max",
+    "id": "WUk3f44JhxtAJaSxi6gFZR",
+    "score": "0.7763975155279503",
+    "registry_no": "110002",
+    "epoch_release_date": "2026-04-24",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gemini-3.5-flash_high",
+    "id": "dwRzFGTghYEy4HNZajJXoc",
+    "score": "0.7933884297520661",
+    "registry_no": "30006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "qwen3.6-max-preview",
+    "id": "FkDMVLdEnJDR5PyUCT6BNQ",
+    "score": "0.7665289256198347",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "glm-5.1",
+    "id": "glm-5.1-swe-bench-frankenstein",
+    "score": "0.7417",
+    "registry_no": "150003",
+    "epoch_release_date": "2026-04-07",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "qwen3.6-plus",
+    "id": "8HV4HP9EM5KuLSwzifuLye",
+    "score": "0.5785123966942148",
+    "registry_no": "130004",
+    "epoch_release_date": "2026-03-31",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "kimi-k2.6",
+    "id": "bUPtAK7spEwvmiC8pi6afc",
+    "score": "0.7665289256198347",
+    "registry_no": "120002",
+    "epoch_release_date": "2026-04-20",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5.5-pre-release_xhigh",
+    "id": "LbhPRqUkXrs5KJ7vyT4CR7",
+    "score": "0.8057851239669421",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-23",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-opus-4-7_max",
+    "id": "nCmGWWMBip2s9AVEZNYXDX",
+    "score": "0.8347107438016529",
+    "registry_no": "20010",
+    "epoch_release_date": "2026-04-16",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5.4-2026-03-05_high",
+    "id": "i9HTMbAxcwsrTf2w2FuJ6N",
+    "score": "0.768595041322314",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5.3-codex_high",
+    "id": "6w5buMbgeEqtRoE55cLZVv",
+    "score": "0.7479338842975206",
+    "registry_no": "10006",
+    "epoch_release_date": "2026-02-05",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gemini-3.1-pro-preview-customtools",
+    "id": "8QQQWDgmmEsmQVUJWcxx4P",
+    "score": "0.756198347107438",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-19",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-sonnet-4-6",
+    "id": "KEdgiMmtJKHxgGiS82agYj",
+    "score": "0.7520661157024794",
+    "registry_no": "20009",
+    "epoch_release_date": "2026-02-17",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gemini-3-flash-preview",
+    "id": "jxoyMNmTnYirjLJN6wRNmG",
+    "score": "0.7541322314049587",
+    "registry_no": "30009",
+    "epoch_release_date": "2025-12-17",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-opus-4-6",
+    "id": "2hH2GAPUFaJR7pfVKhhicg",
+    "score": "0.7871900826446281",
+    "registry_no": "20008",
+    "epoch_release_date": "2026-02-05",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5.1-2025-11-13_high",
+    "id": "YoHtZpMNdsRE6qdj2K4Ucj",
+    "score": "0.6797520661157025",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "kimi-k2.5",
+    "id": "5wVjUb3yn6bdjPSfPEMuiZ",
+    "score": "0.737603305785124",
+    "registry_no": "120001",
+    "epoch_release_date": "2026-01-27",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5.1-2025-11-13_high",
+    "id": "G5hTYKeE5buuWzwRQK7EgS",
+    "score": "0.6590909090909091",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "glm-5",
+    "id": "hKkJEu4ueLiNWsTtrJ78PS",
+    "score": "0.7207792207792207",
+    "registry_no": "150002",
+    "epoch_release_date": "2026-02-11",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gemini-2.5-pro",
+    "id": "KL724uHFGbiXj4o5PHyLn2",
+    "score": "0.5755693581780539",
+    "registry_no": null,
+    "epoch_release_date": "2025-06-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gemini-3-pro-preview",
+    "id": "5XdYZBG5Wy8DUMRqcYv4fn",
+    "score": "0.7293388429752066",
+    "registry_no": "30008",
+    "epoch_release_date": "2025-11-18",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5.2-2025-12-11_high",
+    "id": "9owdbpnWJ5pkQQC3GWKP5L",
+    "score": "0.737603305785124",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "o3-2025-04-16_medium",
+    "id": "AKt7PcE8LQtoMWVuxwMidk",
+    "score": "0.6231884057971014",
+    "registry_no": "10003",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-opus-4-1-20250805",
+    "id": "cA6Mq67yaynLhY8F5kes3c",
+    "score": "0.7334710743801653",
+    "registry_no": "20017",
+    "epoch_release_date": "2025-08-05",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-4o-2024-11-20",
+    "id": "PncXWJm7ZCY3qv982pKoRy",
+    "score": "0.30991735537190085",
+    "registry_no": null,
+    "epoch_release_date": "2024-11-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-opus-4-6",
+    "id": "aQiAg6mt8HPHXjKcJvax2d",
+    "score": "0.756198347107438",
+    "registry_no": "20008",
+    "epoch_release_date": "2026-02-05",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-4.1-2025-04-14",
+    "id": "SheUt9cNpkSevy4r6Gsr3u",
+    "score": "0.48541666666666666",
+    "registry_no": "10002",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5-2025-08-07_high",
+    "id": "C85Bnci9xVzq5jmt8zNnbw",
+    "score": "0.7355371900826446",
+    "registry_no": "10018",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-opus-4-20250514",
+    "id": "RbcvuVChvxK6SMQbPK8iRn",
+    "score": "0.7066115702479339",
+    "registry_no": "20002",
+    "epoch_release_date": "2025-05-22",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-opus-4-5-20251101",
+    "id": "mKQKxkpGDrFHBPBYR3mBrB",
+    "score": "0.7665289256198347",
+    "registry_no": "20007",
+    "epoch_release_date": "2025-11-24",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-sonnet-4-5-20250929",
+    "id": "Lti64yMEsBWSzgEMFCSVhp",
+    "score": "0.7128099173553719",
+    "registry_no": "20005",
+    "epoch_release_date": "2025-09-29",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5-2025-08-07_medium",
+    "id": "FCCkMNVHcjLLUDeNFqTGRL",
+    "score": "0.7148760330578512",
+    "registry_no": "10018",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "claude-3-7-sonnet-20250219",
+    "id": "cnM8U6moeqrp74wnXRj2Jj",
+    "score": "0.609504132231405",
+    "registry_no": "20001",
+    "epoch_release_date": "2025-02-24",
+    "status": "included"
+  },
+  {
+    "file": "swe_bench_verified.csv",
+    "model_version": "gpt-5-mini-2025-08-07_medium",
+    "id": "7nvdQy3AwKtoay2FBvfST5",
+    "score": "0.6466942148760331",
+    "registry_no": "10019",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-6.1-sol_max",
+    "id": "dfT5VD7cQug8XW6GQHyJUF",
+    "score": "0.739",
+    "registry_no": "10015",
+    "epoch_release_date": "2026-09-29",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-5-5_max",
+    "id": "GtJ5yd3ZPQ7HVcm6Q9ssQz",
+    "score": "0.465",
+    "registry_no": "20016",
+    "epoch_release_date": "2026-09-28",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-6-luna_max",
+    "id": "HX9sRVWJtZiNvneALnVzs8",
+    "score": "0.414",
+    "registry_no": "10013",
+    "epoch_release_date": "2026-09-22",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "grok-4.7_xhigh",
+    "id": "6izDCw5ygCLZJEKPS8jV5T",
+    "score": "0.56",
+    "registry_no": "40003",
+    "epoch_release_date": "2026-09-21",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-6-sol_max",
+    "id": "donMeEKBZZdqpQsojKWJEm",
+    "score": "0.607",
+    "registry_no": "10014",
+    "epoch_release_date": "2026-09-22",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-opus-5-5_max",
+    "id": "CgLfiGcNwMPVzxr8GdNUAK",
+    "score": "0.722",
+    "registry_no": "20015",
+    "epoch_release_date": "2026-09-22",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.8-max-0902_xhigh",
+    "id": "nBcLJJomVoeg2zh5F8Mnsu",
+    "score": "0.473",
+    "registry_no": null,
+    "epoch_release_date": "2026-09-01",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemini-3.8-flash_high",
+    "id": "gZ4bwozTKtpmZTqnqX3a33",
+    "score": "0.697",
+    "registry_no": "30004",
+    "epoch_release_date": "2026-09-02",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-fable-5-1_max",
+    "id": "ExyL3GN8s34tizrXV3VmS3",
+    "score": "0.708",
+    "registry_no": "20004",
+    "epoch_release_date": "2026-09-01",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "id": "DLr586bZUHpghAf8m3GRSm",
+    "score": "0.083",
+    "registry_no": null,
+    "epoch_release_date": "2024-07-18",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-4o-2024-08-06",
+    "id": "bDFqfWxMG7gLDq4Mz8PRTP",
+    "score": "0.26",
+    "registry_no": null,
+    "epoch_release_date": "2024-08-06",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-4.1-nano-2025-04-14",
+    "id": "A4JEeJR5LQfLR3Hb8z7kL2",
+    "score": "0.06",
+    "registry_no": "10017",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-4.1-mini-2025-04-14",
+    "id": "gYV4CJTjSd7VonfzMmnwcw",
+    "score": "0.127",
+    "registry_no": "10016",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-4.1-2025-04-14",
+    "id": "avdYKfKUuY6EvfVdxftBE8",
+    "score": "0.311",
+    "registry_no": "10002",
+    "epoch_release_date": "2025-04-14",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "o3-mini-2025-01-31_high",
+    "id": "UCba4H3NNtUiWXMisWnh9g",
+    "score": "0.153",
+    "registry_no": null,
+    "epoch_release_date": "2025-01-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "o1-2024-12-17_high",
+    "id": "LQfu4ngArcgMEyQZxuR7r4",
+    "score": "0.411",
+    "registry_no": null,
+    "epoch_release_date": "2024-12-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "muse-spark-1.1",
+    "id": "bCdwpRXgZtvQLYC4wA9JXr",
+    "score": "0.5778894472361809",
+    "registry_no": "80002",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-3-opus-20240229",
+    "id": "NxVp4VF8uQbL5S6hx6HFRB",
+    "score": "0.126",
+    "registry_no": null,
+    "epoch_release_date": "2024-02-29",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-6-astra_max",
+    "id": "PppwnX7EjXx2SeTcFN8Ujn",
+    "score": "0.756",
+    "registry_no": "10005",
+    "epoch_release_date": "2026-09-03",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "glm-5.3_max",
+    "id": "TY8R8FV7zCwByEipkqyg2P",
+    "score": "0.41",
+    "registry_no": "150005",
+    "epoch_release_date": "2026-08-14",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.5-plus",
+    "id": "jrawnM2wHFbVfJFJsap4kS",
+    "score": "0.2535070140280561",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-16",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "muse-spark-1.2_xhigh",
+    "id": "mLLmVVvo6t23MM5yxq7ryW",
+    "score": "0.6030150753768844",
+    "registry_no": "80003",
+    "epoch_release_date": "2026-08-05",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "Inkling_xhigh",
+    "id": "bpnzC6CCi3hWuKCfqX4KEY",
+    "score": "0.403",
+    "registry_no": "160001",
+    "epoch_release_date": "2026-07-15",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "Qwen3-235B-A22B-Thinking-2507",
+    "id": "4ACEC4x26HWRGiAepHGw43",
+    "score": "0.4044044044044044",
+    "registry_no": null,
+    "epoch_release_date": "2025-07-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "glm-5.1",
+    "id": "R2fMFAtRXah864hMifdQGV",
+    "score": "0.34",
+    "registry_no": "150003",
+    "epoch_release_date": "2026-04-07",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "inkling-small_xhigh",
+    "id": "eJfbDKqeg9kNXFoxpeV7HG",
+    "score": "0.191",
+    "registry_no": "160002",
+    "epoch_release_date": "2026-07-15",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "kimi-k3_max",
+    "id": "mZLWt2JSYvJyGhMvji7CT8",
+    "score": "0.506",
+    "registry_no": "120003",
+    "epoch_release_date": "2026-07-16",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "glm-5.2_max",
+    "id": "WgjFZzojpiv54XqUhvfuUG",
+    "score": "0.342",
+    "registry_no": "150004",
+    "epoch_release_date": "2026-06-16",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "kimi-k2.7-code",
+    "id": "5AijYw5bFJtSuahnbzNo6Z",
+    "score": "0.365",
+    "registry_no": null,
+    "epoch_release_date": "2026-06-12",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "glm-4.7",
+    "id": "aYau6EG7CCaWVSyVq3vvQc",
+    "score": "0.322",
+    "registry_no": "150001",
+    "epoch_release_date": "2025-12-22",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "kimi-k2.5",
+    "id": "RbXXg4JEbTSBnzw3CMSHnD",
+    "score": "0.343",
+    "registry_no": "120001",
+    "epoch_release_date": "2026-01-27",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.7-max",
+    "id": "DMjUrG6eZEqwcQ4SqUoViu",
+    "score": "0.5576730190571715",
+    "registry_no": "130006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.6-plus",
+    "id": "4LWNorP8Fy8V8doxirNFcH",
+    "score": "0.44144144144144143",
+    "registry_no": "130004",
+    "epoch_release_date": "2026-03-31",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.6-max-preview",
+    "id": "iyPiR8GUuyNNA6Fssziq32",
+    "score": "0.5200400801603207",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-20",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.6-flash",
+    "id": "FoMSS4FmH3VxpsvZiUJPCv",
+    "score": "0.15915915915915915",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-27",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.5-flash",
+    "id": "K8zTckSXLKLesoLBv24TWc",
+    "score": "0.2032032032032032",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-25",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3-max-2025-09-23",
+    "id": "fXG2GPt5F25tHRTPhAoZ4K",
+    "score": "0.4874874874874875",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-24",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "qwen3.8-max_xhigh",
+    "id": "bfftd5EzUK9yAekafEofvK",
+    "score": "0.458",
+    "registry_no": "130008",
+    "epoch_release_date": "2026-08-02",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemini-3.5-flash_high",
+    "id": "GJ6YsSuzyRD9YXe6SBwvsu",
+    "score": "0.662",
+    "registry_no": "30006",
+    "epoch_release_date": "2026-05-19",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "deepseek-v4-pro_max",
+    "id": "Sq9xqkVTmFvELpQy9KH5TM",
+    "score": "0.46993987975951906",
+    "registry_no": "110002",
+    "epoch_release_date": "2026-04-24",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemini-3.7-flash_high",
+    "id": "84ARuGyhQsjgh8umRmBvas",
+    "score": "0.692",
+    "registry_no": "30010",
+    "epoch_release_date": "2026-08-13",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "deepseek-v4-pro-0813_max",
+    "id": "2xfFf6KZAp2gUWYhHGkFgs",
+    "score": "0.5290581162324649",
+    "registry_no": null,
+    "epoch_release_date": "2026-08-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "deepseek-v4-flash-0731_max",
+    "id": "TqFmiGvqozt7TSZYmhgF8m",
+    "score": "0.33633633633633636",
+    "registry_no": null,
+    "epoch_release_date": "2026-07-31",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemini-3.6-flash_high",
+    "id": "F83pa7Gfsb4UNVttTnS5Hk",
+    "score": "0.662",
+    "registry_no": "30007",
+    "epoch_release_date": "2026-07-21",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemma-4-31b-it",
+    "id": "D5cbXacPnJ8akq2jAtifEQ",
+    "score": "0.104",
+    "registry_no": "35002",
+    "epoch_release_date": "2026-04-02",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemini-3-flash-preview_high",
+    "id": "7cc6cDCXjsPjtKt36bbeMR",
+    "score": "0.668",
+    "registry_no": "30009",
+    "epoch_release_date": "2025-12-17",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "grok-4.6_high",
+    "id": "TpHYtuPG6kYZFvMK7Z6Hqj",
+    "score": "0.493",
+    "registry_no": "40002",
+    "epoch_release_date": "2026-08-12",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "grok-4.20-0309-reasoning",
+    "id": "GVm7khGvtdnQKGfkgAHD8q",
+    "score": "0.302",
+    "registry_no": null,
+    "epoch_release_date": "2026-02-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "grok-4.3_high",
+    "id": "Y39ZRp553ULpUDBV2XrBbc",
+    "score": "0.332",
+    "registry_no": null,
+    "epoch_release_date": "2026-04-17",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "grok-4.5_high",
+    "id": "7HWW3sjRstKzb9JpcnvLaV",
+    "score": "0.483",
+    "registry_no": "40001",
+    "epoch_release_date": "2026-07-08",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "grok-4.6_xhigh",
+    "id": "dKCWFaoGCWJTnD5CPWQGru",
+    "score": "0.489",
+    "registry_no": "40002",
+    "epoch_release_date": "2026-08-12",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "o4-mini-2025-04-16_low",
+    "id": "Dzky9brdTFbSoVd2zTKiUp",
+    "score": "0.196",
+    "registry_no": "10004",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.2-2025-12-11_low",
+    "id": "Cyw3GA9a64AmT4pqLAhtTF",
+    "score": "0.328",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.2-2025-12-11_medium",
+    "id": "esr5dcSuHiVoteo6vZfHjP",
+    "score": "0.327",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "o3-2025-04-16_high",
+    "id": "CxHSa2gY7ySiPPGTZEZaRt",
+    "score": "0.494",
+    "registry_no": "10003",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.4-nano-2026-03-17_high",
+    "id": "3QBsxKkbF2R2LEXTd6HDrJ",
+    "score": "0.117",
+    "registry_no": "10022",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "o4-mini-2025-04-16_high",
+    "id": "gaGdPvvfvAw7MjP4HaVQCT",
+    "score": "0.188",
+    "registry_no": "10004",
+    "epoch_release_date": "2025-04-16",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5-2025-08-07_high",
+    "id": "gTLurbyKU63i2opsGkJGwh",
+    "score": "0.501",
+    "registry_no": "10018",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.4-mini-2026-03-17_high",
+    "id": "Z3pjKgAULY9j9wmzQpdqZG",
+    "score": "0.294",
+    "registry_no": "10021",
+    "epoch_release_date": "2026-03-17",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.2-2025-12-11_high",
+    "id": "Xp4qkZ32zjDeSYii2eQpnm",
+    "score": "0.343",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.5_xhigh",
+    "id": "TijCafTTJUFrJ6jPGvBbgq",
+    "score": "0.63",
+    "registry_no": "10008",
+    "epoch_release_date": "2026-04-23",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.4-pro-2026-03-05_xhigh",
+    "id": "RfSJbuuuMkeVHQj7xrth4u",
+    "score": "0.463",
+    "registry_no": null,
+    "epoch_release_date": "2026-03-05",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.1-2025-11-13_high",
+    "id": "QCLnRy69NBH9ip3VYtQneh",
+    "score": "0.48",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-13",
+    "status": "held: model not in Registry or build not shown to be the Registry model"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-4-5-20250929_59K",
+    "id": "XQEGUQjpXupjdyKoGuSmum",
+    "score": "0.307",
+    "registry_no": null,
+    "epoch_release_date": "2025-09-29",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.4-2026-03-05_xhigh",
+    "id": "AzCkm282PLhDdLJ8DnAQQc",
+    "score": "0.451",
+    "registry_no": "10007",
+    "epoch_release_date": "2026-03-05",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-5_xhigh",
+    "id": "Qw4tGw38pk4sdsEehhrLSR",
+    "score": "0.329",
+    "registry_no": "20013",
+    "epoch_release_date": "2026-06-30",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-opus-4-5-20251101_32K",
+    "id": "CA5LW4phRnHSsZUGXEm8H6",
+    "score": "0.457",
+    "registry_no": null,
+    "epoch_release_date": "2025-11-24",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-haiku-4-5-20251001_32K",
+    "id": "VhBM9HgJ2RuSVwXriRXMVJ",
+    "score": "0.126",
+    "registry_no": null,
+    "epoch_release_date": "2025-10-15",
+    "status": "held: setting is a token budget or 'minimal', not on the fixed effort vocabulary"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.2-2025-12-11_xhigh",
+    "id": "E3325ytkSNYP8ez53VA4fE",
+    "score": "0.371",
+    "registry_no": "10012",
+    "epoch_release_date": "2025-12-11",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-opus-4-6_max",
+    "id": "85fhMxLaebWtLoi6oLpTbi",
+    "score": "0.47",
+    "registry_no": "20008",
+    "epoch_release_date": "2026-02-05",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-5_max",
+    "id": "LPo74T9L3CawnKX5LLUrSZ",
+    "score": "0.337",
+    "registry_no": "20013",
+    "epoch_release_date": "2026-06-30",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-4-6_max",
+    "id": "Zs5fCvNzaz8LhqgwDSAztU",
+    "score": "0.328",
+    "registry_no": "20009",
+    "epoch_release_date": "2026-02-17",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-opus-4-7_xhigh",
+    "id": "2c4rvmf5N7QXTugrFLMZ83",
+    "score": "0.517",
+    "registry_no": "20010",
+    "epoch_release_date": "2026-04-16",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-opus-4-8_max",
+    "id": "ViC6pxQZUVS3E9M9iEubF7",
+    "score": "0.53",
+    "registry_no": "20011",
+    "epoch_release_date": "2026-05-28",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.6-sol_max",
+    "id": "UnRUSuZzm2X27TUbpeMPva",
+    "score": "0.697",
+    "registry_no": "10010",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.6-terra_max",
+    "id": "DienatPbgfgn3EzM7Gvzxr",
+    "score": "0.432",
+    "registry_no": "10011",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5.6-luna_max",
+    "id": "CeDghdBk8CqtiFSbUzxNH5",
+    "score": "0.41",
+    "registry_no": "10009",
+    "epoch_release_date": "2026-07-09",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-opus-5_max",
+    "id": "Zftz2yk4X5NF28JQzjN3hZ",
+    "score": "0.599",
+    "registry_no": "20014",
+    "epoch_release_date": "2026-07-24",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-fable-5_xhigh",
+    "id": "SEnvgtunRa5GwAtU2sHa87",
+    "score": "0.707",
+    "registry_no": "20012",
+    "epoch_release_date": "2026-06-09",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-4-6_high",
+    "id": "LJyKf8Xy4dymxNHbGLwNdA",
+    "score": "0.355",
+    "registry_no": "20009",
+    "epoch_release_date": "2026-02-17",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-sonnet-4-5-20250929",
+    "id": "MhqeuRVx4JcRfxPQDYPq7Z",
+    "score": "0.237",
+    "registry_no": "20005",
+    "epoch_release_date": "2025-09-29",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gemini-3.1-pro-preview_high",
+    "id": "VGeF8Xac4WcSAGgSXVdEBi",
+    "score": "0.735",
+    "registry_no": "30005",
+    "epoch_release_date": "2026-02-19",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "kimi-k2.6",
+    "id": "hHnQVatVTbQjM4sfrjw7GH",
+    "score": "0.349",
+    "registry_no": "120002",
+    "epoch_release_date": "2026-04-20",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5-mini-2025-08-07_high",
+    "id": "8d5RuFTTJKuJ5iJYmPZVJe",
+    "score": "0.216",
+    "registry_no": "10019",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "gpt-5-nano-2025-08-07_high",
+    "id": "KgUCEfVCyRnY8B5kVChyiD",
+    "score": "0.117",
+    "registry_no": "10020",
+    "epoch_release_date": "2025-08-07",
+    "status": "included"
+  },
+  {
+    "file": "simpleqa_verified.csv",
+    "model_version": "claude-haiku-4-5-20251001",
+    "id": "J2kUEjR9r6Spd594qDNTTf",
+    "score": "0.132",
+    "registry_no": "20006",
+    "epoch_release_date": "2025-10-15",
+    "status": "included"
+  }
+]

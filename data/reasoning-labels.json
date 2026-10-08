@@ -337,6 +337,83 @@
       "configuration": null,
       "status": "mapped",
       "note": "Effort set to max with thinking off (owner decision, 2026-10-05)."
+    },
+    {
+      "label": "thinking high",
+      "effort": "high",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Thinking at high effort, as labelled."
+    },
+    {
+      "label": "xhigh thinking",
+      "effort": "xhigh",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Thinking at xhigh effort, as labelled."
+    },
+    {
+      "label": "thinking-max",
+      "effort": "max",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Thinking at max effort, as labelled in the model string."
+    },
+    {
+      "label": "Non-Thinking",
+      "effort": "none",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Case variant of non-thinking."
+    },
+    {
+      "label": "Thinking",
+      "effort": null,
+      "configuration": null,
+      "status": "not_reported",
+      "note": "Case variant of thinking; the source states no level."
+    },
+    {
+      "label": "0.99",
+      "effort": null,
+      "configuration": null,
+      "status": "not_reported",
+      "note": "Numeric provider scale; no level on the fixed vocabulary, as effort=0.99."
+    },
+    {
+      "label": "Max",
+      "effort": "max",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Case variant of max."
+    },
+    {
+      "label": "enabled",
+      "effort": null,
+      "configuration": null,
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level."
+    },
+    {
+      "label": "Adaptive/Max",
+      "effort": "max",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Adaptive thinking at max effort, as labelled."
+    },
+    {
+      "label": "Medium",
+      "effort": "medium",
+      "configuration": null,
+      "status": "mapped",
+      "note": "Case variant of medium."
+    },
+    {
+      "label": "Thinking on",
+      "effort": null,
+      "configuration": null,
+      "status": "not_reported",
+      "note": "Reasoning switched on; the source states no level."
     }
   ]
 }

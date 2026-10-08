@@ -1,0 +1,142 @@
+[
+  {
+    "model": "GPT-6 Astra",
+    "harness": "proximus",
+    "mean_at_5": "65.50757455882352",
+    "registry_no": "10005",
+    "status": "included"
+  },
+  {
+    "model": "Claude Opus 5.5",
+    "harness": "proximus",
+    "mean_at_5": "62.33098823529411",
+    "registry_no": "20015",
+    "status": "included"
+  },
+  {
+    "model": "Claude Sonnet 5.5",
+    "harness": "proximus",
+    "mean_at_5": "61.889299411764696",
+    "registry_no": "20016",
+    "status": "included"
+  },
+  {
+    "model": "Claude Fable 5.1",
+    "harness": "proximus",
+    "mean_at_5": "56.29078999999999",
+    "registry_no": "20004",
+    "status": "included"
+  },
+  {
+    "model": "Gemini 4 Argon",
+    "harness": "proximus",
+    "mean_at_5": "54.96118588235292",
+    "registry_no": "30011",
+    "status": "skipped: the Registry already holds this run from a developer report"
+  },
+  {
+    "model": "Claude Opus 5",
+    "harness": "proximus",
+    "mean_at_5": "52.01176764705882",
+    "registry_no": "20014",
+    "status": "included"
+  },
+  {
+    "model": "Claude Fable 5",
+    "harness": "proximus",
+    "mean_at_5": "46.96449352941177",
+    "registry_no": "20012",
+    "status": "included"
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "harness": "proximus",
+    "mean_at_5": "32.20246705882353",
+    "registry_no": "10010",
+    "status": "included"
+  },
+  {
+    "model": "GLM-5.3",
+    "harness": "proximus",
+    "mean_at_5": "30.181864117647052",
+    "registry_no": "150005",
+    "status": "included"
+  },
+  {
+    "model": "Grok 4.7",
+    "harness": "proximus",
+    "mean_at_5": "29.50476117647059",
+    "registry_no": "40003",
+    "status": "included"
+  },
+  {
+    "model": "Kimi K3",
+    "harness": "proximus",
+    "mean_at_5": "25.865032058823534",
+    "registry_no": "120003",
+    "status": "included"
+  },
+  {
+    "model": "Grok 4.6",
+    "harness": "proximus",
+    "mean_at_5": "25.286195882352946",
+    "registry_no": "40002",
+    "status": "included"
+  },
+  {
+    "model": "Gemini 3.7 Flash",
+    "harness": "proximus",
+    "mean_at_5": "20.260590588235296",
+    "registry_no": "30010",
+    "status": "included"
+  },
+  {
+    "model": "Gemini 3.8 Flash",
+    "harness": "proximus",
+    "mean_at_5": "19.626902941176464",
+    "registry_no": "30004",
+    "status": "included"
+  },
+  {
+    "model": "GLM-5.3 Flash",
+    "harness": "proximus",
+    "mean_at_5": "18.125205882352944",
+    "registry_no": "150006",
+    "status": "included"
+  },
+  {
+    "model": "Qwen3.8-Max-0902",
+    "harness": "proximus",
+    "mean_at_5": "17.809649411764706",
+    "registry_no": null,
+    "status": "held: model not in Registry or dated/experimental build"
+  },
+  {
+    "model": "Qwen3.8-Max",
+    "harness": "proximus",
+    "mean_at_5": "15.809350588235294",
+    "registry_no": "130008",
+    "status": "included"
+  },
+  {
+    "model": "DeepSeek V4 Flash Vision Exp",
+    "harness": "proximus",
+    "mean_at_5": "14.831252647058824",
+    "registry_no": null,
+    "status": "held: model not in Registry or dated/experimental build"
+  },
+  {
+    "model": "Muse Spark 1.2",
+    "harness": "proximus",
+    "mean_at_5": "11.970256470588238",
+    "registry_no": "80003",
+    "status": "included"
+  },
+  {
+    "model": "Inkling",
+    "harness": "proximus",
+    "mean_at_5": "4.118886470588236",
+    "registry_no": "160001",
+    "status": "included"
+  }
+]

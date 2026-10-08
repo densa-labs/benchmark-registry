@@ -369,6 +369,168 @@
         "staging": "2026-10-06T03:00:19Z",
         "production": "2026-10-06T03:08:08Z"
       }
+    },
+    {
+      "order": 42,
+      "file": "evaluator-new-models-2026-10-07.json",
+      "sha256": "604d62ee1136f691693b36be70a3325e8407cab42af1d10865f0315b7b21fd1b",
+      "applied": {
+        "staging": "2026-10-07T23:48:44Z",
+        "production": "2026-10-08T00:00:41Z"
+      }
+    },
+    {
+      "order": 43,
+      "file": "evaluator-swe-bench-2026-10-07.json",
+      "sha256": "c5d1ccbc4c52f82d6ec5ed16334b9a362c6d7ee2453b7b5ef8b0279524088f07",
+      "applied": {
+        "staging": "2026-10-07T23:48:55Z",
+        "production": "2026-10-08T00:00:52Z"
+      }
+    },
+    {
+      "order": 44,
+      "file": "evaluator-scale-2026-10-07.json",
+      "sha256": "b967241eaf522614bd60a5ecfa555a796c7905738806f997e5a8eeabe18ec560",
+      "applied": {
+        "staging": "2026-10-07T23:49:09Z",
+        "production": "2026-10-08T00:01:03Z"
+      }
+    },
+    {
+      "order": 45,
+      "file": "evaluator-terminal-bench-2026-10-07.json",
+      "sha256": "a4c83179099ed3a6554857d2be42607e5f2206e1cfde6fe9cae325e2487a6de9",
+      "applied": {
+        "staging": "2026-10-07T23:49:21Z",
+        "production": "2026-10-08T00:01:14Z"
+      }
+    },
+    {
+      "order": 46,
+      "file": "evaluator-toolathlon-2026-10-07.json",
+      "sha256": "30fa12eeaef0f1f67241c6eacad3d40c9e5579b19037a2377a037a13460b3efc",
+      "applied": {
+        "staging": "2026-10-07T23:49:34Z",
+        "production": "2026-10-08T00:01:24Z"
+      }
+    },
+    {
+      "order": 47,
+      "file": "evaluator-osworld-2026-10-07.json",
+      "sha256": "9e00e2afe01422de84151b70acc7f3b8bff012a7095144e8f724876c1e3d015f",
+      "applied": {
+        "staging": "2026-10-07T23:49:46Z",
+        "production": "2026-10-08T00:01:33Z"
+      }
+    },
+    {
+      "order": 48,
+      "file": "evaluator-vals-2026-10-07.json",
+      "sha256": "2cafe1afe99b1ee8172e6dd303df16730249f56ec50d3cbc7bcb89717fb6a5aa",
+      "applied": {
+        "staging": "2026-10-07T23:50:01Z",
+        "production": "2026-10-08T00:01:47Z"
+      }
+    },
+    {
+      "order": 49,
+      "file": "evaluator-epoch-ai-2026-10-07.json",
+      "sha256": "2ae0c0345c6d55537e74ff4e39af4cc0188acab862ebe6f25267699a4ee54518",
+      "applied": {
+        "staging": "2026-10-07T23:50:16Z",
+        "production": "2026-10-08T00:01:59Z"
+      }
+    },
+    {
+      "order": 50,
+      "file": "evaluator-scale-atlas-hle-text-2026-10-07.json",
+      "sha256": "b60043271459aae2589f48740851e3fc0a49fdbf481a5dd7dbd5670aaf6dfbcf",
+      "applied": {
+        "staging": "2026-10-07T23:50:29Z",
+        "production": "2026-10-08T00:02:11Z"
+      }
+    },
+    {
+      "order": 51,
+      "file": "evaluator-deepswe-refresh-2026-10-07.json",
+      "sha256": "d6755efd294a2d89c0547adce2e5185c1022f13ffbca730fc4efc3a2070d3551",
+      "applied": {
+        "staging": "2026-10-07T23:50:42Z",
+        "production": "2026-10-08T00:02:23Z"
+      }
+    },
+    {
+      "order": 52,
+      "file": "evaluator-cursorbench-refresh-2026-10-07.json",
+      "sha256": "44e7545659c52462c23890fd879796d0a5fb9b01efb60fcf20480fd3bd7e7de2",
+      "applied": {
+        "staging": "2026-10-07T23:50:55Z",
+        "production": "2026-10-08T00:02:35Z"
+      }
+    },
+    {
+      "order": 53,
+      "file": "evaluator-tau3-bench-2026-10-07.json",
+      "sha256": "cf1a254866a8ab021fd6eb238d04e5998ebe3725cca62581bc5d3391375cf497",
+      "applied": {
+        "staging": "2026-10-07T23:51:08Z",
+        "production": "2026-10-08T00:02:45Z"
+      }
+    },
+    {
+      "order": 54,
+      "file": "evaluator-automationbench-2026-10-07.json",
+      "sha256": "8a2387c690e85b5679c60097edfe308d8da65a6a56e290a1a9ef50e630f720a6",
+      "applied": {
+        "staging": "2026-10-07T23:51:23Z",
+        "production": "2026-10-08T00:02:56Z"
+      }
+    },
+    {
+      "order": 55,
+      "file": "evaluator-surge-2026-10-07.json",
+      "sha256": "a64e2c83eca0fc1ce35307c227f3ed67951ce9f4f563928913ff853485a3e83b",
+      "applied": {
+        "staging": "2026-10-07T23:51:37Z",
+        "production": "2026-10-08T00:03:07Z"
+      }
+    },
+    {
+      "order": 56,
+      "file": "evaluator-frontierswe-2026-10-07.json",
+      "sha256": "546345d7adab492045b0ec067d3ea99555cdd4ca430a7d6d99987ecf921b92e8",
+      "applied": {
+        "staging": "2026-10-07T23:51:51Z",
+        "production": "2026-10-08T00:03:18Z"
+      }
+    },
+    {
+      "order": 57,
+      "file": "evaluator-posttrainbench-2026-10-07.json",
+      "sha256": "066e1d7d29c0d6383725394877a84c79714788644cb1870c6138310577c51e1a",
+      "applied": {
+        "staging": "2026-10-07T23:52:05Z",
+        "production": "2026-10-08T00:03:29Z"
+      }
+    },
+    {
+      "order": 58,
+      "file": "evaluator-cwe-bench-2026-10-07.json",
+      "sha256": "c3cc26771527360f0d6da550f6061daf7e6d013274bcab2904689769de714cda",
+      "applied": {
+        "staging": "2026-10-07T23:52:21Z",
+        "production": "2026-10-08T00:03:40Z"
+      }
+    },
+    {
+      "order": 59,
+      "file": "evaluator-mercor-2026-10-07.json",
+      "sha256": "34eb5dd30bfb3e835d31ce9e85947e3fdd2da1a3b2fe1fd36cf5ffa30493d4d2",
+      "applied": {
+        "staging": "2026-10-07T23:52:38Z",
+        "production": "2026-10-08T00:03:53Z"
+      }
     }
   ]
 }

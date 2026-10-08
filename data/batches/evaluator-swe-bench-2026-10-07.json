@@ -1,0 +1,1761 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "canonical_name": "SWE-bench",
+        "slug": "swe-bench",
+        "source_url": "https://www.swebench.com/",
+        "source_checked_at": "2026-09-17T00:00:00Z",
+        "aliases": [],
+        "evaluators": [
+          {
+            "name": "SWE-bench Team",
+            "key": "swe-bench-team",
+            "source_url": "https://www.swebench.com/verified.html",
+            "source_checked_at": "2026-10-07T11:40:00Z"
+          }
+        ],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "Verified — mini-swe-agent",
+            "version_slug": "verified-mini-swe-agent",
+            "release_at": "2025-07-12",
+            "release_precision": "date",
+            "metric_key": "swe-bench-resolved",
+            "source_url": "https://github.com/SWE-bench/swe-bench.github.io/commit/2212eb9e64a518ae4076435325a12269641acc30",
+            "source_checked_at": "2026-10-07T11:40:00Z",
+            "evaluator_keys": [
+              "swe-bench-team"
+            ]
+          },
+          {
+            "version": "Multilingual — mini-swe-agent",
+            "version_slug": "multilingual-mini-swe-agent",
+            "release_at": "2026-02-24",
+            "release_precision": "date",
+            "metric_key": "swe-bench-resolved",
+            "source_url": "https://github.com/SWE-bench/swe-bench.github.io/commit/f28b73fd3d529b8d2fe9a648f25b5409887cd6a5",
+            "source_checked_at": "2026-10-07T11:40:00Z",
+            "evaluator_keys": [
+              "swe-bench-team"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Verified — mini-swe-agent",
+        "version_slug": "verified-mini-swe-agent",
+        "dataset_label": "Verified",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://www.swebench.com/verified.html",
+        "source_checked_at": "2026-10-07T11:40:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "swe-bench",
+        "version": "Multilingual — mini-swe-agent",
+        "version_slug": "multilingual-mini-swe-agent",
+        "dataset_label": "Multilingual",
+        "configuration": {
+          "key": "mini-swe-agent-harness",
+          "label": "mini-swe-agent harness",
+          "kind": "harness"
+        },
+        "source_url": "https://www.swebench.com/multilingual.html",
+        "source_checked_at": "2026-10-07T11:40:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20006",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-haiku",
+        "score_value": "64.7",
+        "score_raw": "64.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-haiku",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-haiku",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-opus",
+        "score_value": "70.7",
+        "score_raw": "70.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-opus",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-opus",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-sonnet",
+        "score_value": "67.0",
+        "score_raw": "67.0",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-sonnet",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-5-sonnet",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-6-opus",
+        "score_value": "72.0",
+        "score_raw": "72.0",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-6-opus",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_claude-4-6-opus",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_deepseek-3-2",
+        "score_value": "59.0",
+        "score_raw": "59.0",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_deepseek-3-2",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_deepseek-3-2",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_gemini-3-flash",
+        "score_value": "72.7",
+        "score_raw": "72.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_gemini-3-flash",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_gemini-3-flash",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_gemini-3-pro",
+        "score_value": "68.7",
+        "score_raw": "68.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_gemini-3-pro",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_gemini-3-pro",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_glm-5",
+        "score_value": "69.7",
+        "score_raw": "69.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_glm-5",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_glm-5",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_gpt-5-2-high",
+        "score_value": "66.7",
+        "score_raw": "66.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_gpt-5-2-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_gpt-5-2-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_gpt-5-mini",
+        "score_value": "39.7",
+        "score_raw": "39.7",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_gpt-5-mini",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_gpt-5-mini",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260213_mini-v2.0.0a0_kimi-k2-5",
+        "score_value": "67.3",
+        "score_raw": "67.3",
+        "reported_at": "2026-02-13",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260213_mini-v2.0.0a0_kimi-k2-5",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260213_mini-v2.0.0a0_kimi-k2-5",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/multilingual/20260216_mini-v2.0.0a0_minimax-2-5",
+        "score_value": "68.3",
+        "score_raw": "68.3",
+        "reported_at": "2026-02-16",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/multilingual/20260216_mini-v2.0.0a0_minimax-2-5",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/multilingual/20260216_mini-v2.0.0a0_minimax-2-5",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/multilingual.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250720_mini-v0.0.0-claude-3-7-sonnet-20250219",
+        "score_value": "52.8",
+        "score_raw": "52.8",
+        "reported_at": "2025-07-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250720_mini-v0.0.0-claude-3-7-sonnet-20250219",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250720_mini-v0.0.0-claude-3-7-sonnet-20250219",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10016",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250720_mini-v0.0.0_gpt-4.1-mini-2025-04-14",
+        "score_value": "23.94",
+        "score_raw": "23.94",
+        "reported_at": "2025-07-20",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250720_mini-v0.0.0_gpt-4.1-mini-2025-04-14",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250720_mini-v0.0.0_gpt-4.1-mini-2025-04-14",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+        "score_value": "64.93",
+        "score_raw": "64.93",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_claude-sonnet-4-20250514",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_gemini-2.0-flash",
+        "score_value": "13.52",
+        "score_raw": "13.52",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_gemini-2.0-flash",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_gemini-2.0-flash",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_gemini-2.5-flash",
+        "score_value": "28.73",
+        "score_raw": "28.73",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_gemini-2.5-flash",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_gemini-2.5-flash",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_gemini-2.5-pro",
+        "score_value": "53.6",
+        "score_raw": "53.6",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_gemini-2.5-pro",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_gemini-2.5-pro",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_gpt-4.1-2025-04-14",
+        "score_value": "39.58",
+        "score_raw": "39.58",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_gpt-4.1-2025-04-14",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_gpt-4.1-2025-04-14",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_o3-2025-04-16",
+        "score_value": "58.4",
+        "score_raw": "58.4",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_o3-2025-04-16",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_o3-2025-04-16",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250726_mini-v1.0.0_o4-mini-2025-04-16",
+        "score_value": "45.0",
+        "score_raw": "45.0",
+        "reported_at": "2025-07-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250726_mini-v1.0.0_o4-mini-2025-04-16",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250726_mini-v1.0.0_o4-mini-2025-04-16",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250802_mini-v1.0.0_claude-4-opus-20250514",
+        "score_value": "67.6",
+        "score_raw": "67.6",
+        "reported_at": "2025-08-02",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250802_mini-v1.0.0_claude-4-opus-20250514",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250802_mini-v1.0.0_claude-4-opus-20250514",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10018",
+        "reasoning_level": "medium",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250807_mini-v1.7.0_gpt-5",
+        "score_value": "65.0",
+        "score_raw": "65.0",
+        "reported_at": "2025-08-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250807_mini-v1.7.0_gpt-5",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250807_mini-v1.7.0_gpt-5",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "medium",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250807_mini-v1.7.0_gpt-5-mini",
+        "score_value": "59.8",
+        "score_raw": "59.8",
+        "reported_at": "2025-08-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250807_mini-v1.7.0_gpt-5-mini",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250807_mini-v1.7.0_gpt-5-mini",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10020",
+        "reasoning_level": "medium",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250807_mini-v1.7.0_gpt-5-nano",
+        "score_value": "34.8",
+        "score_raw": "34.8",
+        "reported_at": "2025-08-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250807_mini-v1.7.0_gpt-5-nano",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250807_mini-v1.7.0_gpt-5-nano",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "15001",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250807_mini-v1.7.0_gpt-oss-120b",
+        "score_value": "26.0",
+        "score_raw": "26.0",
+        "reported_at": "2025-08-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250807_mini-v1.7.0_gpt-oss-120b",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250807_mini-v1.7.0_gpt-oss-120b",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150007",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250822_mini-v1.9.1_glm-4.5",
+        "score_value": "54.2",
+        "score_raw": "54.2",
+        "reported_at": "2025-08-22",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250822_mini-v1.9.1_glm-4.5",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250822_mini-v1.9.1_glm-4.5",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20250929_mini-v1.13.3_sonnet-4-5-20250929",
+        "score_value": "70.6",
+        "score_raw": "70.6",
+        "reported_at": "2025-09-29",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20250929_mini-v1.13.3_sonnet-4-5-20250929",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20250929_mini-v1.13.3_sonnet-4-5-20250929",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251118_mini-v1.15.0_gemini-3-pro-preview-20251118",
+        "score_value": "74.20",
+        "score_raw": "74.20",
+        "reported_at": "2025-11-18",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251118_mini-v1.15.0_gemini-3-pro-preview-20251118",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251118_mini-v1.15.0_gemini-3-pro-preview-20251118",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "medium",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+        "score_value": "74.4",
+        "score_raw": "74.4",
+        "reported_at": "2025-11-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251124_mini-v1.16.0_claude-opus-4-5-20251101",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140004",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251124_mini-v1.17.0_minimax-m2",
+        "score_value": "61.0",
+        "score_raw": "61.0",
+        "reported_at": "2025-11-24",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251124_mini-v1.17.0_minimax-m2",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251124_mini-v1.17.0_minimax-m2",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150009",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251201_mini-v1.17.1_glm-4.6",
+        "score_value": "55.40",
+        "score_raw": "55.40",
+        "reported_at": "2025-12-01",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251201_mini-v1.17.1_glm-4.6",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251201_mini-v1.17.1_glm-4.6",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "90002",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251209_mini-v1.17.2_devstral-2512",
+        "score_value": "53.8",
+        "score_raw": "53.8",
+        "reported_at": "2025-12-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251209_mini-v1.17.2_devstral-2512",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251209_mini-v1.17.2_devstral-2512",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "90003",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251209_mini-v1.17.2_devstral-small-2512",
+        "score_value": "56.4",
+        "score_raw": "56.4",
+        "reported_at": "2025-12-09",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251209_mini-v1.17.2_devstral-small-2512",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251209_mini-v1.17.2_devstral-small-2512",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+        "score_value": "69.0",
+        "score_raw": "69.0",
+        "reported_at": "2025-12-11",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251211_mini-v1.17.2_gpt-5.2-2025-12-11",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+        "score_value": "71.8",
+        "score_raw": "71.8",
+        "reported_at": "2025-12-11",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20251211_mini-v1.17.2_gpt-5.2-2025-12-11-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20006",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_claude-4-5-haiku-high",
+        "score_value": "66.6",
+        "score_raw": "66.6",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-haiku-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-haiku-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20007",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_claude-4-5-opus-high",
+        "score_value": "76.8",
+        "score_raw": "76.8",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-opus-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-opus-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20005",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+        "score_value": "71.4",
+        "score_raw": "71.4",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_claude-4-5-sonnet-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20008",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_claude-4-6-opus",
+        "score_value": "75.6",
+        "score_raw": "75.6",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_claude-4-6-opus",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_claude-4-6-opus",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "110003",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_deepseek-3-2-high",
+        "score_value": "70.0",
+        "score_raw": "70.0",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_deepseek-3-2-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_deepseek-3-2-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30009",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_gemini-3-flash-high",
+        "score_value": "75.8",
+        "score_raw": "75.8",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_gemini-3-flash-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_gemini-3-flash-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "150002",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_glm-5-high",
+        "score_value": "72.8",
+        "score_raw": "72.8",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_glm-5-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_glm-5-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10012",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_gpt-5-2-high",
+        "score_value": "72.8",
+        "score_raw": "72.8",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_gpt-5-2-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_gpt-5-2-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10019",
+        "reasoning_level": "",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_gpt-5-mini",
+        "score_value": "56.2",
+        "score_raw": "56.2",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_gpt-5-mini",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_gpt-5-mini",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "120001",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_kimi-k2-5-high",
+        "score_value": "70.8",
+        "score_raw": "70.8",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_kimi-k2-5-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_kimi-k2-5-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "140001",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260217_mini-v2.0.0_minimax-2-5-high",
+        "score_value": "75.8",
+        "score_raw": "75.8",
+        "reported_at": "2026-02-17",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260217_mini-v2.0.0_minimax-2-5-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260217_mini-v2.0.0_minimax-2-5-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "30008",
+        "reasoning_level": "high",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Verified — mini-swe-agent",
+        "metric_key": "swe-bench-resolved",
+        "run_ref": "swe-bench-experiments:evaluation/verified/20260226_mini-v2.0.0_gemini-3-pro-high",
+        "score_value": "69.6",
+        "score_raw": "69.6",
+        "reported_at": "2026-02-26",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "swe-bench-team"
+        ],
+        "source_type": "Benchmark repository",
+        "publisher": "SWE-bench",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://github.com/SWE-bench/experiments/tree/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20260226_mini-v2.0.0_gemini-3-pro-high",
+        "sources": [
+          {
+            "url": "https://github.com/SWE-bench/experiments/tree/main/evaluation/verified/20260226_mini-v2.0.0_gemini-3-pro-high",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.swebench.com/verified.html",
+            "checked_at": "2026-10-07T11:40:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "records": [
+    {
+      "operation": "benchmark",
+      "record": {
+        "slug": "cwe-bench",
+        "canonical_name": "CWE-bench",
+        "source_url": "https://cwe-bench.com/",
+        "source_checked_at": "2026-10-03T11:14:52Z",
+        "aliases": [],
+        "evaluators": [],
+        "metrics": [],
+        "versions": [
+          {
+            "version": "1 — Claude Code",
+            "version_slug": "1-claude-code",
+            "release_at": "2026-09-25",
+            "release_precision": "date",
+            "metric_key": "cwe-bench-programmatic-pass-at-1",
+            "source_url": "https://cwe-bench.com/",
+            "source_checked_at": "2026-10-07T14:27:00Z",
+            "evaluator_keys": [
+              "collinear-ai"
+            ]
+          },
+          {
+            "version": "1 — Codex",
+            "version_slug": "1-codex",
+            "release_at": "2026-09-25",
+            "release_precision": "date",
+            "metric_key": "cwe-bench-programmatic-pass-at-1",
+            "source_url": "https://cwe-bench.com/",
+            "source_checked_at": "2026-10-07T14:27:00Z",
+            "evaluator_keys": [
+              "collinear-ai"
+            ]
+          },
+          {
+            "version": "1 — OpenCode",
+            "version_slug": "1-opencode",
+            "release_at": "2026-09-25",
+            "release_precision": "date",
+            "metric_key": "cwe-bench-programmatic-pass-at-1",
+            "source_url": "https://cwe-bench.com/",
+            "source_checked_at": "2026-10-07T14:27:00Z",
+            "evaluator_keys": [
+              "collinear-ai"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "cwe-bench",
+        "version": "1 — Claude Code",
+        "version_slug": "1-claude-code",
+        "dataset_label": "1",
+        "configuration": {
+          "key": "claude-code-harness",
+          "label": "Claude Code harness",
+          "kind": "harness"
+        },
+        "source_url": "https://cwe-bench.com/",
+        "source_checked_at": "2026-10-07T14:27:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "cwe-bench",
+        "version": "1 — Codex",
+        "version_slug": "1-codex",
+        "dataset_label": "1",
+        "configuration": {
+          "key": "codex-harness",
+          "label": "Codex harness",
+          "kind": "harness"
+        },
+        "source_url": "https://cwe-bench.com/",
+        "source_checked_at": "2026-10-07T14:27:00Z"
+      }
+    },
+    {
+      "operation": "benchmark_version_configuration",
+      "record": {
+        "benchmark_slug": "cwe-bench",
+        "version": "1 — OpenCode",
+        "version_slug": "1-opencode",
+        "dataset_label": "1",
+        "configuration": {
+          "key": "opencode-harness",
+          "label": "OpenCode harness",
+          "kind": "harness"
+        },
+        "source_url": "https://cwe-bench.com/",
+        "source_checked_at": "2026-10-07T14:27:00Z"
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40003",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — OpenCode",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "68",
+        "score_raw": "68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10005",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — Codex",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "68",
+        "score_raw": "68%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20015",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — Claude Code",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "67",
+        "score_raw": "67%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20004",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — Claude Code",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "58",
+        "score_raw": "58%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "40002",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — OpenCode",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "57",
+        "score_raw": "57%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "80005",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — OpenCode",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "55",
+        "score_raw": "55%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "10014",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — Codex",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "52",
+        "score_raw": "52%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "160001",
+        "reasoning_level": "high",
+        "benchmark_slug": "cwe-bench",
+        "benchmark_version": "1 — OpenCode",
+        "metric_key": "cwe-bench-programmatic-pass-at-1",
+        "source_has_single_run": true,
+        "score_value": "37",
+        "score_raw": "37%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "collinear-ai"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Collinear AI",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261007142717/https://cwe-bench.com/",
+        "sources": [
+          {
+            "url": "https://cwe-bench.com/",
+            "checked_at": "2026-10-07T14:27:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
