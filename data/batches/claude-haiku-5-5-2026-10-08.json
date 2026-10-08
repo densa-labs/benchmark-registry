@@ -1,0 +1,481 @@
+{
+  "records": [
+    {
+      "operation": "model",
+      "record": {
+        "canonical_name": "Claude Haiku 5.5",
+        "company_slug": "anthropic",
+        "namespace_prefix": "20",
+        "sequence": 18,
+        "registry_no": "20018",
+        "release_at": "2026-10-07",
+        "release_precision": "date",
+        "release_source_url": "https://www.anthropic.com/claude-haiku-5-5",
+        "source_checked_at": "2026-10-08T00:12:00Z",
+        "published_at": "2026-10-08T00:12:00Z",
+        "status": "active",
+        "sequence_exception_reason": null,
+        "aliases": [
+          {
+            "name": "claude-haiku-5-5",
+            "source_url": "https://www.anthropic.com/claude-haiku-5-5",
+            "source_checked_at": "2026-10-08T00:12:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench-pro",
+        "benchmark_version": "Public",
+        "metric_key": "swe-bench-pro-resolved",
+        "source_has_single_run": true,
+        "score_value": "64.8",
+        "score_raw": "64.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "swe-bench",
+        "benchmark_version": "Multilingual",
+        "metric_key": "swe-bench-resolved",
+        "source_has_single_run": true,
+        "score_value": "83.7",
+        "score_raw": "83.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — No tools",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "45.9",
+        "score_raw": "45.9%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "humanitys-last-exam",
+        "benchmark_version": "Full set — With tools",
+        "metric_key": "hle-accuracy",
+        "source_has_single_run": true,
+        "score_value": "57.4",
+        "score_raw": "57.4%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "4.0",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "39.2",
+        "score_raw": "39.2%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          },
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": false,
+            "same_run": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "terminal-bench",
+        "benchmark_version": "Science 0.1",
+        "metric_key": "terminal-bench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "20.6",
+        "score_raw": "20.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "global-mmlu",
+        "benchmark_version": "Original",
+        "metric_key": "global-mmlu-accuracy",
+        "source_has_single_run": true,
+        "score_value": "87.8",
+        "score_raw": "87.8%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "milu",
+        "benchmark_version": "Original",
+        "metric_key": "milu-accuracy",
+        "source_has_single_run": true,
+        "score_value": "87.6",
+        "score_raw": "87.6%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "spatialbench",
+        "benchmark_version": "Verified",
+        "metric_key": "spatialbench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "67.7",
+        "score_raw": "67.7%",
+        "reported_at": "2026-10-07",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "anthropic"
+        ],
+        "source_type": "System card",
+        "publisher": "Anthropic",
+        "reporting_basis": "self-reported",
+        "source_archive_url": "https://web.archive.org/web/20261008001005/https://www-cdn.anthropic.com/e1080d6bf5ae2018ea3c2f414064be03232f5be5/Claude%20Haiku%205.5%20System%20Card.pdf",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "",
+        "benchmark_slug": "frontierswe",
+        "benchmark_version": "2 — October 2026 evaluation",
+        "metric_key": "frontierswe-score",
+        "source_has_single_run": true,
+        "score_value": "43.76868294117648",
+        "score_raw": "43.76868294117648",
+        "reported_at": "2026-10-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "proximal"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Proximal",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261008000828/https://www.frontierswe.com/",
+        "sources": [
+          {
+            "url": "https://www.frontierswe.com/",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "max",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "48.4",
+        "score_raw": "48.4%",
+        "reported_at": "2026-10-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261008000841/https://cursor.com/cursorbench",
+        "sources": [
+          {
+            "url": "https://cursor.com/cursorbench",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "xhigh",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "44.3",
+        "score_raw": "44.3%",
+        "reported_at": "2026-10-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261008000841/https://cursor.com/cursorbench",
+        "sources": [
+          {
+            "url": "https://cursor.com/cursorbench",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "high",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "42.3",
+        "score_raw": "42.3%",
+        "reported_at": "2026-10-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261008000841/https://cursor.com/cursorbench",
+        "sources": [
+          {
+            "url": "https://cursor.com/cursorbench",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "medium",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "36.9",
+        "score_raw": "36.9%",
+        "reported_at": "2026-10-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261008000841/https://cursor.com/cursorbench",
+        "sources": [
+          {
+            "url": "https://cursor.com/cursorbench",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    },
+    {
+      "operation": "result",
+      "record": {
+        "model_registry_no": "20018",
+        "reasoning_level": "low",
+        "benchmark_slug": "cursorbench",
+        "benchmark_version": "4.0",
+        "metric_key": "cursorbench-accuracy",
+        "source_has_single_run": true,
+        "score_value": "30.9",
+        "score_raw": "30.9%",
+        "reported_at": "2026-10-08",
+        "reported_precision": "date",
+        "evaluator_keys": [
+          "cursor"
+        ],
+        "source_type": "Benchmark leaderboard",
+        "publisher": "Cursor",
+        "reporting_basis": "independent",
+        "source_archive_url": "https://web.archive.org/web/20261008000841/https://cursor.com/cursorbench",
+        "sources": [
+          {
+            "url": "https://cursor.com/cursorbench",
+            "checked_at": "2026-10-08T00:12:00Z",
+            "primary": true
+          }
+        ]
+      }
+    }
+  ]
+}
