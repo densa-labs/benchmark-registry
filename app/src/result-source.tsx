@@ -12,6 +12,7 @@ export function ResultDetails({ result, showEvaluator = false, compact = false }
   const hasDate = Boolean(result.reported_at) && Number.isFinite(Date.parse(result.reported_at));
   return <span className="result-details">
     {!compact && metric && metric.toLowerCase() !== "unknown" ? <span>{metric}</span> : null}
+    {result.score_setting ? <span>{`Setting: ${result.score_setting.label}`}</span> : null}
     {hasDate ? <span>Reported <time dateTime={result.reported_at}>{compact ? result.reported_at.slice(0, 10) : formatRegistryDate(result.reported_at, result.reported_precision)}</time></span> : null}
     {result.evaluated_at && result.evaluated_precision ? <span>Evaluated <time dateTime={result.evaluated_at}>{formatRegistryDate(result.evaluated_at, result.evaluated_precision)}</time></span> : null}
     {result.source_type && result.source_type.toLowerCase() !== "unknown" ? <span>{result.source_type}</span> : null}

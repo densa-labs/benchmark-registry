@@ -5,6 +5,7 @@ import { HOME_PANEL_LIMIT, type HomePanels } from "./home-panels";
 import { latestReportedResult } from "./featured-result";
 import {
   ApiError,
+  type BenchmarkScoreSetting,
   type BenchmarkVersionSummary,
   type CompanyDatePrecision,
   type DatePrecision,
@@ -142,6 +143,11 @@ const VERSION_CONFIGURATION_COLUMNS = (version: string) => `${VERSION_CONFIGURAT
 const CONFIGURED_VERSION = (version: string) =>
   `EXISTS (SELECT 1 FROM benchmark_version_configurations bvc WHERE bvc.benchmark_version_id = ${version})`;
 
+// Which benchmark setting a score covers, as its source states it (migration 0021).
+const RESULT_SCORE_SETTING = `(SELECT json_object('key', s.key, 'label', s.label)
+  FROM result_score_settings rss JOIN score_settings s ON s.key = rss.score_setting_key
+  WHERE rss.result_id = r.id)`;
+
 const RESULT_COLUMNS = `
   r.result_key,
   ${MODEL_COLUMNS},
@@ -174,6 +180,7 @@ const RESULT_COLUMNS = `
     ) evaluator
   ), '[]') AS evaluator_names,
   r.source_type, r.source_archive_url, r.publisher, r.reporting_basis, r.evaluated_at, r.evaluated_precision,
+  ${RESULT_SCORE_SETTING} AS score_setting,
   r.primary_source_url,
   r.reported_at,
   r.reported_precision`;
@@ -762,6 +769,11 @@ export class RegistryRepository {
        ORDER BY ${BENCHMARK_VERSION_KEY} DESC, bv.version ASC, bv.id ASC`,
       [benchmark.id],
     );
+    const scoreSettings = await this.all<BenchmarkScoreSetting>(
+      `/* benchmark:score-settings */ SELECT s.key, s.label, s.definition, s.source_url
+       FROM score_settings s WHERE s.benchmark_id = ? ORDER BY s.rowid`,
+      [benchmark.id],
+    );
     return {
       data: {
         benchmark: {
@@ -770,6 +782,7 @@ export class RegistryRepository {
           aliases: parseJsonArray(benchmark.aliases),
         },
         versions: versions.map(versionFromRow),
+        ...(scoreSettings.length ? { score_settings: scoreSettings } : {}),
       },
     };
   }

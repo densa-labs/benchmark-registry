@@ -12,6 +12,7 @@ export const RESULTS_CSV_COLUMNS = [
   "registry_no", "model", "company", "benchmark", "benchmark_slug", "benchmark_version", "benchmark_version_slug",
   "configuration", "metric", "metric_unit", "score", "score_display", "score_as_reported", "effort", "provider_effort_label",
   "reporting_basis", "publisher", "source_type", "evaluators", "reported_at", "evaluated_at", "primary_source_url", "record_url",
+  "score_setting",
 ] as const;
 
 function csvField(value: string | null | undefined): string {
@@ -26,6 +27,7 @@ function csvRow(row: ResultRow): string[] {
     row.score.value, row.score.display, row.score.raw, row.effort, row.reasoning_level,
     row.reporting_basis, row.publisher, row.source_type, row.evaluator_names.join("; "), row.reported_at, row.evaluated_at,
     row.primary_source_url, row.exact_result_href ? CANONICAL_ORIGIN + row.exact_result_href : `${CANONICAL_ORIGIN}/models/${row.model.registry_no}`,
+    row.score_setting?.label,
   ].map((value) => csvField(value ?? null));
 }
 

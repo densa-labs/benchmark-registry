@@ -15,6 +15,8 @@ it("writes one quoted CSV row per result in a stable order", () => {
   expect(lines[2]).toContain('"Lab ""A"", Inc."');
   expect(lines[1].split(",").length).toBeGreaterThanOrEqual(RESULTS_CSV_COLUMNS.length);
   expect(resultsCsv([earlier, later])).toBe(csv);
+  const labelled = resultsCsv([{ ...earlier, score_setting: { key: "mmmu-pro-overall", label: "Overall (Standard 10 options + Vision)" } }]);
+  expect(labelled.trimEnd().split("\r\n")[1].endsWith(",Overall (Standard 10 options + Vision)")).toBe(true);
 });
 
 it("describes the site, its counts, licence and download for AI assistants", () => {

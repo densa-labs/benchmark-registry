@@ -6,6 +6,7 @@ import type { SeoContent } from "./seo-content";
 import type { LegalKind } from "./legal-content";
 import type {
   BenchmarkRef,
+  BenchmarkScoreSetting,
   BenchmarkVersionSummary,
   CompanySummary,
   ModelSummary,
@@ -72,6 +73,7 @@ export interface BenchmarkFamilyResponse {
     seo?: SeoContent;
     benchmark: BenchmarkRef;
     versions: BenchmarkVersionSummary[];
+    score_settings?: BenchmarkScoreSetting[];
   };
 }
 
