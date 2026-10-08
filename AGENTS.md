@@ -280,7 +280,7 @@ The checks CI runs (`.github/workflows/ci.yml`), from the repository root:
 cd app && npm run typecheck && npm run lint && npm test && npm run build && npm run test:seo
 cd app && npm run db:migrate:local                        # migrations apply cleanly
 cd ingestor && uv run pytest && uv run pytest ../scripts
-uv run --project ingestor ruff check ingestor scripts app/scripts
+uv run --project ingestor ruff check ingestor scripts app/scripts data/evidence
 cd ingestor && uv run python ../scripts/validate_data.py  # tracked data
 cd ingestor && uv run python ../scripts/check_replay.py   # manifest replays twice
 ```

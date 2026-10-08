@@ -40,7 +40,7 @@ MODELS = {
 
 
 def board():
-    text = re.sub(r"<script.*?</script>|<style.*?</style>", "", (HERE / "page.html").read_text(), flags=re.S)
+    text = re.sub(r"<script.*?</script>|<style.*?</style>", "", (HERE / "page.html").read_text(), flags=re.DOTALL)
     lines = [line.strip() for line in html.unescape(re.sub(r"<[^>]+>", "\n", text)).split("\n") if line.strip()]
     joined = " | ".join(lines)
     table = joined[joined.index("Model | Pass@1"):]

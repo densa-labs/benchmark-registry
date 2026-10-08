@@ -71,14 +71,14 @@ MODELS = {
 def rows():
     text = (HERE / "leaderboard.md").read_text()
     archived = text.index("This archived snapshot shows the leaderboard immediately before Toolathlon-Verified")
-    for match in re.finditer(r'<tr className="rank[^"]*">(.*?)</tr>', text, re.S):
+    for match in re.finditer(r'<tr className="rank[^"]*">(.*?)</tr>', text, re.DOTALL):
         row = match.group(1)
 
-        def cell(label):
-            found = re.search(r'data-label="' + re.escape(label) + r'">(.*?)</td>', row, re.S)
+        def cell(label, row=row):
+            found = re.search(r'data-label="' + re.escape(label) + r'">(.*?)</td>', row, re.DOTALL)
             return found.group(1) if found else ""
 
-        name = re.sub(r"<svg.*?</svg>", "", cell("Model"), flags=re.S)
+        name = re.sub(r"<svg.*?</svg>", "", cell("Model"), flags=re.DOTALL)
         verified = "verified-badge" in name
         name = html.unescape(re.sub(r"<[^>]+>", "", name)).replace("✓", "").strip()
         score = re.sub(r"<[^>]+>", "", re.sub(r"<sub>.*?</sub>", "", cell("Pass@1"))).strip()

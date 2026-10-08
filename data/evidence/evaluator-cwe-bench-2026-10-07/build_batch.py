@@ -35,7 +35,7 @@ HARNESSES = {
 
 
 def v1_rows(path):
-    text = re.sub(r"<script.*?</script>|<style.*?</style>", "", path.read_text(errors="ignore"), flags=re.S)
+    text = re.sub(r"<script.*?</script>|<style.*?</style>", "", path.read_text(errors="ignore"), flags=re.DOTALL)
     joined = " | ".join(line.strip() for line in html.unescape(re.sub(r"<[^>]+>", "\n", text)).split("\n")
                         if line.strip())
     start = joined.index("CWE-bench leaderboard | # | Rank | Model | Harness | Programmatic | Judge panel")

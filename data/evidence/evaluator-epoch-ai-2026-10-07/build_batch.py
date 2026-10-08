@@ -84,7 +84,7 @@ def main(database):
     for name, (slug, metric, version, version_slug, release, dataset) in FILES.items():
         families[slug] = dict(zip(("canonical_name", "source_url", "source_checked_at"), db.execute(
             "SELECT canonical_name, source_url, source_checked_at FROM benchmarks WHERE slug = ?", (slug,)).fetchone()))
-        for row in csv.DictReader(open(HERE / name, newline="")):
+        for row in csv.DictReader((HERE / name).read_text().splitlines(keepends=True)):
             base, label = split(row["Model version"])
             registry_no = MODELS.get(base)
             entry = {"file": name, "model_version": row["Model version"], "id": row["id"],

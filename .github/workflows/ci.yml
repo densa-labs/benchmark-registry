@@ -75,7 +75,7 @@ jobs:
       - name: Lint Python
         working-directory: .
         # From the root, ingestor/ uses its pyproject rules; scripts use ruff defaults.
-        run: uv run --project ingestor ruff check ingestor scripts app/scripts
+        run: uv run --project ingestor ruff check ingestor scripts app/scripts data/evidence
 
       - name: Run Python tests
         run: uv run pytest

@@ -67,7 +67,7 @@ uv run pytest ../scripts
 uv run python ../scripts/validate_data.py
 uv run python ../scripts/check_replay.py
 cd ..
-uv run --project ingestor ruff check ingestor scripts app/scripts
+uv run --project ingestor ruff check ingestor scripts app/scripts data/evidence
 ```
 
 CI runs the same checks on every push and pull request

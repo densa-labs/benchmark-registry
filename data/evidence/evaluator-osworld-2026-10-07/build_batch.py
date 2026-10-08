@@ -60,7 +60,7 @@ def main(database):
         held.setdefault(no, []).append(score)
     archive = (HERE / "archive.txt").read_text().strip()
     sheet = read(HERE / "osworld_verified_results.xlsx")["Eval Results"]
-    header, rows = sheet[0], [dict(zip(sheet[0], row)) for row in sheet[1:]]
+    rows = [dict(zip(sheet[0], row)) for row in sheet[1:]]
     results, mapping, seen, versions = [], [], {}, set()
     for row in rows:
         if row["Approach type"] != "General model":

@@ -7,7 +7,6 @@ import sys
 from collections import Counter, defaultdict
 from decimal import Decimal
 from pathlib import Path
-from urllib.parse import quote
 from xml.etree import ElementTree
 
 HERE = Path(__file__).resolve().parent
