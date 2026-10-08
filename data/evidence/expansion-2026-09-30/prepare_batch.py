@@ -1,6 +1,6 @@
 """Deterministic evidence-to-ingestor preparation; never writes canonical data."""
-import json
 import hashlib
+import json
 from decimal import Decimal
 from pathlib import Path
 

@@ -1,8 +1,12 @@
-import json,sys,concurrent.futures
+import concurrent.futures
+import json
+import sys
 from pathlib import Path
+
 R=Path(__file__).resolve().parents[3]
 sys.path.insert(0,str(R/'app/scripts'))
 from live_http import LiveClient
+
 env=sys.argv[1];assert env in ['staging','production']
 client=LiveClient(('staging.' if env=='staging' else '')+'benchmarkregistry.org','/private/tmp/p119-tools/cloudflared')
 paths=['/','/api/home-panels','/api/stats','/compare','/compare?models=160001,160002&reasoning=effort%253D0.99,effort%253D0.99','/compare?models=160001,160002&benchmarks=shared&q=CharXiv','/models/160002','/sitemap.xml']

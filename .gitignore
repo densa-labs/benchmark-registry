@@ -23,3 +23,7 @@ ingestor/dist/
 
 # Python bytecode anywhere
 __pycache__/
+
+# Local audit reports and plans (never tracked)
+docs/
+plans/

@@ -71,7 +71,7 @@ def model_tag(entry):
 
 def metadata_resolved(split, folder):
     text = (HERE / "meta" / f"{split[0]}_{folder}.yaml").read_text()
-    match = re.search(r"^\s*resolved:\s*([0-9.]+)\s*$", text, re.M)
+    match = re.search(r"^\s*resolved:\s*([0-9.]+)\s*$", text, re.MULTILINE)
     return match.group(1)
 
 

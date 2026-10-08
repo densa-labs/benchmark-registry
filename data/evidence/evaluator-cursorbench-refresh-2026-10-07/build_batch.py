@@ -33,7 +33,7 @@ EFFORTS = {"Max": "max", "Extra High": "xhigh", "High": "high", "Medium": "mediu
 
 
 def board():
-    text = re.sub(r"<script.*?</script>|<style.*?</style>", "", (HERE / "page.html").read_text(), flags=re.S)
+    text = re.sub(r"<script.*?</script>|<style.*?</style>", "", (HERE / "page.html").read_text(), flags=re.DOTALL)
     joined = " | ".join(line.strip() for line in html.unescape(re.sub(r"<[^>]+>", "\n", text)).split("\n")
                         if line.strip())
     rows = {}
