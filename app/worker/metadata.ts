@@ -1,6 +1,6 @@
 import { CONTENT_METADATA } from "../src/content-metadata";
 import { structuredDataScript } from "./structured-data";
-import { modelShareCardPath, SHARE_CARD_HEIGHT, SHARE_CARD_WIDTH, SITE_SHARE_CARD_PATH } from "./share-card";
+import { benchmarkShareCardPath, comparisonShareCardPath, modelShareCardPath, SHARE_CARD_HEIGHT, SHARE_CARD_WIDTH, SITE_SHARE_CARD_PATH } from "./share-card";
 import { LEGAL_METADATA } from "../src/legal-content";
 import { resolveRegistryRoute } from "../src/registry";
 import type { RegistryReader } from "./materialized-repository";
@@ -73,12 +73,17 @@ export function escapeHtml(value: string): string {
   })[character]!);
 }
 
-/** A model page shares its own card (built by worker/share-card.ts); every other page shares the site card. */
+/** Model, benchmark family and comparison pair pages share their own card (built by worker/share-card.ts); every other page shares the site card. */
 export function shareImage(metadata: DocumentMetadata): { url: string; alt: string } {
-  const registryNo = (metadata.status ?? 200) === 200 ? /^\/models\/([0-9]+)$/u.exec(metadata.path ?? "")?.[1] : undefined;
-  return registryNo
-    ? { url: `${CANONICAL_ORIGIN}/${modelShareCardPath(registryNo)}`, alt: escapeHtml(`${metadata.page?.name ?? "Model"} benchmark results on Benchmark Registry`) }
-    : { url: `${CANONICAL_ORIGIN}/${SITE_SHARE_CARD_PATH}`, alt: "Benchmark Registry: AI model benchmark results, each linked to its source" };
+  const path = (metadata.status ?? 200) === 200 ? metadata.path ?? "" : "";
+  const name = metadata.page?.name;
+  const registryNo = /^\/models\/([0-9]+)$/u.exec(path)?.[1];
+  if (registryNo) return { url: `${CANONICAL_ORIGIN}/${modelShareCardPath(registryNo)}`, alt: escapeHtml(`${name ?? "Model"} benchmark results on Benchmark Registry`) };
+  const benchmark = /^\/benchmarks\/([a-z0-9-]+)$/u.exec(path)?.[1];
+  if (benchmark && name) return { url: `${CANONICAL_ORIGIN}/${benchmarkShareCardPath(benchmark)}`, alt: escapeHtml(`${name} results on Benchmark Registry`) };
+  const pair = /^\/compare\/([a-z0-9-]+)$/u.exec(path)?.[1];
+  if (pair && name) return { url: `${CANONICAL_ORIGIN}/${comparisonShareCardPath(pair)}`, alt: escapeHtml(`${name}: benchmark comparison on Benchmark Registry`) };
+  return { url: `${CANONICAL_ORIGIN}/${SITE_SHARE_CARD_PATH}`, alt: "Benchmark Registry: AI model benchmark results, each linked to its source" };
 }
 
 export function metadataHead(metadata: DocumentMetadata, url: URL): string {

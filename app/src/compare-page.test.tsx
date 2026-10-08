@@ -6,7 +6,7 @@ import axe from "axe-core";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { RegistryDocument, App } from "./App";
 import { BenchmarkSection, ComparePage } from "./compare-page";
-import { buildComparisonRows, comparisonPage, parseComparisonState, type ComparisonResponse } from "./compare";
+import { buildComparisonRows, comparisonPage, parseComparisonState, suggestedComparisons, type ComparisonResponse } from "./compare";
 import { detail, modelA, modelB, result } from "./compare-fixtures";
 import { serializeInitialDocument } from "./bootstrap";
 import { RouteLoadingState } from "./ui/route-loading";
@@ -38,6 +38,20 @@ function selectControl(selector: string) {
 }
 
 describe("Compare page", () => {
+  it("links suggested pair pages, newest release first, while no pair is chosen", async () => {
+    const older = { ...modelB, name: "Model Gamma", registry_no: "20002", released_at: "2026-01-01" };
+    const empty: ComparisonResponse = { models: [modelA, modelB, older], selected: [null, null], issues: [], suggestions: [
+      { path: "/compare/model-gamma-vs-model-beta", models: ["20002", "20001"], sharedBenchmarks: 3 },
+      { path: "/compare/model-alpha-vs-model-beta", models: ["10001", "20001"], sharedBenchmarks: 4 },
+      { path: "/compare/missing", models: ["10001", "99999"], sharedBenchmarks: 3 },
+    ] };
+    expect(suggestedComparisons(empty).map(link => link.path)).toEqual(["/compare/model-alpha-vs-model-beta", "/compare/model-gamma-vs-model-beta"]);
+    const html = renderToString(<ComparePage response={empty} currentSearch="" />);
+    expect(html).toContain("Suggested comparisons");
+    expect(html).toContain('href="/compare/model-alpha-vs-model-beta"');
+    expect(renderToString(<ComparePage response={{ ...payload, suggestions: empty.suggestions }} currentSearch={search} />)).not.toContain("Suggested comparisons");
+  });
+
   it("renders aligned metadata, shared/other scores, provenance, and the active header link", async () => {
     await mount(<RegistryDocument loaded={{ kind: "compare", payload }} currentSearch={search+"&benchmarks=all"} />);
     expect(container.querySelector('a[href="/compare"][aria-current="page"]')?.textContent).toBe("Compare");

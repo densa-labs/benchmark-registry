@@ -46,12 +46,17 @@ it("prerenders every page byte-for-byte as the Worker rendered it, plus data, fe
   const modelPages=[...output.keys()].filter(path=>/^models\/[0-9]+\.html$/u.test(path)).map(path=>path.replace(/^models\/|\.html$/gu,""));
   expect(modelPages.length).toBeGreaterThan(0);
   for(const no of modelPages) expect(site.cards.map(card=>card.path)).toContain(`og/models/${no}.png`);
+  const familyPages=[...output.keys()].filter(path=>/^benchmarks\/[a-z0-9-]+\.html$/u.test(path)).map(path=>path.replace(/^benchmarks\/|\.html$/gu,""));
+  expect(familyPages.length).toBeGreaterThan(0);
+  for(const slug of familyPages) expect(site.cards.map(card=>card.path)).toContain(`og/benchmarks/${slug}.png`);
+  for(const path of [...output.keys()].filter(path=>/^compare\/[a-z0-9-]+\.html$/u.test(path))) expect(site.cards.map(card=>card.path)).toContain(`og/${path.replace(/\.html$/u,".png")}`);
   expect(site.files.length).toBeLessThan(FILE_COUNT_BUDGET);
 
   const manifest=JSON.parse(output.get("data/manifest.json")!) as StaticDataManifest;
   expect(manifest.generation).toBe(site.generation);
   for(const hash of Object.values(manifest.objects)) expect(output.has(`data/objects/${hash}.json`)).toBe(true);
   expect(manifest.objects.featured).toBeDefined();
+  expect(manifest.objects.comparisons).toBeDefined();
 
   // The same renderer over the same projection produces the same document.
   const objects=new Map(Object.entries(manifest.objects).map(([key,hash])=>[key,JSON.parse(output.get(`data/objects/${hash}.json`)!).data]));

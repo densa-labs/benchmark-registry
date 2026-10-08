@@ -3,10 +3,11 @@ import { Fragment, useEffect, useState, type FormEvent, type ReactNode } from "r
 import type { ResultRow } from "../worker/api";
 import { BenchmarkLink } from "./benchmark-link";
 import { benchmarkDisplayName, benchmarkVersionLabel } from "./benchmark-names";
-import { ANY_REASONING, buildComparisonRows, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
+import { ANY_REASONING, buildComparisonRows, comparisonHref, comparisonPage, parseComparisonState, reasoningSelection, suggestedComparisons, type ComparisonResponse, type ComparisonRow, type ComparisonState } from "./compare";
 import { formatRegistryDate, type ModelDetailResponse } from "./registry";
 import { navigateRegistry } from "./navigation";
 import { staticFetch, type StaticFetch } from "./static-api";
+import { RelatedLinks } from "./seo-content";
 import { EmptyState, MetadataRows, PageContainer, PageHeader, PageSizeSelector, Pagination, SourceLink, Tabs } from "./ui/components";
 
 // What tells one side's results apart: only the fields that vary are shown under each score,
@@ -179,7 +180,7 @@ export function ComparePage({ response, currentSearch }: { response: ComparisonR
       })}
       <noscript><button type="submit" className="compare-apply">Compare</button></noscript>
     </form>
-    {!ready ? <><h2 className="visually-hidden">Comparison</h2><EmptyState title="Choose two models to compare" description="Pick a model on each side. Each one's recorded reasoning levels then appear below it." /></> : <>
+    {!ready ? <><h2 className="visually-hidden">Comparison</h2><EmptyState title="Choose two models to compare" description="Pick a model on each side. Each one's recorded reasoning levels then appear below it." /><RelatedLinks links={suggestedComparisons(response)} label="Suggested comparisons" /></> : <>
       <Information selected={response.selected} names={names} />
       <section className="results-section compare-benchmarks" aria-labelledby="compare-benchmarks-heading">
         <div className="results-section__header">

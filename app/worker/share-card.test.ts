@@ -1,7 +1,7 @@
 import { expect, it } from "vitest";
 import { result } from "../src/compare-fixtures";
 import type { ResultRow } from "./api";
-import { fit, modelShareCard, modelShareCardPath, siteShareCard, SITE_SHARE_CARD_PATH } from "./share-card";
+import { benchmarkShareCard, comparisonCardRows, comparisonShareCard, fit, modelShareCard, modelShareCardPath, siteShareCard, SITE_SHARE_CARD_PATH } from "./share-card";
 
 const row = (slug: string, reported: string, score: string | null, extra: Partial<ResultRow> = {}): ResultRow => {
   const base = result();
@@ -37,4 +37,31 @@ it("draws the site card with the current counts", () => {
   const card = siteShareCard({ models: 95, benchmarks: 84, results: 1942 });
   expect(card.path).toBe(SITE_SHARE_CARD_PATH);
   expect(card.svg).toContain("95 models · 84 benchmarks · 1,942 results");
+});
+
+it("draws a benchmark card from the family's recently reported results in the given order", () => {
+  const card = benchmarkShareCard({ slug: "gpqa", name: "GPQA", models: 1, versions: 2, latest: "GPQA Diamond", results: [
+    { ...row("gpqa", "2026-09-02", "20.0"), model: { ...result().model, name: "Newer <Model>" } },
+    { ...row("gpqa", "2026-09-01", null), model: { ...result().model, name: "No Score" } },
+    { ...row("gpqa", "2026-08-01", "90.0"), model: { ...result().model, name: "Older" } },
+  ] });
+  expect(card.path).toBe("og/benchmarks/gpqa.png");
+  expect(card.svg).toContain("1 model · 2 versions · latest GPQA Diamond");
+  expect(card.svg).toContain("Newer &lt;Model&gt;");
+  expect(card.svg).not.toContain("No Score");
+  expect(card.svg.indexOf("20.0%")).toBeLessThan(card.svg.indexOf("90.0%"));
+});
+
+it("draws a comparison card only from unambiguous shared results", () => {
+  const a = [row("a", "2026-09-01", "10.0"), row("b", "2026-09-01", "11.0", { reasoning_level: "low" }), row("b", "2026-09-02", "12.0", { reasoning_level: "high" }), row("c", "2026-09-01", "13.0")];
+  const b = [row("a", "2026-09-01", "20.0"), row("b", "2026-09-01", "21.0"), row("d", "2026-09-01", "22.0")];
+  const rows = comparisonCardRows(a, b);
+  expect(rows).toEqual([{ benchmark: "A", scores: ["10.0%", "20.0%"] }]);
+  expect(comparisonCardRows([row("a", "2026-09-01", "10.0", { reasoning_level: "high" })], [row("a", "2026-09-01", "20.0", { reasoning_level: "low" })])).toEqual([]);
+  const card = comparisonShareCard({ slug: "x-vs-y", models: [{ name: "X", company: "Lab" }, { name: "Y", company: "Lab" }], sharedBenchmarks: 2, rows });
+  expect(card.path).toBe("og/compare/x-vs-y.png");
+  expect(card.svg).toContain("2 shared benchmarks");
+  expect(card.svg).toContain(">10.0%<");
+  expect(card.svg).toContain(">20.0%<");
+  expect(comparisonShareCard({ slug: "z", models: [{ name: "X", company: "L" }, { name: "Y", company: "L" }], sharedBenchmarks: 1, rows: [] }).svg).toContain("1 shared benchmark<");
 });

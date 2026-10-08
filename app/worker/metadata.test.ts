@@ -27,7 +27,7 @@ it("uses one aligned metadata set on all page types, including Twitter and the s
     expect(html).toContain(`<meta property="og:description" content="${description(html)}">`);
     expect(html).toContain(`property="og:url" content="${CANONICAL_ORIGIN}${path}"`);
     expect(html).toContain('name="twitter:card" content="summary_large_image"');
-    const card=path==="/models/10001" ? "/og/models/10001.png" : "/og/site.png";
+    const card=path==="/models/10001" ? "/og/models/10001.png" : path==="/benchmarks/gpqa" ? "/og/benchmarks/gpqa.png" : "/og/site.png";
     expect(html).toContain('property="og:image" content="'+CANONICAL_ORIGIN+card+'"');
     expect(html).toContain('name="twitter:image" content="'+CANONICAL_ORIGIN+card+'"');
     expect(html).toContain('<meta property="og:image:width" content="1200">');

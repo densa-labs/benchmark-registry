@@ -450,6 +450,10 @@ export class RegistryRepository {
     return Number(row.total);
   }
 
+  async comparisons() {
+    return (await this.seoSnapshot()).comparisons;
+  }
+
   async seoSnapshot() {
     const [models, companies, families, resultRows, versionRows] = await Promise.all([
       this.all<ModelDbRow & { checked: string; source: string }>(`SELECT ${MODEL_COLUMNS}, m.source_checked_at AS checked, m.release_source_url AS source
