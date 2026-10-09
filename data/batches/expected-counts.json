@@ -1,17 +1,12 @@
 {
-  "source": "data/evidence/evaluator-production-2026-10-08/production-after.json",
+  "source": "data/evidence/production-2026-10-09/production-after.json",
   "counts": {
-    "models": 109,
+    "models": 110,
     "benchmarks": 84,
     "versions": 217,
-    "results": 2820
+    "results": 2835
   },
   "result_keys": [
-    "data/evidence/evaluator-production-2026-10-08/production-after.json"
-  ],
-  "pending": [
-    "claude-haiku-5-5-2026-10-08.json",
-    "mmmu-pro-settings-2026-10-08.json",
-    "metric-directions-2026-10-08-arrows.json"
+    "data/evidence/production-2026-10-09/production-after.json"
   ]
 }
