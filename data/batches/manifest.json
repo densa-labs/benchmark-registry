@@ -537,8 +537,8 @@
       "file": "claude-haiku-5-5-2026-10-08.json",
       "sha256": "7d35cfd461b0a3edd336503aff85caa3c956c3dd05ad48ef92071a511cc490ec",
       "applied": {
-        "staging": null,
-        "production": null
+        "staging": "2026-10-09T08:03:35Z",
+        "production": "2026-10-09T08:07:12Z"
       }
     },
     {
@@ -546,8 +546,8 @@
       "file": "mmmu-pro-settings-2026-10-08.json",
       "sha256": "0645325bb7a2fa7ed5a1bc69b845a0f70fbc6ea76a034fe6ecf1d154422f335f",
       "applied": {
-        "staging": null,
-        "production": null
+        "staging": "2026-10-09T08:03:52Z",
+        "production": "2026-10-09T08:07:27Z"
       }
     },
     {
@@ -555,8 +555,8 @@
       "file": "metric-directions-2026-10-08-arrows.json",
       "sha256": "a4648707d41745325f02df4b7321cc6d0f47ac63f9993c8dc06c6248e0ac984a",
       "applied": {
-        "staging": null,
-        "production": null
+        "staging": "2026-10-09T08:04:08Z",
+        "production": "2026-10-09T08:07:40Z"
       }
     }
   ]
